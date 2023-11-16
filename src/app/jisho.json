@@ -127,14 +127,14 @@
                 "english": "to close; to shut"
             },
             {
-                "kanji": "晴れる",
-                "furigana": "はれる",
-                "english": "to clear up; to clear away; to be sunny; to stop raining"
-            },
-            {
                 "kanji": "消える",
                 "furigana": "きえる",
                 "english": "to disappear; to vanish; to go out of sight; to go away; to become lost"
+            },
+            {
+                "kanji": "晴れる",
+                "furigana": "はれる",
+                "english": "to clear up; to clear away; to be sunny; to stop raining"
             },
             {
                 "kanji": "並べる",
@@ -1508,14 +1508,14 @@
                 "english": "to drop; to lose; to let fall; to shed (light); to cast (one's gaze); to pour in (liquid); to leave behind"
             },
             {
-                "kanji": "下がる",
-                "furigana": "さがる",
-                "english": "to come down; to go down; to fall; to drop; to sink; to get lower"
-            },
-            {
                 "kanji": "壊す",
                 "furigana": "こわす",
                 "english": "to break; to destroy; to demolish"
+            },
+            {
+                "kanji": "下がる",
+                "furigana": "さがる",
+                "english": "to come down; to go down; to fall; to drop; to sink; to get lower"
             },
             {
                 "kanji": "決まる",
@@ -2856,6 +2856,11 @@
                 "english": "to take (by force); to take away; to snatch; to steal; to rob (someone) of; to dispossess of; to deprive of; to usurp"
             },
             {
+                "kanji": "話し合う",
+                "furigana": "はなしあう",
+                "english": "to discuss; to talk together"
+            },
+            {
                 "kanji": "好む",
                 "furigana": "このむ",
                 "english": "to like; to prefer"
@@ -2866,16 +2871,6 @@
                 "english": "to catch up (with); to draw level; to pull even; to reach"
             },
             {
-                "kanji": "話し合う",
-                "furigana": "はなしあう",
-                "english": "to discuss; to talk together"
-            },
-            {
-                "kanji": "残す",
-                "furigana": "のこす",
-                "english": "to leave (behind)"
-            },
-            {
                 "kanji": "頼る",
                 "furigana": "たよる",
                 "english": "to rely on; to depend on; to count on; to turn to (for help)"
@@ -2884,6 +2879,11 @@
                 "kanji": "隠す",
                 "furigana": "かくす",
                 "english": "to hide; to conceal"
+            },
+            {
+                "kanji": "残す",
+                "furigana": "のこす",
+                "english": "to leave (behind)"
             },
             {
                 "kanji": "戦う",
@@ -2996,14 +2996,14 @@
                 "english": "to tie; to bind; to link"
             },
             {
-                "kanji": "囲む",
-                "furigana": "かこむ",
-                "english": "to surround; to encircle; to enclose; to fence; to wall in"
-            },
-            {
                 "kanji": "追う",
                 "furigana": "おう",
                 "english": "to chase; to run after; to pursue; to follow after"
+            },
+            {
+                "kanji": "囲む",
+                "furigana": "かこむ",
+                "english": "to surround; to encircle; to enclose; to fence; to wall in"
             },
             {
                 "kanji": "組む",
@@ -3113,7 +3113,7 @@
             {
                 "kanji": "学ぶ",
                 "furigana": "まなぶ",
-                "english": "to study (in depth); to learn; to take lessons in"
+                "english": "to learn; to study; to take lessons in"
             },
             {
                 "kanji": "過ごす",
@@ -3346,9 +3346,9 @@
                 "english": "to spread (out); to extend; to stretch; to reach to; to get around; to fill (e.g. a space)"
             },
             {
-                "kanji": "凍る",
-                "furigana": "こおる",
-                "english": "to freeze; to become frozen; to freeze over"
+                "kanji": "広がる",
+                "furigana": "ひろがる",
+                "english": "to spread (out); to extend; to stretch; to reach to; to get around; to fill (e.g. a space)"
             },
             {
                 "kanji": "酔う",
@@ -3416,6 +3416,11 @@
                 "english": "to go mad; to lose one's mind; to go crazy; to go insane"
             },
             {
+                "kanji": "食う",
+                "furigana": "くう",
+                "english": "to eat"
+            },
+            {
                 "kanji": "指す",
                 "furigana": "さす",
                 "english": "to point"
@@ -3424,11 +3429,6 @@
                 "kanji": "飛ばす",
                 "furigana": "とばす",
                 "english": "to let fly; to make fly; to send flying; to blow off (e.g. in the wind); to launch; to fire; to hurl; to shoot"
-            },
-            {
-                "kanji": "食う",
-                "furigana": "くう",
-                "english": "to eat"
             },
             {
                 "kanji": "至る",
@@ -3673,14 +3673,9 @@
                 "english": "consciousness"
             },
             {
-                "kanji": "自殺",
-                "furigana": "じさつ",
-                "english": "suicide"
-            },
-            {
-                "kanji": "爆発",
-                "furigana": "ばくはつ",
-                "english": "explosion; detonation; blast; blowing up; eruption"
+                "kanji": "意識",
+                "furigana": "いしき",
+                "english": "consciousness"
             },
             {
                 "kanji": "逮捕",
@@ -3688,19 +3683,14 @@
                 "english": "arrest; apprehension; capture"
             },
             {
+                "kanji": "爆発",
+                "furigana": "ばくはつ",
+                "english": "explosion; detonation; blast; blowing up; eruption"
+            },
+            {
                 "kanji": "契約",
                 "furigana": "けいやく",
                 "english": "contract; compact; agreement"
-            },
-            {
-                "kanji": "優勝",
-                "furigana": "ゆうしょう",
-                "english": "overall victory; championship; winning the title"
-            },
-            {
-                "kanji": "記憶",
-                "furigana": "きおく",
-                "english": "memory; recollection; remembrance"
             },
             {
                 "kanji": "独立",
@@ -3708,14 +3698,24 @@
                 "english": "independence; self-reliance; supporting oneself; being on one's own"
             },
             {
-                "kanji": "輸入",
-                "furigana": "ゆにゅう",
-                "english": "import; importation; introduction"
+                "kanji": "記憶",
+                "furigana": "きおく",
+                "english": "memory; recollection; remembrance"
+            },
+            {
+                "kanji": "優勝",
+                "furigana": "ゆうしょう",
+                "english": "overall victory; championship; winning the title"
             },
             {
                 "kanji": "命令",
                 "furigana": "めいれい",
                 "english": "order; command; decree; directive"
+            },
+            {
+                "kanji": "輸入",
+                "furigana": "ゆにゅう",
+                "english": "import; importation; introduction"
             },
             {
                 "kanji": "合図",
@@ -3788,14 +3788,14 @@
                 "english": "voting; ballot; poll; vote"
             },
             {
-                "kanji": "診察",
-                "furigana": "しんさつ",
-                "english": "medical examination; checkup; consultation"
-            },
-            {
                 "kanji": "離婚",
                 "furigana": "りこん",
                 "english": "divorce"
+            },
+            {
+                "kanji": "診察",
+                "furigana": "しんさつ",
+                "english": "medical examination; checkup; consultation"
             },
             {
                 "kanji": "販売",
@@ -3808,14 +3808,14 @@
                 "english": "collision; crash; impact; running into"
             },
             {
-                "kanji": "平均",
-                "furigana": "へいきん",
-                "english": "average; mean"
-            },
-            {
                 "kanji": "輸出",
                 "furigana": "ゆしゅつ",
                 "english": "export; exportation"
+            },
+            {
+                "kanji": "平均",
+                "furigana": "へいきん",
+                "english": "average; mean"
             },
             {
                 "kanji": "冒険",
@@ -3823,19 +3823,19 @@
                 "english": "adventure; venture"
             },
             {
-                "kanji": "通学",
-                "furigana": "つうがく",
-                "english": "commuting to school; school commute"
-            },
-            {
                 "kanji": "改善",
                 "furigana": "かいぜん",
                 "english": "betterment; improvement"
             },
             {
-                "kanji": "収穫",
-                "furigana": "しゅうかく",
-                "english": "harvest; crop; ingathering"
+                "kanji": "通学",
+                "furigana": "つうがく",
+                "english": "commuting to school; school commute"
+            },
+            {
+                "kanji": "放送",
+                "furigana": "ほうそう",
+                "english": "broadcasting; broadcast; program; announcement"
             },
             {
                 "kanji": "信号",
@@ -3843,9 +3843,9 @@
                 "english": "signal; signalling; signaling"
             },
             {
-                "kanji": "放送",
-                "furigana": "ほうそう",
-                "english": "broadcasting; broadcast; program; announcement"
+                "kanji": "収穫",
+                "furigana": "しゅうかく",
+                "english": "harvest; crop; ingathering"
             },
             {
                 "kanji": "建設",
@@ -3983,24 +3983,24 @@
                 "english": "printing"
             },
             {
-                "kanji": "代理",
-                "furigana": "だいり",
-                "english": "representation; agency; proxy"
-            },
-            {
                 "kanji": "骨折",
                 "furigana": "こっせつ",
                 "english": "bone fracture"
             },
             {
-                "kanji": "相続",
-                "furigana": "そうぞく",
-                "english": "succession"
+                "kanji": "代理",
+                "furigana": "だいり",
+                "english": "representation; agency; proxy"
             },
             {
                 "kanji": "渋滞",
                 "furigana": "じゅうたい",
                 "english": "(traffic) congestion; traffic jam; gridlock"
+            },
+            {
+                "kanji": "相続",
+                "furigana": "そうぞく",
+                "english": "succession"
             },
             {
                 "kanji": "免許",
@@ -4258,14 +4258,14 @@
                 "english": "postponement; deferment; adjournment"
             },
             {
-                "kanji": "苦労",
-                "furigana": "くろう",
-                "english": "trouble; hardship; difficulty; labour; labor; toil; pains"
-            },
-            {
                 "kanji": "商売",
                 "furigana": "しょうばい",
                 "english": "trade; business; commerce"
+            },
+            {
+                "kanji": "苦労",
+                "furigana": "くろう",
+                "english": "trouble; hardship; difficulty; labour; labor; toil; pains"
             },
             {
                 "kanji": "提出",
@@ -4303,14 +4303,14 @@
                 "english": "to reach; to get to; to arrive at"
             },
             {
-                "kanji": "中止",
-                "furigana": "ちゅうし",
-                "english": "interruption; discontinuance; suspension; stoppage"
-            },
-            {
                 "kanji": "借金",
                 "furigana": "しゃっきん",
                 "english": "debt; loan; liabilities; borrowing money"
+            },
+            {
+                "kanji": "中止",
+                "furigana": "ちゅうし",
+                "english": "interruption; discontinuance; suspension; stoppage"
             },
             {
                 "kanji": "欠席",
@@ -4528,14 +4528,14 @@
                 "english": "comparison"
             },
             {
-                "kanji": "構成",
-                "furigana": "こうせい",
-                "english": "composition; construction; formation; makeup; structure; organization; organisation"
-            },
-            {
                 "kanji": "勘定",
                 "furigana": "かんじょう",
                 "english": "calculation; computation; counting; reckoning; count"
+            },
+            {
+                "kanji": "構成",
+                "furigana": "こうせい",
+                "english": "composition; construction; formation; makeup; structure; organization; organisation"
             },
             {
                 "kanji": "検討",
@@ -4748,24 +4748,24 @@
                 "english": "claim; demand; charge; application; request; billing (for a service)"
             },
             {
-                "kanji": "救助",
-                "furigana": "きゅうじょ",
-                "english": "relief; aid; rescue"
-            },
-            {
                 "kanji": "徹夜",
                 "furigana": "てつや",
                 "english": "staying up all night"
             },
             {
-                "kanji": "前進",
-                "furigana": "ぜんしん",
-                "english": "advance; moving forward; progress"
-            },
-            {
                 "kanji": "学問",
                 "furigana": "がくもん",
                 "english": "study; scholarship; learning; education; knowledge"
+            },
+            {
+                "kanji": "化粧",
+                "furigana": "けしょう",
+                "english": "make-up; makeup; cosmetics"
+            },
+            {
+                "kanji": "前進",
+                "furigana": "ぜんしん",
+                "english": "advance; moving forward; progress"
             },
             {
                 "kanji": "学問",
@@ -4848,16 +4848,6 @@
                 "english": "plan; design; layout"
             },
             {
-                "kanji": "設計",
-                "furigana": "せっけい",
-                "english": "plan; design; layout"
-            },
-            {
-                "kanji": "死亡",
-                "furigana": "しぼう",
-                "english": "death; dying; mortality"
-            },
-            {
                 "kanji": "担当",
                 "furigana": "たんとう",
                 "english": "being in charge (of an area of responsibility); being responsible (for a work role, etc.)"
@@ -4866,6 +4856,11 @@
                 "kanji": "入場",
                 "furigana": "にゅうじょう",
                 "english": "entrance; entering; admission; admittance"
+            },
+            {
+                "kanji": "死亡",
+                "furigana": "しぼう",
+                "english": "death; dying; mortality"
             },
             {
                 "kanji": "支出",
@@ -4878,19 +4873,24 @@
                 "english": "company; friendship; association; society; acquaintance"
             },
             {
+                "kanji": "演技",
+                "furigana": "えんぎ",
+                "english": "acting; performance"
+            },
+            {
                 "kanji": "進学",
                 "furigana": "しんがく",
                 "english": "advancing to the next stage of education; going on to (high school, college, etc.)"
             },
             {
-                "kanji": "完了",
-                "furigana": "かんりょう",
-                "english": "completion; conclusion"
-            },
-            {
                 "kanji": "推薦",
                 "furigana": "すいせん",
                 "english": "recommendation; referral; endorsement"
+            },
+            {
+                "kanji": "修正",
+                "furigana": "しゅうせい",
+                "english": "amendment; correction; revision; modification; alteration; retouching; update; fix"
             },
             {
                 "kanji": "審判",
@@ -4903,14 +4903,19 @@
                 "english": "request; commission; entrusting (with a matter)"
             },
             {
-                "kanji": "修正",
-                "furigana": "しゅうせい",
-                "english": "amendment; correction; revision; modification; alteration; retouching; update; fix"
+                "kanji": "完了",
+                "furigana": "かんりょう",
+                "english": "completion; conclusion"
             },
             {
                 "kanji": "整理",
                 "furigana": "せいり",
                 "english": "sorting; arrangement; organization; putting in order; adjustment; regulation"
+            },
+            {
+                "kanji": "支給",
+                "furigana": "しきゅう",
+                "english": "provision; supply; payment; allowance; grant"
             },
             {
                 "kanji": "装置",
@@ -4923,19 +4928,14 @@
                 "english": "expansion; extension"
             },
             {
-                "kanji": "支給",
-                "furigana": "しきゅう",
-                "english": "provision; supply; payment; allowance; grant"
+                "kanji": "記念",
+                "furigana": "きねん",
+                "english": "commemoration; celebration; remembrance; memory; honoring the memory of"
             },
             {
                 "kanji": "予期",
                 "furigana": "よき",
                 "english": "expectation; anticipation; forecast"
-            },
-            {
-                "kanji": "記念",
-                "furigana": "きねん",
-                "english": "commemoration; celebration; remembrance; memory; honoring the memory of"
             },
             {
                 "kanji": "発行",
@@ -5918,14 +5918,14 @@
                 "english": "favourable; favorable; doing well; OK; all right"
             },
             {
-                "kanji": "永久",
-                "furigana": "えいきゅう",
-                "english": "eternity; permanence; perpetuity"
-            },
-            {
                 "kanji": "見事",
                 "furigana": "みごと",
                 "english": "splendid; magnificent; excellent; fine; superb; beautiful; admirable"
+            },
+            {
+                "kanji": "永久",
+                "furigana": "えいきゅう",
+                "english": "eternity; permanence; perpetuity"
             },
             {
                 "kanji": "穏やか",
@@ -6347,14 +6347,14 @@
                 "english": "to starve; to be famished; to be hungry"
             },
             {
-                "kanji": "埋める-1",
-                "furigana": "うめる",
-                "english": "to bury (e.g. in the ground)"
-            },
-            {
                 "kanji": "兼ねる",
                 "furigana": "かねる",
                 "english": "to be unable to; to find difficult (unpleasant, awkward, painful) to do"
+            },
+            {
+                "kanji": "埋める-1",
+                "furigana": "うめる",
+                "english": "to bury (e.g. in the ground)"
             },
             {
                 "kanji": "高める",
@@ -6372,14 +6372,14 @@
                 "english": "to collapse; to crumble"
             },
             {
-                "kanji": "呼びかける",
-                "furigana": "よびかける",
-                "english": "to call out to; to hail; to address"
-            },
-            {
                 "kanji": "寄せる",
                 "furigana": "よせる",
                 "english": "to come near; to let someone approach"
+            },
+            {
+                "kanji": "呼びかける",
+                "furigana": "よびかける",
+                "english": "to call out to; to hail; to address"
             },
             {
                 "kanji": "心得る",
@@ -6622,9 +6622,9 @@
                 "english": "to spread; to propagate; to popularize; to disseminate"
             },
             {
-                "kanji": "巫山戯る",
-                "furigana": "ふざける",
-                "english": "to joke; to jest; to kid; to josh"
+                "kanji": "着せる",
+                "furigana": "きせる",
+                "english": "to put clothes on (someone); to dress; to clothe"
             },
             {
                 "kanji": "当てはめる",
@@ -6642,14 +6642,14 @@
                 "english": "to freeze (of one's body); to be frozen; to become numb (with cold); to be chilled"
             },
             {
-                "kanji": "錆びる",
-                "furigana": "さびる",
-                "english": "to rust; to become rusty"
-            },
-            {
                 "kanji": "売り切れる",
                 "furigana": "うりきれる",
                 "english": "to be sold out"
+            },
+            {
+                "kanji": "錆びる",
+                "furigana": "さびる",
+                "english": "to rust; to become rusty"
             },
             {
                 "kanji": "被せる",
@@ -6657,19 +6657,14 @@
                 "english": "to cover (with something); to put on (e.g. on someone else's head); to plate something (with a metal); to pour or dash a liquid (on something); to charge (a person with a guilt)"
             },
             {
-                "kanji": "取り入れる",
-                "furigana": "とりいれる",
-                "english": "to harvest; to reap"
+                "kanji": "治める",
+                "furigana": "おさめる",
+                "english": "to rule; to govern; to reign over; to administer; to manage (e.g. a household)"
             },
             {
                 "kanji": "拵える",
                 "furigana": "こしらえる",
                 "english": "to make; to manufacture"
-            },
-            {
-                "kanji": "治める",
-                "furigana": "おさめる",
-                "english": "to rule; to govern; to reign over; to administer; to manage (e.g. a household)"
             },
             {
                 "kanji": "待ち合わせる",
@@ -6790,11 +6785,6 @@
                 "kanji": "応ずる",
                 "furigana": "おうずる",
                 "english": "to answer; to respond; to meet"
-            },
-            {
-                "kanji": "ぶら下げる",
-                "furigana": "ぶらさげる",
-                "english": "to hang; to suspend; to dangle; to swing; to carry"
             },
             {
                 "kanji": "ぶら下げる",
@@ -6954,14 +6944,14 @@
                 "english": "to strike; to hit; to beat; to punch"
             },
             {
-                "kanji": "狙う",
-                "furigana": "ねらう",
-                "english": "to aim at (with a weapon, etc.)"
-            },
-            {
                 "kanji": "迫る",
                 "furigana": "せまる",
                 "english": "to approach; to draw near; to be imminent"
+            },
+            {
+                "kanji": "狙う",
+                "furigana": "ねらう",
+                "english": "to aim at (with a weapon, etc.)"
             },
             {
                 "kanji": "預かる",
@@ -7054,9 +7044,9 @@
                 "english": "to warm oneself; to sun oneself; to warm up; to get warm"
             },
             {
-                "kanji": "冷やす",
-                "furigana": "ひやす",
-                "english": "to cool (from room temperature); to chill; to refrigerate"
+                "kanji": "争う",
+                "furigana": "あらそう",
+                "english": "to compete; to contest; to contend"
             },
             {
                 "kanji": "干す",
@@ -7079,11 +7069,6 @@
                 "english": "to expand; to swell (out); to get big; to become inflated"
             },
             {
-                "kanji": "削る",
-                "furigana": "けずる",
-                "english": "to shave (wood, leather, etc.); to sharpen (e.g. pencil); to plane; to whittle; to pare; to scrape off; to erode"
-            },
-            {
                 "kanji": "次ぐ",
                 "furigana": "つぐ",
                 "english": "to follow; to come after; to come next (to); to rank next (to); to rank second (to)"
@@ -7102,11 +7087,6 @@
                 "kanji": "刺さる",
                 "furigana": "ささる",
                 "english": "to stick into (of something with a sharp point); to prick; to pierce; to get stuck (in); to lodge (in)"
-            },
-            {
-                "kanji": "写る",
-                "furigana": "うつる",
-                "english": "to be photographed; to be projected"
             },
             {
                 "kanji": "写る",
@@ -7649,11 +7629,6 @@
                 "english": "to wet; to moisten; to dampen; to soak; to dip"
             },
             {
-                "kanji": "溶かす",
-                "furigana": "とかす",
-                "english": "to dissolve"
-            },
-            {
                 "kanji": "探る",
                 "furigana": "さぐる",
                 "english": "to feel around for; to fumble for; to grope for; to search for; to look for"
@@ -7674,29 +7649,9 @@
                 "english": "to be due to; to be caused by"
             },
             {
-                "kanji": "縮む",
-                "furigana": "ちぢむ",
-                "english": "to shrink; to contract; to diminish (in size)"
-            },
-            {
-                "kanji": "剥く",
-                "furigana": "むく",
-                "english": "to peel; to skin; to pare; to hull; to strip"
-            },
-            {
-                "kanji": "釣り合う",
-                "furigana": "つりあう",
-                "english": "to balance; to be in harmony; to be in equilibrium"
-            },
-            {
-                "kanji": "湧く",
-                "furigana": "わく",
-                "english": "to well (up); to gush out (of water); to spring out; to surge"
-            },
-            {
-                "kanji": "茂る",
-                "furigana": "しげる",
-                "english": "to grow thickly; to be in full leaf; to be rampant; to luxuriate; to be luxurious"
+                "kanji": "溶かす",
+                "furigana": "とかす",
+                "english": "to dissolve"
             },
             {
                 "kanji": "縮む",
@@ -7709,6 +7664,41 @@
                 "english": "to be mixed; to be blended with; to be combined"
             },
             {
+                "kanji": "釣り合う",
+                "furigana": "つりあう",
+                "english": "to balance; to be in harmony; to be in equilibrium"
+            },
+            {
+                "kanji": "茂る",
+                "furigana": "しげる",
+                "english": "to grow thickly; to be in full leaf; to be rampant; to luxuriate; to be luxurious"
+            },
+            {
+                "kanji": "汲む",
+                "furigana": "くむ",
+                "english": "to draw (water); to ladle; to dip up; to scoop up; to pump"
+            },
+            {
+                "kanji": "剥く",
+                "furigana": "むく",
+                "english": "to peel; to skin; to pare; to hull; to strip"
+            },
+            {
+                "kanji": "汲む",
+                "furigana": "くむ",
+                "english": "to draw (water); to ladle; to dip up; to scoop up; to pump"
+            },
+            {
+                "kanji": "縮む",
+                "furigana": "ちぢむ",
+                "english": "to shrink; to contract; to diminish (in size)"
+            },
+            {
+                "kanji": "濁る",
+                "furigana": "にごる",
+                "english": "to become muddy; to become cloudy; to become turbid; to become impure (of a liquid or gas)"
+            },
+            {
                 "kanji": "剥がす",
                 "furigana": "はがす",
                 "english": "to tear off; to peel off; to rip off; to strip off; to skin; to flay; to disrobe; to deprive of; to detach; to disconnect"
@@ -7717,11 +7707,6 @@
                 "kanji": "吊るす",
                 "furigana": "つるす",
                 "english": "to hang; to hang up"
-            },
-            {
-                "kanji": "突き当たる",
-                "furigana": "つきあたる",
-                "english": "to run into; to collide with; to crash into; to bump against"
             },
             {
                 "kanji": "散る",
@@ -7734,14 +7719,19 @@
                 "english": "to be put in order; to be put to rights"
             },
             {
+                "kanji": "引っ込む",
+                "furigana": "ひっこむ",
+                "english": "to draw back; to sink; to cave in"
+            },
+            {
                 "kanji": "帰す",
                 "furigana": "かえす",
                 "english": "to send (someone) back; to send (someone) home"
             },
             {
-                "kanji": "引っ込む",
-                "furigana": "ひっこむ",
-                "english": "to draw back; to sink; to cave in"
+                "kanji": "突き当たる",
+                "furigana": "つきあたる",
+                "english": "to run into; to collide with; to crash into; to bump against"
             },
             {
                 "kanji": "彫る",
@@ -7749,19 +7739,9 @@
                 "english": "to carve; to engrave; to sculpt; to chisel"
             },
             {
-                "kanji": "濁る",
-                "furigana": "にごる",
-                "english": "to become muddy; to become cloudy; to become turbid; to become impure (of a liquid or gas)"
-            },
-            {
                 "kanji": "転がす",
                 "furigana": "ころがす",
                 "english": "to roll; to wheel; to trundle; to drive (a car)"
-            },
-            {
-                "kanji": "萎む",
-                "furigana": "しぼむ",
-                "english": "to wither (of flowers, dreams, etc.); to wilt; to droop; to shrivel; to fade (away); to sag; to deflate"
             },
             {
                 "kanji": "萎む",
@@ -8079,19 +8059,9 @@
                 "english": "to be dented; to be indented; to yield; to give; to sink; to collapse; to cave in"
             },
             {
-                "kanji": "透き通る",
-                "furigana": "すきとおる",
-                "english": "to be transparent; to be see-through; to be clear"
-            },
-            {
                 "kanji": "蒔く",
                 "furigana": "まく",
                 "english": "to sow; to plant; to seed"
-            },
-            {
-                "kanji": "涼む",
-                "furigana": "すずむ",
-                "english": "to cool oneself; to cool off; to enjoy the cool air"
             },
             {
                 "kanji": "打ち消す",
@@ -8169,11 +8139,6 @@
                 "kanji": "矛盾",
                 "furigana": "むじゅん",
                 "english": "contradiction; inconsistency"
-            },
-            {
-                "kanji": "通訳",
-                "furigana": "つうやく",
-                "english": "interpretation (i.e. oral translation)"
             },
             {
                 "kanji": "乾燥",
@@ -8351,9 +8316,9 @@
                 "english": "blood transfusion"
             },
             {
-                "kanji": "測量",
-                "furigana": "そくりょう",
-                "english": "measurement; surveying"
+                "kanji": "輸血",
+                "furigana": "ゆけつ",
+                "english": "blood transfusion"
             },
             {
                 "kanji": "合同",
@@ -8376,14 +8341,14 @@
                 "english": "detour; circuitous route; diversion"
             },
             {
-                "kanji": "蒸発",
-                "furigana": "じょうはつ",
-                "english": "evaporation"
-            },
-            {
                 "kanji": "省略",
                 "furigana": "しょうりゃく",
                 "english": "omission; leaving out"
+            },
+            {
+                "kanji": "蒸発",
+                "furigana": "じょうはつ",
+                "english": "evaporation"
             },
             {
                 "kanji": "裁縫",
@@ -8476,9 +8441,9 @@
                 "english": "show (of power, ability, etc.); exhibition; demonstration; display; manifestation"
             },
             {
-                "kanji": "手続き",
-                "furigana": "てつづき",
-                "english": "procedure; process; proceedings; formalities"
+                "kanji": "通知",
+                "furigana": "つうち",
+                "english": "notice; notification; report; posting"
             },
             {
                 "kanji": "登場",
@@ -8606,14 +8571,34 @@
                 "english": "activity (esp. energetic or successful); great efforts; active participation"
             },
             {
+                "kanji": "活躍",
+                "furigana": "かつやく",
+                "english": "activity (esp. energetic or successful); great efforts; active participation"
+            },
+            {
+                "kanji": "分解",
+                "furigana": "ぶんかい",
+                "english": "disassembly; dismantling; disaggregating; taking apart; breaking up; analysis; parsing"
+            },
+            {
+                "kanji": "可決",
+                "furigana": "かけつ",
+                "english": "approval; adoption (of a motion, bill, etc.); passage"
+            },
+            {
                 "kanji": "輸送",
                 "furigana": "ゆそう",
                 "english": "transport; transportation; transit; conveyance"
             },
             {
-                "kanji": "停車",
-                "furigana": "ていしゃ",
-                "english": "stopping (of a train, car, etc.); stop"
+                "kanji": "延長",
+                "furigana": "えんちょう",
+                "english": "extension; elongation; prolongation; lengthening"
+            },
+            {
+                "kanji": "調節",
+                "furigana": "ちょうせつ",
+                "english": "regulation; adjustment; control"
             },
             {
                 "kanji": "修繕",
@@ -8626,24 +8611,14 @@
                 "english": "end; close; termination"
             },
             {
-                "kanji": "可決",
-                "furigana": "かけつ",
-                "english": "approval; adoption (of a motion, bill, etc.); passage"
-            },
-            {
-                "kanji": "活躍",
-                "furigana": "かつやく",
-                "english": "activity (esp. energetic or successful); great efforts; active participation"
-            },
-            {
                 "kanji": "油断",
                 "furigana": "ゆだん",
                 "english": "negligence; carelessness; inattention; unpreparedness"
             },
             {
-                "kanji": "分解",
-                "furigana": "ぶんかい",
-                "english": "disassembly; dismantling; disaggregating; taking apart; breaking up; analysis; parsing"
+                "kanji": "防止",
+                "furigana": "ぼうし",
+                "english": "prevention; check"
             },
             {
                 "kanji": "推定",
@@ -8651,9 +8626,9 @@
                 "english": "presumption; assumption"
             },
             {
-                "kanji": "回答",
-                "furigana": "かいとう",
-                "english": "reply; answer"
+                "kanji": "追加",
+                "furigana": "ついか",
+                "english": "addition; supplement; appending; appendix"
             },
             {
                 "kanji": "見学",
@@ -8664,11 +8639,6 @@
                 "kanji": "受験",
                 "furigana": "じゅけん",
                 "english": "taking an examination (esp. for entrance to a school or university)"
-            },
-            {
-                "kanji": "追加",
-                "furigana": "ついか",
-                "english": "addition; supplement; appending; appendix"
             },
             {
                 "kanji": "防止",
@@ -8731,19 +8701,24 @@
                 "english": "marking; grading; scoring"
             },
             {
+                "kanji": "採点",
+                "furigana": "さいてん",
+                "english": "marking; grading; scoring"
+            },
+            {
                 "kanji": "縮小",
                 "furigana": "しゅくしょう",
                 "english": "reduction; curtailment; cut; cutback; scaling down; contraction; shrinkage"
             },
             {
+                "kanji": "休養",
+                "furigana": "きゅうよう",
+                "english": "rest; relaxation; recreation; recuperation; convalescence"
+            },
+            {
                 "kanji": "録音",
                 "furigana": "ろくおん",
                 "english": "(audio) recording"
-            },
-            {
-                "kanji": "応用",
-                "furigana": "おうよう",
-                "english": "(practical) application; putting to practical use"
             },
             {
                 "kanji": "移転",
@@ -8761,16 +8736,6 @@
                 "english": "opening of a meeting"
             },
             {
-                "kanji": "鑑賞",
-                "furigana": "かんしょう",
-                "english": "appreciation (of art, music, poetry, etc.)"
-            },
-            {
-                "kanji": "就任",
-                "furigana": "しゅうにん",
-                "english": "assumption (of office); taking up (a post); inauguration; installation"
-            },
-            {
                 "kanji": "削除",
                 "furigana": "さくじょ",
                 "english": "deletion; elimination; erasure; striking out"
@@ -8781,9 +8746,14 @@
                 "english": "mixing; mixture; meld"
             },
             {
-                "kanji": "来日",
-                "furigana": "らいにち",
-                "english": "arrival in Japan; coming to Japan; visit to Japan"
+                "kanji": "就任",
+                "furigana": "しゅうにん",
+                "english": "assumption (of office); taking up (a post); inauguration; installation"
+            },
+            {
+                "kanji": "鑑賞",
+                "furigana": "かんしょう",
+                "english": "appreciation (of art, music, poetry, etc.)"
             },
             {
                 "kanji": "整備",
@@ -8791,19 +8761,24 @@
                 "english": "maintenance; servicing"
             },
             {
-                "kanji": "工事",
-                "furigana": "こうじ",
-                "english": "construction work"
-            },
-            {
-                "kanji": "起床",
-                "furigana": "きしょう",
-                "english": "rising (from one's bed); getting up; getting out of bed"
+                "kanji": "来日",
+                "furigana": "らいにち",
+                "english": "arrival in Japan; coming to Japan; visit to Japan"
             },
             {
                 "kanji": "成立",
                 "furigana": "せいりつ",
                 "english": "formation; establishment; materialization; coming into existence"
+            },
+            {
+                "kanji": "創作",
+                "furigana": "そうさく",
+                "english": "creation; production; creative work (novel, film, etc.); original work; (creative) writing"
+            },
+            {
+                "kanji": "在学",
+                "furigana": "ざいがく",
+                "english": "attending (school, college, etc.); being enrolled; being a student"
             },
             {
                 "kanji": "在学",
@@ -8876,44 +8851,14 @@
                 "english": "bringing; taking; carrying"
             },
             {
+                "kanji": "出勤",
+                "furigana": "しゅっきん",
+                "english": "going to work; leaving for work; attendance (at work); being at work; presence (in the office); reporting for work"
+            },
+            {
                 "kanji": "貸し出し",
                 "furigana": "かしだし",
                 "english": "lending; loaning"
-            },
-            {
-                "kanji": "研修",
-                "furigana": "けんしゅう",
-                "english": "training (esp. in-service); induction course"
-            },
-            {
-                "kanji": "超過",
-                "furigana": "ちょうか",
-                "english": "excess; being more than"
-            },
-            {
-                "kanji": "募集",
-                "furigana": "ぼしゅう",
-                "english": "recruitment; invitation; selection; advertisement; taking applications"
-            },
-            {
-                "kanji": "日帰り",
-                "furigana": "ひがえり",
-                "english": "day trip"
-            },
-            {
-                "kanji": "下車",
-                "furigana": "げしゃ",
-                "english": "alighting (from a train, bus, etc.); getting off; getting out (of a car)"
-            },
-            {
-                "kanji": "評論",
-                "furigana": "ひょうろん",
-                "english": "criticism; critique"
-            },
-            {
-                "kanji": "発想",
-                "furigana": "はっそう",
-                "english": "idea; conception"
             },
             {
                 "kanji": "入社",
@@ -8921,9 +8866,34 @@
                 "english": "joining a company; getting a job with a company; starting work at a company"
             },
             {
-                "kanji": "制作",
-                "furigana": "せいさく",
-                "english": "work (film, book)"
+                "kanji": "超過",
+                "furigana": "ちょうか",
+                "english": "excess; being more than"
+            },
+            {
+                "kanji": "日帰り",
+                "furigana": "ひがえり",
+                "english": "day trip"
+            },
+            {
+                "kanji": "発想",
+                "furigana": "はっそう",
+                "english": "idea; conception"
+            },
+            {
+                "kanji": "募集",
+                "furigana": "ぼしゅう",
+                "english": "recruitment; invitation; selection; advertisement; taking applications"
+            },
+            {
+                "kanji": "評論",
+                "furigana": "ひょうろん",
+                "english": "criticism; critique"
+            },
+            {
+                "kanji": "下車",
+                "furigana": "げしゃ",
+                "english": "alighting (from a train, bus, etc.); getting off; getting out (of a car)"
             },
             {
                 "kanji": "免税",
@@ -8931,14 +8901,14 @@
                 "english": "tax exemption; duty exemption"
             },
             {
-                "kanji": "肯定",
-                "furigana": "こうてい",
-                "english": "affirmation"
+                "kanji": "制作",
+                "furigana": "せいさく",
+                "english": "work (film, book)"
             },
             {
-                "kanji": "直通",
-                "furigana": "ちょくつう",
-                "english": "direct line; direct communication; connecting directly; through service; nonstop service"
+                "kanji": "研修",
+                "furigana": "けんしゅう",
+                "english": "training (esp. in-service); induction course"
             },
             {
                 "kanji": "解説",
@@ -8951,9 +8921,19 @@
                 "english": "cleaning; clean-up; garbage collection; scavenging"
             },
             {
-                "kanji": "区分",
-                "furigana": "くぶん",
-                "english": "division; section; demarcation; partition; segmentation; compartment; (traffic) lane"
+                "kanji": "直通",
+                "furigana": "ちょくつう",
+                "english": "direct line; direct communication; connecting directly; through service; nonstop service"
+            },
+            {
+                "kanji": "断水",
+                "furigana": "だんすい",
+                "english": "suspension of water supply; water outage"
+            },
+            {
+                "kanji": "肯定",
+                "furigana": "こうてい",
+                "english": "affirmation"
             },
             {
                 "kanji": "乗車",
@@ -9101,19 +9081,24 @@
                 "english": "to heat; to heat up"
             },
             {
-                "kanji": "交差",
-                "furigana": "こうさ",
-                "english": "crossing; intersection"
-            },
-            {
                 "kanji": "凸凹",
                 "furigana": "でこぼこ",
                 "english": "unevenness; roughness; ruggedness; bumpiness"
             },
             {
+                "kanji": "交差",
+                "furigana": "こうさ",
+                "english": "crossing; intersection"
+            },
+            {
                 "kanji": "特売",
                 "furigana": "とくばい",
                 "english": "special sale; bargain sale"
+            },
+            {
+                "kanji": "清書",
+                "furigana": "せいしょ",
+                "english": "fair copy; clean copy"
             },
             {
                 "kanji": "謙遜",
@@ -9276,14 +9261,14 @@
                 "english": "banzai; hurray; hurrah; hooray"
             },
             {
-                "kanji": "造船",
-                "furigana": "ぞうせん",
-                "english": "shipbuilding"
-            },
-            {
                 "kanji": "消毒",
                 "furigana": "しょうどく",
                 "english": "disinfection; sterilization; sterilisation"
+            },
+            {
+                "kanji": "造船",
+                "furigana": "ぞうせん",
+                "english": "shipbuilding"
             },
             {
                 "kanji": "換気",
@@ -9321,14 +9306,14 @@
                 "english": "minus; subtraction; taking away"
             },
             {
-                "kanji": "トレーニング",
-                "furigana": "トレーニング",
-                "english": "training (for a skill, job, sport, etc.); practice"
-            },
-            {
                 "kanji": "ぴかぴか",
                 "furigana": "ピカピカ",
                 "english": "with a glitter; with a sparkle"
+            },
+            {
+                "kanji": "トレーニング",
+                "furigana": "トレーニング",
+                "english": "training (for a skill, job, sport, etc.); practice"
             },
             {
                 "kanji": "プリント",
@@ -9351,24 +9336,14 @@
                 "english": "storage; preservation"
             },
             {
+                "kanji": "抽象",
+                "furigana": "ちゅうしょう",
+                "english": "abstraction"
+            },
+            {
                 "kanji": "増減",
                 "furigana": "ぞうげん",
                 "english": "increase and decrease; fluctuation"
-            },
-            {
-                "kanji": "集金",
-                "furigana": "しゅうきん",
-                "english": "money collection"
-            },
-            {
-                "kanji": "集金",
-                "furigana": "しゅうきん",
-                "english": "money collection"
-            },
-            {
-                "kanji": "差し引き",
-                "furigana": "さしひき",
-                "english": "deduction; subtraction; balance"
             },
             {
                 "kanji": "下降",
@@ -9381,9 +9356,9 @@
                 "english": "reception (e.g. of visitors); dealing with"
             },
             {
-                "kanji": "投書",
-                "furigana": "とうしょ",
-                "english": "letter (e.g. of complaint); letter to the editor; letter from a reader"
+                "kanji": "抽象",
+                "furigana": "ちゅうしょう",
+                "english": "abstraction"
             },
             {
                 "kanji": "自衛",
@@ -9391,14 +9366,39 @@
                 "english": "self-defense; self-defence"
             },
             {
+                "kanji": "投書",
+                "furigana": "とうしょ",
+                "english": "letter (e.g. of complaint); letter to the editor; letter from a reader"
+            },
+            {
                 "kanji": "問答",
                 "furigana": "もんどう",
                 "english": "questions and answers; dialogue"
             },
             {
+                "kanji": "差し引き",
+                "furigana": "さしひき",
+                "english": "deduction; subtraction; balance"
+            },
+            {
+                "kanji": "割り算",
+                "furigana": "わりざん",
+                "english": "division"
+            },
+            {
+                "kanji": "作製",
+                "furigana": "さくせい",
+                "english": "manufacture; production"
+            },
+            {
                 "kanji": "自習",
                 "furigana": "じしゅう",
                 "english": "self-study; teaching oneself"
+            },
+            {
+                "kanji": "概論",
+                "furigana": "がいろん",
+                "english": "introduction; outline; general remarks"
             },
             {
                 "kanji": "写生",
@@ -9469,11 +9469,6 @@
                 "kanji": "合同",
                 "furigana": "ごうどう",
                 "english": "combination; union; joining; incorporation; amalgamation; merger; fusion"
-            },
-            {
-                "kanji": "一定",
-                "furigana": "いってい",
-                "english": "fixed; settled; constant; definite; uniform; regularized; regularised; defined; standardized; standardised; certain; prescribed"
             },
             {
                 "kanji": "乱暴",
@@ -9734,9 +9729,9 @@
                 "english": "frustrated (over a failure, humiliation or injustice); annoyed; chagrined; (bitterly) disappointed; bitter; vexed; frustrating; annoying; regrettable"
             },
             {
-                "kanji": "諄い",
-                "furigana": "くどい",
-                "english": "repetitious; long-winded; tedious; wordy; verbose; insistent; importunate"
+                "kanji": "面倒くさい",
+                "furigana": "めんどくさい",
+                "english": "bothersome; tiresome; bother to do"
             },
             {
                 "kanji": "若々しい",
@@ -9754,11 +9749,6 @@
                 "english": "happy; auspicious; propitious; joyous"
             },
             {
-                "kanji": "慌ただしい",
-                "furigana": "あわただしい",
-                "english": "busy; hectic; hurried; rushed"
-            },
-            {
                 "kanji": "勇ましい",
                 "furigana": "いさましい",
                 "english": "brave; valiant; gallant; courageous"
@@ -9767,6 +9757,11 @@
                 "kanji": "清い",
                 "furigana": "きよい",
                 "english": "clean; clear"
+            },
+            {
+                "kanji": "慌ただしい",
+                "furigana": "あわただしい",
+                "english": "busy; hectic; hurried; rushed"
             },
             {
                 "kanji": "憎らしい",
@@ -9961,14 +9956,14 @@
                 "english": "misfortune; bad luck; ill luck; ill fortune"
             },
             {
-                "kanji": "一定",
-                "furigana": "いってい",
-                "english": "fixed; settled; constant; definite; uniform; regularized; regularised; defined; standardized; standardised; certain; prescribed"
-            },
-            {
                 "kanji": "公正",
                 "furigana": "こうせい",
                 "english": "justice; fairness; impartiality"
+            },
+            {
+                "kanji": "乱暴",
+                "furigana": "らんぼう",
+                "english": "violence; assault; rowdiness; wildness; running riot"
             },
             {
                 "kanji": "手ごろ",
@@ -9976,9 +9971,9 @@
                 "english": "handy; convenient"
             },
             {
-                "kanji": "乱暴",
-                "furigana": "らんぼう",
-                "english": "violence; assault; rowdiness; wildness; running riot"
+                "kanji": "派手",
+                "furigana": "はで",
+                "english": "showy; loud; flashy; gaudy"
             },
             {
                 "kanji": "素直",
@@ -9991,24 +9986,9 @@
                 "english": "innumerable; countless; numberless"
             },
             {
-                "kanji": "派手",
-                "furigana": "はで",
-                "english": "showy; loud; flashy; gaudy"
-            },
-            {
                 "kanji": "純粋",
                 "furigana": "じゅんすい",
                 "english": "pure; true; genuine; unmixed"
-            },
-            {
-                "kanji": "真っ暗",
-                "furigana": "まっくら",
-                "english": "total darkness; pitch dark"
-            },
-            {
-                "kanji": "消極的",
-                "furigana": "しょうきょくてき",
-                "english": "negative; passive; half-hearted; unmotivated"
             },
             {
                 "kanji": "謙虚",
@@ -10016,9 +9996,19 @@
                 "english": "modest; humble"
             },
             {
+                "kanji": "消極的",
+                "furigana": "しょうきょくてき",
+                "english": "negative; passive; half-hearted; unmotivated"
+            },
+            {
                 "kanji": "過剰",
                 "furigana": "かじょう",
                 "english": "excess; surplus; superabundance; overabundance"
+            },
+            {
+                "kanji": "真っ暗",
+                "furigana": "まっくら",
+                "english": "total darkness; pitch dark"
             },
             {
                 "kanji": "膨大",
@@ -10360,14 +10350,14 @@
                 "english": "to catch; to capture; to seize; to arrest; to grab; to catch hold of"
             },
             {
-                "kanji": "溢れる-1",
-                "furigana": "あふれる",
-                "english": "to overflow; to brim over; to flood"
-            },
-            {
                 "kanji": "零れる",
                 "furigana": "こぼれる",
                 "english": "to spill; to fall out of; to overflow"
+            },
+            {
+                "kanji": "溢れる-1",
+                "furigana": "あふれる",
+                "english": "to overflow; to brim over; to flood"
             },
             {
                 "kanji": "嵌める",
@@ -10405,11 +10395,6 @@
                 "english": "to be temperate in; to refrain; to abstain; to hold back; to restrain oneself from excessive ..."
             },
             {
-                "kanji": "控える",
-                "furigana": "ひかえる",
-                "english": "to be temperate in; to refrain; to abstain; to hold back; to restrain oneself from excessive ..."
-            },
-            {
                 "kanji": "逃れる",
                 "furigana": "のがれる",
                 "english": "to escape"
@@ -10435,6 +10420,11 @@
                 "english": "to wear (sword, decoration, etc.); to carry"
             },
             {
+                "kanji": "問い合わせる",
+                "furigana": "といあわせる",
+                "english": "to enquire; to inquire; to seek information"
+            },
+            {
                 "kanji": "早める",
                 "furigana": "はやめる",
                 "english": "to bring forward (e.g. by 3 hours); to advance; to hasten (e.g. one's death); to expedite; to precipitate"
@@ -10445,6 +10435,16 @@
                 "english": "to enquire; to inquire; to seek information"
             },
             {
+                "kanji": "苦しめる",
+                "furigana": "くるしめる",
+                "english": "to torment; to pain; to inflict (physical) pain; to hurt"
+            },
+            {
+                "kanji": "報じる",
+                "furigana": "ほうじる",
+                "english": "to inform; to report"
+            },
+            {
                 "kanji": "駆ける",
                 "furigana": "かける",
                 "english": "to run; to dash; to race"
@@ -10453,11 +10453,6 @@
                 "kanji": "報じる",
                 "furigana": "ほうじる",
                 "english": "to inform; to report"
-            },
-            {
-                "kanji": "引き上げる",
-                "furigana": "ひきあげる",
-                "english": "to pull up; to drag up; to lift up"
             },
             {
                 "kanji": "掲げる",
@@ -10475,19 +10470,14 @@
                 "english": "to deepen; to heighten; to intensify"
             },
             {
-                "kanji": "強いる",
-                "furigana": "しいる",
-                "english": "to force; to compel; to coerce; to press; to impose"
-            },
-            {
                 "kanji": "転じる",
                 "furigana": "てんじる",
                 "english": "to turn; to shift; to alter; to distract"
             },
             {
-                "kanji": "仕掛ける",
-                "furigana": "しかける",
-                "english": "to start; to begin; to commence"
+                "kanji": "手がける",
+                "furigana": "てがける",
+                "english": "to handle; to manage; to deal with; to work with; to have experience with"
             },
             {
                 "kanji": "手がける",
@@ -10518,11 +10508,6 @@
                 "kanji": "据える",
                 "furigana": "すえる",
                 "english": "to place (in position); to fix; to set (e.g. table); to lay (foundation)"
-            },
-            {
-                "kanji": "踏まえる",
-                "furigana": "ふまえる",
-                "english": "to be based on; to take into account; to build upon; to have origin in"
             },
             {
                 "kanji": "踏まえる",
@@ -10655,6 +10640,11 @@
                 "english": "to put to bed; to let sleep"
             },
             {
+                "kanji": "老ける",
+                "furigana": "ふける",
+                "english": "to age; to grow old (esp. in appearance); to show marks of age"
+            },
+            {
                 "kanji": "叶える",
                 "furigana": "かなえる",
                 "english": "to grant (request, wish); to answer (prayer)"
@@ -10745,14 +10735,14 @@
                 "english": "to go to ruin; to go under; to fall; to be destroyed; to die out; to become extinct; to perish"
             },
             {
+                "kanji": "老いる",
+                "furigana": "おいる",
+                "english": "to age; to grow old"
+            },
+            {
                 "kanji": "途切れる",
                 "furigana": "とぎれる",
                 "english": "to break off; to come to an end; to be interrupted; to be cut short; to pause"
-            },
-            {
-                "kanji": "裂ける",
-                "furigana": "さける",
-                "english": "to split; to tear; to burst; to be separated; to be divided"
             },
             {
                 "kanji": "裂ける",
@@ -10805,9 +10795,9 @@
                 "english": "to put together; to combine; to join together; to join up"
             },
             {
-                "kanji": "途絶える",
-                "furigana": "とだえる",
-                "english": "to stop; to cease; to come to an end; to cut off"
+                "kanji": "沈める",
+                "furigana": "しずめる",
+                "english": "to sink (e.g. a ship); to submerge"
             },
             {
                 "kanji": "引っ掛ける",
@@ -10825,14 +10815,19 @@
                 "english": "to make round; to roll up; to curl up"
             },
             {
+                "kanji": "途絶える",
+                "furigana": "とだえる",
+                "english": "to stop; to cease; to come to an end; to cut off"
+            },
+            {
                 "kanji": "揉める",
                 "furigana": "もめる",
                 "english": "to disagree; to dispute; to fight (over)"
             },
             {
-                "kanji": "沈める",
-                "furigana": "しずめる",
-                "english": "to sink (e.g. a ship); to submerge"
+                "kanji": "洒落る",
+                "furigana": "しゃれる",
+                "english": "to dress stylishly"
             },
             {
                 "kanji": "仕入れる",
@@ -10903,6 +10898,16 @@
                 "kanji": "案じる",
                 "furigana": "あんじる",
                 "english": "to be anxious (about); to be concerned (about); to worry (about); to fear"
+            },
+            {
+                "kanji": "呼び止める",
+                "furigana": "よびとめる",
+                "english": "to (call and) stop; to call (someone) to stop; to hail (e.g. a taxi)"
+            },
+            {
+                "kanji": "呼び止める",
+                "furigana": "よびとめる",
+                "english": "to (call and) stop; to call (someone) to stop; to hail (e.g. a taxi)"
             },
             {
                 "kanji": "取り調べる",
@@ -11000,6 +11005,11 @@
                 "english": "to rot; to decay"
             },
             {
+                "kanji": "宛てる",
+                "furigana": "あてる",
+                "english": "to address"
+            },
+            {
                 "kanji": "留める",
                 "furigana": "とどめる",
                 "english": "to stop; to stay (e.g. the night); to cease; to put an end to"
@@ -11068,11 +11078,6 @@
                 "kanji": "準ずる",
                 "furigana": "じゅんずる",
                 "english": "to follow (a rule, precedent, etc.); to conform to (the law, standards, etc.); to be based on; to apply correspondingly"
-            },
-            {
-                "kanji": "経る",
-                "furigana": "へる",
-                "english": "to pass; to elapse; to go by"
             },
             {
                 "kanji": "差し支える",
@@ -11322,9 +11327,9 @@
                 "english": "to be affectionate to; to treat tenderly; to dote on; to show one's love (for); to cherish"
             },
             {
-                "kanji": "傾く",
-                "furigana": "かたむく",
-                "english": "to incline toward; to slant; to lurch; to heel over; to be disposed to; to trend toward; to be prone to"
+                "kanji": "躓く",
+                "furigana": "つまずく",
+                "english": "to trip (over); to stumble"
             },
             {
                 "kanji": "傾く",
@@ -11407,14 +11412,14 @@
                 "english": "to reach; to amount to; to befall; to happen to; to extend; to go on (for, until)"
             },
             {
-                "kanji": "満たす",
-                "furigana": "みたす",
-                "english": "to satisfy (conditions, one's appetite, etc.); to meet (e.g. demands); to fulfill; to gratify"
-            },
-            {
                 "kanji": "成り立つ",
                 "furigana": "なりたつ",
                 "english": "to consist of; to be made up of; to be composed of"
+            },
+            {
+                "kanji": "満たす",
+                "furigana": "みたす",
+                "english": "to satisfy (conditions, one's appetite, etc.); to meet (e.g. demands); to fulfill; to gratify"
             },
             {
                 "kanji": "悩ます",
@@ -11425,6 +11430,11 @@
                 "kanji": "継ぐ",
                 "furigana": "つぐ",
                 "english": "to succeed (a person, to a position, etc.); to inherit; to take over; to follow"
+            },
+            {
+                "kanji": "生かす",
+                "furigana": "いかす",
+                "english": "to make (the best) use of; to put to good use; to leverage (skills, attributes, experience, etc.); to capitalise on (experience, etc.)"
             },
             {
                 "kanji": "生かす",
@@ -11497,14 +11507,14 @@
                 "english": "to wait eagerly for; to look forward to"
             },
             {
-                "kanji": "募る",
-                "furigana": "つのる",
-                "english": "to become stronger; to grow in intensity; to grow violent; to become worse"
-            },
-            {
                 "kanji": "交わす",
                 "furigana": "かわす",
                 "english": "to exchange (messages, greetings, arguments, etc.)"
+            },
+            {
+                "kanji": "募る",
+                "furigana": "つのる",
+                "english": "to become stronger; to grow in intensity; to grow violent; to become worse"
             },
             {
                 "kanji": "惜しむ",
@@ -11537,14 +11547,19 @@
                 "english": "to entrust (to someone); to leave (in someone's hands)"
             },
             {
-                "kanji": "結びつく",
-                "furigana": "むすびつく",
-                "english": "to be related; to be connected; to be joined together"
+                "kanji": "任す",
+                "furigana": "まかす",
+                "english": "to entrust (to someone); to leave (in someone's hands)"
             },
             {
                 "kanji": "備わる",
                 "furigana": "そなわる",
                 "english": "to be furnished with; to be provided with; to be equipped with"
+            },
+            {
+                "kanji": "結びつく",
+                "furigana": "むすびつく",
+                "english": "to be related; to be connected; to be joined together"
             },
             {
                 "kanji": "引き取る",
@@ -11592,19 +11607,14 @@
                 "english": "to dance (orig. a whirling dance)"
             },
             {
-                "kanji": "収まる",
-                "furigana": "おさまる",
-                "english": "to fit into (a box, frame, category, etc.); to be contained within; to fall within (e.g. a budget)"
+                "kanji": "覆す",
+                "furigana": "くつがえす",
+                "english": "to overturn; to capsize; to upset"
             },
             {
                 "kanji": "収まる",
                 "furigana": "おさまる",
                 "english": "to fit into (a box, frame, category, etc.); to be contained within; to fall within (e.g. a budget)"
-            },
-            {
-                "kanji": "阻む",
-                "furigana": "はばむ",
-                "english": "to keep someone from doing; to stop; to prevent; to check; to hinder; to obstruct; to oppose; to thwart"
             },
             {
                 "kanji": "阻む",
@@ -11867,19 +11877,14 @@
                 "english": "to cut into (a line, conversation, etc.); to force oneself into (e.g. a crowd); to wedge oneself into; to squeeze oneself into; to intrude on; to interrupt"
             },
             {
-                "kanji": "罵る",
-                "furigana": "ののしる",
-                "english": "to abuse (verbally); to curse at; to shout abuse at; to speak ill of"
+                "kanji": "遮る",
+                "furigana": "さえぎる",
+                "english": "to interrupt; to obstruct (a view, someone's way, etc.); to block (light, wind, etc.); to intercept; to cut off"
             },
             {
                 "kanji": "罵る",
                 "furigana": "ののしる",
                 "english": "to abuse (verbally); to curse at; to shout abuse at; to speak ill of"
-            },
-            {
-                "kanji": "辿る",
-                "furigana": "たどる",
-                "english": "to follow (a road, path, etc.); to trace"
             },
             {
                 "kanji": "退く-1",
@@ -11887,14 +11892,19 @@
                 "english": "to step back; to move back; to retreat"
             },
             {
+                "kanji": "明かす",
+                "furigana": "あかす",
+                "english": "to pass (the night); to spend"
+            },
+            {
                 "kanji": "漕ぐ",
                 "furigana": "こぐ",
                 "english": "to row; to paddle; to scull; to pull (the oars)"
             },
             {
-                "kanji": "明かす",
-                "furigana": "あかす",
-                "english": "to pass (the night); to spend"
+                "kanji": "辿る",
+                "furigana": "たどる",
+                "english": "to follow (a road, path, etc.); to trace"
             },
             {
                 "kanji": "誤魔化す",
@@ -11907,11 +11917,6 @@
                 "english": "to overlook; to fail to notice; to miss (seeing)"
             },
             {
-                "kanji": "貫く",
-                "furigana": "つらぬく",
-                "english": "to go through; to pierce; to penetrate"
-            },
-            {
                 "kanji": "妬む",
                 "furigana": "ねたむ",
                 "english": "to be jealous of; to envy; to begrudge"
@@ -11922,6 +11927,11 @@
                 "english": "to make (good) progress; to move right ahead (with the work); to advance"
             },
             {
+                "kanji": "貫く",
+                "furigana": "つらぬく",
+                "english": "to go through; to pierce; to penetrate"
+            },
+            {
                 "kanji": "交わる",
                 "furigana": "まじわる",
                 "english": "to cross; to intersect; to join; to meet"
@@ -11930,11 +11940,6 @@
                 "kanji": "弱る",
                 "furigana": "よわる",
                 "english": "to weaken; to grow weak; to wane; to decline (of one's health)"
-            },
-            {
-                "kanji": "慎む",
-                "furigana": "つつしむ",
-                "english": "to be careful; to be discreet"
             },
             {
                 "kanji": "嘆く",
@@ -12032,19 +12037,9 @@
                 "english": "to swarm; to gather"
             },
             {
-                "kanji": "弱まる",
-                "furigana": "よわまる",
-                "english": "to abate; to weaken; to be emaciated; to be dejected; to be perplexed"
-            },
-            {
-                "kanji": "弾む",
-                "furigana": "はずむ",
-                "english": "to spring; to bound; to bounce"
-            },
-            {
-                "kanji": "呟く",
-                "furigana": "つぶやく",
-                "english": "to mutter; to murmur; to grumble"
+                "kanji": "群がる",
+                "furigana": "むらがる",
+                "english": "to swarm; to gather"
             },
             {
                 "kanji": "合わす",
@@ -12062,6 +12057,11 @@
                 "english": "to accustom; to train (e.g. one's ear)"
             },
             {
+                "kanji": "呟く",
+                "furigana": "つぶやく",
+                "english": "to mutter; to murmur; to grumble"
+            },
+            {
                 "kanji": "絡む",
                 "furigana": "からむ",
                 "english": "to twine; to get tangled; to get entangled; to get caught (in)"
@@ -12070,6 +12070,11 @@
                 "kanji": "練る",
                 "furigana": "ねる",
                 "english": "to knead; to thicken into a paste (stirring over a flame)"
+            },
+            {
+                "kanji": "盛り上がる",
+                "furigana": "もりあがる",
+                "english": "to swell; to rise; to bulge; to be piled up"
             },
             {
                 "kanji": "病む",
@@ -12182,6 +12187,11 @@
                 "english": "to yearn for; to long for; to pine for; to miss; to love dearly; to adore"
             },
             {
+                "kanji": "瞑る",
+                "furigana": "つぶる",
+                "english": "to close (one's eyes); to shut"
+            },
+            {
                 "kanji": "籠もる",
                 "furigana": "こもる",
                 "english": "to shut oneself in (e.g. one's room); to be confined in; to seclude oneself; to hide away; to stay inside (one's shell)"
@@ -12192,19 +12202,14 @@
                 "english": "to manage; to control; to supervise; to oversee; to command"
             },
             {
-                "kanji": "賑わう",
-                "furigana": "にぎわう",
-                "english": "to be crowded with people; to be bustling with"
-            },
-            {
                 "kanji": "逸らす",
                 "furigana": "そらす",
                 "english": "to turn away (one's eyes, face, etc.); to avert; to divert (e.g. one's attention); to evade (e.g. a question); to change (e.g. the subject)"
             },
             {
-                "kanji": "瞑る",
-                "furigana": "つぶる",
-                "english": "to close (one's eyes); to shut"
+                "kanji": "賑わう",
+                "furigana": "にぎわう",
+                "english": "to be crowded with people; to be bustling with"
             },
             {
                 "kanji": "取り巻く",
@@ -12217,9 +12222,9 @@
                 "english": "to get strong; to gain strength"
             },
             {
-                "kanji": "乱す",
-                "furigana": "みだす",
-                "english": "to throw into disorder; to disarrange; to disturb (order, peace, etc.); to corrupt (public morals); to dishevel (hair)"
+                "kanji": "慕う",
+                "furigana": "したう",
+                "english": "to yearn for; to long for; to pine for; to miss; to love dearly; to adore"
             },
             {
                 "kanji": "冷やかす",
@@ -12327,14 +12332,14 @@
                 "english": "to stagnate; to be delayed; to be left undone"
             },
             {
-                "kanji": "仕切る",
-                "furigana": "しきる",
-                "english": "to partition; to divide; to mark off"
-            },
-            {
                 "kanji": "隔たる",
                 "furigana": "へだたる",
                 "english": "to be distant"
+            },
+            {
+                "kanji": "仕切る",
+                "furigana": "しきる",
+                "english": "to partition; to divide; to mark off"
             },
             {
                 "kanji": "澄ます",
@@ -12342,14 +12347,14 @@
                 "english": "to clear; to make clear"
             },
             {
-                "kanji": "諮る",
-                "furigana": "はかる",
-                "english": "to consult with; to discuss; to confer; to deliberate"
-            },
-            {
                 "kanji": "口ずさむ",
                 "furigana": "くちずさむ",
                 "english": "to hum (a tune); to sing to oneself; to croon"
+            },
+            {
+                "kanji": "諮る",
+                "furigana": "はかる",
+                "english": "to consult with; to discuss; to confer; to deliberate"
             },
             {
                 "kanji": "囀る",
@@ -12512,14 +12517,9 @@
                 "english": "to pinch; to nip"
             },
             {
-                "kanji": "照り返す",
-                "furigana": "てりかえす",
-                "english": "to reflect; to throw back light"
-            },
-            {
-                "kanji": "毟る",
-                "furigana": "むしる",
-                "english": "to pluck; to pick; to tear"
+                "kanji": "賜る",
+                "furigana": "たまわる",
+                "english": "to be given; to be granted; to be honored with; to be honoured with"
             },
             {
                 "kanji": "弾く",
@@ -12632,11 +12632,6 @@
                 "english": "to swing; to sway; to shake; to tremble"
             },
             {
-                "kanji": "揺らぐ",
-                "furigana": "ゆらぐ",
-                "english": "to swing; to sway; to shake; to tremble"
-            },
-            {
                 "kanji": "添う",
                 "furigana": "そう",
                 "english": "to meet (wishes, expectations, etc.); to satisfy; to comply with; to live up to"
@@ -12657,14 +12652,14 @@
                 "english": "to pass on (a message, thoughts, etc.); to convey; to transmit; to relay; to tell"
             },
             {
-                "kanji": "潤う",
-                "furigana": "うるおう",
-                "english": "to become moist; to be moistened; to become damp; to get wet"
-            },
-            {
                 "kanji": "連なる",
                 "furigana": "つらなる",
                 "english": "to extend; to stretch out; to stand in a row"
+            },
+            {
+                "kanji": "潤う",
+                "furigana": "うるおう",
+                "english": "to become moist; to be moistened; to become damp; to get wet"
             },
             {
                 "kanji": "緩む",
@@ -12717,14 +12712,14 @@
                 "english": "to graze (e.g. bullet); to scratch; to touch lightly"
             },
             {
-                "kanji": "間誤付く",
-                "furigana": "まごつく",
-                "english": "to be confused; to be flustered; to be at a loss"
-            },
-            {
                 "kanji": "懐く",
                 "furigana": "なつく",
                 "english": "to become attached (to); to take (to); to become affectionate (with); to be tamed; to get close (e.g. to someone emotionally); to become intimate (with)"
+            },
+            {
+                "kanji": "間誤付く",
+                "furigana": "まごつく",
+                "english": "to be confused; to be flustered; to be at a loss"
             },
             {
                 "kanji": "遣り通す",
@@ -12732,14 +12727,14 @@
                 "english": "to carry through; to achieve; to complete"
             },
             {
-                "kanji": "詰る",
-                "furigana": "なじる",
-                "english": "to rebuke; to scold; to tell off; to find fault; to harp on; to reprove"
-            },
-            {
                 "kanji": "ダブる",
                 "furigana": "ダブる",
                 "english": "to be duplicated; to be repeated"
+            },
+            {
+                "kanji": "詰る",
+                "furigana": "なじる",
+                "english": "to rebuke; to scold; to tell off; to find fault; to harp on; to reprove"
             },
             {
                 "kanji": "凝る",
@@ -12894,14 +12889,14 @@
                 "english": "(medical) treatment; care; therapy; cure; remedy"
             },
             {
-                "kanji": "殺人",
-                "furigana": "さつじん",
-                "english": "murder; homicide; manslaughter"
-            },
-            {
                 "kanji": "投資",
                 "furigana": "とうし",
                 "english": "investment"
+            },
+            {
+                "kanji": "殺人",
+                "furigana": "さつじん",
+                "english": "murder; homicide; manslaughter"
             },
             {
                 "kanji": "反応",
@@ -13104,24 +13099,9 @@
                 "english": "service; ministry; attendance; church work"
             },
             {
-                "kanji": "腐敗",
-                "furigana": "ふはい",
-                "english": "decomposition; putrefaction; putrescence; spoilage"
-            },
-            {
-                "kanji": "退学",
-                "furigana": "たいがく",
-                "english": "dropping out of school; withdrawal from school"
-            },
-            {
-                "kanji": "分裂",
-                "furigana": "ぶんれつ",
-                "english": "split; division; break up"
-            },
-            {
-                "kanji": "設定",
-                "furigana": "せってい",
-                "english": "establishment; creation; posing (a problem); setting (movie, novel, etc.); scene"
+                "kanji": "奉仕",
+                "furigana": "ほうし",
+                "english": "service; ministry; attendance; church work"
             },
             {
                 "kanji": "得点",
@@ -13134,6 +13114,16 @@
                 "english": "practice; putting into practice; implementation"
             },
             {
+                "kanji": "設定",
+                "furigana": "せってい",
+                "english": "establishment; creation; posing (a problem); setting (movie, novel, etc.); scene"
+            },
+            {
+                "kanji": "分裂",
+                "furigana": "ぶんれつ",
+                "english": "split; division; break up"
+            },
+            {
                 "kanji": "統制",
                 "furigana": "とうせい",
                 "english": "regulation; control"
@@ -13144,14 +13134,9 @@
                 "english": "nursing; care; caregiving; caring"
             },
             {
-                "kanji": "感染",
-                "furigana": "かんせん",
-                "english": "infection; contagion; becoming infected"
-            },
-            {
-                "kanji": "脅迫",
-                "furigana": "きょうはく",
-                "english": "threat; menace; coercion; blackmail"
+                "kanji": "暗殺",
+                "furigana": "あんさつ",
+                "english": "assassination"
             },
             {
                 "kanji": "占領",
@@ -13164,9 +13149,19 @@
                 "english": "opposition; rebellion; revolt; resistance; backlash; refusal"
             },
             {
-                "kanji": "暗殺",
-                "furigana": "あんさつ",
-                "english": "assassination"
+                "kanji": "感染",
+                "furigana": "かんせん",
+                "english": "infection; contagion; becoming infected"
+            },
+            {
+                "kanji": "脅迫",
+                "furigana": "きょうはく",
+                "english": "threat; menace; coercion; blackmail"
+            },
+            {
+                "kanji": "抑圧",
+                "furigana": "よくあつ",
+                "english": "check; restraint; oppression; suppression"
             },
             {
                 "kanji": "清算",
@@ -13179,19 +13174,14 @@
                 "english": "conformity; alignment; agreement; sympathy; following suit"
             },
             {
-                "kanji": "抑圧",
-                "furigana": "よくあつ",
-                "english": "check; restraint; oppression; suppression"
-            },
-            {
                 "kanji": "調理",
                 "furigana": "ちょうり",
                 "english": "cooking; food preparation"
             },
             {
-                "kanji": "強制",
-                "furigana": "きょうせい",
-                "english": "compulsion; coercion; forcing (to do); enforcement"
+                "kanji": "照明",
+                "furigana": "しょうめい",
+                "english": "illumination; lighting"
             },
             {
                 "kanji": "下痢",
@@ -13619,14 +13609,14 @@
                 "english": "promotion; advancement; rising in rank"
             },
             {
-                "kanji": "浪費",
-                "furigana": "ろうひ",
-                "english": "waste; extravagance"
-            },
-            {
                 "kanji": "提供",
                 "furigana": "ていきょう",
                 "english": "offer; tender; providing; supplying; making available; donating (blood, organs, etc.)"
+            },
+            {
+                "kanji": "浪費",
+                "furigana": "ろうひ",
+                "english": "waste; extravagance"
             },
             {
                 "kanji": "拒否",
@@ -13639,14 +13629,14 @@
                 "english": "retirement; resignation"
             },
             {
-                "kanji": "抗議",
-                "furigana": "こうぎ",
-                "english": "protest; objection"
-            },
-            {
                 "kanji": "討論",
                 "furigana": "とうろん",
                 "english": "debate; discussion"
+            },
+            {
+                "kanji": "抗議",
+                "furigana": "こうぎ",
+                "english": "protest; objection"
             },
             {
                 "kanji": "負傷",
@@ -13724,14 +13714,14 @@
                 "english": "acquisition; possession"
             },
             {
-                "kanji": "体験",
-                "furigana": "たいけん",
-                "english": "(practical) experience; personal experience; hands-on experience; first-hand experience"
-            },
-            {
                 "kanji": "栽培",
                 "furigana": "さいばい",
                 "english": "cultivation"
+            },
+            {
+                "kanji": "体験",
+                "furigana": "たいけん",
+                "english": "(practical) experience; personal experience; hands-on experience; first-hand experience"
             },
             {
                 "kanji": "値引き",
@@ -13752,11 +13742,6 @@
                 "kanji": "討議",
                 "furigana": "とうぎ",
                 "english": "debate; discussion"
-            },
-            {
-                "kanji": "減少",
-                "furigana": "げんしょう",
-                "english": "decrease; reduction; decline"
             },
             {
                 "kanji": "伝達",
@@ -13994,39 +13979,19 @@
                 "english": "(abstract) symbol; emblem; representation"
             },
             {
-                "kanji": "教訓",
-                "furigana": "きょうくん",
-                "english": "lesson; precept; teachings; moral"
+                "kanji": "入手",
+                "furigana": "にゅうしゅ",
+                "english": "acquisition; obtaining; procurement; getting (hold of)"
             },
             {
-                "kanji": "参照",
-                "furigana": "さんしょう",
-                "english": "reference (e.g. to a dictionary, passage, footnotes); consultation; comparison"
+                "kanji": "追跡",
+                "furigana": "ついせき",
+                "english": "chase; pursuit; tracking; stalking"
             },
             {
-                "kanji": "抑制",
-                "furigana": "よくせい",
-                "english": "control; restraint; suppression; constraint; curtailment; inhibition; check; curb"
-            },
-            {
-                "kanji": "返済",
-                "furigana": "へんさい",
-                "english": "repayment; reimbursement; refund; redemption"
-            },
-            {
-                "kanji": "告白",
-                "furigana": "こくはく",
-                "english": "confession (to a crime, wrongdoing, etc.); admission"
-            },
-            {
-                "kanji": "形成",
-                "furigana": "けいせい",
-                "english": "formation; molding; making (up); taking form; giving form to"
-            },
-            {
-                "kanji": "公開",
-                "furigana": "こうかい",
-                "english": "opening to the public; making available to the public; exhibiting; unveiling; release (of a film, information, etc.); disclosure; publication"
+                "kanji": "匹敵",
+                "furigana": "ひってき",
+                "english": "to be a match for; to rival; to equal; to compare with; to be equivalent to"
             },
             {
                 "kanji": "当選",
@@ -14034,19 +13999,9 @@
                 "english": "being elected"
             },
             {
-                "kanji": "断言",
-                "furigana": "だんげん",
-                "english": "assertion; declaration; affirmation"
-            },
-            {
-                "kanji": "論議",
-                "furigana": "ろんぎ",
-                "english": "discussion; argument; debate"
-            },
-            {
-                "kanji": "墜落",
-                "furigana": "ついらく",
-                "english": "fall; crash (e.g. aircraft)"
+                "kanji": "告白",
+                "furigana": "こくはく",
+                "english": "confession (to a crime, wrongdoing, etc.); admission"
             },
             {
                 "kanji": "繁栄",
@@ -14054,14 +14009,74 @@
                 "english": "prosperity; thriving; flourishing"
             },
             {
+                "kanji": "返済",
+                "furigana": "へんさい",
+                "english": "repayment; reimbursement; refund; redemption"
+            },
+            {
+                "kanji": "断言",
+                "furigana": "だんげん",
+                "english": "assertion; declaration; affirmation"
+            },
+            {
+                "kanji": "公開",
+                "furigana": "こうかい",
+                "english": "opening to the public; making available to the public; exhibiting; unveiling; release (of a film, information, etc.); disclosure; publication"
+            },
+            {
+                "kanji": "論議",
+                "furigana": "ろんぎ",
+                "english": "discussion; argument; debate"
+            },
+            {
                 "kanji": "警戒",
                 "furigana": "けいかい",
                 "english": "vigilance; caution; alertness; precaution; being on guard"
             },
             {
-                "kanji": "創造",
-                "furigana": "そうぞう",
-                "english": "creation"
+                "kanji": "形成",
+                "furigana": "けいせい",
+                "english": "formation; molding; making (up); taking form; giving form to"
+            },
+            {
+                "kanji": "墜落",
+                "furigana": "ついらく",
+                "english": "fall; crash (e.g. aircraft)"
+            },
+            {
+                "kanji": "追放",
+                "furigana": "ついほう",
+                "english": "exile; banishment; eviction; deportation; purge; expulsion; ousting"
+            },
+            {
+                "kanji": "展示",
+                "furigana": "てんじ",
+                "english": "exhibition; display"
+            },
+            {
+                "kanji": "逃亡",
+                "furigana": "とうぼう",
+                "english": "escape; flight; running away; elopement; fleeing"
+            },
+            {
+                "kanji": "交互",
+                "furigana": "こうご",
+                "english": "alternate; alternating"
+            },
+            {
+                "kanji": "交互",
+                "furigana": "こうご",
+                "english": "alternate; alternating"
+            },
+            {
+                "kanji": "逃亡",
+                "furigana": "とうぼう",
+                "english": "escape; flight; running away; elopement; fleeing"
+            },
+            {
+                "kanji": "免除",
+                "furigana": "めんじょ",
+                "english": "exemption; exoneration; discharge"
             },
             {
                 "kanji": "確立",
@@ -14074,19 +14089,14 @@
                 "english": "securing; obtaining; ensuring; guarantee; maintaining"
             },
             {
-                "kanji": "免除",
-                "furigana": "めんじょ",
-                "english": "exemption; exoneration; discharge"
+                "kanji": "創造",
+                "furigana": "そうぞう",
+                "english": "creation"
             },
             {
-                "kanji": "団結",
-                "furigana": "だんけつ",
-                "english": "unity; union; solidarity; combination; teaming up"
-            },
-            {
-                "kanji": "確立",
-                "furigana": "かくりつ",
-                "english": "establishment; settlement"
+                "kanji": "武装",
+                "furigana": "ぶそう",
+                "english": "arms; armament; taking up arms; arming oneself"
             },
             {
                 "kanji": "登録",
@@ -14099,39 +14109,14 @@
                 "english": "steering; piloting; flying; control; operation; handling"
             },
             {
-                "kanji": "確保",
-                "furigana": "かくほ",
-                "english": "securing; obtaining; ensuring; guarantee; maintaining"
-            },
-            {
-                "kanji": "創造",
-                "furigana": "そうぞう",
-                "english": "creation"
-            },
-            {
-                "kanji": "免除",
-                "furigana": "めんじょ",
-                "english": "exemption; exoneration; discharge"
-            },
-            {
-                "kanji": "交互",
-                "furigana": "こうご",
-                "english": "alternate; alternating"
-            },
-            {
                 "kanji": "処置",
                 "furigana": "しょち",
                 "english": "measure; step; dealing with"
             },
             {
-                "kanji": "追放",
-                "furigana": "ついほう",
-                "english": "exile; banishment; eviction; deportation; purge; expulsion; ousting"
-            },
-            {
-                "kanji": "逃亡",
-                "furigana": "とうぼう",
-                "english": "escape; flight; running away; elopement; fleeing"
+                "kanji": "団結",
+                "furigana": "だんけつ",
+                "english": "unity; union; solidarity; combination; teaming up"
             },
             {
                 "kanji": "訴訟",
@@ -14154,24 +14139,19 @@
                 "english": "demand for; request"
             },
             {
-                "kanji": "出演",
-                "furigana": "しゅつえん",
-                "english": "appearance (in a film, play, TV show, etc.); performance"
+                "kanji": "侵略",
+                "furigana": "しんりゃく",
+                "english": "invasion (e.g. of a country); raid; aggression"
             },
             {
-                "kanji": "貯蓄",
-                "furigana": "ちょちく",
-                "english": "savings"
+                "kanji": "会見",
+                "furigana": "かいけん",
+                "english": "interview; audience; meeting; (viewing) party"
             },
             {
-                "kanji": "派遣",
-                "furigana": "はけん",
-                "english": "dispatch; despatch; deployment"
-            },
-            {
-                "kanji": "宣言",
-                "furigana": "せんげん",
-                "english": "declaration; proclamation; announcement"
+                "kanji": "捜索",
+                "furigana": "そうさく",
+                "english": "search (esp. for someone or something missing); manhunt"
             },
             {
                 "kanji": "分配",
@@ -14179,9 +14159,19 @@
                 "english": "division; splitting; sharing; distribution; dissemination; allocation"
             },
             {
-                "kanji": "出演",
-                "furigana": "しゅつえん",
-                "english": "appearance (in a film, play, TV show, etc.); performance"
+                "kanji": "宣言",
+                "furigana": "せんげん",
+                "english": "declaration; proclamation; announcement"
+            },
+            {
+                "kanji": "返答",
+                "furigana": "へんとう",
+                "english": "reply; answer"
+            },
+            {
+                "kanji": "侵略",
+                "furigana": "しんりゃく",
+                "english": "invasion (e.g. of a country); raid; aggression"
             },
             {
                 "kanji": "排除",
@@ -14194,14 +14184,14 @@
                 "english": "cut; reduction; curtailment"
             },
             {
-                "kanji": "会見",
-                "furigana": "かいけん",
-                "english": "interview; audience; meeting; (viewing) party"
-            },
-            {
                 "kanji": "逃走",
                 "furigana": "とうそう",
                 "english": "flight; desertion; escape"
+            },
+            {
+                "kanji": "派遣",
+                "furigana": "はけん",
+                "english": "dispatch; despatch; deployment"
             },
             {
                 "kanji": "提示",
@@ -14209,9 +14199,9 @@
                 "english": "presentation (of a passport, ID, etc.); showing; production (e.g. of documents)"
             },
             {
-                "kanji": "返答",
-                "furigana": "へんとう",
-                "english": "reply; answer"
+                "kanji": "出演",
+                "furigana": "しゅつえん",
+                "english": "appearance (in a film, play, TV show, etc.); performance"
             },
             {
                 "kanji": "自立",
@@ -14219,49 +14209,9 @@
                 "english": "independence; self-reliance"
             },
             {
-                "kanji": "捜索",
-                "furigana": "そうさく",
-                "english": "search (esp. for someone or something missing); manhunt"
-            },
-            {
-                "kanji": "侵略",
-                "furigana": "しんりゃく",
-                "english": "invasion (e.g. of a country); raid; aggression"
-            },
-            {
-                "kanji": "携帯",
-                "furigana": "けいたい",
-                "english": "carrying (on one's person or in the hand)"
-            },
-            {
-                "kanji": "申告",
-                "furigana": "しんこく",
-                "english": "report; return (e.g. tax); statement; declaration; notification; filing"
-            },
-            {
-                "kanji": "樹立",
-                "furigana": "じゅりつ",
-                "english": "establishment; founding; setting (a record)"
-            },
-            {
-                "kanji": "措置",
-                "furigana": "そち",
-                "english": "measure; step; action"
-            },
-            {
-                "kanji": "動揺",
-                "furigana": "どうよう",
-                "english": "shaking; trembling; pitching; rolling; oscillation"
-            },
-            {
-                "kanji": "優先",
-                "furigana": "ゆうせん",
-                "english": "preference; priority; precedence"
-            },
-            {
-                "kanji": "脱出",
-                "furigana": "だっしゅつ",
-                "english": "escape; break-out"
+                "kanji": "貯蓄",
+                "furigana": "ちょちく",
+                "english": "savings"
             },
             {
                 "kanji": "指揮",
@@ -14269,34 +14219,9 @@
                 "english": "command; direction; supervision"
             },
             {
-                "kanji": "暴露",
-                "furigana": "ばくろ",
-                "english": "disclosure; exposure; revelation"
-            },
-            {
-                "kanji": "運営",
-                "furigana": "うんえい",
-                "english": "management; administration; operation"
-            },
-            {
-                "kanji": "保管",
-                "furigana": "ほかん",
-                "english": "charge; custody; safekeeping; deposit; storage"
-            },
-            {
-                "kanji": "判定",
-                "furigana": "はんてい",
-                "english": "judgement; judgment; decision; ruling; finding; adjudication; verdict; call"
-            },
-            {
-                "kanji": "配置",
-                "furigana": "はいち",
-                "english": "arrangement (of resources); deployment; stationing; posting; disposition; configuration; layout"
-            },
-            {
-                "kanji": "享受",
-                "furigana": "きょうじゅ",
-                "english": "enjoyment (of freedom, beauty, etc.); reception (of a right, privilege, rank, etc.); having"
+                "kanji": "動揺",
+                "furigana": "どうよう",
+                "english": "shaking; trembling; pitching; rolling; oscillation"
             },
             {
                 "kanji": "携帯",
@@ -14304,14 +14229,54 @@
                 "english": "carrying (on one's person or in the hand)"
             },
             {
+                "kanji": "出産",
+                "furigana": "しゅっさん",
+                "english": "childbirth; (giving) birth; delivery; parturition; confinement"
+            },
+            {
+                "kanji": "爆破",
+                "furigana": "ばくは",
+                "english": "destructive blast; blowing up; explosion"
+            },
+            {
+                "kanji": "判定",
+                "furigana": "はんてい",
+                "english": "judgement; judgment; decision; ruling; finding; adjudication; verdict; call"
+            },
+            {
+                "kanji": "運営",
+                "furigana": "うんえい",
+                "english": "management; administration; operation"
+            },
+            {
+                "kanji": "脱出",
+                "furigana": "だっしゅつ",
+                "english": "escape; break-out"
+            },
+            {
+                "kanji": "暴露",
+                "furigana": "ばくろ",
+                "english": "disclosure; exposure; revelation"
+            },
+            {
+                "kanji": "出産",
+                "furigana": "しゅっさん",
+                "english": "childbirth; (giving) birth; delivery; parturition; confinement"
+            },
+            {
                 "kanji": "申告",
                 "furigana": "しんこく",
                 "english": "report; return (e.g. tax); statement; declaration; notification; filing"
             },
             {
-                "kanji": "除外",
-                "furigana": "じょがい",
-                "english": "exception; exclusion"
+                "kanji": "動揺",
+                "furigana": "どうよう",
+                "english": "shaking; trembling; pitching; rolling; oscillation"
+            },
+            {
+                "kanji": "描写",
+                "furigana": "びょうしゃ",
+                "english": "depiction; description; portrayal"
             },
             {
                 "kanji": "樹立",
@@ -14319,9 +14284,29 @@
                 "english": "establishment; founding; setting (a record)"
             },
             {
-                "kanji": "新築",
-                "furigana": "しんちく",
-                "english": "new building; new construction"
+                "kanji": "享受",
+                "furigana": "きょうじゅ",
+                "english": "enjoyment (of freedom, beauty, etc.); reception (of a right, privilege, rank, etc.); having"
+            },
+            {
+                "kanji": "放棄",
+                "furigana": "ほうき",
+                "english": "abandonment; renouncement; renunciation; resignation; abdication; surrender; relinquishing; waiving; giving up"
+            },
+            {
+                "kanji": "配置",
+                "furigana": "はいち",
+                "english": "arrangement (of resources); deployment; stationing; posting; disposition; configuration; layout"
+            },
+            {
+                "kanji": "除外",
+                "furigana": "じょがい",
+                "english": "exception; exclusion"
+            },
+            {
+                "kanji": "待遇",
+                "furigana": "たいぐう",
+                "english": "treatment; reception; service"
             },
             {
                 "kanji": "導入",
@@ -14399,24 +14384,9 @@
                 "english": "salary; pay; compensation; allowance (e.g. housing allowance); benefit; bonus"
             },
             {
-                "kanji": "避難",
-                "furigana": "ひなん",
-                "english": "taking refuge; finding shelter; evacuation; escape; seeking safe haven"
-            },
-            {
-                "kanji": "記載",
-                "furigana": "きさい",
-                "english": "mention (in a document); record; entry; statement; listing"
-            },
-            {
-                "kanji": "規定",
-                "furigana": "きてい",
-                "english": "stipulation; prescription; provision; regulation; rule"
-            },
-            {
-                "kanji": "雇用",
-                "furigana": "こよう",
-                "english": "employment; hire"
+                "kanji": "孤立",
+                "furigana": "こりつ",
+                "english": "isolation; being alone; being friendless"
             },
             {
                 "kanji": "同感",
@@ -14424,9 +14394,9 @@
                 "english": "same feeling; same sentiment; same opinion; sympathy; agreement; concurrence"
             },
             {
-                "kanji": "装備",
-                "furigana": "そうび",
-                "english": "equipment"
+                "kanji": "募金",
+                "furigana": "ぼきん",
+                "english": "fund-raising; collection of funds"
             },
             {
                 "kanji": "公演",
@@ -14434,19 +14404,19 @@
                 "english": "public performance"
             },
             {
-                "kanji": "進展",
-                "furigana": "しんてん",
-                "english": "progress; development"
+                "kanji": "装備",
+                "furigana": "そうび",
+                "english": "equipment"
+            },
+            {
+                "kanji": "記載",
+                "furigana": "きさい",
+                "english": "mention (in a document); record; entry; statement; listing"
             },
             {
                 "kanji": "対抗",
                 "furigana": "たいこう",
                 "english": "opposition; rivalry; competition; antagonism"
-            },
-            {
-                "kanji": "集計",
-                "furigana": "しゅうけい",
-                "english": "totalization; totalisation; aggregation; tally (e.g. of votes); adding up; summing up"
             },
             {
                 "kanji": "発育",
@@ -14464,9 +14434,9 @@
                 "english": "extramarital sex; affair; fooling around"
             },
             {
-                "kanji": "突破",
-                "furigana": "とっぱ",
-                "english": "breaking through; breakthrough; penetration"
+                "kanji": "集計",
+                "furigana": "しゅうけい",
+                "english": "totalization; totalisation; aggregation; tally (e.g. of votes); adding up; summing up"
             },
             {
                 "kanji": "雇用",
@@ -14474,9 +14444,19 @@
                 "english": "employment; hire"
             },
             {
-                "kanji": "辞退",
-                "furigana": "じたい",
-                "english": "declining; refusal; nonacceptance; turning down; withdrawal (e.g. of candidacy); pulling out (e.g. of a race); excusing oneself"
+                "kanji": "募金",
+                "furigana": "ぼきん",
+                "english": "fund-raising; collection of funds"
+            },
+            {
+                "kanji": "介入",
+                "furigana": "かいにゅう",
+                "english": "intervention"
+            },
+            {
+                "kanji": "両立",
+                "furigana": "りょうりつ",
+                "english": "compatibility; coexistence; standing together"
             },
             {
                 "kanji": "制する",
@@ -14484,19 +14464,24 @@
                 "english": "to hold back (e.g. emotions); to rein in (e.g. a horse, unruly people); to bridle"
             },
             {
+                "kanji": "繁殖",
+                "furigana": "はんしょく",
+                "english": "breeding; propagation; reproduction; multiplication; increase"
+            },
+            {
                 "kanji": "限定",
                 "furigana": "げんてい",
                 "english": "limit; restriction"
             },
             {
+                "kanji": "会談",
+                "furigana": "かいだん",
+                "english": "talks (i.e. formal discussions); conference; meeting"
+            },
+            {
                 "kanji": "阻止",
                 "furigana": "そし",
                 "english": "obstruction; check; hindrance; prevention; impediment; interdiction; preemption; blocking"
-            },
-            {
-                "kanji": "換算",
-                "furigana": "かんさん",
-                "english": "conversion (e.g. yen to dollars); change; exchange; translation (numerical)"
             },
             {
                 "kanji": "捜査",
@@ -14509,9 +14494,9 @@
                 "english": "promoting; increase; advance"
             },
             {
-                "kanji": "専用",
-                "furigana": "せんよう",
-                "english": "(one's) exclusive use; private use; personal use"
+                "kanji": "換算",
+                "furigana": "かんさん",
+                "english": "conversion (e.g. yen to dollars); change; exchange; translation (numerical)"
             },
             {
                 "kanji": "代用",
@@ -14529,19 +14514,9 @@
                 "english": "participation; taking part in; participating in; being concerned in"
             },
             {
-                "kanji": "奨励",
-                "furigana": "しょうれい",
-                "english": "encouragement; promotion; inducement; incitement; stimulation"
-            },
-            {
                 "kanji": "沈没",
                 "furigana": "ちんぼつ",
                 "english": "sinking; foundering; going down; submersion"
-            },
-            {
-                "kanji": "会談",
-                "furigana": "かいだん",
-                "english": "talks (i.e. formal discussions); conference; meeting"
             },
             {
                 "kanji": "両立",
@@ -14704,24 +14679,34 @@
                 "english": "tearing up and discarding (e.g. documents); destruction"
             },
             {
-                "kanji": "破棄",
-                "furigana": "はき",
-                "english": "tearing up and discarding (e.g. documents); destruction"
-            },
-            {
-                "kanji": "膨張",
-                "furigana": "ぼうちょう",
-                "english": "expansion; swelling; increase; growth"
-            },
-            {
                 "kanji": "究極",
                 "furigana": "きゅうきょく",
                 "english": "ultimate; final; last; eventual"
             },
             {
+                "kanji": "分担",
+                "furigana": "ぶんたん",
+                "english": "taking on one's share (e.g. of work); dividing (work, expenses, etc.) between; apportionment; allotment; allocation; assignment"
+            },
+            {
+                "kanji": "弁護",
+                "furigana": "べんご",
+                "english": "defense; defence; pleading; advocacy"
+            },
+            {
+                "kanji": "決議",
+                "furigana": "けつぎ",
+                "english": "resolution; vote; decision"
+            },
+            {
                 "kanji": "回収",
                 "furigana": "かいしゅう",
                 "english": "collection; recovery; withdrawal; retrieval"
+            },
+            {
+                "kanji": "分離",
+                "furigana": "ぶんり",
+                "english": "separation; partition; detachment; segregation; isolation"
             },
             {
                 "kanji": "妨害",
@@ -14734,11 +14719,6 @@
                 "english": "assistance; support; help; aid"
             },
             {
-                "kanji": "対話",
-                "furigana": "たいわ",
-                "english": "dialogue; conversation; talk; discussion; communication"
-            },
-            {
                 "kanji": "改良",
                 "furigana": "かいりょう",
                 "english": "improvement; reform"
@@ -14749,9 +14729,34 @@
                 "english": "pressure"
             },
             {
+                "kanji": "審議",
+                "furigana": "しんぎ",
+                "english": "deliberation; discussion; consideration"
+            },
+            {
                 "kanji": "護衛",
                 "furigana": "ごえい",
                 "english": "guard; convoy; escort"
+            },
+            {
+                "kanji": "加入",
+                "furigana": "かにゅう",
+                "english": "joining (a club, organization, etc.); becoming a member; entry; admission; subscription; affiliation; signing (e.g. a treaty); taking out (insurance)"
+            },
+            {
+                "kanji": "統合",
+                "furigana": "とうごう",
+                "english": "integration; unification; unity; combination; consolidation; synthesis"
+            },
+            {
+                "kanji": "陳列",
+                "furigana": "ちんれつ",
+                "english": "exhibition; display; putting on show"
+            },
+            {
+                "kanji": "対話",
+                "furigana": "たいわ",
+                "english": "dialogue; conversation; talk; discussion; communication"
             },
             {
                 "kanji": "対決",
@@ -14762,31 +14767,6 @@
                 "kanji": "充実",
                 "furigana": "じゅうじつ",
                 "english": "fullness; completeness; perfection; substantiality"
-            },
-            {
-                "kanji": "加入",
-                "furigana": "かにゅう",
-                "english": "joining (a club, organization, etc.); becoming a member; entry; admission; subscription; affiliation; signing (e.g. a treaty); taking out (insurance)"
-            },
-            {
-                "kanji": "雑談",
-                "furigana": "ざつだん",
-                "english": "chatting; idle talk"
-            },
-            {
-                "kanji": "統合",
-                "furigana": "とうごう",
-                "english": "integration; unification; unity; combination; consolidation; synthesis"
-            },
-            {
-                "kanji": "弁論",
-                "furigana": "べんろん",
-                "english": "discussion; debate; argument"
-            },
-            {
-                "kanji": "購読",
-                "furigana": "こうどく",
-                "english": "buying and reading (book, magazine, etc.); subscribing (incl. free subscriptions); taking (e.g. newspaper)"
             },
             {
                 "kanji": "審議",
@@ -14874,24 +14854,19 @@
                 "english": "accumulation; accumulate; store"
             },
             {
+                "kanji": "提携",
+                "furigana": "ていけい",
+                "english": "cooperation; tie-up; joint business; partnership; alliance; sponsorship"
+            },
+            {
                 "kanji": "騒動",
                 "furigana": "そうどう",
                 "english": "strife; riot; rebellion; turmoil"
             },
             {
-                "kanji": "加工",
-                "furigana": "かこう",
-                "english": "manufacturing; processing; treatment; machining"
-            },
-            {
-                "kanji": "再発",
-                "furigana": "さいはつ",
-                "english": "return; relapse; recurrence"
-            },
-            {
-                "kanji": "提携",
-                "furigana": "ていけい",
-                "english": "cooperation; tie-up; joint business; partnership; alliance; sponsorship"
+                "kanji": "復興",
+                "furigana": "ふっこう",
+                "english": "revival; reconstruction; restoration; rebuilding; recovery; renaissance"
             },
             {
                 "kanji": "悲観",
@@ -14899,9 +14874,14 @@
                 "english": "pessimism; (taking a) gloomy view; discouragement; despondency; despair; disappointment"
             },
             {
-                "kanji": "復興",
-                "furigana": "ふっこう",
-                "english": "revival; reconstruction; restoration; rebuilding; recovery; renaissance"
+                "kanji": "噴出",
+                "furigana": "ふんしゅつ",
+                "english": "spewing; gushing; spouting; eruption; effusion"
+            },
+            {
+                "kanji": "新婚",
+                "furigana": "しんこん",
+                "english": "newly-wed; newly married"
             },
             {
                 "kanji": "存続",
@@ -14914,24 +14894,14 @@
                 "english": "adoption; selection; choice"
             },
             {
-                "kanji": "投入",
-                "furigana": "とうにゅう",
-                "english": "throwing in; inserting; depositing (e.g. a ballot)"
-            },
-            {
                 "kanji": "志望",
                 "furigana": "しぼう",
                 "english": "wish; desire; ambition; choice"
             },
             {
-                "kanji": "短縮",
-                "furigana": "たんしゅく",
-                "english": "shortening; contraction; reduction; curtailment; abbreviation"
-            },
-            {
-                "kanji": "放置",
-                "furigana": "ほうち",
-                "english": "leaving as is; leaving alone; leaving to chance; neglecting; abandoning"
+                "kanji": "滞納",
+                "furigana": "たいのう",
+                "english": "falling behind (with a payment); being in arrears; non-payment; default; delinquency"
             },
             {
                 "kanji": "廃棄",
@@ -14944,9 +14914,24 @@
                 "english": "distribution; allotment"
             },
             {
-                "kanji": "新婚",
-                "furigana": "しんこん",
-                "english": "newly-wed; newly married"
+                "kanji": "蓄積",
+                "furigana": "ちくせき",
+                "english": "accumulation; accumulate; store"
+            },
+            {
+                "kanji": "再発",
+                "furigana": "さいはつ",
+                "english": "return; relapse; recurrence"
+            },
+            {
+                "kanji": "楽観",
+                "furigana": "らっかん",
+                "english": "optimism; taking an optimistic view"
+            },
+            {
+                "kanji": "投入",
+                "furigana": "とうにゅう",
+                "english": "throwing in; inserting; depositing (e.g. a ballot)"
             },
             {
                 "kanji": "交付",
@@ -15024,29 +15009,9 @@
                 "english": "damage; breakage"
             },
             {
-                "kanji": "勧誘",
-                "furigana": "かんゆう",
-                "english": "invitation; solicitation; canvassing; canvasing; inducement; persuasion; encouragement"
-            },
-            {
-                "kanji": "中傷",
-                "furigana": "ちゅうしょう",
-                "english": "slander; libel; defamation; calumny; smear"
-            },
-            {
-                "kanji": "譲歩",
-                "furigana": "じょうほ",
-                "english": "concession; conciliation; compromise"
-            },
-            {
-                "kanji": "工作",
-                "furigana": "こうさく",
-                "english": "handicraft"
-            },
-            {
-                "kanji": "取材",
-                "furigana": "しゅざい",
-                "english": "gathering material (for an article, novel, etc.); collecting information; covering (an event, incident, etc.); reporting; interview (for a news story)"
+                "kanji": "出動",
+                "furigana": "しゅつどう",
+                "english": "mobilization; going into action; being dispatched; being sent out; being called in; turning out"
             },
             {
                 "kanji": "正解",
@@ -15054,14 +15019,14 @@
                 "english": "correct answer; right solution; correct interpretation"
             },
             {
+                "kanji": "工作",
+                "furigana": "こうさく",
+                "english": "handicraft"
+            },
+            {
                 "kanji": "調印",
                 "furigana": "ちょういん",
                 "english": "signature; signing; sealing"
-            },
-            {
-                "kanji": "展望",
-                "furigana": "てんぼう",
-                "english": "view; outlook; prospect"
             },
             {
                 "kanji": "議決",
@@ -15069,9 +15034,9 @@
                 "english": "resolution; decision; vote"
             },
             {
-                "kanji": "緩和",
-                "furigana": "かんわ",
-                "english": "relief; mitigation; alleviation; relaxation (of restrictions, tensions, etc.); easing; softening"
+                "kanji": "展望",
+                "furigana": "てんぼう",
+                "english": "view; outlook; prospect"
             },
             {
                 "kanji": "酸化",
@@ -15079,9 +15044,19 @@
                 "english": "oxidation; oxidization"
             },
             {
-                "kanji": "補強",
-                "furigana": "ほきょう",
-                "english": "reinforcement; strengthening"
+                "kanji": "緩和",
+                "furigana": "かんわ",
+                "english": "relief; mitigation; alleviation; relaxation (of restrictions, tensions, etc.); easing; softening"
+            },
+            {
+                "kanji": "逆転",
+                "furigana": "ぎゃくてん",
+                "english": "reversal (of a situation); turnaround; turnabout; turning the tables; sudden change"
+            },
+            {
+                "kanji": "命中",
+                "furigana": "めいちゅう",
+                "english": "(direct) hit; hitting the mark"
             },
             {
                 "kanji": "配給",
@@ -15089,14 +15064,34 @@
                 "english": "distribution (e.g. films, rice)"
             },
             {
-                "kanji": "捕獲",
-                "furigana": "ほかく",
-                "english": "capture; seizure"
+                "kanji": "譲歩",
+                "furigana": "じょうほ",
+                "english": "concession; conciliation; compromise"
             },
             {
-                "kanji": "所持",
-                "furigana": "しょじ",
-                "english": "possession; having (on one's person); carrying (with one)"
+                "kanji": "育成",
+                "furigana": "いくせい",
+                "english": "rearing; training; nurture; cultivation; promotion"
+            },
+            {
+                "kanji": "掲載",
+                "furigana": "けいさい",
+                "english": "publication (e.g. of an article in a newspaper); carrying (e.g. a story); running (e.g. a serial); insertion (e.g. of an advertisement); printing; posting (e.g. on the web)"
+            },
+            {
+                "kanji": "移行",
+                "furigana": "いこう",
+                "english": "transition; changeover; switchover; shift"
+            },
+            {
+                "kanji": "復旧",
+                "furigana": "ふっきゅう",
+                "english": "restoration; restitution; rehabilitation"
+            },
+            {
+                "kanji": "協調",
+                "furigana": "きょうちょう",
+                "english": "cooperation; conciliation; harmony; coordination"
             },
             {
                 "kanji": "育成",
@@ -15349,9 +15344,19 @@
                 "english": "waiting expectantly; waiting eagerly; looking forward to"
             },
             {
-                "kanji": "構想",
-                "furigana": "こうそう",
-                "english": "plan; plot; idea; conception; vision; scheme"
+                "kanji": "打開",
+                "furigana": "だかい",
+                "english": "break in the deadlock"
+            },
+            {
+                "kanji": "待望",
+                "furigana": "たいぼう",
+                "english": "waiting expectantly; waiting eagerly; looking forward to"
+            },
+            {
+                "kanji": "先行",
+                "furigana": "せんこう",
+                "english": "going ahead; going first"
             },
             {
                 "kanji": "静止",
@@ -15359,34 +15364,34 @@
                 "english": "stillness; repose; standing still"
             },
             {
-                "kanji": "養成",
-                "furigana": "ようせい",
-                "english": "training; education; development; cultivation"
+                "kanji": "交易",
+                "furigana": "こうえき",
+                "english": "trade; commerce"
             },
             {
-                "kanji": "所在",
-                "furigana": "しょざい",
-                "english": "whereabouts; place where one is; position; location"
+                "kanji": "構想",
+                "furigana": "こうそう",
+                "english": "plan; plot; idea; conception; vision; scheme"
             },
             {
-                "kanji": "同居",
-                "furigana": "どうきょ",
-                "english": "living together; coexistence"
+                "kanji": "了承",
+                "furigana": "りょうしょう",
+                "english": "acknowledgement; acknowledgment; understanding; approval; consent"
+            },
+            {
+                "kanji": "一変",
+                "furigana": "いっぺん",
+                "english": "complete change; about-face"
+            },
+            {
+                "kanji": "共働き",
+                "furigana": "ともばたらき",
+                "english": "(husband and wife) both working; dual income"
             },
             {
                 "kanji": "勧告",
                 "furigana": "かんこく",
                 "english": "advice; counsel; remonstrance; recommendation"
-            },
-            {
-                "kanji": "創刊",
-                "furigana": "そうかん",
-                "english": "foundation (of a newspaper, magazine, etc.); starting; launching; first publication"
-            },
-            {
-                "kanji": "聴講",
-                "furigana": "ちょうこう",
-                "english": "lecture attendance; auditing"
             },
             {
                 "kanji": "遭難",
@@ -15399,16 +15404,6 @@
                 "english": "to conform to; to agree with; to be adapted to; to be based on"
             },
             {
-                "kanji": "該当",
-                "furigana": "がいとう",
-                "english": "corresponding to; being applicable to; being relevant to; coming under; falling under; fulfilling (requirements); meeting (conditions); qualifying for"
-            },
-            {
-                "kanji": "還元",
-                "furigana": "かんげん",
-                "english": "restoration; return"
-            },
-            {
                 "kanji": "運搬",
                 "furigana": "うんぱん",
                 "english": "transport; transportation; conveyance; carriage"
@@ -15417,6 +15412,11 @@
                 "kanji": "購買",
                 "furigana": "こうばい",
                 "english": "procurement; purchase; buying"
+            },
+            {
+                "kanji": "還元",
+                "furigana": "かんげん",
+                "english": "restoration; return"
             },
             {
                 "kanji": "製鉄",
@@ -15634,14 +15634,14 @@
                 "english": "exaggeration"
             },
             {
-                "kanji": "戸締まり",
-                "furigana": "とじまり",
-                "english": "locking up (doors and windows); fastening the doors"
-            },
-            {
                 "kanji": "全快",
                 "furigana": "ぜんかい",
                 "english": "complete recovery of health"
+            },
+            {
+                "kanji": "繁盛",
+                "furigana": "はんじょう",
+                "english": "prosperity; flourishing; thriving"
             },
             {
                 "kanji": "察する",
@@ -15654,9 +15654,9 @@
                 "english": "directions; instructions; orders; command"
             },
             {
-                "kanji": "繁盛",
-                "furigana": "はんじょう",
-                "english": "prosperity; flourishing; thriving"
+                "kanji": "戸締まり",
+                "furigana": "とじまり",
+                "english": "locking up (doors and windows); fastening the doors"
             },
             {
                 "kanji": "滅亡",
@@ -15704,11 +15704,6 @@
                 "english": "compensation; indemnification; reparation; restitution; recompense"
             },
             {
-                "kanji": "全滅",
-                "furigana": "ぜんめつ",
-                "english": "total destruction; complete destruction; annihilation; being wiped out"
-            },
-            {
                 "kanji": "吟味",
                 "furigana": "ぎんみ",
                 "english": "close examination; careful investigation; close inspection; careful selection; inquiry; enquiry; scrutiny; testing"
@@ -15717,6 +15712,11 @@
                 "kanji": "共稼ぎ",
                 "furigana": "ともかせぎ",
                 "english": "(husband and wife) earning a living together"
+            },
+            {
+                "kanji": "全滅",
+                "furigana": "ぜんめつ",
+                "english": "total destruction; complete destruction; annihilation; being wiped out"
             },
             {
                 "kanji": "整列",
@@ -15824,11 +15824,6 @@
                 "english": "trade-in; part exchange"
             },
             {
-                "kanji": "決行",
-                "furigana": "けっこう",
-                "english": "doing (with resolve); carrying out (e.g. a plan)"
-            },
-            {
                 "kanji": "転校",
                 "furigana": "てんこう",
                 "english": "changing schools"
@@ -15839,19 +15834,24 @@
                 "english": "poverty; destitution; privation; indigence; penury"
             },
             {
-                "kanji": "決行",
-                "furigana": "けっこう",
-                "english": "doing (with resolve); carrying out (e.g. a plan)"
+                "kanji": "照合",
+                "furigana": "しょうごう",
+                "english": "collation; comparison"
             },
             {
-                "kanji": "回覧",
-                "furigana": "かいらん",
-                "english": "circulation (esp. documents); sending round"
+                "kanji": "伝来",
+                "furigana": "でんらい",
+                "english": "introduction (from abroad)"
             },
             {
                 "kanji": "兼用",
                 "furigana": "けんよう",
                 "english": "multi-use; combined use; combination; serving two purposes"
+            },
+            {
+                "kanji": "回覧",
+                "furigana": "かいらん",
+                "english": "circulation (esp. documents); sending round"
             },
             {
                 "kanji": "宙返り",
@@ -15877,16 +15877,6 @@
                 "kanji": "潜入",
                 "furigana": "せんにゅう",
                 "english": "infiltration; sneaking in; going undercover"
-            },
-            {
-                "kanji": "照合",
-                "furigana": "しょうごう",
-                "english": "collation; comparison"
-            },
-            {
-                "kanji": "伝来",
-                "furigana": "でんらい",
-                "english": "introduction (from abroad)"
             },
             {
                 "kanji": "アンコール",
@@ -15944,14 +15934,14 @@
                 "english": "pachinko; mechanical gambling game superficially resembling pinball"
             },
             {
-                "kanji": "オープン",
-                "furigana": "オープン",
-                "english": "opening (a new store, golf course, runway, etc.)"
-            },
-            {
                 "kanji": "ダウン",
                 "furigana": "ダウン",
                 "english": "fall; decrease; drop; going down"
+            },
+            {
+                "kanji": "オープン",
+                "furigana": "オープン",
+                "english": "opening (a new store, golf course, runway, etc.)"
             },
             {
                 "kanji": "コメント",
@@ -16044,29 +16034,24 @@
                 "english": "to be fed up (with); to be tired (of); to be bored (with); to be unable to bear"
             },
             {
-                "kanji": "辟易",
-                "furigana": "へきえき",
-                "english": "to be fed up (with); to be tired (of); to be bored (with); to be unable to bear"
-            },
-            {
-                "kanji": "介抱",
-                "furigana": "かいほう",
-                "english": "nursing; looking after"
-            },
-            {
                 "kanji": "供する",
                 "furigana": "きょうする",
                 "english": "to offer; to present; to submit; to supply; to make available"
             },
             {
-                "kanji": "振動",
-                "furigana": "しんどう",
-                "english": "oscillation; vibration; swing (e.g. of a pendulum)"
+                "kanji": "細工",
+                "furigana": "さいく",
+                "english": "work; workmanship; craftsmanship; handiwork"
             },
             {
                 "kanji": "立法",
                 "furigana": "りっぽう",
                 "english": "legislation; lawmaking"
+            },
+            {
+                "kanji": "飽和",
+                "furigana": "ほうわ",
+                "english": "saturation; satiation"
             },
             {
                 "kanji": "革新",
@@ -16084,14 +16069,14 @@
                 "english": "arrangement; disposition"
             },
             {
-                "kanji": "飽和",
-                "furigana": "ほうわ",
-                "english": "saturation; satiation"
-            },
-            {
                 "kanji": "持続",
                 "furigana": "じぞく",
                 "english": "continuation; persisting; lasting; sustaining; enduring"
+            },
+            {
+                "kanji": "振動",
+                "furigana": "しんどう",
+                "english": "oscillation; vibration; swing (e.g. of a pendulum)"
             },
             {
                 "kanji": "分業",
@@ -16419,14 +16404,19 @@
                 "english": "payment (of taxes, fees, etc.)"
             },
             {
+                "kanji": "運送",
+                "furigana": "うんそう",
+                "english": "transport; freight; shipping; moving (goods)"
+            },
+            {
+                "kanji": "独創",
+                "furigana": "どくそう",
+                "english": "originality"
+            },
+            {
                 "kanji": "発病",
                 "furigana": "はつびょう",
                 "english": "onset of an illness; falling ill"
-            },
-            {
-                "kanji": "共学",
-                "furigana": "きょうがく",
-                "english": "coeducation"
             },
             {
                 "kanji": "私有",
@@ -16444,14 +16434,14 @@
                 "english": "being produced in a particular region; local specialty"
             },
             {
-                "kanji": "強行",
-                "furigana": "きょうこう",
-                "english": "forcing (e.g. a vote); carrying out (forcibly); pushing ahead (with); enforcement"
-            },
-            {
                 "kanji": "質疑",
                 "furigana": "しつぎ",
                 "english": "question"
+            },
+            {
+                "kanji": "共学",
+                "furigana": "きょうがく",
+                "english": "coeducation"
             },
             {
                 "kanji": "主導",
@@ -16462,11 +16452,6 @@
                 "kanji": "赴任",
                 "furigana": "ふにん",
                 "english": "moving to a different location to start a new job; (proceeding to) new appointment"
-            },
-            {
-                "kanji": "教習",
-                "furigana": "きょうしゅう",
-                "english": "training; instruction"
             },
             {
                 "kanji": "複合",
@@ -16484,44 +16469,14 @@
                 "english": "retaining warmth; keeping heat in; heat insulation"
             },
             {
-                "kanji": "転居",
-                "furigana": "てんきょ",
-                "english": "moving; changing residence; change of address"
-            },
-            {
                 "kanji": "保養",
                 "furigana": "ほよう",
                 "english": "health preservation; recuperation; recreation"
             },
             {
-                "kanji": "就業",
-                "furigana": "しゅうぎょう",
-                "english": "employment; starting work"
-            },
-            {
-                "kanji": "模索",
-                "furigana": "もさく",
-                "english": "groping (for); fumbling around (for); searching (for an answer, solution, etc.); trying to find"
-            },
-            {
-                "kanji": "遊牧",
-                "furigana": "ゆうぼく",
-                "english": "nomadism"
-            },
-            {
-                "kanji": "祝賀",
-                "furigana": "しゅくが",
-                "english": "celebration; congratulations"
-            },
-            {
-                "kanji": "出直し",
-                "furigana": "でなおし",
-                "english": "adjustment; touch up"
-            },
-            {
-                "kanji": "興業",
-                "furigana": "こうぎょう",
-                "english": "promotion of industry; inauguration of a new industrial enterprise"
+                "kanji": "納入",
+                "furigana": "のうにゅう",
+                "english": "payment (of taxes, fees, etc.)"
             },
             {
                 "kanji": "異動",
@@ -16529,14 +16484,49 @@
                 "english": "(personnel) change; transfer; relocation; reassignment; reshuffle"
             },
             {
+                "kanji": "教習",
+                "furigana": "きょうしゅう",
+                "english": "training; instruction"
+            },
+            {
+                "kanji": "就業",
+                "furigana": "しゅうぎょう",
+                "english": "employment; starting work"
+            },
+            {
+                "kanji": "転居",
+                "furigana": "てんきょ",
+                "english": "moving; changing residence; change of address"
+            },
+            {
+                "kanji": "対面",
+                "furigana": "たいめん",
+                "english": "meeting face-to-face; seeing in person"
+            },
+            {
+                "kanji": "祝賀",
+                "furigana": "しゅくが",
+                "english": "celebration; congratulations"
+            },
+            {
+                "kanji": "遊牧",
+                "furigana": "ゆうぼく",
+                "english": "nomadism"
+            },
+            {
+                "kanji": "出直し",
+                "furigana": "でなおし",
+                "english": "adjustment; touch up"
+            },
+            {
+                "kanji": "模索",
+                "furigana": "もさく",
+                "english": "groping (for); fumbling around (for); searching (for an answer, solution, etc.); trying to find"
+            },
+            {
                 "kanji": "籤引き",
                 "furigana": "くじびき",
                 "english": "lottery; drawn lot"
-            },
-            {
-                "kanji": "帰京",
-                "furigana": "ききょう",
-                "english": "returning (home) to Tokyo; returning to the capital"
             },
             {
                 "kanji": "養護",
@@ -16544,14 +16534,14 @@
                 "english": "nursing; (protective) care"
             },
             {
-                "kanji": "水洗",
-                "furigana": "すいせん",
-                "english": "washing with water; rinsing; flushing"
-            },
-            {
                 "kanji": "気兼ね",
                 "furigana": "きがね",
                 "english": "constraint; reserve; feeling hesitant; being afraid of troubling someone"
+            },
+            {
+                "kanji": "着色",
+                "furigana": "ちゃくしょく",
+                "english": "colouring; coloring; colorant"
             },
             {
                 "kanji": "着色",
@@ -16684,14 +16674,14 @@
                 "english": "lapse of memory; (something) slipping one's mind; forgetting for a moment something one knows well"
             },
             {
-                "kanji": "ちやほや",
-                "furigana": "ちやほや",
-                "english": "to make a fuss over; to pamper; to spoil; to indulge; to flatter (with attention)"
-            },
-            {
                 "kanji": "すんなり",
                 "furigana": "すんなり",
                 "english": "slim; slender; lithe; supple"
+            },
+            {
+                "kanji": "ちやほや",
+                "furigana": "ちやほや",
+                "english": "to make a fuss over; to pamper; to spoil; to indulge; to flatter (with attention)"
             },
             {
                 "kanji": "沈澱",
@@ -17012,14 +17002,14 @@
                 "english": "dazzling; radiant"
             },
             {
-                "kanji": "目出度い",
-                "furigana": "めでたい",
-                "english": "happy; auspicious; propitious; joyous"
-            },
-            {
                 "kanji": "諄い",
                 "furigana": "くどい",
                 "english": "repetitious; long-winded; tedious; wordy; verbose; insistent; importunate"
+            },
+            {
+                "kanji": "目出度い",
+                "furigana": "めでたい",
+                "english": "happy; auspicious; propitious; joyous"
             },
             {
                 "kanji": "慌ただしい",
@@ -17087,14 +17077,14 @@
                 "english": "meagre; meager; scarce; limited; destitute; hard up; lacking; scanty; poor"
             },
             {
-                "kanji": "久しい",
-                "furigana": "ひさしい",
-                "english": "long (time that has passed); old (story)"
-            },
-            {
                 "kanji": "逞しい",
                 "furigana": "たくましい",
                 "english": "burly; strong; sturdy"
+            },
+            {
+                "kanji": "久しい",
+                "furigana": "ひさしい",
+                "english": "long (time that has passed); old (story)"
             },
             {
                 "kanji": "目覚ましい",
@@ -17392,11 +17382,6 @@
                 "kanji": "閉口",
                 "furigana": "へいこう",
                 "english": "to be stumped; to be at a loss; to be at one's wits' end; to be nonplussed"
-            },
-            {
-                "kanji": "重宝",
-                "furigana": "ちょうほう",
-                "english": "convenient; useful; handy; helpful"
             },
             {
                 "kanji": "相応",
@@ -18154,14 +18139,14 @@
                 "english": "empty stomach; hunger"
             },
             {
-                "kanji": "完璧",
-                "furigana": "かんぺき",
-                "english": "perfect; complete; flawless"
-            },
-            {
                 "kanji": "無礼",
                 "furigana": "ぶれい",
                 "english": "rudeness; impoliteness; discourtesy; insolence"
+            },
+            {
+                "kanji": "完璧",
+                "furigana": "かんぺき",
+                "english": "perfect; complete; flawless"
             },
             {
                 "kanji": "憂鬱",
@@ -18194,11 +18179,6 @@
                 "english": "mild (climate); temperate; clement; pleasant; agreeable"
             },
             {
-                "kanji": "滑稽",
-                "furigana": "こっけい",
-                "english": "funny; comical; humorous; laughable"
-            },
-            {
                 "kanji": "短気",
                 "furigana": "たんき",
                 "english": "short temper; quick temper; hot temper; impatience; irritability"
@@ -18207,6 +18187,11 @@
                 "kanji": "微か",
                 "furigana": "かすか",
                 "english": "faint; dim; weak; slight; vague; indistinct; hazy"
+            },
+            {
+                "kanji": "滑稽",
+                "furigana": "こっけい",
+                "english": "funny; comical; humorous; laughable"
             },
             {
                 "kanji": "不意",
@@ -18484,19 +18469,19 @@
                 "english": "dullness; slump; stagnation; inactivity; depression"
             },
             {
-                "kanji": "過多",
-                "furigana": "かた",
-                "english": "excess; surplus; superabundance"
-            },
-            {
-                "kanji": "必然",
-                "furigana": "ひつぜん",
-                "english": "inevitable; necessary; certain; sure"
+                "kanji": "一律",
+                "furigana": "いちりつ",
+                "english": "uniform; even; across-the-board; equal"
             },
             {
                 "kanji": "無念",
                 "furigana": "むねん",
                 "english": "regret; chagrin; mortification"
+            },
+            {
+                "kanji": "必然",
+                "furigana": "ひつぜん",
+                "english": "inevitable; necessary; certain; sure"
             },
             {
                 "kanji": "簡易",
@@ -18509,6 +18494,11 @@
                 "english": "minuscule amount; extremely small quantity"
             },
             {
+                "kanji": "過多",
+                "furigana": "かた",
+                "english": "excess; surplus; superabundance"
+            },
+            {
                 "kanji": "一様",
                 "furigana": "いちよう",
                 "english": "uniform; equal; even; the same; identical"
@@ -18517,11 +18507,6 @@
                 "kanji": "正規",
                 "furigana": "せいき",
                 "english": "regular; normal; formal; legal; established; legitimate"
-            },
-            {
-                "kanji": "一律",
-                "furigana": "いちりつ",
-                "english": "uniform; even; across-the-board; equal"
             },
             {
                 "kanji": "和やか",
@@ -18534,6 +18519,11 @@
                 "english": "gorgeous; gaudy; dazzling; gay; resplendent"
             },
             {
+                "kanji": "清らか",
+                "furigana": "きよらか",
+                "english": "clean; clear"
+            },
+            {
                 "kanji": "煌びやか",
                 "furigana": "きらびやか",
                 "english": "gorgeous; gaudy; dazzling; gay; resplendent"
@@ -18542,11 +18532,6 @@
                 "kanji": "物好き",
                 "furigana": "ものずき",
                 "english": "(idle) curiosity; fancifulness; whimsy; (having) strange tastes"
-            },
-            {
-                "kanji": "薄弱",
-                "furigana": "はくじゃく",
-                "english": "feebleness; weakness; weak"
             },
             {
                 "kanji": "婉曲",
@@ -18559,9 +18544,9 @@
                 "english": "long and large; tall and large; grand; huge"
             },
             {
-                "kanji": "洋風",
-                "furigana": "ようふう",
-                "english": "Western style"
+                "kanji": "薄弱",
+                "furigana": "はくじゃく",
+                "english": "feebleness; weakness; weak"
             },
             {
                 "kanji": "けち",
@@ -18654,24 +18639,24 @@
                 "english": "supple; flexible; elastic"
             },
             {
-                "kanji": "エレガント",
-                "furigana": "エレガント",
-                "english": "elegant"
-            },
-            {
                 "kanji": "タイムリー",
                 "furigana": "タイムリー",
                 "english": "timely; well-timed"
             },
             {
-                "kanji": "ルーズ",
-                "furigana": "ルーズ",
-                "english": "loose (e.g. belt)"
-            },
-            {
                 "kanji": "インターナショナル",
                 "furigana": "インターナショナル",
                 "english": "international"
+            },
+            {
+                "kanji": "エレガント",
+                "furigana": "エレガント",
+                "english": "elegant"
+            },
+            {
+                "kanji": "ルーズ",
+                "furigana": "ルーズ",
+                "english": "loose (e.g. belt)"
             },
             {
                 "kanji": "丈夫-1",

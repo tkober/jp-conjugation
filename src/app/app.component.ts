@@ -1,10 +1,16 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import * as jisho from './jisho.json'
+
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+    selector: 'app-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-  title = 'jp-conjugation';
+export class AppComponent implements OnInit {
+    title = 'jp-conjugation';
+
+    ngOnInit() {
+        console.log(jisho)
+    }
 }

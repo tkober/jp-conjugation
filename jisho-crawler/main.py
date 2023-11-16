@@ -1,7 +1,24 @@
 import json
+import argparse
+
 
 from jisho.api import ApiClient, JlptLevel
 
+def parse_args():
+    argparser = argparse.ArgumentParser(
+        prog='jisho-crawler',
+        description='Crawls the Japanese language dictionary jisho.org for verbs and adjectives and stores these in '
+                    'a JSON file.'
+    )
+
+    argparser.add_argument(
+        '--out',
+        help="Destination of the JSON file",
+        metavar='OUT',
+        required=True
+    )
+
+    return argparser.parse_args()
 
 def optimize_json(words: dict) -> dict:
     result = {}
@@ -27,6 +44,7 @@ def optimize_word(word) -> dict:
 
 
 if __name__ == '__main__':
+    args = parse_args()
 
     result = {}
     levels = [
@@ -67,5 +85,5 @@ if __name__ == '__main__':
 
     optimized = optimize_json(result)
     json_object = json.dumps(optimized, indent=4, ensure_ascii=False)
-    with open('dictionary.json', 'w', encoding='utf-8') as outfile:
+    with open(args.out, 'w', encoding='utf-8') as outfile:
         outfile.write(json_object)
