@@ -3,6 +3,8 @@ import {Conjugation, Word, WordType} from "../conjugation";
 class CausativePassiveAffirmative implements Conjugation {
     getConjugation(word: Word): Word {
         switch (word.wordType) {
+
+            // Verbs
             case WordType.GodanVerb:
                 return new Word('TODO', 'TODO', word.wordType);
 

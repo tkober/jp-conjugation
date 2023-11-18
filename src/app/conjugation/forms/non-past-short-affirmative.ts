@@ -3,6 +3,8 @@ import {Conjugation, Word, WordType} from "../conjugation";
 class NonPastShortAffirmative implements Conjugation {
     getConjugation(word: Word): Word {
         switch (word.wordType) {
+
+            // Verbs
             case WordType.GodanVerb:
                 return word;
 

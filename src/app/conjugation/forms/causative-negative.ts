@@ -3,6 +3,8 @@ import {Conjugation, Word, WordType} from "../conjugation";
 class CausativeNegative implements Conjugation {
     getConjugation(word: Word): Word {
         switch (word.wordType) {
+
+            // Verbs
             case WordType.GodanVerb:
                 return new Word('TODO', 'TODO', word.wordType);
 
