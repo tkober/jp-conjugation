@@ -15,6 +15,8 @@ class PastPoliteNegative implements Conjugation {
             case WordType.KuruVerb:
                 return new Word('TODO', 'TODO', word.wordType);
 
+
+            // Adjectives
             case WordType.IAdjective:
                 return new Word('TODO', 'TODO', word.wordType);
 
