@@ -4,22 +4,25 @@ class NonPastShortAffirmative implements Conjugation {
     getConjugation(word: Word): Word {
         switch (word.wordType) {
             case WordType.GodanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word;
 
             case WordType.IchidanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word;
 
             case WordType.SuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word;
 
             case WordType.KuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word;
 
             case WordType.IAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                if (word.kanji === '良い') {
+                    return new Word(word.kanji, 'いい', word.wordType);
+                }
+                return word;
 
             case WordType.NaAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word;
         }
     }
 
