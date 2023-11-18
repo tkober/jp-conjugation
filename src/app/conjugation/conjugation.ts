@@ -20,6 +20,6 @@ export class Word {
 }
 export interface Conjugation {
 
-    getConjugation(word: Word): Word
+    getConjugation(word: Word): (Word | undefined)
 
 }

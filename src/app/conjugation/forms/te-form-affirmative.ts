@@ -1,7 +1,7 @@
 import {Conjugation, Word, WordType} from "../conjugation";
 
 class TeFormAffirmative implements Conjugation {
-    getConjugation(word: Word): Word {
+    getConjugation(word: Word): (Word | undefined) {
         switch (word.wordType) {
 
             // Verbs
