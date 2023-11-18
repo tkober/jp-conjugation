@@ -24,6 +24,10 @@ class PastShortNegative implements Conjugation {
 
             case WordType.NaAdjective:
                 return new Word('TODO', 'TODO', word.wordType);
+
+
+            default:
+                return undefined;
         }
     }
 

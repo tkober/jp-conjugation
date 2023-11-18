@@ -18,12 +18,8 @@ class CausativePassiveAffirmative implements Conjugation {
                 return new Word('TODO', 'TODO', word.wordType);
 
 
-            // Adjectives
-            case WordType.IAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
-
-            case WordType.NaAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+            default:
+                return undefined;
         }
     }
 

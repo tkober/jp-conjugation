@@ -27,6 +27,10 @@ class NonPastShortAffirmative implements Conjugation {
 
             case WordType.NaAdjective:
                 return word;
+
+
+            default:
+                return undefined;
         }
     }
 
