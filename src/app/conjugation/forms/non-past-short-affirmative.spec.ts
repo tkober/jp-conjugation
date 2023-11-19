@@ -43,6 +43,14 @@ describe('NonPastShortAffirmative', () => {
         expect(result).toEqual(word);
     });
 
+    it('良い(よい)', () => {
+        const word = new Word('良い', 'よい', WordType.IAdjective)
+        const result = new NonPastShortAffirmative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('良い', 'いい', WordType.IAdjective));
+    });
+
     it('Na-Adjective', () => {
         const word = new Word('好き', 'すき', WordType.NaAdjective)
         const result = new NonPastShortAffirmative().getConjugation(word)
