@@ -20,10 +20,10 @@ export class PastPoliteNegative implements Conjugation {
 
             // Adjectives
             case WordType.IAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.replaceLastKana('くなかったです')
 
             case WordType.NaAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.addSuffix('じゃなかったです')
 
 
             default:

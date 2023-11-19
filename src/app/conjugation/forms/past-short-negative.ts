@@ -20,10 +20,10 @@ export class PastShortNegative implements Conjugation {
 
             // Adjectives
             case WordType.IAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.replaceLastKana('くなかった')
 
             case WordType.NaAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.addSuffix('じゃなかった')
 
 
             default:

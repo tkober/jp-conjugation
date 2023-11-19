@@ -20,10 +20,10 @@ export class PastShortAffirmative implements Conjugation {
 
             // Adjectives
             case WordType.IAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.replaceLastKana('かった')
 
             case WordType.NaAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.addSuffix('だった')
 
 
             default:
