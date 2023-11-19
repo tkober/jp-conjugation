@@ -8,15 +8,79 @@ describe('NonPastShortNegative', () => {
         const result = new NonPastShortNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('食べない', 'たべない', WordType.IchidanVerb));
+        expect(result).toEqual(new Word('', '', WordType.IchidanVerb)); // TODO: Fill out
     });
 
-    it('Godan Verb', () => {
+    it('Godan Verb [う]', () => {
+        const word = new Word('会う', 'あう', WordType.GodanVerb)
+        const result = new NonPastShortNegative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+    });
+
+    it('Godan Verb [つ]', () => {
+        const word = new Word('待つ', 'まつ', WordType.GodanVerb)
+        const result = new NonPastShortNegative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+    });
+
+    it('Godan Verb [る]', () => {
+        const word = new Word('取る', 'とる', WordType.GodanVerb)
+        const result = new NonPastShortNegative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+    });
+
+    it('Godan Verb [む]', () => {
+        const word = new Word('読む', 'よむ', WordType.GodanVerb)
+        const result = new NonPastShortNegative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+    });
+
+    it('Godan Verb [ぶ]', () => {
+        const word = new Word('遊ぶ', 'あそぶ', WordType.GodanVerb)
+        const result = new NonPastShortNegative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+    });
+
+    it('Godan Verb [ぬ]', () => {
+        const word = new Word('死ぬ', 'しぬ', WordType.GodanVerb)
+        const result = new NonPastShortNegative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+    });
+
+    it('Godan Verb [く]', () => {
+        const word = new Word('書く', 'かく', WordType.GodanVerb)
+        const result = new NonPastShortNegative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+    });
+
+    it('Godan Verb [ぐ]', () => {
+        const word = new Word('泳ぐ', 'およぐ', WordType.GodanVerb)
+        const result = new NonPastShortNegative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+    });
+
+    it('Godan Verb [行く]', () => {
         const word = new Word('行く', 'いく', WordType.GodanVerb)
         const result = new NonPastShortNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('行かない', 'いかない', WordType.GodanVerb));
+        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
     });
 
     it('Suru Verb', () => {
@@ -24,7 +88,7 @@ describe('NonPastShortNegative', () => {
         const result = new NonPastShortNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('勉強しない', 'べんきょうしない', WordType.SuruVerb));
+        expect(result).toEqual(new Word('', '', WordType.SuruVerb)) // TODO: Fill out
     });
 
     it('Kuru Verb', () => {
@@ -32,7 +96,7 @@ describe('NonPastShortNegative', () => {
         const result = new NonPastShortNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('来ない', 'こない', WordType.KuruVerb));
+        expect(result).toEqual(new Word('', '', WordType.KuruVerb))  // TODO: Fill out
     });
 
     it('I-Adjective', () => {
@@ -40,7 +104,15 @@ describe('NonPastShortNegative', () => {
         const result = new NonPastShortNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('美味しくない', 'おいしくない', WordType.IAdjective));
+        expect(result).toEqual(new Word('', '', WordType.IAdjective)) // TODO: Fill out
+    });
+
+    it('I-Adjective [良い]', () => {
+        const word = new Word('良い', 'よい', WordType.IAdjective)
+        const result = new NonPastShortNegative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('', '', WordType.IAdjective)) // TODO: Fill out
     });
 
     it('Na-Adjective', () => {
@@ -48,6 +120,6 @@ describe('NonPastShortNegative', () => {
         const result = new NonPastShortNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('好きじゃない', 'すきじゃない', WordType.NaAdjective));
+        expect(result).toEqual(new Word('', '', WordType.NaAdjective)) // TODO: Fill out
     });
 })
