@@ -8,6 +8,10 @@ export class NonPastShortNegative implements Conjugation {
             // Verbs
             case WordType.GodanVerb:
                 const lastKana = HIRAGANA[word.getLastKana()]
+                if (lastKana.kana === 'う') {
+                    return word.replaceLastKana('わない')
+                }
+
                 return word.replaceLastKana(lastKana.getGroup().a + 'ない')
 
             case WordType.IchidanVerb:
