@@ -1,5 +1,4 @@
 import {Component, OnInit} from '@angular/core';
-import * as jisho from './jisho.json'
 
 
 @Component({
@@ -11,6 +10,5 @@ export class AppComponent implements OnInit {
     title = 'jp-conjugation';
 
     ngOnInit() {
-        console.log(jisho)
     }
 }

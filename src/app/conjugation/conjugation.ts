@@ -17,7 +17,36 @@ export class Word {
         this.furigana = furigana
         this.wordType = wordType;
     }
+
+    // @ts-ignore
+    addSuffix(suffix: string): Word {
+        return new Word(
+            this.kanji + suffix,
+            this.furigana + suffix,
+            this.wordType
+        )
+    }
+
+    getLastKana(): string {
+        return this.furigana.slice(-1);
+    }
+
+    // @ts-ignore
+    replaceLastKana(replacement: string): Word {
+        return new Word(
+            this.kanji.slice(0, -1) + replacement,
+            this.furigana.slice(0, -1) + replacement,
+            this.wordType
+        )
+    }
+
+    equals(anotherWord: Word): boolean {
+        return this.kanji === anotherWord.kanji &&
+            this.furigana === anotherWord.furigana &&
+            this.wordType === anotherWord.wordType;
+    }
 }
+
 export interface Conjugation {
 
     getConjugation(word: Word): (Word | undefined)

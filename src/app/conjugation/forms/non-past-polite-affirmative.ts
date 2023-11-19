@@ -1,29 +1,31 @@
 import {Conjugation, Word, WordType} from "../conjugation";
+import {HIRAGANA} from "../hiragana";
 
-class NonPastPoliteAffirmative implements Conjugation {
+export class NonPastPoliteAffirmative implements Conjugation {
     getConjugation(word: Word): (Word | undefined) {
         switch (word.wordType) {
 
             // Verbs
             case WordType.GodanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                const lastKana = HIRAGANA[word.getLastKana()]
+                return word.replaceLastKana(lastKana.getGroup().i + 'ます')
 
             case WordType.IchidanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.replaceLastKana('ます');
 
             case WordType.SuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.addSuffix('します');
 
             case WordType.KuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return new Word('来ます', 'きます', word.wordType);
 
 
             // Adjectives
             case WordType.IAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.addSuffix('です');
 
             case WordType.NaAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.addSuffix('です');
 
 
             default:
