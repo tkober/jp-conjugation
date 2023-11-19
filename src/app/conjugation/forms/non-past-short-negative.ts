@@ -1,4 +1,5 @@
 import {Conjugation, Word, WordType} from "../conjugation";
+import {HIRAGANA} from "../hiragana";
 
 export class NonPastShortNegative implements Conjugation {
     getConjugation(word: Word): (Word | undefined) {
@@ -6,24 +7,25 @@ export class NonPastShortNegative implements Conjugation {
 
             // Verbs
             case WordType.GodanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                const lastKana = HIRAGANA[word.getLastKana()]
+                return word.replaceLastKana(lastKana.getGroup().a + 'ない')
 
             case WordType.IchidanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.replaceLastKana('ない');
 
             case WordType.SuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.addSuffix('しない');
 
             case WordType.KuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return new Word('来ない', 'こない', word.wordType);
 
 
             // Adjectives
             case WordType.IAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.replaceLastKana('くない');
 
             case WordType.NaAdjective:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.addSuffix('じゃない');
 
 
             default:
