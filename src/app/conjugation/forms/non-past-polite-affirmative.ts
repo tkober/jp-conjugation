@@ -22,6 +22,10 @@ export class NonPastPoliteAffirmative implements Conjugation {
 
             // Adjectives
             case WordType.IAdjective:
+                if (word.kanji === '良い') {
+                    return new Word('良いです', 'いいです', word.wordType);
+                }
+
                 return word.addSuffix('です');
 
             case WordType.NaAdjective:
