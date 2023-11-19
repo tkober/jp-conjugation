@@ -43,7 +43,7 @@ describe('NonPastShortAffirmative', () => {
         expect(result).toEqual(word);
     });
 
-    it('I-Adjective', () => {
+    it('Na-Adjective', () => {
         const word = new Word('好き', 'すき', WordType.NaAdjective)
         const result = new NonPastShortAffirmative().getConjugation(word)
 

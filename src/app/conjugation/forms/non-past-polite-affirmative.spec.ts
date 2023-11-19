@@ -43,7 +43,7 @@ describe('NonPastPoliteAffirmative', () => {
         expect(result).toEqual(new Word('美味しいです', 'おいしいです', WordType.IAdjective))
     });
 
-    it('I-Adjective', () => {
+    it('Na-Adjective', () => {
         const word = new Word('好き', 'すき', WordType.NaAdjective)
         const result = new NonPastPoliteAffirmative().getConjugation(word)
 
