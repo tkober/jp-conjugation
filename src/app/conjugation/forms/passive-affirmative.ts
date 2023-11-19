@@ -1,6 +1,6 @@
 import {Conjugation, Word, WordType} from "../conjugation";
 
-class PassiveAffirmative implements Conjugation {
+export class PassiveAffirmative implements Conjugation {
     getConjugation(word: Word): (Word | undefined) {
         switch (word.wordType) {
 

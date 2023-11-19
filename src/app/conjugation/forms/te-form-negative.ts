@@ -1,6 +1,6 @@
 import {Conjugation, Word, WordType} from "../conjugation";
 
-class TeFormNegative implements Conjugation {
+export class TeFormNegative implements Conjugation {
     getConjugation(word: Word): (Word | undefined) {
         switch (word.wordType) {
 

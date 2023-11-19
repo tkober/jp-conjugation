@@ -1,6 +1,6 @@
 import {Conjugation, Word, WordType} from "../conjugation";
 
-class CausativeAffirmative implements Conjugation {
+export class CausativeAffirmative implements Conjugation {
     getConjugation(word: Word): (Word | undefined) {
         switch (word.wordType) {
 

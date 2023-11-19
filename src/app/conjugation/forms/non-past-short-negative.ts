@@ -1,6 +1,6 @@
 import {Conjugation, Word, WordType} from "../conjugation";
 
-class NonPastShortNegative implements Conjugation {
+export class NonPastShortNegative implements Conjugation {
     getConjugation(word: Word): (Word | undefined) {
         switch (word.wordType) {
 
