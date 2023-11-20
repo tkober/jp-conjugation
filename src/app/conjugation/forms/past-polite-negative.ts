@@ -1,4 +1,5 @@
 import {Conjugation, Word, WordType} from "../conjugation";
+import {HIRAGANA} from "../hiragana";
 
 export class PastPoliteNegative implements Conjugation {
     getConjugation(word: Word): (Word | undefined) {
@@ -6,16 +7,17 @@ export class PastPoliteNegative implements Conjugation {
 
             // Verbs
             case WordType.GodanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                const lastKana = HIRAGANA[word.getLastKana()]
+                return word.replaceLastKana(lastKana.getGroup().i + 'ませんでした')
 
             case WordType.IchidanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.replaceLastKana('ませんでした');
 
             case WordType.SuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.addSuffix('しませんでした');
 
             case WordType.KuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return new Word('来ませんでした', 'きませんでした', word.wordType);
 
 
             // Adjectives
