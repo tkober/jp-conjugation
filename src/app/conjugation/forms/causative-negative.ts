@@ -1,26 +1,17 @@
 import {Conjugation, Word, WordType} from "../conjugation";
+import {NonPastShortNegative} from "./non-past-short-negative";
+import {CausativeAffirmative} from "./causative-affirmative";
 
 export class CausativeNegative implements Conjugation {
     getConjugation(word: Word): (Word | undefined) {
-        switch (word.wordType) {
 
-            // Verbs
-            case WordType.GodanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
-
-            case WordType.IchidanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
-
-            case WordType.SuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
-
-            case WordType.KuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
-
-
-            default:
-                return undefined;
+        const originalType = word.wordType;
+        const causative = new CausativeAffirmative().getConjugation(word);
+        if (causative === undefined) {
+            return undefined;
         }
+
+        return new NonPastShortNegative().getConjugation(causative.changeType(WordType.IchidanVerb))?.changeType(originalType)
     }
 
 }
