@@ -64,7 +64,7 @@ describe('PassiveNegative', () => {
         const result = new PassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb))
+        expect(result).toEqual(new Word('書かれない', 'かかれない', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぐ]', () => {

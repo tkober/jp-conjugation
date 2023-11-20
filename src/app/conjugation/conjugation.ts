@@ -40,6 +40,11 @@ export class Word {
         )
     }
 
+    changeType(newType: WordType): Word {
+        this.wordType = newType;
+        return this;
+    }
+
     equals(anotherWord: Word): boolean {
         return this.kanji === anotherWord.kanji &&
             this.furigana === anotherWord.furigana &&
