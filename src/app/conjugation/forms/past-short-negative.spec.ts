@@ -80,7 +80,7 @@ describe('PastShortNegative', () => {
         const result = new PastShortNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('話なかった', 'はなしなかった', WordType.GodanVerb))
+        expect(result).toEqual(new Word('話さなかった', 'はなさなかった', WordType.GodanVerb))
     });
 
     it('Godan Verb [行く]', () => {
