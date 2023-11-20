@@ -1,4 +1,5 @@
 import {Conjugation, Word, WordType} from "../conjugation";
+import {TeFormAffirmative} from "./te-form-affirmative";
 
 export class PastShortAffirmative implements Conjugation {
     getConjugation(word: Word): (Word | undefined) {
@@ -6,16 +7,19 @@ export class PastShortAffirmative implements Conjugation {
 
             // Verbs
             case WordType.GodanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
-
             case WordType.IchidanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
-
             case WordType.SuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
-
             case WordType.KuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                const teForm = new TeFormAffirmative().getConjugation(word)
+                if (teForm === undefined) {
+                    return undefined
+                }
+
+                if (teForm.getLastKana() === 'で') {
+                    return teForm.replaceLastKana('だ')
+                } else {
+                    return teForm.replaceLastKana('た')
+                }
 
 
             // Adjectives
