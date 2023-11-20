@@ -1,4 +1,5 @@
 import {Conjugation, Word, WordType} from "../conjugation";
+import {HIRAGANA} from "../hiragana";
 
 export class CausativeAffirmative implements Conjugation {
     getConjugation(word: Word): (Word | undefined) {
@@ -6,16 +7,21 @@ export class CausativeAffirmative implements Conjugation {
 
             // Verbs
             case WordType.GodanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                const lastKana = HIRAGANA[word.getLastKana()]
+                if (lastKana.kana === 'う') {
+                    return word.replaceLastKana('わせる')
+                }
+
+                return word.replaceLastKana(lastKana.getGroup().a + 'せる')
 
             case WordType.IchidanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.replaceLastKana('させる');
 
             case WordType.SuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.addSuffix('させる');
 
             case WordType.KuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return new Word('来させる', 'こさせる', word.wordType);
 
 
             default:
