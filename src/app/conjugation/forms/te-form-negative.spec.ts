@@ -8,7 +8,7 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('食べなくて', 'たべなくて', WordType.IchidanVerb)); // TODO: Fill out
+        expect(result).toEqual(new Word('食べなくて', 'たべなくて', WordType.IchidanVerb));
     });
 
     it('Godan Verb [う]', () => {
@@ -16,7 +16,7 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('会わなくて', 'あわなくて', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('会わなくて', 'あわなくて', WordType.GodanVerb))
     });
 
     it('Godan Verb [つ]', () => {
@@ -24,7 +24,7 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('待たなくて', 'またなくて', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('待たなくて', 'またなくて', WordType.GodanVerb))
     });
 
     it('Godan Verb [る]', () => {
@@ -32,7 +32,7 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('取らなくて', 'とらなくて', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('取らなくて', 'とらなくて', WordType.GodanVerb))
     });
 
     it('Godan Verb [む]', () => {
@@ -40,7 +40,7 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('読まなくて', 'よまなくて', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('読まなくて', 'よまなくて', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぶ]', () => {
@@ -48,7 +48,7 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('遊ばなくて', 'あそばなくて', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('遊ばなくて', 'あそばなくて', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぬ]', () => {
@@ -56,7 +56,7 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('死ななくて', 'しななくて', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('死ななくて', 'しななくて', WordType.GodanVerb))
     });
 
     it('Godan Verb [く]', () => {
@@ -64,7 +64,7 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('書かなくて', 'かかなくて', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('書かなくて', 'かかなくて', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぐ]', () => {
@@ -72,7 +72,7 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('泳がなくて', 'およがなくて', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('泳がなくて', 'およがなくて', WordType.GodanVerb))
     });
 
     it('Godan Verb [す]', () => {
@@ -88,7 +88,7 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('行かなくて', 'いかなくて', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('行かなくて', 'いかなくて', WordType.GodanVerb))
     });
 
     it('Suru Verb', () => {
@@ -96,7 +96,7 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('勉強しなくて', 'べんきょうしなくて', WordType.SuruVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('勉強しなくて', 'べんきょうしなくて', WordType.SuruVerb))
     });
 
     it('Kuru Verb', () => {
@@ -104,6 +104,6 @@ describe('TeFormNegative', () => {
         const result = new TeFormNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('来なくて', 'こなくて', WordType.KuruVerb))  // TODO: Fill out
+        expect(result).toEqual(new Word('来なくて', 'こなくて', WordType.KuruVerb))
     });
 })
