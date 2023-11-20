@@ -8,7 +8,15 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.IchidanVerb)); // TODO: Fill out
+        expect(result).toEqual(new Word('食べろ', 'たべろ', WordType.IchidanVerb));
+    });
+
+    it('Ichidan Verb [呉れる]', () => {
+        const word = new Word('呉れる', 'くれる', WordType.IchidanVerb)
+        const result = new ImperativeAffirmative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('呉れ', 'くれ', WordType.IchidanVerb))
     });
 
     it('Godan Verb [う]', () => {
@@ -16,7 +24,7 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('会え', 'あえ', WordType.GodanVerb))
     });
 
     it('Godan Verb [つ]', () => {
@@ -24,7 +32,7 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('待て', 'まて', WordType.GodanVerb))
     });
 
     it('Godan Verb [る]', () => {
@@ -32,7 +40,7 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('取れ', 'とれ', WordType.GodanVerb))
     });
 
     it('Godan Verb [む]', () => {
@@ -40,7 +48,7 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('読め', 'よめ', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぶ]', () => {
@@ -48,7 +56,7 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('遊べ', 'あそべ', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぬ]', () => {
@@ -56,7 +64,7 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('死ね', 'しね', WordType.GodanVerb))
     });
 
     it('Godan Verb [く]', () => {
@@ -64,7 +72,7 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('書け', 'かけ', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぐ]', () => {
@@ -72,7 +80,15 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('泳げ', 'およげ', WordType.GodanVerb))
+    });
+
+    it('Godan Verb [す]', () => {
+        const word = new Word('話す', 'はなす', WordType.GodanVerb)
+        const result = new ImperativeAffirmative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('話せ', 'はなせ', WordType.GodanVerb))
     });
 
     it('Godan Verb [行く]', () => {
@@ -80,7 +96,7 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('行け', 'いけ', WordType.GodanVerb))
     });
 
     it('Suru Verb', () => {
@@ -88,7 +104,7 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.SuruVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('勉強しろ', 'べんきょうしろ', WordType.SuruVerb))
     });
 
     it('Kuru Verb', () => {
@@ -96,6 +112,6 @@ describe('ImperativeAffirmative', () => {
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.KuruVerb))  // TODO: Fill out
+        expect(result).toEqual(new Word('来い', 'こい', WordType.KuruVerb))
     });
 })

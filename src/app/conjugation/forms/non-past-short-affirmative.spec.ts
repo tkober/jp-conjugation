@@ -8,7 +8,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.IchidanVerb)); // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('Godan Verb [う]', () => {
@@ -16,7 +16,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('Godan Verb [つ]', () => {
@@ -24,7 +24,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('Godan Verb [る]', () => {
@@ -32,7 +32,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('Godan Verb [む]', () => {
@@ -40,7 +40,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('Godan Verb [ぶ]', () => {
@@ -48,7 +48,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('Godan Verb [ぬ]', () => {
@@ -56,7 +56,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('Godan Verb [く]', () => {
@@ -64,7 +64,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('Godan Verb [ぐ]', () => {
@@ -72,7 +72,15 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(word)
+    });
+
+    it('Godan Verb [す]', () => {
+        const word = new Word('話す', 'はなす', WordType.GodanVerb)
+        const result = new NonPastShortAffirmative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(word)
     });
 
     it('Godan Verb [行く]', () => {
@@ -80,7 +88,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('Suru Verb', () => {
@@ -88,7 +96,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.SuruVerb)) // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('Kuru Verb', () => {
@@ -96,7 +104,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.KuruVerb))  // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('I-Adjective', () => {
@@ -104,7 +112,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.IAdjective)) // TODO: Fill out
+        expect(result).toEqual(word)
     });
 
     it('I-Adjective [良い]', () => {
@@ -112,7 +120,7 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.IAdjective)) // TODO: Fill out
+        expect(result).toEqual(new Word('良い', 'いい', WordType.IAdjective))
     });
 
     it('Na-Adjective', () => {
@@ -120,6 +128,6 @@ describe('NonPastShortAffirmative', () => {
         const result = new NonPastShortAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.NaAdjective)) // TODO: Fill out
+        expect(result).toEqual(word)
     });
 })

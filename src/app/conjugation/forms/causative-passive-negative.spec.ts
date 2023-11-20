@@ -9,7 +9,7 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.IchidanVerb)); // TODO: Fill out
+        expect(result).toEqual(new Word('食べさせるられない', 'たべさせるられない', WordType.IchidanVerb));
     });
 
     it('Godan Verb [う]', () => {
@@ -17,7 +17,7 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('会わせるられない', 'あわせるられない', WordType.GodanVerb))
     });
 
     it('Godan Verb [つ]', () => {
@@ -25,7 +25,7 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('待たせるられない', 'またせるられない', WordType.GodanVerb))
     });
 
     it('Godan Verb [る]', () => {
@@ -33,7 +33,7 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('取らせるられない', 'とらせるられない', WordType.GodanVerb))
     });
 
     it('Godan Verb [む]', () => {
@@ -41,7 +41,7 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('読ませるられない', 'よませるられない', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぶ]', () => {
@@ -49,7 +49,7 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('遊ばせるられない', 'あそばせるられない', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぬ]', () => {
@@ -57,7 +57,7 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('死なせるられない', 'しなせるられない', WordType.GodanVerb))
     });
 
     it('Godan Verb [く]', () => {
@@ -65,7 +65,7 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('書かせるられない', 'かかせるられない', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぐ]', () => {
@@ -73,7 +73,15 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('泳がせるられない', 'およがせるられない', WordType.GodanVerb))
+    });
+
+    it('Godan Verb [す]', () => {
+        const word = new Word('話す', 'はなす', WordType.GodanVerb)
+        const result = new CausativePassiveNegative().getConjugation(word)
+
+        expect(result !== undefined).toBeTruthy()
+        expect(result).toEqual(new Word('話させるられない', 'はなさせるられない', WordType.GodanVerb))
     });
 
     it('Godan Verb [行く]', () => {
@@ -81,7 +89,7 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.GodanVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('行かせるられない', 'いかせるられない', WordType.GodanVerb))
     });
 
     it('Suru Verb', () => {
@@ -89,7 +97,7 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.SuruVerb)) // TODO: Fill out
+        expect(result).toEqual(new Word('勉強させるられない', 'べんきょうさせるられない', WordType.SuruVerb))
     });
 
     it('Kuru Verb', () => {
@@ -97,6 +105,6 @@ describe('CausativePassiveNegative', () => {
         const result = new CausativePassiveNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('', '', WordType.KuruVerb))  // TODO: Fill out
+        expect(result).toEqual(new Word('来させるられない', 'こさせるられない', WordType.KuruVerb))
     });
 })
