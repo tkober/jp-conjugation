@@ -1,4 +1,5 @@
 import {Conjugation, Word, WordType} from "../conjugation";
+import {HIRAGANA} from "../hiragana";
 
 export class PassiveAffirmative implements Conjugation {
     getConjugation(word: Word): (Word | undefined) {
@@ -6,16 +7,21 @@ export class PassiveAffirmative implements Conjugation {
 
             // Verbs
             case WordType.GodanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                const lastKana = HIRAGANA[word.getLastKana()]
+                if (lastKana.kana === 'う') {
+                    return word.replaceLastKana('われる')
+                }
+
+                return word.replaceLastKana(lastKana.getGroup().a + 'れる')
 
             case WordType.IchidanVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.replaceLastKana('られる');
 
             case WordType.SuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return word.addSuffix('される');
 
             case WordType.KuruVerb:
-                return new Word('TODO', 'TODO', word.wordType);
+                return new Word('来られる', 'こられる', word.wordType);
 
 
             default:
