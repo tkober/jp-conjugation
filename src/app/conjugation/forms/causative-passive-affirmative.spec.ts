@@ -9,7 +9,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('食べさせるられる', 'たべさせるられる', WordType.IchidanVerb));
+        expect(result).toEqual(new Word('食べさせられる', 'たべさせられる', WordType.IchidanVerb));
     });
 
     it('Godan Verb [う]', () => {
@@ -17,7 +17,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('会わせるられる', 'あわせるられる', WordType.GodanVerb))
+        expect(result).toEqual(new Word('会わせられる', 'あわせられる', WordType.GodanVerb))
     });
 
     it('Godan Verb [つ]', () => {
@@ -25,7 +25,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('待たせるられる', 'またせるられる', WordType.GodanVerb))
+        expect(result).toEqual(new Word('待たせられる', 'またせられる', WordType.GodanVerb))
     });
 
     it('Godan Verb [る]', () => {
@@ -33,7 +33,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('取らせるられる', 'とらせるられる', WordType.GodanVerb))
+        expect(result).toEqual(new Word('取らせられる', 'とらせられる', WordType.GodanVerb))
     });
 
     it('Godan Verb [む]', () => {
@@ -41,7 +41,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('読ませるられる', 'よませるられる', WordType.GodanVerb))
+        expect(result).toEqual(new Word('読ませられる', 'よませられる', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぶ]', () => {
@@ -49,7 +49,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('遊ばせるられる', 'あそばせるられる', WordType.GodanVerb))
+        expect(result).toEqual(new Word('遊ばせられる', 'あそばせられる', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぬ]', () => {
@@ -57,7 +57,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('死なせるられる', 'しなせるられる', WordType.GodanVerb))
+        expect(result).toEqual(new Word('死なせられる', 'しなせられる', WordType.GodanVerb))
     });
 
     it('Godan Verb [く]', () => {
@@ -65,7 +65,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('書かせるられる', 'かかせるられる', WordType.GodanVerb))
+        expect(result).toEqual(new Word('書かせられる', 'かかせられる', WordType.GodanVerb))
     });
 
     it('Godan Verb [ぐ]', () => {
@@ -73,7 +73,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('泳がせるられる', 'およがせるられる', WordType.GodanVerb))
+        expect(result).toEqual(new Word('泳がせられる', 'およがせられる', WordType.GodanVerb))
     });
 
     it('Godan Verb [す]', () => {
@@ -81,7 +81,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('話させるられる', 'はなさせるられる', WordType.GodanVerb))
+        expect(result).toEqual(new Word('話させられる', 'はなさせられる', WordType.GodanVerb))
     });
 
     it('Godan Verb [行く]', () => {
@@ -89,7 +89,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('行かせるられる', 'いかせるられる', WordType.GodanVerb))
+        expect(result).toEqual(new Word('行かせられる', 'いかせられる', WordType.GodanVerb))
     });
 
     it('Suru Verb', () => {
@@ -97,7 +97,7 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('勉強させるられる', 'べんきょうさせるられる', WordType.SuruVerb))
+        expect(result).toEqual(new Word('勉強させられる', 'べんきょうさせられる', WordType.SuruVerb))
     });
 
     it('Kuru Verb', () => {
@@ -105,6 +105,6 @@ describe('CausativePassiveAffirmative', () => {
         const result = new CausativePassiveAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(new Word('来させるられる', 'こさせるられる', WordType.KuruVerb))
+        expect(result).toEqual(new Word('来させられる', 'こさせられる', WordType.KuruVerb))
     });
 })
