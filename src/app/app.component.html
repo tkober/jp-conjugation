@@ -37,7 +37,28 @@
         <div>The app is still under construction<br/>But here is a cat</div>
 
         <div>
-            <input #answerInput type="text">
+            <form [formGroup]="formGroup">
+                <mat-form-field hideRequiredMarker>
+                    <mat-label>答え</mat-label>
+                    <input
+                        #answerInput
+                        matInput
+                        type="text"
+                        [formControl]="answerFormControl"
+                    >
+                    <mat-error *ngIf="answerFormControl.hasError('required'); else invalidAnswerError">
+                        Please provide an answer
+                    </mat-error>
+                    <ng-template #invalidAnswerError>
+                        <mat-error *ngIf="answerFormControl.hasError('invalidAnswer')">
+                            {{ answerFormControl.getError('invalidAnswer').message }}
+                        </mat-error>
+                    </ng-template>
+                </mat-form-field>
+                <button mat-icon-button color="primary" [disabled]="formGroup.invalid" (click)="checkAnswer()">
+                    <mat-icon>send</mat-icon>
+                </button>
+            </form>
         </div>
     </div>
 </div>
