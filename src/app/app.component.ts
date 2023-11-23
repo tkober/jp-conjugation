@@ -1,4 +1,5 @@
-import {Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import * as wanakana from 'wanakana';
 
 
 @Component({
@@ -6,9 +7,15 @@ import {Component, OnInit} from '@angular/core';
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, AfterViewInit {
     title = 'jp-conjugation';
 
+    @ViewChild('answerInput') answerInput: ElementRef;
+
     ngOnInit() {
+    }
+
+    ngAfterViewInit(): void {
+        wanakana.bind(this.answerInput.nativeElement)
     }
 }
