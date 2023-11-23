@@ -14,4 +14,8 @@ export class PotentialNegative implements Conjugation {
         return new NonPastShortNegative().getConjugation(potential.changeType(WordType.IchidanVerb))?.changeType(originalType)
     }
 
+    getTitle(): string {
+        return "Potential, negative"
+    }
+
 }

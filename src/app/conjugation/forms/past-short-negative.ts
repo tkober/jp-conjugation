@@ -26,4 +26,8 @@ export class PastShortNegative implements Conjugation {
         }
     }
 
+    getTitle(): string {
+        return "Past, short, negative"
+    }
+
 }

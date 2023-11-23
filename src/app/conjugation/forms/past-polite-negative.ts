@@ -33,4 +33,8 @@ export class PastPoliteNegative implements Conjugation {
         }
     }
 
+    getTitle(): string {
+        return "Past, polite, negative"
+    }
+
 }

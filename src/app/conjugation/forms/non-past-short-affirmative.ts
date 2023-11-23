@@ -34,4 +34,8 @@ export class NonPastShortAffirmative implements Conjugation {
         }
     }
 
+    getTitle(): string {
+        return "Non-past, short, affirmative"
+    }
+
 }

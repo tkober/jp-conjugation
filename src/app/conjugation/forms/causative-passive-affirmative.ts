@@ -14,4 +14,8 @@ export class CausativePassiveAffirmative implements Conjugation {
         return new PassiveAffirmative().getConjugation(causative.changeType(WordType.GodanVerb))?.changeType(originalType)
     }
 
+    getTitle(): string {
+        return "Causative-Passive, affirmative"
+    }
+
 }

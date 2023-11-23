@@ -15,4 +15,8 @@ export class PassiveNegative implements Conjugation {
         return new NonPastShortNegative().getConjugation(passive.changeType(WordType.IchidanVerb))?.changeType(originalType)
     }
 
+    getTitle(): string {
+        return "Passive, negative"
+    }
+
 }

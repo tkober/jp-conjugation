@@ -26,4 +26,8 @@ export class PotentialAffirmative implements Conjugation {
         }
     }
 
+    getTitle(): string {
+        return "Potential, affirmative"
+    }
+
 }

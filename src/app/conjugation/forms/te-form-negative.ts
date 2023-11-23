@@ -7,4 +7,8 @@ export class TeFormNegative implements Conjugation {
         return new NonPastShortNegative().getConjugation(word)?.replaceLastKana('くて')
     }
 
+    getTitle(): string {
+        return "Te-Form, negative"
+    }
+
 }

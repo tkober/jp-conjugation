@@ -56,4 +56,6 @@ export interface Conjugation {
 
     getConjugation(word: Word): (Word | undefined)
 
+    getTitle(): string
+
 }

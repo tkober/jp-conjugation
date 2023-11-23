@@ -56,4 +56,8 @@ export class TeFormAffirmative implements Conjugation {
         }
     }
 
+    getTitle(): string {
+        return "Te-Form, affirmative"
+    }
+
 }

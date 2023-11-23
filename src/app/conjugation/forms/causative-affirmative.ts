@@ -29,4 +29,8 @@ export class CausativeAffirmative implements Conjugation {
         }
     }
 
+    getTitle(): string {
+        return "Causative, affirmative"
+    }
+
 }

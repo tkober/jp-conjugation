@@ -14,4 +14,8 @@ export class CausativeNegative implements Conjugation {
         return new NonPastShortNegative().getConjugation(causative.changeType(WordType.IchidanVerb))?.changeType(originalType)
     }
 
+    getTitle(): string {
+        return "Causative, negative"
+    }
+
 }

@@ -35,4 +35,8 @@ export class PastShortAffirmative implements Conjugation {
         }
     }
 
+    getTitle(): string {
+        return "Past, short, affirmative"
+    }
+
 }

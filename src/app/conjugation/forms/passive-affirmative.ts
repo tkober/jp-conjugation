@@ -29,4 +29,8 @@ export class PassiveAffirmative implements Conjugation {
         }
     }
 
+    getTitle(): string {
+        return "Passive, affirmative"
+    }
+
 }

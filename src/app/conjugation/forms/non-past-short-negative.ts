@@ -37,4 +37,8 @@ export class NonPastShortNegative implements Conjugation {
         }
     }
 
+    getTitle(): string {
+        return "Non-past, short, negative"
+    }
+
 }

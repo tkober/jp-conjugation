@@ -23,4 +23,8 @@ export class ImperativeNegative implements Conjugation {
         }
     }
 
+    getTitle(): string {
+        return "Imperative, negative"
+    }
+
 }
