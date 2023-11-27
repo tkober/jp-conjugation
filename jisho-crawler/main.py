@@ -21,16 +21,21 @@ def parse_args():
     return argparser.parse_args()
 
 def optimize_json(words: dict) -> dict:
-    result = {}
-    for key in words.keys():
-        result[key] = {
-            'ichidan_verb': [optimize_word(w) for w in words[key] if w['ichidan_verb']],
-            'godan_verb': [optimize_word(w) for w in words[key] if w['godan_verb']],
-            'suru_verb': [optimize_word(w) for w in words[key] if w['suru_verb']],
-            'kuru_verb': [optimize_word(w) for w in words[key] if w['kuru_verb']],
-            'i_adjective': [optimize_word(w) for w in words[key] if w['i_adjective']],
-            'na_adjective': [optimize_word(w) for w in words[key] if w['na_adjective']]
-        }
+    result = {
+        'ichidan_verb': [],
+        'godan_verb': [],
+        'suru_verb': [],
+        'kuru_verb': [],
+        'i_adjective': [],
+        'na_adjective': [],
+    }
+    for level in words.keys():
+        result['ichidan_verb'].extend([optimize_word(w) for w in words[level] if w['ichidan_verb']])
+        result['godan_verb'].extend([optimize_word(w) for w in words[level] if w['godan_verb']])
+        result['suru_verb'].extend([add_suffix(optimize_word(w), 'する') for w in words[level] if w['suru_verb']])
+        result['kuru_verb'].extend([optimize_word(w) for w in words[level] if w['kuru_verb']])
+        result['i_adjective'].extend([optimize_word(w) for w in words[level] if w['i_adjective']])
+        result['na_adjective'].extend([optimize_word(w) for w in words[level] if w['na_adjective']])
 
     return result
 
@@ -39,7 +44,16 @@ def optimize_word(word) -> dict:
     return {
         'kanji': word['slug'],
         'furigana': word['furigana'],
-        'english': word['english']
+        'english': word['english'],
+        'jlpt': word['jlpt']
+    }
+
+def add_suffix(word, suffix) -> dict:
+    return {
+        'kanji': word['kanji'] + suffix,
+        'furigana': word['furigana'] + suffix,
+        'english': word['english'],
+        'jlpt': word['jlpt']
     }
 
 
@@ -85,5 +99,6 @@ if __name__ == '__main__':
 
     optimized = optimize_json(result)
     json_object = json.dumps(optimized, indent=4, ensure_ascii=False)
+    jisho_ts = 'export const jisho = ' + json_object
     with open(args.out, 'w', encoding='utf-8') as outfile:
-        outfile.write(json_object)
+        outfile.write(jisho_ts)
