@@ -1,65 +1,41 @@
-<style>
-    :host {
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        font-size: 14px;
-        color: #333;
-        box-sizing: border-box;
-        -webkit-font-smoothing: antialiased;
-        -moz-osx-font-smoothing: grayscale;
-    }
+<div class="exercise">
+    <div *ngIf="currentExercise">
+        <h2>
+            <ruby>
+                {{ currentExercise.vocabulary | dropKana }}
+                <rt>{{currentExercise.vocabulary | furigana}}</rt>
+                {{ currentExercise.vocabulary | dropKanji }}
+            </ruby>
+        </h2>
+        <p>{{ currentExercise.vocabulary.kanji }}</p>
+        <p>{{ currentExercise.vocabulary.furigana }}</p>
+        <p>{{ currentExercise.vocabulary.english }}</p>
+        <h6>{{ currentExercise.practiceItem.conjugation.getTitle() }}</h6>
+    </div>
 
-    .empty-list {
-        position: relative;
-        min-height: 120px;
-        font-size: 150%;
-        margin-top: 100px;
-    }
-
-    .empty-list-text {
-        width: 100%;
-        margin: 0;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        text-align: center;
-    }
-
-    .neko {
-        font-size: 100px;
-        color: #9b9b9b;
-        margin-bottom: 10px;
-    }
-</style>
-
-<div class="empty-list">
-    <div class="empty-list-text">
-        <div class="neko">/ᐠ｡‸｡ᐟ\</div>
-        <div>The app is still under construction<br/>But here is a cat</div>
-
-        <div>
-            <form [formGroup]="formGroup">
-                <mat-form-field hideRequiredMarker>
-                    <mat-label>答え</mat-label>
-                    <input
-                        #answerInput
-                        matInput
-                        type="text"
-                        [formControl]="answerFormControl"
-                    >
-                    <mat-error *ngIf="answerFormControl.hasError('required'); else invalidAnswerError">
-                        Please provide an answer
+    <div>
+        <form [formGroup]="formGroup">
+            <mat-form-field hideRequiredMarker>
+                <mat-label>答え</mat-label>
+                <input
+                    #answerInput
+                    matInput
+                    type="text"
+                    [formControl]="answerFormControl"
+                >
+                <mat-error *ngIf="answerFormControl.hasError('required'); else invalidAnswerError">
+                    Please provide an answer
+                </mat-error>
+                <ng-template #invalidAnswerError>
+                    <mat-error *ngIf="answerFormControl.hasError('invalidAnswer')">
+                        {{ answerFormControl.getError('invalidAnswer').message }}
                     </mat-error>
-                    <ng-template #invalidAnswerError>
-                        <mat-error *ngIf="answerFormControl.hasError('invalidAnswer')">
-                            {{ answerFormControl.getError('invalidAnswer').message }}
-                        </mat-error>
-                    </ng-template>
-                </mat-form-field>
-                <button mat-icon-button color="primary" [disabled]="formGroup.invalid" (click)="checkAnswer()">
-                    <mat-icon>send</mat-icon>
-                </button>
-            </form>
-        </div>
+                </ng-template>
+            </mat-form-field>
+            <button mat-icon-button color="primary" [disabled]="formGroup.invalid" (click)="checkAnswer()">
+                <mat-icon>send</mat-icon>
+            </button>
+        </form>
     </div>
 </div>
 

@@ -7,10 +7,16 @@ import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
+import { FuriganaPipe } from './filters/furigana.pipe';
+import { DropKanaPipe } from './filters/drop-kana.pipe';
+import { DropKanjiPipe } from './filters/drop-kanji.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FuriganaPipe,
+    DropKanaPipe,
+    DropKanjiPipe
   ],
     imports: [
         BrowserModule,
