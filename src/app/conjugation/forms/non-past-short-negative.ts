@@ -18,7 +18,7 @@ export class NonPastShortNegative implements Conjugation {
                 return word.replaceLastKana('ない');
 
             case WordType.SuruVerb:
-                return word.addSuffix('しない');
+                return word.replaceLastKana('しない', 2);
 
             case WordType.KuruVerb:
                 return new Word('来ない', 'こない', word.wordType);

@@ -92,11 +92,11 @@ describe('ImperativeNegative', () => {
     });
 
     it('Suru Verb', () => {
-        const word = new Word('勉強', 'べんきょう', WordType.SuruVerb)
+        const word = new Word('勉強する', 'べんきょうする', WordType.SuruVerb)
         const result = new ImperativeNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()
-        expect(result).toEqual(word.addSuffix('するな'));
+        expect(result).toEqual(word.addSuffix('な'));
     });
 
     it('Kuru Verb', () => {

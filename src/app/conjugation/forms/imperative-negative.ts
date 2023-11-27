@@ -6,14 +6,8 @@ export class ImperativeNegative implements Conjugation {
 
             // Verbs
             case WordType.GodanVerb:
-                return word.addSuffix('な');
-
             case WordType.IchidanVerb:
-                return word.addSuffix('な');
-
             case WordType.SuruVerb:
-                return word.addSuffix('するな');
-
             case WordType.KuruVerb:
                 return word.addSuffix('な');
 

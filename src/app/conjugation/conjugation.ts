@@ -32,10 +32,10 @@ export class Word {
     }
 
     // @ts-ignore
-    replaceLastKana(replacement: string): Word {
+    replaceLastKana(replacement: string, n: number = 1): Word {
         return new Word(
-            this.kanji.slice(0, -1) + replacement,
-            this.furigana.slice(0, -1) + replacement,
+            this.kanji.slice(0, -n) + replacement,
+            this.furigana.slice(0, -n) + replacement,
             this.wordType
         )
     }

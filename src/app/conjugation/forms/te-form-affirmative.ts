@@ -45,7 +45,7 @@ export class TeFormAffirmative implements Conjugation {
                 return word.replaceLastKana('て');
 
             case WordType.SuruVerb:
-                return word.addSuffix('して');
+                return word.replaceLastKana('して', 2);
 
             case WordType.KuruVerb:
                 return new Word('来て', 'きて', word.wordType);

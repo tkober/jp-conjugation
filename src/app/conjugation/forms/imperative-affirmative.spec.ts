@@ -100,7 +100,7 @@ describe('ImperativeAffirmative', () => {
     });
 
     it('Suru Verb', () => {
-        const word = new Word('勉強', 'べんきょう', WordType.SuruVerb)
+        const word = new Word('勉強する', 'べんきょうする', WordType.SuruVerb)
         const result = new ImperativeAffirmative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()

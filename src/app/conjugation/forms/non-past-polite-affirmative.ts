@@ -14,7 +14,7 @@ export class NonPastPoliteAffirmative implements Conjugation {
                 return word.replaceLastKana('ます');
 
             case WordType.SuruVerb:
-                return word.addSuffix('します');
+                return word.replaceLastKana('します', 2);
 
             case WordType.KuruVerb:
                 return new Word('来ます', 'きます', word.wordType);

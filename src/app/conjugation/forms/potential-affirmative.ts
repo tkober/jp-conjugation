@@ -15,7 +15,7 @@ export class PotentialAffirmative implements Conjugation {
                 return word.replaceLastKana('られる');
 
             case WordType.SuruVerb:
-                return word.addSuffix('ができる');
+                return word.replaceLastKana('ができる', 2);
 
             case WordType.KuruVerb:
                 return new Word('来られる', 'こられる', word.wordType);

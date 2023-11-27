@@ -92,7 +92,7 @@ describe('PastShortNegative', () => {
     });
 
     it('Suru Verb', () => {
-        const word = new Word('勉強', 'べんきょう', WordType.SuruVerb)
+        const word = new Word('勉強する', 'べんきょうする', WordType.SuruVerb)
         const result = new PastShortNegative().getConjugation(word)
 
         expect(result !== undefined).toBeTruthy()

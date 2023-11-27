@@ -19,7 +19,7 @@ export class ImperativeAffirmative implements Conjugation {
                 return word.replaceLastKana('ろ')
 
             case WordType.SuruVerb:
-                return word.addSuffix('しろ');
+                return word.replaceLastKana('しろ', 2);
 
             case WordType.KuruVerb:
                 return new Word('来い', 'こい', word.wordType);
