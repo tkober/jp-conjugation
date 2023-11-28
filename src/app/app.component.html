@@ -7,72 +7,69 @@
                 {{ currentExercise.vocabulary | dropKanji }}
             </ruby>
         </h2>
-        <p>{{ currentExercise.vocabulary.english }}</p>
-        <h6>{{ currentExercise.practiceItem.conjugation.getTitle() }}</h6>
+        <p class="english">{{ currentExercise.vocabulary.english }}</p>
+        <p class="conjugation-form-title">{{ currentExercise.practiceItem.conjugation.getTitle() }}</p>
+
+        <div *ngIf="isAnswered && !isAnswerCorrect" class="correction">
+            <span>正しい:</span>
+            <h3>
+                <ruby>{{ solution | dropKana }}
+                    <rt>{{solution | furigana}}</rt>
+                    {{ solution | dropKanji }}
+                </ruby>
+            </h3>
+        </div>
     </div>
 
-    <div *ngIf="currentExercise" class="furigana-debug">
-        <div><b>Furigana Debug:</b></div>
-        <div>{{ currentExercise.vocabulary.kanji }}</div>
-        <div>{{ currentExercise.vocabulary.furigana }}</div>
-    </div>
-
-    <div [hidden]="isAnswered">
-        <form [formGroup]="formGroup" (ngSubmit)="checkAnswer()">
-            <mat-form-field appearance="outline" color="" hideRequiredMarker cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
-                <mat-label>答え</mat-label>
-                <input
-                    #answerInput
-                    matInput
-                    type="text"
-                    [formControl]="answerFormControl"
-                >
-                <button mat-icon-button matSuffix color="accent" [disabled]="formGroup.invalid" type="submit">
-                    <mat-icon>send</mat-icon>
-                </button>
-                <mat-error *ngIf="answerFormControl.hasError('required'); else invalidAnswerError"></mat-error>
-                <ng-template #invalidAnswerError>
-                    <mat-error *ngIf="answerFormControl.hasError('invalidAnswer')">
-                        {{ answerFormControl.getError('invalidAnswer').message }}
-                    </mat-error>
-                </ng-template>
-            </mat-form-field>
-        </form>
-    </div>
-
-    <div *ngIf="isAnswered">
-        <div *ngIf="isAnswerCorrect; else wrongAnswer">
-            <form class="correct-answer" (ngSubmit)="finishCurrentExercise()">
-                <mat-form-field appearance="outline" cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
-                    <mat-label>正しい</mat-label>
-                    <input matInput type="text" readonly [value]="givenAnswer">
-                    <button mat-icon-button matSuffix type="submit">
-                        <mat-icon>done</mat-icon>
+    <div class="interaction">
+        <div [hidden]="isAnswered">
+            <form [formGroup]="formGroup" (ngSubmit)="checkAnswer()">
+                <mat-form-field appearance="outline" color="" hideRequiredMarker cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
+                    <mat-label>答え</mat-label>
+                    <input
+                        #answerInput
+                        matInput
+                        type="text"
+                        [formControl]="answerFormControl"
+                    >
+                    <button mat-icon-button matSuffix color="accent" [disabled]="formGroup.invalid" type="submit">
+                        <mat-icon>send</mat-icon>
                     </button>
+                    <mat-error *ngIf="answerFormControl.hasError('required'); else invalidAnswerError"></mat-error>
+                    <ng-template #invalidAnswerError>
+                        <mat-error *ngIf="answerFormControl.hasError('invalidAnswer')">
+                            {{ answerFormControl.getError('invalidAnswer').message }}
+                        </mat-error>
+                    </ng-template>
                 </mat-form-field>
             </form>
         </div>
 
-        <ng-template #wrongAnswer>
-            <form class="incorrect-answer" (ngSubmit)="finishCurrentExercise()">
-                <mat-form-field appearance="outline" cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
-                    <mat-label>不正解</mat-label>
-                    <input matInput type="text" readonly [value]="givenAnswer">
-                    <button mat-icon-button matSuffix type="submit">
-                        <mat-icon>close</mat-icon>
-                    </button>
-                    <mat-hint>
-                        <mat-label class="solution-label">正しい:</mat-label>
-                        <span>
-                            <ruby>{{ solution | dropKana }}
-                                <rt>{{solution | furigana}}</rt>
-                                {{ solution | dropKanji }}
-                            </ruby>
-                        </span>
-                    </mat-hint>
-                </mat-form-field>
-            </form>
-        </ng-template>
+        <div *ngIf="isAnswered">
+            <div *ngIf="isAnswerCorrect; else wrongAnswer">
+                <form class="correct-answer" (ngSubmit)="finishCurrentExercise()">
+                    <mat-form-field appearance="outline" cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
+                        <mat-label>正しい</mat-label>
+                        <input matInput type="text" readonly [value]="givenAnswer">
+                        <button mat-icon-button matSuffix type="submit">
+                            <mat-icon>done</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </form>
+            </div>
+
+            <ng-template #wrongAnswer>
+                <form class="incorrect-answer" (ngSubmit)="finishCurrentExercise()">
+                    <mat-form-field appearance="outline" cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
+                        <mat-label>不正解</mat-label>
+                        <input matInput type="text" readonly [value]="givenAnswer">
+                        <button mat-icon-button matSuffix type="submit">
+                            <mat-icon>close</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </form>
+            </ng-template>
+        </div>
     </div>
 </div>
 

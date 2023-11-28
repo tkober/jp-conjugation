@@ -14,20 +14,30 @@
     padding-left: 1rem;
     padding-right: 1rem;
 
+    .english {
+        font-size: small;
+    }
+
+    .conjugation-form-title {
+        font-weight: bold;
+    }
+
+    .interaction {
+        position: fixed;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+
+    .correction {
+        color: #c62828;
+    }
+
     .mat-form-field {
         width: 100%;
         max-width: 500px;
-    }
-
-    .furigana-debug {
-        position: fixed;
-        right: 0px;
-        bottom: 0px;
-        background-color: deeppink;
-        text-align: left;
-        min-width: 200px;
-        font-size: medium;
-        padding: 1rem;
     }
 
     .correct-answer {
@@ -59,11 +69,6 @@
 
         .mat-form-field-outline-thick {
             color: #c62828 !important;
-        }
-
-        .solution-label {
-            margin-right: 1rem;
-            font-weight: bold;
         }
     }
 }
