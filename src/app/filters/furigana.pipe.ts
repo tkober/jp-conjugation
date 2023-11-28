@@ -1,13 +1,14 @@
 import {Pipe, PipeTransform} from '@angular/core';
 import {Vocabulary} from "../services/practice.service";
 import * as wanakana from 'wanakana';
+import {Word} from "../conjugation/conjugation";
 
 @Pipe({
     name: 'furigana'
 })
 export class FuriganaPipe implements PipeTransform {
 
-    transform(vocabulary: Vocabulary): string {
+    transform(vocabulary: Vocabulary | Word): string {
         let kanji = vocabulary.kanji
         let hiragana = wanakana.toHiragana(vocabulary.furigana)
 

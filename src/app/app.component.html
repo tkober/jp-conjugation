@@ -17,9 +17,9 @@
         <div>{{ currentExercise.vocabulary.furigana }}</div>
     </div>
 
-    <div *ngIf="!isAnswered; else answered">
-        <form [formGroup]="formGroup">
-            <mat-form-field appearance="outline" hideRequiredMarker>
+    <div [hidden]="isAnswered">
+        <form [formGroup]="formGroup" (ngSubmit)="checkAnswer()">
+            <mat-form-field appearance="outline" color="" hideRequiredMarker cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
                 <mat-label>答え</mat-label>
                 <input
                     #answerInput
@@ -27,12 +27,10 @@
                     type="text"
                     [formControl]="answerFormControl"
                 >
-                <button mat-icon-button matSuffix color="primary" [disabled]="formGroup.invalid" (click)="checkAnswer()">
+                <button mat-icon-button matSuffix color="accent" [disabled]="formGroup.invalid" type="submit">
                     <mat-icon>send</mat-icon>
                 </button>
-                <mat-error *ngIf="answerFormControl.hasError('required'); else invalidAnswerError">
-                    Please provide an answer
-                </mat-error>
+                <mat-error *ngIf="answerFormControl.hasError('required'); else invalidAnswerError"></mat-error>
                 <ng-template #invalidAnswerError>
                     <mat-error *ngIf="answerFormControl.hasError('invalidAnswer')">
                         {{ answerFormControl.getError('invalidAnswer').message }}
@@ -42,13 +40,13 @@
         </form>
     </div>
 
-    <ng-template #answered>
+    <div *ngIf="isAnswered">
         <div *ngIf="isAnswerCorrect; else wrongAnswer">
-            <form class="correct-answer">
-                <mat-form-field appearance="outline" cdkFocusInitial>
-                    <mat-label>Answer Correct</mat-label>
+            <form class="correct-answer" (ngSubmit)="finishCurrentExercise()">
+                <mat-form-field appearance="outline" cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
+                    <mat-label>正しい</mat-label>
                     <input matInput type="text" readonly [value]="givenAnswer">
-                    <button mat-icon-button matSuffix (click)="finishCurrentExercise()">
+                    <button mat-icon-button matSuffix type="submit">
                         <mat-icon>done</mat-icon>
                     </button>
                 </mat-form-field>
@@ -56,17 +54,25 @@
         </div>
 
         <ng-template #wrongAnswer>
-            <form class="incorrect-answer">
-                <mat-form-field appearance="outline" cdkFocusInitial>
-                    <mat-label>Answer Incorrect</mat-label>
+            <form class="incorrect-answer" (ngSubmit)="finishCurrentExercise()">
+                <mat-form-field appearance="outline" cdkTrapFocus [cdkTrapFocusAutoCapture]="true">
+                    <mat-label>不正解</mat-label>
                     <input matInput type="text" readonly [value]="givenAnswer">
-                    <button mat-icon-button matSuffix (click)="finishCurrentExercise()">
+                    <button mat-icon-button matSuffix type="submit">
                         <mat-icon>close</mat-icon>
                     </button>
-                    <mat-hint>{{ solution.furigana }}</mat-hint>
+                    <mat-hint>
+                        <mat-label class="solution-label">正しい:</mat-label>
+                        <span>
+                            <ruby>{{ solution | dropKana }}
+                                <rt>{{solution | furigana}}</rt>
+                                {{ solution | dropKanji }}
+                            </ruby>
+                        </span>
+                    </mat-hint>
                 </mat-form-field>
             </form>
         </ng-template>
-    </ng-template>
+    </div>
 </div>
 

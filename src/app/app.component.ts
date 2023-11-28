@@ -39,6 +39,10 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
 
     checkAnswer() {
+        if (!this.formGroup.valid) {
+            return;
+        }
+
         this.isAnswered = true;
 
         this.givenAnswer = wanakana.toHiragana(this.answerInput.nativeElement.value);
@@ -78,6 +82,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     private nextExercise() {
         this.isAnswered = false;
         this.answerFormControl.setValue('');
+
         this.currentExercise = this.practiceService.nextExercise();
     }
 }

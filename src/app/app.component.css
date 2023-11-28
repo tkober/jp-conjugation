@@ -11,9 +11,12 @@
     font-size: 150%;
     padding-top: 100px;
     text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
 
     .mat-form-field {
         width: 100%;
+        max-width: 500px;
     }
 
     .furigana-debug {
@@ -27,19 +30,40 @@
         padding: 1rem;
     }
 
+    .correct-answer {
+
+        .mat-form-field,
+        .mat-hint {
+            color: forestgreen;
+        }
+
+        .mat-form-field-label {
+            color: forestgreen;
+        }
+
+        .mat-form-field-outline-thick {
+            color: forestgreen !important;
+        }
+    }
+
     .incorrect-answer {
 
         .mat-form-field,
         .mat-hint {
-            color: orange;
+            color: #c62828;
         }
 
         .mat-form-field-label {
-            color: orange;
+            color: #c62828;
         }
 
         .mat-form-field-outline-thick {
-            color: orange !important;
+            color: #c62828 !important;
+        }
+
+        .solution-label {
+            margin-right: 1rem;
+            font-weight: bold;
         }
     }
 }
