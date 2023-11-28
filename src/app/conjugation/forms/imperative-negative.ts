@@ -21,4 +21,8 @@ export class ImperativeNegative implements Conjugation {
         return "Imperative, negative"
     }
 
+    getSettingsTitle(): string {
+        return "Negative"
+    }
+
 }

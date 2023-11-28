@@ -11,4 +11,8 @@ export class TeFormNegative implements Conjugation {
         return "Te-Form, negative"
     }
 
+    getSettingsTitle(): string {
+        return "Negative"
+    }
+
 }

@@ -18,4 +18,8 @@ export class CausativePassiveAffirmative implements Conjugation {
         return "Causative-Passive, affirmative"
     }
 
+    getSettingsTitle(): string {
+        return "Affirmative"
+    }
+
 }

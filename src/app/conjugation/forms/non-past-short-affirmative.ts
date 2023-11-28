@@ -38,4 +38,8 @@ export class NonPastShortAffirmative implements Conjugation {
         return "Non-past, short, affirmative"
     }
 
+    getSettingsTitle(): string {
+        return "Short, affirmative"
+    }
+
 }

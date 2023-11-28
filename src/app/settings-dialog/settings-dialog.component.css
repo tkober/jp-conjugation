@@ -1,0 +1,37 @@
+.settings-dialog {
+
+    .conjugation-group {
+        .group-title {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .conjugation-item-toggle {
+            width: 50%;
+            font-size: small;
+        }
+    }
+
+    .vocabulary {
+
+        .jlpt-title {
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .jlpt-level {}
+    }
+
+    .mat-slide-toggle {
+        padding-bottom: .5rem;
+    }
+}
+
+::ng-deep .mat-dialog-container {
+    width: 600px;
+    padding: 15px !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

@@ -15,7 +15,11 @@ export class CausativePassiveNegative implements Conjugation {
     }
 
     getTitle(): string {
-        return "Causative-Passive, affirmative"
+        return "Causative-Passive, negative"
+    }
+
+    getSettingsTitle(): string {
+        return "Negative"
     }
 
 }

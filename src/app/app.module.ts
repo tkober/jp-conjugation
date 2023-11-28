@@ -12,13 +12,20 @@ import { DropKanaPipe } from './filters/drop-kana.pipe';
 import { DropKanjiPipe } from './filters/drop-kanji.pipe';
 import {MatCardModule} from "@angular/material/card";
 import {A11yModule} from "@angular/cdk/a11y";
+import { SettingsDialogComponent } from './settings-dialog/settings-dialog.component';
+import {MatDialogModule} from "@angular/material/dialog";
+import {MatTabsModule} from "@angular/material/tabs";
+import {MatExpansionModule} from "@angular/material/expansion";
+import {MatSidenavModule} from "@angular/material/sidenav";
+import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 
 @NgModule({
   declarations: [
     AppComponent,
     FuriganaPipe,
     DropKanaPipe,
-    DropKanjiPipe
+    DropKanjiPipe,
+    SettingsDialogComponent
   ],
     imports: [
         BrowserModule,
@@ -29,7 +36,12 @@ import {A11yModule} from "@angular/cdk/a11y";
         MatButtonModule,
         MatIconModule,
         MatCardModule,
-        A11yModule
+        A11yModule,
+        MatDialogModule,
+        MatTabsModule,
+        MatExpansionModule,
+        MatSidenavModule,
+        MatSlideToggleModule
     ],
   providers: [],
   bootstrap: [AppComponent]

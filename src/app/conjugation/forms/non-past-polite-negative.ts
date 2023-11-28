@@ -38,4 +38,8 @@ export class NonPastPoliteNegative implements Conjugation {
         return "Non-past, polite, negative"
     }
 
+    getSettingsTitle(): string {
+        return "Polite, negative"
+    }
+
 }

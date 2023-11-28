@@ -21,6 +21,12 @@
         </div>
     </div>
 
+    <div class="settings-button">
+        <button mat-icon-button matSuffix color="accent" (click)="openSettings()">
+            <mat-icon>settings</mat-icon>
+        </button>
+    </div>
+
     <div class="interaction">
         <div [hidden]="isAnswered">
             <form [formGroup]="formGroup" (ngSubmit)="checkAnswer()">
@@ -72,4 +78,3 @@
         </div>
     </div>
 </div>
-

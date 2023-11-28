@@ -34,4 +34,8 @@ export class ImperativeAffirmative implements Conjugation {
         return "Imperative, affirmative"
     }
 
+    getSettingsTitle(): string {
+        return "Affirmative"
+    }
+
 }

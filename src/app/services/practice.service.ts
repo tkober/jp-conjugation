@@ -59,77 +59,113 @@ export class Exercise {
     }
 }
 
+export const LocalStorageKey_ExcludedConjugations = 'EXCLUDED_CONJUGATIONS'
+export const LocalStorageKey_ExcludedJpltLevels = 'EXCLUDED_JLPT_LEVELS'
+
+export const Adjectives__NonPastShortAffirmative = 'Adjectives__NonPastShortAffirmative';
+export const Adjectives__NonPastShortNegative = 'Adjectives__NonPastShortNegative';
+export const Adjectives__NonPastPoliteAffirmative = 'Adjectives__NonPastPoliteAffirmative';
+export const Adjectives__NonPastPoliteNegative = 'Adjectives__NonPastPoliteNegative';
+export const Adjectives__PastShortAffirmative = 'Adjectives__PastShortAffirmative';
+export const Adjectives__PastShortNegative = 'Adjectives__PastShortNegative';
+export const Adjectives__PastPoliteAffirmative = 'Adjectives__PastPoliteAffirmative';
+export const Adjectives__PastPoliteNegative = 'Adjectives__PastPoliteNegative';
+export const Verbs__NonPastShortAffirmative = 'Verbs__NonPastShortAffirmative';
+export const Verbs__NonPastShortNegative = 'Verbs__NonPastShortNegative';
+export const Verbs__NonPastPoliteNegative = 'Verbs__NonPastPoliteNegative';
+export const Verbs__NonPastPoliteAffirmative = 'Verbs__NonPastPoliteAffirmative';
+export const Verbs__PastShortAffirmative = 'Verbs__PastShortAffirmative';
+export const Verbs__PastShortNegative = 'Verbs__PastShortNegative';
+export const Verbs__PastPoliteAffirmative = 'Verbs__PastPoliteAffirmative';
+export const Verbs__PastPoliteNegative = 'Verbs__PastPoliteNegative';
+export const Verbs__TeFormAffirmative = 'Verbs__TeFormAffirmative';
+export const Verbs__TeFormNegative = 'Verbs__TeFormNegative';
+export const Verbs__PotentialAffirmative = 'Verbs__PotentialAffirmative';
+export const Verbs__PotentialNegative = 'Verbs__PotentialNegative';
+export const Verbs__PassiveAffirmative = 'Verbs__PassiveAffirmative';
+export const Verbs__PassiveNegative = 'Verbs__PassiveNegative';
+export const Verbs__CausativeAffirmative = 'Verbs__CausativeAffirmative';
+export const Verbs__CausativeNegative = 'Verbs__CausativeNegative';
+export const Verbs__CausativePassiveAffirmative = 'Verbs__CausativePassiveAffirmative';
+export const Verbs__CausativePassiveNegative = 'Verbs__CausativePassiveNegative';
+export const Verbs__ImperativeAffirmative = 'Verbs__ImperativeAffirmative';
+export const Verbs__ImperativeNegative = 'Verbs__ImperativeNegative';
+
+
 @Injectable({
     providedIn: 'root'
 })
 export class PracticeService {
 
-    private adjectiveForms: any = {
+    public adjectiveForms: any = {
         // Non-past
-        'Adjectives__NonPastShortAffirmative': new NonPastShortAffirmative(),
-        'Adjectives__NonPastShortNegative': new NonPastShortNegative(),
-        'Adjectives__NonPastPoliteAffirmative': new NonPastPoliteAffirmative(),
-        'Adjectives__NonPastPoliteNegative': new NonPastPoliteNegative(),
+        Adjectives__NonPastShortAffirmative: new NonPastShortAffirmative(),
+        Adjectives__NonPastShortNegative: new NonPastShortNegative(),
+        Adjectives__NonPastPoliteAffirmative: new NonPastPoliteAffirmative(),
+        Adjectives__NonPastPoliteNegative: new NonPastPoliteNegative(),
 
         // Past
-        'Adjectives__PastShortAffirmative': new PastShortAffirmative(),
-        'Adjectives__PastShortNegative': new PastShortNegative(),
-        'Adjectives__PastPoliteAffirmative': new PastPoliteAffirmative(),
-        'Adjectives__PastPoliteNegative': new PastPoliteNegative(),
+        Adjectives__PastShortAffirmative: new PastShortAffirmative(),
+        Adjectives__PastShortNegative: new PastShortNegative(),
+        Adjectives__PastPoliteAffirmative: new PastPoliteAffirmative(),
+        Adjectives__PastPoliteNegative: new PastPoliteNegative(),
     }
 
-    private verbForms: any = {
+    public verbForms: any = {
         // Non-past
-        'Verbs__NonPastShortAffirmative': new NonPastShortAffirmative(),
-        'Verbs__NonPastShortNegative': new NonPastShortNegative(),
-        'Verbs__NonPastPoliteNegative': new NonPastPoliteNegative(),
-        'Verbs__NonPastPoliteAffirmative': new NonPastPoliteAffirmative(),
+        Verbs__NonPastShortAffirmative: new NonPastShortAffirmative(),
+        Verbs__NonPastShortNegative: new NonPastShortNegative(),
+        Verbs__NonPastPoliteNegative: new NonPastPoliteNegative(),
+        Verbs__NonPastPoliteAffirmative: new NonPastPoliteAffirmative(),
 
         // Past
-        'Verbs__PastShortAffirmative': new PastShortAffirmative(),
-        'Verbs__PastShortNegative': new PastShortNegative(),
-        'Verbs__PastPoliteAffirmative': new PastPoliteAffirmative(),
-        'Verbs__PastPoliteNegative': new PastPoliteNegative(),
+        Verbs__PastShortAffirmative: new PastShortAffirmative(),
+        Verbs__PastShortNegative: new PastShortNegative(),
+        Verbs__PastPoliteAffirmative: new PastPoliteAffirmative(),
+        Verbs__PastPoliteNegative: new PastPoliteNegative(),
 
         // Te-Form
-        'Verbs__TeFormAffirmative': new TeFormAffirmative(),
-        'Verbs__TeFormNegative': new TeFormNegative(),
+        Verbs__TeFormAffirmative: new TeFormAffirmative(),
+        Verbs__TeFormNegative: new TeFormNegative(),
 
         // Potential
-        'Verbs__PotentialAffirmative': new PotentialAffirmative(),
-        'Verbs__PotentialNegative': new PotentialNegative(),
+        Verbs__PotentialAffirmative: new PotentialAffirmative(),
+        Verbs__PotentialNegative: new PotentialNegative(),
 
         // Passive
-        'Verbs__PassiveAffirmative': new PassiveAffirmative(),
-        'Verbs__PassiveNegative': new PassiveNegative(),
+        Verbs__PassiveAffirmative: new PassiveAffirmative(),
+        Verbs__PassiveNegative: new PassiveNegative(),
 
         // Causative
-        'Verbs__CausativeAffirmative': new CausativeAffirmative(),
-        'Verbs__CausativeNegative': new CausativeNegative(),
+        Verbs__CausativeAffirmative: new CausativeAffirmative(),
+        Verbs__CausativeNegative: new CausativeNegative(),
 
         // Causative Passive
-        'Verbs__CausativePassiveAffirmative': new CausativePassiveAffirmative(),
-        'Verbs__CausativePassiveNegative': new CausativePassiveNegative(),
+        Verbs__CausativePassiveAffirmative: new CausativePassiveAffirmative(),
+        Verbs__CausativePassiveNegative: new CausativePassiveNegative(),
 
         // Imperative
-        'Verbs__ImperativeAffirmative': new ImperativeAffirmative(),
-        'Verbs__ImperativeNegative': new ImperativeNegative()
+        Verbs__ImperativeAffirmative: new ImperativeAffirmative(),
+        Verbs__ImperativeNegative: new ImperativeNegative()
     }
+
 
     private practiceItems: PracticeItem[];
     private vocabulary: any;
+    private excludedForms: string[]
+    private excludedJlptLevels: string[]
 
     constructor() {
         this.initialize()
     }
 
     public initialize() {
-        const excludedForms: string[] = []; // TODO: Load from local storage
-        const excludedJlptLevels: string[] = ['n4', 'n3', 'n2', 'n1', ]; // TODO: Load from local storage
+        this.excludedForms = this.loadFromLocalStorage(LocalStorageKey_ExcludedConjugations, [])
+        this.excludedJlptLevels = this.loadFromLocalStorage(LocalStorageKey_ExcludedJpltLevels, [])
 
         // Filter out disabled forms
-        const selectedAdjectiveForms = Object.keys(this.adjectiveForms).filter((key) => excludedForms.indexOf(key) === -1 );
-        const selectedVerbForms = Object.keys(this.verbForms).filter((key) => excludedForms.indexOf(key) === -1 );
+        const selectedAdjectiveForms = Object.keys(this.adjectiveForms).filter((key) => this.excludedForms.indexOf(key) === -1);
+        const selectedVerbForms = Object.keys(this.verbForms).filter((key) => this.excludedForms.indexOf(key) === -1);
 
         // Build Practice Items
         const practiceItems: PracticeItem[] = []
@@ -155,12 +191,12 @@ export class PracticeService {
 
         // Build vocabulary build on selected levels
         this.vocabulary = {
-            'ichidan_verb': jisho.ichidan_verb.filter((word) => excludedJlptLevels.indexOf(word.jlpt) === -1 ),
-            'godan_verb': jisho.godan_verb.filter((word) => excludedJlptLevels.indexOf(word.jlpt) === -1 ),
-            'suru_verb': jisho.suru_verb.filter((word) => excludedJlptLevels.indexOf(word.jlpt) === -1 ),
-            'kuru_verb': jisho.kuru_verb.filter((word) => excludedJlptLevels.indexOf(word.jlpt) === -1 ),
-            'i_adjective': jisho.i_adjective.filter((word) => excludedJlptLevels.indexOf(word.jlpt) === -1 ),
-            'na_adjective': jisho.na_adjective.filter((word) => excludedJlptLevels.indexOf(word.jlpt) === -1 ),
+            'ichidan_verb': jisho.ichidan_verb.filter((word) => this.excludedJlptLevels.indexOf(word.jlpt) === -1),
+            'godan_verb': jisho.godan_verb.filter((word) => this.excludedJlptLevels.indexOf(word.jlpt) === -1),
+            'suru_verb': jisho.suru_verb.filter((word) => this.excludedJlptLevels.indexOf(word.jlpt) === -1),
+            'kuru_verb': jisho.kuru_verb.filter((word) => this.excludedJlptLevels.indexOf(word.jlpt) === -1),
+            'i_adjective': jisho.i_adjective.filter((word) => this.excludedJlptLevels.indexOf(word.jlpt) === -1),
+            'na_adjective': jisho.na_adjective.filter((word) => this.excludedJlptLevels.indexOf(word.jlpt) === -1),
         }
     }
 
@@ -195,5 +231,21 @@ export class PracticeService {
 
     private drawRandom(items: any[]): any {
         return items[Math.floor(Math.random() * items.length)];
+    }
+
+    private loadFromLocalStorage(key: string, fallback: any): any {
+        const stored = localStorage.getItem(key)
+        if (stored) {
+            return JSON.parse(stored)
+        }
+        return fallback
+    }
+
+    getExcludedForms(): string[] {
+        return this.excludedForms;
+    }
+
+    getExcludedJlptLevels(): string[] {
+        return this.excludedJlptLevels;
     }
 }

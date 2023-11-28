@@ -58,4 +58,5 @@ export interface Conjugation {
 
     getTitle(): string
 
+    getSettingsTitle(): string;
 }

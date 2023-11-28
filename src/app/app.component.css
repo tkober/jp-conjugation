@@ -31,6 +31,14 @@
         padding-right: 1rem;
     }
 
+    .settings-button {
+        position: fixed;
+        right: 0px;
+        top: 0px;
+        padding-top: 1rem;
+        padding-right: 1rem;
+    }
+
     .correction {
         color: #c62828;
     }

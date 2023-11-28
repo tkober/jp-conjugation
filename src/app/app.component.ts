@@ -3,6 +3,8 @@ import * as wanakana from 'wanakana';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Exercise, PracticeService, Vocabulary} from "./services/practice.service";
 import {Word} from "./conjugation/conjugation";
+import {MatDialog} from "@angular/material/dialog";
+import {SettingsDialogComponent} from "./settings-dialog/settings-dialog.component";
 
 
 @Component({
@@ -27,7 +29,7 @@ export class AppComponent implements OnInit, AfterViewInit {
     public givenAnswer: string;
     public solution: Word;
 
-    constructor(private practiceService: PracticeService) {
+    constructor(private practiceService: PracticeService, private dialog: MatDialog) {
     }
 
     ngOnInit() {
@@ -65,6 +67,14 @@ export class AppComponent implements OnInit, AfterViewInit {
 
     finishCurrentExercise() {
         this.nextExercise()
+    }
+
+    openSettings() {
+        const dialogRef = this.dialog.open(SettingsDialogComponent, {panelClass: 'settings-dialog-pane'})
+        dialogRef.afterClosed().subscribe(value => {
+            this.practiceService.initialize();
+            this.nextExercise();
+        })
     }
 
     private static isHiragana(formControl: FormControl) {

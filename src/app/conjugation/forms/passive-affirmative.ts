@@ -33,4 +33,8 @@ export class PassiveAffirmative implements Conjugation {
         return "Passive, affirmative"
     }
 
+    getSettingsTitle(): string {
+        return "Affirmative"
+    }
+
 }

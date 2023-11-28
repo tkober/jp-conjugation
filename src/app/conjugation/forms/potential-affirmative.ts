@@ -30,4 +30,8 @@ export class PotentialAffirmative implements Conjugation {
         return "Potential, affirmative"
     }
 
+    getSettingsTitle(): string {
+        return "Affirmative"
+    }
+
 }

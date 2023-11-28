@@ -18,4 +18,8 @@ export class CausativeNegative implements Conjugation {
         return "Causative, negative"
     }
 
+    getSettingsTitle(): string {
+        return "Negative"
+    }
+
 }

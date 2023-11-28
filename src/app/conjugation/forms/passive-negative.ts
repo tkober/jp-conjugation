@@ -19,4 +19,8 @@ export class PassiveNegative implements Conjugation {
         return "Passive, negative"
     }
 
+    getSettingsTitle(): string {
+        return "Negative"
+    }
+
 }

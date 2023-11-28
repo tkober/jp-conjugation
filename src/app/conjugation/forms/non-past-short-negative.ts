@@ -41,4 +41,8 @@ export class NonPastShortNegative implements Conjugation {
         return "Non-past, short, negative"
     }
 
+    getSettingsTitle(): string {
+        return "Short, negative"
+    }
+
 }

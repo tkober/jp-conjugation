@@ -18,4 +18,8 @@ export class PotentialNegative implements Conjugation {
         return "Potential, negative"
     }
 
+    getSettingsTitle(): string {
+        return "Negative"
+    }
+
 }

@@ -41,4 +41,8 @@ export class NonPastPoliteAffirmative implements Conjugation {
         return "Non-past, polite, affirmative"
     }
 
+    getSettingsTitle(): string {
+        return "Polite, affirmative"
+    }
+
 }
