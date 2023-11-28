@@ -11,4 +11,35 @@
     font-size: 150%;
     padding-top: 100px;
     text-align: center;
+
+    .mat-form-field {
+        width: 100%;
+    }
+
+    .furigana-debug {
+        position: fixed;
+        right: 0px;
+        bottom: 0px;
+        background-color: deeppink;
+        text-align: left;
+        min-width: 200px;
+        font-size: medium;
+        padding: 1rem;
+    }
+
+    .incorrect-answer {
+
+        .mat-form-field,
+        .mat-hint {
+            color: orange;
+        }
+
+        .mat-form-field-label {
+            color: orange;
+        }
+
+        .mat-form-field-outline-thick {
+            color: orange !important;
+        }
+    }
 }

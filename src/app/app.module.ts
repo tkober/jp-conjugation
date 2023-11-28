@@ -10,6 +10,7 @@ import {MatIconModule} from "@angular/material/icon";
 import { FuriganaPipe } from './filters/furigana.pipe';
 import { DropKanaPipe } from './filters/drop-kana.pipe';
 import { DropKanjiPipe } from './filters/drop-kanji.pipe';
+import {MatCardModule} from "@angular/material/card";
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { DropKanjiPipe } from './filters/drop-kanji.pipe';
         FormsModule,
         ReactiveFormsModule,
         MatButtonModule,
-        MatIconModule
+        MatIconModule,
+        MatCardModule
     ],
   providers: [],
   bootstrap: [AppComponent]

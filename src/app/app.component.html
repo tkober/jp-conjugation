@@ -7,15 +7,19 @@
                 {{ currentExercise.vocabulary | dropKanji }}
             </ruby>
         </h2>
-        <p>{{ currentExercise.vocabulary.kanji }}</p>
-        <p>{{ currentExercise.vocabulary.furigana }}</p>
         <p>{{ currentExercise.vocabulary.english }}</p>
         <h6>{{ currentExercise.practiceItem.conjugation.getTitle() }}</h6>
     </div>
 
-    <div>
+    <div *ngIf="currentExercise" class="furigana-debug">
+        <div><b>Furigana Debug:</b></div>
+        <div>{{ currentExercise.vocabulary.kanji }}</div>
+        <div>{{ currentExercise.vocabulary.furigana }}</div>
+    </div>
+
+    <div *ngIf="!isAnswered; else answered">
         <form [formGroup]="formGroup">
-            <mat-form-field hideRequiredMarker>
+            <mat-form-field appearance="outline" hideRequiredMarker>
                 <mat-label>答え</mat-label>
                 <input
                     #answerInput
@@ -23,6 +27,9 @@
                     type="text"
                     [formControl]="answerFormControl"
                 >
+                <button mat-icon-button matSuffix color="primary" [disabled]="formGroup.invalid" (click)="checkAnswer()">
+                    <mat-icon>send</mat-icon>
+                </button>
                 <mat-error *ngIf="answerFormControl.hasError('required'); else invalidAnswerError">
                     Please provide an answer
                 </mat-error>
@@ -32,10 +39,34 @@
                     </mat-error>
                 </ng-template>
             </mat-form-field>
-            <button mat-icon-button color="primary" [disabled]="formGroup.invalid" (click)="checkAnswer()">
-                <mat-icon>send</mat-icon>
-            </button>
         </form>
     </div>
+
+    <ng-template #answered>
+        <div *ngIf="isAnswerCorrect; else wrongAnswer">
+            <form class="correct-answer">
+                <mat-form-field appearance="outline" cdkFocusInitial>
+                    <mat-label>Answer Correct</mat-label>
+                    <input matInput type="text" readonly [value]="givenAnswer">
+                    <button mat-icon-button matSuffix (click)="finishCurrentExercise()">
+                        <mat-icon>done</mat-icon>
+                    </button>
+                </mat-form-field>
+            </form>
+        </div>
+
+        <ng-template #wrongAnswer>
+            <form class="incorrect-answer">
+                <mat-form-field appearance="outline" cdkFocusInitial>
+                    <mat-label>Answer Incorrect</mat-label>
+                    <input matInput type="text" readonly [value]="givenAnswer">
+                    <button mat-icon-button matSuffix (click)="finishCurrentExercise()">
+                        <mat-icon>close</mat-icon>
+                    </button>
+                    <mat-hint>{{ solution.furigana }}</mat-hint>
+                </mat-form-field>
+            </form>
+        </ng-template>
+    </ng-template>
 </div>
 

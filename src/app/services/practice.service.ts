@@ -125,7 +125,7 @@ export class PracticeService {
 
     public initialize() {
         const excludedForms: string[] = []; // TODO: Load from local storage
-        const excludedJlptLevels: string[] = []; // TODO: Load from local storage
+        const excludedJlptLevels: string[] = ['n4', 'n3', 'n2', 'n1', ]; // TODO: Load from local storage
 
         // Filter out disabled forms
         const selectedAdjectiveForms = Object.keys(this.adjectiveForms).filter((key) => excludedForms.indexOf(key) === -1 );
@@ -170,10 +170,17 @@ export class PracticeService {
         let word = this.drawRandom(this.vocabulary[practiceItem.wordType.valueOf()])
 
         // word = {
-        //     "kanji": "けち",
-        //     "furigana": "ケチ",
-        //     "english": "stinginess; miserliness; penny-pinching; miser; pinchpenny; skinflint; cheapskate; tightwad; niggard",
-        //     "jlpt": "n3"
+        //     "kanji": "下手-2",
+        //     "furigana": "へた",
+        //     "english": "unskillful; poor; awkward",
+        //     "jlpt": "n5"
+        // }
+
+        // word = {
+        //     "kanji": "コピーする",
+        //     "furigana": "コピーする",
+        //     "english": "copy; photocopy",
+        //     "jlpt": "n5"
         // }
 
         return new Exercise(practiceItem, word)
