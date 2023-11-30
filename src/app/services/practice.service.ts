@@ -212,12 +212,12 @@ export class PracticeService {
         //     "jlpt": "n5"
         // }
 
-        // word = {
-        //     "kanji": "コピーする",
-        //     "furigana": "コピーする",
-        //     "english": "copy; photocopy",
-        //     "jlpt": "n5"
-        // }
+        word = {
+            "kanji": "コピーする",
+            "furigana": "コピーする",
+            "english": "copy; photocopy",
+            "jlpt": "n5"
+        }
 
         return new Exercise(practiceItem, word)
 

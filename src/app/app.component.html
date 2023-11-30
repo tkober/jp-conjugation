@@ -2,7 +2,7 @@
     <div *ngIf="currentExercise">
         <h2>
             <ruby>
-                {{ currentExercise.vocabulary | dropKana }}
+                {{ currentExercise.vocabulary | dropTrailingHiragana }}
                 <rt>{{currentExercise.vocabulary | furigana}}</rt>
                 {{ currentExercise.vocabulary | dropKanji }}
             </ruby>
@@ -13,7 +13,7 @@
         <div *ngIf="isAnswered && !isAnswerCorrect" class="correction">
             <span>正しい:</span>
             <h3>
-                <ruby>{{ solution | dropKana }}
+                <ruby>{{ solution | dropTrailingHiragana }}
                     <rt>{{solution | furigana}}</rt>
                     {{ solution | dropKanji }}
                 </ruby>

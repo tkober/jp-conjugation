@@ -8,7 +8,7 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatButtonModule} from "@angular/material/button";
 import {MatIconModule} from "@angular/material/icon";
 import { FuriganaPipe } from './filters/furigana.pipe';
-import { DropKanaPipe } from './filters/drop-kana.pipe';
+import { DropTrailingHiraganaPipe } from './filters/drop-trailing-hiragana.pipe';
 import { DropKanjiPipe } from './filters/drop-kanji.pipe';
 import {MatCardModule} from "@angular/material/card";
 import {A11yModule} from "@angular/cdk/a11y";
@@ -23,7 +23,7 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
   declarations: [
     AppComponent,
     FuriganaPipe,
-    DropKanaPipe,
+    DropTrailingHiraganaPipe,
     DropKanjiPipe,
     SettingsDialogComponent
   ],
