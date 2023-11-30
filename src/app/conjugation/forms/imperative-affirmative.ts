@@ -13,7 +13,7 @@ export class ImperativeAffirmative implements Conjugation {
             case WordType.IchidanVerb:
                 // Exception: 呉れる
                 if (word.kanji === '呉れる') {
-                    return new Word('呉れ', 'くれ', word.wordType);
+                    return word.replace('呉れ', 'くれ');
                 }
 
                 return word.replaceLastKana('ろ')
@@ -22,7 +22,7 @@ export class ImperativeAffirmative implements Conjugation {
                 return word.replaceLastKana('しろ', 2);
 
             case WordType.KuruVerb:
-                return new Word('来い', 'こい', word.wordType);
+                return word.replace('来い', 'こい');
 
 
             default:

@@ -21,7 +21,7 @@ export class NonPastShortAffirmative implements Conjugation {
             // Adjectives
             case WordType.IAdjective:
                 if (word.kanji === '良い') {
-                    return new Word(word.kanji, 'いい', word.wordType);
+                    return word.replace(word.kanji, 'いい');
                 }
                 return word;
 

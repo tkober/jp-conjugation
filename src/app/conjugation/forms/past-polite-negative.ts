@@ -17,7 +17,7 @@ export class PastPoliteNegative implements Conjugation {
                 return word.replaceLastKana('しませんでした', 2);
 
             case WordType.KuruVerb:
-                return new Word('来ませんでした', 'きませんでした', word.wordType);
+                return word.replace('来ませんでした', 'きませんでした');
 
 
             // Adjectives

@@ -17,7 +17,7 @@ export class NonPastPoliteNegative implements Conjugation {
                 return word.replaceLastKana('しません', 2);
 
             case WordType.KuruVerb:
-                return new Word('来ません', 'きません', word.wordType);
+                return word.replace('来ません', 'きません');
 
 
 

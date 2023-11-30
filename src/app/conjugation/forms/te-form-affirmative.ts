@@ -11,7 +11,7 @@ export class TeFormAffirmative implements Conjugation {
 
                 //　行く
                 if (word.kanji === '行く') {
-                    return new Word('行って', 'いって', word.wordType)
+                    return word.replace('行って', 'いって')
                 }
 
                 //　う、つ、る　ー＞　って
@@ -48,7 +48,7 @@ export class TeFormAffirmative implements Conjugation {
                 return word.replaceLastKana('して', 2);
 
             case WordType.KuruVerb:
-                return new Word('来て', 'きて', word.wordType);
+                return word.replace('来て', 'きて');
 
 
             default:

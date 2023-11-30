@@ -21,7 +21,7 @@ export class CausativeAffirmative implements Conjugation {
                 return word.replaceLastKana('させる', 2);
 
             case WordType.KuruVerb:
-                return new Word('来させる', 'こさせる', word.wordType);
+                return word.replace('来させる', 'こさせる');
 
 
             default:

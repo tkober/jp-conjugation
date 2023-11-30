@@ -17,7 +17,7 @@ export class PastPoliteAffirmative implements Conjugation {
                 return word.replaceLastKana('しました', 2);
 
             case WordType.KuruVerb:
-                return new Word('来ました', 'きました', word.wordType);
+                return word.replace('来ました', 'きました');
 
 
             // Adjectives

@@ -21,7 +21,7 @@ export class PassiveAffirmative implements Conjugation {
                 return word.replaceLastKana('される', 2);
 
             case WordType.KuruVerb:
-                return new Word('来られる', 'こられる', word.wordType);
+                return word.replace('来られる', 'こられる');
 
 
             default:
