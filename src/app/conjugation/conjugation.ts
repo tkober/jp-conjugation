@@ -13,38 +13,38 @@ export class Word {
         return this._kanji;
     }
 
-    get furigana(): string {
-        return this._furigana;
+    get hiragana(): string {
+        return this._hiragana;
     }
 
     get wordType(): WordType {
         return this._wordType;
     }
     private _kanji: string;
-    private _furigana: string;
+    private _hiragana: string;
     private _wordType: WordType;
 
-    constructor(kanji: string, furigana: string, wordType: WordType) {
+    constructor(kanji: string, hiragana: string, wordType: WordType) {
         this._kanji = kanji
-        this._furigana = furigana
+        this._hiragana = hiragana
         this._wordType = wordType;
     }
 
     // @ts-ignore
     addSuffix(suffix: string): Word {
         this._kanji = this._kanji + suffix;
-        this._furigana = this._furigana + suffix
+        this._hiragana = this._hiragana + suffix
         return this;
     }
 
     getLastKana(): string {
-        return this._furigana.slice(-1);
+        return this._hiragana.slice(-1);
     }
 
     // @ts-ignore
     replaceLastKana(replacement: string, n: number = 1): Word {
         this._kanji = this._kanji.slice(0, -n) + replacement;
-        this._furigana = this._furigana.slice(0, -n) + replacement;
+        this._hiragana = this._hiragana.slice(0, -n) + replacement;
         return this;
     }
 
@@ -55,13 +55,13 @@ export class Word {
 
     equals(anotherWord: Word): boolean {
         return this._kanji === anotherWord._kanji &&
-            this._furigana === anotherWord._furigana &&
+            this._hiragana === anotherWord._hiragana &&
             this._wordType === anotherWord._wordType;
     }
 
-    replace(kanji: string, furigana: string): Word {
+    replace(kanji: string, hiragana: string): Word {
         this._kanji = kanji;
-        this._furigana = furigana;
+        this._hiragana = hiragana;
         return this;
     }
 }

@@ -25,13 +25,13 @@ import {Conjugation, Word, WordType} from "../conjugation/conjugation";
 
 export class Vocabulary {
     public kanji: string;
-    public furigana: string; // TODO: rename to 'hiragana'
+    public hiragana: string;
     public english: string;
     public jlpt: string;
 
-    constructor(kanji: string, furigana: string, english: string, jlpt: string) {
+    constructor(kanji: string, hiragana: string, english: string, jlpt: string) {
         this.kanji = kanji;
-        this.furigana = furigana;
+        this.hiragana = hiragana;
         this.english = english;
         this.jlpt = jlpt;
     }
@@ -207,14 +207,14 @@ export class PracticeService {
 
         // word = {
         //     "kanji": "下手-2",
-        //     "furigana": "へた",
+        //     "hiragana": "へた",
         //     "english": "unskillful; poor; awkward",
         //     "jlpt": "n5"
         // }
 
         // word = {
         //     "kanji": "コピーする",
-        //     "furigana": "コピーする",
+        //     "hiragana": "コピーする",
         //     "english": "copy; photocopy",
         //     "jlpt": "n5"
         // }
@@ -223,7 +223,7 @@ export class PracticeService {
 
         // return new Exercise(practiceItem, {
         //     "kanji": "きつい",
-        //     "furigana": "きつい",
+        //     "hiragana": "きつい",
         //     "english": "tough; hard; severe; demanding; harsh",
         //     "jlpt": "n3"
         // })

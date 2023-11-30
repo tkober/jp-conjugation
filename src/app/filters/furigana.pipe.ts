@@ -15,7 +15,7 @@ export class FuriganaPipe implements PipeTransform {
         }
 
         let kanji = vocabulary.kanji
-        let hiragana = wanakana.toHiragana(vocabulary.furigana)
+        let hiragana = wanakana.toHiragana(vocabulary.hiragana)
 
         for (let i = kanji.length; i > 0; i--) {
             if (kanji.slice(-1) === hiragana.slice(-1)) {

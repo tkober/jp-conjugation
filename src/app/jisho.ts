@@ -2,2803 +2,2803 @@ export const jisho = {
     "ichidan_verb": [
         {
             "kanji": "上げる",
-            "furigana": "あげる",
+            "hiragana": "あげる",
             "english": "to raise; to elevate",
             "jlpt": "n5"
         },
         {
             "kanji": "出来る",
-            "furigana": "できる",
+            "hiragana": "できる",
             "english": "to be able (in a position) to do; to be up to the task",
             "jlpt": "n5"
         },
         {
             "kanji": "見る",
-            "furigana": "みる",
+            "hiragana": "みる",
             "english": "to see; to look; to watch; to view; to observe",
             "jlpt": "n5"
         },
         {
             "kanji": "出る",
-            "furigana": "でる",
+            "hiragana": "でる",
             "english": "to leave; to exit; to go out; to come out; to get out",
             "jlpt": "n5"
         },
         {
             "kanji": "寝る",
-            "furigana": "ねる",
+            "hiragana": "ねる",
             "english": "to sleep (lying down)",
             "jlpt": "n5"
         },
         {
             "kanji": "着る",
-            "furigana": "きる",
+            "hiragana": "きる",
             "english": "to wear (from the shoulders down); to put on",
             "jlpt": "n5"
         },
         {
             "kanji": "掛ける",
-            "furigana": "かける",
+            "hiragana": "かける",
             "english": "to hang up (e.g. a coat, a picture on the wall); to let hang; to suspend (from); to hoist (e.g. sail); to raise (e.g. flag)",
             "jlpt": "n5"
         },
         {
             "kanji": "借りる",
-            "furigana": "かりる",
+            "hiragana": "かりる",
             "english": "to borrow; to have a loan",
             "jlpt": "n5"
         },
         {
             "kanji": "降りる",
-            "furigana": "おりる",
+            "hiragana": "おりる",
             "english": "to descend (e.g. a mountain); to go down; to come down",
             "jlpt": "n5"
         },
         {
             "kanji": "勤める",
-            "furigana": "つとめる",
+            "hiragana": "つとめる",
             "english": "to work (for); to be employed (at); to serve (in)",
             "jlpt": "n5"
         },
         {
             "kanji": "浴びる",
-            "furigana": "あびる",
+            "hiragana": "あびる",
             "english": "to dash over oneself (e.g. water); to take (e.g. shower); to bask in (e.g. the sun); to bathe in; to be flooded with (e.g. light); to be covered in",
             "jlpt": "n5"
         },
         {
             "kanji": "締める",
-            "furigana": "しめる",
+            "hiragana": "しめる",
             "english": "to tie; to fasten; to tighten",
             "jlpt": "n5"
         },
         {
             "kanji": "居る",
-            "furigana": "いる",
+            "hiragana": "いる",
             "english": "to be (of animate objects); to exist",
             "jlpt": "n5"
         },
         {
             "kanji": "食べる",
-            "furigana": "たべる",
+            "hiragana": "たべる",
             "english": "to eat",
             "jlpt": "n5"
         },
         {
             "kanji": "教える",
-            "furigana": "おしえる",
+            "hiragana": "おしえる",
             "english": "to teach; to instruct",
             "jlpt": "n5"
         },
         {
             "kanji": "出掛ける",
-            "furigana": "でかける",
+            "hiragana": "でかける",
             "english": "to go out (e.g. on an excursion or outing); to leave; to depart; to start; to set out",
             "jlpt": "n5"
         },
         {
             "kanji": "起きる",
-            "furigana": "おきる",
+            "hiragana": "おきる",
             "english": "to get up; to rise; to blaze up (fire)",
             "jlpt": "n5"
         },
         {
             "kanji": "入れる",
-            "furigana": "いれる",
+            "hiragana": "いれる",
             "english": "to put in; to let in; to take in; to bring in; to insert; to install (e.g. software); to set (a jewel, etc.); to ink in (e.g. tattoo)",
             "jlpt": "n5"
         },
         {
             "kanji": "疲れる",
-            "furigana": "つかれる",
+            "hiragana": "つかれる",
             "english": "to get tired; to tire; to get fatigued; to become exhausted; to grow weary",
             "jlpt": "n5"
         },
         {
             "kanji": "開ける",
-            "furigana": "あける",
+            "hiragana": "あける",
             "english": "to open (a door, etc.); to unwrap (e.g. parcel, package); to unlock",
             "jlpt": "n5"
         },
         {
             "kanji": "見せる",
-            "furigana": "みせる",
+            "hiragana": "みせる",
             "english": "to show; to display",
             "jlpt": "n5"
         },
         {
             "kanji": "付ける",
-            "furigana": "つける",
+            "hiragana": "つける",
             "english": "to attach; to join; to connect; to add; to append; to affix; to stick; to glue; to fasten; to sew on; to apply (ointment); to put against",
             "jlpt": "n5"
         },
         {
             "kanji": "覚える",
-            "furigana": "おぼえる",
+            "hiragana": "おぼえる",
             "english": "to memorize; to memorise; to commit to memory; to learn by heart; to bear in mind; to remember",
             "jlpt": "n5"
         },
         {
             "kanji": "生まれる",
-            "furigana": "うまれる",
+            "hiragana": "うまれる",
             "english": "to be born",
             "jlpt": "n5"
         },
         {
             "kanji": "閉める",
-            "furigana": "しめる",
+            "hiragana": "しめる",
             "english": "to close; to shut",
             "jlpt": "n5"
         },
         {
             "kanji": "消える",
-            "furigana": "きえる",
+            "hiragana": "きえる",
             "english": "to disappear; to vanish; to go out of sight; to go away; to become lost",
             "jlpt": "n5"
         },
         {
             "kanji": "晴れる",
-            "furigana": "はれる",
+            "hiragana": "はれる",
             "english": "to clear up; to clear away; to be sunny; to stop raining",
             "jlpt": "n5"
         },
         {
             "kanji": "並べる",
-            "furigana": "ならべる",
+            "hiragana": "ならべる",
             "english": "to line up; to set up; to arrange in a line",
             "jlpt": "n5"
         },
         {
             "kanji": "答える",
-            "furigana": "こたえる",
+            "hiragana": "こたえる",
             "english": "to answer; to reply",
             "jlpt": "n5"
         },
         {
             "kanji": "忘れる",
-            "furigana": "わすれる",
+            "hiragana": "わすれる",
             "english": "to forget; to leave carelessly; to be forgetful of; to forget about; to forget (an article)",
             "jlpt": "n5"
         },
         {
             "kanji": "上げる",
-            "furigana": "あげる",
+            "hiragana": "あげる",
             "english": "to raise; to elevate",
             "jlpt": "n4"
         },
         {
             "kanji": "生きる",
-            "furigana": "いきる",
+            "hiragana": "いきる",
             "english": "to live; to exist",
             "jlpt": "n4"
         },
         {
             "kanji": "掛ける",
-            "furigana": "かける",
+            "hiragana": "かける",
             "english": "to hang up (e.g. a coat, a picture on the wall); to let hang; to suspend (from); to hoist (e.g. sail); to raise (e.g. flag)",
             "jlpt": "n4"
         },
         {
             "kanji": "降りる",
-            "furigana": "おりる",
+            "hiragana": "おりる",
             "english": "to descend (e.g. a mountain); to go down; to come down",
             "jlpt": "n4"
         },
         {
             "kanji": "見える",
-            "furigana": "みえる",
+            "hiragana": "みえる",
             "english": "to be seen; to be visible; to be in sight",
             "jlpt": "n4"
         },
         {
             "kanji": "考える",
-            "furigana": "かんがえる",
+            "hiragana": "かんがえる",
             "english": "to think (about, of); to think over; to ponder; to contemplate; to reflect (on); to meditate (on)",
             "jlpt": "n4"
         },
         {
             "kanji": "始める",
-            "furigana": "はじめる",
+            "hiragana": "はじめる",
             "english": "to start; to begin; to commence; to initiate; to originate",
             "jlpt": "n4"
         },
         {
             "kanji": "受ける",
-            "furigana": "うける",
+            "hiragana": "うける",
             "english": "to receive; to get",
             "jlpt": "n4"
         },
         {
             "kanji": "決める",
-            "furigana": "きめる",
+            "hiragana": "きめる",
             "english": "to decide; to choose; to determine; to make up one's mind; to resolve; to set one's heart on; to settle; to arrange; to set; to appoint; to fix",
             "jlpt": "n4"
         },
         {
             "kanji": "落ちる",
-            "furigana": "おちる",
+            "hiragana": "おちる",
             "english": "to fall; to drop; to come down; to crash; to collapse; to cave in; to give way",
             "jlpt": "n4"
         },
         {
             "kanji": "訪ねる",
-            "furigana": "たずねる",
+            "hiragana": "たずねる",
             "english": "to visit; to call on; to pay a visit to",
             "jlpt": "n4"
         },
         {
             "kanji": "逃げる",
-            "furigana": "にげる",
+            "hiragana": "にげる",
             "english": "to run away; to flee; to get away (e.g. from danger); to escape; to break out; to leave (e.g. one's spouse)",
             "jlpt": "n4"
         },
         {
             "kanji": "増える",
-            "furigana": "ふえる",
+            "hiragana": "ふえる",
             "english": "to increase; to multiply",
             "jlpt": "n4"
         },
         {
             "kanji": "迎える",
-            "furigana": "むかえる",
+            "hiragana": "むかえる",
             "english": "to go out to meet; to receive; to welcome; to greet; to salute; to hail",
             "jlpt": "n4"
         },
         {
             "kanji": "集める",
-            "furigana": "あつめる",
+            "hiragana": "あつめる",
             "english": "to collect; to assemble; to gather",
             "jlpt": "n4"
         },
         {
             "kanji": "比べる",
-            "furigana": "くらべる",
+            "hiragana": "くらべる",
             "english": "to compare; to make a comparison",
             "jlpt": "n4"
         },
         {
             "kanji": "壊れる",
-            "furigana": "こわれる",
+            "hiragana": "こわれる",
             "english": "to be broken; to break; to fall apart; to collapse; to be destroyed; to be damaged",
             "jlpt": "n4"
         },
         {
             "kanji": "倒れる",
-            "furigana": "たおれる",
+            "hiragana": "たおれる",
             "english": "to fall (over, down); to collapse; to take a fall; to topple",
             "jlpt": "n4"
         },
         {
             "kanji": "別れる",
-            "furigana": "わかれる",
+            "hiragana": "わかれる",
             "english": "to part (usu. of people); to part from; to part with; to be apart from",
             "jlpt": "n4"
         },
         {
             "kanji": "申し上げる",
-            "furigana": "もうしあげる",
+            "hiragana": "もうしあげる",
             "english": "to say; to tell; to state; to express; to offer; to extend (greetings, congratulations, etc.)",
             "jlpt": "n4"
         },
         {
             "kanji": "下げる",
-            "furigana": "さげる",
+            "hiragana": "さげる",
             "english": "to hang; to suspend; to wear (e.g. decoration)",
             "jlpt": "n4"
         },
         {
             "kanji": "乗り換える",
-            "furigana": "のりかえる",
+            "hiragana": "のりかえる",
             "english": "to transfer (trains); to change (bus, train)",
             "jlpt": "n4"
         },
         {
             "kanji": "冷える",
-            "furigana": "ひえる",
+            "hiragana": "ひえる",
             "english": "to grow cold (from room temperature, e.g. in refrigerator); to get chilly; to cool down",
             "jlpt": "n4"
         },
         {
             "kanji": "暮れる",
-            "furigana": "くれる",
+            "hiragana": "くれる",
             "english": "to get dark; to grow dark",
             "jlpt": "n4"
         },
         {
             "kanji": "漬ける",
-            "furigana": "つける",
+            "hiragana": "つける",
             "english": "to soak (in); to steep; to dip; to dunk",
             "jlpt": "n4"
         },
         {
             "kanji": "呉れる",
-            "furigana": "くれる",
+            "hiragana": "くれる",
             "english": "to give; to let (one) have",
             "jlpt": "n4"
         },
         {
             "kanji": "過ぎる",
-            "furigana": "すぎる",
+            "hiragana": "すぎる",
             "english": "to pass through; to pass by; to go beyond",
             "jlpt": "n4"
         },
         {
             "kanji": "止める",
-            "furigana": "とめる",
+            "hiragana": "とめる",
             "english": "to stop; to turn off",
             "jlpt": "n4"
         },
         {
             "kanji": "遅れる",
-            "furigana": "おくれる",
+            "hiragana": "おくれる",
             "english": "to be late; to be delayed; to fall behind schedule; to be overdue",
             "jlpt": "n4"
         },
         {
             "kanji": "続ける",
-            "furigana": "つづける",
+            "hiragana": "つづける",
             "english": "to continue; to keep up; to keep on",
             "jlpt": "n4"
         },
         {
             "kanji": "見付ける",
-            "furigana": "みつける",
+            "hiragana": "みつける",
             "english": "to discover; to find (e.g. an error in a book); to come across; to detect; to spot",
             "jlpt": "n4"
         },
         {
             "kanji": "聞こえる",
-            "furigana": "きこえる",
+            "hiragana": "きこえる",
             "english": "to be heard; to be audible; to reach one's ears",
             "jlpt": "n4"
         },
         {
             "kanji": "尋ねる",
-            "furigana": "たずねる",
+            "hiragana": "たずねる",
             "english": "to ask; to enquire; to inquire",
             "jlpt": "n4"
         },
         {
             "kanji": "慣れる",
-            "furigana": "なれる",
+            "hiragana": "なれる",
             "english": "to get used to; to grow accustomed to; to become familiar with",
             "jlpt": "n4"
         },
         {
             "kanji": "似る",
-            "furigana": "にる",
+            "hiragana": "にる",
             "english": "to resemble; to look like; to be like; to be alike; to be similar; to take after",
             "jlpt": "n4"
         },
         {
             "kanji": "調べる",
-            "furigana": "しらべる",
+            "hiragana": "しらべる",
             "english": "to examine; to look up; to investigate; to check up; to sense; to study; to inquire; to search",
             "jlpt": "n4"
         },
         {
             "kanji": "伝える",
-            "furigana": "つたえる",
+            "hiragana": "つたえる",
             "english": "to convey; to report; to transmit; to communicate; to tell; to impart; to propagate; to teach; to bequeath",
             "jlpt": "n4"
         },
         {
             "kanji": "知らせる",
-            "furigana": "しらせる",
+            "hiragana": "しらせる",
             "english": "to notify; to advise; to inform",
             "jlpt": "n4"
         },
         {
             "kanji": "負ける",
-            "furigana": "まける",
+            "hiragana": "まける",
             "english": "to lose; to be defeated",
             "jlpt": "n4"
         },
         {
             "kanji": "間違える",
-            "furigana": "まちがえる",
+            "hiragana": "まちがえる",
             "english": "to make a mistake (in); to commit an error (e.g. in calculation)",
             "jlpt": "n4"
         },
         {
             "kanji": "捨てる",
-            "furigana": "すてる",
+            "hiragana": "すてる",
             "english": "to throw away; to cast away; to dump; to discard",
             "jlpt": "n4"
         },
         {
             "kanji": "育てる",
-            "furigana": "そだてる",
+            "hiragana": "そだてる",
             "english": "to raise; to rear; to bring up",
             "jlpt": "n4"
         },
         {
             "kanji": "褒める",
-            "furigana": "ほめる",
+            "hiragana": "ほめる",
             "english": "to praise; to commend; to compliment; to speak well of; to speak highly of",
             "jlpt": "n4"
         },
         {
             "kanji": "片付ける",
-            "furigana": "かたづける",
+            "hiragana": "かたづける",
             "english": "to tidy up; to put in order; to straighten up; to put away",
             "jlpt": "n4"
         },
         {
             "kanji": "捕まえる",
-            "furigana": "つかまえる",
+            "hiragana": "つかまえる",
             "english": "to catch; to capture; to arrest; to seize; to restrain",
             "jlpt": "n4"
         },
         {
             "kanji": "足りる",
-            "furigana": "たりる",
+            "hiragana": "たりる",
             "english": "to be sufficient; to be enough",
             "jlpt": "n4"
         },
         {
             "kanji": "建てる",
-            "furigana": "たてる",
+            "hiragana": "たてる",
             "english": "to build; to construct",
             "jlpt": "n4"
         },
         {
             "kanji": "立てる",
-            "furigana": "たてる",
+            "hiragana": "たてる",
             "english": "to stand up; to put up; to set up; to erect; to raise",
             "jlpt": "n4"
         },
         {
             "kanji": "濡れる",
-            "furigana": "ぬれる",
+            "hiragana": "ぬれる",
             "english": "to get wet",
             "jlpt": "n4"
         },
         {
             "kanji": "投げる",
-            "furigana": "なげる",
+            "hiragana": "なげる",
             "english": "to throw; to hurl; to fling; to toss; to cast",
             "jlpt": "n4"
         },
         {
             "kanji": "揺れる",
-            "furigana": "ゆれる",
+            "hiragana": "ゆれる",
             "english": "to shake; to sway; to waver",
             "jlpt": "n4"
         },
         {
             "kanji": "痩せる",
-            "furigana": "やせる",
+            "hiragana": "やせる",
             "english": "to become thin; to lose weight; to reduce (one's) weight; to slim",
             "jlpt": "n4"
         },
         {
             "kanji": "割れる",
-            "furigana": "われる",
+            "hiragana": "われる",
             "english": "to break; to be smashed",
             "jlpt": "n4"
         },
         {
             "kanji": "折れる",
-            "furigana": "おれる",
+            "hiragana": "おれる",
             "english": "to break; to be broken; to snap; to fracture",
             "jlpt": "n4"
         },
         {
             "kanji": "植える",
-            "furigana": "うえる",
+            "hiragana": "うえる",
             "english": "to plant; to grow; to raise",
             "jlpt": "n4"
         },
         {
             "kanji": "差し上げる",
-            "furigana": "さしあげる",
+            "hiragana": "さしあげる",
             "english": "to lift up; to hold up; to raise",
             "jlpt": "n4"
         },
         {
             "kanji": "焼ける",
-            "furigana": "やける",
+            "hiragana": "やける",
             "english": "to burn; to burn down; to go down in flames",
             "jlpt": "n4"
         },
         {
             "kanji": "取り替える",
-            "furigana": "とりかえる",
+            "hiragana": "とりかえる",
             "english": "to exchange; to swap; to barter",
             "jlpt": "n4"
         },
         {
             "kanji": "苛める",
-            "furigana": "いじめる",
+            "hiragana": "いじめる",
             "english": "to ill-treat; to bully; to torment; to pick on; to tease; to be cruel to; to persecute",
             "jlpt": "n4"
         },
         {
             "kanji": "届ける",
-            "furigana": "とどける",
+            "hiragana": "とどける",
             "english": "to deliver; to forward; to send",
             "jlpt": "n4"
         },
         {
             "kanji": "変える",
-            "furigana": "かえる",
+            "hiragana": "かえる",
             "english": "to change; to alter; to transform; to convert; to turn; to vary",
             "jlpt": "n4"
         },
         {
             "kanji": "止める-1",
-            "furigana": "やめる",
+            "hiragana": "やめる",
             "english": "to stop (an activity); to cease; to discontinue; to end; to quit",
             "jlpt": "n4"
         },
         {
             "kanji": "汚れる-1",
-            "furigana": "よごれる",
+            "hiragana": "よごれる",
             "english": "to get dirty; to become dirty",
             "jlpt": "n4"
         },
         {
             "kanji": "流れる",
-            "furigana": "ながれる",
+            "hiragana": "ながれる",
             "english": "to stream; to flow (liquid, time, etc.); to run (ink)",
             "jlpt": "n3"
         },
         {
             "kanji": "出来る",
-            "furigana": "できる",
+            "hiragana": "できる",
             "english": "to be able (in a position) to do; to be up to the task",
             "jlpt": "n3"
         },
         {
             "kanji": "浴びる",
-            "furigana": "あびる",
+            "hiragana": "あびる",
             "english": "to dash over oneself (e.g. water); to take (e.g. shower); to bask in (e.g. the sun); to bathe in; to be flooded with (e.g. light); to be covered in",
             "jlpt": "n3"
         },
         {
             "kanji": "開ける",
-            "furigana": "あける",
+            "hiragana": "あける",
             "english": "to open (a door, etc.); to unwrap (e.g. parcel, package); to unlock",
             "jlpt": "n3"
         },
         {
             "kanji": "付ける",
-            "furigana": "つける",
+            "hiragana": "つける",
             "english": "to attach; to join; to connect; to add; to append; to affix; to stick; to glue; to fasten; to sew on; to apply (ointment); to put against",
             "jlpt": "n3"
         },
         {
             "kanji": "止める",
-            "furigana": "とめる",
+            "hiragana": "とめる",
             "english": "to stop; to turn off",
             "jlpt": "n3"
         },
         {
             "kanji": "褒める",
-            "furigana": "ほめる",
+            "hiragana": "ほめる",
             "english": "to praise; to commend; to compliment; to speak well of; to speak highly of",
             "jlpt": "n3"
         },
         {
             "kanji": "濡れる",
-            "furigana": "ぬれる",
+            "hiragana": "ぬれる",
             "english": "to get wet",
             "jlpt": "n3"
         },
         {
             "kanji": "終える",
-            "furigana": "おえる",
+            "hiragana": "おえる",
             "english": "to finish",
             "jlpt": "n3"
         },
         {
             "kanji": "助ける",
-            "furigana": "たすける",
+            "hiragana": "たすける",
             "english": "to save; to rescue; to spare",
             "jlpt": "n3"
         },
         {
             "kanji": "感じる",
-            "furigana": "かんじる",
+            "hiragana": "かんじる",
             "english": "to feel; to sense; to experience",
             "jlpt": "n3"
         },
         {
             "kanji": "現れる",
-            "furigana": "あらわれる",
+            "hiragana": "あらわれる",
             "english": "to appear; to come in sight; to become visible; to come out; to embody; to materialize; to materialise",
             "jlpt": "n3"
         },
         {
             "kanji": "離れる",
-            "furigana": "はなれる",
+            "hiragana": "はなれる",
             "english": "to be separated; to be apart; to be distant",
             "jlpt": "n3"
         },
         {
             "kanji": "恐れる",
-            "furigana": "おそれる",
+            "hiragana": "おそれる",
             "english": "to fear; to be afraid of",
             "jlpt": "n3"
         },
         {
             "kanji": "越える",
-            "furigana": "こえる",
+            "hiragana": "こえる",
             "english": "to cross over; to cross; to pass through; to pass over (out of); to go beyond; to go past",
             "jlpt": "n3"
         },
         {
             "kanji": "備える",
-            "furigana": "そなえる",
+            "hiragana": "そなえる",
             "english": "to furnish with; to equip with; to provide; to install",
             "jlpt": "n3"
         },
         {
             "kanji": "燃える",
-            "furigana": "もえる",
+            "hiragana": "もえる",
             "english": "to burn; to get fired up",
             "jlpt": "n3"
         },
         {
             "kanji": "乗せる",
-            "furigana": "のせる",
+            "hiragana": "のせる",
             "english": "to place on (something)",
             "jlpt": "n3"
         },
         {
             "kanji": "合わせる",
-            "furigana": "あわせる",
+            "hiragana": "あわせる",
             "english": "to match (rhythm, speed, etc.)",
             "jlpt": "n3"
         },
         {
             "kanji": "命じる",
-            "furigana": "めいじる",
+            "hiragana": "めいじる",
             "english": "to order; to command",
             "jlpt": "n3"
         },
         {
             "kanji": "分ける",
-            "furigana": "わける",
+            "hiragana": "わける",
             "english": "to divide (into); to split (into); to part; to separate; to divide up; to classify; to sort out; to divide out",
             "jlpt": "n3"
         },
         {
             "kanji": "確かめる",
-            "furigana": "たしかめる",
+            "hiragana": "たしかめる",
             "english": "to make sure; to check; to ascertain; to confirm; to verify",
             "jlpt": "n3"
         },
         {
             "kanji": "加える",
-            "furigana": "くわえる",
+            "hiragana": "くわえる",
             "english": "to add; to add up; to sum up; to append; to annex",
             "jlpt": "n3"
         },
         {
             "kanji": "当てる",
-            "furigana": "あてる",
+            "hiragana": "あてる",
             "english": "to hit",
             "jlpt": "n3"
         },
         {
             "kanji": "眺める",
-            "furigana": "ながめる",
+            "hiragana": "ながめる",
             "english": "to look at; to gaze at; to watch; to stare at",
             "jlpt": "n3"
         },
         {
             "kanji": "抱える",
-            "furigana": "かかえる",
+            "hiragana": "かかえる",
             "english": "to hold in one's arms; to carry in one's arms; to carry under one's arm; to hold (one's head) in one's hands",
             "jlpt": "n3"
         },
         {
             "kanji": "用いる",
-            "furigana": "もちいる",
+            "hiragana": "もちいる",
             "english": "to use; to make use of; to utilize; to utilise",
             "jlpt": "n3"
         },
         {
             "kanji": "数える",
-            "furigana": "かぞえる",
+            "hiragana": "かぞえる",
             "english": "to count; to enumerate",
             "jlpt": "n3"
         },
         {
             "kanji": "応じる",
-            "furigana": "おうじる",
+            "hiragana": "おうじる",
             "english": "to respond; to satisfy; to accept; to comply with; to apply for",
             "jlpt": "n3"
         },
         {
             "kanji": "換える",
-            "furigana": "かえる",
+            "hiragana": "かえる",
             "english": "to replace",
             "jlpt": "n3"
         },
         {
             "kanji": "収める",
-            "furigana": "おさめる",
+            "hiragana": "おさめる",
             "english": "to put (into); to put away (in); to put back (in); to keep (in); to store (in); to restore (to its place)",
             "jlpt": "n3"
         },
         {
             "kanji": "信じる",
-            "furigana": "しんじる",
+            "hiragana": "しんじる",
             "english": "to believe; to believe in; to place trust in; to confide in; to have faith in",
             "jlpt": "n3"
         },
         {
             "kanji": "与える",
-            "furigana": "あたえる",
+            "hiragana": "あたえる",
             "english": "to give (esp. to someone of lower status); to bestow; to grant; to confer; to present; to award",
             "jlpt": "n3"
         },
         {
             "kanji": "求める",
-            "furigana": "もとめる",
+            "hiragana": "もとめる",
             "english": "to want; to wish for",
             "jlpt": "n3"
         },
         {
             "kanji": "得る-1",
-            "furigana": "える",
+            "hiragana": "える",
             "english": "to get; to earn; to acquire; to procure; to gain; to secure; to attain; to obtain; to win",
             "jlpt": "n3"
         },
         {
             "kanji": "認める-1",
-            "furigana": "みとめる",
+            "hiragana": "みとめる",
             "english": "to recognize; to recognise; to observe; to notice",
             "jlpt": "n3"
         },
         {
             "kanji": "優れる",
-            "furigana": "すぐれる",
+            "hiragana": "すぐれる",
             "english": "to surpass; to outstrip; to excel",
             "jlpt": "n3"
         },
         {
             "kanji": "述べる",
-            "furigana": "のべる",
+            "hiragana": "のべる",
             "english": "to state; to express; to say; to tell; to mention",
             "jlpt": "n3"
         },
         {
             "kanji": "切れる",
-            "furigana": "きれる",
+            "hiragana": "きれる",
             "english": "to break; to snap; to be cut; to split; to crack",
             "jlpt": "n3"
         },
         {
             "kanji": "向ける",
-            "furigana": "むける",
+            "hiragana": "むける",
             "english": "to turn (towards); to face; to point; to aim; to direct to",
             "jlpt": "n3"
         },
         {
             "kanji": "避ける",
-            "furigana": "さける",
+            "hiragana": "さける",
             "english": "to avoid (physical contact with)",
             "jlpt": "n3"
         },
         {
             "kanji": "諦める",
-            "furigana": "あきらめる",
+            "hiragana": "あきらめる",
             "english": "to give up; to abandon (hope, plans); to resign oneself (to)",
             "jlpt": "n3"
         },
         {
             "kanji": "取れる",
-            "furigana": "とれる",
+            "hiragana": "とれる",
             "english": "to come off (of a button, handle, lid, etc.)",
             "jlpt": "n3"
         },
         {
             "kanji": "任せる",
-            "furigana": "まかせる",
+            "hiragana": "まかせる",
             "english": "to leave (a matter, decision, etc. to someone); to entrust (to someone); to entrust (someone) with",
             "jlpt": "n3"
         },
         {
             "kanji": "触れる",
-            "furigana": "ふれる",
+            "hiragana": "ふれる",
             "english": "to touch; to feel",
             "jlpt": "n3"
         },
         {
             "kanji": "解ける",
-            "furigana": "とける",
+            "hiragana": "とける",
             "english": "to be solved; to be resolved",
             "jlpt": "n3"
         },
         {
             "kanji": "通じる",
-            "furigana": "つうじる",
+            "hiragana": "つうじる",
             "english": "to be open (to traffic); to lead to; to communicate (with)",
             "jlpt": "n3"
         },
         {
             "kanji": "辞める",
-            "furigana": "やめる",
+            "hiragana": "やめる",
             "english": "to resign; to retire; to quit; to leave (one's job, etc.)",
             "jlpt": "n3"
         },
         {
             "kanji": "勧める",
-            "furigana": "すすめる",
+            "hiragana": "すすめる",
             "english": "to recommend (someone to do); to advise; to encourage; to urge",
             "jlpt": "n3"
         },
         {
             "kanji": "責める",
-            "furigana": "せめる",
+            "hiragana": "せめる",
             "english": "to condemn; to blame; to criticize; to criticise; to reproach; to accuse",
             "jlpt": "n3"
         },
         {
             "kanji": "済ませる",
-            "furigana": "すませる",
+            "hiragana": "すませる",
             "english": "to finish; to make an end of; to get through with; to let end",
             "jlpt": "n3"
         },
         {
             "kanji": "欠ける",
-            "furigana": "かける",
+            "hiragana": "かける",
             "english": "to chip; to be chipped; to break (off); to be damaged",
             "jlpt": "n3"
         },
         {
             "kanji": "生じる",
-            "furigana": "しょうじる",
+            "hiragana": "しょうじる",
             "english": "to produce; to yield; to cause",
             "jlpt": "n3"
         },
         {
             "kanji": "隠れる",
-            "furigana": "かくれる",
+            "hiragana": "かくれる",
             "english": "to hide; to be hidden; to conceal oneself; to disappear",
             "jlpt": "n3"
         },
         {
             "kanji": "吠える",
-            "furigana": "ほえる",
+            "hiragana": "ほえる",
             "english": "to bark; to howl; to bay; to roar; to yelp; to yap",
             "jlpt": "n3"
         },
         {
             "kanji": "訴える",
-            "furigana": "うったえる",
+            "hiragana": "うったえる",
             "english": "to raise; to bring to (someone's attention)",
             "jlpt": "n3"
         },
         {
             "kanji": "震える",
-            "furigana": "ふるえる",
+            "hiragana": "ふるえる",
             "english": "to shiver; to shake; to quake; to tremble; to quaver; to quiver",
             "jlpt": "n3"
         },
         {
             "kanji": "怠ける",
-            "furigana": "なまける",
+            "hiragana": "なまける",
             "english": "to be lazy; to be idle; to slack",
             "jlpt": "n3"
         },
         {
             "kanji": "飽きる",
-            "furigana": "あきる",
+            "hiragana": "あきる",
             "english": "to get tired of; to tire of; to lose interest in; to grow weary of; to get fed up with; to get sick of; to become bored with",
             "jlpt": "n3"
         },
         {
             "kanji": "論じる",
-            "furigana": "ろんじる",
+            "hiragana": "ろんじる",
             "english": "to discuss; to talk about; to deal with (a topic)",
             "jlpt": "n3"
         },
         {
             "kanji": "支える",
-            "furigana": "ささえる",
+            "hiragana": "ささえる",
             "english": "to support; to prop; to sustain; to underlay; to hold up; to defend",
             "jlpt": "n3"
         },
         {
             "kanji": "満ちる",
-            "furigana": "みちる",
+            "hiragana": "みちる",
             "english": "to fill; to become full (of); to be filled (with); to brim (with)",
             "jlpt": "n3"
         },
         {
             "kanji": "通り過ぎる",
-            "furigana": "とおりすぎる",
+            "hiragana": "とおりすぎる",
             "english": "to go past; to pass; to pass by",
             "jlpt": "n3"
         },
         {
             "kanji": "抜ける",
-            "furigana": "ぬける",
+            "hiragana": "ぬける",
             "english": "to come out; to fall out; to be omitted; to be missing; to escape; to come loose",
             "jlpt": "n3"
         },
         {
             "kanji": "取り上げる",
-            "furigana": "とりあげる",
+            "hiragana": "とりあげる",
             "english": "to pick up",
             "jlpt": "n3"
         },
         {
             "kanji": "占める",
-            "furigana": "しめる",
+            "hiragana": "しめる",
             "english": "to occupy; to hold",
             "jlpt": "n3"
         },
         {
             "kanji": "詰める",
-            "furigana": "つめる",
+            "hiragana": "つめる",
             "english": "to stuff into; to jam; to cram; to pack; to fill; to plug; to stop up",
             "jlpt": "n3"
         },
         {
             "kanji": "売れる",
-            "furigana": "うれる",
+            "hiragana": "うれる",
             "english": "to sell (well)",
             "jlpt": "n3"
         },
         {
             "kanji": "進める",
-            "furigana": "すすめる",
+            "hiragana": "すすめる",
             "english": "to advance; to move forward; to put (a clock, watch) forward",
             "jlpt": "n3"
         },
         {
             "kanji": "覚める",
-            "furigana": "さめる",
+            "hiragana": "さめる",
             "english": "to wake; to wake up",
             "jlpt": "n3"
         },
         {
             "kanji": "持ち上げる",
-            "furigana": "もちあげる",
+            "hiragana": "もちあげる",
             "english": "to elevate; to raise; to lift up",
             "jlpt": "n3"
         },
         {
             "kanji": "預ける",
-            "furigana": "あずける",
+            "hiragana": "あずける",
             "english": "to leave (in someone's keeping); to put (in someone's care); to place (in someone's custody); to entrust (someone) with; to deposit",
             "jlpt": "n3"
         },
         {
             "kanji": "溺れる",
-            "furigana": "おぼれる",
+            "hiragana": "おぼれる",
             "english": "to struggle in the water; to sink below the surface and become unable to breathe; to (nearly) drown",
             "jlpt": "n3"
         },
         {
             "kanji": "閉じる",
-            "furigana": "とじる",
+            "hiragana": "とじる",
             "english": "to close (e.g. book, eyes, meeting, etc.); to shut",
             "jlpt": "n3"
         },
         {
             "kanji": "上げる",
-            "furigana": "あげる",
+            "hiragana": "あげる",
             "english": "to raise; to elevate",
             "jlpt": "n2"
         },
         {
             "kanji": "勤める",
-            "furigana": "つとめる",
+            "hiragana": "つとめる",
             "english": "to work (for); to be employed (at); to serve (in)",
             "jlpt": "n2"
         },
         {
             "kanji": "出掛ける",
-            "furigana": "でかける",
+            "hiragana": "でかける",
             "english": "to go out (e.g. on an excursion or outing); to leave; to depart; to start; to set out",
             "jlpt": "n2"
         },
         {
             "kanji": "付ける",
-            "furigana": "つける",
+            "hiragana": "つける",
             "english": "to attach; to join; to connect; to add; to append; to affix; to stick; to glue; to fasten; to sew on; to apply (ointment); to put against",
             "jlpt": "n2"
         },
         {
             "kanji": "煮る",
-            "furigana": "にる",
+            "hiragana": "にる",
             "english": "to boil; to simmer; to stew; to seethe",
             "jlpt": "n2"
         },
         {
             "kanji": "茹でる",
-            "furigana": "ゆでる",
+            "hiragana": "ゆでる",
             "english": "to boil (something in hot water)",
             "jlpt": "n2"
         },
         {
             "kanji": "増える",
-            "furigana": "ふえる",
+            "hiragana": "ふえる",
             "english": "to increase; to multiply",
             "jlpt": "n2"
         },
         {
             "kanji": "漬ける",
-            "furigana": "つける",
+            "hiragana": "つける",
             "english": "to soak (in); to steep; to dip; to dunk",
             "jlpt": "n2"
         },
         {
             "kanji": "見付ける",
-            "furigana": "みつける",
+            "hiragana": "みつける",
             "english": "to discover; to find (e.g. an error in a book); to come across; to detect; to spot",
             "jlpt": "n2"
         },
         {
             "kanji": "慣れる",
-            "furigana": "なれる",
+            "hiragana": "なれる",
             "english": "to get used to; to grow accustomed to; to become familiar with",
             "jlpt": "n2"
         },
         {
             "kanji": "捨てる",
-            "furigana": "すてる",
+            "hiragana": "すてる",
             "english": "to throw away; to cast away; to dump; to discard",
             "jlpt": "n2"
         },
         {
             "kanji": "越える",
-            "furigana": "こえる",
+            "hiragana": "こえる",
             "english": "to cross over; to cross; to pass through; to pass over (out of); to go beyond; to go past",
             "jlpt": "n2"
         },
         {
             "kanji": "備える",
-            "furigana": "そなえる",
+            "hiragana": "そなえる",
             "english": "to furnish with; to equip with; to provide; to install",
             "jlpt": "n2"
         },
         {
             "kanji": "乗せる",
-            "furigana": "のせる",
+            "hiragana": "のせる",
             "english": "to place on (something)",
             "jlpt": "n2"
         },
         {
             "kanji": "換える",
-            "furigana": "かえる",
+            "hiragana": "かえる",
             "english": "to replace",
             "jlpt": "n2"
         },
         {
             "kanji": "収める",
-            "furigana": "おさめる",
+            "hiragana": "おさめる",
             "english": "to put (into); to put away (in); to put back (in); to keep (in); to store (in); to restore (to its place)",
             "jlpt": "n2"
         },
         {
             "kanji": "伸びる",
-            "furigana": "のびる",
+            "hiragana": "のびる",
             "english": "to stretch; to extend; to lengthen; to grow (of hair, height, grass, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "耐える",
-            "furigana": "たえる",
+            "hiragana": "たえる",
             "english": "to bear; to stand; to endure; to put up with",
             "jlpt": "n2"
         },
         {
             "kanji": "押さえる",
-            "furigana": "おさえる",
+            "hiragana": "おさえる",
             "english": "to pin down; to hold down; to press down; to hold in place; to hold steady",
             "jlpt": "n2"
         },
         {
             "kanji": "努める",
-            "furigana": "つとめる",
+            "hiragana": "つとめる",
             "english": "to endeavor (to do); to endeavour; to try hard; to work hard; to strive; to make an effort; to exert oneself; to devote oneself; to be committed (to doing)",
             "jlpt": "n2"
         },
         {
             "kanji": "慌てる",
-            "furigana": "あわてる",
+            "hiragana": "あわてる",
             "english": "to become confused (disconcerted, disorganized, disorganised); to be flustered; to panic",
             "jlpt": "n2"
         },
         {
             "kanji": "診る",
-            "furigana": "みる",
+            "hiragana": "みる",
             "english": "to examine (medically)",
             "jlpt": "n2"
         },
         {
             "kanji": "浮かべる",
-            "furigana": "うかべる",
+            "hiragana": "うかべる",
             "english": "to float; to set afloat; to launch",
             "jlpt": "n2"
         },
         {
             "kanji": "枯れる",
-            "furigana": "かれる",
+            "hiragana": "かれる",
             "english": "to wither (of a plant); to be blasted; to die",
             "jlpt": "n2"
         },
         {
             "kanji": "外れる",
-            "furigana": "はずれる",
+            "hiragana": "はずれる",
             "english": "to be disconnected; to get out of place; to be off; to be out (e.g. of gear)",
             "jlpt": "n2"
         },
         {
             "kanji": "広げる",
-            "furigana": "ひろげる",
+            "hiragana": "ひろげる",
             "english": "to spread; to extend; to expand; to enlarge; to widen; to broaden",
             "jlpt": "n2"
         },
         {
             "kanji": "分かれる",
-            "furigana": "わかれる",
+            "hiragana": "わかれる",
             "english": "to branch; to fork; to diverge",
             "jlpt": "n2"
         },
         {
             "kanji": "飢える",
-            "furigana": "うえる",
+            "hiragana": "うえる",
             "english": "to starve; to be famished; to be hungry",
             "jlpt": "n2"
         },
         {
             "kanji": "兼ねる",
-            "furigana": "かねる",
+            "hiragana": "かねる",
             "english": "to be unable to; to find difficult (unpleasant, awkward, painful) to do",
             "jlpt": "n2"
         },
         {
             "kanji": "埋める-1",
-            "furigana": "うめる",
+            "hiragana": "うめる",
             "english": "to bury (e.g. in the ground)",
             "jlpt": "n2"
         },
         {
             "kanji": "高める",
-            "furigana": "たかめる",
+            "hiragana": "たかめる",
             "english": "to raise; to lift; to boost; to enhance",
             "jlpt": "n2"
         },
         {
             "kanji": "高める",
-            "furigana": "たかめる",
+            "hiragana": "たかめる",
             "english": "to raise; to lift; to boost; to enhance",
             "jlpt": "n2"
         },
         {
             "kanji": "崩れる",
-            "furigana": "くずれる",
+            "hiragana": "くずれる",
             "english": "to collapse; to crumble",
             "jlpt": "n2"
         },
         {
             "kanji": "寄せる",
-            "furigana": "よせる",
+            "hiragana": "よせる",
             "english": "to come near; to let someone approach",
             "jlpt": "n2"
         },
         {
             "kanji": "呼びかける",
-            "furigana": "よびかける",
+            "hiragana": "よびかける",
             "english": "to call out to; to hail; to address",
             "jlpt": "n2"
         },
         {
             "kanji": "心得る",
-            "furigana": "こころえる",
+            "hiragana": "こころえる",
             "english": "to know; to understand; to be aware of; to regard as; to take for",
             "jlpt": "n2"
         },
         {
             "kanji": "重ねる",
-            "furigana": "かさねる",
+            "hiragana": "かさねる",
             "english": "to pile up; to heap up; to stack up; to put on top of another",
             "jlpt": "n2"
         },
         {
             "kanji": "改める",
-            "furigana": "あらためる",
+            "hiragana": "あらためる",
             "english": "to change; to alter; to revise; to replace",
             "jlpt": "n2"
         },
         {
             "kanji": "出迎える",
-            "furigana": "でむかえる",
+            "hiragana": "でむかえる",
             "english": "to meet; to greet",
             "jlpt": "n2"
         },
         {
             "kanji": "隔てる",
-            "furigana": "へだてる",
+            "hiragana": "へだてる",
             "english": "to separate (by distance, time, etc.); to isolate; to partition; to divide",
             "jlpt": "n2"
         },
         {
             "kanji": "暴れる",
-            "furigana": "あばれる",
+            "hiragana": "あばれる",
             "english": "to act violently; to rage; to struggle; to be riotous",
             "jlpt": "n2"
         },
         {
             "kanji": "攻める",
-            "furigana": "せめる",
+            "hiragana": "せめる",
             "english": "to attack; to assault; to assail",
             "jlpt": "n2"
         },
         {
             "kanji": "話しかける",
-            "furigana": "はなしかける",
+            "hiragana": "はなしかける",
             "english": "to address (someone); to accost a person; to talk (to someone)",
             "jlpt": "n2"
         },
         {
             "kanji": "引き受ける",
-            "furigana": "ひきうける",
+            "hiragana": "ひきうける",
             "english": "to take on; to undertake; to accept; to take charge of; to assume responsibility for",
             "jlpt": "n2"
         },
         {
             "kanji": "追いかける",
-            "furigana": "おいかける",
+            "hiragana": "おいかける",
             "english": "to chase; to run after; to pursue",
             "jlpt": "n2"
         },
         {
             "kanji": "捕らえる",
-            "furigana": "とらえる",
+            "hiragana": "とらえる",
             "english": "to catch; to capture; to seize; to arrest; to grab; to catch hold of",
             "jlpt": "n2"
         },
         {
             "kanji": "溢れる-1",
-            "furigana": "あふれる",
+            "hiragana": "あふれる",
             "english": "to overflow; to brim over; to flood",
             "jlpt": "n2"
         },
         {
             "kanji": "零れる",
-            "furigana": "こぼれる",
+            "hiragana": "こぼれる",
             "english": "to spill; to fall out of; to overflow",
             "jlpt": "n2"
         },
         {
             "kanji": "恵まれる",
-            "furigana": "めぐまれる",
+            "hiragana": "めぐまれる",
             "english": "to be blessed with; to be rich in; to abound in",
             "jlpt": "n2"
         },
         {
             "kanji": "蓄える",
-            "furigana": "たくわえる",
+            "hiragana": "たくわえる",
             "english": "to store; to save up; to stock up on; to lay in stock; to set aside",
             "jlpt": "n2"
         },
         {
             "kanji": "例える",
-            "furigana": "たとえる",
+            "hiragana": "たとえる",
             "english": "to compare (something) to; to liken; to speak figuratively; to use a simile; to use a metaphor",
             "jlpt": "n2"
         },
         {
             "kanji": "生える",
-            "furigana": "はえる",
+            "hiragana": "はえる",
             "english": "to grow; to spring up; to sprout",
             "jlpt": "n2"
         },
         {
             "kanji": "妨げる",
-            "furigana": "さまたげる",
+            "hiragana": "さまたげる",
             "english": "to disturb; to prevent; to obstruct; to hinder",
             "jlpt": "n2"
         },
         {
             "kanji": "纏める",
-            "furigana": "まとめる",
+            "hiragana": "まとめる",
             "english": "to collect; to put (it all) together; to integrate; to consolidate; to unify",
             "jlpt": "n2"
         },
         {
             "kanji": "儲ける",
-            "furigana": "もうける",
+            "hiragana": "もうける",
             "english": "to profit; to get; to earn; to gain",
             "jlpt": "n2"
         },
         {
             "kanji": "溶ける",
-            "furigana": "とける",
+            "hiragana": "とける",
             "english": "to melt; to thaw; to fuse",
             "jlpt": "n2"
         },
         {
             "kanji": "存じる",
-            "furigana": "ぞんじる",
+            "hiragana": "ぞんじる",
             "english": "to know; to be aware (of); to be acquainted (with)",
             "jlpt": "n2"
         },
         {
             "kanji": "温める",
-            "furigana": "あたためる",
+            "hiragana": "あたためる",
             "english": "to warm (up); to heat (up)",
             "jlpt": "n2"
         },
         {
             "kanji": "泊める",
-            "furigana": "とめる",
+            "hiragana": "とめる",
             "english": "to give shelter to; to lodge; to put up; to accommodate",
             "jlpt": "n2"
         },
         {
             "kanji": "混ぜる",
-            "furigana": "まぜる",
+            "hiragana": "まぜる",
             "english": "to mix; to stir; to blend",
             "jlpt": "n2"
         },
         {
             "kanji": "憧れる",
-            "furigana": "あこがれる",
+            "hiragana": "あこがれる",
             "english": "to long for; to yearn after; to admire; to be attracted by",
             "jlpt": "n2"
         },
         {
             "kanji": "詫びる",
-            "furigana": "わびる",
+            "hiragana": "わびる",
             "english": "to apologize; to apologise; to make an apology",
             "jlpt": "n2"
         },
         {
             "kanji": "揃える",
-            "furigana": "そろえる",
+            "hiragana": "そろえる",
             "english": "to collect; to gather; to get together; to complete (a collection)",
             "jlpt": "n2"
         },
         {
             "kanji": "組み立てる",
-            "furigana": "くみたてる",
+            "hiragana": "くみたてる",
             "english": "to assemble; to put together; to set up; to construct; to build; to compose (a story, poem, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "冷める",
-            "furigana": "さめる",
+            "hiragana": "さめる",
             "english": "to cool down; to get cold",
             "jlpt": "n2"
         },
         {
             "kanji": "近づける",
-            "furigana": "ちかづける",
+            "hiragana": "ちかづける",
             "english": "to bring near; to bring close; to let go near",
             "jlpt": "n2"
         },
         {
             "kanji": "曲げる",
-            "furigana": "まげる",
+            "hiragana": "まげる",
             "english": "to bend; to crook; to bow; to curve; to curl",
             "jlpt": "n2"
         },
         {
             "kanji": "慰める",
-            "furigana": "なぐさめる",
+            "hiragana": "なぐさめる",
             "english": "to comfort; to console; to amuse",
             "jlpt": "n2"
         },
         {
             "kanji": "砕ける",
-            "furigana": "くだける",
+            "hiragana": "くだける",
             "english": "to break (into pieces); to be broken; to be smashed",
             "jlpt": "n2"
         },
         {
             "kanji": "含める",
-            "furigana": "ふくめる",
+            "hiragana": "ふくめる",
             "english": "to include (in a group or scope)",
             "jlpt": "n2"
         },
         {
             "kanji": "焦げる",
-            "furigana": "こげる",
+            "hiragana": "こげる",
             "english": "to burn; to scorch; to char; to singe",
             "jlpt": "n2"
         },
         {
             "kanji": "嵌める",
-            "furigana": "はめる",
+            "hiragana": "はめる",
             "english": "to fit (e.g. a pane into a frame); to insert (e.g. a cork); to fasten (a button)",
             "jlpt": "n2"
         },
         {
             "kanji": "跳ねる",
-            "furigana": "はねる",
+            "hiragana": "はねる",
             "english": "to jump; to leap; to prance; to spring up; to bound; to hop",
             "jlpt": "n2"
         },
         {
             "kanji": "腰掛ける",
-            "furigana": "こしかける",
+            "hiragana": "こしかける",
             "english": "to sit (down)",
             "jlpt": "n2"
         },
         {
             "kanji": "腰掛ける",
-            "furigana": "こしかける",
+            "hiragana": "こしかける",
             "english": "to sit (down)",
             "jlpt": "n2"
         },
         {
             "kanji": "溜める",
-            "furigana": "ためる",
+            "hiragana": "ためる",
             "english": "to amass; to accumulate; to store",
             "jlpt": "n2"
         },
         {
             "kanji": "信ずる",
-            "furigana": "しんずる",
+            "hiragana": "しんずる",
             "english": "to believe; to believe in; to place trust in; to confide in; to have faith in",
             "jlpt": "n2"
         },
         {
             "kanji": "真似る",
-            "furigana": "まねる",
+            "hiragana": "まねる",
             "english": "to mimic; to imitate",
             "jlpt": "n2"
         },
         {
             "kanji": "更ける",
-            "furigana": "ふける",
+            "hiragana": "ふける",
             "english": "to get late; to advance; to wear on",
             "jlpt": "n2"
         },
         {
             "kanji": "引き止める",
-            "furigana": "ひきとめる",
+            "hiragana": "ひきとめる",
             "english": "to detain; to check; to restrain; to stop",
             "jlpt": "n2"
         },
         {
             "kanji": "着せる",
-            "furigana": "きせる",
+            "hiragana": "きせる",
             "english": "to put clothes on (someone); to dress; to clothe",
             "jlpt": "n2"
         },
         {
             "kanji": "広める",
-            "furigana": "ひろめる",
+            "hiragana": "ひろめる",
             "english": "to spread; to propagate; to popularize; to disseminate",
             "jlpt": "n2"
         },
         {
             "kanji": "巫山戯る",
-            "furigana": "ふざける",
+            "hiragana": "ふざける",
             "english": "to joke; to jest; to kid; to josh",
             "jlpt": "n2"
         },
         {
             "kanji": "当てはめる",
-            "furigana": "あてはめる",
+            "hiragana": "あてはめる",
             "english": "to apply; to adapt",
             "jlpt": "n2"
         },
         {
             "kanji": "煮える",
-            "furigana": "にえる",
+            "hiragana": "にえる",
             "english": "to be boiled; to be cooked",
             "jlpt": "n2"
         },
         {
             "kanji": "凍える",
-            "furigana": "こごえる",
+            "hiragana": "こごえる",
             "english": "to freeze (of one's body); to be frozen; to become numb (with cold); to be chilled",
             "jlpt": "n2"
         },
         {
             "kanji": "錆びる",
-            "furigana": "さびる",
+            "hiragana": "さびる",
             "english": "to rust; to become rusty",
             "jlpt": "n2"
         },
         {
             "kanji": "売り切れる",
-            "furigana": "うりきれる",
+            "hiragana": "うりきれる",
             "english": "to be sold out",
             "jlpt": "n2"
         },
         {
             "kanji": "被せる",
-            "furigana": "かぶせる",
+            "hiragana": "かぶせる",
             "english": "to cover (with something); to put on (e.g. on someone else's head); to plate something (with a metal); to pour or dash a liquid (on something); to charge (a person with a guilt)",
             "jlpt": "n2"
         },
         {
             "kanji": "取り入れる",
-            "furigana": "とりいれる",
+            "hiragana": "とりいれる",
             "english": "to harvest; to reap",
             "jlpt": "n2"
         },
         {
             "kanji": "治める",
-            "furigana": "おさめる",
+            "hiragana": "おさめる",
             "english": "to rule; to govern; to reign over; to administer; to manage (e.g. a household)",
             "jlpt": "n2"
         },
         {
             "kanji": "拵える",
-            "furigana": "こしらえる",
+            "hiragana": "こしらえる",
             "english": "to make; to manufacture",
             "jlpt": "n2"
         },
         {
             "kanji": "待ち合わせる",
-            "furigana": "まちあわせる",
+            "hiragana": "まちあわせる",
             "english": "to rendezvous; to meet at a prearranged place and time; to arrange to meet",
             "jlpt": "n2"
         },
         {
             "kanji": "命ずる",
-            "furigana": "めいずる",
+            "hiragana": "めいずる",
             "english": "to order; to command",
             "jlpt": "n2"
         },
         {
             "kanji": "感ずる",
-            "furigana": "かんずる",
+            "hiragana": "かんずる",
             "english": "to feel; to sense",
             "jlpt": "n2"
         },
         {
             "kanji": "生ずる",
-            "furigana": "しょうずる",
+            "hiragana": "しょうずる",
             "english": "to produce; to yield; to cause",
             "jlpt": "n2"
         },
         {
             "kanji": "撫でる",
-            "furigana": "なでる",
+            "hiragana": "なでる",
             "english": "to stroke; to caress; to brush gently; to pat; to rub",
             "jlpt": "n2"
         },
         {
             "kanji": "縮れる",
-            "furigana": "ちぢれる",
+            "hiragana": "ちぢれる",
             "english": "to be wavy; to be curled; to be frizzled",
             "jlpt": "n2"
         },
         {
             "kanji": "言いつける",
-            "furigana": "いいつける",
+            "hiragana": "いいつける",
             "english": "to tell (to do); to order; to charge; to direct",
             "jlpt": "n2"
         },
         {
             "kanji": "通ずる",
-            "furigana": "つうずる",
+            "hiragana": "つうずる",
             "english": "to be open (to traffic); to lead to; to communicate (with)",
             "jlpt": "n2"
         },
         {
             "kanji": "繋げる",
-            "furigana": "つなげる",
+            "hiragana": "つなげる",
             "english": "to connect",
             "jlpt": "n2"
         },
         {
             "kanji": "気を付ける",
-            "furigana": "きをつける",
+            "hiragana": "きをつける",
             "english": "to be careful; to pay attention; to take care",
             "jlpt": "n2"
         },
         {
             "kanji": "点ける",
-            "furigana": "つける",
+            "hiragana": "つける",
             "english": "to turn on; to switch on; to light up",
             "jlpt": "n2"
         },
         {
             "kanji": "打付ける-1",
-            "furigana": "ぶつける",
+            "hiragana": "ぶつける",
             "english": "to hit (e.g. one's head); to strike; to knock; to run (into); to crash (into)",
             "jlpt": "n2"
         },
         {
             "kanji": "痺れる",
-            "furigana": "しびれる",
+            "hiragana": "しびれる",
             "english": "to become numb; to go to sleep (e.g. a limb)",
             "jlpt": "n2"
         },
         {
             "kanji": "呆れる",
-            "furigana": "あきれる",
+            "hiragana": "あきれる",
             "english": "to be amazed; to be shocked; to be astonished; to be astounded; to be disgusted; to be exasperated; to be fed up",
             "jlpt": "n2"
         },
         {
             "kanji": "凭れる",
-            "furigana": "もたれる",
+            "hiragana": "もたれる",
             "english": "to lean against; to lean on; to recline on",
             "jlpt": "n2"
         },
         {
             "kanji": "潰れる",
-            "furigana": "つぶれる",
+            "hiragana": "つぶれる",
             "english": "to be crushed; to be squashed; to be smashed; to be destroyed; to be broken; to collapse",
             "jlpt": "n2"
         },
         {
             "kanji": "破れる",
-            "furigana": "やぶれる",
+            "hiragana": "やぶれる",
             "english": "to get torn; to tear; to rip; to break; to wear out",
             "jlpt": "n2"
         },
         {
             "kanji": "草臥れる",
-            "furigana": "くたびれる",
+            "hiragana": "くたびれる",
             "english": "to get tired; to become exhausted; to grow weary",
             "jlpt": "n2"
         },
         {
             "kanji": "くっ付ける",
-            "furigana": "くっつける",
+            "hiragana": "くっつける",
             "english": "to attach; to stick together; to paste; to glue",
             "jlpt": "n2"
         },
         {
             "kanji": "見慣れる",
-            "furigana": "みなれる",
+            "hiragana": "みなれる",
             "english": "to become used to seeing; to be familiar with",
             "jlpt": "n2"
         },
         {
             "kanji": "やっ付ける",
-            "furigana": "やっつける",
+            "hiragana": "やっつける",
             "english": "to beat; to attack (an enemy); to do away with; to finish off",
             "jlpt": "n2"
         },
         {
             "kanji": "咥える",
-            "furigana": "くわえる",
+            "hiragana": "くわえる",
             "english": "to hold in one's mouth",
             "jlpt": "n2"
         },
         {
             "kanji": "応ずる",
-            "furigana": "おうずる",
+            "hiragana": "おうずる",
             "english": "to answer; to respond; to meet",
             "jlpt": "n2"
         },
         {
             "kanji": "ぶら下げる",
-            "furigana": "ぶらさげる",
+            "hiragana": "ぶらさげる",
             "english": "to hang; to suspend; to dangle; to swing; to carry",
             "jlpt": "n2"
         },
         {
             "kanji": "縮める",
-            "furigana": "ちぢめる",
+            "hiragana": "ちぢめる",
             "english": "to shorten; to reduce; to condense; to shrink",
             "jlpt": "n2"
         },
         {
             "kanji": "論ずる",
-            "furigana": "ろんずる",
+            "hiragana": "ろんずる",
             "english": "to discuss; to talk about; to deal with (a topic)",
             "jlpt": "n2"
         },
         {
             "kanji": "薄める",
-            "furigana": "うすめる",
+            "hiragana": "うすめる",
             "english": "to dilute; to water down",
             "jlpt": "n2"
         },
         {
             "kanji": "放れる",
-            "furigana": "はなれる",
+            "hiragana": "はなれる",
             "english": "to get free (from); to be freed; to be released",
             "jlpt": "n2"
         },
         {
             "kanji": "存ずる",
-            "furigana": "ぞんずる",
+            "hiragana": "ぞんずる",
             "english": "to know; to be aware (of); to be acquainted (with)",
             "jlpt": "n2"
         },
         {
             "kanji": "逸れる",
-            "furigana": "それる",
+            "hiragana": "それる",
             "english": "to turn away; to bear off; to veer away; to swerve from; to miss (e.g. a target)",
             "jlpt": "n2"
         },
         {
             "kanji": "退ける-1",
-            "furigana": "のける",
+            "hiragana": "のける",
             "english": "to put something out of the way; to move (something, someone) aside",
             "jlpt": "n2"
         },
         {
             "kanji": "言付ける",
-            "furigana": "ことづける",
+            "hiragana": "ことづける",
             "english": "to have someone send (a message, parcel, etc.); to send (via someone else); to leave (a message) with someone",
             "jlpt": "n2"
         },
         {
             "kanji": "茹でる",
-            "furigana": "ゆでる",
+            "hiragana": "ゆでる",
             "english": "to boil (something in hot water)",
             "jlpt": "n1"
         },
         {
             "kanji": "落ちる",
-            "furigana": "おちる",
+            "hiragana": "おちる",
             "english": "to fall; to drop; to come down; to crash; to collapse; to cave in; to give way",
             "jlpt": "n1"
         },
         {
             "kanji": "乱れる",
-            "furigana": "みだれる",
+            "hiragana": "みだれる",
             "english": "to be disordered; to be disarranged; to be disarrayed; to be disheveled; to be dishevelled",
             "jlpt": "n1"
         },
         {
             "kanji": "炒める",
-            "furigana": "いためる",
+            "hiragana": "いためる",
             "english": "to fry; to saute; to stir-fry",
             "jlpt": "n1"
         },
         {
             "kanji": "呉れる",
-            "furigana": "くれる",
+            "hiragana": "くれる",
             "english": "to give; to let (one) have",
             "jlpt": "n1"
         },
         {
             "kanji": "苛める",
-            "furigana": "いじめる",
+            "hiragana": "いじめる",
             "english": "to ill-treat; to bully; to torment; to pick on; to tease; to be cruel to; to persecute",
             "jlpt": "n1"
         },
         {
             "kanji": "現れる",
-            "furigana": "あらわれる",
+            "hiragana": "あらわれる",
             "english": "to appear; to come in sight; to become visible; to come out; to embody; to materialize; to materialise",
             "jlpt": "n1"
         },
         {
             "kanji": "耐える",
-            "furigana": "たえる",
+            "hiragana": "たえる",
             "english": "to bear; to stand; to endure; to put up with",
             "jlpt": "n1"
         },
         {
             "kanji": "押さえる",
-            "furigana": "おさえる",
+            "hiragana": "おさえる",
             "english": "to pin down; to hold down; to press down; to hold in place; to hold steady",
             "jlpt": "n1"
         },
         {
             "kanji": "慌てる",
-            "furigana": "あわてる",
+            "hiragana": "あわてる",
             "english": "to become confused (disconcerted, disorganized, disorganised); to be flustered; to panic",
             "jlpt": "n1"
         },
         {
             "kanji": "引き受ける",
-            "furigana": "ひきうける",
+            "hiragana": "ひきうける",
             "english": "to take on; to undertake; to accept; to take charge of; to assume responsibility for",
             "jlpt": "n1"
         },
         {
             "kanji": "捕らえる",
-            "furigana": "とらえる",
+            "hiragana": "とらえる",
             "english": "to catch; to capture; to seize; to arrest; to grab; to catch hold of",
             "jlpt": "n1"
         },
         {
             "kanji": "溢れる-1",
-            "furigana": "あふれる",
+            "hiragana": "あふれる",
             "english": "to overflow; to brim over; to flood",
             "jlpt": "n1"
         },
         {
             "kanji": "零れる",
-            "furigana": "こぼれる",
+            "hiragana": "こぼれる",
             "english": "to spill; to fall out of; to overflow",
             "jlpt": "n1"
         },
         {
             "kanji": "嵌める",
-            "furigana": "はめる",
+            "hiragana": "はめる",
             "english": "to fit (e.g. a pane into a frame); to insert (e.g. a cork); to fasten (a button)",
             "jlpt": "n1"
         },
         {
             "kanji": "巫山戯る",
-            "furigana": "ふざける",
+            "hiragana": "ふざける",
             "english": "to joke; to jest; to kid; to josh",
             "jlpt": "n1"
         },
         {
             "kanji": "当てはめる",
-            "furigana": "あてはめる",
+            "hiragana": "あてはめる",
             "english": "to apply; to adapt",
             "jlpt": "n1"
         },
         {
             "kanji": "拵える",
-            "furigana": "こしらえる",
+            "hiragana": "こしらえる",
             "english": "to make; to manufacture",
             "jlpt": "n1"
         },
         {
             "kanji": "受け入れる",
-            "furigana": "うけいれる",
+            "hiragana": "うけいれる",
             "english": "to accept; to receive; to agree",
             "jlpt": "n1"
         },
         {
             "kanji": "告げる",
-            "furigana": "つげる",
+            "hiragana": "つげる",
             "english": "to tell; to inform; to announce",
             "jlpt": "n1"
         },
         {
             "kanji": "控える",
-            "furigana": "ひかえる",
+            "hiragana": "ひかえる",
             "english": "to be temperate in; to refrain; to abstain; to hold back; to restrain oneself from excessive ...",
             "jlpt": "n1"
         },
         {
             "kanji": "逃れる",
-            "furigana": "のがれる",
+            "hiragana": "のがれる",
             "english": "to escape",
             "jlpt": "n1"
         },
         {
             "kanji": "禁じる",
-            "furigana": "きんじる",
+            "hiragana": "きんじる",
             "english": "to forbid; to ban; to prohibit",
             "jlpt": "n1"
         },
         {
             "kanji": "定める",
-            "furigana": "さだめる",
+            "hiragana": "さだめる",
             "english": "to decide; to determine",
             "jlpt": "n1"
         },
         {
             "kanji": "唱える",
-            "furigana": "となえる",
+            "hiragana": "となえる",
             "english": "to recite; to chant",
             "jlpt": "n1"
         },
         {
             "kanji": "早める",
-            "furigana": "はやめる",
+            "hiragana": "はやめる",
             "english": "to bring forward (e.g. by 3 hours); to advance; to hasten (e.g. one's death); to expedite; to precipitate",
             "jlpt": "n1"
         },
         {
             "kanji": "問い合わせる",
-            "furigana": "といあわせる",
+            "hiragana": "といあわせる",
             "english": "to enquire; to inquire; to seek information",
             "jlpt": "n1"
         },
         {
             "kanji": "苦しめる",
-            "furigana": "くるしめる",
+            "hiragana": "くるしめる",
             "english": "to torment; to pain; to inflict (physical) pain; to hurt",
             "jlpt": "n1"
         },
         {
             "kanji": "報じる",
-            "furigana": "ほうじる",
+            "hiragana": "ほうじる",
             "english": "to inform; to report",
             "jlpt": "n1"
         },
         {
             "kanji": "駆ける",
-            "furigana": "かける",
+            "hiragana": "かける",
             "english": "to run; to dash; to race",
             "jlpt": "n1"
         },
         {
             "kanji": "報じる",
-            "furigana": "ほうじる",
+            "hiragana": "ほうじる",
             "english": "to inform; to report",
             "jlpt": "n1"
         },
         {
             "kanji": "引き上げる",
-            "furigana": "ひきあげる",
+            "hiragana": "ひきあげる",
             "english": "to pull up; to drag up; to lift up",
             "jlpt": "n1"
         },
         {
             "kanji": "掲げる",
-            "furigana": "かかげる",
+            "hiragana": "かかげる",
             "english": "to put up (a notice, sign, etc.); to hang out (e.g. a banner); to fly (e.g. a flag); to hoist; to raise; to display",
             "jlpt": "n1"
         },
         {
             "kanji": "引き上げる",
-            "furigana": "ひきあげる",
+            "hiragana": "ひきあげる",
             "english": "to pull up; to drag up; to lift up",
             "jlpt": "n1"
         },
         {
             "kanji": "強める",
-            "furigana": "つよめる",
+            "hiragana": "つよめる",
             "english": "to strengthen; to emphasize; to emphasise",
             "jlpt": "n1"
         },
         {
             "kanji": "深める",
-            "furigana": "ふかめる",
+            "hiragana": "ふかめる",
             "english": "to deepen; to heighten; to intensify",
             "jlpt": "n1"
         },
         {
             "kanji": "強いる",
-            "furigana": "しいる",
+            "hiragana": "しいる",
             "english": "to force; to compel; to coerce; to press; to impose",
             "jlpt": "n1"
         },
         {
             "kanji": "転じる",
-            "furigana": "てんじる",
+            "hiragana": "てんじる",
             "english": "to turn; to shift; to alter; to distract",
             "jlpt": "n1"
         },
         {
             "kanji": "手がける",
-            "furigana": "てがける",
+            "hiragana": "てがける",
             "english": "to handle; to manage; to deal with; to work with; to have experience with",
             "jlpt": "n1"
         },
         {
             "kanji": "手がける",
-            "furigana": "てがける",
+            "hiragana": "てがける",
             "english": "to handle; to manage; to deal with; to work with; to have experience with",
             "jlpt": "n1"
         },
         {
             "kanji": "引き下げる",
-            "furigana": "ひきさげる",
+            "hiragana": "ひきさげる",
             "english": "to pull down; to lower; to reduce; to withdraw",
             "jlpt": "n1"
         },
         {
             "kanji": "受け止める",
-            "furigana": "うけとめる",
+            "hiragana": "うけとめる",
             "english": "to catch; to stop the blow",
             "jlpt": "n1"
         },
         {
             "kanji": "読み上げる",
-            "furigana": "よみあげる",
+            "hiragana": "よみあげる",
             "english": "to read out; to read aloud; to call out",
             "jlpt": "n1"
         },
         {
             "kanji": "膨れる",
-            "furigana": "ふくれる",
+            "hiragana": "ふくれる",
             "english": "to swell (out); to expand; to be inflated; to distend; to bulge",
             "jlpt": "n1"
         },
         {
             "kanji": "踏まえる",
-            "furigana": "ふまえる",
+            "hiragana": "ふまえる",
             "english": "to be based on; to take into account; to build upon; to have origin in",
             "jlpt": "n1"
         },
         {
             "kanji": "据える",
-            "furigana": "すえる",
+            "hiragana": "すえる",
             "english": "to place (in position); to fix; to set (e.g. table); to lay (foundation)",
             "jlpt": "n1"
         },
         {
             "kanji": "訪れる",
-            "furigana": "おとずれる",
+            "hiragana": "おとずれる",
             "english": "to visit; to call on",
             "jlpt": "n1"
         },
         {
             "kanji": "名付ける",
-            "furigana": "なづける",
+            "hiragana": "なづける",
             "english": "to name; to call; to christen; to term",
             "jlpt": "n1"
         },
         {
             "kanji": "仕上げる",
-            "furigana": "しあげる",
+            "hiragana": "しあげる",
             "english": "to finish up; to complete; to finish off; to get through; to polish off",
             "jlpt": "n1"
         },
         {
             "kanji": "恥じる",
-            "furigana": "はじる",
+            "hiragana": "はじる",
             "english": "to feel ashamed",
             "jlpt": "n1"
         },
         {
             "kanji": "捧げる",
-            "furigana": "ささげる",
+            "hiragana": "ささげる",
             "english": "to lift up; to hold up; to hold above eye level",
             "jlpt": "n1"
         },
         {
             "kanji": "試みる",
-            "furigana": "こころみる",
+            "hiragana": "こころみる",
             "english": "to try; to attempt; to have a go (at)",
             "jlpt": "n1"
         },
         {
             "kanji": "演じる",
-            "furigana": "えんじる",
+            "hiragana": "えんじる",
             "english": "to act (a part); to play (a role)",
             "jlpt": "n1"
         },
         {
             "kanji": "目覚める",
-            "furigana": "めざめる",
+            "hiragana": "めざめる",
             "english": "to wake up; to awake",
             "jlpt": "n1"
         },
         {
             "kanji": "賭ける",
-            "furigana": "かける",
+            "hiragana": "かける",
             "english": "to wager; to bet; to risk; to stake; to gamble",
             "jlpt": "n1"
         },
         {
             "kanji": "尽きる",
-            "furigana": "つきる",
+            "hiragana": "つきる",
             "english": "to be used up; to be run out; to be exhausted; to be consumed; to come to an end",
             "jlpt": "n1"
         },
         {
             "kanji": "漏れる",
-            "furigana": "もれる",
+            "hiragana": "もれる",
             "english": "to leak out; to escape; to come through; to shine through; to filter out",
             "jlpt": "n1"
         },
         {
             "kanji": "衰える",
-            "furigana": "おとろえる",
+            "hiragana": "おとろえる",
             "english": "to become weak; to decline; to wear; to abate; to decay; to wither; to waste away",
             "jlpt": "n1"
         },
         {
             "kanji": "整える",
-            "furigana": "ととのえる",
+            "hiragana": "ととのえる",
             "english": "to put in order; to arrange; to tidy up; to fix; to straighten",
             "jlpt": "n1"
         },
         {
             "kanji": "咎める",
-            "furigana": "とがめる",
+            "hiragana": "とがめる",
             "english": "to blame; to reproach; to censure; to rebuke; to reprove; to find fault; to take to task; to criticize; to criticise",
             "jlpt": "n1"
         },
         {
             "kanji": "込める",
-            "furigana": "こめる",
+            "hiragana": "こめる",
             "english": "to load (a gun, etc.); to charge",
             "jlpt": "n1"
         },
         {
             "kanji": "痛める",
-            "furigana": "いためる",
+            "hiragana": "いためる",
             "english": "to hurt; to injure; to cause pain",
             "jlpt": "n1"
         },
         {
             "kanji": "申し出る",
-            "furigana": "もうしでる",
+            "hiragana": "もうしでる",
             "english": "to offer; to propose; to suggest; to put forward; to request; to ask (for); to apply (for); to report (to); to notify",
             "jlpt": "n1"
         },
         {
             "kanji": "遂げる",
-            "furigana": "とげる",
+            "hiragana": "とげる",
             "english": "to accomplish; to achieve; to carry out",
             "jlpt": "n1"
         },
         {
             "kanji": "和らげる",
-            "furigana": "やわらげる",
+            "hiragana": "やわらげる",
             "english": "to soften; to moderate; to relieve",
             "jlpt": "n1"
         },
         {
             "kanji": "添える",
-            "furigana": "そえる",
+            "hiragana": "そえる",
             "english": "to garnish; to accompany (as a card does a gift)",
             "jlpt": "n1"
         },
         {
             "kanji": "付け加える",
-            "furigana": "つけくわえる",
+            "hiragana": "つけくわえる",
             "english": "to add (one thing to another); to add (a few more words, an explanation, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "染みる",
-            "furigana": "しみる",
+            "hiragana": "しみる",
             "english": "to pierce; to penetrate; to soak in; to permeate",
             "jlpt": "n1"
         },
         {
             "kanji": "染みる",
-            "furigana": "しみる",
+            "hiragana": "しみる",
             "english": "to pierce; to penetrate; to soak in; to permeate",
             "jlpt": "n1"
         },
         {
             "kanji": "舐める",
-            "furigana": "なめる",
+            "hiragana": "なめる",
             "english": "to lick; to lap; to suck",
             "jlpt": "n1"
         },
         {
             "kanji": "絶える",
-            "furigana": "たえる",
+            "hiragana": "たえる",
             "english": "to die out; to peter out; to become extinct",
             "jlpt": "n1"
         },
         {
             "kanji": "寝かせる",
-            "furigana": "ねかせる",
+            "hiragana": "ねかせる",
             "english": "to put to bed; to let sleep",
             "jlpt": "n1"
         },
         {
             "kanji": "設ける",
-            "furigana": "もうける",
+            "hiragana": "もうける",
             "english": "to prepare; to provide",
             "jlpt": "n1"
         },
         {
             "kanji": "叶える",
-            "furigana": "かなえる",
+            "hiragana": "かなえる",
             "english": "to grant (request, wish); to answer (prayer)",
             "jlpt": "n1"
         },
         {
             "kanji": "鍛える",
-            "furigana": "きたえる",
+            "hiragana": "きたえる",
             "english": "to forge; to temper",
             "jlpt": "n1"
         },
         {
             "kanji": "設ける",
-            "furigana": "もうける",
+            "hiragana": "もうける",
             "english": "to prepare; to provide",
             "jlpt": "n1"
         },
         {
             "kanji": "老ける",
-            "furigana": "ふける",
+            "hiragana": "ふける",
             "english": "to age; to grow old (esp. in appearance); to show marks of age",
             "jlpt": "n1"
         },
         {
             "kanji": "受け付ける",
-            "furigana": "うけつける",
+            "hiragana": "うけつける",
             "english": "to accept; to receive (an application); to take up",
             "jlpt": "n1"
         },
         {
             "kanji": "傾ける",
-            "furigana": "かたむける",
+            "hiragana": "かたむける",
             "english": "to incline; to lean; to tip; to tilt; to slant; to bend; to list",
             "jlpt": "n1"
         },
         {
             "kanji": "構える",
-            "furigana": "かまえる",
+            "hiragana": "かまえる",
             "english": "to set up (a house, store, etc.); to build; to establish; to run; to maintain",
             "jlpt": "n1"
         },
         {
             "kanji": "心がける",
-            "furigana": "こころがける",
+            "hiragana": "こころがける",
             "english": "to keep in mind; to bear in mind; to try; to aim to do; to endeavor; to endeavour",
             "jlpt": "n1"
         },
         {
             "kanji": "仕立てる",
-            "furigana": "したてる",
+            "hiragana": "したてる",
             "english": "to tailor; to make (clothing)",
             "jlpt": "n1"
         },
         {
             "kanji": "休める",
-            "furigana": "やすめる",
+            "hiragana": "やすめる",
             "english": "to rest; to suspend; to give relief",
             "jlpt": "n1"
         },
         {
             "kanji": "重んじる",
-            "furigana": "おもんじる",
+            "hiragana": "おもんじる",
             "english": "to respect; to honor; to honour; to esteem; to prize",
             "jlpt": "n1"
         },
         {
             "kanji": "顧みる",
-            "furigana": "かえりみる",
+            "hiragana": "かえりみる",
             "english": "to look back on (the past); to reflect on; to reminisce about",
             "jlpt": "n1"
         },
         {
             "kanji": "染める",
-            "furigana": "そめる",
+            "hiragana": "そめる",
             "english": "to dye; to colour; to color",
             "jlpt": "n1"
         },
         {
             "kanji": "見合わせる",
-            "furigana": "みあわせる",
+            "hiragana": "みあわせる",
             "english": "to exchange glances; to look at each other",
             "jlpt": "n1"
         },
         {
             "kanji": "冴える",
-            "furigana": "さえる",
+            "hiragana": "さえる",
             "english": "to be clear (of a sight, sound, colour, etc.); to be bright; to be vivid; to be crisp",
             "jlpt": "n1"
         },
         {
             "kanji": "滅びる",
-            "furigana": "ほろびる",
+            "hiragana": "ほろびる",
             "english": "to go to ruin; to go under; to fall; to be destroyed; to die out; to become extinct; to perish",
             "jlpt": "n1"
         },
         {
             "kanji": "聳える",
-            "furigana": "そびえる",
+            "hiragana": "そびえる",
             "english": "to rise (of a building, mountain, etc.); to tower; to soar",
             "jlpt": "n1"
         },
         {
             "kanji": "備え付ける",
-            "furigana": "そなえつける",
+            "hiragana": "そなえつける",
             "english": "to provide; to furnish; to equip; to install",
             "jlpt": "n1"
         },
         {
             "kanji": "老いる",
-            "furigana": "おいる",
+            "hiragana": "おいる",
             "english": "to age; to grow old",
             "jlpt": "n1"
         },
         {
             "kanji": "途切れる",
-            "furigana": "とぎれる",
+            "hiragana": "とぎれる",
             "english": "to break off; to come to an end; to be interrupted; to be cut short; to pause",
             "jlpt": "n1"
         },
         {
             "kanji": "裂ける",
-            "furigana": "さける",
+            "hiragana": "さける",
             "english": "to split; to tear; to burst; to be separated; to be divided",
             "jlpt": "n1"
         },
         {
             "kanji": "取り寄せる",
-            "furigana": "とりよせる",
+            "hiragana": "とりよせる",
             "english": "to order; to send away for; to have (something) sent to one",
             "jlpt": "n1"
         },
         {
             "kanji": "弱める",
-            "furigana": "よわめる",
+            "hiragana": "よわめる",
             "english": "to weaken",
             "jlpt": "n1"
         },
         {
             "kanji": "腫れる",
-            "furigana": "はれる",
+            "hiragana": "はれる",
             "english": "to swell (from inflammation); to become swollen",
             "jlpt": "n1"
         },
         {
             "kanji": "甘える",
-            "furigana": "あまえる",
+            "hiragana": "あまえる",
             "english": "to behave like a spoiled child; to fawn on",
             "jlpt": "n1"
         },
         {
             "kanji": "栄える",
-            "furigana": "さかえる",
+            "hiragana": "さかえる",
             "english": "to prosper; to flourish",
             "jlpt": "n1"
         },
         {
             "kanji": "映える",
-            "furigana": "はえる",
+            "hiragana": "はえる",
             "english": "to shine; to glow",
             "jlpt": "n1"
         },
         {
             "kanji": "剥げる",
-            "furigana": "はげる",
+            "hiragana": "はげる",
             "english": "to peel off; to come off; to flake off; to be worn off",
             "jlpt": "n1"
         },
         {
             "kanji": "緩める",
-            "furigana": "ゆるめる",
+            "hiragana": "ゆるめる",
             "english": "to loosen; to slacken",
             "jlpt": "n1"
         },
         {
             "kanji": "禁ずる",
-            "furigana": "きんずる",
+            "hiragana": "きんずる",
             "english": "to forbid; to ban; to prohibit",
             "jlpt": "n1"
         },
         {
             "kanji": "組み合わせる",
-            "furigana": "くみあわせる",
+            "hiragana": "くみあわせる",
             "english": "to put together; to combine; to join together; to join up",
             "jlpt": "n1"
         },
         {
             "kanji": "引っ掛ける",
-            "furigana": "ひっかける",
+            "hiragana": "ひっかける",
             "english": "to hang (something) on (something); to throw on (clothes)",
             "jlpt": "n1"
         },
         {
             "kanji": "綻びる",
-            "furigana": "ほころびる",
+            "hiragana": "ほころびる",
             "english": "to come apart at the seams; to be ripped; to be torn",
             "jlpt": "n1"
         },
         {
             "kanji": "沈める",
-            "furigana": "しずめる",
+            "hiragana": "しずめる",
             "english": "to sink (e.g. a ship); to submerge",
             "jlpt": "n1"
         },
         {
             "kanji": "引っ掛ける",
-            "furigana": "ひっかける",
+            "hiragana": "ひっかける",
             "english": "to hang (something) on (something); to throw on (clothes)",
             "jlpt": "n1"
         },
         {
             "kanji": "綻びる",
-            "furigana": "ほころびる",
+            "hiragana": "ほころびる",
             "english": "to come apart at the seams; to be ripped; to be torn",
             "jlpt": "n1"
         },
         {
             "kanji": "丸める",
-            "furigana": "まるめる",
+            "hiragana": "まるめる",
             "english": "to make round; to roll up; to curl up",
             "jlpt": "n1"
         },
         {
             "kanji": "揉める",
-            "furigana": "もめる",
+            "hiragana": "もめる",
             "english": "to disagree; to dispute; to fight (over)",
             "jlpt": "n1"
         },
         {
             "kanji": "懲りる",
-            "furigana": "こりる",
+            "hiragana": "こりる",
             "english": "to learn by experience; to learn one's lesson; to learn the hard way",
             "jlpt": "n1"
         },
         {
             "kanji": "仕入れる",
-            "furigana": "しいれる",
+            "hiragana": "しいれる",
             "english": "to lay in stock; to replenish stock; to procure",
             "jlpt": "n1"
         },
         {
             "kanji": "綴じる",
-            "furigana": "とじる",
+            "hiragana": "とじる",
             "english": "to bind; to file",
             "jlpt": "n1"
         },
         {
             "kanji": "率いる",
-            "furigana": "ひきいる",
+            "hiragana": "ひきいる",
             "english": "to lead; to spearhead (a group); to command (troops)",
             "jlpt": "n1"
         },
         {
             "kanji": "打ち合わせる",
-            "furigana": "うちあわせる",
+            "hiragana": "うちあわせる",
             "english": "to knock together; to strike against each other",
             "jlpt": "n1"
         },
         {
             "kanji": "持てる",
-            "furigana": "もてる",
+            "hiragana": "もてる",
             "english": "to be able to possess (hold, get, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "持てる",
-            "furigana": "もてる",
+            "hiragana": "もてる",
             "english": "to be able to possess (hold, get, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "化ける",
-            "furigana": "ばける",
+            "hiragana": "ばける",
             "english": "to take the form of (esp. in ref. to a spirit, fox, raccoon dog, etc.); to assume the shape of; to turn oneself into; to transform oneself into",
             "jlpt": "n1"
         },
         {
             "kanji": "見かける",
-            "furigana": "みかける",
+            "hiragana": "みかける",
             "english": "to (happen to) see; to notice; to catch sight of",
             "jlpt": "n1"
         },
         {
             "kanji": "怯える",
-            "furigana": "おびえる",
+            "hiragana": "おびえる",
             "english": "to become frightened; to be frightened (of); to be scared (of)",
             "jlpt": "n1"
         },
         {
             "kanji": "結び付ける",
-            "furigana": "むすびつける",
+            "hiragana": "むすびつける",
             "english": "to tie (to); to fasten; to attach; to join; to bind",
             "jlpt": "n1"
         },
         {
             "kanji": "仕える",
-            "furigana": "つかえる",
+            "hiragana": "つかえる",
             "english": "to serve; to work for; to attend",
             "jlpt": "n1"
         },
         {
             "kanji": "生ける",
-            "furigana": "いける",
+            "hiragana": "いける",
             "english": "to arrange (flowers); to plant",
             "jlpt": "n1"
         },
         {
             "kanji": "押し寄せる",
-            "furigana": "おしよせる",
+            "hiragana": "おしよせる",
             "english": "to advance on; to close in; to march on; to descend on (the enemy); to move towards; to surge forward (crowd, wave of nostalgia, wave, etc.); to rush for (the door); to inundate; to overwhelm; to push aside",
             "jlpt": "n1"
         },
         {
             "kanji": "案じる",
-            "furigana": "あんじる",
+            "hiragana": "あんじる",
             "english": "to be anxious (about); to be concerned (about); to worry (about); to fear",
             "jlpt": "n1"
         },
         {
             "kanji": "取り調べる",
-            "furigana": "とりしらべる",
+            "hiragana": "とりしらべる",
             "english": "to investigate; to examine",
             "jlpt": "n1"
         },
         {
             "kanji": "取り立てる",
-            "furigana": "とりたてる",
+            "hiragana": "とりたてる",
             "english": "to collect (debts); to dun; to exact; to extort",
             "jlpt": "n1"
         },
         {
             "kanji": "煽てる",
-            "furigana": "おだてる",
+            "hiragana": "おだてる",
             "english": "to flatter; to soft-soap; to sweet talk; to cajole; to instigate",
             "jlpt": "n1"
         },
         {
             "kanji": "誂える",
-            "furigana": "あつらえる",
+            "hiragana": "あつらえる",
             "english": "to give an order; to place an order; to have made to order",
             "jlpt": "n1"
         },
         {
             "kanji": "捩れる",
-            "furigana": "ねじれる",
+            "hiragana": "ねじれる",
             "english": "to get twisted; to get crooked; to get warped",
             "jlpt": "n1"
         },
         {
             "kanji": "打付ける-1",
-            "furigana": "ぶつける",
+            "hiragana": "ぶつける",
             "english": "to hit (e.g. one's head); to strike; to knock; to run (into); to crash (into)",
             "jlpt": "n1"
         },
         {
             "kanji": "呆れる",
-            "furigana": "あきれる",
+            "hiragana": "あきれる",
             "english": "to be amazed; to be shocked; to be astonished; to be astounded; to be disgusted; to be exasperated; to be fed up",
             "jlpt": "n1"
         },
         {
             "kanji": "凭れる",
-            "furigana": "もたれる",
+            "hiragana": "もたれる",
             "english": "to lean against; to lean on; to recline on",
             "jlpt": "n1"
         },
         {
             "kanji": "草臥れる",
-            "furigana": "くたびれる",
+            "hiragana": "くたびれる",
             "english": "to get tired; to become exhausted; to grow weary",
             "jlpt": "n1"
         },
         {
             "kanji": "くっ付ける",
-            "furigana": "くっつける",
+            "hiragana": "くっつける",
             "english": "to attach; to stick together; to paste; to glue",
             "jlpt": "n1"
         },
         {
             "kanji": "遣り遂げる",
-            "furigana": "やりとげる",
+            "hiragana": "やりとげる",
             "english": "to accomplish; to finish; to carry through; to follow through",
             "jlpt": "n1"
         },
         {
             "kanji": "廃れる",
-            "furigana": "すたれる",
+            "hiragana": "すたれる",
             "english": "to go out of use; to become obsolete; to die out; to go out of fashion; to go out of style",
             "jlpt": "n1"
         },
         {
             "kanji": "退ける",
-            "furigana": "しりぞける",
+            "hiragana": "しりぞける",
             "english": "to refuse; to reject; to turn down; to dismiss",
             "jlpt": "n1"
         },
         {
             "kanji": "震わせる",
-            "furigana": "ふるわせる",
+            "hiragana": "ふるわせる",
             "english": "to (make something) quiver; to shake; to tremble; to vibrate",
             "jlpt": "n1"
         },
         {
             "kanji": "湿気る",
-            "furigana": "しける",
+            "hiragana": "しける",
             "english": "to get damp; to get moist; to get soggy; to become humid",
             "jlpt": "n1"
         },
         {
             "kanji": "朽ちる",
-            "furigana": "くちる",
+            "hiragana": "くちる",
             "english": "to rot; to decay",
             "jlpt": "n1"
         },
         {
             "kanji": "宛てる",
-            "furigana": "あてる",
+            "hiragana": "あてる",
             "english": "to address",
             "jlpt": "n1"
         },
         {
             "kanji": "留める",
-            "furigana": "とどめる",
+            "hiragana": "とどめる",
             "english": "to stop; to stay (e.g. the night); to cease; to put an end to",
             "jlpt": "n1"
         },
         {
             "kanji": "授ける",
-            "furigana": "さずける",
+            "hiragana": "さずける",
             "english": "to grant; to give; to confer; to award",
             "jlpt": "n1"
         },
         {
             "kanji": "紛れる",
-            "furigana": "まぎれる",
+            "hiragana": "まぎれる",
             "english": "to disappear into; to be lost in; to slip into; to get mixed in among",
             "jlpt": "n1"
         },
         {
             "kanji": "垂れる",
-            "furigana": "たれる",
+            "hiragana": "たれる",
             "english": "to hang; to droop; to dangle; to sag; to lower; to pull down",
             "jlpt": "n1"
         },
         {
             "kanji": "ずれる",
-            "furigana": "ずれる",
+            "hiragana": "ずれる",
             "english": "to slide; to slip off; to get dislocated; to be out of alignment; to get dislodged; to deviate; to shift (position); to be out of sync; to be slightly off; to be off-point",
             "jlpt": "n1"
         },
         {
             "kanji": "ぼやける",
-            "furigana": "ぼやける",
+            "hiragana": "ぼやける",
             "english": "to become dim; to become blurred",
             "jlpt": "n1"
         },
         {
             "kanji": "ばてる",
-            "furigana": "バテる",
+            "hiragana": "バテる",
             "english": "to be exhausted; to be worn out",
             "jlpt": "n1"
         },
         {
             "kanji": "やっ付ける",
-            "furigana": "やっつける",
+            "hiragana": "やっつける",
             "english": "to beat; to attack (an enemy); to do away with; to finish off",
             "jlpt": "n1"
         },
         {
             "kanji": "免れる",
-            "furigana": "まぬがれる",
+            "hiragana": "まぬがれる",
             "english": "to escape (disaster, death, etc.); to be saved from; to be rescued from",
             "jlpt": "n1"
         },
         {
             "kanji": "ぶら下げる",
-            "furigana": "ぶらさげる",
+            "hiragana": "ぶらさげる",
             "english": "to hang; to suspend; to dangle; to swing; to carry",
             "jlpt": "n1"
         },
         {
             "kanji": "固める",
-            "furigana": "かためる",
+            "hiragana": "かためる",
             "english": "to harden; to freeze; to strengthen; to solidify; to make (a fist); to tramp down (snow, dirt)",
             "jlpt": "n1"
         },
         {
             "kanji": "演ずる",
-            "furigana": "えんずる",
+            "hiragana": "えんずる",
             "english": "to act (a part); to play (a role)",
             "jlpt": "n1"
         },
         {
             "kanji": "準じる",
-            "furigana": "じゅんじる",
+            "hiragana": "じゅんじる",
             "english": "to follow (a rule, precedent, etc.); to conform to (the law, standards, etc.); to be based on; to apply correspondingly",
             "jlpt": "n1"
         },
         {
             "kanji": "準ずる",
-            "furigana": "じゅんずる",
+            "hiragana": "じゅんずる",
             "english": "to follow (a rule, precedent, etc.); to conform to (the law, standards, etc.); to be based on; to apply correspondingly",
             "jlpt": "n1"
         },
         {
             "kanji": "経る",
-            "furigana": "へる",
+            "hiragana": "へる",
             "english": "to pass; to elapse; to go by",
             "jlpt": "n1"
         },
         {
             "kanji": "差し支える",
-            "furigana": "さしつかえる",
+            "hiragana": "さしつかえる",
             "english": "to interfere (with); to hinder; to be hindered (from doing); to become impeded; to have difficulty; to suffer inconvenience",
             "jlpt": "n1"
         },
         {
             "kanji": "連ねる",
-            "furigana": "つらねる",
+            "hiragana": "つらねる",
             "english": "to line up; to put in a row",
             "jlpt": "n1"
         },
         {
             "kanji": "重んずる",
-            "furigana": "おもんずる",
+            "hiragana": "おもんずる",
             "english": "to honor; to honour; to respect; to esteem; to prize",
             "jlpt": "n1"
         },
         {
             "kanji": "切り替える",
-            "furigana": "きりかえる",
+            "hiragana": "きりかえる",
             "english": "to change; to exchange; to convert; to renew; to throw a switch; to replace; to switch over",
             "jlpt": "n1"
         },
         {
             "kanji": "据え付ける",
-            "furigana": "すえつける",
+            "hiragana": "すえつける",
             "english": "to install; to equip; to mount",
             "jlpt": "n1"
         },
         {
             "kanji": "興じる",
-            "furigana": "きょうじる",
+            "hiragana": "きょうじる",
             "english": "to amuse oneself; to make merry",
             "jlpt": "n1"
         },
         {
             "kanji": "果てる",
-            "furigana": "はてる",
+            "hiragana": "はてる",
             "english": "to end; to be finished; to be exhausted",
             "jlpt": "n1"
         },
         {
             "kanji": "報ずる",
-            "furigana": "ほうずる",
+            "hiragana": "ほうずる",
             "english": "to inform; to report",
             "jlpt": "n1"
         },
         {
             "kanji": "認める",
-            "furigana": "したためる",
+            "hiragana": "したためる",
             "english": "to write (e.g. a letter); to draw up (a document); to take down (e.g. notes)",
             "jlpt": "n1"
         },
         {
             "kanji": "気触れる",
-            "furigana": "かぶれる",
+            "hiragana": "かぶれる",
             "english": "to develop a rash or inflammation (e.g. in response to a skin irritant); to react to (something)",
             "jlpt": "n1"
         },
         {
             "kanji": "汚れる",
-            "furigana": "けがれる",
+            "hiragana": "けがれる",
             "english": "to be violated; to be corrupted; to be polluted; to be stained",
             "jlpt": "n1"
         },
         {
             "kanji": "萎びる",
-            "furigana": "しなびる",
+            "hiragana": "しなびる",
             "english": "to shrivel (e.g. cut vegetables, skin); to wilt; to fade; to wither; to be wizened",
             "jlpt": "n1"
         },
         {
             "kanji": "仕付ける",
-            "furigana": "しつける",
+            "hiragana": "しつける",
             "english": "to be used to; to get accustomed to; to be in the habit of doing",
             "jlpt": "n1"
         },
         {
             "kanji": "取り混ぜる",
-            "furigana": "とりまぜる",
+            "hiragana": "とりまぜる",
             "english": "to mix; to put together",
             "jlpt": "n1"
         },
         {
             "kanji": "蕩ける",
-            "furigana": "とろける",
+            "hiragana": "とろける",
             "english": "to melt (and become soft or liquid)",
             "jlpt": "n1"
         },
         {
             "kanji": "違える",
-            "furigana": "ちがえる",
+            "hiragana": "ちがえる",
             "english": "to change; to alter",
             "jlpt": "n1"
         },
         {
             "kanji": "擦れる",
-            "furigana": "すれる",
+            "hiragana": "すれる",
             "english": "to rub; to chafe",
             "jlpt": "n1"
         },
         {
             "kanji": "拗れる",
-            "furigana": "こじれる",
+            "hiragana": "こじれる",
             "english": "to get complicated; to grow worse; to turn sour",
             "jlpt": "n1"
         }
@@ -2806,5317 +2806,5317 @@ export const jisho = {
     "godan_verb": [
         {
             "kanji": "走る",
-            "furigana": "はしる",
+            "hiragana": "はしる",
             "english": "to run",
             "jlpt": "n5"
         },
         {
             "kanji": "飲む",
-            "furigana": "のむ",
+            "hiragana": "のむ",
             "english": "to drink; to gulp; to swallow; to take (medicine)",
             "jlpt": "n5"
         },
         {
             "kanji": "成る",
-            "furigana": "なる",
+            "hiragana": "なる",
             "english": "to become; to get; to grow; to turn; to reach; to attain",
             "jlpt": "n5"
         },
         {
             "kanji": "在る",
-            "furigana": "ある",
+            "hiragana": "ある",
             "english": "to be; to exist; to live",
             "jlpt": "n5"
         },
         {
             "kanji": "言う",
-            "furigana": "いう",
+            "hiragana": "いう",
             "english": "to say; to utter; to declare",
             "jlpt": "n5"
         },
         {
             "kanji": "知る",
-            "furigana": "しる",
+            "hiragana": "しる",
             "english": "to know; to be aware (of); to be conscious (of); to learn (of); to find out; to discover",
             "jlpt": "n5"
         },
         {
             "kanji": "持つ",
-            "furigana": "もつ",
+            "hiragana": "もつ",
             "english": "to hold (in one's hand); to take; to carry",
             "jlpt": "n5"
         },
         {
             "kanji": "話す",
-            "furigana": "はなす",
+            "hiragana": "はなす",
             "english": "to talk; to speak; to converse; to chat",
             "jlpt": "n5"
         },
         {
             "kanji": "買う",
-            "furigana": "かう",
+            "hiragana": "かう",
             "english": "to buy; to purchase",
             "jlpt": "n5"
         },
         {
             "kanji": "読む",
-            "furigana": "よむ",
+            "hiragana": "よむ",
             "english": "to read",
             "jlpt": "n5"
         },
         {
             "kanji": "取る",
-            "furigana": "とる",
+            "hiragana": "とる",
             "english": "to take; to pick up; to grab; to catch",
             "jlpt": "n5"
         },
         {
             "kanji": "使う",
-            "furigana": "つかう",
+            "hiragana": "つかう",
             "english": "to use (a tool, method, etc.); to make use of; to put to use",
             "jlpt": "n5"
         },
         {
             "kanji": "待つ",
-            "furigana": "まつ",
+            "hiragana": "まつ",
             "english": "to wait",
             "jlpt": "n5"
         },
         {
             "kanji": "作る",
-            "furigana": "つくる",
+            "hiragana": "つくる",
             "english": "to make; to produce; to manufacture; to build; to construct",
             "jlpt": "n5"
         },
         {
             "kanji": "行く",
-            "furigana": "いく",
+            "hiragana": "いく",
             "english": "to go; to move (towards); to head (towards); to leave (for)",
             "jlpt": "n5"
         },
         {
             "kanji": "乗る",
-            "furigana": "のる",
+            "hiragana": "のる",
             "english": "to get on (train, plane, bus, ship, etc.); to get in; to board; to take; to embark",
             "jlpt": "n5"
         },
         {
             "kanji": "終わる",
-            "furigana": "おわる",
+            "hiragana": "おわる",
             "english": "to end; to come to an end; to finish; to close; to be over",
             "jlpt": "n5"
         },
         {
             "kanji": "泳ぐ",
-            "furigana": "およぐ",
+            "hiragana": "およぐ",
             "english": "to swim",
             "jlpt": "n5"
         },
         {
             "kanji": "立つ",
-            "furigana": "たつ",
+            "hiragana": "たつ",
             "english": "to stand (up); to rise; to get to one's feet; to stand on end (e.g. of hairs); to stick up",
             "jlpt": "n5"
         },
         {
             "kanji": "出す",
-            "furigana": "だす",
+            "hiragana": "だす",
             "english": "to take out; to get out",
             "jlpt": "n5"
         },
         {
             "kanji": "呼ぶ",
-            "furigana": "よぶ",
+            "hiragana": "よぶ",
             "english": "to call out (to); to call; to invoke",
             "jlpt": "n5"
         },
         {
             "kanji": "歌う",
-            "furigana": "うたう",
+            "hiragana": "うたう",
             "english": "to sing",
             "jlpt": "n5"
         },
         {
             "kanji": "上る",
-            "furigana": "のぼる",
+            "hiragana": "のぼる",
             "english": "to ascend; to go up; to climb",
             "jlpt": "n5"
         },
         {
             "kanji": "頼む",
-            "furigana": "たのむ",
+            "hiragana": "たのむ",
             "english": "to request; to beg; to ask",
             "jlpt": "n5"
         },
         {
             "kanji": "飛ぶ",
-            "furigana": "とぶ",
+            "hiragana": "とぶ",
             "english": "to fly; to soar",
             "jlpt": "n5"
         },
         {
             "kanji": "売る",
-            "furigana": "うる",
+            "hiragana": "うる",
             "english": "to sell",
             "jlpt": "n5"
         },
         {
             "kanji": "休む",
-            "furigana": "やすむ",
+            "hiragana": "やすむ",
             "english": "to be absent; to take a day off",
             "jlpt": "n5"
         },
         {
             "kanji": "止まる",
-            "furigana": "とまる",
+            "hiragana": "とまる",
             "english": "to stop (moving); to come to a stop",
             "jlpt": "n5"
         },
         {
             "kanji": "洗う",
-            "furigana": "あらう",
+            "hiragana": "あらう",
             "english": "to wash; to cleanse; to rinse",
             "jlpt": "n5"
         },
         {
             "kanji": "切る",
-            "furigana": "きる",
+            "hiragana": "きる",
             "english": "to cut; to cut through; to perform (surgery)",
             "jlpt": "n5"
         },
         {
             "kanji": "返す",
-            "furigana": "かえす",
+            "hiragana": "かえす",
             "english": "to return (something); to restore; to put back",
             "jlpt": "n5"
         },
         {
             "kanji": "押す",
-            "furigana": "おす",
+            "hiragana": "おす",
             "english": "to push; to press",
             "jlpt": "n5"
         },
         {
             "kanji": "張る",
-            "furigana": "はる",
+            "hiragana": "はる",
             "english": "to stick; to paste; to affix",
             "jlpt": "n5"
         },
         {
             "kanji": "渡す",
-            "furigana": "わたす",
+            "hiragana": "わたす",
             "english": "to ferry across (e.g. a river); to carry across; to traverse",
             "jlpt": "n5"
         },
         {
             "kanji": "撮る",
-            "furigana": "とる",
+            "hiragana": "とる",
             "english": "to take (a photograph)",
             "jlpt": "n5"
         },
         {
             "kanji": "会う",
-            "furigana": "あう",
+            "hiragana": "あう",
             "english": "to meet; to encounter; to see",
             "jlpt": "n5"
         },
         {
             "kanji": "分かる",
-            "furigana": "わかる",
+            "hiragana": "わかる",
             "english": "to understand; to comprehend; to grasp; to see; to get; to follow",
             "jlpt": "n5"
         },
         {
             "kanji": "聞く",
-            "furigana": "きく",
+            "hiragana": "きく",
             "english": "to hear",
             "jlpt": "n5"
         },
         {
             "kanji": "書く",
-            "furigana": "かく",
+            "hiragana": "かく",
             "english": "to write; to compose; to pen",
             "jlpt": "n5"
         },
         {
             "kanji": "入る-1",
-            "furigana": "はいる",
+            "hiragana": "はいる",
             "english": "to enter; to come in; to go in; to get in; to arrive",
             "jlpt": "n5"
         },
         {
             "kanji": "置く",
-            "furigana": "おく",
+            "hiragana": "おく",
             "english": "to put; to place",
             "jlpt": "n5"
         },
         {
             "kanji": "住む",
-            "furigana": "すむ",
+            "hiragana": "すむ",
             "english": "to live (of humans); to reside; to inhabit; to dwell; to abide",
             "jlpt": "n5"
         },
         {
             "kanji": "歩く",
-            "furigana": "あるく",
+            "hiragana": "あるく",
             "english": "to walk",
             "jlpt": "n5"
         },
         {
             "kanji": "働く",
-            "furigana": "はたらく",
+            "hiragana": "はたらく",
             "english": "to work; to labor; to labour",
             "jlpt": "n5"
         },
         {
             "kanji": "着く",
-            "furigana": "つく",
+            "hiragana": "つく",
             "english": "to arrive at; to reach",
             "jlpt": "n5"
         },
         {
             "kanji": "降る",
-            "furigana": "ふる",
+            "hiragana": "ふる",
             "english": "to fall (of rain, snow, ash, etc.); to come down",
             "jlpt": "n5"
         },
         {
             "kanji": "死ぬ",
-            "furigana": "しぬ",
+            "hiragana": "しぬ",
             "english": "to die; to pass away",
             "jlpt": "n5"
         },
         {
             "kanji": "帰る",
-            "furigana": "かえる",
+            "hiragana": "かえる",
             "english": "to return; to come home; to go home; to go back",
             "jlpt": "n5"
         },
         {
             "kanji": "掛かる",
-            "furigana": "かかる",
+            "hiragana": "かかる",
             "english": "to take (a resource, e.g. time or money)",
             "jlpt": "n5"
         },
         {
             "kanji": "座る",
-            "furigana": "すわる",
+            "hiragana": "すわる",
             "english": "to sit; to squat",
             "jlpt": "n5"
         },
         {
             "kanji": "違う",
-            "furigana": "ちがう",
+            "hiragana": "ちがう",
             "english": "to differ (from); to be different; to be distinct; to be unlike; to vary; to disagree (with)",
             "jlpt": "n5"
         },
         {
             "kanji": "困る",
-            "furigana": "こまる",
+            "hiragana": "こまる",
             "english": "to be troubled; to have difficulty; to be in a fix; to be at a loss; to be stumped; to be embarrassed",
             "jlpt": "n5"
         },
         {
             "kanji": "始まる",
-            "furigana": "はじまる",
+            "hiragana": "はじまる",
             "english": "to begin; to start; to commence",
             "jlpt": "n5"
         },
         {
             "kanji": "貸す",
-            "furigana": "かす",
+            "hiragana": "かす",
             "english": "to lend; to loan",
             "jlpt": "n5"
         },
         {
             "kanji": "弾く-1",
-            "furigana": "ひく",
+            "hiragana": "ひく",
             "english": "to play (a stringed or keyboard instrument)",
             "jlpt": "n5"
         },
         {
             "kanji": "遊ぶ",
-            "furigana": "あそぶ",
+            "hiragana": "あそぶ",
             "english": "to play (games, sports); to enjoy oneself; to have a good time",
             "jlpt": "n5"
         },
         {
             "kanji": "無くす",
-            "furigana": "なくす",
+            "hiragana": "なくす",
             "english": "to lose (something)",
             "jlpt": "n5"
         },
         {
             "kanji": "渡る",
-            "furigana": "わたる",
+            "hiragana": "わたる",
             "english": "to cross over; to go across",
             "jlpt": "n5"
         },
         {
             "kanji": "消す",
-            "furigana": "けす",
+            "hiragana": "けす",
             "english": "to erase; to rub out; to rub off; to cross out; to delete",
             "jlpt": "n5"
         },
         {
             "kanji": "曲がる",
-            "furigana": "まがる",
+            "hiragana": "まがる",
             "english": "to bend; to curve; to warp; to wind; to twist",
             "jlpt": "n5"
         },
         {
             "kanji": "吹く",
-            "furigana": "ふく",
+            "hiragana": "ふく",
             "english": "to blow (of the wind)",
             "jlpt": "n5"
         },
         {
             "kanji": "引く",
-            "furigana": "ひく",
+            "hiragana": "ひく",
             "english": "to pull; to tug; to lead (e.g. a horse)",
             "jlpt": "n5"
         },
         {
             "kanji": "習う",
-            "furigana": "ならう",
+            "hiragana": "ならう",
             "english": "to take lessons in; to be taught; to learn (from a teacher); to study (under a teacher); to get training in",
             "jlpt": "n5"
         },
         {
             "kanji": "脱ぐ",
-            "furigana": "ぬぐ",
+            "hiragana": "ぬぐ",
             "english": "to take off (clothes, shoes, etc.); to undress",
             "jlpt": "n5"
         },
         {
             "kanji": "並ぶ",
-            "furigana": "ならぶ",
+            "hiragana": "ならぶ",
             "english": "to line up; to stand in a line",
             "jlpt": "n5"
         },
         {
             "kanji": "吸う",
-            "furigana": "すう",
+            "hiragana": "すう",
             "english": "to smoke; to breathe in; to inhale",
             "jlpt": "n5"
         },
         {
             "kanji": "閉まる",
-            "furigana": "しまる",
+            "hiragana": "しまる",
             "english": "to be shut; to close; to be closed",
             "jlpt": "n5"
         },
         {
             "kanji": "咲く",
-            "furigana": "さく",
+            "hiragana": "さく",
             "english": "to bloom; to flower; to blossom; to open",
             "jlpt": "n5"
         },
         {
             "kanji": "曇る",
-            "furigana": "くもる",
+            "hiragana": "くもる",
             "english": "to get cloudy; to cloud over; to become overcast",
             "jlpt": "n5"
         },
         {
             "kanji": "磨く",
-            "furigana": "みがく",
+            "hiragana": "みがく",
             "english": "to polish; to shine; to burnish; to scour; to scrub; to brush (teeth); to grind (e.g. a lens)",
             "jlpt": "n5"
         },
         {
             "kanji": "鳴く",
-            "furigana": "なく",
+            "hiragana": "なく",
             "english": "to make sound (of an animal); to call; to cry; to whine; to sing; to chirp",
             "jlpt": "n5"
         },
         {
             "kanji": "差す",
-            "furigana": "さす",
+            "hiragana": "さす",
             "english": "to shine",
             "jlpt": "n5"
         },
         {
             "kanji": "要る",
-            "furigana": "いる",
+            "hiragana": "いる",
             "english": "to need; to want",
             "jlpt": "n5"
         },
         {
             "kanji": "開く-1",
-            "furigana": "あく",
+            "hiragana": "あく",
             "english": "to open (e.g. doors)",
             "jlpt": "n5"
         },
         {
             "kanji": "思う",
-            "furigana": "おもう",
+            "hiragana": "おもう",
             "english": "to think; to consider; to believe; to reckon",
             "jlpt": "n4"
         },
         {
             "kanji": "探す",
-            "furigana": "さがす",
+            "hiragana": "さがす",
             "english": "to search for; to look for; to hunt for; to seek",
             "jlpt": "n4"
         },
         {
             "kanji": "急ぐ",
-            "furigana": "いそぐ",
+            "hiragana": "いそぐ",
             "english": "to hurry; to rush; to hasten; to make something happen sooner",
             "jlpt": "n4"
         },
         {
             "kanji": "選ぶ",
-            "furigana": "えらぶ",
+            "hiragana": "えらぶ",
             "english": "to choose; to select",
             "jlpt": "n4"
         },
         {
             "kanji": "送る",
-            "furigana": "おくる",
+            "hiragana": "おくる",
             "english": "to send (a thing); to dispatch; to despatch; to transmit",
             "jlpt": "n4"
         },
         {
             "kanji": "怒る",
-            "furigana": "おこる",
+            "hiragana": "おこる",
             "english": "to get angry; to get mad",
             "jlpt": "n4"
         },
         {
             "kanji": "払う",
-            "furigana": "はらう",
+            "hiragana": "はらう",
             "english": "to pay (e.g. money, bill)",
             "jlpt": "n4"
         },
         {
             "kanji": "合う",
-            "furigana": "あう",
+            "hiragana": "あう",
             "english": "to come together; to merge; to unite; to meet",
             "jlpt": "n4"
         },
         {
             "kanji": "笑う",
-            "furigana": "わらう",
+            "hiragana": "わらう",
             "english": "to laugh",
             "jlpt": "n4"
         },
         {
             "kanji": "喜ぶ",
-            "furigana": "よろこぶ",
+            "hiragana": "よろこぶ",
             "english": "to be delighted; to be glad; to be pleased",
             "jlpt": "n4"
         },
         {
             "kanji": "思い出す",
-            "furigana": "おもいだす",
+            "hiragana": "おもいだす",
             "english": "to recall; to remember; to recollect",
             "jlpt": "n4"
         },
         {
             "kanji": "変わる",
-            "furigana": "かわる",
+            "hiragana": "かわる",
             "english": "to change; to be transformed; to be altered; to vary",
             "jlpt": "n4"
         },
         {
             "kanji": "楽しむ",
-            "furigana": "たのしむ",
+            "hiragana": "たのしむ",
             "english": "to enjoy; to take pleasure in; to have a good time; to have fun",
             "jlpt": "n4"
         },
         {
             "kanji": "間に合う",
-            "furigana": "まにあう",
+            "hiragana": "まにあう",
             "english": "to be in time (for)",
             "jlpt": "n4"
         },
         {
             "kanji": "進む",
-            "furigana": "すすむ",
+            "hiragana": "すすむ",
             "english": "to advance; to go forward",
             "jlpt": "n4"
         },
         {
             "kanji": "向かう",
-            "furigana": "むかう",
+            "hiragana": "むかう",
             "english": "to face",
             "jlpt": "n4"
         },
         {
             "kanji": "通る",
-            "furigana": "とおる",
+            "hiragana": "とおる",
             "english": "to go by; to go past; to go along; to travel along; to pass through; to use (a road); to take (a route); to go via; to go by way of",
             "jlpt": "n4"
         },
         {
             "kanji": "起こす",
-            "furigana": "おこす",
+            "hiragana": "おこす",
             "english": "to raise; to raise up; to set up; to pick up",
             "jlpt": "n4"
         },
         {
             "kanji": "運ぶ",
-            "furigana": "はこぶ",
+            "hiragana": "はこぶ",
             "english": "to carry; to transport; to move; to convey",
             "jlpt": "n4"
         },
         {
             "kanji": "盗む",
-            "furigana": "ぬすむ",
+            "hiragana": "ぬすむ",
             "english": "to steal",
             "jlpt": "n4"
         },
         {
             "kanji": "残る",
-            "furigana": "のこる",
+            "hiragana": "のこる",
             "english": "to remain; to be left",
             "jlpt": "n4"
         },
         {
             "kanji": "上がる",
-            "furigana": "あがる",
+            "hiragana": "あがる",
             "english": "to rise; to go up; to come up; to ascend; to be raised",
             "jlpt": "n4"
         },
         {
             "kanji": "致す",
-            "furigana": "いたす",
+            "hiragana": "いたす",
             "english": "to do",
             "jlpt": "n4"
         },
         {
             "kanji": "役に立つ",
-            "furigana": "やくにたつ",
+            "hiragana": "やくにたつ",
             "english": "to be helpful; to be useful",
             "jlpt": "n4"
         },
         {
             "kanji": "行う",
-            "furigana": "おこなう",
+            "hiragana": "おこなう",
             "english": "to perform; to do; to conduct oneself; to carry out",
             "jlpt": "n4"
         },
         {
             "kanji": "見つかる",
-            "furigana": "みつかる",
+            "hiragana": "みつかる",
             "english": "to be found; to be discovered",
             "jlpt": "n4"
         },
         {
             "kanji": "打つ",
-            "furigana": "うつ",
+            "hiragana": "うつ",
             "english": "to hit; to strike; to knock; to beat; to punch; to slap; to tap; to bang; to clap; to pound",
             "jlpt": "n4"
         },
         {
             "kanji": "集まる",
-            "furigana": "あつまる",
+            "hiragana": "あつまる",
             "english": "to gather; to collect; to assemble",
             "jlpt": "n4"
         },
         {
             "kanji": "落とす",
-            "furigana": "おとす",
+            "hiragana": "おとす",
             "english": "to drop; to lose; to let fall; to shed (light); to cast (one's gaze); to pour in (liquid); to leave behind",
             "jlpt": "n4"
         },
         {
             "kanji": "壊す",
-            "furigana": "こわす",
+            "hiragana": "こわす",
             "english": "to break; to destroy; to demolish",
             "jlpt": "n4"
         },
         {
             "kanji": "下がる",
-            "furigana": "さがる",
+            "hiragana": "さがる",
             "english": "to come down; to go down; to fall; to drop; to sink; to get lower",
             "jlpt": "n4"
         },
         {
             "kanji": "決まる",
-            "furigana": "きまる",
+            "hiragana": "きまる",
             "english": "to be decided; to be settled; to be fixed; to be arranged",
             "jlpt": "n4"
         },
         {
             "kanji": "引っ越す",
-            "furigana": "ひっこす",
+            "hiragana": "ひっこす",
             "english": "to move (house); to change residence",
             "jlpt": "n4"
         },
         {
             "kanji": "通う",
-            "furigana": "かよう",
+            "hiragana": "かよう",
             "english": "to go to and from (a place); to go back and forth between; to run between (e.g. bus, train, etc.); to ply between",
             "jlpt": "n4"
         },
         {
             "kanji": "騒ぐ",
-            "furigana": "さわぐ",
+            "hiragana": "さわぐ",
             "english": "to make noise; to make racket; to be noisy",
             "jlpt": "n4"
         },
         {
             "kanji": "踏む",
-            "furigana": "ふむ",
+            "hiragana": "ふむ",
             "english": "to step on; to tread on; to trample on",
             "jlpt": "n4"
         },
         {
             "kanji": "飾る",
-            "furigana": "かざる",
+            "hiragana": "かざる",
             "english": "to decorate; to ornament; to adorn",
             "jlpt": "n4"
         },
         {
             "kanji": "引き出す",
-            "furigana": "ひきだす",
+            "hiragana": "ひきだす",
             "english": "to pull out; to take out; to draw out",
             "jlpt": "n4"
         },
         {
             "kanji": "申す",
-            "furigana": "もうす",
+            "hiragana": "もうす",
             "english": "to say; to be called",
             "jlpt": "n4"
         },
         {
             "kanji": "写す",
-            "furigana": "うつす",
+            "hiragana": "うつす",
             "english": "to transcribe; to duplicate; to reproduce; to imitate; to trace",
             "jlpt": "n4"
         },
         {
             "kanji": "沸かす",
-            "furigana": "わかす",
+            "hiragana": "わかす",
             "english": "to boil; to heat",
             "jlpt": "n4"
         },
         {
             "kanji": "手伝う",
-            "furigana": "てつだう",
+            "hiragana": "てつだう",
             "english": "to help; to assist; to aid",
             "jlpt": "n4"
         },
         {
             "kanji": "驚く",
-            "furigana": "おどろく",
+            "hiragana": "おどろく",
             "english": "to be surprised; to be astonished",
             "jlpt": "n4"
         },
         {
             "kanji": "開く",
-            "furigana": "ひらく",
+            "hiragana": "ひらく",
             "english": "to open; to undo; to unseal; to unpack",
             "jlpt": "n4"
         },
         {
             "kanji": "眠る",
-            "furigana": "ねむる",
+            "hiragana": "ねむる",
             "english": "to sleep",
             "jlpt": "n4"
         },
         {
             "kanji": "勝つ",
-            "furigana": "かつ",
+            "hiragana": "かつ",
             "english": "to win; to gain victory",
             "jlpt": "n4"
         },
         {
             "kanji": "泣く",
-            "furigana": "なく",
+            "hiragana": "なく",
             "english": "to cry; to weep; to sob; to howl",
             "jlpt": "n4"
         },
         {
             "kanji": "戻る",
-            "furigana": "もどる",
+            "hiragana": "もどる",
             "english": "to turn back (e.g. half-way)",
             "jlpt": "n4"
         },
         {
             "kanji": "無くなる",
-            "furigana": "なくなる",
+            "hiragana": "なくなる",
             "english": "to be lost (e.g. luggage); to be missing",
             "jlpt": "n4"
         },
         {
             "kanji": "動く",
-            "furigana": "うごく",
+            "hiragana": "うごく",
             "english": "to move; to stir; to shift; to shake; to swing",
             "jlpt": "n4"
         },
         {
             "kanji": "続く",
-            "furigana": "つづく",
+            "hiragana": "つづく",
             "english": "to continue; to last; to go on",
             "jlpt": "n4"
         },
         {
             "kanji": "鳴る",
-            "furigana": "なる",
+            "hiragana": "なる",
             "english": "to sound; to ring; to resound; to echo; to roar; to rumble",
             "jlpt": "n4"
         },
         {
             "kanji": "亡くなる",
-            "furigana": "なくなる",
+            "hiragana": "なくなる",
             "english": "to die; to pass away",
             "jlpt": "n4"
         },
         {
             "kanji": "治す",
-            "furigana": "なおす",
+            "hiragana": "なおす",
             "english": "to repair; to mend; to fix; to correct (a mistake, bad habit, etc.); to put right; to restore; to straighten (e.g. a tie); to tidy up (one's hair, make-up, etc.); to revive (one's spirits)",
             "jlpt": "n4"
         },
         {
             "kanji": "回る",
-            "furigana": "まわる",
+            "hiragana": "まわる",
             "english": "to turn; to rotate; to revolve; to spin",
             "jlpt": "n4"
         },
         {
             "kanji": "塗る",
-            "furigana": "ぬる",
+            "hiragana": "ぬる",
             "english": "to paint; to plaster; to lacquer; to varnish; to spread; to smear; to put up (wallpaper)",
             "jlpt": "n4"
         },
         {
             "kanji": "泊まる",
-            "furigana": "とまる",
+            "hiragana": "とまる",
             "english": "to stay at (e.g. hotel)",
             "jlpt": "n4"
         },
         {
             "kanji": "止む",
-            "furigana": "やむ",
+            "hiragana": "やむ",
             "english": "to cease; to stop; to be over",
             "jlpt": "n4"
         },
         {
             "kanji": "済む",
-            "furigana": "すむ",
+            "hiragana": "すむ",
             "english": "to finish; to end; to be completed",
             "jlpt": "n4"
         },
         {
             "kanji": "踊る",
-            "furigana": "おどる",
+            "hiragana": "おどる",
             "english": "to dance (orig. a hopping dance)",
             "jlpt": "n4"
         },
         {
             "kanji": "治る",
-            "furigana": "なおる",
+            "hiragana": "なおる",
             "english": "to get better; to get well; to recover (from an illness); to be cured; to be restored; to heal",
             "jlpt": "n4"
         },
         {
             "kanji": "為さる",
-            "furigana": "なさる",
+            "hiragana": "なさる",
             "english": "to do",
             "jlpt": "n4"
         },
         {
             "kanji": "謝る",
-            "furigana": "あやまる",
+            "hiragana": "あやまる",
             "english": "to apologize; to apologise",
             "jlpt": "n4"
         },
         {
             "kanji": "太る",
-            "furigana": "ふとる",
+            "hiragana": "ふとる",
             "english": "to put on weight; to gain weight; to grow fat; to get stout",
             "jlpt": "n4"
         },
         {
             "kanji": "寄る",
-            "furigana": "よる",
+            "hiragana": "よる",
             "english": "to approach; to draw near; to come near; to be close to",
             "jlpt": "n4"
         },
         {
             "kanji": "参る",
-            "furigana": "まいる",
+            "hiragana": "まいる",
             "english": "to go; to come; to call",
             "jlpt": "n4"
         },
         {
             "kanji": "召し上がる",
-            "furigana": "めしあがる",
+            "hiragana": "めしあがる",
             "english": "to eat; to drink",
             "jlpt": "n4"
         },
         {
             "kanji": "祈る",
-            "furigana": "いのる",
+            "hiragana": "いのる",
             "english": "to pray; to say a prayer; to say grace",
             "jlpt": "n4"
         },
         {
             "kanji": "込む",
-            "furigana": "こむ",
+            "hiragana": "こむ",
             "english": "to be crowded; to be packed; to be congested; to be thronged (with)",
             "jlpt": "n4"
         },
         {
             "kanji": "折る",
-            "furigana": "おる",
+            "hiragana": "おる",
             "english": "to break; to fracture; to break off; to snap off; to pick (e.g. flowers)",
             "jlpt": "n4"
         },
         {
             "kanji": "噛む",
-            "furigana": "かむ",
+            "hiragana": "かむ",
             "english": "to bite",
             "jlpt": "n4"
         },
         {
             "kanji": "触る",
-            "furigana": "さわる",
+            "hiragana": "さわる",
             "english": "to touch; to feel",
             "jlpt": "n4"
         },
         {
             "kanji": "拾う",
-            "furigana": "ひろう",
+            "hiragana": "ひろう",
             "english": "to pick up; to gather",
             "jlpt": "n4"
         },
         {
             "kanji": "焼く",
-            "furigana": "やく",
+            "hiragana": "やく",
             "english": "to burn",
             "jlpt": "n4"
         },
         {
             "kanji": "滑る",
-            "furigana": "すべる",
+            "hiragana": "すべる",
             "english": "to glide; to slide (e.g. on skis); to slip",
             "jlpt": "n4"
         },
         {
             "kanji": "移る",
-            "furigana": "うつる",
+            "hiragana": "うつる",
             "english": "to move (house); to transfer (department)",
             "jlpt": "n4"
         },
         {
             "kanji": "光る",
-            "furigana": "ひかる",
+            "hiragana": "ひかる",
             "english": "to shine; to glitter; to be bright",
             "jlpt": "n4"
         },
         {
             "kanji": "乾く",
-            "furigana": "かわく",
+            "hiragana": "かわく",
             "english": "to get dry",
             "jlpt": "n4"
         },
         {
             "kanji": "釣る",
-            "furigana": "つる",
+            "hiragana": "つる",
             "english": "to fish; to angle; to catch",
             "jlpt": "n4"
         },
         {
             "kanji": "足す",
-            "furigana": "たす",
+            "hiragana": "たす",
             "english": "to add (numbers)",
             "jlpt": "n4"
         },
         {
             "kanji": "沸く",
-            "furigana": "わく",
+            "hiragana": "わく",
             "english": "to grow hot (e.g. water); to boil",
             "jlpt": "n4"
         },
         {
             "kanji": "付く",
-            "furigana": "つく",
+            "hiragana": "つく",
             "english": "to be attached; to be connected with; to adhere; to stick; to cling",
             "jlpt": "n4"
         },
         {
             "kanji": "降り出す",
-            "furigana": "ふりだす",
+            "hiragana": "ふりだす",
             "english": "to begin to rain; to begin to snow",
             "jlpt": "n4"
         },
         {
             "kanji": "開く-1",
-            "furigana": "あく",
+            "hiragana": "あく",
             "english": "to open (e.g. doors)",
             "jlpt": "n4"
         },
         {
             "kanji": "包む",
-            "furigana": "つつむ",
+            "hiragana": "つつむ",
             "english": "to wrap up; to pack; to bundle; to do up",
             "jlpt": "n4"
         },
         {
             "kanji": "いらっしゃる",
-            "furigana": "いらっしゃる",
+            "hiragana": "いらっしゃる",
             "english": "to come; to go; to be (somewhere)",
             "jlpt": "n4"
         },
         {
             "kanji": "仰っしゃる",
-            "furigana": "おっしゃる",
+            "hiragana": "おっしゃる",
             "english": "to say; to speak; to tell; to talk",
             "jlpt": "n4"
         },
         {
             "kanji": "ご覧になる",
-            "furigana": "ごらんになる",
+            "hiragana": "ごらんになる",
             "english": "to see; to look; to watch",
             "jlpt": "n4"
         },
         {
             "kanji": "お出でになる",
-            "furigana": "おいでになる",
+            "hiragana": "おいでになる",
             "english": "to be",
             "jlpt": "n4"
         },
         {
             "kanji": "成る",
-            "furigana": "なる",
+            "hiragana": "なる",
             "english": "to become; to get; to grow; to turn; to reach; to attain",
             "jlpt": "n3"
         },
         {
             "kanji": "在る",
-            "furigana": "ある",
+            "hiragana": "ある",
             "english": "to be; to exist; to live",
             "jlpt": "n3"
         },
         {
             "kanji": "言う",
-            "furigana": "いう",
+            "hiragana": "いう",
             "english": "to say; to utter; to declare",
             "jlpt": "n3"
         },
         {
             "kanji": "上る",
-            "furigana": "のぼる",
+            "hiragana": "のぼる",
             "english": "to ascend; to go up; to climb",
             "jlpt": "n3"
         },
         {
             "kanji": "張る",
-            "furigana": "はる",
+            "hiragana": "はる",
             "english": "to stick; to paste; to affix",
             "jlpt": "n3"
         },
         {
             "kanji": "掛かる",
-            "furigana": "かかる",
+            "hiragana": "かかる",
             "english": "to take (a resource, e.g. time or money)",
             "jlpt": "n3"
         },
         {
             "kanji": "起こる",
-            "furigana": "おこる",
+            "hiragana": "おこる",
             "english": "to occur; to happen",
             "jlpt": "n3"
         },
         {
             "kanji": "守る",
-            "furigana": "まもる",
+            "hiragana": "まもる",
             "english": "to protect; to guard; to defend",
             "jlpt": "n3"
         },
         {
             "kanji": "失う",
-            "furigana": "うしなう",
+            "hiragana": "うしなう",
             "english": "to lose",
             "jlpt": "n3"
         },
         {
             "kanji": "下さる",
-            "furigana": "くださる",
+            "hiragana": "くださる",
             "english": "to give; to confer; to bestow",
             "jlpt": "n3"
         },
         {
             "kanji": "許す",
-            "furigana": "ゆるす",
+            "hiragana": "ゆるす",
             "english": "to permit; to allow; to approve; to consent to",
             "jlpt": "n3"
         },
         {
             "kanji": "受け取る",
-            "furigana": "うけとる",
+            "hiragana": "うけとる",
             "english": "to receive; to get; to accept",
             "jlpt": "n3"
         },
         {
             "kanji": "扱う",
-            "furigana": "あつかう",
+            "hiragana": "あつかう",
             "english": "to deal with (a person); to treat; to handle; to take care of; to entertain",
             "jlpt": "n3"
         },
         {
             "kanji": "望む",
-            "furigana": "のぞむ",
+            "hiragana": "のぞむ",
             "english": "to desire; to want; to wish for; to hope for",
             "jlpt": "n3"
         },
         {
             "kanji": "示す",
-            "furigana": "しめす",
+            "hiragana": "しめす",
             "english": "to (take out and) show; to demonstrate; to tell; to exemplify; to make apparent",
             "jlpt": "n3"
         },
         {
             "kanji": "黙る",
-            "furigana": "だまる",
+            "hiragana": "だまる",
             "english": "to be silent; to say nothing",
             "jlpt": "n3"
         },
         {
             "kanji": "出会う",
-            "furigana": "であう",
+            "hiragana": "であう",
             "english": "to meet (by chance); to come across; to run across; to encounter; to happen upon",
             "jlpt": "n3"
         },
         {
             "kanji": "奪う",
-            "furigana": "うばう",
+            "hiragana": "うばう",
             "english": "to take (by force); to take away; to snatch; to steal; to rob (someone) of; to dispossess of; to deprive of; to usurp",
             "jlpt": "n3"
         },
         {
             "kanji": "話し合う",
-            "furigana": "はなしあう",
+            "hiragana": "はなしあう",
             "english": "to discuss; to talk together",
             "jlpt": "n3"
         },
         {
             "kanji": "好む",
-            "furigana": "このむ",
+            "hiragana": "このむ",
             "english": "to like; to prefer",
             "jlpt": "n3"
         },
         {
             "kanji": "追いつく",
-            "furigana": "おいつく",
+            "hiragana": "おいつく",
             "english": "to catch up (with); to draw level; to pull even; to reach",
             "jlpt": "n3"
         },
         {
             "kanji": "残す",
-            "furigana": "のこす",
+            "hiragana": "のこす",
             "english": "to leave (behind)",
             "jlpt": "n3"
         },
         {
             "kanji": "隠す",
-            "furigana": "かくす",
+            "hiragana": "かくす",
             "english": "to hide; to conceal",
             "jlpt": "n3"
         },
         {
             "kanji": "頼る",
-            "furigana": "たよる",
+            "hiragana": "たよる",
             "english": "to rely on; to depend on; to count on; to turn to (for help)",
             "jlpt": "n3"
         },
         {
             "kanji": "戦う",
-            "furigana": "たたかう",
+            "hiragana": "たたかう",
             "english": "to make war (on); to wage war (against); to go to war (with); to fight (with); to do battle (against)",
             "jlpt": "n3"
         },
         {
             "kanji": "覆う",
-            "furigana": "おおう",
+            "hiragana": "おおう",
             "english": "to cover; to hide; to conceal; to wrap; to disguise",
             "jlpt": "n3"
         },
         {
             "kanji": "断る",
-            "furigana": "ことわる",
+            "hiragana": "ことわる",
             "english": "to refuse; to reject; to dismiss; to turn down; to decline",
             "jlpt": "n3"
         },
         {
             "kanji": "支払う",
-            "furigana": "しはらう",
+            "hiragana": "しはらう",
             "english": "to pay",
             "jlpt": "n3"
         },
         {
             "kanji": "雇う",
-            "furigana": "やとう",
+            "hiragana": "やとう",
             "english": "to employ",
             "jlpt": "n3"
         },
         {
             "kanji": "殺す",
-            "furigana": "ころす",
+            "hiragana": "ころす",
             "english": "to kill; to slay; to murder; to slaughter",
             "jlpt": "n3"
         },
         {
             "kanji": "疑う",
-            "furigana": "うたがう",
+            "hiragana": "うたがう",
             "english": "to doubt; to distrust; to be suspicious of; to suspect",
             "jlpt": "n3"
         },
         {
             "kanji": "通す",
-            "furigana": "とおす",
+            "hiragana": "とおす",
             "english": "to stick through; to force through",
             "jlpt": "n3"
         },
         {
             "kanji": "動かす",
-            "furigana": "うごかす",
+            "hiragana": "うごかす",
             "english": "to move; to shift; to stir; to budge; to change position",
             "jlpt": "n3"
         },
         {
             "kanji": "救う",
-            "furigana": "すくう",
+            "hiragana": "すくう",
             "english": "to rescue from; to help out of; to save",
             "jlpt": "n3"
         },
         {
             "kanji": "育つ",
-            "furigana": "そだつ",
+            "hiragana": "そだつ",
             "english": "to be raised (e.g. child); to be brought up; to grow (up)",
             "jlpt": "n3"
         },
         {
             "kanji": "誘う",
-            "furigana": "さそう",
+            "hiragana": "さそう",
             "english": "to invite; to ask (someone to do); to call (for); to take (someone) along",
             "jlpt": "n3"
         },
         {
             "kanji": "繰り返す",
-            "furigana": "くりかえす",
+            "hiragana": "くりかえす",
             "english": "to repeat; to do something over again",
             "jlpt": "n3"
         },
         {
             "kanji": "語る",
-            "furigana": "かたる",
+            "hiragana": "かたる",
             "english": "to talk about; to speak of; to tell; to narrate",
             "jlpt": "n3"
         },
         {
             "kanji": "限る",
-            "furigana": "かぎる",
+            "hiragana": "かぎる",
             "english": "to restrict; to limit; to confine",
             "jlpt": "n3"
         },
         {
             "kanji": "破る",
-            "furigana": "やぶる",
+            "hiragana": "やぶる",
             "english": "to tear; to rip; to break; to destroy",
             "jlpt": "n3"
         },
         {
             "kanji": "減る",
-            "furigana": "へる",
+            "hiragana": "へる",
             "english": "to decrease (in size or number); to diminish; to abate",
             "jlpt": "n3"
         },
         {
             "kanji": "回す",
-            "furigana": "まわす",
+            "hiragana": "まわす",
             "english": "to turn; to rotate; to spin; to twist; to gyrate",
             "jlpt": "n3"
         },
         {
             "kanji": "計る",
-            "furigana": "はかる",
+            "hiragana": "はかる",
             "english": "to measure; to weigh; to survey; to time (sound, gauge, estimate)",
             "jlpt": "n3"
         },
         {
             "kanji": "裏切る",
-            "furigana": "うらぎる",
+            "hiragana": "うらぎる",
             "english": "to betray; to turn traitor to; to double-cross",
             "jlpt": "n3"
         },
         {
             "kanji": "加わる",
-            "furigana": "くわわる",
+            "hiragana": "くわわる",
             "english": "to be added to; to be appended",
             "jlpt": "n3"
         },
         {
             "kanji": "構う",
-            "furigana": "かまう",
+            "hiragana": "かまう",
             "english": "to mind; to care about; to be concerned about; to have a regard for",
             "jlpt": "n3"
         },
         {
             "kanji": "結ぶ",
-            "furigana": "むすぶ",
+            "hiragana": "むすぶ",
             "english": "to tie; to bind; to link",
             "jlpt": "n3"
         },
         {
             "kanji": "囲む",
-            "furigana": "かこむ",
+            "hiragana": "かこむ",
             "english": "to surround; to encircle; to enclose; to fence; to wall in",
             "jlpt": "n3"
         },
         {
             "kanji": "追う",
-            "furigana": "おう",
+            "hiragana": "おう",
             "english": "to chase; to run after; to pursue; to follow after",
             "jlpt": "n3"
         },
         {
             "kanji": "組む",
-            "furigana": "くむ",
+            "hiragana": "くむ",
             "english": "to cross (legs or arms); to link (arms)",
             "jlpt": "n3"
         },
         {
             "kanji": "刈る",
-            "furigana": "かる",
+            "hiragana": "かる",
             "english": "to cut (grass, hair, etc.); to mow; to clip; to trim; to prune; to shear; to reap; to harvest",
             "jlpt": "n3"
         },
         {
             "kanji": "飛び出す",
-            "furigana": "とびだす",
+            "hiragana": "とびだす",
             "english": "to jump out; to rush out; to fly out",
             "jlpt": "n3"
         },
         {
             "kanji": "減らす",
-            "furigana": "へらす",
+            "hiragana": "へらす",
             "english": "to abate; to decrease; to diminish; to shorten",
             "jlpt": "n3"
         },
         {
             "kanji": "握る",
-            "furigana": "にぎる",
+            "hiragana": "にぎる",
             "english": "to clasp; to grasp; to grip; to clutch",
             "jlpt": "n3"
         },
         {
             "kanji": "悩む",
-            "furigana": "なやむ",
+            "hiragana": "なやむ",
             "english": "to be worried; to be troubled",
             "jlpt": "n3"
         },
         {
             "kanji": "悲しむ",
-            "furigana": "かなしむ",
+            "hiragana": "かなしむ",
             "english": "to be sad; to mourn for; to regret",
             "jlpt": "n3"
         },
         {
             "kanji": "祝う",
-            "furigana": "いわう",
+            "hiragana": "いわう",
             "english": "to celebrate; to congratulate; to observe (a festival)",
             "jlpt": "n3"
         },
         {
             "kanji": "試す",
-            "furigana": "ためす",
+            "hiragana": "ためす",
             "english": "to try (out); to have a try (at); to test; to put to the test",
             "jlpt": "n3"
         },
         {
             "kanji": "嫌う",
-            "furigana": "きらう",
+            "hiragana": "きらう",
             "english": "to hate; to dislike; to loathe",
             "jlpt": "n3"
         },
         {
             "kanji": "贈る",
-            "furigana": "おくる",
+            "hiragana": "おくる",
             "english": "to give (as a gift); to present",
             "jlpt": "n3"
         },
         {
             "kanji": "注ぐ",
-            "furigana": "そそぐ",
+            "hiragana": "そそぐ",
             "english": "to pour (into)",
             "jlpt": "n3"
         },
         {
             "kanji": "外す",
-            "furigana": "はずす",
+            "hiragana": "はずす",
             "english": "to remove; to take off; to detach; to unfasten; to undo",
             "jlpt": "n3"
         },
         {
             "kanji": "戻す",
-            "furigana": "もどす",
+            "hiragana": "もどす",
             "english": "to put back; to return; to give back; to restore (to a previous state, e.g. defrosting, reconstituting, reconciling); to turn back (e.g. clock hand)",
             "jlpt": "n3"
         },
         {
             "kanji": "引っ張る",
-            "furigana": "ひっぱる",
+            "hiragana": "ひっぱる",
             "english": "to pull; to draw; to pull tight",
             "jlpt": "n3"
         },
         {
             "kanji": "流す",
-            "furigana": "ながす",
+            "hiragana": "ながす",
             "english": "to drain; to pour; to run; to let flow; to flush; to shed (blood, tears); to spill",
             "jlpt": "n3"
         },
         {
             "kanji": "倒す",
-            "furigana": "たおす",
+            "hiragana": "たおす",
             "english": "to throw down; to bring down; to blow down; to fell; to knock down; to set (something) down on its side; to turn (something) on its side; to recline (e.g. a seat)",
             "jlpt": "n3"
         },
         {
             "kanji": "移す",
-            "furigana": "うつす",
+            "hiragana": "うつす",
             "english": "to change; to swap; to substitute; to transfer",
             "jlpt": "n3"
         },
         {
             "kanji": "仕舞う",
-            "furigana": "しまう",
+            "hiragana": "しまう",
             "english": "to finish; to stop; to end; to put an end to; to bring to a close",
             "jlpt": "n3"
         },
         {
             "kanji": "貰う",
-            "furigana": "もらう",
+            "hiragana": "もらう",
             "english": "to receive; to take; to accept",
             "jlpt": "n3"
         },
         {
             "kanji": "履く",
-            "furigana": "はく",
+            "hiragana": "はく",
             "english": "to put on (lower-body clothing, e.g. pants, skirt, footwear); to wear",
             "jlpt": "n3"
         },
         {
             "kanji": "学ぶ",
-            "furigana": "まなぶ",
+            "hiragana": "まなぶ",
             "english": "to learn; to study; to take lessons in",
             "jlpt": "n3"
         },
         {
             "kanji": "過ごす",
-            "furigana": "すごす",
+            "hiragana": "すごす",
             "english": "to spend (time); to pass; to lead (a life); to live",
             "jlpt": "n3"
         },
         {
             "kanji": "気付く",
-            "furigana": "きづく",
+            "hiragana": "きづく",
             "english": "to notice; to realize; to realise; to become aware (of); to perceive; to sense; to suspect",
             "jlpt": "n3"
         },
         {
             "kanji": "頂く",
-            "furigana": "いただく",
+            "hiragana": "いただく",
             "english": "to receive; to get; to accept; to take; to buy",
             "jlpt": "n3"
         },
         {
             "kanji": "暮らす",
-            "furigana": "くらす",
+            "hiragana": "くらす",
             "english": "to live; to get along",
             "jlpt": "n3"
         },
         {
             "kanji": "気に入る",
-            "furigana": "きにいる",
+            "hiragana": "きにいる",
             "english": "to like; to be pleased with; to be delighted with; to take a liking to; to suit one's fancy",
             "jlpt": "n3"
         },
         {
             "kanji": "解く",
-            "furigana": "とく",
+            "hiragana": "とく",
             "english": "to untie; to unfasten; to unwrap; to undo; to unbind; to unpack",
             "jlpt": "n3"
         },
         {
             "kanji": "喋る",
-            "furigana": "しゃべる",
+            "hiragana": "しゃべる",
             "english": "to talk; to chat; to chatter",
             "jlpt": "n3"
         },
         {
             "kanji": "従う",
-            "furigana": "したがう",
+            "hiragana": "したがう",
             "english": "to obey (an order, law, etc.); to abide by (a rule, custom, etc.); to follow; to observe; to conform to; to yield to",
             "jlpt": "n3"
         },
         {
             "kanji": "現す",
-            "furigana": "あらわす",
+            "hiragana": "あらわす",
             "english": "to represent; to signify; to stand for",
             "jlpt": "n3"
         },
         {
             "kanji": "描く",
-            "furigana": "えがく",
+            "hiragana": "えがく",
             "english": "to draw; to paint; to sketch",
             "jlpt": "n3"
         },
         {
             "kanji": "当たる",
-            "furigana": "あたる",
+            "hiragana": "あたる",
             "english": "to be hit; to strike",
             "jlpt": "n3"
         },
         {
             "kanji": "効く",
-            "furigana": "きく",
+            "hiragana": "きく",
             "english": "to be effective; to take effect; to be good (for)",
             "jlpt": "n3"
         },
         {
             "kanji": "経つ",
-            "furigana": "たつ",
+            "hiragana": "たつ",
             "english": "to pass (of time); to elapse",
             "jlpt": "n3"
         },
         {
             "kanji": "掴む",
-            "furigana": "つかむ",
+            "hiragana": "つかむ",
             "english": "to seize; to catch; to grasp; to grip; to grab; to clutch; to hold; to catch hold of; to lay one's hands on",
             "jlpt": "n3"
         },
         {
             "kanji": "伸ばす",
-            "furigana": "のばす",
+            "hiragana": "のばす",
             "english": "to grow long (e.g. hair, nails)",
             "jlpt": "n3"
         },
         {
             "kanji": "異なる",
-            "furigana": "ことなる",
+            "hiragana": "ことなる",
             "english": "to differ; to be different; to disagree; to vary; to diverge",
             "jlpt": "n3"
         },
         {
             "kanji": "飼う",
-            "furigana": "かう",
+            "hiragana": "かう",
             "english": "to keep (a pet or other animal); to have; to own; to raise; to rear; to feed",
             "jlpt": "n3"
         },
         {
             "kanji": "去る",
-            "furigana": "さる",
+            "hiragana": "さる",
             "english": "to leave; to go away",
             "jlpt": "n3"
         },
         {
             "kanji": "沈む",
-            "furigana": "しずむ",
+            "hiragana": "しずむ",
             "english": "to sink; to go under; to submerge",
             "jlpt": "n3"
         },
         {
             "kanji": "輝く",
-            "furigana": "かがやく",
+            "hiragana": "かがやく",
             "english": "to shine; to sparkle; to twinkle; to glitter; to glisten",
             "jlpt": "n3"
         },
         {
             "kanji": "願う",
-            "furigana": "ねがう",
+            "hiragana": "ねがう",
             "english": "to desire; to wish; to hope",
             "jlpt": "n3"
         },
         {
             "kanji": "叩く",
-            "furigana": "たたく",
+            "hiragana": "たたく",
             "english": "to strike; to hit; to beat; to knock; to pound; to bang; to slap; to spank; to tap; to pat; to clap (one's hands); to play (the drums)",
             "jlpt": "n3"
         },
         {
             "kanji": "似合う",
-            "furigana": "にあう",
+            "hiragana": "にあう",
             "english": "to suit; to match; to become; to be like",
             "jlpt": "n3"
         },
         {
             "kanji": "招く",
-            "furigana": "まねく",
+            "hiragana": "まねく",
             "english": "to invite; to ask",
             "jlpt": "n3"
         },
         {
             "kanji": "割る",
-            "furigana": "わる",
+            "hiragana": "わる",
             "english": "to divide",
             "jlpt": "n3"
         },
         {
             "kanji": "届く",
-            "furigana": "とどく",
+            "hiragana": "とどく",
             "english": "to reach; to touch; to get to; to carry (of sound)",
             "jlpt": "n3"
         },
         {
             "kanji": "立ち上がる",
-            "furigana": "たちあがる",
+            "hiragana": "たちあがる",
             "english": "to stand up; to get up",
             "jlpt": "n3"
         },
         {
             "kanji": "腐る",
-            "furigana": "くさる",
+            "hiragana": "くさる",
             "english": "to rot; to go bad; to decay; to spoil; to fester; to decompose; to turn sour (e.g. milk)",
             "jlpt": "n3"
         },
         {
             "kanji": "伺う",
-            "furigana": "うかがう",
+            "hiragana": "うかがう",
             "english": "to call on someone; to call at a place; to pay a visit; to wait on someone",
             "jlpt": "n3"
         },
         {
             "kanji": "稼ぐ",
-            "furigana": "かせぐ",
+            "hiragana": "かせぐ",
             "english": "to earn (income); to make (money)",
             "jlpt": "n3"
         },
         {
             "kanji": "罹る",
-            "furigana": "かかる",
+            "hiragana": "かかる",
             "english": "to contract (a disease); to suffer from",
             "jlpt": "n3"
         },
         {
             "kanji": "含む",
-            "furigana": "ふくむ",
+            "hiragana": "ふくむ",
             "english": "to contain; to comprise; to have; to hold; to include; to embrace",
             "jlpt": "n3"
         },
         {
             "kanji": "微笑む",
-            "furigana": "ほほえむ",
+            "hiragana": "ほほえむ",
             "english": "to smile",
             "jlpt": "n3"
         },
         {
             "kanji": "苦しむ",
-            "furigana": "くるしむ",
+            "hiragana": "くるしむ",
             "english": "to suffer; to groan; to be worried",
             "jlpt": "n3"
         },
         {
             "kanji": "叱る",
-            "furigana": "しかる",
+            "hiragana": "しかる",
             "english": "to scold; to chide; to rebuke; to reprimand",
             "jlpt": "n3"
         },
         {
             "kanji": "基づく",
-            "furigana": "もとづく",
+            "hiragana": "もとづく",
             "english": "to be based (on); to be founded (on); to be grounded (on); to be in accordance (with)",
             "jlpt": "n3"
         },
         {
             "kanji": "就く",
-            "furigana": "つく",
+            "hiragana": "つく",
             "english": "to take (seat, position, course, office, etc.); to assume; to be hired; to be employed",
             "jlpt": "n3"
         },
         {
             "kanji": "捕まる",
-            "furigana": "つかまる",
+            "hiragana": "つかまる",
             "english": "to be caught; to be arrested",
             "jlpt": "n3"
         },
         {
             "kanji": "向く",
-            "furigana": "むく",
+            "hiragana": "むく",
             "english": "to turn toward; to look (up, down, etc.)",
             "jlpt": "n3"
         },
         {
             "kanji": "横切る",
-            "furigana": "よこぎる",
+            "hiragana": "よこぎる",
             "english": "to cross (e.g. road); to traverse",
             "jlpt": "n3"
         },
         {
             "kanji": "転ぶ",
-            "furigana": "ころぶ",
+            "hiragana": "ころぶ",
             "english": "to fall down; to fall over",
             "jlpt": "n3"
         },
         {
             "kanji": "下ろす",
-            "furigana": "おろす",
+            "hiragana": "おろす",
             "english": "to take down; to bring down; to lower (a hand, flag, shutter, etc.); to drop (an anchor, curtain, etc.); to let down (hair); to launch (a boat)",
             "jlpt": "n3"
         },
         {
             "kanji": "轢く",
-            "furigana": "ひく",
+            "hiragana": "ひく",
             "english": "to run over (with a vehicle); to knock down",
             "jlpt": "n3"
         },
         {
             "kanji": "劣る",
-            "furigana": "おとる",
+            "hiragana": "おとる",
             "english": "to be inferior to; to be less good at; to fall behind",
             "jlpt": "n3"
         },
         {
             "kanji": "繋ぐ",
-            "furigana": "つなぐ",
+            "hiragana": "つなぐ",
             "english": "to connect; to link together",
             "jlpt": "n3"
         },
         {
             "kanji": "広がる",
-            "furigana": "ひろがる",
+            "hiragana": "ひろがる",
             "english": "to spread (out); to extend; to stretch; to reach to; to get around; to fill (e.g. a space)",
             "jlpt": "n3"
         },
         {
             "kanji": "凍る",
-            "furigana": "こおる",
+            "hiragana": "こおる",
             "english": "to freeze; to become frozen; to freeze over",
             "jlpt": "n3"
         },
         {
             "kanji": "広がる",
-            "furigana": "ひろがる",
+            "hiragana": "ひろがる",
             "english": "to spread (out); to extend; to stretch; to reach to; to get around; to fill (e.g. a space)",
             "jlpt": "n3"
         },
         {
             "kanji": "酔う",
-            "furigana": "よう",
+            "hiragana": "よう",
             "english": "to get drunk; to become intoxicated",
             "jlpt": "n3"
         },
         {
             "kanji": "除く",
-            "furigana": "のぞく",
+            "hiragana": "のぞく",
             "english": "to remove; to eliminate; to eradicate",
             "jlpt": "n3"
         },
         {
             "kanji": "抜く",
-            "furigana": "ぬく",
+            "hiragana": "ぬく",
             "english": "to pull out; to draw out; to extract; to unplug; to weed",
             "jlpt": "n3"
         },
         {
             "kanji": "振る",
-            "furigana": "ふる",
+            "hiragana": "ふる",
             "english": "to wave; to shake; to swing",
             "jlpt": "n3"
         },
         {
             "kanji": "止す",
-            "furigana": "よす",
+            "hiragana": "よす",
             "english": "to cease; to desist; to cut it out; to lay off (an activity); to drop (a subject) to abolish; to resign; to give up",
             "jlpt": "n3"
         },
         {
             "kanji": "防ぐ",
-            "furigana": "ふせぐ",
+            "hiragana": "ふせぐ",
             "english": "to defend against; to protect against",
             "jlpt": "n3"
         },
         {
             "kanji": "省く",
-            "furigana": "はぶく",
+            "hiragana": "はぶく",
             "english": "to omit; to leave out; to exclude; to eliminate",
             "jlpt": "n3"
         },
         {
             "kanji": "逆らう",
-            "furigana": "さからう",
+            "hiragana": "さからう",
             "english": "to go against; to oppose; to disobey; to defy",
             "jlpt": "n3"
         },
         {
             "kanji": "譲る",
-            "furigana": "ゆずる",
+            "hiragana": "ゆずる",
             "english": "to hand over; to transfer; to turn over; to assign; to convey; to bequeath",
             "jlpt": "n3"
         },
         {
             "kanji": "放す",
-            "furigana": "はなす",
+            "hiragana": "はなす",
             "english": "to release; to let go; to free; to set free; to let loose; to turn loose",
             "jlpt": "n3"
         },
         {
             "kanji": "増す",
-            "furigana": "ます",
+            "hiragana": "ます",
             "english": "to increase; to grow",
             "jlpt": "n3"
         },
         {
             "kanji": "申し込む",
-            "furigana": "もうしこむ",
+            "hiragana": "もうしこむ",
             "english": "to apply for; to make an application; to propose (marriage); to offer (mediation); to make an overture (of peace); to challenge; to lodge (objections); to request (an interview); to subscribe for; to book; to reserve",
             "jlpt": "n3"
         },
         {
             "kanji": "狂う",
-            "furigana": "くるう",
+            "hiragana": "くるう",
             "english": "to go mad; to lose one's mind; to go crazy; to go insane",
             "jlpt": "n3"
         },
         {
             "kanji": "指す",
-            "furigana": "さす",
+            "hiragana": "さす",
             "english": "to point",
             "jlpt": "n3"
         },
         {
             "kanji": "飛ばす",
-            "furigana": "とばす",
+            "hiragana": "とばす",
             "english": "to let fly; to make fly; to send flying; to blow off (e.g. in the wind); to launch; to fire; to hurl; to shoot",
             "jlpt": "n3"
         },
         {
             "kanji": "食う",
-            "furigana": "くう",
+            "hiragana": "くう",
             "english": "to eat",
             "jlpt": "n3"
         },
         {
             "kanji": "至る",
-            "furigana": "いたる",
+            "hiragana": "いたる",
             "english": "to arrive at (e.g. a decision); to reach (a stage); to attain",
             "jlpt": "n3"
         },
         {
             "kanji": "離す",
-            "furigana": "はなす",
+            "hiragana": "はなす",
             "english": "to separate; to part; to divide; to keep apart",
             "jlpt": "n3"
         },
         {
             "kanji": "越す",
-            "furigana": "こす",
+            "hiragana": "こす",
             "english": "to cross over (e.g. mountain); to go across",
             "jlpt": "n3"
         },
         {
             "kanji": "積もる",
-            "furigana": "つもる",
+            "hiragana": "つもる",
             "english": "to pile up; to accumulate",
             "jlpt": "n3"
         },
         {
             "kanji": "及ぼす",
-            "furigana": "およぼす",
+            "hiragana": "およぼす",
             "english": "to exert (influence); to exercise; to cause (e.g. damage); to do (e.g. harm); to bring about (e.g. benefits); to extend; to have an effect (on)",
             "jlpt": "n3"
         },
         {
             "kanji": "唸る",
-            "furigana": "うなる",
+            "hiragana": "うなる",
             "english": "to groan; to moan",
             "jlpt": "n3"
         },
         {
             "kanji": "覚ます",
-            "furigana": "さます",
+            "hiragana": "さます",
             "english": "to awaken; to arouse from sleep",
             "jlpt": "n3"
         },
         {
             "kanji": "居る-1",
-            "furigana": "おる",
+            "hiragana": "おる",
             "english": "to be (animate); to be; to exist",
             "jlpt": "n3"
         },
         {
             "kanji": "打つ-1",
-            "furigana": "ぶつ",
+            "hiragana": "ぶつ",
             "english": "to hit (someone); to strike; to beat",
             "jlpt": "n3"
         },
         {
             "kanji": "被る",
-            "furigana": "かぶる",
+            "hiragana": "かぶる",
             "english": "to put on (one's head); to wear; to have on; to pull over (one's head); to crown (oneself)",
             "jlpt": "n3"
         },
         {
             "kanji": "注ぐ-1",
-            "furigana": "つぐ",
+            "hiragana": "つぐ",
             "english": "to pour (into a vessel); to fill (a cup, bowl, etc.) with; to dish out (food or drink)",
             "jlpt": "n3"
         },
         {
             "kanji": "空く",
-            "furigana": "すく",
+            "hiragana": "すく",
             "english": "to become less crowded; to thin out; to get empty",
             "jlpt": "n3"
         },
         {
             "kanji": "叫ぶ",
-            "furigana": "さけぶ",
+            "hiragana": "さけぶ",
             "english": "to shout; to cry; to scream; to shriek; to yell; to exclaim",
             "jlpt": "n3"
         },
         {
             "kanji": "撃つ",
-            "furigana": "うつ",
+            "hiragana": "うつ",
             "english": "to shoot (a gun, person, etc.); to fire",
             "jlpt": "n3"
         },
         {
             "kanji": "抱く",
-            "furigana": "いだく",
+            "hiragana": "いだく",
             "english": "to hold in one's arms (e.g. a baby); to embrace; to hug",
             "jlpt": "n3"
         },
         {
             "kanji": "吐く-1",
-            "furigana": "はく",
+            "hiragana": "はく",
             "english": "to vomit; to throw up; to spit up",
             "jlpt": "n3"
         },
         {
             "kanji": "在る",
-            "furigana": "ある",
+            "hiragana": "ある",
             "english": "to be; to exist; to live",
             "jlpt": "n2"
         },
         {
             "kanji": "作る",
-            "furigana": "つくる",
+            "hiragana": "つくる",
             "english": "to make; to produce; to manufacture; to build; to construct",
             "jlpt": "n2"
         },
         {
             "kanji": "立つ",
-            "furigana": "たつ",
+            "hiragana": "たつ",
             "english": "to stand (up); to rise; to get to one's feet; to stand on end (e.g. of hairs); to stick up",
             "jlpt": "n2"
         },
         {
             "kanji": "上る",
-            "furigana": "のぼる",
+            "hiragana": "のぼる",
             "english": "to ascend; to go up; to climb",
             "jlpt": "n2"
         },
         {
             "kanji": "飛ぶ",
-            "furigana": "とぶ",
+            "hiragana": "とぶ",
             "english": "to fly; to soar",
             "jlpt": "n2"
         },
         {
             "kanji": "止まる",
-            "furigana": "とまる",
+            "hiragana": "とまる",
             "english": "to stop (moving); to come to a stop",
             "jlpt": "n2"
         },
         {
             "kanji": "会う",
-            "furigana": "あう",
+            "hiragana": "あう",
             "english": "to meet; to encounter; to see",
             "jlpt": "n2"
         },
         {
             "kanji": "分かる",
-            "furigana": "わかる",
+            "hiragana": "わかる",
             "english": "to understand; to comprehend; to grasp; to see; to get; to follow",
             "jlpt": "n2"
         },
         {
             "kanji": "無くす",
-            "furigana": "なくす",
+            "hiragana": "なくす",
             "english": "to lose (something)",
             "jlpt": "n2"
         },
         {
             "kanji": "探す",
-            "furigana": "さがす",
+            "hiragana": "さがす",
             "english": "to search for; to look for; to hunt for; to seek",
             "jlpt": "n2"
         },
         {
             "kanji": "喜ぶ",
-            "furigana": "よろこぶ",
+            "hiragana": "よろこぶ",
             "english": "to be delighted; to be glad; to be pleased",
             "jlpt": "n2"
         },
         {
             "kanji": "向かう",
-            "furigana": "むかう",
+            "hiragana": "むかう",
             "english": "to face",
             "jlpt": "n2"
         },
         {
             "kanji": "見つかる",
-            "furigana": "みつかる",
+            "hiragana": "みつかる",
             "english": "to be found; to be discovered",
             "jlpt": "n2"
         },
         {
             "kanji": "引き出す",
-            "furigana": "ひきだす",
+            "hiragana": "ひきだす",
             "english": "to pull out; to take out; to draw out",
             "jlpt": "n2"
         },
         {
             "kanji": "治す",
-            "furigana": "なおす",
+            "hiragana": "なおす",
             "english": "to repair; to mend; to fix; to correct (a mistake, bad habit, etc.); to put right; to restore; to straighten (e.g. a tie); to tidy up (one's hair, make-up, etc.); to revive (one's spirits)",
             "jlpt": "n2"
         },
         {
             "kanji": "滑る",
-            "furigana": "すべる",
+            "hiragana": "すべる",
             "english": "to glide; to slide (e.g. on skis); to slip",
             "jlpt": "n2"
         },
         {
             "kanji": "減る",
-            "furigana": "へる",
+            "hiragana": "へる",
             "english": "to decrease (in size or number); to diminish; to abate",
             "jlpt": "n2"
         },
         {
             "kanji": "計る",
-            "furigana": "はかる",
+            "hiragana": "はかる",
             "english": "to measure; to weigh; to survey; to time (sound, gauge, estimate)",
             "jlpt": "n2"
         },
         {
             "kanji": "伸ばす",
-            "furigana": "のばす",
+            "hiragana": "のばす",
             "english": "to grow long (e.g. hair, nails)",
             "jlpt": "n2"
         },
         {
             "kanji": "越す",
-            "furigana": "こす",
+            "hiragana": "こす",
             "english": "to cross over (e.g. mountain); to go across",
             "jlpt": "n2"
         },
         {
             "kanji": "下る",
-            "furigana": "くだる",
+            "hiragana": "くだる",
             "english": "to descend; to go down; to come down",
             "jlpt": "n2"
         },
         {
             "kanji": "殴る",
-            "furigana": "なぐる",
+            "hiragana": "なぐる",
             "english": "to strike; to hit; to beat; to punch",
             "jlpt": "n2"
         },
         {
             "kanji": "迫る",
-            "furigana": "せまる",
+            "hiragana": "せまる",
             "english": "to approach; to draw near; to be imminent",
             "jlpt": "n2"
         },
         {
             "kanji": "狙う",
-            "furigana": "ねらう",
+            "hiragana": "ねらう",
             "english": "to aim at (with a weapon, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "預かる",
-            "furigana": "あずかる",
+            "hiragana": "あずかる",
             "english": "to look after; to take care of; to keep; to hold on to; to keep in custody",
             "jlpt": "n2"
         },
         {
             "kanji": "取り消す",
-            "furigana": "とりけす",
+            "hiragana": "とりけす",
             "english": "to cancel; to withdraw; to retract; to take back (words, etc.); to revoke",
             "jlpt": "n2"
         },
         {
             "kanji": "見送る",
-            "furigana": "みおくる",
+            "hiragana": "みおくる",
             "english": "to see someone off (at a station, an airport, etc.); to escort (e.g. home)",
             "jlpt": "n2"
         },
         {
             "kanji": "伝わる",
-            "furigana": "つたわる",
+            "hiragana": "つたわる",
             "english": "to spread (of a rumour, news, etc.); to travel; to circulate; to go around; to be passed around; to become known",
             "jlpt": "n2"
         },
         {
             "kanji": "刺す",
-            "furigana": "さす",
+            "hiragana": "さす",
             "english": "to pierce; to stab; to prick; to stick; to thrust",
             "jlpt": "n2"
         },
         {
             "kanji": "配る",
-            "furigana": "くばる",
+            "hiragana": "くばる",
             "english": "to distribute; to hand out; to deliver; to deal out; to serve out",
             "jlpt": "n2"
         },
         {
             "kanji": "呼び出す",
-            "furigana": "よびだす",
+            "hiragana": "よびだす",
             "english": "to call (someone) to (the door, phone, etc.); to tell (someone) to come; to call up (on the phone); to summon; to page; to invoke (e.g. a spirit)",
             "jlpt": "n2"
         },
         {
             "kanji": "積む",
-            "furigana": "つむ",
+            "hiragana": "つむ",
             "english": "to pile up; to stack",
             "jlpt": "n2"
         },
         {
             "kanji": "建つ",
-            "furigana": "たつ",
+            "hiragana": "たつ",
             "english": "to be erected; to be built",
             "jlpt": "n2"
         },
         {
             "kanji": "絞る",
-            "furigana": "しぼる",
+            "hiragana": "しぼる",
             "english": "to wring (towel, rag); to squeeze",
             "jlpt": "n2"
         },
         {
             "kanji": "縛る",
-            "furigana": "しばる",
+            "hiragana": "しばる",
             "english": "to tie; to bind; to fasten",
             "jlpt": "n2"
         },
         {
             "kanji": "余る",
-            "furigana": "あまる",
+            "hiragana": "あまる",
             "english": "to remain; to be left over; to be in excess; to be too many",
             "jlpt": "n2"
         },
         {
             "kanji": "見舞う",
-            "furigana": "みまう",
+            "hiragana": "みまう",
             "english": "to visit and comfort or console; to go to see (e.g. someone in hospital); to ask after (e.g. someone's health); to inquire after",
             "jlpt": "n2"
         },
         {
             "kanji": "刻む",
-            "furigana": "きざむ",
+            "hiragana": "きざむ",
             "english": "to mince; to cut fine; to chop up; to hash; to shred",
             "jlpt": "n2"
         },
         {
             "kanji": "詰まる",
-            "furigana": "つまる",
+            "hiragana": "つまる",
             "english": "to be packed (with); to be full (space, schedule, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "挟む",
-            "furigana": "はさむ",
+            "hiragana": "はさむ",
             "english": "to hold between (e.g. one's fingers, chopsticks); to grip (from both sides)",
             "jlpt": "n2"
         },
         {
             "kanji": "冷やす",
-            "furigana": "ひやす",
+            "hiragana": "ひやす",
             "english": "to cool (from room temperature); to chill; to refrigerate",
             "jlpt": "n2"
         },
         {
             "kanji": "冷やす",
-            "furigana": "ひやす",
+            "hiragana": "ひやす",
             "english": "to cool (from room temperature); to chill; to refrigerate",
             "jlpt": "n2"
         },
         {
             "kanji": "干す",
-            "furigana": "ほす",
+            "hiragana": "ほす",
             "english": "to air; to dry; to desiccate",
             "jlpt": "n2"
         },
         {
             "kanji": "膨らむ",
-            "furigana": "ふくらむ",
+            "hiragana": "ふくらむ",
             "english": "to expand; to swell (out); to get big; to become inflated",
             "jlpt": "n2"
         },
         {
             "kanji": "見直す",
-            "furigana": "みなおす",
+            "hiragana": "みなおす",
             "english": "to look at again",
             "jlpt": "n2"
         },
         {
             "kanji": "生る",
-            "furigana": "なる",
+            "hiragana": "なる",
             "english": "to bear fruit",
             "jlpt": "n2"
         },
         {
             "kanji": "削る",
-            "furigana": "けずる",
+            "hiragana": "けずる",
             "english": "to shave (wood, leather, etc.); to sharpen (e.g. pencil); to plane; to whittle; to pare; to scrape off; to erode",
             "jlpt": "n2"
         },
         {
             "kanji": "次ぐ",
-            "furigana": "つぐ",
+            "hiragana": "つぐ",
             "english": "to follow; to come after; to come next (to); to rank next (to); to rank second (to)",
             "jlpt": "n2"
         },
         {
             "kanji": "膨らます",
-            "furigana": "ふくらます",
+            "hiragana": "ふくらます",
             "english": "to swell; to expand; to inflate; to bulge",
             "jlpt": "n2"
         },
         {
             "kanji": "深まる",
-            "furigana": "ふかまる",
+            "hiragana": "ふかまる",
             "english": "to deepen; to heighten; to intensify",
             "jlpt": "n2"
         },
         {
             "kanji": "刺さる",
-            "furigana": "ささる",
+            "hiragana": "ささる",
             "english": "to stick into (of something with a sharp point); to prick; to pierce; to get stuck (in); to lodge (in)",
             "jlpt": "n2"
         },
         {
             "kanji": "驚かす",
-            "furigana": "おどろかす",
+            "hiragana": "おどろかす",
             "english": "to surprise; to frighten; to create a stir",
             "jlpt": "n2"
         },
         {
             "kanji": "締め切る",
-            "furigana": "しめきる",
+            "hiragana": "しめきる",
             "english": "to close up; to shut up (e.g. behind doors)",
             "jlpt": "n2"
         },
         {
             "kanji": "巡る",
-            "furigana": "めぐる",
+            "hiragana": "めぐる",
             "english": "to go around; to make a circle around",
             "jlpt": "n2"
         },
         {
             "kanji": "騙す",
-            "furigana": "だます",
+            "hiragana": "だます",
             "english": "to trick; to cheat; to deceive",
             "jlpt": "n2"
         },
         {
             "kanji": "付き合う",
-            "furigana": "つきあう",
+            "hiragana": "つきあう",
             "english": "to associate with; to keep company with; to go out with; to go steady with; to get on with",
             "jlpt": "n2"
         },
         {
             "kanji": "落ち着く",
-            "furigana": "おちつく",
+            "hiragana": "おちつく",
             "english": "to calm down; to compose oneself; to regain presence of mind; to relax",
             "jlpt": "n2"
         },
         {
             "kanji": "振る舞う",
-            "furigana": "ふるまう",
+            "hiragana": "ふるまう",
             "english": "to behave; to conduct oneself",
             "jlpt": "n2"
         },
         {
             "kanji": "当てはまる",
-            "furigana": "あてはまる",
+            "hiragana": "あてはまる",
             "english": "to apply (of a rule); to be applicable (of standards, lessons, ideas, etc.); to hold true (e.g. of a description); to fit; to be suitable (e.g. of a word); to meet (requirements); to fulfill (conditions); to come under (a heading)",
             "jlpt": "n2"
         },
         {
             "kanji": "浮かぶ",
-            "furigana": "うかぶ",
+            "hiragana": "うかぶ",
             "english": "to float; to be suspended",
             "jlpt": "n2"
         },
         {
             "kanji": "思い付く",
-            "furigana": "おもいつく",
+            "hiragana": "おもいつく",
             "english": "to think of; to hit upon; to come into one's mind; to be struck with an idea",
             "jlpt": "n2"
         },
         {
             "kanji": "為す",
-            "furigana": "なす",
+            "hiragana": "なす",
             "english": "to build up; to establish",
             "jlpt": "n2"
         },
         {
             "kanji": "替わる",
-            "furigana": "かわる",
+            "hiragana": "かわる",
             "english": "to succeed; to relieve; to replace",
             "jlpt": "n2"
         },
         {
             "kanji": "零す",
-            "furigana": "こぼす",
+            "hiragana": "こぼす",
             "english": "to spill; to drop; to shed (tears)",
             "jlpt": "n2"
         },
         {
             "kanji": "取り出す",
-            "furigana": "とりだす",
+            "hiragana": "とりだす",
             "english": "to take out; to produce; to pick out",
             "jlpt": "n2"
         },
         {
             "kanji": "飛び込む",
-            "furigana": "とびこむ",
+            "hiragana": "とびこむ",
             "english": "to jump in; to leap in; to plunge into; to dive",
             "jlpt": "n2"
         },
         {
             "kanji": "誓う",
-            "furigana": "ちかう",
+            "hiragana": "ちかう",
             "english": "to swear; to vow; to take an oath; to pledge",
             "jlpt": "n2"
         },
         {
             "kanji": "目指す",
-            "furigana": "めざす",
+            "hiragana": "めざす",
             "english": "to aim at (for, to do, to become); to try for; to have an eye on",
             "jlpt": "n2"
         },
         {
             "kanji": "立ち止まる",
-            "furigana": "たちどまる",
+            "hiragana": "たちどまる",
             "english": "to stop (in one's tracks); to come to a stop; to halt; to pause; to stand still",
             "jlpt": "n2"
         },
         {
             "kanji": "係わる",
-            "furigana": "かかわる",
+            "hiragana": "かかわる",
             "english": "to be affected; to be influenced",
             "jlpt": "n2"
         },
         {
             "kanji": "掘る",
-            "furigana": "ほる",
+            "hiragana": "ほる",
             "english": "to dig; to excavate; to hollow",
             "jlpt": "n2"
         },
         {
             "kanji": "嫌がる",
-            "furigana": "いやがる",
+            "hiragana": "いやがる",
             "english": "to appear uncomfortable (with); to seem to hate; to express dislike",
             "jlpt": "n2"
         },
         {
             "kanji": "寄越す",
-            "furigana": "よこす",
+            "hiragana": "よこす",
             "english": "to send; to forward",
             "jlpt": "n2"
         },
         {
             "kanji": "躊躇う",
-            "furigana": "ためらう",
+            "hiragana": "ためらう",
             "english": "to hesitate; to waver",
             "jlpt": "n2"
         },
         {
             "kanji": "点く",
-            "furigana": "つく",
+            "hiragana": "つく",
             "english": "to be lit (of a lamp, burner, etc.); to catch fire; to ignite; to start burning",
             "jlpt": "n2"
         },
         {
             "kanji": "拭く",
-            "furigana": "ふく",
+            "hiragana": "ふく",
             "english": "to wipe; to dry",
             "jlpt": "n2"
         },
         {
             "kanji": "怠る",
-            "furigana": "おこたる",
+            "hiragana": "おこたる",
             "english": "to neglect; to be negligent in; to be neglectful of; to fail to do; to leave undone; to avoid (doing); to shirk; to be unmindful of",
             "jlpt": "n2"
         },
         {
             "kanji": "目立つ",
-            "furigana": "めだつ",
+            "hiragana": "めだつ",
             "english": "to be conspicuous; to stand out",
             "jlpt": "n2"
         },
         {
             "kanji": "繋がる",
-            "furigana": "つながる",
+            "hiragana": "つながる",
             "english": "to be tied together; to be connected to; to be linked to",
             "jlpt": "n2"
         },
         {
             "kanji": "蹴る",
-            "furigana": "ける",
+            "hiragana": "ける",
             "english": "to kick",
             "jlpt": "n2"
         },
         {
             "kanji": "流行る",
-            "furigana": "はやる",
+            "hiragana": "はやる",
             "english": "to be popular; to come into fashion",
             "jlpt": "n2"
         },
         {
             "kanji": "助かる",
-            "furigana": "たすかる",
+            "hiragana": "たすかる",
             "english": "to be saved; to be rescued; to survive",
             "jlpt": "n2"
         },
         {
             "kanji": "潰す",
-            "furigana": "つぶす",
+            "hiragana": "つぶす",
             "english": "to smash; to crush; to flatten",
             "jlpt": "n2"
         },
         {
             "kanji": "訳す",
-            "furigana": "やくす",
+            "hiragana": "やくす",
             "english": "to translate; to interpret",
             "jlpt": "n2"
         },
         {
             "kanji": "憎む",
-            "furigana": "にくむ",
+            "hiragana": "にくむ",
             "english": "to hate; to detest",
             "jlpt": "n2"
         },
         {
             "kanji": "味わう",
-            "furigana": "あじわう",
+            "hiragana": "あじわう",
             "english": "to taste; to savor; to savour; to relish",
             "jlpt": "n2"
         },
         {
             "kanji": "殖やす",
-            "furigana": "ふやす",
+            "hiragana": "ふやす",
             "english": "to increase; to add to; to augment",
             "jlpt": "n2"
         },
         {
             "kanji": "遡る",
-            "furigana": "さかのぼる",
+            "hiragana": "さかのぼる",
             "english": "to go upstream; to go up (a river)",
             "jlpt": "n2"
         },
         {
             "kanji": "鳴らす",
-            "furigana": "ならす",
+            "hiragana": "ならす",
             "english": "to ring; to sound; to chime; to beat; to snort (nose); to snap (fingers); to crack (joints)",
             "jlpt": "n2"
         },
         {
             "kanji": "溜まる",
-            "furigana": "たまる",
+            "hiragana": "たまる",
             "english": "to collect; to gather; to save; to accumulate; to pile up",
             "jlpt": "n2"
         },
         {
             "kanji": "足る",
-            "furigana": "たる",
+            "hiragana": "たる",
             "english": "to be sufficient; to be enough",
             "jlpt": "n2"
         },
         {
             "kanji": "掻く",
-            "furigana": "かく",
+            "hiragana": "かく",
             "english": "to scratch",
             "jlpt": "n2"
         },
         {
             "kanji": "塞ぐ",
-            "furigana": "ふさぐ",
+            "hiragana": "ふさぐ",
             "english": "to stop up; to close up; to block (up); to plug up; to shut up; to cover (ears, eyes, etc.); to close (eyes, mouth)",
             "jlpt": "n2"
         },
         {
             "kanji": "見下ろす",
-            "furigana": "みおろす",
+            "hiragana": "みおろす",
             "english": "to overlook; to command a view of; to look down on",
             "jlpt": "n2"
         },
         {
             "kanji": "塞がる",
-            "furigana": "ふさがる",
+            "hiragana": "ふさがる",
             "english": "to be closed; to be blocked; to be healed (e.g. wound); to be shut up",
             "jlpt": "n2"
         },
         {
             "kanji": "引っ掛かる",
-            "furigana": "ひっかかる",
+            "hiragana": "ひっかかる",
             "english": "to be caught in; to be stuck in",
             "jlpt": "n2"
         },
         {
             "kanji": "覗く",
-            "furigana": "のぞく",
+            "hiragana": "のぞく",
             "english": "to peek (through a keyhole, gap, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "突く",
-            "furigana": "つく",
+            "hiragana": "つく",
             "english": "to prick; to stab",
             "jlpt": "n2"
         },
         {
             "kanji": "巻く",
-            "furigana": "まく",
+            "hiragana": "まく",
             "english": "to wind; to coil; to roll; to wear (e.g. turban, scarf)",
             "jlpt": "n2"
         },
         {
             "kanji": "燃やす",
-            "furigana": "もやす",
+            "hiragana": "もやす",
             "english": "to burn",
             "jlpt": "n2"
         },
         {
             "kanji": "照らす",
-            "furigana": "てらす",
+            "hiragana": "てらす",
             "english": "to shine on; to illuminate",
             "jlpt": "n2"
         },
         {
             "kanji": "剃る",
-            "furigana": "そる",
+            "hiragana": "そる",
             "english": "to shave",
             "jlpt": "n2"
         },
         {
             "kanji": "撒く",
-            "furigana": "まく",
+            "hiragana": "まく",
             "english": "to scatter; to sprinkle; to strew",
             "jlpt": "n2"
         },
         {
             "kanji": "突っ込む",
-            "furigana": "つっこむ",
+            "hiragana": "つっこむ",
             "english": "to thrust (something) into (something); to cram; to stuff; to shove",
             "jlpt": "n2"
         },
         {
             "kanji": "怒鳴る",
-            "furigana": "どなる",
+            "hiragana": "どなる",
             "english": "to shout (in anger); to yell",
             "jlpt": "n2"
         },
         {
             "kanji": "崩す",
-            "furigana": "くずす",
+            "hiragana": "くずす",
             "english": "to destroy; to demolish; to pull down; to tear down; to level",
             "jlpt": "n2"
         },
         {
             "kanji": "裏返す",
-            "furigana": "うらがえす",
+            "hiragana": "うらがえす",
             "english": "to turn inside out; to turn the other way; to turn (something) over",
             "jlpt": "n2"
         },
         {
             "kanji": "囁く",
-            "furigana": "ささやく",
+            "hiragana": "ささやく",
             "english": "to whisper; to murmur",
             "jlpt": "n2"
         },
         {
             "kanji": "可愛がる",
-            "furigana": "かわいがる",
+            "hiragana": "かわいがる",
             "english": "to be affectionate to; to treat tenderly; to dote on; to show one's love (for); to cherish",
             "jlpt": "n2"
         },
         {
             "kanji": "敷く",
-            "furigana": "しく",
+            "hiragana": "しく",
             "english": "to spread out; to lay out",
             "jlpt": "n2"
         },
         {
             "kanji": "縫う",
-            "furigana": "ぬう",
+            "hiragana": "ぬう",
             "english": "to sew; to stitch",
             "jlpt": "n2"
         },
         {
             "kanji": "甘やかす",
-            "furigana": "あまやかす",
+            "hiragana": "あまやかす",
             "english": "to pamper; to spoil",
             "jlpt": "n2"
         },
         {
             "kanji": "擦る",
-            "furigana": "こする",
+            "hiragana": "こする",
             "english": "to rub; to scrub; to scrape",
             "jlpt": "n2"
         },
         {
             "kanji": "傾く",
-            "furigana": "かたむく",
+            "hiragana": "かたむく",
             "english": "to incline toward; to slant; to lurch; to heel over; to be disposed to; to trend toward; to be prone to",
             "jlpt": "n2"
         },
         {
             "kanji": "躓く",
-            "furigana": "つまずく",
+            "hiragana": "つまずく",
             "english": "to trip (over); to stumble",
             "jlpt": "n2"
         },
         {
             "kanji": "編む",
-            "furigana": "あむ",
+            "hiragana": "あむ",
             "english": "to knit; to plait; to braid",
             "jlpt": "n2"
         },
         {
             "kanji": "映る",
-            "furigana": "うつる",
+            "hiragana": "うつる",
             "english": "to be reflected; to harmonize with (harmonise); to come out (photo); to be projected; to be displayed (on a screen)",
             "jlpt": "n2"
         },
         {
             "kanji": "補う",
-            "furigana": "おぎなう",
+            "hiragana": "おぎなう",
             "english": "to supplement; to make up for; to compensate for; to cover (a shortage, loss, etc.); to fill (e.g. a vacancy)",
             "jlpt": "n2"
         },
         {
             "kanji": "嗅ぐ",
-            "furigana": "かぐ",
+            "hiragana": "かぐ",
             "english": "to sniff; to smell",
             "jlpt": "n2"
         },
         {
             "kanji": "散らかる",
-            "furigana": "ちらかる",
+            "hiragana": "ちらかる",
             "english": "to be in disorder; to lie scattered around",
             "jlpt": "n2"
         },
         {
             "kanji": "捕る",
-            "furigana": "とる",
+            "hiragana": "とる",
             "english": "to catch (a wild animal, fish, insect, baseball, etc.); to capture",
             "jlpt": "n2"
         },
         {
             "kanji": "浮く",
-            "furigana": "うく",
+            "hiragana": "うく",
             "english": "to float",
             "jlpt": "n2"
         },
         {
             "kanji": "返る",
-            "furigana": "かえる",
+            "hiragana": "かえる",
             "english": "to return; to come back; to go back",
             "jlpt": "n2"
         },
         {
             "kanji": "這う",
-            "furigana": "はう",
+            "hiragana": "はう",
             "english": "to crawl; to creep; to go on all fours",
             "jlpt": "n2"
         },
         {
             "kanji": "敬う",
-            "furigana": "うやまう",
+            "hiragana": "うやまう",
             "english": "to show respect for; to revere; to honour; to honor; to worship; to hold in esteem",
             "jlpt": "n2"
         },
         {
             "kanji": "固まる",
-            "furigana": "かたまる",
+            "hiragana": "かたまる",
             "english": "to harden; to solidify",
             "jlpt": "n2"
         },
         {
             "kanji": "承る",
-            "furigana": "うけたまわる",
+            "hiragana": "うけたまわる",
             "english": "to hear; to be told; to know",
             "jlpt": "n2"
         },
         {
             "kanji": "転がる",
-            "furigana": "ころがる",
+            "hiragana": "ころがる",
             "english": "to roll; to tumble",
             "jlpt": "n2"
         },
         {
             "kanji": "背負う",
-            "furigana": "せおう",
+            "hiragana": "せおう",
             "english": "to carry on one's back",
             "jlpt": "n2"
         },
         {
             "kanji": "引き返す",
-            "furigana": "ひきかえす",
+            "hiragana": "ひきかえす",
             "english": "to turn back; to go back; to come back; to return; to retrace one's steps",
             "jlpt": "n2"
         },
         {
             "kanji": "出来上がる",
-            "furigana": "できあがる",
+            "hiragana": "できあがる",
             "english": "to be completed; to be finished; to be ready (e.g. to serve or eat)",
             "jlpt": "n2"
         },
         {
             "kanji": "言い出す",
-            "furigana": "いいだす",
+            "hiragana": "いいだす",
             "english": "to begin to say; to start talking; to broach (a matter); to bring up; to come out with",
             "jlpt": "n2"
         },
         {
             "kanji": "近寄る",
-            "furigana": "ちかよる",
+            "hiragana": "ちかよる",
             "english": "to approach; to draw near",
             "jlpt": "n2"
         },
         {
             "kanji": "睨む",
-            "furigana": "にらむ",
+            "hiragana": "にらむ",
             "english": "to glare at; to scowl at; to glower at",
             "jlpt": "n2"
         },
         {
             "kanji": "照る",
-            "furigana": "てる",
+            "hiragana": "てる",
             "english": "to shine",
             "jlpt": "n2"
         },
         {
             "kanji": "畳む",
-            "furigana": "たたむ",
+            "hiragana": "たたむ",
             "english": "to fold (clothes, umbrella)",
             "jlpt": "n2"
         },
         {
             "kanji": "教わる",
-            "furigana": "おそわる",
+            "hiragana": "おそわる",
             "english": "to be taught; to learn; to take lessons in",
             "jlpt": "n2"
         },
         {
             "kanji": "静まる",
-            "furigana": "しずまる",
+            "hiragana": "しずまる",
             "english": "to become quiet; to quiet down; to quieten down",
             "jlpt": "n2"
         },
         {
             "kanji": "裂く",
-            "furigana": "さく",
+            "hiragana": "さく",
             "english": "to tear; to rip up",
             "jlpt": "n2"
         },
         {
             "kanji": "逃がす",
-            "furigana": "にがす",
+            "hiragana": "にがす",
             "english": "to set free; to let go; to release",
             "jlpt": "n2"
         },
         {
             "kanji": "澄む",
-            "furigana": "すむ",
+            "hiragana": "すむ",
             "english": "to become clear (water, air, etc.); to become transparent",
             "jlpt": "n2"
         },
         {
             "kanji": "揃う",
-            "furigana": "そろう",
+            "hiragana": "そろう",
             "english": "to be complete; to be all present; to make a full set; to be satisfied (of conditions)",
             "jlpt": "n2"
         },
         {
             "kanji": "湿る",
-            "furigana": "しめる",
+            "hiragana": "しめる",
             "english": "to become damp; to become moist; to become wet",
             "jlpt": "n2"
         },
         {
             "kanji": "儲かる",
-            "furigana": "もうかる",
+            "hiragana": "もうかる",
             "english": "to be profitable; to yield a profit",
             "jlpt": "n2"
         },
         {
             "kanji": "重なる",
-            "furigana": "かさなる",
+            "hiragana": "かさなる",
             "english": "to be piled up; to lie on top of one another",
             "jlpt": "n2"
         },
         {
             "kanji": "睨む",
-            "furigana": "にらむ",
+            "hiragana": "にらむ",
             "english": "to glare at; to scowl at; to glower at",
             "jlpt": "n2"
         },
         {
             "kanji": "威張る",
-            "furigana": "いばる",
+            "hiragana": "いばる",
             "english": "to put on airs; to act big; to throw one's weight about; to be overbearing; to be domineering; to be bossy; to be pushy; to be proud; to be haughty; to be arrogant; to swagger; to boast; to brag",
             "jlpt": "n2"
         },
         {
             "kanji": "担ぐ",
-            "furigana": "かつぐ",
+            "hiragana": "かつぐ",
             "english": "to shoulder; to carry on one's shoulder",
             "jlpt": "n2"
         },
         {
             "kanji": "耕す",
-            "furigana": "たがやす",
+            "hiragana": "たがやす",
             "english": "to till; to plow; to plough; to cultivate",
             "jlpt": "n2"
         },
         {
             "kanji": "乾かす",
-            "furigana": "かわかす",
+            "hiragana": "かわかす",
             "english": "to dry (clothes, etc.); to desiccate",
             "jlpt": "n2"
         },
         {
             "kanji": "受け持つ",
-            "furigana": "うけもつ",
+            "hiragana": "うけもつ",
             "english": "to take (be in) charge of",
             "jlpt": "n2"
         },
         {
             "kanji": "思い込む",
-            "furigana": "おもいこむ",
+            "hiragana": "おもいこむ",
             "english": "to be convinced (that); to be under the impression (that); to feel sure (that); to assume (that)",
             "jlpt": "n2"
         },
         {
             "kanji": "溶け込む",
-            "furigana": "とけこむ",
+            "hiragana": "とけこむ",
             "english": "to melt into; to dissolve into; to merge into",
             "jlpt": "n2"
         },
         {
             "kanji": "掃く",
-            "furigana": "はく",
+            "hiragana": "はく",
             "english": "to sweep; to brush; to clean",
             "jlpt": "n2"
         },
         {
             "kanji": "尖る",
-            "furigana": "とがる",
+            "hiragana": "とがる",
             "english": "to taper to a point; to become pointed; to become sharp",
             "jlpt": "n2"
         },
         {
             "kanji": "整う",
-            "furigana": "ととのう",
+            "hiragana": "ととのう",
             "english": "to be ready; to be prepared; to be arranged",
             "jlpt": "n2"
         },
         {
             "kanji": "散らかす",
-            "furigana": "ちらかす",
+            "hiragana": "ちらかす",
             "english": "to scatter around; to leave untidy; to make a mess",
             "jlpt": "n2"
         },
         {
             "kanji": "濡らす",
-            "furigana": "ぬらす",
+            "hiragana": "ぬらす",
             "english": "to wet; to moisten; to dampen; to soak; to dip",
             "jlpt": "n2"
         },
         {
             "kanji": "探る",
-            "furigana": "さぐる",
+            "hiragana": "さぐる",
             "english": "to feel around for; to fumble for; to grope for; to search for; to look for",
             "jlpt": "n2"
         },
         {
             "kanji": "散らかす",
-            "furigana": "ちらかす",
+            "hiragana": "ちらかす",
             "english": "to scatter around; to leave untidy; to make a mess",
             "jlpt": "n2"
         },
         {
             "kanji": "纏まる",
-            "furigana": "まとまる",
+            "hiragana": "まとまる",
             "english": "to find resolution; to be settled; to be agreed on; to be completed",
             "jlpt": "n2"
         },
         {
             "kanji": "因る",
-            "furigana": "よる",
+            "hiragana": "よる",
             "english": "to be due to; to be caused by",
             "jlpt": "n2"
         },
         {
             "kanji": "溶かす",
-            "furigana": "とかす",
+            "hiragana": "とかす",
             "english": "to dissolve",
             "jlpt": "n2"
         },
         {
             "kanji": "剥く",
-            "furigana": "むく",
+            "hiragana": "むく",
             "english": "to peel; to skin; to pare; to hull; to strip",
             "jlpt": "n2"
         },
         {
             "kanji": "縮む",
-            "furigana": "ちぢむ",
+            "hiragana": "ちぢむ",
             "english": "to shrink; to contract; to diminish (in size)",
             "jlpt": "n2"
         },
         {
             "kanji": "釣り合う",
-            "furigana": "つりあう",
+            "hiragana": "つりあう",
             "english": "to balance; to be in harmony; to be in equilibrium",
             "jlpt": "n2"
         },
         {
             "kanji": "湧く",
-            "furigana": "わく",
+            "hiragana": "わく",
             "english": "to well (up); to gush out (of water); to spring out; to surge",
             "jlpt": "n2"
         },
         {
             "kanji": "茂る",
-            "furigana": "しげる",
+            "hiragana": "しげる",
             "english": "to grow thickly; to be in full leaf; to be rampant; to luxuriate; to be luxurious",
             "jlpt": "n2"
         },
         {
             "kanji": "汲む",
-            "furigana": "くむ",
+            "hiragana": "くむ",
             "english": "to draw (water); to ladle; to dip up; to scoop up; to pump",
             "jlpt": "n2"
         },
         {
             "kanji": "縮む",
-            "furigana": "ちぢむ",
+            "hiragana": "ちぢむ",
             "english": "to shrink; to contract; to diminish (in size)",
             "jlpt": "n2"
         },
         {
             "kanji": "剥がす",
-            "furigana": "はがす",
+            "hiragana": "はがす",
             "english": "to tear off; to peel off; to rip off; to strip off; to skin; to flay; to disrobe; to deprive of; to detach; to disconnect",
             "jlpt": "n2"
         },
         {
             "kanji": "濁る",
-            "furigana": "にごる",
+            "hiragana": "にごる",
             "english": "to become muddy; to become cloudy; to become turbid; to become impure (of a liquid or gas)",
             "jlpt": "n2"
         },
         {
             "kanji": "吊るす",
-            "furigana": "つるす",
+            "hiragana": "つるす",
             "english": "to hang; to hang up",
             "jlpt": "n2"
         },
         {
             "kanji": "散る",
-            "furigana": "ちる",
+            "hiragana": "ちる",
             "english": "to fall (e.g. blossoms, leaves)",
             "jlpt": "n2"
         },
         {
             "kanji": "片付く",
-            "furigana": "かたづく",
+            "hiragana": "かたづく",
             "english": "to be put in order; to be put to rights",
             "jlpt": "n2"
         },
         {
             "kanji": "引っ込む",
-            "furigana": "ひっこむ",
+            "hiragana": "ひっこむ",
             "english": "to draw back; to sink; to cave in",
             "jlpt": "n2"
         },
         {
             "kanji": "帰す",
-            "furigana": "かえす",
+            "hiragana": "かえす",
             "english": "to send (someone) back; to send (someone) home",
             "jlpt": "n2"
         },
         {
             "kanji": "突き当たる",
-            "furigana": "つきあたる",
+            "hiragana": "つきあたる",
             "english": "to run into; to collide with; to crash into; to bump against",
             "jlpt": "n2"
         },
         {
             "kanji": "彫る",
-            "furigana": "ほる",
+            "hiragana": "ほる",
             "english": "to carve; to engrave; to sculpt; to chisel",
             "jlpt": "n2"
         },
         {
             "kanji": "転がす",
-            "furigana": "ころがす",
+            "hiragana": "ころがす",
             "english": "to roll; to wheel; to trundle; to drive (a car)",
             "jlpt": "n2"
         },
         {
             "kanji": "萎む",
-            "furigana": "しぼむ",
+            "hiragana": "しぼむ",
             "english": "to wither (of flowers, dreams, etc.); to wilt; to droop; to shrivel; to fade (away); to sag; to deflate",
             "jlpt": "n2"
         },
         {
             "kanji": "追い越す",
-            "furigana": "おいこす",
+            "hiragana": "おいこす",
             "english": "to pass (e.g. car); to overtake",
             "jlpt": "n2"
         },
         {
             "kanji": "散らす",
-            "furigana": "ちらす",
+            "hiragana": "ちらす",
             "english": "to scatter; to cause a shower of",
             "jlpt": "n2"
         },
         {
             "kanji": "砕く",
-            "furigana": "くだく",
+            "hiragana": "くだく",
             "english": "to break (into pieces); to smash; to crush; to shatter; to grind (into powder); to pound",
             "jlpt": "n2"
         },
         {
             "kanji": "長引く",
-            "furigana": "ながびく",
+            "hiragana": "ながびく",
             "english": "to be prolonged; to drag on; to take a long time; to persist; to linger",
             "jlpt": "n2"
         },
         {
             "kanji": "扇ぐ",
-            "furigana": "あおぐ",
+            "hiragana": "あおぐ",
             "english": "to fan",
             "jlpt": "n2"
         },
         {
             "kanji": "跨ぐ",
-            "furigana": "またぐ",
+            "hiragana": "またぐ",
             "english": "to step over; to step across; to stride over; to stride across; to cross",
             "jlpt": "n2"
         },
         {
             "kanji": "注す",
-            "furigana": "さす",
+            "hiragana": "さす",
             "english": "to pour; to add (liquid); to serve (drinks)",
             "jlpt": "n2"
         },
         {
             "kanji": "映す",
-            "furigana": "うつす",
+            "hiragana": "うつす",
             "english": "to project; to reflect; to cast (shadow)",
             "jlpt": "n2"
         },
         {
             "kanji": "載る",
-            "furigana": "のる",
+            "hiragana": "のる",
             "english": "to be placed on; to be set on; to be piled on; to be loaded on",
             "jlpt": "n2"
         },
         {
             "kanji": "著す",
-            "furigana": "あらわす",
+            "hiragana": "あらわす",
             "english": "to write; to publish",
             "jlpt": "n2"
         },
         {
             "kanji": "著す",
-            "furigana": "あらわす",
+            "hiragana": "あらわす",
             "english": "to write; to publish",
             "jlpt": "n2"
         },
         {
             "kanji": "偏る",
-            "furigana": "かたよる",
+            "hiragana": "かたよる",
             "english": "to lean (to one side); to incline",
             "jlpt": "n2"
         },
         {
             "kanji": "祭る",
-            "furigana": "まつる",
+            "hiragana": "まつる",
             "english": "to deify; to enshrine",
             "jlpt": "n2"
         },
         {
             "kanji": "払い戻す",
-            "furigana": "はらいもどす",
+            "hiragana": "はらいもどす",
             "english": "to repay; to pay back; to refund; to reimburse",
             "jlpt": "n2"
         },
         {
             "kanji": "払い込む",
-            "furigana": "はらいこむ",
+            "hiragana": "はらいこむ",
             "english": "to deposit; to pay in",
             "jlpt": "n2"
         },
         {
             "kanji": "射す",
-            "furigana": "さす",
+            "hiragana": "さす",
             "english": "to shine",
             "jlpt": "n2"
         },
         {
             "kanji": "略す",
-            "furigana": "りゃくす",
+            "hiragana": "りゃくす",
             "english": "to abbreviate; to omit",
             "jlpt": "n2"
         },
         {
             "kanji": "占う",
-            "furigana": "うらなう",
+            "hiragana": "うらなう",
             "english": "to tell someone's fortune; to divine (the future)",
             "jlpt": "n2"
         },
         {
             "kanji": "匂う",
-            "furigana": "におう",
+            "hiragana": "におう",
             "english": "to be fragrant; to smell (good)",
             "jlpt": "n2"
         },
         {
             "kanji": "渇く",
-            "furigana": "かわく",
+            "hiragana": "かわく",
             "english": "to be thirsty; to feel thirsty",
             "jlpt": "n2"
         },
         {
             "kanji": "拝む",
-            "furigana": "おがむ",
+            "hiragana": "おがむ",
             "english": "to assume the posture of praying; to press the palms and fingers of both hands together; to do reverence (e.g. before a statue of the Buddha); to pay one's respects",
             "jlpt": "n2"
         },
         {
             "kanji": "刷る",
-            "furigana": "する",
+            "hiragana": "する",
             "english": "to print",
             "jlpt": "n2"
         },
         {
             "kanji": "揉む",
-            "furigana": "もむ",
+            "hiragana": "もむ",
             "english": "to rub; to crumple",
             "jlpt": "n2"
         },
         {
             "kanji": "卸す",
-            "furigana": "おろす",
+            "hiragana": "おろす",
             "english": "to sell wholesale",
             "jlpt": "n2"
         },
         {
             "kanji": "引っ繰り返る",
-            "furigana": "ひっくりかえる",
+            "hiragana": "ひっくりかえる",
             "english": "to be overturned; to be reversed; to turn over; to capsize",
             "jlpt": "n2"
         },
         {
             "kanji": "悔やむ",
-            "furigana": "くやむ",
+            "hiragana": "くやむ",
             "english": "to mourn; to lament",
             "jlpt": "n2"
         },
         {
             "kanji": "仕上がる",
-            "furigana": "しあがる",
+            "hiragana": "しあがる",
             "english": "to be finished; to be completed; to be done",
             "jlpt": "n2"
         },
         {
             "kanji": "請う",
-            "furigana": "こう",
+            "hiragana": "こう",
             "english": "to beg; to ask; to request; to invite",
             "jlpt": "n2"
         },
         {
             "kanji": "挟まる",
-            "furigana": "はさまる",
+            "hiragana": "はさまる",
             "english": "to get between; to be caught in",
             "jlpt": "n2"
         },
         {
             "kanji": "焦がす",
-            "furigana": "こがす",
+            "hiragana": "こがす",
             "english": "to burn; to scorch; to singe; to char",
             "jlpt": "n2"
         },
         {
             "kanji": "通り掛かる",
-            "furigana": "とおりかかる",
+            "hiragana": "とおりかかる",
             "english": "to happen to pass by",
             "jlpt": "n2"
         },
         {
             "kanji": "包む",
-            "furigana": "つつむ",
+            "hiragana": "つつむ",
             "english": "to wrap up; to pack; to bundle; to do up",
             "jlpt": "n2"
         },
         {
             "kanji": "脅かす",
-            "furigana": "おどかす",
+            "hiragana": "おどかす",
             "english": "to threaten; to menace; to intimidate",
             "jlpt": "n2"
         },
         {
             "kanji": "羨む",
-            "furigana": "うらやむ",
+            "hiragana": "うらやむ",
             "english": "to envy; to be envious of; to be jealous of",
             "jlpt": "n2"
         },
         {
             "kanji": "齧る",
-            "furigana": "かじる",
+            "hiragana": "かじる",
             "english": "to gnaw; to nibble; to bite; to munch; to crunch",
             "jlpt": "n2"
         },
         {
             "kanji": "ひっくり返す",
-            "furigana": "ひっくりかえす",
+            "hiragana": "ひっくりかえす",
             "english": "to turn over; to turn upside down; to turn up; to turn inside out; to turn out",
             "jlpt": "n2"
         },
         {
             "kanji": "すれ違う",
-            "furigana": "すれちがう",
+            "hiragana": "すれちがう",
             "english": "to pass (by) each other; to brush past",
             "jlpt": "n2"
         },
         {
             "kanji": "破く",
-            "furigana": "やぶく",
+            "hiragana": "やぶく",
             "english": "to tear; to rip",
             "jlpt": "n2"
         },
         {
             "kanji": "放る",
-            "furigana": "ほうる",
+            "hiragana": "ほうる",
             "english": "to throw; to fling; to hurl; to toss",
             "jlpt": "n2"
         },
         {
             "kanji": "炙る",
-            "furigana": "あぶる",
+            "hiragana": "あぶる",
             "english": "to warm (e.g. one's hands over a fire); to dry",
             "jlpt": "n2"
         },
         {
             "kanji": "挿す",
-            "furigana": "さす",
+            "hiragana": "さす",
             "english": "to insert; to put in",
             "jlpt": "n2"
         },
         {
             "kanji": "止まる-1",
-            "furigana": "とどまる",
+            "hiragana": "とどまる",
             "english": "to remain; to abide; to stay (in the one place)",
             "jlpt": "n2"
         },
         {
             "kanji": "解く-1",
-            "furigana": "ほどく",
+            "hiragana": "ほどく",
             "english": "to undo; to untie; to unfasten; to unlace; to unravel; to loosen; to unpack",
             "jlpt": "n2"
         },
         {
             "kanji": "揶揄う",
-            "furigana": "からかう",
+            "hiragana": "からかう",
             "english": "to tease; to make fun of; to poke fun at; to make a crack about; to chaff; to kid; to joke; to banter; to pull someone's leg",
             "jlpt": "n2"
         },
         {
             "kanji": "打つかる",
-            "furigana": "ぶつかる",
+            "hiragana": "ぶつかる",
             "english": "to bump into; to run into; to collide with; to hit; to strike",
             "jlpt": "n2"
         },
         {
             "kanji": "くっ付く",
-            "furigana": "くっつく",
+            "hiragana": "くっつく",
             "english": "to adhere to; to stick to; to cling to",
             "jlpt": "n2"
         },
         {
             "kanji": "汚す",
-            "furigana": "よごす",
+            "hiragana": "よごす",
             "english": "to pollute; to contaminate; to soil; to make dirty; to stain",
             "jlpt": "n2"
         },
         {
             "kanji": "退く",
-            "furigana": "どく",
+            "hiragana": "どく",
             "english": "to step aside; to move (i.e. out of the way); to make way",
             "jlpt": "n2"
         },
         {
             "kanji": "滑らす",
-            "furigana": "ずらす",
+            "hiragana": "ずらす",
             "english": "to shift; to move; to slide",
             "jlpt": "n2"
         },
         {
             "kanji": "捻る",
-            "furigana": "ひねる",
+            "hiragana": "ひねる",
             "english": "to twist; to wrench; to turn (a switch on or off, etc.); to wring (a neck)",
             "jlpt": "n2"
         },
         {
             "kanji": "冷ます",
-            "furigana": "さます",
+            "hiragana": "さます",
             "english": "to cool (e.g. from a high temperature to room temperature); to let cool",
             "jlpt": "n2"
         },
         {
             "kanji": "しゃがむ",
-            "furigana": "しゃがむ",
+            "hiragana": "しゃがむ",
             "english": "to squat; to crouch",
             "jlpt": "n2"
         },
         {
             "kanji": "煎る",
-            "furigana": "いる",
+            "hiragana": "いる",
             "english": "to roast; to parch; to toast; to boil down",
             "jlpt": "n2"
         },
         {
             "kanji": "捩る",
-            "furigana": "ねじる",
+            "hiragana": "ねじる",
             "english": "to twist; to screw; to wrench",
             "jlpt": "n2"
         },
         {
             "kanji": "撃つ",
-            "furigana": "うつ",
+            "hiragana": "うつ",
             "english": "to shoot (a gun, person, etc.); to fire",
             "jlpt": "n2"
         },
         {
             "kanji": "盛る-1",
-            "furigana": "もる",
+            "hiragana": "もる",
             "english": "to serve (in a bowl, on a plate, etc.); to dish out; to dish up; to fill (a bowl) with",
             "jlpt": "n2"
         },
         {
             "kanji": "響く",
-            "furigana": "ひびく",
+            "hiragana": "ひびく",
             "english": "to resound; to be heard far away",
             "jlpt": "n2"
         },
         {
             "kanji": "恨む",
-            "furigana": "うらむ",
+            "hiragana": "うらむ",
             "english": "to bear a grudge against; to resent; to blame; to curse; to feel bitter towards",
             "jlpt": "n2"
         },
         {
             "kanji": "焚く",
-            "furigana": "たく",
+            "hiragana": "たく",
             "english": "to burn; to kindle; to light (a fire); to make (a fire)",
             "jlpt": "n2"
         },
         {
             "kanji": "吊る",
-            "furigana": "つる",
+            "hiragana": "つる",
             "english": "to hang; to suspend; to sling; to wear (e.g. a sword); to put up (e.g. a shelf)",
             "jlpt": "n2"
         },
         {
             "kanji": "凹む",
-            "furigana": "へこむ",
+            "hiragana": "へこむ",
             "english": "to be dented; to be indented; to yield; to give; to sink; to collapse; to cave in",
             "jlpt": "n2"
         },
         {
             "kanji": "蒔く",
-            "furigana": "まく",
+            "hiragana": "まく",
             "english": "to sow; to plant; to seed",
             "jlpt": "n2"
         },
         {
             "kanji": "打ち消す",
-            "furigana": "うちけす",
+            "hiragana": "うちけす",
             "english": "to deny; to contradict",
             "jlpt": "n2"
         },
         {
             "kanji": "張り切る",
-            "furigana": "はりきる",
+            "hiragana": "はりきる",
             "english": "to be in high spirits; to be full of vigor (vigour); to be enthusiastic; to be eager; to stretch to breaking point",
             "jlpt": "n2"
         },
         {
             "kanji": "溶く",
-            "furigana": "とく",
+            "hiragana": "とく",
             "english": "to dissolve (paint); to scramble (eggs); to melt (metal, etc.); to mix (water with flour, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "斬る",
-            "furigana": "きる",
+            "hiragana": "きる",
             "english": "to kill (a human) using a blade (sword, machete, knife, etc.); to slice (off); to lop (off); to cut (off)",
             "jlpt": "n2"
         },
         {
             "kanji": "潜る-1",
-            "furigana": "もぐる",
+            "hiragana": "もぐる",
             "english": "to dive (into or under water)",
             "jlpt": "n2"
         },
         {
             "kanji": "しゃぶる",
-            "furigana": "しゃぶる",
+            "hiragana": "しゃぶる",
             "english": "to suck; to lick",
             "jlpt": "n2"
         },
         {
             "kanji": "蒸す",
-            "furigana": "むす",
+            "hiragana": "むす",
             "english": "to steam (food, towel, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "酌む",
-            "furigana": "くむ",
+            "hiragana": "くむ",
             "english": "to pour (sake); to serve; to drink together",
             "jlpt": "n2"
         },
         {
             "kanji": "千切る",
-            "furigana": "ちぎる",
+            "hiragana": "ちぎる",
             "english": "to tear to pieces; to tear to shreds; to tear up",
             "jlpt": "n2"
         },
         {
             "kanji": "滑る-1",
-            "furigana": "ぬめる",
+            "hiragana": "ぬめる",
             "english": "to be slippery; to be slimy",
             "jlpt": "n2"
         },
         {
             "kanji": "作る",
-            "furigana": "つくる",
+            "hiragana": "つくる",
             "english": "to make; to produce; to manufacture; to build; to construct",
             "jlpt": "n1"
         },
         {
             "kanji": "行く",
-            "furigana": "いく",
+            "hiragana": "いく",
             "english": "to go; to move (towards); to head (towards); to leave (for)",
             "jlpt": "n1"
         },
         {
             "kanji": "終わる",
-            "furigana": "おわる",
+            "hiragana": "おわる",
             "english": "to end; to come to an end; to finish; to close; to be over",
             "jlpt": "n1"
         },
         {
             "kanji": "曲がる",
-            "furigana": "まがる",
+            "hiragana": "まがる",
             "english": "to bend; to curve; to warp; to wind; to twist",
             "jlpt": "n1"
         },
         {
             "kanji": "怒る",
-            "furigana": "おこる",
+            "hiragana": "おこる",
             "english": "to get angry; to get mad",
             "jlpt": "n1"
         },
         {
             "kanji": "楽しむ",
-            "furigana": "たのしむ",
+            "hiragana": "たのしむ",
             "english": "to enjoy; to take pleasure in; to have a good time; to have fun",
             "jlpt": "n1"
         },
         {
             "kanji": "起こす",
-            "furigana": "おこす",
+            "hiragana": "おこす",
             "english": "to raise; to raise up; to set up; to pick up",
             "jlpt": "n1"
         },
         {
             "kanji": "上がる",
-            "furigana": "あがる",
+            "hiragana": "あがる",
             "english": "to rise; to go up; to come up; to ascend; to be raised",
             "jlpt": "n1"
         },
         {
             "kanji": "集まる",
-            "furigana": "あつまる",
+            "hiragana": "あつまる",
             "english": "to gather; to collect; to assemble",
             "jlpt": "n1"
         },
         {
             "kanji": "落とす",
-            "furigana": "おとす",
+            "hiragana": "おとす",
             "english": "to drop; to lose; to let fall; to shed (light); to cast (one's gaze); to pour in (liquid); to leave behind",
             "jlpt": "n1"
         },
         {
             "kanji": "下がる",
-            "furigana": "さがる",
+            "hiragana": "さがる",
             "english": "to come down; to go down; to fall; to drop; to sink; to get lower",
             "jlpt": "n1"
         },
         {
             "kanji": "決まる",
-            "furigana": "きまる",
+            "hiragana": "きまる",
             "english": "to be decided; to be settled; to be fixed; to be arranged",
             "jlpt": "n1"
         },
         {
             "kanji": "為さる",
-            "furigana": "なさる",
+            "hiragana": "なさる",
             "english": "to do",
             "jlpt": "n1"
         },
         {
             "kanji": "込む",
-            "furigana": "こむ",
+            "hiragana": "こむ",
             "english": "to be crowded; to be packed; to be congested; to be thronged (with)",
             "jlpt": "n1"
         },
         {
             "kanji": "出会う",
-            "furigana": "であう",
+            "hiragana": "であう",
             "english": "to meet (by chance); to come across; to run across; to encounter; to happen upon",
             "jlpt": "n1"
         },
         {
             "kanji": "仕舞う",
-            "furigana": "しまう",
+            "hiragana": "しまう",
             "english": "to finish; to stop; to end; to put an end to; to bring to a close",
             "jlpt": "n1"
         },
         {
             "kanji": "喋る",
-            "furigana": "しゃべる",
+            "hiragana": "しゃべる",
             "english": "to talk; to chat; to chatter",
             "jlpt": "n1"
         },
         {
             "kanji": "唸る",
-            "furigana": "うなる",
+            "hiragana": "うなる",
             "english": "to groan; to moan",
             "jlpt": "n1"
         },
         {
             "kanji": "殴る",
-            "furigana": "なぐる",
+            "hiragana": "なぐる",
             "english": "to strike; to hit; to beat; to punch",
             "jlpt": "n1"
         },
         {
             "kanji": "騙す",
-            "furigana": "だます",
+            "hiragana": "だます",
             "english": "to trick; to cheat; to deceive",
             "jlpt": "n1"
         },
         {
             "kanji": "付き合う",
-            "furigana": "つきあう",
+            "hiragana": "つきあう",
             "english": "to associate with; to keep company with; to go out with; to go steady with; to get on with",
             "jlpt": "n1"
         },
         {
             "kanji": "当てはまる",
-            "furigana": "あてはまる",
+            "hiragana": "あてはまる",
             "english": "to apply (of a rule); to be applicable (of standards, lessons, ideas, etc.); to hold true (e.g. of a description); to fit; to be suitable (e.g. of a word); to meet (requirements); to fulfill (conditions); to come under (a heading)",
             "jlpt": "n1"
         },
         {
             "kanji": "浮かぶ",
-            "furigana": "うかぶ",
+            "hiragana": "うかぶ",
             "english": "to float; to be suspended",
             "jlpt": "n1"
         },
         {
             "kanji": "替わる",
-            "furigana": "かわる",
+            "hiragana": "かわる",
             "english": "to succeed; to relieve; to replace",
             "jlpt": "n1"
         },
         {
             "kanji": "零す",
-            "furigana": "こぼす",
+            "hiragana": "こぼす",
             "english": "to spill; to drop; to shed (tears)",
             "jlpt": "n1"
         },
         {
             "kanji": "寄越す",
-            "furigana": "よこす",
+            "hiragana": "よこす",
             "english": "to send; to forward",
             "jlpt": "n1"
         },
         {
             "kanji": "躊躇う",
-            "furigana": "ためらう",
+            "hiragana": "ためらう",
             "english": "to hesitate; to waver",
             "jlpt": "n1"
         },
         {
             "kanji": "遡る",
-            "furigana": "さかのぼる",
+            "hiragana": "さかのぼる",
             "english": "to go upstream; to go up (a river)",
             "jlpt": "n1"
         },
         {
             "kanji": "剃る",
-            "furigana": "そる",
+            "hiragana": "そる",
             "english": "to shave",
             "jlpt": "n1"
         },
         {
             "kanji": "怒鳴る",
-            "furigana": "どなる",
+            "hiragana": "どなる",
             "english": "to shout (in anger); to yell",
             "jlpt": "n1"
         },
         {
             "kanji": "可愛がる",
-            "furigana": "かわいがる",
+            "hiragana": "かわいがる",
             "english": "to be affectionate to; to treat tenderly; to dote on; to show one's love (for); to cherish",
             "jlpt": "n1"
         },
         {
             "kanji": "傾く",
-            "furigana": "かたむく",
+            "hiragana": "かたむく",
             "english": "to incline toward; to slant; to lurch; to heel over; to be disposed to; to trend toward; to be prone to",
             "jlpt": "n1"
         },
         {
             "kanji": "躓く",
-            "furigana": "つまずく",
+            "hiragana": "つまずく",
             "english": "to trip (over); to stumble",
             "jlpt": "n1"
         },
         {
             "kanji": "返る",
-            "furigana": "かえる",
+            "hiragana": "かえる",
             "english": "to return; to come back; to go back",
             "jlpt": "n1"
         },
         {
             "kanji": "背負う",
-            "furigana": "せおう",
+            "hiragana": "せおう",
             "english": "to carry on one's back",
             "jlpt": "n1"
         },
         {
             "kanji": "剥がす",
-            "furigana": "はがす",
+            "hiragana": "はがす",
             "english": "to tear off; to peel off; to rip off; to strip off; to skin; to flay; to disrobe; to deprive of; to detach; to disconnect",
             "jlpt": "n1"
         },
         {
             "kanji": "吊るす",
-            "furigana": "つるす",
+            "hiragana": "つるす",
             "english": "to hang; to hang up",
             "jlpt": "n1"
         },
         {
             "kanji": "萎む",
-            "furigana": "しぼむ",
+            "hiragana": "しぼむ",
             "english": "to wither (of flowers, dreams, etc.); to wilt; to droop; to shrivel; to fade (away); to sag; to deflate",
             "jlpt": "n1"
         },
         {
             "kanji": "跨ぐ",
-            "furigana": "またぐ",
+            "hiragana": "またぐ",
             "english": "to step over; to step across; to stride over; to stride across; to cross",
             "jlpt": "n1"
         },
         {
             "kanji": "偏る",
-            "furigana": "かたよる",
+            "hiragana": "かたよる",
             "english": "to lean (to one side); to incline",
             "jlpt": "n1"
         },
         {
             "kanji": "倣う",
-            "furigana": "ならう",
+            "hiragana": "ならう",
             "english": "to imitate; to follow; to copy; to emulate",
             "jlpt": "n1"
         },
         {
             "kanji": "勝る",
-            "furigana": "まさる",
+            "hiragana": "まさる",
             "english": "to excel; to surpass; to exceed; to have an edge; to be superior; to outrival",
             "jlpt": "n1"
         },
         {
             "kanji": "立ち寄る",
-            "furigana": "たちよる",
+            "hiragana": "たちよる",
             "english": "to drop in (at); to drop by; to call at; to stop by; to stop off; to stop in",
             "jlpt": "n1"
         },
         {
             "kanji": "襲う",
-            "furigana": "おそう",
+            "hiragana": "おそう",
             "english": "to attack; to assail; to make an assault; to strike; to hunt down",
             "jlpt": "n1"
         },
         {
             "kanji": "負う",
-            "furigana": "おう",
+            "hiragana": "おう",
             "english": "to carry on one's back; to bear; to shoulder",
             "jlpt": "n1"
         },
         {
             "kanji": "保つ",
-            "furigana": "たもつ",
+            "hiragana": "たもつ",
             "english": "to keep; to preserve; to hold; to retain; to maintain; to sustain",
             "jlpt": "n1"
         },
         {
             "kanji": "広まる",
-            "furigana": "ひろまる",
+            "hiragana": "ひろまる",
             "english": "to spread; to be propagated",
             "jlpt": "n1"
         },
         {
             "kanji": "及ぶ",
-            "furigana": "およぶ",
+            "hiragana": "およぶ",
             "english": "to reach; to amount to; to befall; to happen to; to extend; to go on (for, until)",
             "jlpt": "n1"
         },
         {
             "kanji": "満たす",
-            "furigana": "みたす",
+            "hiragana": "みたす",
             "english": "to satisfy (conditions, one's appetite, etc.); to meet (e.g. demands); to fulfill; to gratify",
             "jlpt": "n1"
         },
         {
             "kanji": "成り立つ",
-            "furigana": "なりたつ",
+            "hiragana": "なりたつ",
             "english": "to consist of; to be made up of; to be composed of",
             "jlpt": "n1"
         },
         {
             "kanji": "悩ます",
-            "furigana": "なやます",
+            "hiragana": "なやます",
             "english": "to afflict; to torment; to harass; to molest",
             "jlpt": "n1"
         },
         {
             "kanji": "継ぐ",
-            "furigana": "つぐ",
+            "hiragana": "つぐ",
             "english": "to succeed (a person, to a position, etc.); to inherit; to take over; to follow",
             "jlpt": "n1"
         },
         {
             "kanji": "催す",
-            "furigana": "もよおす",
+            "hiragana": "もよおす",
             "english": "to hold (an event); to give (a dinner, party, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "励ます",
-            "furigana": "はげます",
+            "hiragana": "はげます",
             "english": "to encourage; to cheer on; to cheer (someone) up",
             "jlpt": "n1"
         },
         {
             "kanji": "抜け出す",
-            "furigana": "ぬけだす",
+            "hiragana": "ぬけだす",
             "english": "to slip out; to sneak away; to break free; to get through (a difficult situation)",
             "jlpt": "n1"
         },
         {
             "kanji": "損う",
-            "furigana": "そこなう",
+            "hiragana": "そこなう",
             "english": "to harm; to hurt; to injure; to damage; to spoil; to mar; to ruin",
             "jlpt": "n1"
         },
         {
             "kanji": "図る",
-            "furigana": "はかる",
+            "hiragana": "はかる",
             "english": "to plan; to attempt; to devise",
             "jlpt": "n1"
         },
         {
             "kanji": "脅す",
-            "furigana": "おどす",
+            "hiragana": "おどす",
             "english": "to threaten; to menace; to frighten (into doing)",
             "jlpt": "n1"
         },
         {
             "kanji": "受け継ぐ",
-            "furigana": "うけつぐ",
+            "hiragana": "うけつぐ",
             "english": "to inherit; to succeed; to take over",
             "jlpt": "n1"
         },
         {
             "kanji": "高まる",
-            "furigana": "たかまる",
+            "hiragana": "たかまる",
             "english": "to rise; to swell; to be promoted",
             "jlpt": "n1"
         },
         {
             "kanji": "漂う",
-            "furigana": "ただよう",
+            "hiragana": "ただよう",
             "english": "to drift; to float",
             "jlpt": "n1"
         },
         {
             "kanji": "問う",
-            "furigana": "とう",
+            "hiragana": "とう",
             "english": "to ask; to inquire",
             "jlpt": "n1"
         },
         {
             "kanji": "施す",
-            "furigana": "ほどこす",
+            "hiragana": "ほどこす",
             "english": "to give (time, money, goods); to donate",
             "jlpt": "n1"
         },
         {
             "kanji": "募る",
-            "furigana": "つのる",
+            "hiragana": "つのる",
             "english": "to become stronger; to grow in intensity; to grow violent; to become worse",
             "jlpt": "n1"
         },
         {
             "kanji": "募る",
-            "furigana": "つのる",
+            "hiragana": "つのる",
             "english": "to become stronger; to grow in intensity; to grow violent; to become worse",
             "jlpt": "n1"
         },
         {
             "kanji": "待ち望む",
-            "furigana": "まちのぞむ",
+            "hiragana": "まちのぞむ",
             "english": "to wait eagerly for; to look forward to",
             "jlpt": "n1"
         },
         {
             "kanji": "交わす",
-            "furigana": "かわす",
+            "hiragana": "かわす",
             "english": "to exchange (messages, greetings, arguments, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "惜しむ",
-            "furigana": "おしむ",
+            "hiragana": "おしむ",
             "english": "to be frugal; to be sparing",
             "jlpt": "n1"
         },
         {
             "kanji": "追い出す",
-            "furigana": "おいだす",
+            "hiragana": "おいだす",
             "english": "to expel; to drive out",
             "jlpt": "n1"
         },
         {
             "kanji": "営む",
-            "furigana": "いとなむ",
+            "hiragana": "いとなむ",
             "english": "to run (a business); to operate; to conduct; to practice (law, medicine, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "追い込む",
-            "furigana": "おいこむ",
+            "hiragana": "おいこむ",
             "english": "to herd; to drive; to chase; to corral",
             "jlpt": "n1"
         },
         {
             "kanji": "押し込む",
-            "furigana": "おしこむ",
+            "hiragana": "おしこむ",
             "english": "to push into; to cram into; to stuff into; to crowd into",
             "jlpt": "n1"
         },
         {
             "kanji": "結びつく",
-            "furigana": "むすびつく",
+            "hiragana": "むすびつく",
             "english": "to be related; to be connected; to be joined together",
             "jlpt": "n1"
         },
         {
             "kanji": "引き取る",
-            "furigana": "ひきとる",
+            "hiragana": "ひきとる",
             "english": "to take into one's possession; to receive; to accept; to collect; to claim",
             "jlpt": "n1"
         },
         {
             "kanji": "備わる",
-            "furigana": "そなわる",
+            "hiragana": "そなわる",
             "english": "to be furnished with; to be provided with; to be equipped with",
             "jlpt": "n1"
         },
         {
             "kanji": "引きずる",
-            "furigana": "ひきずる",
+            "hiragana": "ひきずる",
             "english": "to drag; to trail; to pull along the ground; to lug",
             "jlpt": "n1"
         },
         {
             "kanji": "引き取る",
-            "furigana": "ひきとる",
+            "hiragana": "ひきとる",
             "english": "to take into one's possession; to receive; to accept; to collect; to claim",
             "jlpt": "n1"
         },
         {
             "kanji": "荒らす",
-            "furigana": "あらす",
+            "hiragana": "あらす",
             "english": "to lay waste; to devastate; to damage",
             "jlpt": "n1"
         },
         {
             "kanji": "似通う",
-            "furigana": "にかよう",
+            "hiragana": "にかよう",
             "english": "to resemble closely",
             "jlpt": "n1"
         },
         {
             "kanji": "組み込む",
-            "furigana": "くみこむ",
+            "hiragana": "くみこむ",
             "english": "to insert; to include; to incorporate; to install",
             "jlpt": "n1"
         },
         {
             "kanji": "似通う",
-            "furigana": "にかよう",
+            "hiragana": "にかよう",
             "english": "to resemble closely",
             "jlpt": "n1"
         },
         {
             "kanji": "侵す",
-            "furigana": "おかす",
+            "hiragana": "おかす",
             "english": "to invade; to raid; to violate (airspace, etc.); to intrude; to trespass",
             "jlpt": "n1"
         },
         {
             "kanji": "舞う",
-            "furigana": "まう",
+            "hiragana": "まう",
             "english": "to dance (orig. a whirling dance)",
             "jlpt": "n1"
         },
         {
             "kanji": "覆す",
-            "furigana": "くつがえす",
+            "hiragana": "くつがえす",
             "english": "to overturn; to capsize; to upset",
             "jlpt": "n1"
         },
         {
             "kanji": "阻む",
-            "furigana": "はばむ",
+            "hiragana": "はばむ",
             "english": "to keep someone from doing; to stop; to prevent; to check; to hinder; to obstruct; to oppose; to thwart",
             "jlpt": "n1"
         },
         {
             "kanji": "打ち切る",
-            "furigana": "うちきる",
+            "hiragana": "うちきる",
             "english": "to stop; to abort; to discontinue; to close",
             "jlpt": "n1"
         },
         {
             "kanji": "定まる",
-            "furigana": "さだまる",
+            "hiragana": "さだまる",
             "english": "to become settled; to be fixed",
             "jlpt": "n1"
         },
         {
             "kanji": "投げ出す",
-            "furigana": "なげだす",
+            "hiragana": "なげだす",
             "english": "to throw down; to throw out; to stretch out (one's legs)",
             "jlpt": "n1"
         },
         {
             "kanji": "親しむ",
-            "furigana": "したしむ",
+            "hiragana": "したしむ",
             "english": "to be intimate with; to befriend",
             "jlpt": "n1"
         },
         {
             "kanji": "揺さぶる",
-            "furigana": "ゆさぶる",
+            "hiragana": "ゆさぶる",
             "english": "to shake; to jolt; to rock; to swing; to sway",
             "jlpt": "n1"
         },
         {
             "kanji": "意気込む",
-            "furigana": "いきごむ",
+            "hiragana": "いきごむ",
             "english": "to be enthusiastic (about); to be eager (to do); to be keen; to be intent (on); to be determined",
             "jlpt": "n1"
         },
         {
             "kanji": "売り出す",
-            "furigana": "うりだす",
+            "hiragana": "うりだす",
             "english": "to put on the market; to put out for sale; to put on sale; to begin selling; to market",
             "jlpt": "n1"
         },
         {
             "kanji": "記す",
-            "furigana": "しるす",
+            "hiragana": "しるす",
             "english": "to write down; to note down; to jot down; to take a note of",
             "jlpt": "n1"
         },
         {
             "kanji": "遣る",
-            "furigana": "やる",
+            "hiragana": "やる",
             "english": "to do; to undertake; to perform; to play (a game); to study",
             "jlpt": "n1"
         },
         {
             "kanji": "間違う",
-            "furigana": "まちがう",
+            "hiragana": "まちがう",
             "english": "to make a mistake; to be incorrect; to be mistaken",
             "jlpt": "n1"
         },
         {
             "kanji": "近づく",
-            "furigana": "ちかづく",
+            "hiragana": "ちかづく",
             "english": "to approach; to draw near; to get close",
             "jlpt": "n1"
         },
         {
             "kanji": "犯す",
-            "furigana": "おかす",
+            "hiragana": "おかす",
             "english": "to commit (e.g. crime); to perpetrate; to make (e.g. mistake)",
             "jlpt": "n1"
         },
         {
             "kanji": "齎す",
-            "furigana": "もたらす",
+            "hiragana": "もたらす",
             "english": "to bring (news, knowledge, etc.); to introduce",
             "jlpt": "n1"
         },
         {
             "kanji": "果たす",
-            "furigana": "はたす",
+            "hiragana": "はたす",
             "english": "to accomplish; to achieve; to carry out; to fulfill; to fulfil; to realize; to execute; to perform; to do",
             "jlpt": "n1"
         },
         {
             "kanji": "尽くす",
-            "furigana": "つくす",
+            "hiragana": "つくす",
             "english": "to use up; to exhaust; to run out of",
             "jlpt": "n1"
         },
         {
             "kanji": "役立つ",
-            "furigana": "やくだつ",
+            "hiragana": "やくだつ",
             "english": "to be useful; to be helpful; to serve the purpose",
             "jlpt": "n1"
         },
         {
             "kanji": "取り戻す",
-            "furigana": "とりもどす",
+            "hiragana": "とりもどす",
             "english": "to take back; to get back; to regain; to recover; to restore; to recoup",
             "jlpt": "n1"
         },
         {
             "kanji": "産む",
-            "furigana": "うむ",
+            "hiragana": "うむ",
             "english": "to give birth; to bear (child); to lay (eggs)",
             "jlpt": "n1"
         },
         {
             "kanji": "養う",
-            "furigana": "やしなう",
+            "hiragana": "やしなう",
             "english": "to support; to maintain; to provide for",
             "jlpt": "n1"
         },
         {
             "kanji": "痛む",
-            "furigana": "いたむ",
+            "hiragana": "いたむ",
             "english": "to hurt; to ache; to feel a pain",
             "jlpt": "n1"
         },
         {
             "kanji": "引き起こす",
-            "furigana": "ひきおこす",
+            "hiragana": "ひきおこす",
             "english": "to cause; to induce; to bring about; to provoke",
             "jlpt": "n1"
         },
         {
             "kanji": "済ます",
-            "furigana": "すます",
+            "hiragana": "すます",
             "english": "to finish; to get it over with; to conclude",
             "jlpt": "n1"
         },
         {
             "kanji": "取り除く",
-            "furigana": "とりのぞく",
+            "hiragana": "とりのぞく",
             "english": "to remove; to deinstall; to take away; to set apart",
             "jlpt": "n1"
         },
         {
             "kanji": "見渡す",
-            "furigana": "みわたす",
+            "hiragana": "みわたす",
             "english": "to look out over; to survey (scene); to take an extensive view of",
             "jlpt": "n1"
         },
         {
             "kanji": "富む",
-            "furigana": "とむ",
+            "hiragana": "とむ",
             "english": "to be rich in; to abound in; to be abundant in; to be full of",
             "jlpt": "n1"
         },
         {
             "kanji": "逃げ出す",
-            "furigana": "にげだす",
+            "hiragana": "にげだす",
             "english": "to run away; to flee; to make off; to take to one's heels; to escape",
             "jlpt": "n1"
         },
         {
             "kanji": "受かる",
-            "furigana": "うかる",
+            "hiragana": "うかる",
             "english": "to pass (examination)",
             "jlpt": "n1"
         },
         {
             "kanji": "費やす",
-            "furigana": "ついやす",
+            "hiragana": "ついやす",
             "english": "to spend; to expend; to consume",
             "jlpt": "n1"
         },
         {
             "kanji": "漏らす",
-            "furigana": "もらす",
+            "hiragana": "もらす",
             "english": "to let leak; to let out (e.g. light)",
             "jlpt": "n1"
         },
         {
             "kanji": "取り組む",
-            "furigana": "とりくむ",
+            "hiragana": "とりくむ",
             "english": "to grapple with; to wrestle with; to engage in a bout; to be matched against",
             "jlpt": "n1"
         },
         {
             "kanji": "乗り込む",
-            "furigana": "のりこむ",
+            "hiragana": "のりこむ",
             "english": "to board; to embark on; to get into (a car); to man (a ship); to help (someone) into",
             "jlpt": "n1"
         },
         {
             "kanji": "叶う",
-            "furigana": "かなう",
+            "hiragana": "かなう",
             "english": "to come true (of a wish, prayer, etc.); to be realized; to be fulfilled",
             "jlpt": "n1"
         },
         {
             "kanji": "沿う",
-            "furigana": "そう",
+            "hiragana": "そう",
             "english": "to run along; to run beside; to stick to (a line)",
             "jlpt": "n1"
         },
         {
             "kanji": "治まる",
-            "furigana": "おさまる",
+            "hiragana": "おさまる",
             "english": "to die down (storm, anger, conflict, etc.); to calm down; to cool off; to abate; to be settled; to be brought under control",
             "jlpt": "n1"
         },
         {
             "kanji": "悟る",
-            "furigana": "さとる",
+            "hiragana": "さとる",
             "english": "to perceive; to sense; to become aware; to notice; to detect; to discern",
             "jlpt": "n1"
         },
         {
             "kanji": "欠く",
-            "furigana": "かく",
+            "hiragana": "かく",
             "english": "to chip; to nick; to break; to crack",
             "jlpt": "n1"
         },
         {
             "kanji": "奢る",
-            "furigana": "おごる",
+            "hiragana": "おごる",
             "english": "to treat (someone) to (something); to give (someone) a treat; to buy (someone a meal, drink, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "伴う",
-            "furigana": "ともなう",
+            "hiragana": "ともなう",
             "english": "to accompany; to go hand in hand with; to be consequent upon",
             "jlpt": "n1"
         },
         {
             "kanji": "誤る",
-            "furigana": "あやまる",
+            "hiragana": "あやまる",
             "english": "to make a mistake (in); to commit an error; to do incorrectly; to err",
             "jlpt": "n1"
         },
         {
             "kanji": "見せびらかす",
-            "furigana": "みせびらかす",
+            "hiragana": "みせびらかす",
             "english": "to show off; to flaunt",
             "jlpt": "n1"
         },
         {
             "kanji": "差し出す",
-            "furigana": "さしだす",
+            "hiragana": "さしだす",
             "english": "to present; to submit; to tender; to hold out",
             "jlpt": "n1"
         },
         {
             "kanji": "摘む-1",
-            "furigana": "つまむ",
+            "hiragana": "つまむ",
             "english": "to pinch; to hold (between one's fingers); to pick up (with chopsticks, tweezers, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "見逃す",
-            "furigana": "みのがす",
+            "hiragana": "みのがす",
             "english": "to miss; to overlook; to fail to notice",
             "jlpt": "n1"
         },
         {
             "kanji": "取り扱う",
-            "furigana": "とりあつかう",
+            "hiragana": "とりあつかう",
             "english": "to handle; to operate (a machine, etc.); to use",
             "jlpt": "n1"
         },
         {
             "kanji": "飲み込む",
-            "furigana": "のみこむ",
+            "hiragana": "のみこむ",
             "english": "to swallow; to gulp down",
             "jlpt": "n1"
         },
         {
             "kanji": "築く",
-            "furigana": "きずく",
+            "hiragana": "きずく",
             "english": "to build; to construct; to erect",
             "jlpt": "n1"
         },
         {
             "kanji": "負かす",
-            "furigana": "まかす",
+            "hiragana": "まかす",
             "english": "to defeat",
             "jlpt": "n1"
         },
         {
             "kanji": "割り込む",
-            "furigana": "わりこむ",
+            "hiragana": "わりこむ",
             "english": "to cut into (a line, conversation, etc.); to force oneself into (e.g. a crowd); to wedge oneself into; to squeeze oneself into; to intrude on; to interrupt",
             "jlpt": "n1"
         },
         {
             "kanji": "遮る",
-            "furigana": "さえぎる",
+            "hiragana": "さえぎる",
             "english": "to interrupt; to obstruct (a view, someone's way, etc.); to block (light, wind, etc.); to intercept; to cut off",
             "jlpt": "n1"
         },
         {
             "kanji": "明かす",
-            "furigana": "あかす",
+            "hiragana": "あかす",
             "english": "to pass (the night); to spend",
             "jlpt": "n1"
         },
         {
             "kanji": "退く-1",
-            "furigana": "しりぞく",
+            "hiragana": "しりぞく",
             "english": "to step back; to move back; to retreat",
             "jlpt": "n1"
         },
         {
             "kanji": "漕ぐ",
-            "furigana": "こぐ",
+            "hiragana": "こぐ",
             "english": "to row; to paddle; to scull; to pull (the oars)",
             "jlpt": "n1"
         },
         {
             "kanji": "辿る",
-            "furigana": "たどる",
+            "hiragana": "たどる",
             "english": "to follow (a road, path, etc.); to trace",
             "jlpt": "n1"
         },
         {
             "kanji": "誤魔化す",
-            "furigana": "ごまかす",
+            "hiragana": "ごまかす",
             "english": "to deceive; to cheat; to swindle",
             "jlpt": "n1"
         },
         {
             "kanji": "見落とす",
-            "furigana": "みおとす",
+            "hiragana": "みおとす",
             "english": "to overlook; to fail to notice; to miss (seeing)",
             "jlpt": "n1"
         },
         {
             "kanji": "貫く",
-            "furigana": "つらぬく",
+            "hiragana": "つらぬく",
             "english": "to go through; to pierce; to penetrate",
             "jlpt": "n1"
         },
         {
             "kanji": "妬む",
-            "furigana": "ねたむ",
+            "hiragana": "ねたむ",
             "english": "to be jealous of; to envy; to begrudge",
             "jlpt": "n1"
         },
         {
             "kanji": "捗る",
-            "furigana": "はかどる",
+            "hiragana": "はかどる",
             "english": "to make (good) progress; to move right ahead (with the work); to advance",
             "jlpt": "n1"
         },
         {
             "kanji": "交わる",
-            "furigana": "まじわる",
+            "hiragana": "まじわる",
             "english": "to cross; to intersect; to join; to meet",
             "jlpt": "n1"
         },
         {
             "kanji": "弱る",
-            "furigana": "よわる",
+            "hiragana": "よわる",
             "english": "to weaken; to grow weak; to wane; to decline (of one's health)",
             "jlpt": "n1"
         },
         {
             "kanji": "強請る",
-            "furigana": "ねだる",
+            "hiragana": "ねだる",
             "english": "to beg; to pester; to plead; to coax; to hound; to importune",
             "jlpt": "n1"
         },
         {
             "kanji": "嘆く",
-            "furigana": "なげく",
+            "hiragana": "なげく",
             "english": "to lament; to grieve; to regret",
             "jlpt": "n1"
         },
         {
             "kanji": "導く",
-            "furigana": "みちびく",
+            "hiragana": "みちびく",
             "english": "to guide; to lead; to show the way; to conduct",
             "jlpt": "n1"
         },
         {
             "kanji": "説く",
-            "furigana": "とく",
+            "hiragana": "とく",
             "english": "to explain; to advocate; to preach; to persuade",
             "jlpt": "n1"
         },
         {
             "kanji": "指差す",
-            "furigana": "ゆびさす",
+            "hiragana": "ゆびさす",
             "english": "to point at",
             "jlpt": "n1"
         },
         {
             "kanji": "励む",
-            "furigana": "はげむ",
+            "hiragana": "はげむ",
             "english": "to work hard; to try hard; to strive; to endeavour; to endeavor; to devote oneself to; to make an effort; to be zealous",
             "jlpt": "n1"
         },
         {
             "kanji": "携わる",
-            "furigana": "たずさわる",
+            "hiragana": "たずさわる",
             "english": "to engage in; to participate in; to take part in; to be involved in",
             "jlpt": "n1"
         },
         {
             "kanji": "凌ぐ",
-            "furigana": "しのぐ",
+            "hiragana": "しのぐ",
             "english": "to endure; to keep out (e.g. rain); to stave off (e.g. starvation)",
             "jlpt": "n1"
         },
         {
             "kanji": "仰ぐ",
-            "furigana": "あおぐ",
+            "hiragana": "あおぐ",
             "english": "to look up (at)",
             "jlpt": "n1"
         },
         {
             "kanji": "持て成す",
-            "furigana": "もてなす",
+            "hiragana": "もてなす",
             "english": "to treat (a guest); to receive; to entertain; to be hospitable to; to make welcome",
             "jlpt": "n1"
         },
         {
             "kanji": "染まる",
-            "furigana": "そまる",
+            "hiragana": "そまる",
             "english": "to be dyed",
             "jlpt": "n1"
         },
         {
             "kanji": "霞む",
-            "furigana": "かすむ",
+            "hiragana": "かすむ",
             "english": "to become misty; to become hazy",
             "jlpt": "n1"
         },
         {
             "kanji": "弱まる",
-            "furigana": "よわまる",
+            "hiragana": "よわまる",
             "english": "to abate; to weaken; to be emaciated; to be dejected; to be perplexed",
             "jlpt": "n1"
         },
         {
             "kanji": "弾む",
-            "furigana": "はずむ",
+            "hiragana": "はずむ",
             "english": "to spring; to bound; to bounce",
             "jlpt": "n1"
         },
         {
             "kanji": "志す",
-            "furigana": "こころざす",
+            "hiragana": "こころざす",
             "english": "to plan; to intend; to aspire to; to set aims (sights on)",
             "jlpt": "n1"
         },
         {
             "kanji": "背く",
-            "furigana": "そむく",
+            "hiragana": "そむく",
             "english": "to run counter to; to go against; to disobey; to infringe",
             "jlpt": "n1"
         },
         {
             "kanji": "書き取る",
-            "furigana": "かきとる",
+            "hiragana": "かきとる",
             "english": "to write down (what someone says); to take down dictation; to take notes (e.g. of a lecture)",
             "jlpt": "n1"
         },
         {
             "kanji": "生やす",
-            "furigana": "はやす",
+            "hiragana": "はやす",
             "english": "to grow; to cultivate",
             "jlpt": "n1"
         },
         {
             "kanji": "群がる",
-            "furigana": "むらがる",
+            "hiragana": "むらがる",
             "english": "to swarm; to gather",
             "jlpt": "n1"
         },
         {
             "kanji": "合わす",
-            "furigana": "あわす",
+            "hiragana": "あわす",
             "english": "to match (rhythm, speed, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "繕う",
-            "furigana": "つくろう",
+            "hiragana": "つくろう",
             "english": "to mend; to patch up; to repair; to fix; to darn",
             "jlpt": "n1"
         },
         {
             "kanji": "慣らす",
-            "furigana": "ならす",
+            "hiragana": "ならす",
             "english": "to accustom; to train (e.g. one's ear)",
             "jlpt": "n1"
         },
         {
             "kanji": "呟く",
-            "furigana": "つぶやく",
+            "hiragana": "つぶやく",
             "english": "to mutter; to murmur; to grumble",
             "jlpt": "n1"
         },
         {
             "kanji": "絡む",
-            "furigana": "からむ",
+            "hiragana": "からむ",
             "english": "to twine; to get tangled; to get entangled; to get caught (in)",
             "jlpt": "n1"
         },
         {
             "kanji": "練る",
-            "furigana": "ねる",
+            "hiragana": "ねる",
             "english": "to knead; to thicken into a paste (stirring over a flame)",
             "jlpt": "n1"
         },
         {
             "kanji": "盛り上がる",
-            "furigana": "もりあがる",
+            "hiragana": "もりあがる",
             "english": "to swell; to rise; to bulge; to be piled up",
             "jlpt": "n1"
         },
         {
             "kanji": "歩む",
-            "furigana": "あゆむ",
+            "hiragana": "あゆむ",
             "english": "to walk; to go on foot",
             "jlpt": "n1"
         },
         {
             "kanji": "病む",
-            "furigana": "やむ",
+            "hiragana": "やむ",
             "english": "to fall ill",
             "jlpt": "n1"
         },
         {
             "kanji": "貶す",
-            "furigana": "けなす",
+            "hiragana": "けなす",
             "english": "to speak ill of; to disparage",
             "jlpt": "n1"
         },
         {
             "kanji": "着飾る",
-            "furigana": "きかざる",
+            "hiragana": "きかざる",
             "english": "to dress up",
             "jlpt": "n1"
         },
         {
             "kanji": "欺く",
-            "furigana": "あざむく",
+            "hiragana": "あざむく",
             "english": "to deceive; to delude; to trick; to fool",
             "jlpt": "n1"
         },
         {
             "kanji": "賄う",
-            "furigana": "まかなう",
+            "hiragana": "まかなう",
             "english": "to supply (goods, money, etc.); to cover (costs); to pay; to finance; to maintain (e.g. a family)",
             "jlpt": "n1"
         },
         {
             "kanji": "歩む",
-            "furigana": "あゆむ",
+            "hiragana": "あゆむ",
             "english": "to walk; to go on foot",
             "jlpt": "n1"
         },
         {
             "kanji": "抜かす",
-            "furigana": "ぬかす",
+            "hiragana": "ぬかす",
             "english": "to omit; to leave out; to skip",
             "jlpt": "n1"
         },
         {
             "kanji": "浸す",
-            "furigana": "ひたす",
+            "hiragana": "ひたす",
             "english": "to soak; to dip; to steep; to immerse",
             "jlpt": "n1"
         },
         {
             "kanji": "裁く",
-            "furigana": "さばく",
+            "hiragana": "さばく",
             "english": "to judge; to decide; to sit in judgement; to try",
             "jlpt": "n1"
         },
         {
             "kanji": "織る",
-            "furigana": "おる",
+            "hiragana": "おる",
             "english": "to weave",
             "jlpt": "n1"
         },
         {
             "kanji": "食い違う",
-            "furigana": "くいちがう",
+            "hiragana": "くいちがう",
             "english": "to not match well (e.g. at the seams); to not mesh properly (of gears)",
             "jlpt": "n1"
         },
         {
             "kanji": "遠ざかる",
-            "furigana": "とおざかる",
+            "hiragana": "とおざかる",
             "english": "to go away; to become more distant; to fade away; to die away",
             "jlpt": "n1"
         },
         {
             "kanji": "促す",
-            "furigana": "うながす",
+            "hiragana": "うながす",
             "english": "to urge; to encourage; to press; to prompt; to draw (attention to)",
             "jlpt": "n1"
         },
         {
             "kanji": "操る",
-            "furigana": "あやつる",
+            "hiragana": "あやつる",
             "english": "to operate (e.g. a machine); to handle; to manage; to control; to maneuver; to steer",
             "jlpt": "n1"
         },
         {
             "kanji": "食い違う",
-            "furigana": "くいちがう",
+            "hiragana": "くいちがう",
             "english": "to not match well (e.g. at the seams); to not mesh properly (of gears)",
             "jlpt": "n1"
         },
         {
             "kanji": "臨む",
-            "furigana": "のぞむ",
+            "hiragana": "のぞむ",
             "english": "to look out on; to overlook; to front onto",
             "jlpt": "n1"
         },
         {
             "kanji": "恵む",
-            "furigana": "めぐむ",
+            "hiragana": "めぐむ",
             "english": "to bless; to show mercy to",
             "jlpt": "n1"
         },
         {
             "kanji": "障る",
-            "furigana": "さわる",
+            "hiragana": "さわる",
             "english": "to be harmful to; to hinder; to interfere with; to irritate",
             "jlpt": "n1"
         },
         {
             "kanji": "滲む",
-            "furigana": "にじむ",
+            "hiragana": "にじむ",
             "english": "to run (of liquid); to spread; to bleed; to blot",
             "jlpt": "n1"
         },
         {
             "kanji": "研ぐ",
-            "furigana": "とぐ",
+            "hiragana": "とぐ",
             "english": "to sharpen; to hone; to whet; to grind",
             "jlpt": "n1"
         },
         {
             "kanji": "籠もる",
-            "furigana": "こもる",
+            "hiragana": "こもる",
             "english": "to shut oneself in (e.g. one's room); to be confined in; to seclude oneself; to hide away; to stay inside (one's shell)",
             "jlpt": "n1"
         },
         {
             "kanji": "取り締まる",
-            "furigana": "とりしまる",
+            "hiragana": "とりしまる",
             "english": "to manage; to control; to supervise; to oversee; to command",
             "jlpt": "n1"
         },
         {
             "kanji": "賑わう",
-            "furigana": "にぎわう",
+            "hiragana": "にぎわう",
             "english": "to be crowded with people; to be bustling with",
             "jlpt": "n1"
         },
         {
             "kanji": "逸らす",
-            "furigana": "そらす",
+            "hiragana": "そらす",
             "english": "to turn away (one's eyes, face, etc.); to avert; to divert (e.g. one's attention); to evade (e.g. a question); to change (e.g. the subject)",
             "jlpt": "n1"
         },
         {
             "kanji": "取り巻く",
-            "furigana": "とりまく",
+            "hiragana": "とりまく",
             "english": "to surround; to encircle; to enclose",
             "jlpt": "n1"
         },
         {
             "kanji": "強まる",
-            "furigana": "つよまる",
+            "hiragana": "つよまる",
             "english": "to get strong; to gain strength",
             "jlpt": "n1"
         },
         {
             "kanji": "慕う",
-            "furigana": "したう",
+            "hiragana": "したう",
             "english": "to yearn for; to long for; to pine for; to miss; to love dearly; to adore",
             "jlpt": "n1"
         },
         {
             "kanji": "瞑る",
-            "furigana": "つぶる",
+            "hiragana": "つぶる",
             "english": "to close (one's eyes); to shut",
             "jlpt": "n1"
         },
         {
             "kanji": "乱す",
-            "furigana": "みだす",
+            "hiragana": "みだす",
             "english": "to throw into disorder; to disarrange; to disturb (order, peace, etc.); to corrupt (public morals); to dishevel (hair)",
             "jlpt": "n1"
         },
         {
             "kanji": "冷やかす",
-            "furigana": "ひやかす",
+            "hiragana": "ひやかす",
             "english": "to banter; to make fun of; to jeer at",
             "jlpt": "n1"
         },
         {
             "kanji": "剥ぐ",
-            "furigana": "はぐ",
+            "hiragana": "はぐ",
             "english": "to tear off; to peel off; to rip off; to strip off; to skin; to flay; to bark",
             "jlpt": "n1"
         },
         {
             "kanji": "差し掛かる",
-            "furigana": "さしかかる",
+            "hiragana": "さしかかる",
             "english": "to come near (to); to approach",
             "jlpt": "n1"
         },
         {
             "kanji": "貴ぶ",
-            "furigana": "とうとぶ",
+            "hiragana": "とうとぶ",
             "english": "to value; to prize; to esteem",
             "jlpt": "n1"
         },
         {
             "kanji": "葬る",
-            "furigana": "ほうむる",
+            "hiragana": "ほうむる",
             "english": "to bury; to inter; to entomb",
             "jlpt": "n1"
         },
         {
             "kanji": "担う",
-            "furigana": "になう",
+            "hiragana": "になう",
             "english": "to carry on one's shoulder; to shoulder; to bear",
             "jlpt": "n1"
         },
         {
             "kanji": "煙る",
-            "furigana": "けむる",
+            "hiragana": "けむる",
             "english": "to smoke (e.g. fire); to billow smoke; to smoulder; to smolder",
             "jlpt": "n1"
         },
         {
             "kanji": "急かす",
-            "furigana": "せかす",
+            "hiragana": "せかす",
             "english": "to hurry (up); to urge on; to press; to rush",
             "jlpt": "n1"
         },
         {
             "kanji": "改まる",
-            "furigana": "あらたまる",
+            "hiragana": "あらたまる",
             "english": "to be renewed; to change",
             "jlpt": "n1"
         },
         {
             "kanji": "改まる",
-            "furigana": "あらたまる",
+            "hiragana": "あらたまる",
             "english": "to be renewed; to change",
             "jlpt": "n1"
         },
         {
             "kanji": "漏る",
-            "furigana": "もる",
+            "hiragana": "もる",
             "english": "to leak; to run out",
             "jlpt": "n1"
         },
         {
             "kanji": "たどり着く",
-            "furigana": "たどりつく",
+            "hiragana": "たどりつく",
             "english": "to (finally) arrive at; to reach (at last); to (manage to) get to; to find one's way to",
             "jlpt": "n1"
         },
         {
             "kanji": "傷つく",
-            "furigana": "きずつく",
+            "hiragana": "きずつく",
             "english": "to be wounded; to get injured",
             "jlpt": "n1"
         },
         {
             "kanji": "赴く",
-            "furigana": "おもむく",
+            "hiragana": "おもむく",
             "english": "to go in the direction of; to proceed toward; to proceed according to; to repair to; to betake oneself to",
             "jlpt": "n1"
         },
         {
             "kanji": "司る",
-            "furigana": "つかさどる",
+            "hiragana": "つかさどる",
             "english": "to be in charge of; to manage; to direct; to administer; to preside over",
             "jlpt": "n1"
         },
         {
             "kanji": "通り掛かる",
-            "furigana": "とおりかかる",
+            "hiragana": "とおりかかる",
             "english": "to happen to pass by",
             "jlpt": "n1"
         },
         {
             "kanji": "逃す",
-            "furigana": "のがす",
+            "hiragana": "のがす",
             "english": "to miss (e.g. a chance); to lose; to let get away",
             "jlpt": "n1"
         },
         {
             "kanji": "出くわす",
-            "furigana": "でくわす",
+            "hiragana": "でくわす",
             "english": "to happen to meet; to come across",
             "jlpt": "n1"
         },
         {
             "kanji": "上回る",
-            "furigana": "うわまわる",
+            "hiragana": "うわまわる",
             "english": "to exceed (esp. figures: profits, unemployment rate, etc.); to surpass; to be more than; to be better than",
             "jlpt": "n1"
         },
         {
             "kanji": "滅ぼす",
-            "furigana": "ほろぼす",
+            "hiragana": "ほろぼす",
             "english": "to destroy; to overthrow; to wreck; to ruin",
             "jlpt": "n1"
         },
         {
             "kanji": "挑む",
-            "furigana": "いどむ",
+            "hiragana": "いどむ",
             "english": "to challenge to (a fight, game, etc.); to throw down the gauntlet; to contend for",
             "jlpt": "n1"
         },
         {
             "kanji": "召す",
-            "furigana": "めす",
+            "hiragana": "めす",
             "english": "to call; to summon; to send for; to invite",
             "jlpt": "n1"
         },
         {
             "kanji": "滞る",
-            "furigana": "とどこおる",
+            "hiragana": "とどこおる",
             "english": "to stagnate; to be delayed; to be left undone",
             "jlpt": "n1"
         },
         {
             "kanji": "隔たる",
-            "furigana": "へだたる",
+            "hiragana": "へだたる",
             "english": "to be distant",
             "jlpt": "n1"
         },
         {
             "kanji": "仕切る",
-            "furigana": "しきる",
+            "hiragana": "しきる",
             "english": "to partition; to divide; to mark off",
             "jlpt": "n1"
         },
         {
             "kanji": "仕切る",
-            "furigana": "しきる",
+            "hiragana": "しきる",
             "english": "to partition; to divide; to mark off",
             "jlpt": "n1"
         },
         {
             "kanji": "澄ます",
-            "furigana": "すます",
+            "hiragana": "すます",
             "english": "to clear; to make clear",
             "jlpt": "n1"
         },
         {
             "kanji": "口ずさむ",
-            "furigana": "くちずさむ",
+            "hiragana": "くちずさむ",
             "english": "to hum (a tune); to sing to oneself; to croon",
             "jlpt": "n1"
         },
         {
             "kanji": "諮る",
-            "furigana": "はかる",
+            "hiragana": "はかる",
             "english": "to consult with; to discuss; to confer; to deliberate",
             "jlpt": "n1"
         },
         {
             "kanji": "囀る",
-            "furigana": "さえずる",
+            "hiragana": "さえずる",
             "english": "to sing; to chirp; to twitter",
             "jlpt": "n1"
         },
         {
             "kanji": "寄り掛かる",
-            "furigana": "よりかかる",
+            "hiragana": "よりかかる",
             "english": "to lean against; to recline on; to lean on",
             "jlpt": "n1"
         },
         {
             "kanji": "掻き回す",
-            "furigana": "かきまわす",
+            "hiragana": "かきまわす",
             "english": "to stir; to churn; to poke (a fire); to disturb (water)",
             "jlpt": "n1"
         },
         {
             "kanji": "包む",
-            "furigana": "つつむ",
+            "hiragana": "つつむ",
             "english": "to wrap up; to pack; to bundle; to do up",
             "jlpt": "n1"
         },
         {
             "kanji": "仰っしゃる",
-            "furigana": "おっしゃる",
+            "hiragana": "おっしゃる",
             "english": "to say; to speak; to tell; to talk",
             "jlpt": "n1"
         },
         {
             "kanji": "脅かす",
-            "furigana": "おどかす",
+            "hiragana": "おどかす",
             "english": "to threaten; to menace; to intimidate",
             "jlpt": "n1"
         },
         {
             "kanji": "齧る",
-            "furigana": "かじる",
+            "hiragana": "かじる",
             "english": "to gnaw; to nibble; to bite; to munch; to crunch",
             "jlpt": "n1"
         },
         {
             "kanji": "すれ違う",
-            "furigana": "すれちがう",
+            "hiragana": "すれちがう",
             "english": "to pass (by) each other; to brush past",
             "jlpt": "n1"
         },
         {
             "kanji": "炙る",
-            "furigana": "あぶる",
+            "hiragana": "あぶる",
             "english": "to warm (e.g. one's hands over a fire); to dry",
             "jlpt": "n1"
         },
         {
             "kanji": "止まる-1",
-            "furigana": "とどまる",
+            "hiragana": "とどまる",
             "english": "to remain; to abide; to stay (in the one place)",
             "jlpt": "n1"
         },
         {
             "kanji": "解く-1",
-            "furigana": "ほどく",
+            "hiragana": "ほどく",
             "english": "to undo; to untie; to unfasten; to unlace; to unravel; to loosen; to unpack",
             "jlpt": "n1"
         },
         {
             "kanji": "揶揄う",
-            "furigana": "からかう",
+            "hiragana": "からかう",
             "english": "to tease; to make fun of; to poke fun at; to make a crack about; to chaff; to kid; to joke; to banter; to pull someone's leg",
             "jlpt": "n1"
         },
         {
             "kanji": "くっ付く",
-            "furigana": "くっつく",
+            "hiragana": "くっつく",
             "english": "to adhere to; to stick to; to cling to",
             "jlpt": "n1"
         },
         {
             "kanji": "汚す",
-            "furigana": "よごす",
+            "hiragana": "よごす",
             "english": "to pollute; to contaminate; to soil; to make dirty; to stain",
             "jlpt": "n1"
         },
         {
             "kanji": "汚す",
-            "furigana": "よごす",
+            "hiragana": "よごす",
             "english": "to pollute; to contaminate; to soil; to make dirty; to stain",
             "jlpt": "n1"
         },
         {
             "kanji": "あざ笑う",
-            "furigana": "あざわらう",
+            "hiragana": "あざわらう",
             "english": "to laugh at; to ridicule; to mock; to make fun of; to sneer at",
             "jlpt": "n1"
         },
         {
             "kanji": "引っ掻く",
-            "furigana": "ひっかく",
+            "hiragana": "ひっかく",
             "english": "to scratch; to claw",
             "jlpt": "n1"
         },
         {
             "kanji": "放り出す",
-            "furigana": "ほうりだす",
+            "hiragana": "ほうりだす",
             "english": "to throw out",
             "jlpt": "n1"
         },
         {
             "kanji": "濯ぐ",
-            "furigana": "すすぐ",
+            "hiragana": "すすぐ",
             "english": "to rinse; to wash out",
             "jlpt": "n1"
         },
         {
             "kanji": "嵩張る",
-            "furigana": "かさばる",
+            "hiragana": "かさばる",
             "english": "to be bulky; to be unwieldy; to grow voluminous",
             "jlpt": "n1"
         },
         {
             "kanji": "給う",
-            "furigana": "たまう",
+            "hiragana": "たまう",
             "english": "to give",
             "jlpt": "n1"
         },
         {
             "kanji": "蹴飛ばす",
-            "furigana": "けとばす",
+            "hiragana": "けとばす",
             "english": "to kick away; to kick off; to kick hard",
             "jlpt": "n1"
         },
         {
             "kanji": "恐れ入る",
-            "furigana": "おそれいる",
+            "hiragana": "おそれいる",
             "english": "to be sorry; to beg pardon; to be much obliged; to feel small",
             "jlpt": "n1"
         },
         {
             "kanji": "恐れ入る",
-            "furigana": "おそれいる",
+            "hiragana": "おそれいる",
             "english": "to be sorry; to beg pardon; to be much obliged; to feel small",
             "jlpt": "n1"
         },
         {
             "kanji": "軋む",
-            "furigana": "きしむ",
+            "hiragana": "きしむ",
             "english": "to jar; to creak; to grate",
             "jlpt": "n1"
         },
         {
             "kanji": "植わる",
-            "furigana": "うわる",
+            "hiragana": "うわる",
             "english": "to be planted",
             "jlpt": "n1"
         },
         {
             "kanji": "勤まる",
-            "furigana": "つとまる",
+            "hiragana": "つとまる",
             "english": "to be fit (for a role); to be qualified (for); to be equal (to a task); to be able to fulfill one's duties (as)",
             "jlpt": "n1"
         },
         {
             "kanji": "放り込む",
-            "furigana": "ほうりこむ",
+            "hiragana": "ほうりこむ",
             "english": "to throw into; to toss into",
             "jlpt": "n1"
         },
         {
             "kanji": "噛み切る",
-            "furigana": "かみきる",
+            "hiragana": "かみきる",
             "english": "to bite off; to gnaw through",
             "jlpt": "n1"
         },
         {
             "kanji": "接ぐ",
-            "furigana": "つぐ",
+            "hiragana": "つぐ",
             "english": "to join; to piece together; to set (bones)",
             "jlpt": "n1"
         },
         {
             "kanji": "毟る",
-            "furigana": "むしる",
+            "hiragana": "むしる",
             "english": "to pluck; to pick; to tear",
             "jlpt": "n1"
         },
         {
             "kanji": "赤らむ",
-            "furigana": "あからむ",
+            "hiragana": "あからむ",
             "english": "to become red; to redden; to blush",
             "jlpt": "n1"
         },
         {
             "kanji": "嵩む",
-            "furigana": "かさむ",
+            "hiragana": "かさむ",
             "english": "to mount up; to pile up; to accumulate; to increase",
             "jlpt": "n1"
         },
         {
             "kanji": "抓る",
-            "furigana": "つねる",
+            "hiragana": "つねる",
             "english": "to pinch; to nip",
             "jlpt": "n1"
         },
         {
             "kanji": "賜る",
-            "furigana": "たまわる",
+            "hiragana": "たまわる",
             "english": "to be given; to be granted; to be honored with; to be honoured with",
             "jlpt": "n1"
         },
         {
             "kanji": "照り返す",
-            "furigana": "てりかえす",
+            "hiragana": "てりかえす",
             "english": "to reflect; to throw back light",
             "jlpt": "n1"
         },
         {
             "kanji": "弾く",
-            "furigana": "はじく",
+            "hiragana": "はじく",
             "english": "to flip; to snap; to flick",
             "jlpt": "n1"
         },
         {
             "kanji": "吐く",
-            "furigana": "つく",
+            "hiragana": "つく",
             "english": "to breathe out; to breathe",
             "jlpt": "n1"
         },
         {
             "kanji": "サボる",
-            "furigana": "サボる",
+            "hiragana": "サボる",
             "english": "to be truant; to slack off; to play hooky; to skip school; to cut class; to skip out",
             "jlpt": "n1"
         },
         {
             "kanji": "捲る",
-            "furigana": "まくる",
+            "hiragana": "まくる",
             "english": "to turn up; to roll up (e.g. sleeves)",
             "jlpt": "n1"
         },
         {
             "kanji": "突く-1",
-            "furigana": "つつく",
+            "hiragana": "つつく",
             "english": "to poke (repeatedly, lightly); to nudge",
             "jlpt": "n1"
         },
         {
             "kanji": "焦る",
-            "furigana": "あせる",
+            "hiragana": "あせる",
             "english": "to be in a hurry; to be impatient; to be anxious (to do); to fret",
             "jlpt": "n1"
         },
         {
             "kanji": "拘わる",
-            "furigana": "こだわる",
+            "hiragana": "こだわる",
             "english": "to be obsessive (about); to be overly concerned (with); to fuss (over); to worry too much (about); to be picky (about); to be hung up (on); to stick to",
             "jlpt": "n1"
         },
         {
             "kanji": "しくじる",
-            "furigana": "しくじる",
+            "hiragana": "しくじる",
             "english": "to fail; to blunder; to mess up; to screw up",
             "jlpt": "n1"
         },
         {
             "kanji": "弄る",
-            "furigana": "いじる",
+            "hiragana": "いじる",
             "english": "to finger; to touch; to play with; to fiddle with; to toy with",
             "jlpt": "n1"
         },
         {
             "kanji": "跨る",
-            "furigana": "またがる",
+            "hiragana": "またがる",
             "english": "to straddle; to sit astride; to mount",
             "jlpt": "n1"
         },
         {
             "kanji": "藻掻く",
-            "furigana": "もがく",
+            "hiragana": "もがく",
             "english": "to struggle; to writhe; to wriggle; to squirm",
             "jlpt": "n1"
         },
         {
             "kanji": "労る",
-            "furigana": "いたわる",
+            "hiragana": "いたわる",
             "english": "to pity; to sympathize with; to sympathise with; to treat with sympathy; to console; to be kind to",
             "jlpt": "n1"
         },
         {
             "kanji": "埋まる",
-            "furigana": "うまる",
+            "hiragana": "うまる",
             "english": "to be buried; to be covered; to be surrounded",
             "jlpt": "n1"
         },
         {
             "kanji": "歪む",
-            "furigana": "ゆがむ",
+            "hiragana": "ゆがむ",
             "english": "to warp; to bend; to contort",
             "jlpt": "n1"
         },
         {
             "kanji": "嵌まる",
-            "furigana": "はまる",
+            "hiragana": "はまる",
             "english": "to fit; to get into; to go into; to be fitted with (e.g. door with a window)",
             "jlpt": "n1"
         },
         {
             "kanji": "ばら撒く",
-            "furigana": "ばらまく",
+            "hiragana": "ばらまく",
             "english": "to scatter; to disseminate (e.g. a rumor); to spread (e.g. germs); to broadcast",
             "jlpt": "n1"
         },
         {
             "kanji": "がる",
-            "furigana": "がる",
+            "hiragana": "がる",
             "english": "to show signs of being; to feel; to think",
             "jlpt": "n1"
         },
         {
             "kanji": "鈍る",
-            "furigana": "にぶる",
+            "hiragana": "にぶる",
             "english": "to become blunt; to grow dull",
             "jlpt": "n1"
         },
         {
             "kanji": "お出でになる",
-            "furigana": "おいでになる",
+            "hiragana": "おいでになる",
             "english": "to be",
             "jlpt": "n1"
         },
         {
             "kanji": "断つ",
-            "furigana": "たつ",
+            "hiragana": "たつ",
             "english": "to sever; to cut off",
             "jlpt": "n1"
         },
         {
             "kanji": "翔る",
-            "furigana": "かける",
+            "hiragana": "かける",
             "english": "to soar; to fly",
             "jlpt": "n1"
         },
         {
             "kanji": "揺らぐ",
-            "furigana": "ゆらぐ",
+            "hiragana": "ゆらぐ",
             "english": "to swing; to sway; to shake; to tremble",
             "jlpt": "n1"
         },
         {
             "kanji": "添う",
-            "furigana": "そう",
+            "hiragana": "そう",
             "english": "to meet (wishes, expectations, etc.); to satisfy; to comply with; to live up to",
             "jlpt": "n1"
         },
         {
             "kanji": "潜る",
-            "furigana": "くぐる",
+            "hiragana": "くぐる",
             "english": "to go under; to pass under; to go through; to pass through",
             "jlpt": "n1"
         },
         {
             "kanji": "乗っ取る",
-            "furigana": "のっとる",
+            "hiragana": "のっとる",
             "english": "to take over; to capture; to seize; to commandeer; to occupy; to usurp",
             "jlpt": "n1"
         },
         {
             "kanji": "取り次ぐ",
-            "furigana": "とりつぐ",
+            "hiragana": "とりつぐ",
             "english": "to pass on (a message, thoughts, etc.); to convey; to transmit; to relay; to tell",
             "jlpt": "n1"
         },
         {
             "kanji": "潤う",
-            "furigana": "うるおう",
+            "hiragana": "うるおう",
             "english": "to become moist; to be moistened; to become damp; to get wet",
             "jlpt": "n1"
         },
         {
             "kanji": "連なる",
-            "furigana": "つらなる",
+            "hiragana": "つらなる",
             "english": "to extend; to stretch out; to stand in a row",
             "jlpt": "n1"
         },
         {
             "kanji": "緩む",
-            "furigana": "ゆるむ",
+            "hiragana": "ゆるむ",
             "english": "to become loose; to slacken (e.g. rope)",
             "jlpt": "n1"
         },
         {
             "kanji": "弛む",
-            "furigana": "たるむ",
+            "hiragana": "たるむ",
             "english": "to slacken; to loosen; to relax; to droop (e.g. loose or flabby skin); to sag (ceiling)",
             "jlpt": "n1"
         },
         {
             "kanji": "掬う",
-            "furigana": "すくう",
+            "hiragana": "すくう",
             "english": "to scoop; to ladle out",
             "jlpt": "n1"
         },
         {
             "kanji": "折り返す",
-            "furigana": "おりかえす",
+            "hiragana": "おりかえす",
             "english": "to turn up (hem, sleeves, etc.); to fold back (e.g. page)",
             "jlpt": "n1"
         },
         {
             "kanji": "粘る",
-            "furigana": "ねばる",
+            "hiragana": "ねばる",
             "english": "to be sticky; to be adhesive",
             "jlpt": "n1"
         },
         {
             "kanji": "突っ張る",
-            "furigana": "つっぱる",
+            "hiragana": "つっぱる",
             "english": "to cramp up; to tighten; to stiffen",
             "jlpt": "n1"
         },
         {
             "kanji": "縮まる",
-            "furigana": "ちぢまる",
+            "hiragana": "ちぢまる",
             "english": "to shorten; to narrow; to close; to shrink",
             "jlpt": "n1"
         },
         {
             "kanji": "遅らす",
-            "furigana": "おくらす",
+            "hiragana": "おくらす",
             "english": "to delay; to postpone; to slow down; to retard",
             "jlpt": "n1"
         },
         {
             "kanji": "恥じらう",
-            "furigana": "はじらう",
+            "hiragana": "はじらう",
             "english": "to feel shy; to be bashful; to blush",
             "jlpt": "n1"
         },
         {
             "kanji": "掠る",
-            "furigana": "かする",
+            "hiragana": "かする",
             "english": "to graze (e.g. bullet); to scratch; to touch lightly",
             "jlpt": "n1"
         },
         {
             "kanji": "間誤付く",
-            "furigana": "まごつく",
+            "hiragana": "まごつく",
             "english": "to be confused; to be flustered; to be at a loss",
             "jlpt": "n1"
         },
         {
             "kanji": "懐く",
-            "furigana": "なつく",
+            "hiragana": "なつく",
             "english": "to become attached (to); to take (to); to become affectionate (with); to be tamed; to get close (e.g. to someone emotionally); to become intimate (with)",
             "jlpt": "n1"
         },
         {
             "kanji": "遣り通す",
-            "furigana": "やりとおす",
+            "hiragana": "やりとおす",
             "english": "to carry through; to achieve; to complete",
             "jlpt": "n1"
         },
         {
             "kanji": "詰る",
-            "furigana": "なじる",
+            "hiragana": "なじる",
             "english": "to rebuke; to scold; to tell off; to find fault; to harp on; to reprove",
             "jlpt": "n1"
         },
         {
             "kanji": "ダブる",
-            "furigana": "ダブる",
+            "hiragana": "ダブる",
             "english": "to be duplicated; to be repeated",
             "jlpt": "n1"
         },
         {
             "kanji": "凝る",
-            "furigana": "こごる",
+            "hiragana": "こごる",
             "english": "to congeal; to gelatinize; to jellify; to jell; to gell; to freeze",
             "jlpt": "n1"
         },
         {
             "kanji": "契る",
-            "furigana": "ちぎる",
+            "hiragana": "ちぎる",
             "english": "to pledge; to vow; to promise; to swear",
             "jlpt": "n1"
         },
         {
             "kanji": "謙る",
-            "furigana": "へりくだる",
+            "hiragana": "へりくだる",
             "english": "to deprecate oneself and praise the listener; to abase oneself",
             "jlpt": "n1"
         },
         {
             "kanji": "奉る",
-            "furigana": "たてまつる",
+            "hiragana": "たてまつる",
             "english": "to offer; to present",
             "jlpt": "n1"
         },
         {
             "kanji": "埋め込む",
-            "furigana": "うめこむ",
+            "hiragana": "うめこむ",
             "english": "to bury; to embed; to implant",
             "jlpt": "n1"
         },
         {
             "kanji": "出切る",
-            "furigana": "できる",
+            "hiragana": "できる",
             "english": "to be out of; to have no more at hand",
             "jlpt": "n1"
         },
         {
             "kanji": "入る",
-            "furigana": "いる",
+            "hiragana": "いる",
             "english": "to enter; to go in; to get in; to come in",
             "jlpt": "n1"
         },
         {
             "kanji": "凝らす",
-            "furigana": "こごらす",
+            "hiragana": "こごらす",
             "english": "to freeze; to congeal",
             "jlpt": "n1"
         },
         {
             "kanji": "盛る",
-            "furigana": "さかる",
+            "hiragana": "さかる",
             "english": "to prosper; to flourish",
             "jlpt": "n1"
         },
         {
             "kanji": "ぼやく",
-            "furigana": "ぼやく",
+            "hiragana": "ぼやく",
             "english": "to grumble; to complain",
             "jlpt": "n1"
         }
@@ -8124,9379 +8124,9379 @@ export const jisho = {
     "suru_verb": [
         {
             "kanji": "仕事する",
-            "furigana": "しごとする",
+            "hiragana": "しごとする",
             "english": "work; job; labor; labour; business; task; assignment; occupation; employment",
             "jlpt": "n5"
         },
         {
             "kanji": "電話する",
-            "furigana": "でんわする",
+            "hiragana": "でんわする",
             "english": "telephone call; phone call",
             "jlpt": "n5"
         },
         {
             "kanji": "結婚する",
-            "furigana": "けっこんする",
+            "hiragana": "けっこんする",
             "english": "marriage",
             "jlpt": "n5"
         },
         {
             "kanji": "旅行する",
-            "furigana": "りょこうする",
+            "hiragana": "りょこうする",
             "english": "travel; trip; journey; excursion; tour",
             "jlpt": "n5"
         },
         {
             "kanji": "料理する",
-            "furigana": "りょうりする",
+            "hiragana": "りょうりする",
             "english": "cooking; cookery; cuisine; meal; food; dish; item on a menu",
             "jlpt": "n5"
         },
         {
             "kanji": "意味する",
-            "furigana": "いみする",
+            "hiragana": "いみする",
             "english": "meaning; significance; sense",
             "jlpt": "n5"
         },
         {
             "kanji": "散歩する",
-            "furigana": "さんぽする",
+            "hiragana": "さんぽする",
             "english": "walk; stroll",
             "jlpt": "n5"
         },
         {
             "kanji": "授業する",
-            "furigana": "じゅぎょうする",
+            "hiragana": "じゅぎょうする",
             "english": "lesson; class; teaching; instruction; classwork; schoolwork",
             "jlpt": "n5"
         },
         {
             "kanji": "買い物する",
-            "furigana": "かいものする",
+            "hiragana": "かいものする",
             "english": "shopping; purchased goods",
             "jlpt": "n5"
         },
         {
             "kanji": "掃除する",
-            "furigana": "そうじする",
+            "hiragana": "そうじする",
             "english": "cleaning; sweeping; dusting; scrubbing",
             "jlpt": "n5"
         },
         {
             "kanji": "作文する",
-            "furigana": "さくぶんする",
+            "hiragana": "さくぶんする",
             "english": "writing (an essay, prose, etc.); composition",
             "jlpt": "n5"
         },
         {
             "kanji": "洗濯する",
-            "furigana": "せんたくする",
+            "hiragana": "せんたくする",
             "english": "washing; laundry",
             "jlpt": "n5"
         },
         {
             "kanji": "勉強する",
-            "furigana": "べんきょうする",
+            "hiragana": "べんきょうする",
             "english": "study",
             "jlpt": "n5"
         },
         {
             "kanji": "質問する",
-            "furigana": "しつもんする",
+            "hiragana": "しつもんする",
             "english": "question; inquiry; enquiry",
             "jlpt": "n5"
         },
         {
             "kanji": "練習する",
-            "furigana": "れんしゅうする",
+            "hiragana": "れんしゅうする",
             "english": "practice; training; drill; (an) exercise; workout",
             "jlpt": "n5"
         },
         {
             "kanji": "テストする",
-            "furigana": "テストする",
+            "hiragana": "テストする",
             "english": "examination; quiz; test",
             "jlpt": "n5"
         },
         {
             "kanji": "コピーする",
-            "furigana": "コピーする",
+            "hiragana": "コピーする",
             "english": "copy; photocopy",
             "jlpt": "n5"
         },
         {
             "kanji": "為るする",
-            "furigana": "するする",
+            "hiragana": "するする",
             "english": "to do; to carry out; to perform",
             "jlpt": "n5"
         },
         {
             "kanji": "ゆっくりする",
-            "furigana": "ゆっくりする",
+            "hiragana": "ゆっくりする",
             "english": "slowly; unhurriedly; without haste; leisurely; at one's leisure",
             "jlpt": "n5"
         },
         {
             "kanji": "生活する",
-            "furigana": "せいかつする",
+            "hiragana": "せいかつする",
             "english": "life; living",
             "jlpt": "n4"
         },
         {
             "kanji": "注意する",
-            "furigana": "ちゅういする",
+            "hiragana": "ちゅういする",
             "english": "attention; notice; heed",
             "jlpt": "n4"
         },
         {
             "kanji": "説明する",
-            "furigana": "せつめいする",
+            "hiragana": "せつめいする",
             "english": "explanation; exposition; description; account; caption; legend",
             "jlpt": "n4"
         },
         {
             "kanji": "戦争する",
-            "furigana": "せんそうする",
+            "hiragana": "せんそうする",
             "english": "war",
             "jlpt": "n4"
         },
         {
             "kanji": "関係する",
-            "furigana": "かんけいする",
+            "hiragana": "かんけいする",
             "english": "relation; relationship; connection",
             "jlpt": "n4"
         },
         {
             "kanji": "研究する",
-            "furigana": "けんきゅうする",
+            "hiragana": "けんきゅうする",
             "english": "study; research; investigation",
             "jlpt": "n4"
         },
         {
             "kanji": "会議する",
-            "furigana": "かいぎする",
+            "hiragana": "かいぎする",
             "english": "meeting; conference; session; assembly; council; convention; congress",
             "jlpt": "n4"
         },
         {
             "kanji": "教育する",
-            "furigana": "きょういくする",
+            "hiragana": "きょういくする",
             "english": "education; schooling; training; instruction; teaching; upbringing",
             "jlpt": "n4"
         },
         {
             "kanji": "故障する",
-            "furigana": "こしょうする",
+            "hiragana": "こしょうする",
             "english": "fault; trouble; breakdown; failure; being out of order",
             "jlpt": "n4"
         },
         {
             "kanji": "卒業する",
-            "furigana": "そつぎょうする",
+            "hiragana": "そつぎょうする",
             "english": "graduation; completion (of a course)",
             "jlpt": "n4"
         },
         {
             "kanji": "水泳する",
-            "furigana": "すいえいする",
+            "hiragana": "すいえいする",
             "english": "swimming",
             "jlpt": "n4"
         },
         {
             "kanji": "講義する",
-            "furigana": "こうぎする",
+            "hiragana": "こうぎする",
             "english": "lecture",
             "jlpt": "n4"
         },
         {
             "kanji": "生産する",
-            "furigana": "せいさんする",
+            "hiragana": "せいさんする",
             "english": "production; manufacture",
             "jlpt": "n4"
         },
         {
             "kanji": "会話する",
-            "furigana": "かいわする",
+            "hiragana": "かいわする",
             "english": "conversation; talk; chat",
             "jlpt": "n4"
         },
         {
             "kanji": "翻訳する",
-            "furigana": "ほんやくする",
+            "hiragana": "ほんやくする",
             "english": "translation",
             "jlpt": "n4"
         },
         {
             "kanji": "貿易する",
-            "furigana": "ぼうえきする",
+            "hiragana": "ぼうえきする",
             "english": "(foreign) trade; (international) commerce; importing and exporting",
             "jlpt": "n4"
         },
         {
             "kanji": "交通する",
-            "furigana": "こうつうする",
+            "hiragana": "こうつうする",
             "english": "traffic; transportation; communication; exchange (of ideas, etc.); intercourse",
             "jlpt": "n4"
         },
         {
             "kanji": "入学する",
-            "furigana": "にゅうがくする",
+            "hiragana": "にゅうがくする",
             "english": "admission (to a school or university); entrance; enrolment; enrollment; matriculation",
             "jlpt": "n4"
         },
         {
             "kanji": "発音する",
-            "furigana": "はつおんする",
+            "hiragana": "はつおんする",
             "english": "pronunciation",
             "jlpt": "n4"
         },
         {
             "kanji": "注射する",
-            "furigana": "ちゅうしゃする",
+            "hiragana": "ちゅうしゃする",
             "english": "injection; jab; shot",
             "jlpt": "n4"
         },
         {
             "kanji": "花見する",
-            "furigana": "はなみする",
+            "hiragana": "はなみする",
             "english": "cherry blossom viewing; flower viewing",
             "jlpt": "n4"
         },
         {
             "kanji": "喧嘩する",
-            "furigana": "けんかする",
+            "hiragana": "けんかする",
             "english": "quarrel; brawl; fight; squabble; scuffle; argument",
             "jlpt": "n4"
         },
         {
             "kanji": "見物する",
-            "furigana": "けんぶつする",
+            "hiragana": "けんぶつする",
             "english": "sightseeing; watching; viewing",
             "jlpt": "n4"
         },
         {
             "kanji": "試験する",
-            "furigana": "しけんする",
+            "hiragana": "しけんする",
             "english": "examination; exam; test",
             "jlpt": "n4"
         },
         {
             "kanji": "失敗する",
-            "furigana": "しっぱいする",
+            "hiragana": "しっぱいする",
             "english": "failure; mistake; blunder",
             "jlpt": "n4"
         },
         {
             "kanji": "試合する",
-            "furigana": "しあいする",
+            "hiragana": "しあいする",
             "english": "match; game; bout; contest",
             "jlpt": "n4"
         },
         {
             "kanji": "反対する",
-            "furigana": "はんたいする",
+            "hiragana": "はんたいする",
             "english": "opposition; resistance; antagonism; hostility; objection; dissent",
             "jlpt": "n4"
         },
         {
             "kanji": "約束する",
-            "furigana": "やくそくする",
+            "hiragana": "やくそくする",
             "english": "promise; agreement; arrangement; one's word; contract; pact",
             "jlpt": "n4"
         },
         {
             "kanji": "利用する",
-            "furigana": "りようする",
+            "hiragana": "りようする",
             "english": "use; utilization; utilisation; application",
             "jlpt": "n4"
         },
         {
             "kanji": "予定する",
-            "furigana": "よていする",
+            "hiragana": "よていする",
             "english": "plans; arrangement; schedule; program; programme; expectation; estimate",
             "jlpt": "n4"
         },
         {
             "kanji": "返事する",
-            "furigana": "へんじする",
+            "hiragana": "へんじする",
             "english": "reply; answer; response",
             "jlpt": "n4"
         },
         {
             "kanji": "予約する",
-            "furigana": "よやくする",
+            "hiragana": "よやくする",
             "english": "reservation; appointment; booking; advance order",
             "jlpt": "n4"
         },
         {
             "kanji": "原因する",
-            "furigana": "げんいんする",
+            "hiragana": "げんいんする",
             "english": "cause; origin; source",
             "jlpt": "n4"
         },
         {
             "kanji": "紹介する",
-            "furigana": "しょうかいする",
+            "hiragana": "しょうかいする",
             "english": "introduction; presentation; referral; showcase (of a product)",
             "jlpt": "n4"
         },
         {
             "kanji": "用意する",
-            "furigana": "よういする",
+            "hiragana": "よういする",
             "english": "preparation; arrangements; provision; getting ready; laying out (e.g. a meal)",
             "jlpt": "n4"
         },
         {
             "kanji": "連絡する",
-            "furigana": "れんらくする",
+            "hiragana": "れんらくする",
             "english": "contacting; (making) contact; getting in touch; communication; correspondence; call; message",
             "jlpt": "n4"
         },
         {
             "kanji": "競争する",
-            "furigana": "きょうそうする",
+            "hiragana": "きょうそうする",
             "english": "competition; contest; rivalry; race",
             "jlpt": "n4"
         },
         {
             "kanji": "入院する",
-            "furigana": "にゅういんする",
+            "hiragana": "にゅういんする",
             "english": "hospitalization; hospitalisation",
             "jlpt": "n4"
         },
         {
             "kanji": "留守する",
-            "furigana": "るすする",
+            "hiragana": "るすする",
             "english": "absence; being away from home",
             "jlpt": "n4"
         },
         {
             "kanji": "安心する",
-            "furigana": "あんしんする",
+            "hiragana": "あんしんする",
             "english": "peace of mind; relief; (sense of) security; safety; assurance; confidence",
             "jlpt": "n4"
         },
         {
             "kanji": "遠慮する",
-            "furigana": "えんりょする",
+            "hiragana": "えんりょする",
             "english": "reserve; constraint; restraint; modesty; diffidence; hesitation; holding back; discretion; tact; thoughtfulness",
             "jlpt": "n4"
         },
         {
             "kanji": "急行する",
-            "furigana": "きゅうこうする",
+            "hiragana": "きゅうこうする",
             "english": "hurrying (to somewhere); rushing; hastening",
             "jlpt": "n4"
         },
         {
             "kanji": "暖房する",
-            "furigana": "だんぼうする",
+            "hiragana": "だんぼうする",
             "english": "(indoor) heating",
             "jlpt": "n4"
         },
         {
             "kanji": "退院する",
-            "furigana": "たいいんする",
+            "hiragana": "たいいんする",
             "english": "leaving hospital; discharge from hospital",
             "jlpt": "n4"
         },
         {
             "kanji": "下宿する",
-            "furigana": "げしゅくする",
+            "hiragana": "げしゅくする",
             "english": "boarding; lodging; board and lodging; room and board",
             "jlpt": "n4"
         },
         {
             "kanji": "冷房する",
-            "furigana": "れいぼうする",
+            "hiragana": "れいぼうする",
             "english": "air conditioning; air cooling",
             "jlpt": "n4"
         },
         {
             "kanji": "暫くする",
-            "furigana": "しばらくする",
+            "hiragana": "しばらくする",
             "english": "for a moment; for a minute",
             "jlpt": "n4"
         },
         {
             "kanji": "確りする",
-            "furigana": "しっかりする",
+            "hiragana": "しっかりする",
             "english": "tightly (holding on); firmly; securely",
             "jlpt": "n4"
         },
         {
             "kanji": "拝見する",
-            "furigana": "はいけんする",
+            "hiragana": "はいけんする",
             "english": "seeing; looking at",
             "jlpt": "n4"
         },
         {
             "kanji": "予習する",
-            "furigana": "よしゅうする",
+            "hiragana": "よしゅうする",
             "english": "preparation for a lesson",
             "jlpt": "n4"
         },
         {
             "kanji": "寝坊する",
-            "furigana": "ねぼうする",
+            "hiragana": "ねぼうする",
             "english": "sleeping in late; oversleeping",
             "jlpt": "n4"
         },
         {
             "kanji": "復習する",
-            "furigana": "ふくしゅうする",
+            "hiragana": "ふくしゅうする",
             "english": "review (of learned material); revision",
             "jlpt": "n4"
         },
         {
             "kanji": "プレゼントする",
-            "furigana": "プレゼントする",
+            "hiragana": "プレゼントする",
             "english": "present; gift",
             "jlpt": "n4"
         },
         {
             "kanji": "レポートする",
-            "furigana": "レポートする",
+            "hiragana": "レポートする",
             "english": "report; paper",
             "jlpt": "n4"
         },
         {
             "kanji": "ご馳走する",
-            "furigana": "ごちそうする",
+            "hiragana": "ごちそうする",
             "english": "treat (esp. food and drink); entertainment; treating someone (to a meal); taking someone to dinner",
             "jlpt": "n4"
         },
         {
             "kanji": "ファックスする",
-            "furigana": "ファックスする",
+            "hiragana": "ファックスする",
             "english": "fax; facsimile",
             "jlpt": "n4"
         },
         {
             "kanji": "すっとする",
-            "furigana": "すっとする",
+            "hiragana": "すっとする",
             "english": "straight; quickly; directly; all of a sudden",
             "jlpt": "n4"
         },
         {
             "kanji": "アルバイトする",
-            "furigana": "アルバイトする",
+            "hiragana": "アルバイトする",
             "english": "part-time job; side job",
             "jlpt": "n4"
         },
         {
             "kanji": "反対する",
-            "furigana": "はんたいする",
+            "hiragana": "はんたいする",
             "english": "opposition; resistance; antagonism; hostility; objection; dissent",
             "jlpt": "n4"
         },
         {
             "kanji": "安心する",
-            "furigana": "あんしんする",
+            "hiragana": "あんしんする",
             "english": "peace of mind; relief; (sense of) security; safety; assurance; confidence",
             "jlpt": "n4"
         },
         {
             "kanji": "寝坊する",
-            "furigana": "ねぼうする",
+            "hiragana": "ねぼうする",
             "english": "sleeping in late; oversleeping",
             "jlpt": "n4"
         },
         {
             "kanji": "散歩する",
-            "furigana": "さんぽする",
+            "hiragana": "さんぽする",
             "english": "walk; stroll",
             "jlpt": "n3"
         },
         {
             "kanji": "故障する",
-            "furigana": "こしょうする",
+            "hiragana": "こしょうする",
             "english": "fault; trouble; breakdown; failure; being out of order",
             "jlpt": "n3"
         },
         {
             "kanji": "生産する",
-            "furigana": "せいさんする",
+            "hiragana": "せいさんする",
             "english": "production; manufacture",
             "jlpt": "n3"
         },
         {
             "kanji": "入学する",
-            "furigana": "にゅうがくする",
+            "hiragana": "にゅうがくする",
             "english": "admission (to a school or university); entrance; enrolment; enrollment; matriculation",
             "jlpt": "n3"
         },
         {
             "kanji": "喧嘩する",
-            "furigana": "けんかする",
+            "hiragana": "けんかする",
             "english": "quarrel; brawl; fight; squabble; scuffle; argument",
             "jlpt": "n3"
         },
         {
             "kanji": "一致する",
-            "furigana": "いっちする",
+            "hiragana": "いっちする",
             "english": "agreement; accord; correspondence; consistency; coincidence",
             "jlpt": "n3"
         },
         {
             "kanji": "寄付する",
-            "furigana": "きふする",
+            "hiragana": "きふする",
             "english": "contribution; donation",
             "jlpt": "n3"
         },
         {
             "kanji": "計画する",
-            "furigana": "けいかくする",
+            "hiragana": "けいかくする",
             "english": "plan; project; schedule; scheme; program; programme",
             "jlpt": "n3"
         },
         {
             "kanji": "理解する",
-            "furigana": "りかいする",
+            "hiragana": "りかいする",
             "english": "understanding; comprehension; appreciation",
             "jlpt": "n3"
         },
         {
             "kanji": "食事する",
-            "furigana": "しょくじする",
+            "hiragana": "しょくじする",
             "english": "meal; dinner",
             "jlpt": "n3"
         },
         {
             "kanji": "行動する",
-            "furigana": "こうどうする",
+            "hiragana": "こうどうする",
             "english": "action; conduct; behaviour; behavior; mobilization; mobilisation",
             "jlpt": "n3"
         },
         {
             "kanji": "経験する",
-            "furigana": "けいけんする",
+            "hiragana": "けいけんする",
             "english": "experience",
             "jlpt": "n3"
         },
         {
             "kanji": "我慢する",
-            "furigana": "がまんする",
+            "hiragana": "がまんする",
             "english": "endurance; patience; perseverance; bearing (with something)",
             "jlpt": "n3"
         },
         {
             "kanji": "噂する",
-            "furigana": "うわさする",
+            "hiragana": "うわさする",
             "english": "rumour; rumor; report; hearsay; gossip; common talk",
             "jlpt": "n3"
         },
         {
             "kanji": "期待する",
-            "furigana": "きたいする",
+            "hiragana": "きたいする",
             "english": "expectation; anticipation; hope",
             "jlpt": "n3"
         },
         {
             "kanji": "運動する",
-            "furigana": "うんどうする",
+            "hiragana": "うんどうする",
             "english": "exercise; physical training; workout; sports; athletics",
             "jlpt": "n3"
         },
         {
             "kanji": "演説する",
-            "furigana": "えんぜつする",
+            "hiragana": "えんぜつする",
             "english": "speech; address",
             "jlpt": "n3"
         },
         {
             "kanji": "読書する",
-            "furigana": "どくしょする",
+            "hiragana": "どくしょする",
             "english": "reading (a book)",
             "jlpt": "n3"
         },
         {
             "kanji": "発見する",
-            "furigana": "はっけんする",
+            "hiragana": "はっけんする",
             "english": "discovery; detection; finding",
             "jlpt": "n3"
         },
         {
             "kanji": "解決する",
-            "furigana": "かいけつする",
+            "hiragana": "かいけつする",
             "english": "settlement; solution; resolution",
             "jlpt": "n3"
         },
         {
             "kanji": "存在する",
-            "furigana": "そんざいする",
+            "hiragana": "そんざいする",
             "english": "existence; being; presence",
             "jlpt": "n3"
         },
         {
             "kanji": "信頼する",
-            "furigana": "しんらいする",
+            "hiragana": "しんらいする",
             "english": "reliance; trust; faith; confidence",
             "jlpt": "n3"
         },
         {
             "kanji": "希望する",
-            "furigana": "きぼうする",
+            "hiragana": "きぼうする",
             "english": "hope; wish; aspiration",
             "jlpt": "n3"
         },
         {
             "kanji": "調査する",
-            "furigana": "ちょうさする",
+            "hiragana": "ちょうさする",
             "english": "investigation; examination; inquiry; enquiry; survey",
             "jlpt": "n3"
         },
         {
             "kanji": "実験する",
-            "furigana": "じっけんする",
+            "hiragana": "じっけんする",
             "english": "experiment; experimentation",
             "jlpt": "n3"
         },
         {
             "kanji": "発明する",
-            "furigana": "はつめいする",
+            "hiragana": "はつめいする",
             "english": "invention",
             "jlpt": "n3"
         },
         {
             "kanji": "進歩する",
-            "furigana": "しんぽする",
+            "hiragana": "しんぽする",
             "english": "progress; advance; improvement; development",
             "jlpt": "n3"
         },
         {
             "kanji": "恐怖する",
-            "furigana": "きょうふする",
+            "hiragana": "きょうふする",
             "english": "fear; dread; dismay; terror; horror; scare; panic",
             "jlpt": "n3"
         },
         {
             "kanji": "否定する",
-            "furigana": "ひていする",
+            "hiragana": "ひていする",
             "english": "denial; negation; repudiation; disavowal",
             "jlpt": "n3"
         },
         {
             "kanji": "留学する",
-            "furigana": "りゅうがくする",
+            "hiragana": "りゅうがくする",
             "english": "studying abroad",
             "jlpt": "n3"
         },
         {
             "kanji": "評価する",
-            "furigana": "ひょうかする",
+            "hiragana": "ひょうかする",
             "english": "valuation; appraisal; evaluation; assessment; estimation; rating; judging",
             "jlpt": "n3"
         },
         {
             "kanji": "意識する",
-            "furigana": "いしきする",
+            "hiragana": "いしきする",
             "english": "consciousness",
             "jlpt": "n3"
         },
         {
             "kanji": "意識する",
-            "furigana": "いしきする",
+            "hiragana": "いしきする",
             "english": "consciousness",
             "jlpt": "n3"
         },
         {
             "kanji": "逮捕する",
-            "furigana": "たいほする",
+            "hiragana": "たいほする",
             "english": "arrest; apprehension; capture",
             "jlpt": "n3"
         },
         {
             "kanji": "爆発する",
-            "furigana": "ばくはつする",
+            "hiragana": "ばくはつする",
             "english": "explosion; detonation; blast; blowing up; eruption",
             "jlpt": "n3"
         },
         {
             "kanji": "契約する",
-            "furigana": "けいやくする",
+            "hiragana": "けいやくする",
             "english": "contract; compact; agreement",
             "jlpt": "n3"
         },
         {
             "kanji": "独立する",
-            "furigana": "どくりつする",
+            "hiragana": "どくりつする",
             "english": "independence; self-reliance; supporting oneself; being on one's own",
             "jlpt": "n3"
         },
         {
             "kanji": "記憶する",
-            "furigana": "きおくする",
+            "hiragana": "きおくする",
             "english": "memory; recollection; remembrance",
             "jlpt": "n3"
         },
         {
             "kanji": "優勝する",
-            "furigana": "ゆうしょうする",
+            "hiragana": "ゆうしょうする",
             "english": "overall victory; championship; winning the title",
             "jlpt": "n3"
         },
         {
             "kanji": "命令する",
-            "furigana": "めいれいする",
+            "hiragana": "めいれいする",
             "english": "order; command; decree; directive",
             "jlpt": "n3"
         },
         {
             "kanji": "輸入する",
-            "furigana": "ゆにゅうする",
+            "hiragana": "ゆにゅうする",
             "english": "import; importation; introduction",
             "jlpt": "n3"
         },
         {
             "kanji": "合図する",
-            "furigana": "あいずする",
+            "hiragana": "あいずする",
             "english": "sign; signal; cue",
             "jlpt": "n3"
         },
         {
             "kanji": "計算する",
-            "furigana": "けいさんする",
+            "hiragana": "けいさんする",
             "english": "calculation; reckoning; count",
             "jlpt": "n3"
         },
         {
             "kanji": "禁煙する",
-            "furigana": "きんえんする",
+            "hiragana": "きんえんする",
             "english": "abstaining from smoking; quitting smoking",
             "jlpt": "n3"
         },
         {
             "kanji": "握手する",
-            "furigana": "あくしゅする",
+            "hiragana": "あくしゅする",
             "english": "handshake",
             "jlpt": "n3"
         },
         {
             "kanji": "訓練する",
-            "furigana": "くんれんする",
+            "hiragana": "くんれんする",
             "english": "training; drill; practice; discipline",
             "jlpt": "n3"
         },
         {
             "kanji": "攻撃する",
-            "furigana": "こうげきする",
+            "hiragana": "こうげきする",
             "english": "attack; assault; raid; onslaught; offensive",
             "jlpt": "n3"
         },
         {
             "kanji": "広告する",
-            "furigana": "こうこくする",
+            "hiragana": "こうこくする",
             "english": "advertisement; advertising",
             "jlpt": "n3"
         },
         {
             "kanji": "署名する",
-            "furigana": "しょめいする",
+            "hiragana": "しょめいする",
             "english": "signature",
             "jlpt": "n3"
         },
         {
             "kanji": "駐車する",
-            "furigana": "ちゅうしゃする",
+            "hiragana": "ちゅうしゃする",
             "english": "parking (a vehicle)",
             "jlpt": "n3"
         },
         {
             "kanji": "証明する",
-            "furigana": "しょうめいする",
+            "hiragana": "しょうめいする",
             "english": "proof; testimony; demonstration; verification; certification",
             "jlpt": "n3"
         },
         {
             "kanji": "出版する",
-            "furigana": "しゅっぱんする",
+            "hiragana": "しゅっぱんする",
             "english": "publication",
             "jlpt": "n3"
         },
         {
             "kanji": "競技する",
-            "furigana": "きょうぎする",
+            "hiragana": "きょうぎする",
             "english": "game; match; contest",
             "jlpt": "n3"
         },
         {
             "kanji": "保証する",
-            "furigana": "ほしょうする",
+            "hiragana": "ほしょうする",
             "english": "guarantee; security; assurance; pledge; warranty",
             "jlpt": "n3"
         },
         {
             "kanji": "投票する",
-            "furigana": "とうひょうする",
+            "hiragana": "とうひょうする",
             "english": "voting; ballot; poll; vote",
             "jlpt": "n3"
         },
         {
             "kanji": "診察する",
-            "furigana": "しんさつする",
+            "hiragana": "しんさつする",
             "english": "medical examination; checkup; consultation",
             "jlpt": "n3"
         },
         {
             "kanji": "離婚する",
-            "furigana": "りこんする",
+            "hiragana": "りこんする",
             "english": "divorce",
             "jlpt": "n3"
         },
         {
             "kanji": "販売する",
-            "furigana": "はんばいする",
+            "hiragana": "はんばいする",
             "english": "sales; selling; marketing",
             "jlpt": "n3"
         },
         {
             "kanji": "衝突する",
-            "furigana": "しょうとつする",
+            "hiragana": "しょうとつする",
             "english": "collision; crash; impact; running into",
             "jlpt": "n3"
         },
         {
             "kanji": "平均する",
-            "furigana": "へいきんする",
+            "hiragana": "へいきんする",
             "english": "average; mean",
             "jlpt": "n3"
         },
         {
             "kanji": "輸出する",
-            "furigana": "ゆしゅつする",
+            "hiragana": "ゆしゅつする",
             "english": "export; exportation",
             "jlpt": "n3"
         },
         {
             "kanji": "冒険する",
-            "furigana": "ぼうけんする",
+            "hiragana": "ぼうけんする",
             "english": "adventure; venture",
             "jlpt": "n3"
         },
         {
             "kanji": "通学する",
-            "furigana": "つうがくする",
+            "hiragana": "つうがくする",
             "english": "commuting to school; school commute",
             "jlpt": "n3"
         },
         {
             "kanji": "改善する",
-            "furigana": "かいぜんする",
+            "hiragana": "かいぜんする",
             "english": "betterment; improvement",
             "jlpt": "n3"
         },
         {
             "kanji": "収穫する",
-            "furigana": "しゅうかくする",
+            "hiragana": "しゅうかくする",
             "english": "harvest; crop; ingathering",
             "jlpt": "n3"
         },
         {
             "kanji": "信号する",
-            "furigana": "しんごうする",
+            "hiragana": "しんごうする",
             "english": "signal; signalling; signaling",
             "jlpt": "n3"
         },
         {
             "kanji": "放送する",
-            "furigana": "ほうそうする",
+            "hiragana": "ほうそうする",
             "english": "broadcasting; broadcast; program; announcement",
             "jlpt": "n3"
         },
         {
             "kanji": "建設する",
-            "furigana": "けんせつする",
+            "hiragana": "けんせつする",
             "english": "construction; establishment",
             "jlpt": "n3"
         },
         {
             "kanji": "節約する",
-            "furigana": "せつやくする",
+            "hiragana": "せつやくする",
             "english": "economising; saving",
             "jlpt": "n3"
         },
         {
             "kanji": "誕生する",
-            "furigana": "たんじょうする",
+            "hiragana": "たんじょうする",
             "english": "birth; creation; formation",
             "jlpt": "n3"
         },
         {
             "kanji": "労働する",
-            "furigana": "ろうどうする",
+            "hiragana": "ろうどうする",
             "english": "manual labor; manual labour; toil; work",
             "jlpt": "n3"
         },
         {
             "kanji": "学習する",
-            "furigana": "がくしゅうする",
+            "hiragana": "がくしゅうする",
             "english": "study; learning; tutorial",
             "jlpt": "n3"
         },
         {
             "kanji": "観光する",
-            "furigana": "かんこうする",
+            "hiragana": "かんこうする",
             "english": "sightseeing; tourism",
             "jlpt": "n3"
         },
         {
             "kanji": "分析する",
-            "furigana": "ぶんせきする",
+            "hiragana": "ぶんせきする",
             "english": "analysis",
             "jlpt": "n3"
         },
         {
             "kanji": "婚約する",
-            "furigana": "こんやくする",
+            "hiragana": "こんやくする",
             "english": "engagement; betrothal",
             "jlpt": "n3"
         },
         {
             "kanji": "引用する",
-            "furigana": "いんようする",
+            "hiragana": "いんようする",
             "english": "quotation; citation; reference",
             "jlpt": "n3"
         },
         {
             "kanji": "監督する",
-            "furigana": "かんとくする",
+            "hiragana": "かんとくする",
             "english": "supervision; control; superintendence; direction",
             "jlpt": "n3"
         },
         {
             "kanji": "位置する",
-            "furigana": "いちする",
+            "hiragana": "いちする",
             "english": "place; position; location",
             "jlpt": "n3"
         },
         {
             "kanji": "予算する",
-            "furigana": "よさんする",
+            "hiragana": "よさんする",
             "english": "estimate (of costs); budget",
             "jlpt": "n3"
         },
         {
             "kanji": "感覚する",
-            "furigana": "かんかくする",
+            "hiragana": "かんかくする",
             "english": "sense; sensation; feeling; intuition",
             "jlpt": "n3"
         },
         {
             "kanji": "拍手する",
-            "furigana": "はくしゅする",
+            "hiragana": "はくしゅする",
             "english": "clapping hands; applause",
             "jlpt": "n3"
         },
         {
             "kanji": "絶滅する",
-            "furigana": "ぜつめつする",
+            "hiragana": "ぜつめつする",
             "english": "extinction; extermination",
             "jlpt": "n3"
         },
         {
             "kanji": "安定する",
-            "furigana": "あんていする",
+            "hiragana": "あんていする",
             "english": "stability; steadiness; consistency; equilibrium; balance; composure",
             "jlpt": "n3"
         },
         {
             "kanji": "批評する",
-            "furigana": "ひひょうする",
+            "hiragana": "ひひょうする",
             "english": "criticism; critique; review; commentary",
             "jlpt": "n3"
         },
         {
             "kanji": "吸収する",
-            "furigana": "きゅうしゅうする",
+            "hiragana": "きゅうしゅうする",
             "english": "absorption; suction; attraction",
             "jlpt": "n3"
         },
         {
             "kanji": "活用する",
-            "furigana": "かつようする",
+            "hiragana": "かつようする",
             "english": "practical use; application; making good use of; putting to good use; capitalizing on",
             "jlpt": "n3"
         },
         {
             "kanji": "建築する",
-            "furigana": "けんちくする",
+            "hiragana": "けんちくする",
             "english": "construction; architecture (of buildings)",
             "jlpt": "n3"
         },
         {
             "kanji": "消費する",
-            "furigana": "しょうひする",
+            "hiragana": "しょうひする",
             "english": "consumption; expenditure; spending",
             "jlpt": "n3"
         },
         {
             "kanji": "信仰する",
-            "furigana": "しんこうする",
+            "hiragana": "しんこうする",
             "english": "(religious) faith; belief; creed",
             "jlpt": "n3"
         },
         {
             "kanji": "営業する",
-            "furigana": "えいぎょうする",
+            "hiragana": "えいぎょうする",
             "english": "business; trade; operations",
             "jlpt": "n3"
         },
         {
             "kanji": "作業する",
-            "furigana": "さぎょうする",
+            "hiragana": "さぎょうする",
             "english": "work; operation; task",
             "jlpt": "n3"
         },
         {
             "kanji": "呼吸する",
-            "furigana": "こきゅうする",
+            "hiragana": "こきゅうする",
             "english": "breathing; respiration",
             "jlpt": "n3"
         },
         {
             "kanji": "代理する",
-            "furigana": "だいりする",
+            "hiragana": "だいりする",
             "english": "representation; agency; proxy",
             "jlpt": "n3"
         },
         {
             "kanji": "印刷する",
-            "furigana": "いんさつする",
+            "hiragana": "いんさつする",
             "english": "printing",
             "jlpt": "n3"
         },
         {
             "kanji": "骨折する",
-            "furigana": "こっせつする",
+            "hiragana": "こっせつする",
             "english": "bone fracture",
             "jlpt": "n3"
         },
         {
             "kanji": "登山する",
-            "furigana": "とざんする",
+            "hiragana": "とざんする",
             "english": "mountain climbing; ascending a mountain; ascent",
             "jlpt": "n3"
         },
         {
             "kanji": "渋滞する",
-            "furigana": "じゅうたいする",
+            "hiragana": "じゅうたいする",
             "english": "(traffic) congestion; traffic jam; gridlock",
             "jlpt": "n3"
         },
         {
             "kanji": "相続する",
-            "furigana": "そうぞくする",
+            "hiragana": "そうぞくする",
             "english": "succession",
             "jlpt": "n3"
         },
         {
             "kanji": "免許する",
-            "furigana": "めんきょする",
+            "hiragana": "めんきょする",
             "english": "license; licence; permission; permit; certificate",
             "jlpt": "n3"
         },
         {
             "kanji": "会計する",
-            "furigana": "かいけいする",
+            "hiragana": "かいけいする",
             "english": "accounting; finance; account; reckoning",
             "jlpt": "n3"
         },
         {
             "kanji": "差別する",
-            "furigana": "さべつする",
+            "hiragana": "さべつする",
             "english": "distinction; differentiation; discrimination",
             "jlpt": "n3"
         },
         {
             "kanji": "作曲する",
-            "furigana": "さっきょくする",
+            "hiragana": "さっきょくする",
             "english": "composition (of music); setting; writing music",
             "jlpt": "n3"
         },
         {
             "kanji": "暗記する",
-            "furigana": "あんきする",
+            "hiragana": "あんきする",
             "english": "memorization; memorisation; learning by heart",
             "jlpt": "n3"
         },
         {
             "kanji": "連想する",
-            "furigana": "れんそうする",
+            "hiragana": "れんそうする",
             "english": "association (of ideas); being reminded (of something); suggestion",
             "jlpt": "n3"
         },
         {
             "kanji": "勉強する",
-            "furigana": "べんきょうする",
+            "hiragana": "べんきょうする",
             "english": "study",
             "jlpt": "n3"
         },
         {
             "kanji": "練習する",
-            "furigana": "れんしゅうする",
+            "hiragana": "れんしゅうする",
             "english": "practice; training; drill; (an) exercise; workout",
             "jlpt": "n3"
         },
         {
             "kanji": "遠慮する",
-            "furigana": "えんりょする",
+            "hiragana": "えんりょする",
             "english": "reserve; constraint; restraint; modesty; diffidence; hesitation; holding back; discretion; tact; thoughtfulness",
             "jlpt": "n3"
         },
         {
             "kanji": "外出する",
-            "furigana": "がいしゅつする",
+            "hiragana": "がいしゅつする",
             "english": "going out; outing; leaving (one's home, office, etc.)",
             "jlpt": "n3"
         },
         {
             "kanji": "案内する",
-            "furigana": "あんないする",
+            "hiragana": "あんないする",
             "english": "guidance; leading (the way); showing around",
             "jlpt": "n3"
         },
         {
             "kanji": "発展する",
-            "furigana": "はってんする",
+            "hiragana": "はってんする",
             "english": "development; growth; expansion; extension; flourishing",
             "jlpt": "n3"
         },
         {
             "kanji": "共同する",
-            "furigana": "きょうどうする",
+            "hiragana": "きょうどうする",
             "english": "cooperation; collaboration; association; partnership; (acting in) unison",
             "jlpt": "n3"
         },
         {
             "kanji": "成功する",
-            "furigana": "せいこうする",
+            "hiragana": "せいこうする",
             "english": "success; achievement",
             "jlpt": "n3"
         },
         {
             "kanji": "出発する",
-            "furigana": "しゅっぱつする",
+            "hiragana": "しゅっぱつする",
             "english": "departure; leaving; setting off",
             "jlpt": "n3"
         },
         {
             "kanji": "努力する",
-            "furigana": "どりょくする",
+            "hiragana": "どりょくする",
             "english": "effort; exertion; endeavour; endeavor; hard work; striving",
             "jlpt": "n3"
         },
         {
             "kanji": "運転する",
-            "furigana": "うんてんする",
+            "hiragana": "うんてんする",
             "english": "operation (of a machine); running; working",
             "jlpt": "n3"
         },
         {
             "kanji": "心配する",
-            "furigana": "しんぱいする",
+            "hiragana": "しんぱいする",
             "english": "worry; concern; anxiety; uneasiness; fear",
             "jlpt": "n3"
         },
         {
             "kanji": "提案する",
-            "furigana": "ていあんする",
+            "hiragana": "ていあんする",
             "english": "proposal; proposition; suggestion",
             "jlpt": "n3"
         },
         {
             "kanji": "出席する",
-            "furigana": "しゅっせきする",
+            "hiragana": "しゅっせきする",
             "english": "attendance; presence; appearance",
             "jlpt": "n3"
         },
         {
             "kanji": "賛成する",
-            "furigana": "さんせいする",
+            "hiragana": "さんせいする",
             "english": "approval; agreement; support; favour; favor",
             "jlpt": "n3"
         },
         {
             "kanji": "愛するする",
-            "furigana": "あいするする",
+            "hiragana": "あいするする",
             "english": "to love",
             "jlpt": "n3"
         },
         {
             "kanji": "到着する",
-            "furigana": "とうちゃくする",
+            "hiragana": "とうちゃくする",
             "english": "arrival",
             "jlpt": "n3"
         },
         {
             "kanji": "満足する",
-            "furigana": "まんぞくする",
+            "hiragana": "まんぞくする",
             "english": "satisfaction; contentment; gratification",
             "jlpt": "n3"
         },
         {
             "kanji": "援助する",
-            "furigana": "えんじょする",
+            "hiragana": "えんじょする",
             "english": "assistance; aid; support",
             "jlpt": "n3"
         },
         {
             "kanji": "合格する",
-            "furigana": "ごうかくする",
+            "hiragana": "ごうかくする",
             "english": "passing (an exam); pass; success; passing grade",
             "jlpt": "n3"
         },
         {
             "kanji": "帰宅する",
-            "furigana": "きたくする",
+            "hiragana": "きたくする",
             "english": "returning home; going home; coming home; getting home",
             "jlpt": "n3"
         },
         {
             "kanji": "世話する",
-            "furigana": "せわする",
+            "hiragana": "せわする",
             "english": "care; looking after; help; assistance; aid",
             "jlpt": "n3"
         },
         {
             "kanji": "会合する",
-            "furigana": "かいごうする",
+            "hiragana": "かいごうする",
             "english": "meeting; assembly; gathering",
             "jlpt": "n3"
         },
         {
             "kanji": "議論する",
-            "furigana": "ぎろんする",
+            "hiragana": "ぎろんする",
             "english": "argument; discussion; dispute; controversy",
             "jlpt": "n3"
         },
         {
             "kanji": "決心する",
-            "furigana": "けっしんする",
+            "hiragana": "けっしんする",
             "english": "determination; resolution",
             "jlpt": "n3"
         },
         {
             "kanji": "要求する",
-            "furigana": "ようきゅうする",
+            "hiragana": "ようきゅうする",
             "english": "demand; firm request; requisition; requirement; desire",
             "jlpt": "n3"
         },
         {
             "kanji": "尊敬する",
-            "furigana": "そんけいする",
+            "hiragana": "そんけいする",
             "english": "respect; esteem; reverence; honour; honor",
             "jlpt": "n3"
         },
         {
             "kanji": "準備する",
-            "furigana": "じゅんびする",
+            "hiragana": "じゅんびする",
             "english": "preparation; arrangements; getting ready; provision; setup; reserving",
             "jlpt": "n3"
         },
         {
             "kanji": "滞在する",
-            "furigana": "たいざいする",
+            "hiragana": "たいざいする",
             "english": "stay; sojourn",
             "jlpt": "n3"
         },
         {
             "kanji": "参加する",
-            "furigana": "さんかする",
+            "hiragana": "さんかする",
             "english": "participation; joining; entry",
             "jlpt": "n3"
         },
         {
             "kanji": "実行する",
-            "furigana": "じっこうする",
+            "hiragana": "じっこうする",
             "english": "execution (e.g. of a plan); carrying out; (putting into) practice; action; implementation; fulfillment; realization",
             "jlpt": "n3"
         },
         {
             "kanji": "修理する",
-            "furigana": "しゅうりする",
+            "hiragana": "しゅうりする",
             "english": "repair; mending; fixing; servicing",
             "jlpt": "n3"
         },
         {
             "kanji": "感謝する",
-            "furigana": "かんしゃする",
+            "hiragana": "かんしゃする",
             "english": "thanks; gratitude; appreciation; thankfulness",
             "jlpt": "n3"
         },
         {
             "kanji": "招待する",
-            "furigana": "しょうたいする",
+            "hiragana": "しょうたいする",
             "english": "invitation",
             "jlpt": "n3"
         },
         {
             "kanji": "自慢する",
-            "furigana": "じまんする",
+            "hiragana": "じまんする",
             "english": "pride; boast",
             "jlpt": "n3"
         },
         {
             "kanji": "回復する",
-            "furigana": "かいふくする",
+            "hiragana": "かいふくする",
             "english": "restoration; recovery; rehabilitation; return; improvement",
             "jlpt": "n3"
         },
         {
             "kanji": "判断する",
-            "furigana": "はんだんする",
+            "hiragana": "はんだんする",
             "english": "judgment; judgement; decision; conclusion; adjudication",
             "jlpt": "n3"
         },
         {
             "kanji": "訪問する",
-            "furigana": "ほうもんする",
+            "hiragana": "ほうもんする",
             "english": "call; visit",
             "jlpt": "n3"
         },
         {
             "kanji": "注文する",
-            "furigana": "ちゅうもんする",
+            "hiragana": "ちゅうもんする",
             "english": "order (for an item)",
             "jlpt": "n3"
         },
         {
             "kanji": "決定する",
-            "furigana": "けっていする",
+            "hiragana": "けっていする",
             "english": "decision; determination",
             "jlpt": "n3"
         },
         {
             "kanji": "影響する",
-            "furigana": "えいきょうする",
+            "hiragana": "えいきょうする",
             "english": "influence; effect; impact",
             "jlpt": "n3"
         },
         {
             "kanji": "主張する",
-            "furigana": "しゅちょうする",
+            "hiragana": "しゅちょうする",
             "english": "claim; insistence; assertion; advocacy; emphasis; contention; opinion; tenet",
             "jlpt": "n3"
         },
         {
             "kanji": "便りする",
-            "furigana": "たよりする",
+            "hiragana": "たよりする",
             "english": "news; tidings; information; correspondence; letter",
             "jlpt": "n3"
         },
         {
             "kanji": "信用する",
-            "furigana": "しんようする",
+            "hiragana": "しんようする",
             "english": "confidence; trust; faith; reputation",
             "jlpt": "n3"
         },
         {
             "kanji": "延期する",
-            "furigana": "えんきする",
+            "hiragana": "えんきする",
             "english": "postponement; deferment; adjournment",
             "jlpt": "n3"
         },
         {
             "kanji": "商売する",
-            "furigana": "しょうばいする",
+            "hiragana": "しょうばいする",
             "english": "trade; business; commerce",
             "jlpt": "n3"
         },
         {
             "kanji": "苦労する",
-            "furigana": "くろうする",
+            "hiragana": "くろうする",
             "english": "trouble; hardship; difficulty; labour; labor; toil; pains",
             "jlpt": "n3"
         },
         {
             "kanji": "提出する",
-            "furigana": "ていしゅつする",
+            "hiragana": "ていしゅつする",
             "english": "presentation (of documents); submission (of an application, report, etc.); production (e.g. of evidence); introduction (e.g. of a bill); filing; turning in",
             "jlpt": "n3"
         },
         {
             "kanji": "不足する",
-            "furigana": "ふそくする",
+            "hiragana": "ふそくする",
             "english": "insufficiency; deficiency; shortage; lack; scarcity; deficit",
             "jlpt": "n3"
         },
         {
             "kanji": "変化する",
-            "furigana": "へんかする",
+            "hiragana": "へんかする",
             "english": "change; variation; alteration; mutation; transition; transformation; transfiguration; metamorphosis",
             "jlpt": "n3"
         },
         {
             "kanji": "邪魔する",
-            "furigana": "じゃまする",
+            "hiragana": "じゃまする",
             "english": "hindrance; obstacle; nuisance; disturbance; interruption; interference",
             "jlpt": "n3"
         },
         {
             "kanji": "成長する",
-            "furigana": "せいちょうする",
+            "hiragana": "せいちょうする",
             "english": "growth; development; growing up; becoming an adult",
             "jlpt": "n3"
         },
         {
             "kanji": "一言する",
-            "furigana": "ひとことする",
+            "hiragana": "ひとことする",
             "english": "single word; a few words; brief comment",
             "jlpt": "n3"
         },
         {
             "kanji": "達するする",
-            "furigana": "たっするする",
+            "hiragana": "たっするする",
             "english": "to reach; to get to; to arrive at",
             "jlpt": "n3"
         },
         {
             "kanji": "中止する",
-            "furigana": "ちゅうしする",
+            "hiragana": "ちゅうしする",
             "english": "interruption; discontinuance; suspension; stoppage",
             "jlpt": "n3"
         },
         {
             "kanji": "借金する",
-            "furigana": "しゃっきんする",
+            "hiragana": "しゃっきんする",
             "english": "debt; loan; liabilities; borrowing money",
             "jlpt": "n3"
         },
         {
             "kanji": "欠席する",
-            "furigana": "けっせきする",
+            "hiragana": "けっせきする",
             "english": "absence; non-attendance",
             "jlpt": "n3"
         },
         {
             "kanji": "供給する",
-            "furigana": "きょうきゅうする",
+            "hiragana": "きょうきゅうする",
             "english": "supply; provision",
             "jlpt": "n3"
         },
         {
             "kanji": "感動する",
-            "furigana": "かんどうする",
+            "hiragana": "かんどうする",
             "english": "being deeply moved emotionally; excitement; passion; inspiration; deep emotion; strong impression",
             "jlpt": "n3"
         },
         {
             "kanji": "表現する",
-            "furigana": "ひょうげんする",
+            "hiragana": "ひょうげんする",
             "english": "expression; representation; description",
             "jlpt": "n3"
         },
         {
             "kanji": "無視する",
-            "furigana": "むしする",
+            "hiragana": "むしする",
             "english": "disregarding; ignoring",
             "jlpt": "n3"
         },
         {
             "kanji": "変更する",
-            "furigana": "へんこうする",
+            "hiragana": "へんこうする",
             "english": "change; modification; alteration; revision; amendment",
             "jlpt": "n3"
         },
         {
             "kanji": "実現する",
-            "furigana": "じつげんする",
+            "hiragana": "じつげんする",
             "english": "implementation (e.g. of a system); materialization; materialisation; realization; realisation; actualization; actualisation",
             "jlpt": "n3"
         },
         {
             "kanji": "発表する",
-            "furigana": "はっぴょうする",
+            "hiragana": "はっぴょうする",
             "english": "announcement; publication; presenting; statement; communique; making known; breaking (news story); expressing (one's opinion); releasing; unveiling",
             "jlpt": "n3"
         },
         {
             "kanji": "許可する",
-            "furigana": "きょかする",
+            "hiragana": "きょかする",
             "english": "permission; approval; authorization; license",
             "jlpt": "n3"
         },
         {
             "kanji": "歓迎する",
-            "furigana": "かんげいする",
+            "hiragana": "かんげいする",
             "english": "welcome; reception",
             "jlpt": "n3"
         },
         {
             "kanji": "想像する",
-            "furigana": "そうぞうする",
+            "hiragana": "そうぞうする",
             "english": "imagination; supposition; guess",
             "jlpt": "n3"
         },
         {
             "kanji": "完成する",
-            "furigana": "かんせいする",
+            "hiragana": "かんせいする",
             "english": "completion; perfection; accomplishment",
             "jlpt": "n3"
         },
         {
             "kanji": "経営する",
-            "furigana": "けいえいする",
+            "hiragana": "けいえいする",
             "english": "management; administration; operation; running (a business); conducting",
             "jlpt": "n3"
         },
         {
             "kanji": "増加する",
-            "furigana": "ぞうかする",
+            "hiragana": "ぞうかする",
             "english": "increase; rise; growth; addition; increment",
             "jlpt": "n3"
         },
         {
             "kanji": "横断する",
-            "furigana": "おうだんする",
+            "hiragana": "おうだんする",
             "english": "crossing (a road, river, etc.); cutting through (e.g. of a river through a town); cutting across; intersecting (e.g. a railway track)",
             "jlpt": "n3"
         },
         {
             "kanji": "相談する",
-            "furigana": "そうだんする",
+            "hiragana": "そうだんする",
             "english": "consultation; discussion; discussing; asking (someone) for advice",
             "jlpt": "n3"
         },
         {
             "kanji": "貯金する",
-            "furigana": "ちょきんする",
+            "hiragana": "ちょきんする",
             "english": "putting money aside; savings; deposit (e.g. in a bank)",
             "jlpt": "n3"
         },
         {
             "kanji": "考慮する",
-            "furigana": "こうりょする",
+            "hiragana": "こうりょする",
             "english": "consideration; taking into account",
             "jlpt": "n3"
         },
         {
             "kanji": "活動する",
-            "furigana": "かつどうする",
+            "hiragana": "かつどうする",
             "english": "activity (of a person, organization, animal, volcano, etc.); action",
             "jlpt": "n3"
         },
         {
             "kanji": "結論する",
-            "furigana": "けつろんする",
+            "hiragana": "けつろんする",
             "english": "conclusion (of an argument, discussion, study, etc.)",
             "jlpt": "n3"
         },
         {
             "kanji": "協力する",
-            "furigana": "きょうりょくする",
+            "hiragana": "きょうりょくする",
             "english": "cooperation; collaboration; help; support",
             "jlpt": "n3"
         },
         {
             "kanji": "処理する",
-            "furigana": "しょりする",
+            "hiragana": "しょりする",
             "english": "processing; dealing with; treatment; disposition; disposal",
             "jlpt": "n3"
         },
         {
             "kanji": "確認する",
-            "furigana": "かくにんする",
+            "hiragana": "かくにんする",
             "english": "confirmation; verification; validation; review; check; affirmation; identification",
             "jlpt": "n3"
         },
         {
             "kanji": "使用する",
-            "furigana": "しようする",
+            "hiragana": "しようする",
             "english": "use; application; employment; utilization; utilisation",
             "jlpt": "n3"
         },
         {
             "kanji": "報告する",
-            "furigana": "ほうこくする",
+            "hiragana": "ほうこくする",
             "english": "report; information",
             "jlpt": "n3"
         },
         {
             "kanji": "禁止する",
-            "furigana": "きんしする",
+            "hiragana": "きんしする",
             "english": "prohibition; inhibition; ban",
             "jlpt": "n3"
         },
         {
             "kanji": "手術する",
-            "furigana": "しゅじゅつする",
+            "hiragana": "しゅじゅつする",
             "english": "surgery; operation; procedure",
             "jlpt": "n3"
         },
         {
             "kanji": "専攻する",
-            "furigana": "せんこうする",
+            "hiragana": "せんこうする",
             "english": "major subject; special study",
             "jlpt": "n3"
         },
         {
             "kanji": "手術する",
-            "furigana": "しゅじゅつする",
+            "hiragana": "しゅじゅつする",
             "english": "surgery; operation; procedure",
             "jlpt": "n3"
         },
         {
             "kanji": "誤解する",
-            "furigana": "ごかいする",
+            "hiragana": "ごかいする",
             "english": "misunderstanding",
             "jlpt": "n3"
         },
         {
             "kanji": "損害する",
-            "furigana": "そんがいする",
+            "hiragana": "そんがいする",
             "english": "damage; injury; loss",
             "jlpt": "n3"
         },
         {
             "kanji": "交換する",
-            "furigana": "こうかんする",
+            "hiragana": "こうかんする",
             "english": "exchange; interchange; switching; reciprocity; barter; substitution; replacement; clearing (of checks, cheques)",
             "jlpt": "n3"
         },
         {
             "kanji": "演奏する",
-            "furigana": "えんそうする",
+            "hiragana": "えんそうする",
             "english": "musical performance",
             "jlpt": "n3"
         },
         {
             "kanji": "相当する",
-            "furigana": "そうとうする",
+            "hiragana": "そうとうする",
             "english": "corresponding to (in meaning, function, etc.); being equivalent to",
             "jlpt": "n3"
         },
         {
             "kanji": "不自由する",
-            "furigana": "ふじゆうする",
+            "hiragana": "ふじゆうする",
             "english": "discomfort; inconvenience",
             "jlpt": "n3"
         },
         {
             "kanji": "区別する",
-            "furigana": "くべつする",
+            "hiragana": "くべつする",
             "english": "distinction; differentiation; classification",
             "jlpt": "n3"
         },
         {
             "kanji": "組織する",
-            "furigana": "そしきする",
+            "hiragana": "そしきする",
             "english": "organization; organisation; formation",
             "jlpt": "n3"
         },
         {
             "kanji": "失望する",
-            "furigana": "しつぼうする",
+            "hiragana": "しつぼうする",
             "english": "disappointment; despair",
             "jlpt": "n3"
         },
         {
             "kanji": "製造する",
-            "furigana": "せいぞうする",
+            "hiragana": "せいぞうする",
             "english": "manufacture; production",
             "jlpt": "n3"
         },
         {
             "kanji": "検査する",
-            "furigana": "けんさする",
+            "hiragana": "けんさする",
             "english": "inspection (e.g. customs, factory); examination; test; check; scan (e.g. MRI, PET); audit",
             "jlpt": "n3"
         },
         {
             "kanji": "批判する",
-            "furigana": "ひはんする",
+            "hiragana": "ひはんする",
             "english": "criticism; judgement; judgment; comment",
             "jlpt": "n3"
         },
         {
             "kanji": "比較する",
-            "furigana": "ひかくする",
+            "hiragana": "ひかくする",
             "english": "comparison",
             "jlpt": "n3"
         },
         {
             "kanji": "勘定する",
-            "furigana": "かんじょうする",
+            "hiragana": "かんじょうする",
             "english": "calculation; computation; counting; reckoning; count",
             "jlpt": "n3"
         },
         {
             "kanji": "構成する",
-            "furigana": "こうせいする",
+            "hiragana": "こうせいする",
             "english": "composition; construction; formation; makeup; structure; organization; organisation",
             "jlpt": "n3"
         },
         {
             "kanji": "解釈する",
-            "furigana": "かいしゃくする",
+            "hiragana": "かいしゃくする",
             "english": "interpretation; explanation; reading; construction",
             "jlpt": "n3"
         },
         {
             "kanji": "検討する",
-            "furigana": "けんとうする",
+            "hiragana": "けんとうする",
             "english": "consideration; examination; investigation; study; scrutiny; discussion; analysis; review",
             "jlpt": "n3"
         },
         {
             "kanji": "選択する",
-            "furigana": "せんたくする",
+            "hiragana": "せんたくする",
             "english": "choice; selection; option",
             "jlpt": "n3"
         },
         {
             "kanji": "汚染する",
-            "furigana": "おせんする",
+            "hiragana": "おせんする",
             "english": "pollution; contamination",
             "jlpt": "n3"
         },
         {
             "kanji": "支配する",
-            "furigana": "しはいする",
+            "hiragana": "しはいする",
             "english": "rule; domination; control",
             "jlpt": "n3"
         },
         {
             "kanji": "覚悟する",
-            "furigana": "かくごする",
+            "hiragana": "かくごする",
             "english": "readiness; preparedness; resolution; resignation",
             "jlpt": "n3"
         },
         {
             "kanji": "注目する",
-            "furigana": "ちゅうもくする",
+            "hiragana": "ちゅうもくする",
             "english": "notice; attention; observation",
             "jlpt": "n3"
         },
         {
             "kanji": "観察する",
-            "furigana": "かんさつする",
+            "hiragana": "かんさつする",
             "english": "observation; survey; watching",
             "jlpt": "n3"
         },
         {
             "kanji": "休憩する",
-            "furigana": "きゅうけいする",
+            "hiragana": "きゅうけいする",
             "english": "rest; break; recess; intermission",
             "jlpt": "n3"
         },
         {
             "kanji": "集中する",
-            "furigana": "しゅうちゅうする",
+            "hiragana": "しゅうちゅうする",
             "english": "concentration (on a task); focusing one's attention",
             "jlpt": "n3"
         },
         {
             "kanji": "代表する",
-            "furigana": "だいひょうする",
+            "hiragana": "だいひょうする",
             "english": "representation; representative; delegate; delegation",
             "jlpt": "n3"
         },
         {
             "kanji": "混雑する",
-            "furigana": "こんざつする",
+            "hiragana": "こんざつする",
             "english": "congestion; crush; crowding; jam",
             "jlpt": "n3"
         },
         {
             "kanji": "配達する",
-            "furigana": "はいたつする",
+            "hiragana": "はいたつする",
             "english": "delivery",
             "jlpt": "n3"
         },
         {
             "kanji": "混乱する",
-            "furigana": "こんらんする",
+            "hiragana": "こんらんする",
             "english": "disorder; chaos; confusion; mayhem",
             "jlpt": "n3"
         },
         {
             "kanji": "就職する",
-            "furigana": "しゅうしょくする",
+            "hiragana": "しゅうしょくする",
             "english": "finding employment; getting a job",
             "jlpt": "n3"
         },
         {
             "kanji": "記入する",
-            "furigana": "きにゅうする",
+            "hiragana": "きにゅうする",
             "english": "entry (in a form, register, diary, etc.); filling in; filling out",
             "jlpt": "n3"
         },
         {
             "kanji": "納得する",
-            "furigana": "なっとくする",
+            "hiragana": "なっとくする",
             "english": "consent; agreement; acceptance",
             "jlpt": "n3"
         },
         {
             "kanji": "講演する",
-            "furigana": "こうえんする",
+            "hiragana": "こうえんする",
             "english": "lecture; address; speech",
             "jlpt": "n3"
         },
         {
             "kanji": "適用する",
-            "furigana": "てきようする",
+            "hiragana": "てきようする",
             "english": "applying (e.g. a technology); adoption",
             "jlpt": "n3"
         },
         {
             "kanji": "合計する",
-            "furigana": "ごうけいする",
+            "hiragana": "ごうけいする",
             "english": "sum total; total amount",
             "jlpt": "n3"
         },
         {
             "kanji": "制限する",
-            "furigana": "せいげんする",
+            "hiragana": "せいげんする",
             "english": "restriction; restraint; limitation; limit",
             "jlpt": "n3"
         },
         {
             "kanji": "尊重する",
-            "furigana": "そんちょうする",
+            "hiragana": "そんちょうする",
             "english": "respect; esteem; regard",
             "jlpt": "n3"
         },
         {
             "kanji": "管理する",
-            "furigana": "かんりする",
+            "hiragana": "かんりする",
             "english": "control; management (e.g. of a business)",
             "jlpt": "n3"
         },
         {
             "kanji": "承知する",
-            "furigana": "しょうちする",
+            "hiragana": "しょうちする",
             "english": "knowledge; awareness",
             "jlpt": "n3"
         },
         {
             "kanji": "維持する",
-            "furigana": "いじする",
+            "hiragana": "いじする",
             "english": "maintenance; preservation; improvement",
             "jlpt": "n3"
         },
         {
             "kanji": "感心する",
-            "furigana": "かんしんする",
+            "hiragana": "かんしんする",
             "english": "admiration; being impressed",
             "jlpt": "n3"
         },
         {
             "kanji": "克服する",
-            "furigana": "こくふくする",
+            "hiragana": "こくふくする",
             "english": "conquest (of a difficulty, illness, crisis, etc.); overcoming; surmounting; bringing under control",
             "jlpt": "n3"
         },
         {
             "kanji": "障害する",
-            "furigana": "しょうがいする",
+            "hiragana": "しょうがいする",
             "english": "obstacle; impediment; hindrance; barrier; difficulty",
             "jlpt": "n3"
         },
         {
             "kanji": "論争する",
-            "furigana": "ろんそうする",
+            "hiragana": "ろんそうする",
             "english": "dispute; controversy; debate; argument; taking issue",
             "jlpt": "n3"
         },
         {
             "kanji": "承認する",
-            "furigana": "しょうにんする",
+            "hiragana": "しょうにんする",
             "english": "recognition; acknowledgement; acknowledgment; approval; consent; agreement",
             "jlpt": "n3"
         },
         {
             "kanji": "貢献する",
-            "furigana": "こうけんする",
+            "hiragana": "こうけんする",
             "english": "contribution (furthering a goal or cause); services (to a cause)",
             "jlpt": "n3"
         },
         {
             "kanji": "移動する",
-            "furigana": "いどうする",
+            "hiragana": "いどうする",
             "english": "movement; transfer; migration; removal; travel",
             "jlpt": "n3"
         },
         {
             "kanji": "緊張する",
-            "furigana": "きんちょうする",
+            "hiragana": "きんちょうする",
             "english": "tension; strain; nervousness; stress",
             "jlpt": "n3"
         },
         {
             "kanji": "経由する",
-            "furigana": "けいゆする",
+            "hiragana": "けいゆする",
             "english": "going through; going via; going by way of",
             "jlpt": "n3"
         },
         {
             "kanji": "保存する",
-            "furigana": "ほぞんする",
+            "hiragana": "ほぞんする",
             "english": "preservation; conservation; storage; maintenance",
             "jlpt": "n3"
         },
         {
             "kanji": "引退する",
-            "furigana": "いんたいする",
+            "hiragana": "いんたいする",
             "english": "retirement",
             "jlpt": "n3"
         },
         {
             "kanji": "開始する",
-            "furigana": "かいしする",
+            "hiragana": "かいしする",
             "english": "start; commencement; beginning; initiation",
             "jlpt": "n3"
         },
         {
             "kanji": "損する",
-            "furigana": "そんする",
+            "hiragana": "そんする",
             "english": "loss; damage; harm; unprofitable",
             "jlpt": "n3"
         },
         {
             "kanji": "発達する",
-            "furigana": "はったつする",
+            "hiragana": "はったつする",
             "english": "development; growth",
             "jlpt": "n3"
         },
         {
             "kanji": "関連する",
-            "furigana": "かんれんする",
+            "hiragana": "かんれんする",
             "english": "relation; connection; relevance",
             "jlpt": "n3"
         },
         {
             "kanji": "通過する",
-            "furigana": "つうかする",
+            "hiragana": "つうかする",
             "english": "passing through (a tunnel, station, town, etc.); passing by (e.g. of a typhoon); transit",
             "jlpt": "n3"
         },
         {
             "kanji": "請求する",
-            "furigana": "せいきゅうする",
+            "hiragana": "せいきゅうする",
             "english": "claim; demand; charge; application; request; billing (for a service)",
             "jlpt": "n3"
         },
         {
             "kanji": "徹夜する",
-            "furigana": "てつやする",
+            "hiragana": "てつやする",
             "english": "staying up all night",
             "jlpt": "n3"
         },
         {
             "kanji": "化粧する",
-            "furigana": "けしょうする",
+            "hiragana": "けしょうする",
             "english": "make-up; makeup; cosmetics",
             "jlpt": "n3"
         },
         {
             "kanji": "学問する",
-            "furigana": "がくもんする",
+            "hiragana": "がくもんする",
             "english": "study; scholarship; learning; education; knowledge",
             "jlpt": "n3"
         },
         {
             "kanji": "支度する",
-            "furigana": "したくする",
+            "hiragana": "したくする",
             "english": "preparation; arrangements",
             "jlpt": "n3"
         },
         {
             "kanji": "支度する",
-            "furigana": "したくする",
+            "hiragana": "したくする",
             "english": "preparation; arrangements",
             "jlpt": "n3"
         },
         {
             "kanji": "予測する",
-            "furigana": "よそくする",
+            "hiragana": "よそくする",
             "english": "prediction; estimation",
             "jlpt": "n3"
         },
         {
             "kanji": "上京する",
-            "furigana": "じょうきょうする",
+            "hiragana": "じょうきょうする",
             "english": "going (up) to the capital; going to Tokyo",
             "jlpt": "n3"
         },
         {
             "kanji": "救助する",
-            "furigana": "きゅうじょする",
+            "hiragana": "きゅうじょする",
             "english": "relief; aid; rescue",
             "jlpt": "n3"
         },
         {
             "kanji": "抵抗する",
-            "furigana": "ていこうする",
+            "hiragana": "ていこうする",
             "english": "resistance; opposition; standing up to",
             "jlpt": "n3"
         },
         {
             "kanji": "破産する",
-            "furigana": "はさんする",
+            "hiragana": "はさんする",
             "english": "bankruptcy; insolvency",
             "jlpt": "n3"
         },
         {
             "kanji": "機能する",
-            "furigana": "きのうする",
+            "hiragana": "きのうする",
             "english": "function; facility; faculty; feature",
             "jlpt": "n3"
         },
         {
             "kanji": "指導する",
-            "furigana": "しどうする",
+            "hiragana": "しどうする",
             "english": "guidance; leadership; instruction; direction; coaching",
             "jlpt": "n3"
         },
         {
             "kanji": "宿泊する",
-            "furigana": "しゅくはくする",
+            "hiragana": "しゅくはくする",
             "english": "accommodation; lodging",
             "jlpt": "n3"
         },
         {
             "kanji": "重視する",
-            "furigana": "じゅうしする",
+            "hiragana": "じゅうしする",
             "english": "regarding as important; attaching importance to; taking a serious view of; putting emphasis on",
             "jlpt": "n3"
         },
         {
             "kanji": "刺激する",
-            "furigana": "しげきする",
+            "hiragana": "しげきする",
             "english": "stimulus; stimulation; irritation (esp. of the body, e.g. skin, eyes)",
             "jlpt": "n3"
         },
         {
             "kanji": "操作する",
-            "furigana": "そうさする",
+            "hiragana": "そうさする",
             "english": "operation; management; handling",
             "jlpt": "n3"
         },
         {
             "kanji": "連続する",
-            "furigana": "れんぞくする",
+            "hiragana": "れんぞくする",
             "english": "continuation; succession; series",
             "jlpt": "n3"
         },
         {
             "kanji": "両替する",
-            "furigana": "りょうがえする",
+            "hiragana": "りょうがえする",
             "english": "change; money exchange",
             "jlpt": "n3"
         },
         {
             "kanji": "実施する",
-            "furigana": "じっしする",
+            "hiragana": "じっしする",
             "english": "enforcement; implementation; putting into practice; carrying out; operation; working (e.g. working parameters); enactment",
             "jlpt": "n3"
         },
         {
             "kanji": "設計する",
-            "furigana": "せっけいする",
+            "hiragana": "せっけいする",
             "english": "plan; design; layout",
             "jlpt": "n3"
         },
         {
             "kanji": "担当する",
-            "furigana": "たんとうする",
+            "hiragana": "たんとうする",
             "english": "being in charge (of an area of responsibility); being responsible (for a work role, etc.)",
             "jlpt": "n3"
         },
         {
             "kanji": "入場する",
-            "furigana": "にゅうじょうする",
+            "hiragana": "にゅうじょうする",
             "english": "entrance; entering; admission; admittance",
             "jlpt": "n3"
         },
         {
             "kanji": "死亡する",
-            "furigana": "しぼうする",
+            "hiragana": "しぼうする",
             "english": "death; dying; mortality",
             "jlpt": "n3"
         },
         {
             "kanji": "支出する",
-            "furigana": "ししゅつする",
+            "hiragana": "ししゅつする",
             "english": "expenditure; disbursement; expenses",
             "jlpt": "n3"
         },
         {
             "kanji": "交際する",
-            "furigana": "こうさいする",
+            "hiragana": "こうさいする",
             "english": "company; friendship; association; society; acquaintance",
             "jlpt": "n3"
         },
         {
             "kanji": "演技する",
-            "furigana": "えんぎする",
+            "hiragana": "えんぎする",
             "english": "acting; performance",
             "jlpt": "n3"
         },
         {
             "kanji": "進学する",
-            "furigana": "しんがくする",
+            "hiragana": "しんがくする",
             "english": "advancing to the next stage of education; going on to (high school, college, etc.)",
             "jlpt": "n3"
         },
         {
             "kanji": "推薦する",
-            "furigana": "すいせんする",
+            "hiragana": "すいせんする",
             "english": "recommendation; referral; endorsement",
             "jlpt": "n3"
         },
         {
             "kanji": "修正する",
-            "furigana": "しゅうせいする",
+            "hiragana": "しゅうせいする",
             "english": "amendment; correction; revision; modification; alteration; retouching; update; fix",
             "jlpt": "n3"
         },
         {
             "kanji": "依頼する",
-            "furigana": "いらいする",
+            "hiragana": "いらいする",
             "english": "request; commission; entrusting (with a matter)",
             "jlpt": "n3"
         },
         {
             "kanji": "完了する",
-            "furigana": "かんりょうする",
+            "hiragana": "かんりょうする",
             "english": "completion; conclusion",
             "jlpt": "n3"
         },
         {
             "kanji": "審判する",
-            "furigana": "しんぱんする",
+            "hiragana": "しんぱんする",
             "english": "judgement; judgment; decision; verdict; sentence",
             "jlpt": "n3"
         },
         {
             "kanji": "整理する",
-            "furigana": "せいりする",
+            "hiragana": "せいりする",
             "english": "sorting; arrangement; organization; putting in order; adjustment; regulation",
             "jlpt": "n3"
         },
         {
             "kanji": "装置する",
-            "furigana": "そうちする",
+            "hiragana": "そうちする",
             "english": "equipment; device; installation; apparatus",
             "jlpt": "n3"
         },
         {
             "kanji": "拡大する",
-            "furigana": "かくだいする",
+            "hiragana": "かくだいする",
             "english": "expansion; extension",
             "jlpt": "n3"
         },
         {
             "kanji": "支給する",
-            "furigana": "しきゅうする",
+            "hiragana": "しきゅうする",
             "english": "provision; supply; payment; allowance; grant",
             "jlpt": "n3"
         },
         {
             "kanji": "予期する",
-            "furigana": "よきする",
+            "hiragana": "よきする",
             "english": "expectation; anticipation; forecast",
             "jlpt": "n3"
         },
         {
             "kanji": "記念する",
-            "furigana": "きねんする",
+            "hiragana": "きねんする",
             "english": "commemoration; celebration; remembrance; memory; honoring the memory of",
             "jlpt": "n3"
         },
         {
             "kanji": "発行する",
-            "furigana": "はっこうする",
+            "hiragana": "はっこうする",
             "english": "publication (of a newspaper, magazine, book, etc.); issue",
             "jlpt": "n3"
         },
         {
             "kanji": "設備する",
-            "furigana": "せつびする",
+            "hiragana": "せつびする",
             "english": "equipment; facilities; installation; accommodations; conveniences; arrangements",
             "jlpt": "n3"
         },
         {
             "kanji": "掲示する",
-            "furigana": "けいじする",
+            "hiragana": "けいじする",
             "english": "notice; bulletin; post; posting; placard",
             "jlpt": "n3"
         },
         {
             "kanji": "裁判する",
-            "furigana": "さいばんする",
+            "hiragana": "さいばんする",
             "english": "trial; judgement; judgment",
             "jlpt": "n3"
         },
         {
             "kanji": "予防する",
-            "furigana": "よぼうする",
+            "hiragana": "よぼうする",
             "english": "prevention; protection (against); precaution",
             "jlpt": "n3"
         },
         {
             "kanji": "違反する",
-            "furigana": "いはんする",
+            "hiragana": "いはんする",
             "english": "violation; offense; offence; breach; transgression; infringement; contravention",
             "jlpt": "n3"
         },
         {
             "kanji": "通信する",
-            "furigana": "つうしんする",
+            "hiragana": "つうしんする",
             "english": "correspondence; communication; transmission; news; signal; telecommunications",
             "jlpt": "n3"
         },
         {
             "kanji": "通行する",
-            "furigana": "つうこうする",
+            "hiragana": "つうこうする",
             "english": "passage (of people or vehicles); passing (through); traffic",
             "jlpt": "n3"
         },
         {
             "kanji": "予報する",
-            "furigana": "よほうする",
+            "hiragana": "よほうする",
             "english": "forecast; prediction",
             "jlpt": "n3"
         },
         {
             "kanji": "徹底する",
-            "furigana": "てっていする",
+            "hiragana": "てっていする",
             "english": "thoroughness; completeness; consistency",
             "jlpt": "n3"
         },
         {
             "kanji": "注する",
-            "furigana": "ちゅうする",
+            "hiragana": "ちゅうする",
             "english": "annotation; explanatory note; comment",
             "jlpt": "n3"
         },
         {
             "kanji": "消防する",
-            "furigana": "しょうぼうする",
+            "hiragana": "しょうぼうする",
             "english": "fire fighting",
             "jlpt": "n3"
         },
         {
             "kanji": "遅刻する",
-            "furigana": "ちこくする",
+            "hiragana": "ちこくする",
             "english": "lateness; tardiness; arriving late",
             "jlpt": "n3"
         },
         {
             "kanji": "怪我する",
-            "furigana": "けがする",
+            "hiragana": "けがする",
             "english": "injury; wound",
             "jlpt": "n3"
         },
         {
             "kanji": "お喋りする",
-            "furigana": "おしゃべりする",
+            "hiragana": "おしゃべりする",
             "english": "chattering; talk; idle talk; chat; chitchat; gossip",
             "jlpt": "n3"
         },
         {
             "kanji": "凝乎とする",
-            "furigana": "じっとする",
+            "hiragana": "じっとする",
             "english": "motionlessly (e.g. stand, wait); (be) still",
             "jlpt": "n3"
         },
         {
             "kanji": "苛々する",
-            "furigana": "いらいらする",
+            "hiragana": "いらいらする",
             "english": "to get irritated; to get annoyed; to be on the edge; to fret; to lose patience",
             "jlpt": "n3"
         },
         {
             "kanji": "強調する",
-            "furigana": "きょうちょうする",
+            "hiragana": "きょうちょうする",
             "english": "emphasis; stress; highlighting; underlining; underscoring",
             "jlpt": "n3"
         },
         {
             "kanji": "悪戯する",
-            "furigana": "いたずらする",
+            "hiragana": "いたずらする",
             "english": "mischief; prank; trick; practical joke",
             "jlpt": "n3"
         },
         {
             "kanji": "罰するする",
-            "furigana": "ばっするする",
+            "hiragana": "ばっするする",
             "english": "to punish; to penalize; to penalise",
             "jlpt": "n3"
         },
         {
             "kanji": "適するする",
-            "furigana": "てきするする",
+            "hiragana": "てきするする",
             "english": "to fit; to suit",
             "jlpt": "n3"
         },
         {
             "kanji": "真似する",
-            "furigana": "まねする",
+            "hiragana": "まねする",
             "english": "imitating; copying; mimicry",
             "jlpt": "n3"
         },
         {
             "kanji": "用心する",
-            "furigana": "ようじんする",
+            "hiragana": "ようじんする",
             "english": "care; precaution; guarding; caution",
             "jlpt": "n3"
         },
         {
             "kanji": "熱中する",
-            "furigana": "ねっちゅうする",
+            "hiragana": "ねっちゅうする",
             "english": "being enthusiastic about; being wild about; being absorbed in; being engrossed in; being devoted to",
             "jlpt": "n3"
         },
         {
             "kanji": "上達する",
-            "furigana": "じょうたつする",
+            "hiragana": "じょうたつする",
             "english": "improvement (e.g. in skill, ability); advance; progress",
             "jlpt": "n3"
         },
         {
             "kanji": "頂戴する",
-            "furigana": "ちょうだいする",
+            "hiragana": "ちょうだいする",
             "english": "receiving; getting; accepting; being given",
             "jlpt": "n3"
         },
         {
             "kanji": "居眠りする",
-            "furigana": "いねむりする",
+            "hiragana": "いねむりする",
             "english": "nodding off (while sitting); dozing",
             "jlpt": "n3"
         },
         {
             "kanji": "発車する",
-            "furigana": "はっしゃする",
+            "hiragana": "はっしゃする",
             "english": "departure (of a train, car, etc.); starting; leaving",
             "jlpt": "n3"
         },
         {
             "kanji": "反抗する",
-            "furigana": "はんこうする",
+            "hiragana": "はんこうする",
             "english": "opposition; resistance; insubordination; defiance; hostility; rebellion",
             "jlpt": "n3"
         },
         {
             "kanji": "関するする",
-            "furigana": "かんするする",
+            "hiragana": "かんするする",
             "english": "to concern; to be related",
             "jlpt": "n3"
         },
         {
             "kanji": "コピーする",
-            "furigana": "コピーする",
+            "hiragana": "コピーする",
             "english": "copy; photocopy",
             "jlpt": "n3"
         },
         {
             "kanji": "為るする",
-            "furigana": "するする",
+            "hiragana": "するする",
             "english": "to do; to carry out; to perform",
             "jlpt": "n3"
         },
         {
             "kanji": "ダンスする",
-            "furigana": "ダンスする",
+            "hiragana": "ダンスする",
             "english": "dance; dancing",
             "jlpt": "n3"
         },
         {
             "kanji": "サービスする",
-            "furigana": "サービスする",
+            "hiragana": "サービスする",
             "english": "service; help; assistance; care; concern",
             "jlpt": "n3"
         },
         {
             "kanji": "デートする",
-            "furigana": "デートする",
+            "hiragana": "デートする",
             "english": "date (with someone); (social) outing (for two); date night",
             "jlpt": "n3"
         },
         {
             "kanji": "スケートする",
-            "furigana": "スケートする",
+            "hiragana": "スケートする",
             "english": "skating (esp. ice); skate; skates",
             "jlpt": "n3"
         },
         {
             "kanji": "ノックする",
-            "furigana": "ノックする",
+            "hiragana": "ノックする",
             "english": "knock; knocking",
             "jlpt": "n3"
         },
         {
             "kanji": "キャンプする",
-            "furigana": "キャンプする",
+            "hiragana": "キャンプする",
             "english": "camp; camping",
             "jlpt": "n3"
         },
         {
             "kanji": "コーチする",
-            "furigana": "コーチする",
+            "hiragana": "コーチする",
             "english": "coach",
             "jlpt": "n3"
         },
         {
             "kanji": "プラスする",
-            "furigana": "プラスする",
+            "hiragana": "プラスする",
             "english": "plus; addition",
             "jlpt": "n3"
         },
         {
             "kanji": "マスターする",
-            "furigana": "マスターする",
+            "hiragana": "マスターする",
             "english": "to master (a skill)",
             "jlpt": "n3"
         },
         {
             "kanji": "パスする",
-            "furigana": "パスする",
+            "hiragana": "パスする",
             "english": "passing (a test, examination, etc.)",
             "jlpt": "n3"
         },
         {
             "kanji": "ゆっくりする",
-            "furigana": "ゆっくりする",
+            "hiragana": "ゆっくりする",
             "english": "slowly; unhurriedly; without haste; leisurely; at one's leisure",
             "jlpt": "n3"
         },
         {
             "kanji": "レポートする",
-            "furigana": "レポートする",
+            "hiragana": "レポートする",
             "english": "report; paper",
             "jlpt": "n3"
         },
         {
             "kanji": "流行する",
-            "furigana": "りゅうこうする",
+            "hiragana": "りゅうこうする",
             "english": "fashion; trend; vogue; craze; fad; popularity",
             "jlpt": "n3"
         },
         {
             "kanji": "悪口する",
-            "furigana": "わるぐちする",
+            "hiragana": "わるぐちする",
             "english": "slander; bad-mouthing; abuse; insult; speaking ill (of)",
             "jlpt": "n3"
         },
         {
             "kanji": "がっかりする",
-            "furigana": "がっかりする",
+            "hiragana": "がっかりする",
             "english": "to be disappointed; to be dejected; to be downhearted; to be discouraged; to be disheartened; to lose heart; to feel let down",
             "jlpt": "n3"
         },
         {
             "kanji": "彼方此方する",
-            "furigana": "あちこちする",
+            "hiragana": "あちこちする",
             "english": "here and there; various places; all around; all over; everywhere; throughout",
             "jlpt": "n3"
         },
         {
             "kanji": "きちんとする",
-            "furigana": "きちんとする",
+            "hiragana": "きちんとする",
             "english": "properly; accurately; exactly; precisely; regularly",
             "jlpt": "n3"
         },
         {
             "kanji": "ちゃんとする",
-            "furigana": "ちゃんとする",
+            "hiragana": "ちゃんとする",
             "english": "diligently; seriously; earnestly; reliably; steadily; legitimately",
             "jlpt": "n3"
         },
         {
             "kanji": "ぴったりする",
-            "furigana": "ぴったりする",
+            "hiragana": "ぴったりする",
             "english": "tightly; closely",
             "jlpt": "n3"
         },
         {
             "kanji": "さっぱりする",
-            "furigana": "さっぱりする",
+            "hiragana": "さっぱりする",
             "english": "feeling refreshed; feeling relieved",
             "jlpt": "n3"
         },
         {
             "kanji": "メモする",
-            "furigana": "メモする",
+            "hiragana": "メモする",
             "english": "note; memo; memorandum",
             "jlpt": "n3"
         },
         {
             "kanji": "スイッチする",
-            "furigana": "スイッチする",
+            "hiragana": "スイッチする",
             "english": "switch",
             "jlpt": "n3"
         },
         {
             "kanji": "ぼんやりする",
-            "furigana": "ぼんやりする",
+            "hiragana": "ぼんやりする",
             "english": "dimly; faintly; indistinctly; vaguely",
             "jlpt": "n3"
         },
         {
             "kanji": "のんびりする",
-            "furigana": "のんびりする",
+            "hiragana": "のんびりする",
             "english": "at leisure; in a relaxed manner; in a carefree manner; quietly; peacefully",
             "jlpt": "n3"
         },
         {
             "kanji": "にっこりする",
-            "furigana": "にっこりする",
+            "hiragana": "にっこりする",
             "english": "sweetly (smiling); broadly (grinning)",
             "jlpt": "n3"
         },
         {
             "kanji": "申し訳する",
-            "furigana": "もうしわけする",
+            "hiragana": "もうしわけする",
             "english": "apology; excuse",
             "jlpt": "n3"
         },
         {
             "kanji": "対するする",
-            "furigana": "たいするする",
+            "hiragana": "たいするする",
             "english": "to face (each other); to be facing",
             "jlpt": "n3"
         },
         {
             "kanji": "吃驚する",
-            "furigana": "びっくりする",
+            "hiragana": "びっくりする",
             "english": "to be surprised; to be amazed; to be frightened; to be astonished; to get startled; to jump",
             "jlpt": "n3"
         },
         {
             "kanji": "ゴールする",
-            "furigana": "ゴールする",
+            "hiragana": "ゴールする",
             "english": "goal (in soccer, hockey, etc.); basket (in basketball)",
             "jlpt": "n3"
         },
         {
             "kanji": "サインする",
-            "furigana": "サインする",
+            "hiragana": "サインする",
             "english": "autograph; signature",
             "jlpt": "n3"
         },
         {
             "kanji": "ミスする",
-            "furigana": "ミスする",
+            "hiragana": "ミスする",
             "english": "mistake; error; blunder",
             "jlpt": "n3"
         },
         {
             "kanji": "発明する",
-            "furigana": "はつめいする",
+            "hiragana": "はつめいする",
             "english": "invention",
             "jlpt": "n3"
         },
         {
             "kanji": "独立する",
-            "furigana": "どくりつする",
+            "hiragana": "どくりつする",
             "english": "independence; self-reliance; supporting oneself; being on one's own",
             "jlpt": "n3"
         },
         {
             "kanji": "輸出する",
-            "furigana": "ゆしゅつする",
+            "hiragana": "ゆしゅつする",
             "english": "export; exportation",
             "jlpt": "n3"
         },
         {
             "kanji": "冒険する",
-            "furigana": "ぼうけんする",
+            "hiragana": "ぼうけんする",
             "english": "adventure; venture",
             "jlpt": "n3"
         },
         {
             "kanji": "安定する",
-            "furigana": "あんていする",
+            "hiragana": "あんていする",
             "english": "stability; steadiness; consistency; equilibrium; balance; composure",
             "jlpt": "n3"
         },
         {
             "kanji": "心配する",
-            "furigana": "しんぱいする",
+            "hiragana": "しんぱいする",
             "english": "worry; concern; anxiety; uneasiness; fear",
             "jlpt": "n3"
         },
         {
             "kanji": "満足する",
-            "furigana": "まんぞくする",
+            "hiragana": "まんぞくする",
             "english": "satisfaction; contentment; gratification",
             "jlpt": "n3"
         },
         {
             "kanji": "感謝する",
-            "furigana": "かんしゃする",
+            "hiragana": "かんしゃする",
             "english": "thanks; gratitude; appreciation; thankfulness",
             "jlpt": "n3"
         },
         {
             "kanji": "苦労する",
-            "furigana": "くろうする",
+            "hiragana": "くろうする",
             "english": "trouble; hardship; difficulty; labour; labor; toil; pains",
             "jlpt": "n3"
         },
         {
             "kanji": "不足する",
-            "furigana": "ふそくする",
+            "hiragana": "ふそくする",
             "english": "insufficiency; deficiency; shortage; lack; scarcity; deficit",
             "jlpt": "n3"
         },
         {
             "kanji": "邪魔する",
-            "furigana": "じゃまする",
+            "hiragana": "じゃまする",
             "english": "hindrance; obstacle; nuisance; disturbance; interruption; interference",
             "jlpt": "n3"
         },
         {
             "kanji": "相当する",
-            "furigana": "そうとうする",
+            "hiragana": "そうとうする",
             "english": "corresponding to (in meaning, function, etc.); being equivalent to",
             "jlpt": "n3"
         },
         {
             "kanji": "不自由する",
-            "furigana": "ふじゆうする",
+            "hiragana": "ふじゆうする",
             "english": "discomfort; inconvenience",
             "jlpt": "n3"
         },
         {
             "kanji": "感心する",
-            "furigana": "かんしんする",
+            "hiragana": "かんしんする",
             "english": "admiration; being impressed",
             "jlpt": "n3"
         },
         {
             "kanji": "損する",
-            "furigana": "そんする",
+            "hiragana": "そんする",
             "english": "loss; damage; harm; unprofitable",
             "jlpt": "n3"
         },
         {
             "kanji": "お喋りする",
-            "furigana": "おしゃべりする",
+            "hiragana": "おしゃべりする",
             "english": "chattering; talk; idle talk; chat; chitchat; gossip",
             "jlpt": "n3"
         },
         {
             "kanji": "悪戯する",
-            "furigana": "いたずらする",
+            "hiragana": "いたずらする",
             "english": "mischief; prank; trick; practical joke",
             "jlpt": "n3"
         },
         {
             "kanji": "彼方此方する",
-            "furigana": "あちこちする",
+            "hiragana": "あちこちする",
             "english": "here and there; various places; all around; all over; everywhere; throughout",
             "jlpt": "n3"
         },
         {
             "kanji": "ぴったりする",
-            "furigana": "ぴったりする",
+            "hiragana": "ぴったりする",
             "english": "tightly; closely",
             "jlpt": "n3"
         },
         {
             "kanji": "さっぱりする",
-            "furigana": "さっぱりする",
+            "hiragana": "さっぱりする",
             "english": "feeling refreshed; feeling relieved",
             "jlpt": "n3"
         },
         {
             "kanji": "昼寝する",
-            "furigana": "ひるねする",
+            "hiragana": "ひるねする",
             "english": "(afternoon) nap; sleeping during the day; siesta",
             "jlpt": "n2"
         },
         {
             "kanji": "面接する",
-            "furigana": "めんせつする",
+            "hiragana": "めんせつする",
             "english": "interview (e.g. for a job)",
             "jlpt": "n2"
         },
         {
             "kanji": "解放する",
-            "furigana": "かいほうする",
+            "hiragana": "かいほうする",
             "english": "release; unleashing; liberation; emancipation; setting free",
             "jlpt": "n2"
         },
         {
             "kanji": "通勤する",
-            "furigana": "つうきんする",
+            "hiragana": "つうきんする",
             "english": "commuting to work",
             "jlpt": "n2"
         },
         {
             "kanji": "矛盾する",
-            "furigana": "むじゅんする",
+            "hiragana": "むじゅんする",
             "english": "contradiction; inconsistency",
             "jlpt": "n2"
         },
         {
             "kanji": "通訳する",
-            "furigana": "つうやくする",
+            "hiragana": "つうやくする",
             "english": "interpretation (i.e. oral translation)",
             "jlpt": "n2"
         },
         {
             "kanji": "乾燥する",
-            "furigana": "かんそうする",
+            "hiragana": "かんそうする",
             "english": "dryness; aridity; drying (e.g. clothes); dehydration; desiccation",
             "jlpt": "n2"
         },
         {
             "kanji": "乾燥する",
-            "furigana": "かんそうする",
+            "hiragana": "かんそうする",
             "english": "dryness; aridity; drying (e.g. clothes); dehydration; desiccation",
             "jlpt": "n2"
         },
         {
             "kanji": "宣伝する",
-            "furigana": "せんでんする",
+            "hiragana": "せんでんする",
             "english": "publicity; advertisement; advertising; propaganda",
             "jlpt": "n2"
         },
         {
             "kanji": "回転する",
-            "furigana": "かいてんする",
+            "hiragana": "かいてんする",
             "english": "rotation; revolution; turn; spin",
             "jlpt": "n2"
         },
         {
             "kanji": "空想する",
-            "furigana": "くうそうする",
+            "hiragana": "くうそうする",
             "english": "daydream; fantasy; fancy; vision",
             "jlpt": "n2"
         },
         {
             "kanji": "停電する",
-            "furigana": "ていでんする",
+            "hiragana": "ていでんする",
             "english": "power outage; electricity outage; blackout; failure of electricity supply",
             "jlpt": "n2"
         },
         {
             "kanji": "強化する",
-            "furigana": "きょうかする",
+            "hiragana": "きょうかする",
             "english": "strengthening; intensifying; reinforcement; enhancement; solidification",
             "jlpt": "n2"
         },
         {
             "kanji": "乗り換えする",
-            "furigana": "のりかえする",
+            "hiragana": "のりかえする",
             "english": "transfer (trains, buses, etc.); change; connection",
             "jlpt": "n2"
         },
         {
             "kanji": "消化する",
-            "furigana": "しょうかする",
+            "hiragana": "しょうかする",
             "english": "digestion (of food)",
             "jlpt": "n2"
         },
         {
             "kanji": "撮影する",
-            "furigana": "さつえいする",
+            "hiragana": "さつえいする",
             "english": "photography (still or motion); photographing; filming; shooting; (video) recording",
             "jlpt": "n2"
         },
         {
             "kanji": "継続する",
-            "furigana": "けいぞくする",
+            "hiragana": "けいぞくする",
             "english": "continuation; continuance; going on",
             "jlpt": "n2"
         },
         {
             "kanji": "診断する",
-            "furigana": "しんだんする",
+            "hiragana": "しんだんする",
             "english": "diagnosis; medical examination",
             "jlpt": "n2"
         },
         {
             "kanji": "反省する",
-            "furigana": "はんせいする",
+            "hiragana": "はんせいする",
             "english": "reflection; reconsideration; introspection; meditation; contemplation",
             "jlpt": "n2"
         },
         {
             "kanji": "彫刻する",
-            "furigana": "ちょうこくする",
+            "hiragana": "ちょうこくする",
             "english": "carving; engraving; sculpture",
             "jlpt": "n2"
         },
         {
             "kanji": "包装する",
-            "furigana": "ほうそうする",
+            "hiragana": "ほうそうする",
             "english": "packing; wrapping",
             "jlpt": "n2"
         },
         {
             "kanji": "噴火する",
-            "furigana": "ふんかする",
+            "hiragana": "ふんかする",
             "english": "eruption; volcanic eruption",
             "jlpt": "n2"
         },
         {
             "kanji": "行列する",
-            "furigana": "ぎょうれつする",
+            "hiragana": "ぎょうれつする",
             "english": "line; queue; procession; parade",
             "jlpt": "n2"
         },
         {
             "kanji": "分布する",
-            "furigana": "ぶんぷする",
+            "hiragana": "ぶんぷする",
             "english": "distribution; allocation",
             "jlpt": "n2"
         },
         {
             "kanji": "行列する",
-            "furigana": "ぎょうれつする",
+            "hiragana": "ぎょうれつする",
             "english": "line; queue; procession; parade",
             "jlpt": "n2"
         },
         {
             "kanji": "分布する",
-            "furigana": "ぶんぷする",
+            "hiragana": "ぶんぷする",
             "english": "distribution; allocation",
             "jlpt": "n2"
         },
         {
             "kanji": "体操する",
-            "furigana": "たいそうする",
+            "hiragana": "たいそうする",
             "english": "gymnastics; physical exercises",
             "jlpt": "n2"
         },
         {
             "kanji": "集合する",
-            "furigana": "しゅうごうする",
+            "hiragana": "しゅうごうする",
             "english": "meeting up; gathering; assembly",
             "jlpt": "n2"
         },
         {
             "kanji": "測定する",
-            "furigana": "そくていする",
+            "hiragana": "そくていする",
             "english": "measurement",
             "jlpt": "n2"
         },
         {
             "kanji": "編集する",
-            "furigana": "へんしゅうする",
+            "hiragana": "へんしゅうする",
             "english": "editing; compilation",
             "jlpt": "n2"
         },
         {
             "kanji": "交流する",
-            "furigana": "こうりゅうする",
+            "hiragana": "こうりゅうする",
             "english": "exchange (e.g. cultural); interchange; interaction; mingling; mixing; coming together",
             "jlpt": "n2"
         },
         {
             "kanji": "歯磨きする",
-            "furigana": "はみがきする",
+            "hiragana": "はみがきする",
             "english": "dental brushing; brushing one's teeth",
             "jlpt": "n2"
         },
         {
             "kanji": "売買する",
-            "furigana": "ばいばいする",
+            "hiragana": "ばいばいする",
             "english": "trade; buying and selling; trafficking (e.g. of humans, arms, drugs); dealing",
             "jlpt": "n2"
         },
         {
             "kanji": "摩擦する",
-            "furigana": "まさつする",
+            "hiragana": "まさつする",
             "english": "friction; rubbing; chafing",
             "jlpt": "n2"
         },
         {
             "kanji": "工夫する",
-            "furigana": "くふうする",
+            "hiragana": "くふうする",
             "english": "devising (a way); contriving; inventing; thinking up; figuring out; coming up with; working out",
             "jlpt": "n2"
         },
         {
             "kanji": "観測する",
-            "furigana": "かんそくする",
+            "hiragana": "かんそくする",
             "english": "observation; survey; measurement",
             "jlpt": "n2"
         },
         {
             "kanji": "接続する",
-            "furigana": "せつぞくする",
+            "hiragana": "せつぞくする",
             "english": "connection; attachment; union; join; joint; link",
             "jlpt": "n2"
         },
         {
             "kanji": "司会する",
-            "furigana": "しかいする",
+            "hiragana": "しかいする",
             "english": "leading a meeting; presiding over a meeting; officiating at a ceremony; chairmanship",
             "jlpt": "n2"
         },
         {
             "kanji": "発電する",
-            "furigana": "はつでんする",
+            "hiragana": "はつでんする",
             "english": "generation (e.g. power)",
             "jlpt": "n2"
         },
         {
             "kanji": "転々する",
-            "furigana": "てんてんする",
+            "hiragana": "てんてんする",
             "english": "moving from place to place; being passed around repeatedly",
             "jlpt": "n2"
         },
         {
             "kanji": "圧縮する",
-            "furigana": "あっしゅくする",
+            "hiragana": "あっしゅくする",
             "english": "compression",
             "jlpt": "n2"
         },
         {
             "kanji": "筆記する",
-            "furigana": "ひっきする",
+            "hiragana": "ひっきする",
             "english": "(taking) notes; copying",
             "jlpt": "n2"
         },
         {
             "kanji": "改札する",
-            "furigana": "かいさつする",
+            "hiragana": "かいさつする",
             "english": "examination of tickets",
             "jlpt": "n2"
         },
         {
             "kanji": "輸血する",
-            "furigana": "ゆけつする",
+            "hiragana": "ゆけつする",
             "english": "blood transfusion",
             "jlpt": "n2"
         },
         {
             "kanji": "輸血する",
-            "furigana": "ゆけつする",
+            "hiragana": "ゆけつする",
             "english": "blood transfusion",
             "jlpt": "n2"
         },
         {
             "kanji": "合同する",
-            "furigana": "ごうどうする",
+            "hiragana": "ごうどうする",
             "english": "combination; union; joining; incorporation; amalgamation; merger; fusion",
             "jlpt": "n2"
         },
         {
             "kanji": "包帯する",
-            "furigana": "ほうたいする",
+            "hiragana": "ほうたいする",
             "english": "bandage; dressing",
             "jlpt": "n2"
         },
         {
             "kanji": "失恋する",
-            "furigana": "しつれんする",
+            "hiragana": "しつれんする",
             "english": "disappointed love; broken heart; unrequited love; being lovelorn",
             "jlpt": "n2"
         },
         {
             "kanji": "回り道する",
-            "furigana": "まわりみちする",
+            "hiragana": "まわりみちする",
             "english": "detour; circuitous route; diversion",
             "jlpt": "n2"
         },
         {
             "kanji": "省略する",
-            "furigana": "しょうりゃくする",
+            "hiragana": "しょうりゃくする",
             "english": "omission; leaving out",
             "jlpt": "n2"
         },
         {
             "kanji": "蒸発する",
-            "furigana": "じょうはつする",
+            "hiragana": "じょうはつする",
             "english": "evaporation",
             "jlpt": "n2"
         },
         {
             "kanji": "裁縫する",
-            "furigana": "さいほうする",
+            "hiragana": "さいほうする",
             "english": "sewing; needlework",
             "jlpt": "n2"
         },
         {
             "kanji": "括弧する",
-            "furigana": "かっこする",
+            "hiragana": "かっこする",
             "english": "brackets; parentheses",
             "jlpt": "n2"
         },
         {
             "kanji": "複写する",
-            "furigana": "ふくしゃする",
+            "hiragana": "ふくしゃする",
             "english": "copying; duplication; reproduction; copy",
             "jlpt": "n2"
         },
         {
             "kanji": "退院する",
-            "furigana": "たいいんする",
+            "hiragana": "たいいんする",
             "english": "leaving hospital; discharge from hospital",
             "jlpt": "n2"
         },
         {
             "kanji": "拝見する",
-            "furigana": "はいけんする",
+            "hiragana": "はいけんする",
             "english": "seeing; looking at",
             "jlpt": "n2"
         },
         {
             "kanji": "休息する",
-            "furigana": "きゅうそくする",
+            "hiragana": "きゅうそくする",
             "english": "rest; relief; relaxation",
             "jlpt": "n2"
         },
         {
             "kanji": "引っ越しする",
-            "furigana": "ひっこしする",
+            "hiragana": "ひっこしする",
             "english": "moving (dwelling, office, etc.); changing residence",
             "jlpt": "n2"
         },
         {
             "kanji": "連合する",
-            "furigana": "れんごうする",
+            "hiragana": "れんごうする",
             "english": "union; combination; alliance; confederation; coalition",
             "jlpt": "n2"
         },
         {
             "kanji": "稽古する",
-            "furigana": "けいこする",
+            "hiragana": "けいこする",
             "english": "practice; practising; training; study",
             "jlpt": "n2"
         },
         {
             "kanji": "合流する",
-            "furigana": "ごうりゅうする",
+            "hiragana": "ごうりゅうする",
             "english": "confluence (of rivers); merge (of traffic); conflux; junction; joining",
             "jlpt": "n2"
         },
         {
             "kanji": "交代する",
-            "furigana": "こうたいする",
+            "hiragana": "こうたいする",
             "english": "alternation; change; relief; relay; shift; substitution (sports, etc.); taking turns",
             "jlpt": "n2"
         },
         {
             "kanji": "接するする",
-            "furigana": "せっするする",
+            "hiragana": "せっするする",
             "english": "to touch; to come in contact with; to border on; to adjoin; to be adjacent; to be close",
             "jlpt": "n2"
         },
         {
             "kanji": "属するする",
-            "furigana": "ぞくするする",
+            "hiragana": "ぞくするする",
             "english": "to belong to; to come under; to be affiliated with; to be subject to",
             "jlpt": "n2"
         },
         {
             "kanji": "作成する",
-            "furigana": "さくせいする",
+            "hiragana": "さくせいする",
             "english": "making (a report, plan, contract, etc.); drawing up; writing out; preparing; creating (a file, website, account, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "話し合いする",
-            "furigana": "はなしあいする",
+            "hiragana": "はなしあいする",
             "english": "discussion; talk; tête-à-tête; conference",
             "jlpt": "n2"
         },
         {
             "kanji": "解散する",
-            "furigana": "かいさんする",
+            "hiragana": "かいさんする",
             "english": "breaking up (a meeting, gathering, etc.); dispersal (e.g. of a crowd)",
             "jlpt": "n2"
         },
         {
             "kanji": "生き生きする",
-            "furigana": "いきいきする",
+            "hiragana": "いきいきする",
             "english": "in a lively way; vividly; freshly; animatedly; actively; energetically",
             "jlpt": "n2"
         },
         {
             "kanji": "発揮する",
-            "furigana": "はっきする",
+            "hiragana": "はっきする",
             "english": "show (of power, ability, etc.); exhibition; demonstration; display; manifestation",
             "jlpt": "n2"
         },
         {
             "kanji": "登場する",
-            "furigana": "とうじょうする",
+            "hiragana": "とうじょうする",
             "english": "entrance (on the stage); appearance (in a book, film, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "通知する",
-            "furigana": "つうちする",
+            "hiragana": "つうちする",
             "english": "notice; notification; report; posting",
             "jlpt": "n2"
         },
         {
             "kanji": "通知する",
-            "furigana": "つうちする",
+            "hiragana": "つうちする",
             "english": "notice; notification; report; posting",
             "jlpt": "n2"
         },
         {
             "kanji": "集会する",
-            "furigana": "しゅうかいする",
+            "hiragana": "しゅうかいする",
             "english": "meeting; assembly; gathering; congregation; convention; rally",
             "jlpt": "n2"
         },
         {
             "kanji": "出張する",
-            "furigana": "しゅっちょうする",
+            "hiragana": "しゅっちょうする",
             "english": "business trip; official trip",
             "jlpt": "n2"
         },
         {
             "kanji": "侵入する",
-            "furigana": "しんにゅうする",
+            "hiragana": "しんにゅうする",
             "english": "invasion; incursion; raid; aggression; intrusion; trespass; penetration; hacking",
             "jlpt": "n2"
         },
         {
             "kanji": "増大する",
-            "furigana": "ぞうだいする",
+            "hiragana": "ぞうだいする",
             "english": "enlargement; increase",
             "jlpt": "n2"
         },
         {
             "kanji": "低下する",
-            "furigana": "ていかする",
+            "hiragana": "ていかする",
             "english": "fall; decline; lowering; deterioration; degradation",
             "jlpt": "n2"
         },
         {
             "kanji": "普及する",
-            "furigana": "ふきゅうする",
+            "hiragana": "ふきゅうする",
             "english": "diffusion; spread; popularization; promulgation; familiarization",
             "jlpt": "n2"
         },
         {
             "kanji": "改正する",
-            "furigana": "かいせいする",
+            "hiragana": "かいせいする",
             "english": "revision; amendment; alteration",
             "jlpt": "n2"
         },
         {
             "kanji": "分類する",
-            "furigana": "ぶんるいする",
+            "hiragana": "ぶんるいする",
             "english": "classification; categorization; sorting",
             "jlpt": "n2"
         },
         {
             "kanji": "手入れする",
-            "furigana": "ていれする",
+            "hiragana": "ていれする",
             "english": "care; looking after; repair; maintenance; tending; trimming; grooming",
             "jlpt": "n2"
         },
         {
             "kanji": "一定する",
-            "furigana": "いっていする",
+            "hiragana": "いっていする",
             "english": "fixed; settled; constant; definite; uniform; regularized; regularised; defined; standardized; standardised; certain; prescribed",
             "jlpt": "n2"
         },
         {
             "kanji": "郵送する",
-            "furigana": "ゆうそうする",
+            "hiragana": "ゆうそうする",
             "english": "mailing; posting",
             "jlpt": "n2"
         },
         {
             "kanji": "展開する",
-            "furigana": "てんかいする",
+            "hiragana": "てんかいする",
             "english": "development; evolution; progression; unfolding; (plot) twist",
             "jlpt": "n2"
         },
         {
             "kanji": "統計する",
-            "furigana": "とうけいする",
+            "hiragana": "とうけいする",
             "english": "statistics",
             "jlpt": "n2"
         },
         {
             "kanji": "乱暴する",
-            "furigana": "らんぼうする",
+            "hiragana": "らんぼうする",
             "english": "violence; assault; rowdiness; wildness; running riot",
             "jlpt": "n2"
         },
         {
             "kanji": "統計する",
-            "furigana": "とうけいする",
+            "hiragana": "とうけいする",
             "english": "statistics",
             "jlpt": "n2"
         },
         {
             "kanji": "解答する",
-            "furigana": "かいとうする",
+            "hiragana": "かいとうする",
             "english": "answer; solution",
             "jlpt": "n2"
         },
         {
             "kanji": "往復する",
-            "furigana": "おうふくする",
+            "hiragana": "おうふくする",
             "english": "making a round trip; going and returning; coming and going",
             "jlpt": "n2"
         },
         {
             "kanji": "反映する",
-            "furigana": "はんえいする",
+            "hiragana": "はんえいする",
             "english": "reflection (of light)",
             "jlpt": "n2"
         },
         {
             "kanji": "娯楽する",
-            "furigana": "ごらくする",
+            "hiragana": "ごらくする",
             "english": "amusement; entertainment; recreation; pleasure; pastime; hobby",
             "jlpt": "n2"
         },
         {
             "kanji": "可決する",
-            "furigana": "かけつする",
+            "hiragana": "かけつする",
             "english": "approval; adoption (of a motion, bill, etc.); passage",
             "jlpt": "n2"
         },
         {
             "kanji": "分解する",
-            "furigana": "ぶんかいする",
+            "hiragana": "ぶんかいする",
             "english": "disassembly; dismantling; disaggregating; taking apart; breaking up; analysis; parsing",
             "jlpt": "n2"
         },
         {
             "kanji": "相違する",
-            "furigana": "そういする",
+            "hiragana": "そういする",
             "english": "difference; discrepancy; variation",
             "jlpt": "n2"
         },
         {
             "kanji": "油断する",
-            "furigana": "ゆだんする",
+            "hiragana": "ゆだんする",
             "english": "negligence; carelessness; inattention; unpreparedness",
             "jlpt": "n2"
         },
         {
             "kanji": "延長する",
-            "furigana": "えんちょうする",
+            "hiragana": "えんちょうする",
             "english": "extension; elongation; prolongation; lengthening",
             "jlpt": "n2"
         },
         {
             "kanji": "輸送する",
-            "furigana": "ゆそうする",
+            "hiragana": "ゆそうする",
             "english": "transport; transportation; transit; conveyance",
             "jlpt": "n2"
         },
         {
             "kanji": "分解する",
-            "furigana": "ぶんかいする",
+            "hiragana": "ぶんかいする",
             "english": "disassembly; dismantling; disaggregating; taking apart; breaking up; analysis; parsing",
             "jlpt": "n2"
         },
         {
             "kanji": "可決する",
-            "furigana": "かけつする",
+            "hiragana": "かけつする",
             "english": "approval; adoption (of a motion, bill, etc.); passage",
             "jlpt": "n2"
         },
         {
             "kanji": "停車する",
-            "furigana": "ていしゃする",
+            "hiragana": "ていしゃする",
             "english": "stopping (of a train, car, etc.); stop",
             "jlpt": "n2"
         },
         {
             "kanji": "油断する",
-            "furigana": "ゆだんする",
+            "hiragana": "ゆだんする",
             "english": "negligence; carelessness; inattention; unpreparedness",
             "jlpt": "n2"
         },
         {
             "kanji": "活躍する",
-            "furigana": "かつやくする",
+            "hiragana": "かつやくする",
             "english": "activity (esp. energetic or successful); great efforts; active participation",
             "jlpt": "n2"
         },
         {
             "kanji": "修繕する",
-            "furigana": "しゅうぜんする",
+            "hiragana": "しゅうぜんする",
             "english": "repair; mending",
             "jlpt": "n2"
         },
         {
             "kanji": "終了する",
-            "furigana": "しゅうりょうする",
+            "hiragana": "しゅうりょうする",
             "english": "end; close; termination",
             "jlpt": "n2"
         },
         {
             "kanji": "推定する",
-            "furigana": "すいていする",
+            "hiragana": "すいていする",
             "english": "presumption; assumption",
             "jlpt": "n2"
         },
         {
             "kanji": "応対する",
-            "furigana": "おうたいする",
+            "hiragana": "おうたいする",
             "english": "dealing with (people, customers, complaints, etc.); receiving (callers, visitors, etc.); attending to; handling; serving",
             "jlpt": "n2"
         },
         {
             "kanji": "回答する",
-            "furigana": "かいとうする",
+            "hiragana": "かいとうする",
             "english": "reply; answer",
             "jlpt": "n2"
         },
         {
             "kanji": "見学する",
-            "furigana": "けんがくする",
+            "hiragana": "けんがくする",
             "english": "inspection; study by observation; field trip; tour; review",
             "jlpt": "n2"
         },
         {
             "kanji": "受験する",
-            "furigana": "じゅけんする",
+            "hiragana": "じゅけんする",
             "english": "taking an examination (esp. for entrance to a school or university)",
             "jlpt": "n2"
         },
         {
             "kanji": "追加する",
-            "furigana": "ついかする",
+            "hiragana": "ついかする",
             "english": "addition; supplement; appending; appendix",
             "jlpt": "n2"
         },
         {
             "kanji": "見学する",
-            "furigana": "けんがくする",
+            "hiragana": "けんがくする",
             "english": "inspection; study by observation; field trip; tour; review",
             "jlpt": "n2"
         },
         {
             "kanji": "申請する",
-            "furigana": "しんせいする",
+            "hiragana": "しんせいする",
             "english": "application; request; petition",
             "jlpt": "n2"
         },
         {
             "kanji": "拡張する",
-            "furigana": "かくちょうする",
+            "hiragana": "かくちょうする",
             "english": "expansion; extension; enlargement",
             "jlpt": "n2"
         },
         {
             "kanji": "発売する",
-            "furigana": "はつばいする",
+            "hiragana": "はつばいする",
             "english": "sale; offering for sale; release (for sale); launch (product)",
             "jlpt": "n2"
         },
         {
             "kanji": "指定する",
-            "furigana": "していする",
+            "hiragana": "していする",
             "english": "designation; specification; assignment; appointment; pointing at",
             "jlpt": "n2"
         },
         {
             "kanji": "発射する",
-            "furigana": "はっしゃする",
+            "hiragana": "はっしゃする",
             "english": "firing (esp. a rocket or missile); launching; shooting; discharge; catapult",
             "jlpt": "n2"
         },
         {
             "kanji": "対立する",
-            "furigana": "たいりつする",
+            "hiragana": "たいりつする",
             "english": "confrontation; opposition; antagonism",
             "jlpt": "n2"
         },
         {
             "kanji": "休養する",
-            "furigana": "きゅうようする",
+            "hiragana": "きゅうようする",
             "english": "rest; relaxation; recreation; recuperation; convalescence",
             "jlpt": "n2"
         },
         {
             "kanji": "公表する",
-            "furigana": "こうひょうする",
+            "hiragana": "こうひょうする",
             "english": "official announcement; proclamation",
             "jlpt": "n2"
         },
         {
             "kanji": "採点する",
-            "furigana": "さいてんする",
+            "hiragana": "さいてんする",
             "english": "marking; grading; scoring",
             "jlpt": "n2"
         },
         {
             "kanji": "応用する",
-            "furigana": "おうようする",
+            "hiragana": "おうようする",
             "english": "(practical) application; putting to practical use",
             "jlpt": "n2"
         },
         {
             "kanji": "休養する",
-            "furigana": "きゅうようする",
+            "hiragana": "きゅうようする",
             "english": "rest; relaxation; recreation; recuperation; convalescence",
             "jlpt": "n2"
         },
         {
             "kanji": "録音する",
-            "furigana": "ろくおんする",
+            "hiragana": "ろくおんする",
             "english": "(audio) recording",
             "jlpt": "n2"
         },
         {
             "kanji": "応用する",
-            "furigana": "おうようする",
+            "hiragana": "おうようする",
             "english": "(practical) application; putting to practical use",
             "jlpt": "n2"
         },
         {
             "kanji": "就任する",
-            "furigana": "しゅうにんする",
+            "hiragana": "しゅうにんする",
             "english": "assumption (of office); taking up (a post); inauguration; installation",
             "jlpt": "n2"
         },
         {
             "kanji": "移転する",
-            "furigana": "いてんする",
+            "hiragana": "いてんする",
             "english": "moving; relocation; change of address",
             "jlpt": "n2"
         },
         {
             "kanji": "削除する",
-            "furigana": "さくじょする",
+            "hiragana": "さくじょする",
             "english": "deletion; elimination; erasure; striking out",
             "jlpt": "n2"
         },
         {
             "kanji": "開会する",
-            "furigana": "かいかいする",
+            "hiragana": "かいかいする",
             "english": "opening of a meeting",
             "jlpt": "n2"
         },
         {
             "kanji": "看病する",
-            "furigana": "かんびょうする",
+            "hiragana": "かんびょうする",
             "english": "nursing (a patient)",
             "jlpt": "n2"
         },
         {
             "kanji": "混合する",
-            "furigana": "こんごうする",
+            "hiragana": "こんごうする",
             "english": "mixing; mixture; meld",
             "jlpt": "n2"
         },
         {
             "kanji": "鑑賞する",
-            "furigana": "かんしょうする",
+            "hiragana": "かんしょうする",
             "english": "appreciation (of art, music, poetry, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "来日する",
-            "furigana": "らいにちする",
+            "hiragana": "らいにちする",
             "english": "arrival in Japan; coming to Japan; visit to Japan",
             "jlpt": "n2"
         },
         {
             "kanji": "整備する",
-            "furigana": "せいびする",
+            "hiragana": "せいびする",
             "english": "maintenance; servicing",
             "jlpt": "n2"
         },
         {
             "kanji": "創作する",
-            "furigana": "そうさくする",
+            "hiragana": "そうさくする",
             "english": "creation; production; creative work (novel, film, etc.); original work; (creative) writing",
             "jlpt": "n2"
         },
         {
             "kanji": "成立する",
-            "furigana": "せいりつする",
+            "hiragana": "せいりつする",
             "english": "formation; establishment; materialization; coming into existence",
             "jlpt": "n2"
         },
         {
             "kanji": "在学する",
-            "furigana": "ざいがくする",
+            "hiragana": "ざいがくする",
             "english": "attending (school, college, etc.); being enrolled; being a student",
             "jlpt": "n2"
         },
         {
             "kanji": "成立する",
-            "furigana": "せいりつする",
+            "hiragana": "せいりつする",
             "english": "formation; establishment; materialization; coming into existence",
             "jlpt": "n2"
         },
         {
             "kanji": "在学する",
-            "furigana": "ざいがくする",
+            "hiragana": "ざいがくする",
             "english": "attending (school, college, etc.); being enrolled; being a student",
             "jlpt": "n2"
         },
         {
             "kanji": "創作する",
-            "furigana": "そうさくする",
+            "hiragana": "そうさくする",
             "english": "creation; production; creative work (novel, film, etc.); original work; (creative) writing",
             "jlpt": "n2"
         },
         {
             "kanji": "加速する",
-            "furigana": "かそくする",
+            "hiragana": "かそくする",
             "english": "acceleration; speeding up",
             "jlpt": "n2"
         },
         {
             "kanji": "対照する",
-            "furigana": "たいしょうする",
+            "hiragana": "たいしょうする",
             "english": "contrast; antithesis; comparison",
             "jlpt": "n2"
         },
         {
             "kanji": "改造する",
-            "furigana": "かいぞうする",
+            "hiragana": "かいぞうする",
             "english": "remodeling; remodelling; reconstruction; conversion; alteration; renovation; modification; reshuffling (e.g. a cabinet); reorganization; restructuring",
             "jlpt": "n2"
         },
         {
             "kanji": "開放する",
-            "furigana": "かいほうする",
+            "hiragana": "かいほうする",
             "english": "opening (a door, window, etc.); leaving open",
             "jlpt": "n2"
         },
         {
             "kanji": "冷凍する",
-            "furigana": "れいとうする",
+            "hiragana": "れいとうする",
             "english": "freezing; cold storage; refrigeration",
             "jlpt": "n2"
         },
         {
             "kanji": "警備する",
-            "furigana": "けいびする",
+            "hiragana": "けいびする",
             "english": "defense; defence; guard; policing; security",
             "jlpt": "n2"
         },
         {
             "kanji": "休業する",
-            "furigana": "きゅうぎょうする",
+            "hiragana": "きゅうぎょうする",
             "english": "suspension of business; temporary closure (of a store, school, etc.); shutdown; holiday",
             "jlpt": "n2"
         },
         {
             "kanji": "出入りする",
-            "furigana": "でいりする",
+            "hiragana": "でいりする",
             "english": "going in and out; entering and exiting",
             "jlpt": "n2"
         },
         {
             "kanji": "育児する",
-            "furigana": "いくじする",
+            "hiragana": "いくじする",
             "english": "childcare; child-rearing; nursing; upbringing",
             "jlpt": "n2"
         },
         {
             "kanji": "閉会する",
-            "furigana": "へいかいする",
+            "hiragana": "へいかいする",
             "english": "closure (of a ceremony, event, meeting, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "持参する",
-            "furigana": "じさんする",
+            "hiragana": "じさんする",
             "english": "bringing; taking; carrying",
             "jlpt": "n2"
         },
         {
             "kanji": "出勤する",
-            "furigana": "しゅっきんする",
+            "hiragana": "しゅっきんする",
             "english": "going to work; leaving for work; attendance (at work); being at work; presence (in the office); reporting for work",
             "jlpt": "n2"
         },
         {
             "kanji": "持参する",
-            "furigana": "じさんする",
+            "hiragana": "じさんする",
             "english": "bringing; taking; carrying",
             "jlpt": "n2"
         },
         {
             "kanji": "貸し出しする",
-            "furigana": "かしだしする",
+            "hiragana": "かしだしする",
             "english": "lending; loaning",
             "jlpt": "n2"
         },
         {
             "kanji": "発想する",
-            "furigana": "はっそうする",
+            "hiragana": "はっそうする",
             "english": "idea; conception",
             "jlpt": "n2"
         },
         {
             "kanji": "入社する",
-            "furigana": "にゅうしゃする",
+            "hiragana": "にゅうしゃする",
             "english": "joining a company; getting a job with a company; starting work at a company",
             "jlpt": "n2"
         },
         {
             "kanji": "日帰りする",
-            "furigana": "ひがえりする",
+            "hiragana": "ひがえりする",
             "english": "day trip",
             "jlpt": "n2"
         },
         {
             "kanji": "超過する",
-            "furigana": "ちょうかする",
+            "hiragana": "ちょうかする",
             "english": "excess; being more than",
             "jlpt": "n2"
         },
         {
             "kanji": "評論する",
-            "furigana": "ひょうろんする",
+            "hiragana": "ひょうろんする",
             "english": "criticism; critique",
             "jlpt": "n2"
         },
         {
             "kanji": "下車する",
-            "furigana": "げしゃする",
+            "hiragana": "げしゃする",
             "english": "alighting (from a train, bus, etc.); getting off; getting out (of a car)",
             "jlpt": "n2"
         },
         {
             "kanji": "免税する",
-            "furigana": "めんぜいする",
+            "hiragana": "めんぜいする",
             "english": "tax exemption; duty exemption",
             "jlpt": "n2"
         },
         {
             "kanji": "研修する",
-            "furigana": "けんしゅうする",
+            "hiragana": "けんしゅうする",
             "english": "training (esp. in-service); induction course",
             "jlpt": "n2"
         },
         {
             "kanji": "募集する",
-            "furigana": "ぼしゅうする",
+            "hiragana": "ぼしゅうする",
             "english": "recruitment; invitation; selection; advertisement; taking applications",
             "jlpt": "n2"
         },
         {
             "kanji": "制作する",
-            "furigana": "せいさくする",
+            "hiragana": "せいさくする",
             "english": "work (film, book)",
             "jlpt": "n2"
         },
         {
             "kanji": "直通する",
-            "furigana": "ちょくつうする",
+            "hiragana": "ちょくつうする",
             "english": "direct line; direct communication; connecting directly; through service; nonstop service",
             "jlpt": "n2"
         },
         {
             "kanji": "解説する",
-            "furigana": "かいせつする",
+            "hiragana": "かいせつする",
             "english": "explanation; commentary; exposition; elucidation",
             "jlpt": "n2"
         },
         {
             "kanji": "開通する",
-            "furigana": "かいつうする",
+            "hiragana": "かいつうする",
             "english": "opening (of a new road, railway, etc.); going into operation (e.g. telephone communication); beginning services",
             "jlpt": "n2"
         },
         {
             "kanji": "清掃する",
-            "furigana": "せいそうする",
+            "hiragana": "せいそうする",
             "english": "cleaning; clean-up; garbage collection; scavenging",
             "jlpt": "n2"
         },
         {
             "kanji": "断水する",
-            "furigana": "だんすいする",
+            "hiragana": "だんすいする",
             "english": "suspension of water supply; water outage",
             "jlpt": "n2"
         },
         {
             "kanji": "感激する",
-            "furigana": "かんげきする",
+            "hiragana": "かんげきする",
             "english": "deep emotion; impression; inspiration",
             "jlpt": "n2"
         },
         {
             "kanji": "断水する",
-            "furigana": "だんすいする",
+            "hiragana": "だんすいする",
             "english": "suspension of water supply; water outage",
             "jlpt": "n2"
         },
         {
             "kanji": "開通する",
-            "furigana": "かいつうする",
+            "hiragana": "かいつうする",
             "english": "opening (of a new road, railway, etc.); going into operation (e.g. telephone communication); beginning services",
             "jlpt": "n2"
         },
         {
             "kanji": "執筆する",
-            "furigana": "しっぴつする",
+            "hiragana": "しっぴつする",
             "english": "writing; authoring",
             "jlpt": "n2"
         },
         {
             "kanji": "直通する",
-            "furigana": "ちょくつうする",
+            "hiragana": "ちょくつうする",
             "english": "direct line; direct communication; connecting directly; through service; nonstop service",
             "jlpt": "n2"
         },
         {
             "kanji": "断定する",
-            "furigana": "だんていする",
+            "hiragana": "だんていする",
             "english": "conclusion; decision; judgement; declaration",
             "jlpt": "n2"
         },
         {
             "kanji": "留守番する",
-            "furigana": "るすばんする",
+            "hiragana": "るすばんする",
             "english": "care-taking; house-sitting; house-watching; staying at home",
             "jlpt": "n2"
         },
         {
             "kanji": "乗車する",
-            "furigana": "じょうしゃする",
+            "hiragana": "じょうしゃする",
             "english": "boarding (a train, bus, etc.); getting into (e.g. a taxi)",
             "jlpt": "n2"
         },
         {
             "kanji": "清掃する",
-            "furigana": "せいそうする",
+            "hiragana": "せいそうする",
             "english": "cleaning; clean-up; garbage collection; scavenging",
             "jlpt": "n2"
         },
         {
             "kanji": "製作する",
-            "furigana": "せいさくする",
+            "hiragana": "せいさくする",
             "english": "manufacture; production",
             "jlpt": "n2"
         },
         {
             "kanji": "孝行する",
-            "furigana": "こうこうする",
+            "hiragana": "こうこうする",
             "english": "filial piety",
             "jlpt": "n2"
         },
         {
             "kanji": "消耗する",
-            "furigana": "しょうもうする",
+            "hiragana": "しょうもうする",
             "english": "exhaustion; consumption; using up; dissipation; waste",
             "jlpt": "n2"
         },
         {
             "kanji": "拡充する",
-            "furigana": "かくじゅうする",
+            "hiragana": "かくじゅうする",
             "english": "expansion",
             "jlpt": "n2"
         },
         {
             "kanji": "生長する",
-            "furigana": "せいちょうする",
+            "hiragana": "せいちょうする",
             "english": "growth (of a plant)",
             "jlpt": "n2"
         },
         {
             "kanji": "付属する",
-            "furigana": "ふぞくする",
+            "hiragana": "ふぞくする",
             "english": "being attached (to); being affiliated (to); belonging (to); going with",
             "jlpt": "n2"
         },
         {
             "kanji": "一休みする",
-            "furigana": "ひとやすみする",
+            "hiragana": "ひとやすみする",
             "english": "(short) rest; breather; break",
             "jlpt": "n2"
         },
         {
             "kanji": "仲直りする",
-            "furigana": "なかなおりする",
+            "hiragana": "なかなおりする",
             "english": "reconciliation; making up (with); making peace (with); being friends again; patching up a quarrel",
             "jlpt": "n2"
         },
         {
             "kanji": "遠足する",
-            "furigana": "えんそくする",
+            "hiragana": "えんそくする",
             "english": "school trip; field trip; excursion; outing",
             "jlpt": "n2"
         },
         {
             "kanji": "仮定する",
-            "furigana": "かていする",
+            "hiragana": "かていする",
             "english": "assumption; supposition; hypothesis",
             "jlpt": "n2"
         },
         {
             "kanji": "欠伸する",
-            "furigana": "あくびする",
+            "hiragana": "あくびする",
             "english": "yawn; yawning",
             "jlpt": "n2"
         },
         {
             "kanji": "妥当する",
-            "furigana": "だとうする",
+            "hiragana": "だとうする",
             "english": "valid; proper; right; appropriate; reasonable",
             "jlpt": "n2"
         },
         {
             "kanji": "落第する",
-            "furigana": "らくだいする",
+            "hiragana": "らくだいする",
             "english": "failure (in an examination); failing to advance (to the next year)",
             "jlpt": "n2"
         },
         {
             "kanji": "恐縮する",
-            "furigana": "きょうしゅくする",
+            "hiragana": "きょうしゅくする",
             "english": "feeling (much) obliged; being (very) grateful; being thankful",
             "jlpt": "n2"
         },
         {
             "kanji": "お代わりする",
-            "furigana": "おかわりする",
+            "hiragana": "おかわりする",
             "english": "another helping; second helping; seconds; refill",
             "jlpt": "n2"
         },
         {
             "kanji": "脱線する",
-            "furigana": "だっせんする",
+            "hiragana": "だっせんする",
             "english": "derailment",
             "jlpt": "n2"
         },
         {
             "kanji": "ご無沙汰する",
-            "furigana": "ごぶさたする",
+            "hiragana": "ごぶさたする",
             "english": "not writing or contacting for a while; neglecting (failing) to write (call, visit, etc.); long silence",
             "jlpt": "n2"
         },
         {
             "kanji": "打ち合わせする",
-            "furigana": "うちあわせする",
+            "hiragana": "うちあわせする",
             "english": "advance arrangements; preparatory meeting; briefing session",
             "jlpt": "n2"
         },
         {
             "kanji": "通用する",
-            "furigana": "つうようする",
+            "hiragana": "つうようする",
             "english": "(common) use (of a language, currency, etc.); current use; circulation; currency; validity (e.g. of a ticket)",
             "jlpt": "n2"
         },
         {
             "kanji": "速達する",
-            "furigana": "そくたつする",
+            "hiragana": "そくたつする",
             "english": "express; special delivery",
             "jlpt": "n2"
         },
         {
             "kanji": "熱するする",
-            "furigana": "ねっするする",
+            "hiragana": "ねっするする",
             "english": "to heat; to heat up",
             "jlpt": "n2"
         },
         {
             "kanji": "凸凹する",
-            "furigana": "でこぼこする",
+            "hiragana": "でこぼこする",
             "english": "unevenness; roughness; ruggedness; bumpiness",
             "jlpt": "n2"
         },
         {
             "kanji": "交差する",
-            "furigana": "こうさする",
+            "hiragana": "こうさする",
             "english": "crossing; intersection",
             "jlpt": "n2"
         },
         {
             "kanji": "特売する",
-            "furigana": "とくばいする",
+            "hiragana": "とくばいする",
             "english": "special sale; bargain sale",
             "jlpt": "n2"
         },
         {
             "kanji": "清書する",
-            "furigana": "せいしょする",
+            "hiragana": "せいしょする",
             "english": "fair copy; clean copy",
             "jlpt": "n2"
         },
         {
             "kanji": "謙遜する",
-            "furigana": "けんそんする",
+            "hiragana": "けんそんする",
             "english": "modesty; humility; being humble",
             "jlpt": "n2"
         },
         {
             "kanji": "謙遜する",
-            "furigana": "けんそんする",
+            "hiragana": "けんそんする",
             "english": "modesty; humility; being humble",
             "jlpt": "n2"
         },
         {
             "kanji": "清書する",
-            "furigana": "せいしょする",
+            "hiragana": "せいしょする",
             "english": "fair copy; clean copy",
             "jlpt": "n2"
         },
         {
             "kanji": "催促する",
-            "furigana": "さいそくする",
+            "hiragana": "さいそくする",
             "english": "pressing; urging; demanding; demand",
             "jlpt": "n2"
         },
         {
             "kanji": "等分する",
-            "furigana": "とうぶんする",
+            "hiragana": "とうぶんする",
             "english": "division into equal parts; equal parts",
             "jlpt": "n2"
         },
         {
             "kanji": "瓶詰めする",
-            "furigana": "びんづめする",
+            "hiragana": "びんづめする",
             "english": "bottling",
             "jlpt": "n2"
         },
         {
             "kanji": "伝染する",
-            "furigana": "でんせんする",
+            "hiragana": "でんせんする",
             "english": "contagion; infection",
             "jlpt": "n2"
         },
         {
             "kanji": "お参りする",
-            "furigana": "おまいりする",
+            "hiragana": "おまいりする",
             "english": "visit (to a shrine, grave, etc.); worship",
             "jlpt": "n2"
         },
         {
             "kanji": "休講する",
-            "furigana": "きゅうこうする",
+            "hiragana": "きゅうこうする",
             "english": "cancellation (of a lecture, class, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "勘違いする",
-            "furigana": "かんちがいする",
+            "hiragana": "かんちがいする",
             "english": "misunderstanding; mistaken idea; wrong guess",
             "jlpt": "n2"
         },
         {
             "kanji": "着替えする",
-            "furigana": "きがえする",
+            "hiragana": "きがえする",
             "english": "changing clothes; change of clothes",
             "jlpt": "n2"
         },
         {
             "kanji": "瓶詰めする",
-            "furigana": "びんづめする",
+            "hiragana": "びんづめする",
             "english": "bottling",
             "jlpt": "n2"
         },
         {
             "kanji": "下書きする",
-            "furigana": "したがきする",
+            "hiragana": "したがきする",
             "english": "draft; rough copy",
             "jlpt": "n2"
         },
         {
             "kanji": "小便する",
-            "furigana": "しょうべんする",
+            "hiragana": "しょうべんする",
             "english": "urine; piss; pee; urination",
             "jlpt": "n2"
         },
         {
             "kanji": "吃逆する",
-            "furigana": "しゃっくりする",
+            "hiragana": "しゃっくりする",
             "english": "hiccup; hiccough",
             "jlpt": "n2"
         },
         {
             "kanji": "送別する",
-            "furigana": "そうべつする",
+            "hiragana": "そうべつする",
             "english": "farewell; send-off",
             "jlpt": "n2"
         },
         {
             "kanji": "吃逆する",
-            "furigana": "しゃっくりする",
+            "hiragana": "しゃっくりする",
             "english": "hiccup; hiccough",
             "jlpt": "n2"
         },
         {
             "kanji": "送別する",
-            "furigana": "そうべつする",
+            "hiragana": "そうべつする",
             "english": "farewell; send-off",
             "jlpt": "n2"
         },
         {
             "kanji": "炊事する",
-            "furigana": "すいじする",
+            "hiragana": "すいじする",
             "english": "cooking; kitchen work",
             "jlpt": "n2"
         },
         {
             "kanji": "じゃん拳する",
-            "furigana": "じゃんけんする",
+            "hiragana": "じゃんけんする",
             "english": "rock-paper-scissors (game); janken",
             "jlpt": "n2"
         },
         {
             "kanji": "広々する",
-            "furigana": "ひろびろする",
+            "hiragana": "ひろびろする",
             "english": "extensive; spacious",
             "jlpt": "n2"
         },
         {
             "kanji": "バランスする",
-            "furigana": "バランスする",
+            "hiragana": "バランスする",
             "english": "balance",
             "jlpt": "n2"
         },
         {
             "kanji": "お辞儀する",
-            "furigana": "おじぎする",
+            "hiragana": "おじぎする",
             "english": "bow; bowing",
             "jlpt": "n2"
         },
         {
             "kanji": "スタートする",
-            "furigana": "スタートする",
+            "hiragana": "スタートする",
             "english": "start; beginning",
             "jlpt": "n2"
         },
         {
             "kanji": "インタビューする",
-            "furigana": "インタビューする",
+            "hiragana": "インタビューする",
             "english": "interview (on television, in a newspaper, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "ダイヤルする",
-            "furigana": "ダイヤルする",
+            "hiragana": "ダイヤルする",
             "english": "dial (e.g. telephone, radio, clock, gauge)",
             "jlpt": "n2"
         },
         {
             "kanji": "ストップする",
-            "furigana": "ストップする",
+            "hiragana": "ストップする",
             "english": "stop",
             "jlpt": "n2"
         },
         {
             "kanji": "コレクションする",
-            "furigana": "コレクションする",
+            "hiragana": "コレクションする",
             "english": "collection (of art, stamps, etc.); collecting",
             "jlpt": "n2"
         },
         {
             "kanji": "レポートする",
-            "furigana": "レポートする",
+            "hiragana": "レポートする",
             "english": "report; paper",
             "jlpt": "n2"
         },
         {
             "kanji": "ご馳走する",
-            "furigana": "ごちそうする",
+            "hiragana": "ごちそうする",
             "english": "treat (esp. food and drink); entertainment; treating someone (to a meal); taking someone to dinner",
             "jlpt": "n2"
         },
         {
             "kanji": "彼方此方する",
-            "furigana": "あちこちする",
+            "hiragana": "あちこちする",
             "english": "here and there; various places; all around; all over; everywhere; throughout",
             "jlpt": "n2"
         },
         {
             "kanji": "並行する",
-            "furigana": "へいこうする",
+            "hiragana": "へいこうする",
             "english": "going side-by-side; going abreast",
             "jlpt": "n2"
         },
         {
             "kanji": "紅葉する",
-            "furigana": "こうようする",
+            "hiragana": "こうようする",
             "english": "leaves turning red (in autumn); red leaves; autumn colours; fall colors",
             "jlpt": "n2"
         },
         {
             "kanji": "万歳-1する",
-            "furigana": "ばんざいする",
+            "hiragana": "ばんざいする",
             "english": "banzai; hurray; hurrah; hooray",
             "jlpt": "n2"
         },
         {
             "kanji": "消毒する",
-            "furigana": "しょうどくする",
+            "hiragana": "しょうどくする",
             "english": "disinfection; sterilization; sterilisation",
             "jlpt": "n2"
         },
         {
             "kanji": "造船する",
-            "furigana": "ぞうせんする",
+            "hiragana": "ぞうせんする",
             "english": "shipbuilding",
             "jlpt": "n2"
         },
         {
             "kanji": "換気する",
-            "furigana": "かんきする",
+            "hiragana": "かんきする",
             "english": "ventilation",
             "jlpt": "n2"
         },
         {
             "kanji": "火傷する",
-            "furigana": "やけどする",
+            "hiragana": "やけどする",
             "english": "burn; scald",
             "jlpt": "n2"
         },
         {
             "kanji": "うっかりする",
-            "furigana": "うっかりする",
+            "hiragana": "うっかりする",
             "english": "carelessly; thoughtlessly; inadvertently",
             "jlpt": "n2"
         },
         {
             "kanji": "ニコニコする",
-            "furigana": "ニコニコする",
+            "hiragana": "ニコニコする",
             "english": "with a friendly grin; smilingly",
             "jlpt": "n2"
         },
         {
             "kanji": "クリーニングする",
-            "furigana": "クリーニングする",
+            "hiragana": "クリーニングする",
             "english": "cleaning; dry cleaning; laundry service",
             "jlpt": "n2"
         },
         {
             "kanji": "すっきりする",
-            "furigana": "すっきりする",
+            "hiragana": "すっきりする",
             "english": "refreshingly; with a feeling of relief; pleasantly; (a weight) off one's shoulder",
             "jlpt": "n2"
         },
         {
             "kanji": "マイナスする",
-            "furigana": "マイナスする",
+            "hiragana": "マイナスする",
             "english": "minus; subtraction; taking away",
             "jlpt": "n2"
         },
         {
             "kanji": "ぴかぴかする",
-            "furigana": "ピカピカする",
+            "hiragana": "ピカピカする",
             "english": "with a glitter; with a sparkle",
             "jlpt": "n2"
         },
         {
             "kanji": "トレーニングする",
-            "furigana": "トレーニングする",
+            "hiragana": "トレーニングする",
             "english": "training (for a skill, job, sport, etc.); practice",
             "jlpt": "n2"
         },
         {
             "kanji": "プリントする",
-            "furigana": "プリントする",
+            "hiragana": "プリントする",
             "english": "print; printing; (printed) copy",
             "jlpt": "n2"
         },
         {
             "kanji": "のろのろする",
-            "furigana": "のろのろする",
+            "hiragana": "のろのろする",
             "english": "slowly; sluggishly",
             "jlpt": "n2"
         },
         {
             "kanji": "加熱する",
-            "furigana": "かねつする",
+            "hiragana": "かねつする",
             "english": "heating; application of heat",
             "jlpt": "n2"
         },
         {
             "kanji": "貯蔵する",
-            "furigana": "ちょぞうする",
+            "hiragana": "ちょぞうする",
             "english": "storage; preservation",
             "jlpt": "n2"
         },
         {
             "kanji": "抽象する",
-            "furigana": "ちゅうしょうする",
+            "hiragana": "ちゅうしょうする",
             "english": "abstraction",
             "jlpt": "n2"
         },
         {
             "kanji": "集金する",
-            "furigana": "しゅうきんする",
+            "hiragana": "しゅうきんする",
             "english": "money collection",
             "jlpt": "n2"
         },
         {
             "kanji": "下降する",
-            "furigana": "かこうする",
+            "hiragana": "かこうする",
             "english": "descent; fall; drop; decline; downturn; subsidence",
             "jlpt": "n2"
         },
         {
             "kanji": "応接する",
-            "furigana": "おうせつする",
+            "hiragana": "おうせつする",
             "english": "reception (e.g. of visitors); dealing with",
             "jlpt": "n2"
         },
         {
             "kanji": "抽象する",
-            "furigana": "ちゅうしょうする",
+            "hiragana": "ちゅうしょうする",
             "english": "abstraction",
             "jlpt": "n2"
         },
         {
             "kanji": "自衛する",
-            "furigana": "じえいする",
+            "hiragana": "じえいする",
             "english": "self-defense; self-defence",
             "jlpt": "n2"
         },
         {
             "kanji": "投書する",
-            "furigana": "とうしょする",
+            "hiragana": "とうしょする",
             "english": "letter (e.g. of complaint); letter to the editor; letter from a reader",
             "jlpt": "n2"
         },
         {
             "kanji": "問答する",
-            "furigana": "もんどうする",
+            "hiragana": "もんどうする",
             "english": "questions and answers; dialogue",
             "jlpt": "n2"
         },
         {
             "kanji": "差し引きする",
-            "furigana": "さしひきする",
+            "hiragana": "さしひきする",
             "english": "deduction; subtraction; balance",
             "jlpt": "n2"
         },
         {
             "kanji": "割り算する",
-            "furigana": "わりざんする",
+            "hiragana": "わりざんする",
             "english": "division",
             "jlpt": "n2"
         },
         {
             "kanji": "作製する",
-            "furigana": "さくせいする",
+            "hiragana": "さくせいする",
             "english": "manufacture; production",
             "jlpt": "n2"
         },
         {
             "kanji": "自習する",
-            "furigana": "じしゅうする",
+            "hiragana": "じしゅうする",
             "english": "self-study; teaching oneself",
             "jlpt": "n2"
         },
         {
             "kanji": "写生する",
-            "furigana": "しゃせいする",
+            "hiragana": "しゃせいする",
             "english": "sketching; drawing from nature; portrayal; description",
             "jlpt": "n2"
         },
         {
             "kanji": "領収する",
-            "furigana": "りょうしゅうする",
+            "hiragana": "りょうしゅうする",
             "english": "receipt (of money); receiving",
             "jlpt": "n2"
         },
         {
             "kanji": "割り算する",
-            "furigana": "わりざんする",
+            "hiragana": "わりざんする",
             "english": "division",
             "jlpt": "n2"
         },
         {
             "kanji": "作製する",
-            "furigana": "さくせいする",
+            "hiragana": "さくせいする",
             "english": "manufacture; production",
             "jlpt": "n2"
         },
         {
             "kanji": "自習する",
-            "furigana": "じしゅうする",
+            "hiragana": "じしゅうする",
             "english": "self-study; teaching oneself",
             "jlpt": "n2"
         },
         {
             "kanji": "激増する",
-            "furigana": "げきぞうする",
+            "hiragana": "げきぞうする",
             "english": "sharp increase; sudden rise",
             "jlpt": "n2"
         },
         {
             "kanji": "専制する",
-            "furigana": "せんせいする",
+            "hiragana": "せんせいする",
             "english": "despotism; autocracy",
             "jlpt": "n2"
         },
         {
             "kanji": "夜行する",
-            "furigana": "やこうする",
+            "hiragana": "やこうする",
             "english": "walking around at night; night travel",
             "jlpt": "n2"
         },
         {
             "kanji": "はきはきする",
-            "furigana": "はきはきする",
+            "hiragana": "はきはきする",
             "english": "briskly; smartly; promptly; clearly; lucidly",
             "jlpt": "n2"
         },
         {
             "kanji": "無沙汰する",
-            "furigana": "ぶさたする",
+            "hiragana": "ぶさたする",
             "english": "not writing or contacting for a while; neglecting to write (call, visit, etc.); failing to write (call, visit, etc.); long silence",
             "jlpt": "n2"
         },
         {
             "kanji": "カーブする",
-            "furigana": "カーブする",
+            "hiragana": "カーブする",
             "english": "curve; turn; bend",
             "jlpt": "n2"
         },
         {
             "kanji": "まごまごする",
-            "furigana": "まごまごする",
+            "hiragana": "まごまごする",
             "english": "confused; flustered; at a loss",
             "jlpt": "n2"
         },
         {
             "kanji": "ローンチする",
-            "furigana": "ローンチする",
+            "hiragana": "ローンチする",
             "english": "launch (of a product, service, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "乾燥する",
-            "furigana": "かんそうする",
+            "hiragana": "かんそうする",
             "english": "dryness; aridity; drying (e.g. clothes); dehydration; desiccation",
             "jlpt": "n2"
         },
         {
             "kanji": "合同する",
-            "furigana": "ごうどうする",
+            "hiragana": "ごうどうする",
             "english": "combination; union; joining; incorporation; amalgamation; merger; fusion",
             "jlpt": "n2"
         },
         {
             "kanji": "一定する",
-            "furigana": "いっていする",
+            "hiragana": "いっていする",
             "english": "fixed; settled; constant; definite; uniform; regularized; regularised; defined; standardized; standardised; certain; prescribed",
             "jlpt": "n2"
         },
         {
             "kanji": "乱暴する",
-            "furigana": "らんぼうする",
+            "hiragana": "らんぼうする",
             "english": "violence; assault; rowdiness; wildness; running riot",
             "jlpt": "n2"
         },
         {
             "kanji": "孝行する",
-            "furigana": "こうこうする",
+            "hiragana": "こうこうする",
             "english": "filial piety",
             "jlpt": "n2"
         },
         {
             "kanji": "妥当する",
-            "furigana": "だとうする",
+            "hiragana": "だとうする",
             "english": "valid; proper; right; appropriate; reasonable",
             "jlpt": "n2"
         },
         {
             "kanji": "恐縮する",
-            "furigana": "きょうしゅくする",
+            "hiragana": "きょうしゅくする",
             "english": "feeling (much) obliged; being (very) grateful; being thankful",
             "jlpt": "n2"
         },
         {
             "kanji": "凸凹する",
-            "furigana": "でこぼこする",
+            "hiragana": "でこぼこする",
             "english": "unevenness; roughness; ruggedness; bumpiness",
             "jlpt": "n2"
         },
         {
             "kanji": "謙遜する",
-            "furigana": "けんそんする",
+            "hiragana": "けんそんする",
             "english": "modesty; humility; being humble",
             "jlpt": "n2"
         },
         {
             "kanji": "広々する",
-            "furigana": "ひろびろする",
+            "hiragana": "ひろびろする",
             "english": "extensive; spacious",
             "jlpt": "n2"
         },
         {
             "kanji": "彼方此方する",
-            "furigana": "あちこちする",
+            "hiragana": "あちこちする",
             "english": "here and there; various places; all around; all over; everywhere; throughout",
             "jlpt": "n2"
         },
         {
             "kanji": "並行する",
-            "furigana": "へいこうする",
+            "hiragana": "へいこうする",
             "english": "going side-by-side; going abreast",
             "jlpt": "n2"
         },
         {
             "kanji": "ぴかぴかする",
-            "furigana": "ピカピカする",
+            "hiragana": "ピカピカする",
             "english": "with a glitter; with a sparkle",
             "jlpt": "n2"
         },
         {
             "kanji": "抽象する",
-            "furigana": "ちゅうしょうする",
+            "hiragana": "ちゅうしょうする",
             "english": "abstraction",
             "jlpt": "n2"
         },
         {
             "kanji": "保証する",
-            "furigana": "ほしょうする",
+            "hiragana": "ほしょうする",
             "english": "guarantee; security; assurance; pledge; warranty",
             "jlpt": "n1"
         },
         {
             "kanji": "平均する",
-            "furigana": "へいきんする",
+            "hiragana": "へいきんする",
             "english": "average; mean",
             "jlpt": "n1"
         },
         {
             "kanji": "位置する",
-            "furigana": "いちする",
+            "hiragana": "いちする",
             "english": "place; position; location",
             "jlpt": "n1"
         },
         {
             "kanji": "乗り換えする",
-            "furigana": "のりかえする",
+            "hiragana": "のりかえする",
             "english": "transfer (trains, buses, etc.); change; connection",
             "jlpt": "n1"
         },
         {
             "kanji": "歯磨きする",
-            "furigana": "はみがきする",
+            "hiragana": "はみがきする",
             "english": "dental brushing; brushing one's teeth",
             "jlpt": "n1"
         },
         {
             "kanji": "流通する",
-            "furigana": "りゅうつうする",
+            "hiragana": "りゅうつうする",
             "english": "circulation (of money, goods, etc.); distribution",
             "jlpt": "n1"
         },
         {
             "kanji": "見合いする",
-            "furigana": "みあいする",
+            "hiragana": "みあいする",
             "english": "(formal) meeting with a view to marriage; interview with a prospective spouse",
             "jlpt": "n1"
         },
         {
             "kanji": "転々する",
-            "furigana": "てんてんする",
+            "hiragana": "てんてんする",
             "english": "moving from place to place; being passed around repeatedly",
             "jlpt": "n1"
         },
         {
             "kanji": "説得する",
-            "furigana": "せっとくする",
+            "hiragana": "せっとくする",
             "english": "persuasion",
             "jlpt": "n1"
         },
         {
             "kanji": "助言する",
-            "furigana": "じょげんする",
+            "hiragana": "じょげんする",
             "english": "advice; counsel; suggestion; tip; hint",
             "jlpt": "n1"
         },
         {
             "kanji": "選挙する",
-            "furigana": "せんきょする",
+            "hiragana": "せんきょする",
             "english": "election",
             "jlpt": "n1"
         },
         {
             "kanji": "取引する",
-            "furigana": "とりひきする",
+            "hiragana": "とりひきする",
             "english": "transactions; dealings; business",
             "jlpt": "n1"
         },
         {
             "kanji": "勝利する",
-            "furigana": "しょうりする",
+            "hiragana": "しょうりする",
             "english": "victory; triumph; win; conquest; success",
             "jlpt": "n1"
         },
         {
             "kanji": "交渉する",
-            "furigana": "こうしょうする",
+            "hiragana": "こうしょうする",
             "english": "negotiations; bargaining; discussions; talks",
             "jlpt": "n1"
         },
         {
             "kanji": "予想する",
-            "furigana": "よそうする",
+            "hiragana": "よそうする",
             "english": "expectation; anticipation; prediction; forecast; conjecture",
             "jlpt": "n1"
         },
         {
             "kanji": "同情する",
-            "furigana": "どうじょうする",
+            "hiragana": "どうじょうする",
             "english": "sympathy; compassion; pity",
             "jlpt": "n1"
         },
         {
             "kanji": "航海する",
-            "furigana": "こうかいする",
+            "hiragana": "こうかいする",
             "english": "(sea) voyage; navigation; sailing; passage; cruise",
             "jlpt": "n1"
         },
         {
             "kanji": "破壊する",
-            "furigana": "はかいする",
+            "hiragana": "はかいする",
             "english": "destruction; disruption",
             "jlpt": "n1"
         },
         {
             "kanji": "自信する",
-            "furigana": "じしんする",
+            "hiragana": "じしんする",
             "english": "self-confidence; confidence (in oneself)",
             "jlpt": "n1"
         },
         {
             "kanji": "治療する",
-            "furigana": "ちりょうする",
+            "hiragana": "ちりょうする",
             "english": "(medical) treatment; care; therapy; cure; remedy",
             "jlpt": "n1"
         },
         {
             "kanji": "殺人する",
-            "furigana": "さつじんする",
+            "hiragana": "さつじんする",
             "english": "murder; homicide; manslaughter",
             "jlpt": "n1"
         },
         {
             "kanji": "投資する",
-            "furigana": "とうしする",
+            "hiragana": "とうしする",
             "english": "investment",
             "jlpt": "n1"
         },
         {
             "kanji": "反応する",
-            "furigana": "はんのうする",
+            "hiragana": "はんのうする",
             "english": "reaction; response",
             "jlpt": "n1"
         },
         {
             "kanji": "報道する",
-            "furigana": "ほうどうする",
+            "hiragana": "ほうどうする",
             "english": "report (of news); reporting; news; information; (media) coverage",
             "jlpt": "n1"
         },
         {
             "kanji": "企画する",
-            "furigana": "きかくする",
+            "hiragana": "きかくする",
             "english": "planning; plan; project; arrangements",
             "jlpt": "n1"
         },
         {
             "kanji": "妥協する",
-            "furigana": "だきょうする",
+            "hiragana": "だきょうする",
             "english": "compromise; giving in",
             "jlpt": "n1"
         },
         {
             "kanji": "保護する",
-            "furigana": "ほごする",
+            "hiragana": "ほごする",
             "english": "protection; safeguard; guardianship; custody; patronage",
             "jlpt": "n1"
         },
         {
             "kanji": "判決する",
-            "furigana": "はんけつする",
+            "hiragana": "はんけつする",
             "english": "judicial decision; judgement; judgment; sentence; decree",
             "jlpt": "n1"
         },
         {
             "kanji": "着陸する",
-            "furigana": "ちゃくりくする",
+            "hiragana": "ちゃくりくする",
             "english": "landing; alighting; touch down",
             "jlpt": "n1"
         },
         {
             "kanji": "倒産する",
-            "furigana": "とうさんする",
+            "hiragana": "とうさんする",
             "english": "(corporate) bankruptcy; insolvency; commercial failure; failed business",
             "jlpt": "n1"
         },
         {
             "kanji": "規制する",
-            "furigana": "きせいする",
+            "hiragana": "きせいする",
             "english": "regulation; (traffic) policing; control; restriction",
             "jlpt": "n1"
         },
         {
             "kanji": "入浴する",
-            "furigana": "にゅうよくする",
+            "hiragana": "にゅうよくする",
             "english": "bathing; going in the bath",
             "jlpt": "n1"
         },
         {
             "kanji": "証言する",
-            "furigana": "しょうげんする",
+            "hiragana": "しょうげんする",
             "english": "testimony; (verbal) evidence",
             "jlpt": "n1"
         },
         {
             "kanji": "決断する",
-            "furigana": "けつだんする",
+            "hiragana": "けつだんする",
             "english": "decision; determination",
             "jlpt": "n1"
         },
         {
             "kanji": "予言する",
-            "furigana": "よげんする",
+            "hiragana": "よげんする",
             "english": "prediction; prophecy; prognostication; foretelling; forecast",
             "jlpt": "n1"
         },
         {
             "kanji": "移民する",
-            "furigana": "いみんする",
+            "hiragana": "いみんする",
             "english": "immigration; emigration",
             "jlpt": "n1"
         },
         {
             "kanji": "改革する",
-            "furigana": "かいかくする",
+            "hiragana": "かいかくする",
             "english": "reform; reformation; reorganization",
             "jlpt": "n1"
         },
         {
             "kanji": "妊娠する",
-            "furigana": "にんしんする",
+            "hiragana": "にんしんする",
             "english": "pregnancy; conception; gestation",
             "jlpt": "n1"
         },
         {
             "kanji": "承諾する",
-            "furigana": "しょうだくする",
+            "hiragana": "しょうだくする",
             "english": "consent; approval; acceptance; agreement; compliance",
             "jlpt": "n1"
         },
         {
             "kanji": "定義する",
-            "furigana": "ていぎする",
+            "hiragana": "ていぎする",
             "english": "definition",
             "jlpt": "n1"
         },
         {
             "kanji": "反乱する",
-            "furigana": "はんらんする",
+            "hiragana": "はんらんする",
             "english": "insurrection; mutiny; rebellion; revolt; uprising",
             "jlpt": "n1"
         },
         {
             "kanji": "認識する",
-            "furigana": "にんしきする",
+            "hiragana": "にんしきする",
             "english": "recognition; awareness; perception; understanding; knowledge; cognition; cognizance; cognisance",
             "jlpt": "n1"
         },
         {
             "kanji": "戦闘する",
-            "furigana": "せんとうする",
+            "hiragana": "せんとうする",
             "english": "battle; fight; combat",
             "jlpt": "n1"
         },
         {
             "kanji": "探検する",
-            "furigana": "たんけんする",
+            "hiragana": "たんけんする",
             "english": "exploration; expedition",
             "jlpt": "n1"
         },
         {
             "kanji": "預金する",
-            "furigana": "よきんする",
+            "hiragana": "よきんする",
             "english": "deposit; bank account",
             "jlpt": "n1"
         },
         {
             "kanji": "日焼けする",
-            "furigana": "ひやけする",
+            "hiragana": "ひやけする",
             "english": "sunburn; suntan; tan",
             "jlpt": "n1"
         },
         {
             "kanji": "出血する",
-            "furigana": "しゅっけつする",
+            "hiragana": "しゅっけつする",
             "english": "bleeding; haemorrhage; hemorrhage",
             "jlpt": "n1"
         },
         {
             "kanji": "声明する",
-            "furigana": "せいめいする",
+            "hiragana": "せいめいする",
             "english": "declaration; statement; proclamation",
             "jlpt": "n1"
         },
         {
             "kanji": "思考する",
-            "furigana": "しこうする",
+            "hiragana": "しこうする",
             "english": "thought; consideration; thinking",
             "jlpt": "n1"
         },
         {
             "kanji": "固定する",
-            "furigana": "こていする",
+            "hiragana": "こていする",
             "english": "fixing (in place); being fixed (in place); securing; anchoring; fastening down",
             "jlpt": "n1"
         },
         {
             "kanji": "進化する",
-            "furigana": "しんかする",
+            "hiragana": "しんかする",
             "english": "evolution",
             "jlpt": "n1"
         },
         {
             "kanji": "比例する",
-            "furigana": "ひれいする",
+            "hiragana": "ひれいする",
             "english": "proportion",
             "jlpt": "n1"
         },
         {
             "kanji": "看護する",
-            "furigana": "かんごする",
+            "hiragana": "かんごする",
             "english": "nursing; (army) nurse",
             "jlpt": "n1"
         },
         {
             "kanji": "面会する",
-            "furigana": "めんかいする",
+            "hiragana": "めんかいする",
             "english": "meeting (face-to-face); seeing; visit; interview",
             "jlpt": "n1"
         },
         {
             "kanji": "独占する",
-            "furigana": "どくせんする",
+            "hiragana": "どくせんする",
             "english": "monopoly; monopolization; exclusivity",
             "jlpt": "n1"
         },
         {
             "kanji": "転勤する",
-            "furigana": "てんきんする",
+            "hiragana": "てんきんする",
             "english": "job transfer; job relocation; intra-company transfer",
             "jlpt": "n1"
         },
         {
             "kanji": "恋愛する",
-            "furigana": "れんあいする",
+            "hiragana": "れんあいする",
             "english": "love; love-making; passion; emotion; affections",
             "jlpt": "n1"
         },
         {
             "kanji": "家出する",
-            "furigana": "いえでする",
+            "hiragana": "いえでする",
             "english": "running away from home; elopement",
             "jlpt": "n1"
         },
         {
             "kanji": "疲労する",
-            "furigana": "ひろうする",
+            "hiragana": "ひろうする",
             "english": "fatigue; weariness; exhaustion; tiredness",
             "jlpt": "n1"
         },
         {
             "kanji": "乱用する",
-            "furigana": "らんようする",
+            "hiragana": "らんようする",
             "english": "abuse; misuse; misappropriation; using to excess",
             "jlpt": "n1"
         },
         {
             "kanji": "腐敗する",
-            "furigana": "ふはいする",
+            "hiragana": "ふはいする",
             "english": "decomposition; putrefaction; putrescence; spoilage",
             "jlpt": "n1"
         },
         {
             "kanji": "奉仕する",
-            "furigana": "ほうしする",
+            "hiragana": "ほうしする",
             "english": "service; ministry; attendance; church work",
             "jlpt": "n1"
         },
         {
             "kanji": "腐敗する",
-            "furigana": "ふはいする",
+            "hiragana": "ふはいする",
             "english": "decomposition; putrefaction; putrescence; spoilage",
             "jlpt": "n1"
         },
         {
             "kanji": "奉仕する",
-            "furigana": "ほうしする",
+            "hiragana": "ほうしする",
             "english": "service; ministry; attendance; church work",
             "jlpt": "n1"
         },
         {
             "kanji": "得点する",
-            "furigana": "とくてんする",
+            "hiragana": "とくてんする",
             "english": "scoring; score; points made; marks obtained; goals; runs",
             "jlpt": "n1"
         },
         {
             "kanji": "設定する",
-            "furigana": "せっていする",
+            "hiragana": "せっていする",
             "english": "establishment; creation; posing (a problem); setting (movie, novel, etc.); scene",
             "jlpt": "n1"
         },
         {
             "kanji": "実践する",
-            "furigana": "じっせんする",
+            "hiragana": "じっせんする",
             "english": "practice; putting into practice; implementation",
             "jlpt": "n1"
         },
         {
             "kanji": "統制する",
-            "furigana": "とうせいする",
+            "hiragana": "とうせいする",
             "english": "regulation; control",
             "jlpt": "n1"
         },
         {
             "kanji": "分裂する",
-            "furigana": "ぶんれつする",
+            "hiragana": "ぶんれつする",
             "english": "split; division; break up",
             "jlpt": "n1"
         },
         {
             "kanji": "介護する",
-            "furigana": "かいごする",
+            "hiragana": "かいごする",
             "english": "nursing; care; caregiving; caring",
             "jlpt": "n1"
         },
         {
             "kanji": "占領する",
-            "furigana": "せんりょうする",
+            "hiragana": "せんりょうする",
             "english": "occupying; having (an area) all to oneself",
             "jlpt": "n1"
         },
         {
             "kanji": "反発する",
-            "furigana": "はんぱつする",
+            "hiragana": "はんぱつする",
             "english": "opposition; rebellion; revolt; resistance; backlash; refusal",
             "jlpt": "n1"
         },
         {
             "kanji": "感染する",
-            "furigana": "かんせんする",
+            "hiragana": "かんせんする",
             "english": "infection; contagion; becoming infected",
             "jlpt": "n1"
         },
         {
             "kanji": "脅迫する",
-            "furigana": "きょうはくする",
+            "hiragana": "きょうはくする",
             "english": "threat; menace; coercion; blackmail",
             "jlpt": "n1"
         },
         {
             "kanji": "暗殺する",
-            "furigana": "あんさつする",
+            "hiragana": "あんさつする",
             "english": "assassination",
             "jlpt": "n1"
         },
         {
             "kanji": "抑圧する",
-            "furigana": "よくあつする",
+            "hiragana": "よくあつする",
             "english": "check; restraint; oppression; suppression",
             "jlpt": "n1"
         },
         {
             "kanji": "清算する",
-            "furigana": "せいさんする",
+            "hiragana": "せいさんする",
             "english": "(financial) settlement; squaring accounts; clearing debts",
             "jlpt": "n1"
         },
         {
             "kanji": "同調する",
-            "furigana": "どうちょうする",
+            "hiragana": "どうちょうする",
             "english": "conformity; alignment; agreement; sympathy; following suit",
             "jlpt": "n1"
         },
         {
             "kanji": "調理する",
-            "furigana": "ちょうりする",
+            "hiragana": "ちょうりする",
             "english": "cooking; food preparation",
             "jlpt": "n1"
         },
         {
             "kanji": "解除する",
-            "furigana": "かいじょする",
+            "hiragana": "かいじょする",
             "english": "termination (of a contract); cancellation; rescinding; rescission",
             "jlpt": "n1"
         },
         {
             "kanji": "下痢する",
-            "furigana": "げりする",
+            "hiragana": "げりする",
             "english": "diarrhea; diarrhoea",
             "jlpt": "n1"
         },
         {
             "kanji": "照明する",
-            "furigana": "しょうめいする",
+            "hiragana": "しょうめいする",
             "english": "illumination; lighting",
             "jlpt": "n1"
         },
         {
             "kanji": "解除する",
-            "furigana": "かいじょする",
+            "hiragana": "かいじょする",
             "english": "termination (of a contract); cancellation; rescinding; rescission",
             "jlpt": "n1"
         },
         {
             "kanji": "発作する",
-            "furigana": "ほっさする",
+            "hiragana": "ほっさする",
             "english": "fit; spasm; attack; seizure",
             "jlpt": "n1"
         },
         {
             "kanji": "反射する",
-            "furigana": "はんしゃする",
+            "hiragana": "はんしゃする",
             "english": "reflection; reverberation",
             "jlpt": "n1"
         },
         {
             "kanji": "結晶する",
-            "furigana": "けっしょうする",
+            "hiragana": "けっしょうする",
             "english": "crystal; crystallization; crystallisation",
             "jlpt": "n1"
         },
         {
             "kanji": "小売する",
-            "furigana": "こうりする",
+            "hiragana": "こうりする",
             "english": "retail",
             "jlpt": "n1"
         },
         {
             "kanji": "反響する",
-            "furigana": "はんきょうする",
+            "hiragana": "はんきょうする",
             "english": "echo; reverberation",
             "jlpt": "n1"
         },
         {
             "kanji": "装飾する",
-            "furigana": "そうしょくする",
+            "hiragana": "そうしょくする",
             "english": "ornament; decoration",
             "jlpt": "n1"
         },
         {
             "kanji": "均衡する",
-            "furigana": "きんこうする",
+            "hiragana": "きんこうする",
             "english": "equilibrium; balance",
             "jlpt": "n1"
         },
         {
             "kanji": "棄権する",
-            "furigana": "きけんする",
+            "hiragana": "きけんする",
             "english": "abstention (from voting); renunciation (of a right); withdrawal (from a contest)",
             "jlpt": "n1"
         },
         {
             "kanji": "共鳴する",
-            "furigana": "きょうめいする",
+            "hiragana": "きょうめいする",
             "english": "resonance",
             "jlpt": "n1"
         },
         {
             "kanji": "潜水する",
-            "furigana": "せんすいする",
+            "hiragana": "せんすいする",
             "english": "diving; submerging; going underwater",
             "jlpt": "n1"
         },
         {
             "kanji": "処罰する",
-            "furigana": "しょばつする",
+            "hiragana": "しょばつする",
             "english": "punishment; penalty",
             "jlpt": "n1"
         },
         {
             "kanji": "迫害する",
-            "furigana": "はくがいする",
+            "hiragana": "はくがいする",
             "english": "persecution; oppression",
             "jlpt": "n1"
         },
         {
             "kanji": "錯覚する",
-            "furigana": "さっかくする",
+            "hiragana": "さっかくする",
             "english": "optical illusion; hallucination",
             "jlpt": "n1"
         },
         {
             "kanji": "合唱する",
-            "furigana": "がっしょうする",
+            "hiragana": "がっしょうする",
             "english": "singing together; singing in union; chorus",
             "jlpt": "n1"
         },
         {
             "kanji": "融資する",
-            "furigana": "ゆうしする",
+            "hiragana": "ゆうしする",
             "english": "financing; loan",
             "jlpt": "n1"
         },
         {
             "kanji": "没収する",
-            "furigana": "ぼっしゅうする",
+            "hiragana": "ぼっしゅうする",
             "english": "forfeiture; seizure; confiscation; impounding",
             "jlpt": "n1"
         },
         {
             "kanji": "演出する",
-            "furigana": "えんしゅつする",
+            "hiragana": "えんしゅつする",
             "english": "direction (of a play, film, etc.); production",
             "jlpt": "n1"
         },
         {
             "kanji": "封鎖する",
-            "furigana": "ふうさする",
+            "hiragana": "ふうさする",
             "english": "blockade; lockdown; sealing off (an area)",
             "jlpt": "n1"
         },
         {
             "kanji": "送金する",
-            "furigana": "そうきんする",
+            "hiragana": "そうきんする",
             "english": "remittance; sending money",
             "jlpt": "n1"
         },
         {
             "kanji": "共感する",
-            "furigana": "きょうかんする",
+            "hiragana": "きょうかんする",
             "english": "sympathy; empathy; response; identification (with someone)",
             "jlpt": "n1"
         },
         {
             "kanji": "窒息する",
-            "furigana": "ちっそくする",
+            "hiragana": "ちっそくする",
             "english": "suffocation; choking; asphyxia",
             "jlpt": "n1"
         },
         {
             "kanji": "給食する",
-            "furigana": "きゅうしょくする",
+            "hiragana": "きゅうしょくする",
             "english": "provision of lunch (e.g. at office, school, etc.); providing a meal; lunch service",
             "jlpt": "n1"
         },
         {
             "kanji": "拡散する",
-            "furigana": "かくさんする",
+            "hiragana": "かくさんする",
             "english": "spreading; disseminating; scattering",
             "jlpt": "n1"
         },
         {
             "kanji": "混血する",
-            "furigana": "こんけつする",
+            "hiragana": "こんけつする",
             "english": "mixed race; mixed parentage",
             "jlpt": "n1"
         },
         {
             "kanji": "居住する",
-            "furigana": "きょじゅうする",
+            "hiragana": "きょじゅうする",
             "english": "residence; abode; dwelling",
             "jlpt": "n1"
         },
         {
             "kanji": "燃焼する",
-            "furigana": "ねんしょうする",
+            "hiragana": "ねんしょうする",
             "english": "burning; combustion",
             "jlpt": "n1"
         },
         {
             "kanji": "執着する",
-            "furigana": "しゅうちゃくする",
+            "hiragana": "しゅうちゃくする",
             "english": "attachment; adhesion; insistence; tenacity; fixation; obsession; clinging (e.g. to old customs)",
             "jlpt": "n1"
         },
         {
             "kanji": "保守する",
-            "furigana": "ほしゅする",
+            "hiragana": "ほしゅする",
             "english": "maintenance",
             "jlpt": "n1"
         },
         {
             "kanji": "偽造する",
-            "furigana": "ぎぞうする",
+            "hiragana": "ぎぞうする",
             "english": "forgery; counterfeiting; fabrication; falsification",
             "jlpt": "n1"
         },
         {
             "kanji": "調停する",
-            "furigana": "ちょうていする",
+            "hiragana": "ちょうていする",
             "english": "arbitration; conciliation; mediation",
             "jlpt": "n1"
         },
         {
             "kanji": "再建する",
-            "furigana": "さいけんする",
+            "hiragana": "さいけんする",
             "english": "rebuilding; reconstruction; rehabilitation",
             "jlpt": "n1"
         },
         {
             "kanji": "放射する",
-            "furigana": "ほうしゃする",
+            "hiragana": "ほうしゃする",
             "english": "radiation; emission",
             "jlpt": "n1"
         },
         {
             "kanji": "根回しする",
-            "furigana": "ねまわしする",
+            "hiragana": "ねまわしする",
             "english": "laying the groundwork; behind-the-scenes maneuvering; consensus-building process",
             "jlpt": "n1"
         },
         {
             "kanji": "舗装する",
-            "furigana": "ほそうする",
+            "hiragana": "ほそうする",
             "english": "paving (a road); surfacing (with asphalt, concrete, etc.); pavement",
             "jlpt": "n1"
         },
         {
             "kanji": "合成する",
-            "furigana": "ごうせいする",
+            "hiragana": "ごうせいする",
             "english": "composition; synthesis; compounding; combining",
             "jlpt": "n1"
         },
         {
             "kanji": "暫くする",
-            "furigana": "しばらくする",
+            "hiragana": "しばらくする",
             "english": "for a moment; for a minute",
             "jlpt": "n1"
         },
         {
             "kanji": "確りする",
-            "furigana": "しっかりする",
+            "hiragana": "しっかりする",
             "english": "tightly (holding on); firmly; securely",
             "jlpt": "n1"
         },
         {
             "kanji": "嫉妬する",
-            "furigana": "しっとする",
+            "hiragana": "しっとする",
             "english": "jealousy; envy",
             "jlpt": "n1"
         },
         {
             "kanji": "混同する",
-            "furigana": "こんどうする",
+            "hiragana": "こんどうする",
             "english": "confusion; mixing; merger",
             "jlpt": "n1"
         },
         {
             "kanji": "麻痺する",
-            "furigana": "まひする",
+            "hiragana": "まひする",
             "english": "paralysis; palsy; numbness; stupor",
             "jlpt": "n1"
         },
         {
             "kanji": "現像する",
-            "furigana": "げんぞうする",
+            "hiragana": "げんぞうする",
             "english": "development (of film); photographic processing",
             "jlpt": "n1"
         },
         {
             "kanji": "逆立ちする",
-            "furigana": "さかだちする",
+            "hiragana": "さかだちする",
             "english": "handstand; headstand",
             "jlpt": "n1"
         },
         {
             "kanji": "直感する",
-            "furigana": "ちょっかんする",
+            "hiragana": "ちょっかんする",
             "english": "intuition; instinct; hunch",
             "jlpt": "n1"
         },
         {
             "kanji": "模倣する",
-            "furigana": "もほうする",
+            "hiragana": "もほうする",
             "english": "imitation; copying",
             "jlpt": "n1"
         },
         {
             "kanji": "暗示する",
-            "furigana": "あんじする",
+            "hiragana": "あんじする",
             "english": "hint; suggestion",
             "jlpt": "n1"
         },
         {
             "kanji": "刺繍する",
-            "furigana": "ししゅうする",
+            "hiragana": "ししゅうする",
             "english": "embroidery",
             "jlpt": "n1"
         },
         {
             "kanji": "賛成する",
-            "furigana": "さんせいする",
+            "hiragana": "さんせいする",
             "english": "approval; agreement; support; favour; favor",
             "jlpt": "n1"
         },
         {
             "kanji": "一言する",
-            "furigana": "ひとことする",
+            "hiragana": "ひとことする",
             "english": "single word; a few words; brief comment",
             "jlpt": "n1"
         },
         {
             "kanji": "審判する",
-            "furigana": "しんぱんする",
+            "hiragana": "しんぱんする",
             "english": "judgement; judgment; decision; verdict; sentence",
             "jlpt": "n1"
         },
         {
             "kanji": "お喋りする",
-            "furigana": "おしゃべりする",
+            "hiragana": "おしゃべりする",
             "english": "chattering; talk; idle talk; chat; chitchat; gossip",
             "jlpt": "n1"
         },
         {
             "kanji": "苛々する",
-            "furigana": "いらいらする",
+            "hiragana": "いらいらする",
             "english": "to get irritated; to get annoyed; to be on the edge; to fret; to lose patience",
             "jlpt": "n1"
         },
         {
             "kanji": "悪戯する",
-            "furigana": "いたずらする",
+            "hiragana": "いたずらする",
             "english": "mischief; prank; trick; practical joke",
             "jlpt": "n1"
         },
         {
             "kanji": "自転する",
-            "furigana": "じてんする",
+            "hiragana": "じてんする",
             "english": "rotation (on an axis)",
             "jlpt": "n1"
         },
         {
             "kanji": "映写する",
-            "furigana": "えいしゃする",
+            "hiragana": "えいしゃする",
             "english": "projection",
             "jlpt": "n1"
         },
         {
             "kanji": "暗算する",
-            "furigana": "あんざんする",
+            "hiragana": "あんざんする",
             "english": "mental arithmetic",
             "jlpt": "n1"
         },
         {
             "kanji": "話し合いする",
-            "furigana": "はなしあいする",
+            "hiragana": "はなしあいする",
             "english": "discussion; talk; tête-à-tête; conference",
             "jlpt": "n1"
         },
         {
             "kanji": "一定する",
-            "furigana": "いっていする",
+            "hiragana": "いっていする",
             "english": "fixed; settled; constant; definite; uniform; regularized; regularised; defined; standardized; standardised; certain; prescribed",
             "jlpt": "n1"
         },
         {
             "kanji": "開拓する",
-            "furigana": "かいたくする",
+            "hiragana": "かいたくする",
             "english": "reclamation (e.g. of wasteland); cultivation; development",
             "jlpt": "n1"
         },
         {
             "kanji": "対立する",
-            "furigana": "たいりつする",
+            "hiragana": "たいりつする",
             "english": "confrontation; opposition; antagonism",
             "jlpt": "n1"
         },
         {
             "kanji": "振興する",
-            "furigana": "しんこうする",
+            "hiragana": "しんこうする",
             "english": "promotion; encouragement",
             "jlpt": "n1"
         },
         {
             "kanji": "付属する",
-            "furigana": "ふぞくする",
+            "hiragana": "ふぞくする",
             "english": "being attached (to); being affiliated (to); belonging (to); going with",
             "jlpt": "n1"
         },
         {
             "kanji": "消耗する",
-            "furigana": "しょうもうする",
+            "hiragana": "しょうもうする",
             "english": "exhaustion; consumption; using up; dissipation; waste",
             "jlpt": "n1"
         },
         {
             "kanji": "ご無沙汰する",
-            "furigana": "ごぶさたする",
+            "hiragana": "ごぶさたする",
             "english": "not writing or contacting for a while; neglecting (failing) to write (call, visit, etc.); long silence",
             "jlpt": "n1"
         },
         {
             "kanji": "打ち合わせする",
-            "furigana": "うちあわせする",
+            "hiragana": "うちあわせする",
             "english": "advance arrangements; preparatory meeting; briefing session",
             "jlpt": "n1"
         },
         {
             "kanji": "吃逆する",
-            "furigana": "しゃっくりする",
+            "hiragana": "しゃっくりする",
             "english": "hiccup; hiccough",
             "jlpt": "n1"
         },
         {
             "kanji": "じゃん拳する",
-            "furigana": "じゃんけんする",
+            "hiragana": "じゃんけんする",
             "english": "rock-paper-scissors (game); janken",
             "jlpt": "n1"
         },
         {
             "kanji": "同意する",
-            "furigana": "どういする",
+            "hiragana": "どういする",
             "english": "agreement; consent; approval; assent",
             "jlpt": "n1"
         },
         {
             "kanji": "確信する",
-            "furigana": "かくしんする",
+            "hiragana": "かくしんする",
             "english": "conviction; belief; confidence",
             "jlpt": "n1"
         },
         {
             "kanji": "興奮する",
-            "furigana": "こうふんする",
+            "hiragana": "こうふんする",
             "english": "excitement; stimulation; agitation; arousal",
             "jlpt": "n1"
         },
         {
             "kanji": "非難する",
-            "furigana": "ひなんする",
+            "hiragana": "ひなんする",
             "english": "criticism; blame; censure; attack; reproach",
             "jlpt": "n1"
         },
         {
             "kanji": "貧乏する",
-            "furigana": "びんぼうする",
+            "hiragana": "びんぼうする",
             "english": "poverty-stricken; destitute; poor; penurious",
             "jlpt": "n1"
         },
         {
             "kanji": "支持する",
-            "furigana": "しじする",
+            "hiragana": "しじする",
             "english": "support; backing; endorsement; approval",
             "jlpt": "n1"
         },
         {
             "kanji": "廃止する",
-            "furigana": "はいしする",
+            "hiragana": "はいしする",
             "english": "abolition; discontinuance; discontinuation; repeal; annulment",
             "jlpt": "n1"
         },
         {
             "kanji": "上昇する",
-            "furigana": "じょうしょうする",
+            "hiragana": "じょうしょうする",
             "english": "rising; ascending; climbing",
             "jlpt": "n1"
         },
         {
             "kanji": "発言する",
-            "furigana": "はつげんする",
+            "hiragana": "はつげんする",
             "english": "statement; remark; observation; utterance; speech; proposal",
             "jlpt": "n1"
         },
         {
             "kanji": "達成する",
-            "furigana": "たっせいする",
+            "hiragana": "たっせいする",
             "english": "achievement; attainment; accomplishment; realization",
             "jlpt": "n1"
         },
         {
             "kanji": "侮辱する",
-            "furigana": "ぶじょくする",
+            "hiragana": "ぶじょくする",
             "english": "insult; affront; slight; contempt (e.g. of court)",
             "jlpt": "n1"
         },
         {
             "kanji": "言い訳する",
-            "furigana": "いいわけする",
+            "hiragana": "いいわけする",
             "english": "excuse",
             "jlpt": "n1"
         },
         {
             "kanji": "対処する",
-            "furigana": "たいしょする",
+            "hiragana": "たいしょする",
             "english": "dealing with; coping with",
             "jlpt": "n1"
         },
         {
             "kanji": "指摘する",
-            "furigana": "してきする",
+            "hiragana": "してきする",
             "english": "pointing out; identification",
             "jlpt": "n1"
         },
         {
             "kanji": "従事する",
-            "furigana": "じゅうじする",
+            "hiragana": "じゅうじする",
             "english": "engaging in (work); pursuing (e.g. studies); following (a profession); being involved in",
             "jlpt": "n1"
         },
         {
             "kanji": "昇進する",
-            "furigana": "しょうしんする",
+            "hiragana": "しょうしんする",
             "english": "promotion; advancement; rising in rank",
             "jlpt": "n1"
         },
         {
             "kanji": "提供する",
-            "furigana": "ていきょうする",
+            "hiragana": "ていきょうする",
             "english": "offer; tender; providing; supplying; making available; donating (blood, organs, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "浪費する",
-            "furigana": "ろうひする",
+            "hiragana": "ろうひする",
             "english": "waste; extravagance",
             "jlpt": "n1"
         },
         {
             "kanji": "拒否する",
-            "furigana": "きょひする",
+            "hiragana": "きょひする",
             "english": "refusal; rejection; denial; veto",
             "jlpt": "n1"
         },
         {
             "kanji": "退職する",
-            "furigana": "たいしょくする",
+            "hiragana": "たいしょくする",
             "english": "retirement; resignation",
             "jlpt": "n1"
         },
         {
             "kanji": "抗議する",
-            "furigana": "こうぎする",
+            "hiragana": "こうぎする",
             "english": "protest; objection",
             "jlpt": "n1"
         },
         {
             "kanji": "討論する",
-            "furigana": "とうろんする",
+            "hiragana": "とうろんする",
             "english": "debate; discussion",
             "jlpt": "n1"
         },
         {
             "kanji": "負傷する",
-            "furigana": "ふしょうする",
+            "hiragana": "ふしょうする",
             "english": "injury; wound",
             "jlpt": "n1"
         },
         {
             "kanji": "指示する",
-            "furigana": "しじする",
+            "hiragana": "しじする",
             "english": "indication; denotation; designation",
             "jlpt": "n1"
         },
         {
             "kanji": "沈黙する",
-            "furigana": "ちんもくする",
+            "hiragana": "ちんもくする",
             "english": "silence; being silent; quiet; hush",
             "jlpt": "n1"
         },
         {
             "kanji": "誘惑する",
-            "furigana": "ゆうわくする",
+            "hiragana": "ゆうわくする",
             "english": "temptation; allurement; lure; enticement; seduction",
             "jlpt": "n1"
         },
         {
             "kanji": "採用する",
-            "furigana": "さいようする",
+            "hiragana": "さいようする",
             "english": "use; adoption; acceptance",
             "jlpt": "n1"
         },
         {
             "kanji": "設立する",
-            "furigana": "せつりつする",
+            "hiragana": "せつりつする",
             "english": "establishment; founding",
             "jlpt": "n1"
         },
         {
             "kanji": "辞職する",
-            "furigana": "じしょくする",
+            "hiragana": "じしょくする",
             "english": "resignation",
             "jlpt": "n1"
         },
         {
             "kanji": "開発する",
-            "furigana": "かいはつする",
+            "hiragana": "かいはつする",
             "english": "development; exploitation (of resources)",
             "jlpt": "n1"
         },
         {
             "kanji": "購入する",
-            "furigana": "こうにゅうする",
+            "hiragana": "こうにゅうする",
             "english": "purchase; buying",
             "jlpt": "n1"
         },
         {
             "kanji": "出世する",
-            "furigana": "しゅっせする",
+            "hiragana": "しゅっせする",
             "english": "success in life; getting ahead; successful career; promotion; climbing the corporate ladder; eminence",
             "jlpt": "n1"
         },
         {
             "kanji": "発生する",
-            "furigana": "はっせいする",
+            "hiragana": "はっせいする",
             "english": "occurrence; incidence; outbreak; birth (e.g. of civilization)",
             "jlpt": "n1"
         },
         {
             "kanji": "勤務する",
-            "furigana": "きんむする",
+            "hiragana": "きんむする",
             "english": "service; duty; work",
             "jlpt": "n1"
         },
         {
             "kanji": "任命する",
-            "furigana": "にんめいする",
+            "hiragana": "にんめいする",
             "english": "appointment; nomination; ordination; commission; designation",
             "jlpt": "n1"
         },
         {
             "kanji": "収集する",
-            "furigana": "しゅうしゅうする",
+            "hiragana": "しゅうしゅうする",
             "english": "collecting; accumulating; gathering",
             "jlpt": "n1"
         },
         {
             "kanji": "獲得する",
-            "furigana": "かくとくする",
+            "hiragana": "かくとくする",
             "english": "acquisition; possession",
             "jlpt": "n1"
         },
         {
             "kanji": "値引きする",
-            "furigana": "ねびきする",
+            "hiragana": "ねびきする",
             "english": "price reduction; discount",
             "jlpt": "n1"
         },
         {
             "kanji": "栽培する",
-            "furigana": "さいばいする",
+            "hiragana": "さいばいする",
             "english": "cultivation",
             "jlpt": "n1"
         },
         {
             "kanji": "体験する",
-            "furigana": "たいけんする",
+            "hiragana": "たいけんする",
             "english": "(practical) experience; personal experience; hands-on experience; first-hand experience",
             "jlpt": "n1"
         },
         {
             "kanji": "応募する",
-            "furigana": "おうぼする",
+            "hiragana": "おうぼする",
             "english": "application; subscription; entry (competition, raffle, etc.); enlistment",
             "jlpt": "n1"
         },
         {
             "kanji": "悪化する",
-            "furigana": "あっかする",
+            "hiragana": "あっかする",
             "english": "deterioration; getting worse; worsening; aggravation; degeneration; corruption",
             "jlpt": "n1"
         },
         {
             "kanji": "減少する",
-            "furigana": "げんしょうする",
+            "hiragana": "げんしょうする",
             "english": "decrease; reduction; decline",
             "jlpt": "n1"
         },
         {
             "kanji": "討議する",
-            "furigana": "とうぎする",
+            "hiragana": "とうぎする",
             "english": "debate; discussion",
             "jlpt": "n1"
         },
         {
             "kanji": "減少する",
-            "furigana": "げんしょうする",
+            "hiragana": "げんしょうする",
             "english": "decrease; reduction; decline",
             "jlpt": "n1"
         },
         {
             "kanji": "開催する",
-            "furigana": "かいさいする",
+            "hiragana": "かいさいする",
             "english": "holding (a conference, exhibition, etc.); opening; hosting (e.g. the Olympics)",
             "jlpt": "n1"
         },
         {
             "kanji": "伝達する",
-            "furigana": "でんたつする",
+            "hiragana": "でんたつする",
             "english": "transmission (e.g. news, chemical signals, electricity); communication; delivery; conveyance; transfer; relay; propagation; conduction",
             "jlpt": "n1"
         },
         {
             "kanji": "施設する",
-            "furigana": "しせつする",
+            "hiragana": "しせつする",
             "english": "institution; establishment; facility",
             "jlpt": "n1"
         },
         {
             "kanji": "絶望する",
-            "furigana": "ぜつぼうする",
+            "hiragana": "ぜつぼうする",
             "english": "despair; hopelessness",
             "jlpt": "n1"
         },
         {
             "kanji": "依存する",
-            "furigana": "いぞんする",
+            "hiragana": "いぞんする",
             "english": "dependence; reliance",
             "jlpt": "n1"
         },
         {
             "kanji": "推測する",
-            "furigana": "すいそくする",
+            "hiragana": "すいそくする",
             "english": "guess; conjecture",
             "jlpt": "n1"
         },
         {
             "kanji": "要するする",
-            "furigana": "ようするする",
+            "hiragana": "ようするする",
             "english": "to need; to demand; to take; to require",
             "jlpt": "n1"
         },
         {
             "kanji": "対応する",
-            "furigana": "たいおうする",
+            "hiragana": "たいおうする",
             "english": "correspondence (to); equivalence",
             "jlpt": "n1"
         },
         {
             "kanji": "意図する",
-            "furigana": "いとする",
+            "hiragana": "いとする",
             "english": "intention; aim; design",
             "jlpt": "n1"
         },
         {
             "kanji": "適応する",
-            "furigana": "てきおうする",
+            "hiragana": "てきおうする",
             "english": "adaptation; accommodation; conformity",
             "jlpt": "n1"
         },
         {
             "kanji": "合意する",
-            "furigana": "ごういする",
+            "hiragana": "ごういする",
             "english": "(coming to an) agreement; consent; mutual understanding; accord; consensus",
             "jlpt": "n1"
         },
         {
             "kanji": "所属する",
-            "furigana": "しょぞくする",
+            "hiragana": "しょぞくする",
             "english": "belonging to (a group, organization, etc.); affiliation (with); being attached to; being under the control of; serving (in the military, congress, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "沸騰する",
-            "furigana": "ふっとうする",
+            "hiragana": "ふっとうする",
             "english": "boiling; seething",
             "jlpt": "n1"
         },
         {
             "kanji": "決意する",
-            "furigana": "けついする",
+            "hiragana": "けついする",
             "english": "decision; determination; resolution",
             "jlpt": "n1"
         },
         {
             "kanji": "挑戦する",
-            "furigana": "ちょうせんする",
+            "hiragana": "ちょうせんする",
             "english": "challenge; defiance; dare; attempt; try",
             "jlpt": "n1"
         },
         {
             "kanji": "処分する",
-            "furigana": "しょぶんする",
+            "hiragana": "しょぶんする",
             "english": "disposal; throwing away; selling off",
             "jlpt": "n1"
         },
         {
             "kanji": "到達する",
-            "furigana": "とうたつする",
+            "hiragana": "とうたつする",
             "english": "reaching; attaining; arrival",
             "jlpt": "n1"
         },
         {
             "kanji": "反するする",
-            "furigana": "はんするする",
+            "hiragana": "はんするする",
             "english": "to be contrary to; to be inconsistent with; to contradict",
             "jlpt": "n1"
         },
         {
             "kanji": "調和する",
-            "furigana": "ちょうわする",
+            "hiragana": "ちょうわする",
             "english": "harmony; accord; reconciliation; agreement",
             "jlpt": "n1"
         },
         {
             "kanji": "接触する",
-            "furigana": "せっしょくする",
+            "hiragana": "せっしょくする",
             "english": "touch; contact; touching",
             "jlpt": "n1"
         },
         {
             "kanji": "中断する",
-            "furigana": "ちゅうだんする",
+            "hiragana": "ちゅうだんする",
             "english": "interruption; suspension; break",
             "jlpt": "n1"
         },
         {
             "kanji": "合併する",
-            "furigana": "がっぺいする",
+            "hiragana": "がっぺいする",
             "english": "merger (of companies, towns, etc.); combination; union; amalgamation; consolidation; coalition; fusion; annexation; affiliation; incorporation",
             "jlpt": "n1"
         },
         {
             "kanji": "弁解する",
-            "furigana": "べんかいする",
+            "hiragana": "べんかいする",
             "english": "explanation (e.g. for one's actions); excuse; justification; defense; defence",
             "jlpt": "n1"
         },
         {
             "kanji": "手配する",
-            "furigana": "てはいする",
+            "hiragana": "てはいする",
             "english": "arrangement; preparations",
             "jlpt": "n1"
         },
         {
             "kanji": "登校する",
-            "furigana": "とうこうする",
+            "hiragana": "とうこうする",
             "english": "attendance (at school); going to school",
             "jlpt": "n1"
         },
         {
             "kanji": "収容する",
-            "furigana": "しゅうようする",
+            "hiragana": "しゅうようする",
             "english": "accommodation; taking in; receiving; housing; seating; admission (of patients, students, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "崩壊する",
-            "furigana": "ほうかいする",
+            "hiragana": "ほうかいする",
             "english": "collapse; crumbling; breaking down; caving in",
             "jlpt": "n1"
         },
         {
             "kanji": "創立する",
-            "furigana": "そうりつする",
+            "hiragana": "そうりつする",
             "english": "establishment; founding; organization; organisation",
             "jlpt": "n1"
         },
         {
             "kanji": "野生する",
-            "furigana": "やせいする",
+            "hiragana": "やせいする",
             "english": "wild; growing wild; living in the wild",
             "jlpt": "n1"
         },
         {
             "kanji": "促進する",
-            "furigana": "そくしんする",
+            "hiragana": "そくしんする",
             "english": "promotion; acceleration; encouragement; facilitation; spurring on",
             "jlpt": "n1"
         },
         {
             "kanji": "閉鎖する",
-            "furigana": "へいさする",
+            "hiragana": "へいさする",
             "english": "closing; closure",
             "jlpt": "n1"
         },
         {
             "kanji": "要請する",
-            "furigana": "ようせいする",
+            "hiragana": "ようせいする",
             "english": "appeal; call for something; request; claim; demand",
             "jlpt": "n1"
         },
         {
             "kanji": "再会する",
-            "furigana": "さいかいする",
+            "hiragana": "さいかいする",
             "english": "meeting again; reunion",
             "jlpt": "n1"
         },
         {
             "kanji": "向上する",
-            "furigana": "こうじょうする",
+            "hiragana": "こうじょうする",
             "english": "elevation; rise; improvement; advancement; progress",
             "jlpt": "n1"
         },
         {
             "kanji": "無駄遣いする",
-            "furigana": "むだづかいする",
+            "hiragana": "むだづかいする",
             "english": "waste (of money, time, etc.); squandering; frittering away",
             "jlpt": "n1"
         },
         {
             "kanji": "干渉する",
-            "furigana": "かんしょうする",
+            "hiragana": "かんしょうする",
             "english": "interference; intervention; meddling",
             "jlpt": "n1"
         },
         {
             "kanji": "行進する",
-            "furigana": "こうしんする",
+            "hiragana": "こうしんする",
             "english": "march; parade",
             "jlpt": "n1"
         },
         {
             "kanji": "紛争する",
-            "furigana": "ふんそうする",
+            "hiragana": "ふんそうする",
             "english": "dispute; conflict; trouble; strife",
             "jlpt": "n1"
         },
         {
             "kanji": "微笑する",
-            "furigana": "びしょうする",
+            "hiragana": "びしょうする",
             "english": "smile",
             "jlpt": "n1"
         },
         {
             "kanji": "参照する",
-            "furigana": "さんしょうする",
+            "hiragana": "さんしょうする",
             "english": "reference (e.g. to a dictionary, passage, footnotes); consultation; comparison",
             "jlpt": "n1"
         },
         {
             "kanji": "上演する",
-            "furigana": "じょうえんする",
+            "hiragana": "じょうえんする",
             "english": "performance (of a play, opera, etc.); staging; presentation",
             "jlpt": "n1"
         },
         {
             "kanji": "教訓する",
-            "furigana": "きょうくんする",
+            "hiragana": "きょうくんする",
             "english": "lesson; precept; teachings; moral",
             "jlpt": "n1"
         },
         {
             "kanji": "匹敵する",
-            "furigana": "ひってきする",
+            "hiragana": "ひってきする",
             "english": "to be a match for; to rival; to equal; to compare with; to be equivalent to",
             "jlpt": "n1"
         },
         {
             "kanji": "訂正する",
-            "furigana": "ていせいする",
+            "hiragana": "ていせいする",
             "english": "correction; revision; amendment",
             "jlpt": "n1"
         },
         {
             "kanji": "征服する",
-            "furigana": "せいふくする",
+            "hiragana": "せいふくする",
             "english": "conquest; subjugation",
             "jlpt": "n1"
         },
         {
             "kanji": "象徴する",
-            "furigana": "しょうちょうする",
+            "hiragana": "しょうちょうする",
             "english": "(abstract) symbol; emblem; representation",
             "jlpt": "n1"
         },
         {
             "kanji": "追跡する",
-            "furigana": "ついせきする",
+            "hiragana": "ついせきする",
             "english": "chase; pursuit; tracking; stalking",
             "jlpt": "n1"
         },
         {
             "kanji": "上演する",
-            "furigana": "じょうえんする",
+            "hiragana": "じょうえんする",
             "english": "performance (of a play, opera, etc.); staging; presentation",
             "jlpt": "n1"
         },
         {
             "kanji": "象徴する",
-            "furigana": "しょうちょうする",
+            "hiragana": "しょうちょうする",
             "english": "(abstract) symbol; emblem; representation",
             "jlpt": "n1"
         },
         {
             "kanji": "抑制する",
-            "furigana": "よくせいする",
+            "hiragana": "よくせいする",
             "english": "control; restraint; suppression; constraint; curtailment; inhibition; check; curb",
             "jlpt": "n1"
         },
         {
             "kanji": "当選する",
-            "furigana": "とうせんする",
+            "hiragana": "とうせんする",
             "english": "being elected",
             "jlpt": "n1"
         },
         {
             "kanji": "告白する",
-            "furigana": "こくはくする",
+            "hiragana": "こくはくする",
             "english": "confession (to a crime, wrongdoing, etc.); admission",
             "jlpt": "n1"
         },
         {
             "kanji": "公開する",
-            "furigana": "こうかいする",
+            "hiragana": "こうかいする",
             "english": "opening to the public; making available to the public; exhibiting; unveiling; release (of a film, information, etc.); disclosure; publication",
             "jlpt": "n1"
         },
         {
             "kanji": "返済する",
-            "furigana": "へんさいする",
+            "hiragana": "へんさいする",
             "english": "repayment; reimbursement; refund; redemption",
             "jlpt": "n1"
         },
         {
             "kanji": "墜落する",
-            "furigana": "ついらくする",
+            "hiragana": "ついらくする",
             "english": "fall; crash (e.g. aircraft)",
             "jlpt": "n1"
         },
         {
             "kanji": "断言する",
-            "furigana": "だんげんする",
+            "hiragana": "だんげんする",
             "english": "assertion; declaration; affirmation",
             "jlpt": "n1"
         },
         {
             "kanji": "論議する",
-            "furigana": "ろんぎする",
+            "hiragana": "ろんぎする",
             "english": "discussion; argument; debate",
             "jlpt": "n1"
         },
         {
             "kanji": "形成する",
-            "furigana": "けいせいする",
+            "hiragana": "けいせいする",
             "english": "formation; molding; making (up); taking form; giving form to",
             "jlpt": "n1"
         },
         {
             "kanji": "繁栄する",
-            "furigana": "はんえいする",
+            "hiragana": "はんえいする",
             "english": "prosperity; thriving; flourishing",
             "jlpt": "n1"
         },
         {
             "kanji": "警戒する",
-            "furigana": "けいかいする",
+            "hiragana": "けいかいする",
             "english": "vigilance; caution; alertness; precaution; being on guard",
             "jlpt": "n1"
         },
         {
             "kanji": "展示する",
-            "furigana": "てんじする",
+            "hiragana": "てんじする",
             "english": "exhibition; display",
             "jlpt": "n1"
         },
         {
             "kanji": "交互する",
-            "furigana": "こうごする",
+            "hiragana": "こうごする",
             "english": "alternate; alternating",
             "jlpt": "n1"
         },
         {
             "kanji": "逃亡する",
-            "furigana": "とうぼうする",
+            "hiragana": "とうぼうする",
             "english": "escape; flight; running away; elopement; fleeing",
             "jlpt": "n1"
         },
         {
             "kanji": "登録する",
-            "furigana": "とうろくする",
+            "hiragana": "とうろくする",
             "english": "registration; accession; register; entry; record",
             "jlpt": "n1"
         },
         {
             "kanji": "展示する",
-            "furigana": "てんじする",
+            "hiragana": "てんじする",
             "english": "exhibition; display",
             "jlpt": "n1"
         },
         {
             "kanji": "逃亡する",
-            "furigana": "とうぼうする",
+            "hiragana": "とうぼうする",
             "english": "escape; flight; running away; elopement; fleeing",
             "jlpt": "n1"
         },
         {
             "kanji": "操縦する",
-            "furigana": "そうじゅうする",
+            "hiragana": "そうじゅうする",
             "english": "steering; piloting; flying; control; operation; handling",
             "jlpt": "n1"
         },
         {
             "kanji": "確保する",
-            "furigana": "かくほする",
+            "hiragana": "かくほする",
             "english": "securing; obtaining; ensuring; guarantee; maintaining",
             "jlpt": "n1"
         },
         {
             "kanji": "団結する",
-            "furigana": "だんけつする",
+            "hiragana": "だんけつする",
             "english": "unity; union; solidarity; combination; teaming up",
             "jlpt": "n1"
         },
         {
             "kanji": "免除する",
-            "furigana": "めんじょする",
+            "hiragana": "めんじょする",
             "english": "exemption; exoneration; discharge",
             "jlpt": "n1"
         },
         {
             "kanji": "交互する",
-            "furigana": "こうごする",
+            "hiragana": "こうごする",
             "english": "alternate; alternating",
             "jlpt": "n1"
         },
         {
             "kanji": "創造する",
-            "furigana": "そうぞうする",
+            "hiragana": "そうぞうする",
             "english": "creation",
             "jlpt": "n1"
         },
         {
             "kanji": "追放する",
-            "furigana": "ついほうする",
+            "hiragana": "ついほうする",
             "english": "exile; banishment; eviction; deportation; purge; expulsion; ousting",
             "jlpt": "n1"
         },
         {
             "kanji": "確立する",
-            "furigana": "かくりつする",
+            "hiragana": "かくりつする",
             "english": "establishment; settlement",
             "jlpt": "n1"
         },
         {
             "kanji": "要望する",
-            "furigana": "ようぼうする",
+            "hiragana": "ようぼうする",
             "english": "demand for; request",
             "jlpt": "n1"
         },
         {
             "kanji": "訴訟する",
-            "furigana": "そしょうする",
+            "hiragana": "そしょうする",
             "english": "litigation; lawsuit",
             "jlpt": "n1"
         },
         {
             "kanji": "監視する",
-            "furigana": "かんしする",
+            "hiragana": "かんしする",
             "english": "monitoring; watching; observation; surveillance; guarding; supervision; lookout",
             "jlpt": "n1"
         },
         {
             "kanji": "協定する",
-            "furigana": "きょうていする",
+            "hiragana": "きょうていする",
             "english": "arrangement; pact; agreement",
             "jlpt": "n1"
         },
         {
             "kanji": "出演する",
-            "furigana": "しゅつえんする",
+            "hiragana": "しゅつえんする",
             "english": "appearance (in a film, play, TV show, etc.); performance",
             "jlpt": "n1"
         },
         {
             "kanji": "排除する",
-            "furigana": "はいじょする",
+            "hiragana": "はいじょする",
             "english": "exclusion; removal; elimination; clearing away; getting rid of",
             "jlpt": "n1"
         },
         {
             "kanji": "捜索する",
-            "furigana": "そうさくする",
+            "hiragana": "そうさくする",
             "english": "search (esp. for someone or something missing); manhunt",
             "jlpt": "n1"
         },
         {
             "kanji": "会見する",
-            "furigana": "かいけんする",
+            "hiragana": "かいけんする",
             "english": "interview; audience; meeting; (viewing) party",
             "jlpt": "n1"
         },
         {
             "kanji": "貯蓄する",
-            "furigana": "ちょちくする",
+            "hiragana": "ちょちくする",
             "english": "savings",
             "jlpt": "n1"
         },
         {
             "kanji": "宣言する",
-            "furigana": "せんげんする",
+            "hiragana": "せんげんする",
             "english": "declaration; proclamation; announcement",
             "jlpt": "n1"
         },
         {
             "kanji": "返答する",
-            "furigana": "へんとうする",
+            "hiragana": "へんとうする",
             "english": "reply; answer",
             "jlpt": "n1"
         },
         {
             "kanji": "侵略する",
-            "furigana": "しんりゃくする",
+            "hiragana": "しんりゃくする",
             "english": "invasion (e.g. of a country); raid; aggression",
             "jlpt": "n1"
         },
         {
             "kanji": "分配する",
-            "furigana": "ぶんぱいする",
+            "hiragana": "ぶんぱいする",
             "english": "division; splitting; sharing; distribution; dissemination; allocation",
             "jlpt": "n1"
         },
         {
             "kanji": "削減する",
-            "furigana": "さくげんする",
+            "hiragana": "さくげんする",
             "english": "cut; reduction; curtailment",
             "jlpt": "n1"
         },
         {
             "kanji": "逃走する",
-            "furigana": "とうそうする",
+            "hiragana": "とうそうする",
             "english": "flight; desertion; escape",
             "jlpt": "n1"
         },
         {
             "kanji": "提示する",
-            "furigana": "ていじする",
+            "hiragana": "ていじする",
             "english": "presentation (of a passport, ID, etc.); showing; production (e.g. of documents)",
             "jlpt": "n1"
         },
         {
             "kanji": "自立する",
-            "furigana": "じりつする",
+            "hiragana": "じりつする",
             "english": "independence; self-reliance",
             "jlpt": "n1"
         },
         {
             "kanji": "出演する",
-            "furigana": "しゅつえんする",
+            "hiragana": "しゅつえんする",
             "english": "appearance (in a film, play, TV show, etc.); performance",
             "jlpt": "n1"
         },
         {
             "kanji": "派遣する",
-            "furigana": "はけんする",
+            "hiragana": "はけんする",
             "english": "dispatch; despatch; deployment",
             "jlpt": "n1"
         },
         {
             "kanji": "出産する",
-            "furigana": "しゅっさんする",
+            "hiragana": "しゅっさんする",
             "english": "childbirth; (giving) birth; delivery; parturition; confinement",
             "jlpt": "n1"
         },
         {
             "kanji": "優先する",
-            "furigana": "ゆうせんする",
+            "hiragana": "ゆうせんする",
             "english": "preference; priority; precedence",
             "jlpt": "n1"
         },
         {
             "kanji": "暴露する",
-            "furigana": "ばくろする",
+            "hiragana": "ばくろする",
             "english": "disclosure; exposure; revelation",
             "jlpt": "n1"
         },
         {
             "kanji": "配置する",
-            "furigana": "はいちする",
+            "hiragana": "はいちする",
             "english": "arrangement (of resources); deployment; stationing; posting; disposition; configuration; layout",
             "jlpt": "n1"
         },
         {
             "kanji": "脱出する",
-            "furigana": "だっしゅつする",
+            "hiragana": "だっしゅつする",
             "english": "escape; break-out",
             "jlpt": "n1"
         },
         {
             "kanji": "指揮する",
-            "furigana": "しきする",
+            "hiragana": "しきする",
             "english": "command; direction; supervision",
             "jlpt": "n1"
         },
         {
             "kanji": "運営する",
-            "furigana": "うんえいする",
+            "hiragana": "うんえいする",
             "english": "management; administration; operation",
             "jlpt": "n1"
         },
         {
             "kanji": "暴露する",
-            "furigana": "ばくろする",
+            "hiragana": "ばくろする",
             "english": "disclosure; exposure; revelation",
             "jlpt": "n1"
         },
         {
             "kanji": "樹立する",
-            "furigana": "じゅりつする",
+            "hiragana": "じゅりつする",
             "english": "establishment; founding; setting (a record)",
             "jlpt": "n1"
         },
         {
             "kanji": "爆破する",
-            "furigana": "ばくはする",
+            "hiragana": "ばくはする",
             "english": "destructive blast; blowing up; explosion",
             "jlpt": "n1"
         },
         {
             "kanji": "判定する",
-            "furigana": "はんていする",
+            "hiragana": "はんていする",
             "english": "judgement; judgment; decision; ruling; finding; adjudication; verdict; call",
             "jlpt": "n1"
         },
         {
             "kanji": "配置する",
-            "furigana": "はいちする",
+            "hiragana": "はいちする",
             "english": "arrangement (of resources); deployment; stationing; posting; disposition; configuration; layout",
             "jlpt": "n1"
         },
         {
             "kanji": "享受する",
-            "furigana": "きょうじゅする",
+            "hiragana": "きょうじゅする",
             "english": "enjoyment (of freedom, beauty, etc.); reception (of a right, privilege, rank, etc.); having",
             "jlpt": "n1"
         },
         {
             "kanji": "優先する",
-            "furigana": "ゆうせんする",
+            "hiragana": "ゆうせんする",
             "english": "preference; priority; precedence",
             "jlpt": "n1"
         },
         {
             "kanji": "携帯する",
-            "furigana": "けいたいする",
+            "hiragana": "けいたいする",
             "english": "carrying (on one's person or in the hand)",
             "jlpt": "n1"
         },
         {
             "kanji": "申告する",
-            "furigana": "しんこくする",
+            "hiragana": "しんこくする",
             "english": "report; return (e.g. tax); statement; declaration; notification; filing",
             "jlpt": "n1"
         },
         {
             "kanji": "動揺する",
-            "furigana": "どうようする",
+            "hiragana": "どうようする",
             "english": "shaking; trembling; pitching; rolling; oscillation",
             "jlpt": "n1"
         },
         {
             "kanji": "除外する",
-            "furigana": "じょがいする",
+            "hiragana": "じょがいする",
             "english": "exception; exclusion",
             "jlpt": "n1"
         },
         {
             "kanji": "描写する",
-            "furigana": "びょうしゃする",
+            "hiragana": "びょうしゃする",
             "english": "depiction; description; portrayal",
             "jlpt": "n1"
         },
         {
             "kanji": "配布する",
-            "furigana": "はいふする",
+            "hiragana": "はいふする",
             "english": "distribution",
             "jlpt": "n1"
         },
         {
             "kanji": "新築する",
-            "furigana": "しんちくする",
+            "hiragana": "しんちくする",
             "english": "new building; new construction",
             "jlpt": "n1"
         },
         {
             "kanji": "進行する",
-            "furigana": "しんこうする",
+            "hiragana": "しんこうする",
             "english": "moving forward (e.g. of a vehicle); onward movement",
             "jlpt": "n1"
         },
         {
             "kanji": "新築する",
-            "furigana": "しんちくする",
+            "hiragana": "しんちくする",
             "english": "new building; new construction",
             "jlpt": "n1"
         },
         {
             "kanji": "後退する",
-            "furigana": "こうたいする",
+            "hiragana": "こうたいする",
             "english": "retreat; falling back; moving backwards; reversing; backing up (of a vehicle); retrogression; retraction",
             "jlpt": "n1"
         },
         {
             "kanji": "配布する",
-            "furigana": "はいふする",
+            "hiragana": "はいふする",
             "english": "distribution",
             "jlpt": "n1"
         },
         {
             "kanji": "孤立する",
-            "furigana": "こりつする",
+            "hiragana": "こりつする",
             "english": "isolation; being alone; being friendless",
             "jlpt": "n1"
         },
         {
             "kanji": "待遇する",
-            "furigana": "たいぐうする",
+            "hiragana": "たいぐうする",
             "english": "treatment; reception; service",
             "jlpt": "n1"
         },
         {
             "kanji": "襲撃する",
-            "furigana": "しゅうげきする",
+            "hiragana": "しゅうげきする",
             "english": "(surprise) attack; assault; raid; charge",
             "jlpt": "n1"
         },
         {
             "kanji": "作用する",
-            "furigana": "さようする",
+            "hiragana": "さようする",
             "english": "action; operation; process; agency; effect; function",
             "jlpt": "n1"
         },
         {
             "kanji": "移住する",
-            "furigana": "いじゅうする",
+            "hiragana": "いじゅうする",
             "english": "migration; immigration",
             "jlpt": "n1"
         },
         {
             "kanji": "手当する",
-            "furigana": "てあてする",
+            "hiragana": "てあてする",
             "english": "salary; pay; compensation; allowance (e.g. housing allowance); benefit; bonus",
             "jlpt": "n1"
         },
         {
             "kanji": "着手する",
-            "furigana": "ちゃくしゅする",
+            "hiragana": "ちゃくしゅする",
             "english": "starting work (on); setting to work (on); setting about (doing); beginning; commencing; embarking on",
             "jlpt": "n1"
         },
         {
             "kanji": "破裂する",
-            "furigana": "はれつする",
+            "hiragana": "はれつする",
             "english": "bursting; rupture; explosion",
             "jlpt": "n1"
         },
         {
             "kanji": "把握する",
-            "furigana": "はあくする",
+            "hiragana": "はあくする",
             "english": "understanding; grasp",
             "jlpt": "n1"
         },
         {
             "kanji": "避難する",
-            "furigana": "ひなんする",
+            "hiragana": "ひなんする",
             "english": "taking refuge; finding shelter; evacuation; escape; seeking safe haven",
             "jlpt": "n1"
         },
         {
             "kanji": "転落する",
-            "furigana": "てんらくする",
+            "hiragana": "てんらくする",
             "english": "fall; tumble; spill; plunge; dive",
             "jlpt": "n1"
         },
         {
             "kanji": "孤立する",
-            "furigana": "こりつする",
+            "hiragana": "こりつする",
             "english": "isolation; being alone; being friendless",
             "jlpt": "n1"
         },
         {
             "kanji": "同感する",
-            "furigana": "どうかんする",
+            "hiragana": "どうかんする",
             "english": "same feeling; same sentiment; same opinion; sympathy; agreement; concurrence",
             "jlpt": "n1"
         },
         {
             "kanji": "公演する",
-            "furigana": "こうえんする",
+            "hiragana": "こうえんする",
             "english": "public performance",
             "jlpt": "n1"
         },
         {
             "kanji": "装備する",
-            "furigana": "そうびする",
+            "hiragana": "そうびする",
             "english": "equipment",
             "jlpt": "n1"
         },
         {
             "kanji": "進展する",
-            "furigana": "しんてんする",
+            "hiragana": "しんてんする",
             "english": "progress; development",
             "jlpt": "n1"
         },
         {
             "kanji": "集計する",
-            "furigana": "しゅうけいする",
+            "hiragana": "しゅうけいする",
             "english": "totalization; totalisation; aggregation; tally (e.g. of votes); adding up; summing up",
             "jlpt": "n1"
         },
         {
             "kanji": "対抗する",
-            "furigana": "たいこうする",
+            "hiragana": "たいこうする",
             "english": "opposition; rivalry; competition; antagonism",
             "jlpt": "n1"
         },
         {
             "kanji": "募金する",
-            "furigana": "ぼきんする",
+            "hiragana": "ぼきんする",
             "english": "fund-raising; collection of funds",
             "jlpt": "n1"
         },
         {
             "kanji": "記載する",
-            "furigana": "きさいする",
+            "hiragana": "きさいする",
             "english": "mention (in a document); record; entry; statement; listing",
             "jlpt": "n1"
         },
         {
             "kanji": "突破する",
-            "furigana": "とっぱする",
+            "hiragana": "とっぱする",
             "english": "breaking through; breakthrough; penetration",
             "jlpt": "n1"
         },
         {
             "kanji": "発育する",
-            "furigana": "はついくする",
+            "hiragana": "はついくする",
             "english": "(physical) growth; development",
             "jlpt": "n1"
         },
         {
             "kanji": "自覚する",
-            "furigana": "じかくする",
+            "hiragana": "じかくする",
             "english": "self-consciousness; self-awareness",
             "jlpt": "n1"
         },
         {
             "kanji": "浮気する",
-            "furigana": "うわきする",
+            "hiragana": "うわきする",
             "english": "extramarital sex; affair; fooling around",
             "jlpt": "n1"
         },
         {
             "kanji": "突破する",
-            "furigana": "とっぱする",
+            "hiragana": "とっぱする",
             "english": "breaking through; breakthrough; penetration",
             "jlpt": "n1"
         },
         {
             "kanji": "雇用する",
-            "furigana": "こようする",
+            "hiragana": "こようする",
             "english": "employment; hire",
             "jlpt": "n1"
         },
         {
             "kanji": "制するする",
-            "furigana": "せいするする",
+            "hiragana": "せいするする",
             "english": "to hold back (e.g. emotions); to rein in (e.g. a horse, unruly people); to bridle",
             "jlpt": "n1"
         },
         {
             "kanji": "限定する",
-            "furigana": "げんていする",
+            "hiragana": "げんていする",
             "english": "limit; restriction",
             "jlpt": "n1"
         },
         {
             "kanji": "阻止する",
-            "furigana": "そしする",
+            "hiragana": "そしする",
             "english": "obstruction; check; hindrance; prevention; impediment; interdiction; preemption; blocking",
             "jlpt": "n1"
         },
         {
             "kanji": "換算する",
-            "furigana": "かんさんする",
+            "hiragana": "かんさんする",
             "english": "conversion (e.g. yen to dollars); change; exchange; translation (numerical)",
             "jlpt": "n1"
         },
         {
             "kanji": "捜査する",
-            "furigana": "そうさする",
+            "hiragana": "そうさする",
             "english": "search (esp. in criminal investigations); investigation; inquiry; enquiry",
             "jlpt": "n1"
         },
         {
             "kanji": "専用する",
-            "furigana": "せんようする",
+            "hiragana": "せんようする",
             "english": "(one's) exclusive use; private use; personal use",
             "jlpt": "n1"
         },
         {
             "kanji": "増進する",
-            "furigana": "ぞうしんする",
+            "hiragana": "ぞうしんする",
             "english": "promoting; increase; advance",
             "jlpt": "n1"
         },
         {
             "kanji": "関与する",
-            "furigana": "かんよする",
+            "hiragana": "かんよする",
             "english": "participation; taking part in; participating in; being concerned in",
             "jlpt": "n1"
         },
         {
             "kanji": "代用する",
-            "furigana": "だいようする",
+            "hiragana": "だいようする",
             "english": "substitution",
             "jlpt": "n1"
         },
         {
             "kanji": "脱するする",
-            "furigana": "だっするする",
+            "hiragana": "だっするする",
             "english": "to escape from; to get out",
             "jlpt": "n1"
         },
         {
             "kanji": "奨励する",
-            "furigana": "しょうれいする",
+            "hiragana": "しょうれいする",
             "english": "encouragement; promotion; inducement; incitement; stimulation",
             "jlpt": "n1"
         },
         {
             "kanji": "沈没する",
-            "furigana": "ちんぼつする",
+            "hiragana": "ちんぼつする",
             "english": "sinking; foundering; going down; submersion",
             "jlpt": "n1"
         },
         {
             "kanji": "痛感する",
-            "furigana": "つうかんする",
+            "hiragana": "つうかんする",
             "english": "feeling keenly; fully realizing",
             "jlpt": "n1"
         },
         {
             "kanji": "会談する",
-            "furigana": "かいだんする",
+            "hiragana": "かいだんする",
             "english": "talks (i.e. formal discussions); conference; meeting",
             "jlpt": "n1"
         },
         {
             "kanji": "両立する",
-            "furigana": "りょうりつする",
+            "hiragana": "りょうりつする",
             "english": "compatibility; coexistence; standing together",
             "jlpt": "n1"
         },
         {
             "kanji": "協議する",
-            "furigana": "きょうぎする",
+            "hiragana": "きょうぎする",
             "english": "conference; consultation; discussion; negotiation",
             "jlpt": "n1"
         },
         {
             "kanji": "飼育する",
-            "furigana": "しいくする",
+            "hiragana": "しいくする",
             "english": "breeding; raising; rearing",
             "jlpt": "n1"
         },
         {
             "kanji": "会談する",
-            "furigana": "かいだんする",
+            "hiragana": "かいだんする",
             "english": "talks (i.e. formal discussions); conference; meeting",
             "jlpt": "n1"
         },
         {
             "kanji": "専用する",
-            "furigana": "せんようする",
+            "hiragana": "せんようする",
             "english": "(one's) exclusive use; private use; personal use",
             "jlpt": "n1"
         },
         {
             "kanji": "変動する",
-            "furigana": "へんどうする",
+            "hiragana": "へんどうする",
             "english": "change; fluctuation",
             "jlpt": "n1"
         },
         {
             "kanji": "補給する",
-            "furigana": "ほきゅうする",
+            "hiragana": "ほきゅうする",
             "english": "supply; supplying; replenishment",
             "jlpt": "n1"
         },
         {
             "kanji": "防衛する",
-            "furigana": "ぼうえいする",
+            "hiragana": "ぼうえいする",
             "english": "defense; defence; protection",
             "jlpt": "n1"
         },
         {
             "kanji": "繁殖する",
-            "furigana": "はんしょくする",
+            "hiragana": "はんしょくする",
             "english": "breeding; propagation; reproduction; multiplication; increase",
             "jlpt": "n1"
         },
         {
             "kanji": "介入する",
-            "furigana": "かいにゅうする",
+            "hiragana": "かいにゅうする",
             "english": "intervention",
             "jlpt": "n1"
         },
         {
             "kanji": "救援する",
-            "furigana": "きゅうえんする",
+            "hiragana": "きゅうえんする",
             "english": "relief; rescue",
             "jlpt": "n1"
         },
         {
             "kanji": "進出する",
-            "furigana": "しんしゅつする",
+            "hiragana": "しんしゅつする",
             "english": "advance (into a new market, industry, etc.); expansion (into); launch (into); entering; making inroads (into)",
             "jlpt": "n1"
         },
         {
             "kanji": "制裁する",
-            "furigana": "せいさいする",
+            "hiragana": "せいさいする",
             "english": "sanctions; punishment",
             "jlpt": "n1"
         },
         {
             "kanji": "制定する",
-            "furigana": "せいていする",
+            "hiragana": "せいていする",
             "english": "enactment; establishment; creation",
             "jlpt": "n1"
         },
         {
             "kanji": "究極する",
-            "furigana": "きゅうきょくする",
+            "hiragana": "きゅうきょくする",
             "english": "ultimate; final; last; eventual",
             "jlpt": "n1"
         },
         {
             "kanji": "始末する",
-            "furigana": "しまつする",
+            "hiragana": "しまつする",
             "english": "management; dealing with; settlement; cleaning up; disposal",
             "jlpt": "n1"
         },
         {
             "kanji": "経過する",
-            "furigana": "けいかする",
+            "hiragana": "けいかする",
             "english": "passage (of time); elapsing; lapse",
             "jlpt": "n1"
         },
         {
             "kanji": "制裁する",
-            "furigana": "せいさいする",
+            "hiragana": "せいさいする",
             "english": "sanctions; punishment",
             "jlpt": "n1"
         },
         {
             "kanji": "制定する",
-            "furigana": "せいていする",
+            "hiragana": "せいていする",
             "english": "enactment; establishment; creation",
             "jlpt": "n1"
         },
         {
             "kanji": "荒廃する",
-            "furigana": "こうはいする",
+            "hiragana": "こうはいする",
             "english": "ruin; destruction; devastation; waste; decay",
             "jlpt": "n1"
         },
         {
             "kanji": "再生する",
-            "furigana": "さいせいする",
+            "hiragana": "さいせいする",
             "english": "restoration to life; coming to life again; resuscitation; regeneration",
             "jlpt": "n1"
         },
         {
             "kanji": "点検する",
-            "furigana": "てんけんする",
+            "hiragana": "てんけんする",
             "english": "detailed inspection; thorough examination; checking",
             "jlpt": "n1"
         },
         {
             "kanji": "分担する",
-            "furigana": "ぶんたんする",
+            "hiragana": "ぶんたんする",
             "english": "taking on one's share (e.g. of work); dividing (work, expenses, etc.) between; apportionment; allotment; allocation; assignment",
             "jlpt": "n1"
         },
         {
             "kanji": "弁護する",
-            "furigana": "べんごする",
+            "hiragana": "べんごする",
             "english": "defense; defence; pleading; advocacy",
             "jlpt": "n1"
         },
         {
             "kanji": "退治する",
-            "furigana": "たいじする",
+            "hiragana": "たいじする",
             "english": "extermination (e.g. of pests, demons, bandits); elimination; eradication; destruction; suppression",
             "jlpt": "n1"
         },
         {
             "kanji": "成熟する",
-            "furigana": "せいじゅくする",
+            "hiragana": "せいじゅくする",
             "english": "maturity; ripeness",
             "jlpt": "n1"
         },
         {
             "kanji": "寄与する",
-            "furigana": "きよする",
+            "hiragana": "きよする",
             "english": "contribution; service",
             "jlpt": "n1"
         },
         {
             "kanji": "中毒する",
-            "furigana": "ちゅうどくする",
+            "hiragana": "ちゅうどくする",
             "english": "poisoning",
             "jlpt": "n1"
         },
         {
             "kanji": "変革する",
-            "furigana": "へんかくする",
+            "hiragana": "へんかくする",
             "english": "change; transformation; reform; revolution; revolutionizing; innovation; upheaval",
             "jlpt": "n1"
         },
         {
             "kanji": "進出する",
-            "furigana": "しんしゅつする",
+            "hiragana": "しんしゅつする",
             "english": "advance (into a new market, industry, etc.); expansion (into); launch (into); entering; making inroads (into)",
             "jlpt": "n1"
         },
         {
             "kanji": "同盟する",
-            "furigana": "どうめいする",
+            "hiragana": "どうめいする",
             "english": "alliance; union; league",
             "jlpt": "n1"
         },
         {
             "kanji": "上陸する",
-            "furigana": "じょうりくする",
+            "hiragana": "じょうりくする",
             "english": "landing; going ashore; disembarkation",
             "jlpt": "n1"
         },
         {
             "kanji": "点検する",
-            "furigana": "てんけんする",
+            "hiragana": "てんけんする",
             "english": "detailed inspection; thorough examination; checking",
             "jlpt": "n1"
         },
         {
             "kanji": "究極する",
-            "furigana": "きゅうきょくする",
+            "hiragana": "きゅうきょくする",
             "english": "ultimate; final; last; eventual",
             "jlpt": "n1"
         },
         {
             "kanji": "奮闘する",
-            "furigana": "ふんとうする",
+            "hiragana": "ふんとうする",
             "english": "strenuous effort; hard struggle; working hard",
             "jlpt": "n1"
         },
         {
             "kanji": "決議する",
-            "furigana": "けつぎする",
+            "hiragana": "けつぎする",
             "english": "resolution; vote; decision",
             "jlpt": "n1"
         },
         {
             "kanji": "審議する",
-            "furigana": "しんぎする",
+            "hiragana": "しんぎする",
             "english": "deliberation; discussion; consideration",
             "jlpt": "n1"
         },
         {
             "kanji": "改良する",
-            "furigana": "かいりょうする",
+            "hiragana": "かいりょうする",
             "english": "improvement; reform",
             "jlpt": "n1"
         },
         {
             "kanji": "妨害する",
-            "furigana": "ぼうがいする",
+            "hiragana": "ぼうがいする",
             "english": "obstruction; hindrance; blocking; disturbance; interference; interruption; jamming (a signal)",
             "jlpt": "n1"
         },
         {
             "kanji": "補助する",
-            "furigana": "ほじょする",
+            "hiragana": "ほじょする",
             "english": "assistance; support; help; aid",
             "jlpt": "n1"
         },
         {
             "kanji": "圧迫する",
-            "furigana": "あっぱくする",
+            "hiragana": "あっぱくする",
             "english": "pressure",
             "jlpt": "n1"
         },
         {
             "kanji": "加入する",
-            "furigana": "かにゅうする",
+            "hiragana": "かにゅうする",
             "english": "joining (a club, organization, etc.); becoming a member; entry; admission; subscription; affiliation; signing (e.g. a treaty); taking out (insurance)",
             "jlpt": "n1"
         },
         {
             "kanji": "護衛する",
-            "furigana": "ごえいする",
+            "hiragana": "ごえいする",
             "english": "guard; convoy; escort",
             "jlpt": "n1"
         },
         {
             "kanji": "陳列する",
-            "furigana": "ちんれつする",
+            "hiragana": "ちんれつする",
             "english": "exhibition; display; putting on show",
             "jlpt": "n1"
         },
         {
             "kanji": "統合する",
-            "furigana": "とうごうする",
+            "hiragana": "とうごうする",
             "english": "integration; unification; unity; combination; consolidation; synthesis",
             "jlpt": "n1"
         },
         {
             "kanji": "充実する",
-            "furigana": "じゅうじつする",
+            "hiragana": "じゅうじつする",
             "english": "fullness; completeness; perfection; substantiality",
             "jlpt": "n1"
         },
         {
             "kanji": "対話する",
-            "furigana": "たいわする",
+            "hiragana": "たいわする",
             "english": "dialogue; conversation; talk; discussion; communication",
             "jlpt": "n1"
         },
         {
             "kanji": "対決する",
-            "furigana": "たいけつする",
+            "hiragana": "たいけつする",
             "english": "confrontation; showdown",
             "jlpt": "n1"
         },
         {
             "kanji": "弁論する",
-            "furigana": "べんろんする",
+            "hiragana": "べんろんする",
             "english": "discussion; debate; argument",
             "jlpt": "n1"
         },
         {
             "kanji": "雑談する",
-            "furigana": "ざつだんする",
+            "hiragana": "ざつだんする",
             "english": "chatting; idle talk",
             "jlpt": "n1"
         },
         {
             "kanji": "護衛する",
-            "furigana": "ごえいする",
+            "hiragana": "ごえいする",
             "english": "guard; convoy; escort",
             "jlpt": "n1"
         },
         {
             "kanji": "扶養する",
-            "furigana": "ふようする",
+            "hiragana": "ふようする",
             "english": "support (e.g. of one's dependents); maintenance",
             "jlpt": "n1"
         },
         {
             "kanji": "充実する",
-            "furigana": "じゅうじつする",
+            "hiragana": "じゅうじつする",
             "english": "fullness; completeness; perfection; substantiality",
             "jlpt": "n1"
         },
         {
             "kanji": "視察する",
-            "furigana": "しさつする",
+            "hiragana": "しさつする",
             "english": "inspection; observation",
             "jlpt": "n1"
         },
         {
             "kanji": "密集する",
-            "furigana": "みっしゅうする",
+            "hiragana": "みっしゅうする",
             "english": "crowding together; clustering together; close formation; swarm",
             "jlpt": "n1"
         },
         {
             "kanji": "統合する",
-            "furigana": "とうごうする",
+            "hiragana": "とうごうする",
             "english": "integration; unification; unity; combination; consolidation; synthesis",
             "jlpt": "n1"
         },
         {
             "kanji": "補充する",
-            "furigana": "ほじゅうする",
+            "hiragana": "ほじゅうする",
             "english": "replenishment; supplementation; supplement; replacement; refilling",
             "jlpt": "n1"
         },
         {
             "kanji": "補償する",
-            "furigana": "ほしょうする",
+            "hiragana": "ほしょうする",
             "english": "compensation; reparation",
             "jlpt": "n1"
         },
         {
             "kanji": "放出する",
-            "furigana": "ほうしゅつする",
+            "hiragana": "ほうしゅつする",
             "english": "release; emission; ejection",
             "jlpt": "n1"
         },
         {
             "kanji": "圧迫する",
-            "furigana": "あっぱくする",
+            "hiragana": "あっぱくする",
             "english": "pressure",
             "jlpt": "n1"
         },
         {
             "kanji": "陳列する",
-            "furigana": "ちんれつする",
+            "hiragana": "ちんれつする",
             "english": "exhibition; display; putting on show",
             "jlpt": "n1"
         },
         {
             "kanji": "称するする",
-            "furigana": "しょうするする",
+            "hiragana": "しょうするする",
             "english": "to take the name of; to call oneself",
             "jlpt": "n1"
         },
         {
             "kanji": "出生する",
-            "furigana": "しゅっしょうする",
+            "hiragana": "しゅっしょうする",
             "english": "birth",
             "jlpt": "n1"
         },
         {
             "kanji": "噴出する",
-            "furigana": "ふんしゅつする",
+            "hiragana": "ふんしゅつする",
             "english": "spewing; gushing; spouting; eruption; effusion",
             "jlpt": "n1"
         },
         {
             "kanji": "蓄積する",
-            "furigana": "ちくせきする",
+            "hiragana": "ちくせきする",
             "english": "accumulation; accumulate; store",
             "jlpt": "n1"
         },
         {
             "kanji": "滞納する",
-            "furigana": "たいのうする",
+            "hiragana": "たいのうする",
             "english": "falling behind (with a payment); being in arrears; non-payment; default; delinquency",
             "jlpt": "n1"
         },
         {
             "kanji": "提携する",
-            "furigana": "ていけいする",
+            "hiragana": "ていけいする",
             "english": "cooperation; tie-up; joint business; partnership; alliance; sponsorship",
             "jlpt": "n1"
         },
         {
             "kanji": "再発する",
-            "furigana": "さいはつする",
+            "hiragana": "さいはつする",
             "english": "return; relapse; recurrence",
             "jlpt": "n1"
         },
         {
             "kanji": "交付する",
-            "furigana": "こうふする",
+            "hiragana": "こうふする",
             "english": "delivery; issuance; handing over; granting",
             "jlpt": "n1"
         },
         {
             "kanji": "悲観する",
-            "furigana": "ひかんする",
+            "hiragana": "ひかんする",
             "english": "pessimism; (taking a) gloomy view; discouragement; despondency; despair; disappointment",
             "jlpt": "n1"
         },
         {
             "kanji": "新婚する",
-            "furigana": "しんこんする",
+            "hiragana": "しんこんする",
             "english": "newly-wed; newly married",
             "jlpt": "n1"
         },
         {
             "kanji": "採択する",
-            "furigana": "さいたくする",
+            "hiragana": "さいたくする",
             "english": "adoption; selection; choice",
             "jlpt": "n1"
         },
         {
             "kanji": "楽観する",
-            "furigana": "らっかんする",
+            "hiragana": "らっかんする",
             "english": "optimism; taking an optimistic view",
             "jlpt": "n1"
         },
         {
             "kanji": "加工する",
-            "furigana": "かこうする",
+            "hiragana": "かこうする",
             "english": "manufacturing; processing; treatment; machining",
             "jlpt": "n1"
         },
         {
             "kanji": "志望する",
-            "furigana": "しぼうする",
+            "hiragana": "しぼうする",
             "english": "wish; desire; ambition; choice",
             "jlpt": "n1"
         },
         {
             "kanji": "廃棄する",
-            "furigana": "はいきする",
+            "hiragana": "はいきする",
             "english": "disposal; abandonment; scrapping; discarding; abolition",
             "jlpt": "n1"
         },
         {
             "kanji": "配分する",
-            "furigana": "はいぶんする",
+            "hiragana": "はいぶんする",
             "english": "distribution; allotment",
             "jlpt": "n1"
         },
         {
             "kanji": "復興する",
-            "furigana": "ふっこうする",
+            "hiragana": "ふっこうする",
             "english": "revival; reconstruction; restoration; rebuilding; recovery; renaissance",
             "jlpt": "n1"
         },
         {
             "kanji": "蓄積する",
-            "furigana": "ちくせきする",
+            "hiragana": "ちくせきする",
             "english": "accumulation; accumulate; store",
             "jlpt": "n1"
         },
         {
             "kanji": "騒動する",
-            "furigana": "そうどうする",
+            "hiragana": "そうどうする",
             "english": "strife; riot; rebellion; turmoil",
             "jlpt": "n1"
         },
         {
             "kanji": "投入する",
-            "furigana": "とうにゅうする",
+            "hiragana": "とうにゅうする",
             "english": "throwing in; inserting; depositing (e.g. a ballot)",
             "jlpt": "n1"
         },
         {
             "kanji": "投入する",
-            "furigana": "とうにゅうする",
+            "hiragana": "とうにゅうする",
             "english": "throwing in; inserting; depositing (e.g. a ballot)",
             "jlpt": "n1"
         },
         {
             "kanji": "交付する",
-            "furigana": "こうふする",
+            "hiragana": "こうふする",
             "english": "delivery; issuance; handing over; granting",
             "jlpt": "n1"
         },
         {
             "kanji": "復興する",
-            "furigana": "ふっこうする",
+            "hiragana": "ふっこうする",
             "english": "revival; reconstruction; restoration; rebuilding; recovery; renaissance",
             "jlpt": "n1"
         },
         {
             "kanji": "楽観する",
-            "furigana": "らっかんする",
+            "hiragana": "らっかんする",
             "english": "optimism; taking an optimistic view",
             "jlpt": "n1"
         },
         {
             "kanji": "老衰する",
-            "furigana": "ろうすいする",
+            "hiragana": "ろうすいする",
             "english": "senility; senile decay; infirmity (through age)",
             "jlpt": "n1"
         },
         {
             "kanji": "掲載する",
-            "furigana": "けいさいする",
+            "hiragana": "けいさいする",
             "english": "publication (e.g. of an article in a newspaper); carrying (e.g. a story); running (e.g. a serial); insertion (e.g. of an advertisement); printing; posting (e.g. on the web)",
             "jlpt": "n1"
         },
         {
             "kanji": "審査する",
-            "furigana": "しんさする",
+            "hiragana": "しんさする",
             "english": "judging; inspection; examination; investigation; review",
             "jlpt": "n1"
         },
         {
             "kanji": "改訂する",
-            "furigana": "かいていする",
+            "hiragana": "かいていする",
             "english": "revision (of text); alteration; change",
             "jlpt": "n1"
         },
         {
             "kanji": "結成する",
-            "furigana": "けっせいする",
+            "hiragana": "けっせいする",
             "english": "formation; combination",
             "jlpt": "n1"
         },
         {
             "kanji": "連帯する",
-            "furigana": "れんたいする",
+            "hiragana": "れんたいする",
             "english": "solidarity",
             "jlpt": "n1"
         },
         {
             "kanji": "取材する",
-            "furigana": "しゅざいする",
+            "hiragana": "しゅざいする",
             "english": "gathering material (for an article, novel, etc.); collecting information; covering (an event, incident, etc.); reporting; interview (for a news story)",
             "jlpt": "n1"
         },
         {
             "kanji": "所持する",
-            "furigana": "しょじする",
+            "hiragana": "しょじする",
             "english": "possession; having (on one's person); carrying (with one)",
             "jlpt": "n1"
         },
         {
             "kanji": "育成する",
-            "furigana": "いくせいする",
+            "hiragana": "いくせいする",
             "english": "rearing; training; nurture; cultivation; promotion",
             "jlpt": "n1"
         },
         {
             "kanji": "補強する",
-            "furigana": "ほきょうする",
+            "hiragana": "ほきょうする",
             "english": "reinforcement; strengthening",
             "jlpt": "n1"
         },
         {
             "kanji": "出動する",
-            "furigana": "しゅつどうする",
+            "hiragana": "しゅつどうする",
             "english": "mobilization; going into action; being dispatched; being sent out; being called in; turning out",
             "jlpt": "n1"
         },
         {
             "kanji": "勧誘する",
-            "furigana": "かんゆうする",
+            "hiragana": "かんゆうする",
             "english": "invitation; solicitation; canvassing; canvasing; inducement; persuasion; encouragement",
             "jlpt": "n1"
         },
         {
             "kanji": "取材する",
-            "furigana": "しゅざいする",
+            "hiragana": "しゅざいする",
             "english": "gathering material (for an article, novel, etc.); collecting information; covering (an event, incident, etc.); reporting; interview (for a news story)",
             "jlpt": "n1"
         },
         {
             "kanji": "所持する",
-            "furigana": "しょじする",
+            "hiragana": "しょじする",
             "english": "possession; having (on one's person); carrying (with one)",
             "jlpt": "n1"
         },
         {
             "kanji": "出動する",
-            "furigana": "しゅつどうする",
+            "hiragana": "しゅつどうする",
             "english": "mobilization; going into action; being dispatched; being sent out; being called in; turning out",
             "jlpt": "n1"
         },
         {
             "kanji": "工作する",
-            "furigana": "こうさくする",
+            "hiragana": "こうさくする",
             "english": "handicraft",
             "jlpt": "n1"
         },
         {
             "kanji": "調印する",
-            "furigana": "ちょういんする",
+            "hiragana": "ちょういんする",
             "english": "signature; signing; sealing",
             "jlpt": "n1"
         },
         {
             "kanji": "議決する",
-            "furigana": "ぎけつする",
+            "hiragana": "ぎけつする",
             "english": "resolution; decision; vote",
             "jlpt": "n1"
         },
         {
             "kanji": "展望する",
-            "furigana": "てんぼうする",
+            "hiragana": "てんぼうする",
             "english": "view; outlook; prospect",
             "jlpt": "n1"
         },
         {
             "kanji": "逆転する",
-            "furigana": "ぎゃくてんする",
+            "hiragana": "ぎゃくてんする",
             "english": "reversal (of a situation); turnaround; turnabout; turning the tables; sudden change",
             "jlpt": "n1"
         },
         {
             "kanji": "酸化する",
-            "furigana": "さんかする",
+            "hiragana": "さんかする",
             "english": "oxidation; oxidization",
             "jlpt": "n1"
         },
         {
             "kanji": "緩和する",
-            "furigana": "かんわする",
+            "hiragana": "かんわする",
             "english": "relief; mitigation; alleviation; relaxation (of restrictions, tensions, etc.); easing; softening",
             "jlpt": "n1"
         },
         {
             "kanji": "掲載する",
-            "furigana": "けいさいする",
+            "hiragana": "けいさいする",
             "english": "publication (e.g. of an article in a newspaper); carrying (e.g. a story); running (e.g. a serial); insertion (e.g. of an advertisement); printing; posting (e.g. on the web)",
             "jlpt": "n1"
         },
         {
             "kanji": "配給する",
-            "furigana": "はいきゅうする",
+            "hiragana": "はいきゅうする",
             "english": "distribution (e.g. films, rice)",
             "jlpt": "n1"
         },
         {
             "kanji": "育成する",
-            "furigana": "いくせいする",
+            "hiragana": "いくせいする",
             "english": "rearing; training; nurture; cultivation; promotion",
             "jlpt": "n1"
         },
         {
             "kanji": "協調する",
-            "furigana": "きょうちょうする",
+            "hiragana": "きょうちょうする",
             "english": "cooperation; conciliation; harmony; coordination",
             "jlpt": "n1"
         },
         {
             "kanji": "復旧する",
-            "furigana": "ふっきゅうする",
+            "hiragana": "ふっきゅうする",
             "english": "restoration; restitution; rehabilitation",
             "jlpt": "n1"
         },
         {
             "kanji": "一括する",
-            "furigana": "いっかつする",
+            "hiragana": "いっかつする",
             "english": "lumping together; summing up; bundle; lump; batch",
             "jlpt": "n1"
         },
         {
             "kanji": "脱退する",
-            "furigana": "だったいする",
+            "hiragana": "だったいする",
             "english": "withdrawal (e.g. from an organization); secession; leaving; pulling out",
             "jlpt": "n1"
         },
         {
             "kanji": "脱退する",
-            "furigana": "だったいする",
+            "hiragana": "だったいする",
             "english": "withdrawal (e.g. from an organization); secession; leaving; pulling out",
             "jlpt": "n1"
         },
         {
             "kanji": "正解する",
-            "furigana": "せいかいする",
+            "hiragana": "せいかいする",
             "english": "correct answer; right solution; correct interpretation",
             "jlpt": "n1"
         },
         {
             "kanji": "逆転する",
-            "furigana": "ぎゃくてんする",
+            "hiragana": "ぎゃくてんする",
             "english": "reversal (of a situation); turnaround; turnabout; turning the tables; sudden change",
             "jlpt": "n1"
         },
         {
             "kanji": "老衰する",
-            "furigana": "ろうすいする",
+            "hiragana": "ろうすいする",
             "english": "senility; senile decay; infirmity (through age)",
             "jlpt": "n1"
         },
         {
             "kanji": "走行する",
-            "furigana": "そうこうする",
+            "hiragana": "そうこうする",
             "english": "running (of a car, bus, etc.); traveling; travelling",
             "jlpt": "n1"
         },
         {
             "kanji": "志向する",
-            "furigana": "しこうする",
+            "hiragana": "しこうする",
             "english": "intention; aim; preference (for); orientation (towards a goal)",
             "jlpt": "n1"
         },
         {
             "kanji": "落下する",
-            "furigana": "らっかする",
+            "hiragana": "らっかする",
             "english": "fall; drop; descent; coming down",
             "jlpt": "n1"
         },
         {
             "kanji": "是正する",
-            "furigana": "ぜせいする",
+            "hiragana": "ぜせいする",
             "english": "correction; revision; redressing; rectifying",
             "jlpt": "n1"
         },
         {
             "kanji": "控除する",
-            "furigana": "こうじょする",
+            "hiragana": "こうじょする",
             "english": "subtraction; deduction (e.g. tax); subsidy",
             "jlpt": "n1"
         },
         {
             "kanji": "徹するする",
-            "furigana": "てっするする",
+            "hiragana": "てっするする",
             "english": "to penetrate; to sink in",
             "jlpt": "n1"
         },
         {
             "kanji": "埋蔵する",
-            "furigana": "まいぞうする",
+            "hiragana": "まいぞうする",
             "english": "burying in the ground",
             "jlpt": "n1"
         },
         {
             "kanji": "制約する",
-            "furigana": "せいやくする",
+            "hiragana": "せいやくする",
             "english": "limitation; restriction; condition; constraints",
             "jlpt": "n1"
         },
         {
             "kanji": "前売りする",
-            "furigana": "まえうりする",
+            "hiragana": "まえうりする",
             "english": "advance sale; booking",
             "jlpt": "n1"
         },
         {
             "kanji": "講習する",
-            "furigana": "こうしゅうする",
+            "hiragana": "こうしゅうする",
             "english": "short course; training",
             "jlpt": "n1"
         },
         {
             "kanji": "朗読する",
-            "furigana": "ろうどくする",
+            "hiragana": "ろうどくする",
             "english": "reading aloud; recitation",
             "jlpt": "n1"
         },
         {
             "kanji": "推進する",
-            "furigana": "すいしんする",
+            "hiragana": "すいしんする",
             "english": "propulsion; drive",
             "jlpt": "n1"
         },
         {
             "kanji": "略奪する",
-            "furigana": "りゃくだつする",
+            "hiragana": "りゃくだつする",
             "english": "pillage; plunder; looting; robbery",
             "jlpt": "n1"
         },
         {
             "kanji": "拘束する",
-            "furigana": "こうそくする",
+            "hiragana": "こうそくする",
             "english": "restriction; restraint; binding; constraint",
             "jlpt": "n1"
         },
         {
             "kanji": "確定する",
-            "furigana": "かくていする",
+            "hiragana": "かくていする",
             "english": "decision; settlement; confirmation; establishment",
             "jlpt": "n1"
         },
         {
             "kanji": "区画する",
-            "furigana": "くかくする",
+            "hiragana": "くかくする",
             "english": "division; section; compartment; block; plot; lot; partition; boundary",
             "jlpt": "n1"
         },
         {
             "kanji": "出題する",
-            "furigana": "しゅつだいする",
+            "hiragana": "しゅつだいする",
             "english": "setting a question (for an exam, quiz, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "落下する",
-            "furigana": "らっかする",
+            "hiragana": "らっかする",
             "english": "fall; drop; descent; coming down",
             "jlpt": "n1"
         },
         {
             "kanji": "失格する",
-            "furigana": "しっかくする",
+            "hiragana": "しっかくする",
             "english": "disqualification; elimination; incapacity",
             "jlpt": "n1"
         },
         {
             "kanji": "対比する",
-            "furigana": "たいひする",
+            "hiragana": "たいひする",
             "english": "contrast; comparison",
             "jlpt": "n1"
         },
         {
             "kanji": "埋蔵する",
-            "furigana": "まいぞうする",
+            "hiragana": "まいぞうする",
             "english": "burying in the ground",
             "jlpt": "n1"
         },
         {
             "kanji": "耕作する",
-            "furigana": "こうさくする",
+            "hiragana": "こうさくする",
             "english": "cultivation; farming",
             "jlpt": "n1"
         },
         {
             "kanji": "合致する",
-            "furigana": "がっちする",
+            "hiragana": "がっちする",
             "english": "agreement; concurrence; conformance; compliance",
             "jlpt": "n1"
         },
         {
             "kanji": "抗争する",
-            "furigana": "こうそうする",
+            "hiragana": "こうそうする",
             "english": "rivalry; feud; conflict; dispute; struggle; strife; contention; resistance",
             "jlpt": "n1"
         },
         {
             "kanji": "誘導する",
-            "furigana": "ゆうどうする",
+            "hiragana": "ゆうどうする",
             "english": "guidance; leading; induction; introduction; incitement; inducement",
             "jlpt": "n1"
         },
         {
             "kanji": "追及する",
-            "furigana": "ついきゅうする",
+            "hiragana": "ついきゅうする",
             "english": "investigation (e.g. into someone's guilt); questioning; pressing; hounding; pinning down",
             "jlpt": "n1"
         },
         {
             "kanji": "生育する",
-            "furigana": "せいいくする",
+            "hiragana": "せいいくする",
             "english": "birth and growth; giving birth and raising; development; breeding",
             "jlpt": "n1"
         },
         {
             "kanji": "転換する",
-            "furigana": "てんかんする",
+            "hiragana": "てんかんする",
             "english": "conversion; diversion; changeover; commutation; switchover",
             "jlpt": "n1"
         },
         {
             "kanji": "休戦する",
-            "furigana": "きゅうせんする",
+            "hiragana": "きゅうせんする",
             "english": "cease-fire; truce; armistice",
             "jlpt": "n1"
         },
         {
             "kanji": "指令する",
-            "furigana": "しれいする",
+            "hiragana": "しれいする",
             "english": "orders; instructions; directive; command",
             "jlpt": "n1"
         },
         {
             "kanji": "志向する",
-            "furigana": "しこうする",
+            "hiragana": "しこうする",
             "english": "intention; aim; preference (for); orientation (towards a goal)",
             "jlpt": "n1"
         },
         {
             "kanji": "推進する",
-            "furigana": "すいしんする",
+            "hiragana": "すいしんする",
             "english": "propulsion; drive",
             "jlpt": "n1"
         },
         {
             "kanji": "失格する",
-            "furigana": "しっかくする",
+            "hiragana": "しっかくする",
             "english": "disqualification; elimination; incapacity",
             "jlpt": "n1"
         },
         {
             "kanji": "再現する",
-            "furigana": "さいげんする",
+            "hiragana": "さいげんする",
             "english": "reappearance; reemergence; return; revival",
             "jlpt": "n1"
         },
         {
             "kanji": "布告する",
-            "furigana": "ふこくする",
+            "hiragana": "ふこくする",
             "english": "edict; ordinance; proclamation",
             "jlpt": "n1"
         },
         {
             "kanji": "増強する",
-            "furigana": "ぞうきょうする",
+            "hiragana": "ぞうきょうする",
             "english": "reinforcement; augmentation; strengthening; increase; buildup",
             "jlpt": "n1"
         },
         {
             "kanji": "傾斜する",
-            "furigana": "けいしゃする",
+            "hiragana": "けいしゃする",
             "english": "inclination; slant; slope; bevel; list; dip; tilt; lean",
             "jlpt": "n1"
         },
         {
             "kanji": "誘導する",
-            "furigana": "ゆうどうする",
+            "hiragana": "ゆうどうする",
             "english": "guidance; leading; induction; introduction; incitement; inducement",
             "jlpt": "n1"
         },
         {
             "kanji": "防火する",
-            "furigana": "ぼうかする",
+            "hiragana": "ぼうかする",
             "english": "fire prevention; fire fighting; fire proof",
             "jlpt": "n1"
         },
         {
             "kanji": "控除する",
-            "furigana": "こうじょする",
+            "hiragana": "こうじょする",
             "english": "subtraction; deduction (e.g. tax); subsidy",
             "jlpt": "n1"
         },
         {
             "kanji": "停滞する",
-            "furigana": "ていたいする",
+            "hiragana": "ていたいする",
             "english": "stagnation; tie-up; standstill; congestion; delay; accumulation; falling into arrears",
             "jlpt": "n1"
         },
         {
             "kanji": "主演する",
-            "furigana": "しゅえんする",
+            "hiragana": "しゅえんする",
             "english": "starring (in a film, play, etc.); playing the leading part",
             "jlpt": "n1"
         },
         {
             "kanji": "該当する",
-            "furigana": "がいとうする",
+            "hiragana": "がいとうする",
             "english": "corresponding to; being applicable to; being relevant to; coming under; falling under; fulfilling (requirements); meeting (conditions); qualifying for",
             "jlpt": "n1"
         },
         {
             "kanji": "許容する",
-            "furigana": "きょようする",
+            "hiragana": "きょようする",
             "english": "permission; allowance; acceptance; tolerance; pardon",
             "jlpt": "n1"
         },
         {
             "kanji": "排水する",
-            "furigana": "はいすいする",
+            "hiragana": "はいすいする",
             "english": "drainage; draining; pumping out (water); sewerage",
             "jlpt": "n1"
         },
         {
             "kanji": "寄贈する",
-            "furigana": "きぞうする",
+            "hiragana": "きぞうする",
             "english": "donation; presentation; gift",
             "jlpt": "n1"
         },
         {
             "kanji": "発足する",
-            "furigana": "ほっそくする",
+            "hiragana": "ほっそくする",
             "english": "starting; inauguration; launch; founding; establishment; start-up",
             "jlpt": "n1"
         },
         {
             "kanji": "寛容する",
-            "furigana": "かんようする",
+            "hiragana": "かんようする",
             "english": "tolerance; open-mindedness; forbearance; generosity; magnanimity",
             "jlpt": "n1"
         },
         {
             "kanji": "発足する",
-            "furigana": "ほっそくする",
+            "hiragana": "ほっそくする",
             "english": "starting; inauguration; launch; founding; establishment; start-up",
             "jlpt": "n1"
         },
         {
             "kanji": "待望する",
-            "furigana": "たいぼうする",
+            "hiragana": "たいぼうする",
             "english": "waiting expectantly; waiting eagerly; looking forward to",
             "jlpt": "n1"
         },
         {
             "kanji": "静止する",
-            "furigana": "せいしする",
+            "hiragana": "せいしする",
             "english": "stillness; repose; standing still",
             "jlpt": "n1"
         },
         {
             "kanji": "養成する",
-            "furigana": "ようせいする",
+            "hiragana": "ようせいする",
             "english": "training; education; development; cultivation",
             "jlpt": "n1"
         },
         {
             "kanji": "勧告する",
-            "furigana": "かんこくする",
+            "hiragana": "かんこくする",
             "english": "advice; counsel; remonstrance; recommendation",
             "jlpt": "n1"
         },
         {
             "kanji": "所在する",
-            "furigana": "しょざいする",
+            "hiragana": "しょざいする",
             "english": "whereabouts; place where one is; position; location",
             "jlpt": "n1"
         },
         {
             "kanji": "同居する",
-            "furigana": "どうきょする",
+            "hiragana": "どうきょする",
             "english": "living together; coexistence",
             "jlpt": "n1"
         },
         {
             "kanji": "創刊する",
-            "furigana": "そうかんする",
+            "hiragana": "そうかんする",
             "english": "foundation (of a newspaper, magazine, etc.); starting; launching; first publication",
             "jlpt": "n1"
         },
         {
             "kanji": "遭難する",
-            "furigana": "そうなんする",
+            "hiragana": "そうなんする",
             "english": "disaster; accident; shipwreck; distress",
             "jlpt": "n1"
         },
         {
             "kanji": "即するする",
-            "furigana": "そくするする",
+            "hiragana": "そくするする",
             "english": "to conform to; to agree with; to be adapted to; to be based on",
             "jlpt": "n1"
         },
         {
             "kanji": "還元する",
-            "furigana": "かんげんする",
+            "hiragana": "かんげんする",
             "english": "restoration; return",
             "jlpt": "n1"
         },
         {
             "kanji": "運搬する",
-            "furigana": "うんぱんする",
+            "hiragana": "うんぱんする",
             "english": "transport; transportation; conveyance; carriage",
             "jlpt": "n1"
         },
         {
             "kanji": "聴講する",
-            "furigana": "ちょうこうする",
+            "hiragana": "ちょうこうする",
             "english": "lecture attendance; auditing",
             "jlpt": "n1"
         },
         {
             "kanji": "該当する",
-            "furigana": "がいとうする",
+            "hiragana": "がいとうする",
             "english": "corresponding to; being applicable to; being relevant to; coming under; falling under; fulfilling (requirements); meeting (conditions); qualifying for",
             "jlpt": "n1"
         },
         {
             "kanji": "購買する",
-            "furigana": "こうばいする",
+            "hiragana": "こうばいする",
             "english": "procurement; purchase; buying",
             "jlpt": "n1"
         },
         {
             "kanji": "排水する",
-            "furigana": "はいすいする",
+            "hiragana": "はいすいする",
             "english": "drainage; draining; pumping out (water); sewerage",
             "jlpt": "n1"
         },
         {
             "kanji": "製鉄する",
-            "furigana": "せいてつする",
+            "hiragana": "せいてつする",
             "english": "iron manufacture",
             "jlpt": "n1"
         },
         {
             "kanji": "購買する",
-            "furigana": "こうばいする",
+            "hiragana": "こうばいする",
             "english": "procurement; purchase; buying",
             "jlpt": "n1"
         },
         {
             "kanji": "聴講する",
-            "furigana": "ちょうこうする",
+            "hiragana": "ちょうこうする",
             "english": "lecture attendance; auditing",
             "jlpt": "n1"
         },
         {
             "kanji": "待望する",
-            "furigana": "たいぼうする",
+            "hiragana": "たいぼうする",
             "english": "waiting expectantly; waiting eagerly; looking forward to",
             "jlpt": "n1"
         },
         {
             "kanji": "融通する",
-            "furigana": "ゆうずうする",
+            "hiragana": "ゆうずうする",
             "english": "lending (money, commodities, etc.); finance; loan",
             "jlpt": "n1"
         },
         {
             "kanji": "発掘する",
-            "furigana": "はっくつする",
+            "hiragana": "はっくつする",
             "english": "excavation; exhumation; digging up; unearthing",
             "jlpt": "n1"
         },
         {
             "kanji": "総合する",
-            "furigana": "そうごうする",
+            "hiragana": "そうごうする",
             "english": "synthesis; combination; integration; putting together",
             "jlpt": "n1"
         },
         {
             "kanji": "寛容する",
-            "furigana": "かんようする",
+            "hiragana": "かんようする",
             "english": "tolerance; open-mindedness; forbearance; generosity; magnanimity",
             "jlpt": "n1"
         },
         {
             "kanji": "製鉄する",
-            "furigana": "せいてつする",
+            "hiragana": "せいてつする",
             "english": "iron manufacture",
             "jlpt": "n1"
         },
         {
             "kanji": "特集する",
-            "furigana": "とくしゅうする",
+            "hiragana": "とくしゅうする",
             "english": "feature (e.g. newspaper); special edition; report",
             "jlpt": "n1"
         },
         {
             "kanji": "採決する",
-            "furigana": "さいけつする",
+            "hiragana": "さいけつする",
             "english": "vote; ballot; division",
             "jlpt": "n1"
         },
         {
             "kanji": "賠償する",
-            "furigana": "ばいしょうする",
+            "hiragana": "ばいしょうする",
             "english": "compensation; reparations; indemnity; damages",
             "jlpt": "n1"
         },
         {
             "kanji": "否決する",
-            "furigana": "ひけつする",
+            "hiragana": "ひけつする",
             "english": "rejection; negation; voting down",
             "jlpt": "n1"
         },
         {
             "kanji": "先行する",
-            "furigana": "せんこうする",
+            "hiragana": "せんこうする",
             "english": "going ahead; going first",
             "jlpt": "n1"
         },
         {
             "kanji": "主催する",
-            "furigana": "しゅさいする",
+            "hiragana": "しゅさいする",
             "english": "sponsorship (i.e. conducting under one's auspices); promotion; organizing; organising; hosting; staging",
             "jlpt": "n1"
         },
         {
             "kanji": "構想する",
-            "furigana": "こうそうする",
+            "hiragana": "こうそうする",
             "english": "plan; plot; idea; conception; vision; scheme",
             "jlpt": "n1"
         },
         {
             "kanji": "覆面する",
-            "furigana": "ふくめんする",
+            "hiragana": "ふくめんする",
             "english": "mask; veil; disguise",
             "jlpt": "n1"
         },
         {
             "kanji": "変遷する",
-            "furigana": "へんせんする",
+            "hiragana": "へんせんする",
             "english": "change; transition; vicissitudes",
             "jlpt": "n1"
         },
         {
             "kanji": "修了する",
-            "furigana": "しゅうりょうする",
+            "hiragana": "しゅうりょうする",
             "english": "completion (of a course)",
             "jlpt": "n1"
         },
         {
             "kanji": "選考する",
-            "furigana": "せんこうする",
+            "hiragana": "せんこうする",
             "english": "selection; choice; screening",
             "jlpt": "n1"
         },
         {
             "kanji": "採決する",
-            "furigana": "さいけつする",
+            "hiragana": "さいけつする",
             "english": "vote; ballot; division",
             "jlpt": "n1"
         },
         {
             "kanji": "敗戦する",
-            "furigana": "はいせんする",
+            "hiragana": "はいせんする",
             "english": "defeat; lost battle; losing a war",
             "jlpt": "n1"
         },
         {
             "kanji": "共働きする",
-            "furigana": "ともばたらきする",
+            "hiragana": "ともばたらきする",
             "english": "(husband and wife) both working; dual income",
             "jlpt": "n1"
         },
         {
             "kanji": "出品する",
-            "furigana": "しゅっぴんする",
+            "hiragana": "しゅっぴんする",
             "english": "exhibiting; showing; putting on display; putting up for sale; entering (a work into a competition); submitting",
             "jlpt": "n1"
         },
         {
             "kanji": "忠告する",
-            "furigana": "ちゅうこくする",
+            "hiragana": "ちゅうこくする",
             "english": "advice; warning",
             "jlpt": "n1"
         },
         {
             "kanji": "後悔する",
-            "furigana": "こうかいする",
+            "hiragana": "こうかいする",
             "english": "regret; repentance; remorse",
             "jlpt": "n1"
         },
         {
             "kanji": "軽蔑する",
-            "furigana": "けいべつする",
+            "hiragana": "けいべつする",
             "english": "contempt; scorn; disdain; despising; looking down on; slighting",
             "jlpt": "n1"
         },
         {
             "kanji": "値するする",
-            "furigana": "あたいするする",
+            "hiragana": "あたいするする",
             "english": "to be worth; to be worthy of; to deserve; to merit",
             "jlpt": "n1"
         },
         {
             "kanji": "夜更かしする",
-            "furigana": "よふかしする",
+            "hiragana": "よふかしする",
             "english": "staying up late; keeping late hours; sitting up late at night; nighthawk",
             "jlpt": "n1"
         },
         {
             "kanji": "群集する",
-            "furigana": "ぐんしゅうする",
+            "hiragana": "ぐんしゅうする",
             "english": "crowd; community; group; herd; gathering; assembly",
             "jlpt": "n1"
         },
         {
             "kanji": "拒絶する",
-            "furigana": "きょぜつする",
+            "hiragana": "きょぜつする",
             "english": "refusal; rejection",
             "jlpt": "n1"
         },
         {
             "kanji": "害するする",
-            "furigana": "がいするする",
+            "hiragana": "がいするする",
             "english": "to injure; to damage; to harm; to hurt",
             "jlpt": "n1"
         },
         {
             "kanji": "兎角する",
-            "furigana": "とかくする",
+            "hiragana": "とかくする",
             "english": "(doing) various things; (doing) this and that",
             "jlpt": "n1"
         },
         {
             "kanji": "面するする",
-            "furigana": "めんするする",
+            "hiragana": "めんするする",
             "english": "to face on; to look out on to",
             "jlpt": "n1"
         },
         {
             "kanji": "白状する",
-            "furigana": "はくじょうする",
+            "hiragana": "はくじょうする",
             "english": "confession",
             "jlpt": "n1"
         },
         {
             "kanji": "崇拝する",
-            "furigana": "すうはいする",
+            "hiragana": "すうはいする",
             "english": "worship; adoration; admiration; cult",
             "jlpt": "n1"
         },
         {
             "kanji": "紛失する",
-            "furigana": "ふんしつする",
+            "hiragana": "ふんしつする",
             "english": "loss; going missing",
             "jlpt": "n1"
         },
         {
             "kanji": "辛抱する",
-            "furigana": "しんぼうする",
+            "hiragana": "しんぼうする",
             "english": "patience; endurance; perseverance",
             "jlpt": "n1"
         },
         {
             "kanji": "同封する",
-            "furigana": "どうふうする",
+            "hiragana": "どうふうする",
             "english": "enclosing (e.g. with a letter)",
             "jlpt": "n1"
         },
         {
             "kanji": "氾濫する",
-            "furigana": "はんらんする",
+            "hiragana": "はんらんする",
             "english": "overflowing; flood; inundation; deluge",
             "jlpt": "n1"
         },
         {
             "kanji": "荷作りする",
-            "furigana": "にづくりする",
+            "hiragana": "にづくりする",
             "english": "packing; baling; crating",
             "jlpt": "n1"
         },
         {
             "kanji": "倹約する",
-            "furigana": "けんやくする",
+            "hiragana": "けんやくする",
             "english": "thrift; economy; frugality",
             "jlpt": "n1"
         },
         {
             "kanji": "誇張する",
-            "furigana": "こちょうする",
+            "hiragana": "こちょうする",
             "english": "exaggeration",
             "jlpt": "n1"
         },
         {
             "kanji": "全快する",
-            "furigana": "ぜんかいする",
+            "hiragana": "ぜんかいする",
             "english": "complete recovery of health",
             "jlpt": "n1"
         },
         {
             "kanji": "繁盛する",
-            "furigana": "はんじょうする",
+            "hiragana": "はんじょうする",
             "english": "prosperity; flourishing; thriving",
             "jlpt": "n1"
         },
         {
             "kanji": "察するする",
-            "furigana": "さっするする",
+            "hiragana": "さっするする",
             "english": "to guess; to sense; to presume; to judge",
             "jlpt": "n1"
         },
         {
             "kanji": "指図する",
-            "furigana": "さしずする",
+            "hiragana": "さしずする",
             "english": "directions; instructions; orders; command",
             "jlpt": "n1"
         },
         {
             "kanji": "戸締まりする",
-            "furigana": "とじまりする",
+            "hiragana": "とじまりする",
             "english": "locking up (doors and windows); fastening the doors",
             "jlpt": "n1"
         },
         {
             "kanji": "滅亡する",
-            "furigana": "めつぼうする",
+            "hiragana": "めつぼうする",
             "english": "downfall; ruin; collapse; destruction",
             "jlpt": "n1"
         },
         {
             "kanji": "恋するする",
-            "furigana": "こいするする",
+            "hiragana": "こいするする",
             "english": "to fall in love (with); to love",
             "jlpt": "n1"
         },
         {
             "kanji": "有するする",
-            "furigana": "ゆうするする",
+            "hiragana": "ゆうするする",
             "english": "to have; to possess; to own; to be endowed with",
             "jlpt": "n1"
         },
         {
             "kanji": "脚色する",
-            "furigana": "きゃくしょくする",
+            "hiragana": "きゃくしょくする",
             "english": "dramatization (e.g. of a novel); dramatisation; adaptation (for the stage or screen)",
             "jlpt": "n1"
         },
         {
             "kanji": "自首する",
-            "furigana": "じしゅする",
+            "hiragana": "じしゅする",
             "english": "surrender (to the authorities); giving oneself up; turning oneself in",
             "jlpt": "n1"
         },
         {
             "kanji": "恋するする",
-            "furigana": "こいするする",
+            "hiragana": "こいするする",
             "english": "to fall in love (with); to love",
             "jlpt": "n1"
         },
         {
             "kanji": "欠乏する",
-            "furigana": "けつぼうする",
+            "hiragana": "けつぼうする",
             "english": "deficiency; insufficiency; shortage; lack; want; dearth; scarcity",
             "jlpt": "n1"
         },
         {
             "kanji": "全滅する",
-            "furigana": "ぜんめつする",
+            "hiragana": "ぜんめつする",
             "english": "total destruction; complete destruction; annihilation; being wiped out",
             "jlpt": "n1"
         },
         {
             "kanji": "吟味する",
-            "furigana": "ぎんみする",
+            "hiragana": "ぎんみする",
             "english": "close examination; careful investigation; close inspection; careful selection; inquiry; enquiry; scrutiny; testing",
             "jlpt": "n1"
         },
         {
             "kanji": "共稼ぎする",
-            "furigana": "ともかせぎする",
+            "hiragana": "ともかせぎする",
             "english": "(husband and wife) earning a living together",
             "jlpt": "n1"
         },
         {
             "kanji": "整列する",
-            "furigana": "せいれつする",
+            "hiragana": "せいれつする",
             "english": "standing in a row; forming a line; alignment",
             "jlpt": "n1"
         },
         {
             "kanji": "賛美する",
-            "furigana": "さんびする",
+            "hiragana": "さんびする",
             "english": "praise; glorification; extolment",
             "jlpt": "n1"
         },
         {
             "kanji": "中和する",
-            "furigana": "ちゅうわする",
+            "hiragana": "ちゅうわする",
             "english": "neutralization; neutralisation; counteraction",
             "jlpt": "n1"
         },
         {
             "kanji": "束縛する",
-            "furigana": "そくばくする",
+            "hiragana": "そくばくする",
             "english": "restraint; restriction; fetters; yoke; shackles",
             "jlpt": "n1"
         },
         {
             "kanji": "前置きする",
-            "furigana": "まえおきする",
+            "hiragana": "まえおきする",
             "english": "preface; introduction; preamble",
             "jlpt": "n1"
         },
         {
             "kanji": "着席する",
-            "furigana": "ちゃくせきする",
+            "hiragana": "ちゃくせきする",
             "english": "taking a seat; sitting down (in one's seat)",
             "jlpt": "n1"
         },
         {
             "kanji": "私用する",
-            "furigana": "しようする",
+            "hiragana": "しようする",
             "english": "personal use; private use",
             "jlpt": "n1"
         },
         {
             "kanji": "手分けする",
-            "furigana": "てわけする",
+            "hiragana": "てわけする",
             "english": "division of labour; division of labor; splitting into groups (e.g. to search)",
             "jlpt": "n1"
         },
         {
             "kanji": "代弁する",
-            "furigana": "だいべんする",
+            "hiragana": "だいべんする",
             "english": "speaking by proxy; speaking for (someone else); acting as spokesman (for); representing (the views, feelings, etc. of)",
             "jlpt": "n1"
         },
         {
             "kanji": "出社する",
-            "furigana": "しゅっしゃする",
+            "hiragana": "しゅっしゃする",
             "english": "going to work (e.g. in the morning); coming to work",
             "jlpt": "n1"
         },
         {
             "kanji": "申し分する",
-            "furigana": "もうしぶんする",
+            "hiragana": "もうしぶんする",
             "english": "objection; shortcomings",
             "jlpt": "n1"
         },
         {
             "kanji": "給仕する",
-            "furigana": "きゅうじする",
+            "hiragana": "きゅうじする",
             "english": "waiting on a table; serving (at dinner)",
             "jlpt": "n1"
         },
         {
             "kanji": "産出する",
-            "furigana": "さんしゅつする",
+            "hiragana": "さんしゅつする",
             "english": "production; output; turning out",
             "jlpt": "n1"
         },
         {
             "kanji": "勘弁する",
-            "furigana": "かんべんする",
+            "hiragana": "かんべんする",
             "english": "pardon; forgiveness; forbearance",
             "jlpt": "n1"
         },
         {
             "kanji": "朝寝坊する",
-            "furigana": "あさねぼうする",
+            "hiragana": "あさねぼうする",
             "english": "sleeping late in the morning; sleeping in; lie-in; oversleeping",
             "jlpt": "n1"
         },
         {
             "kanji": "拝借する",
-            "furigana": "はいしゃくする",
+            "hiragana": "はいしゃくする",
             "english": "borrowing",
             "jlpt": "n1"
         },
         {
             "kanji": "口述する",
-            "furigana": "こうじゅつする",
+            "hiragana": "こうじゅつする",
             "english": "dictation; verbal statement",
             "jlpt": "n1"
         },
         {
             "kanji": "下取りする",
-            "furigana": "したどりする",
+            "hiragana": "したどりする",
             "english": "trade-in; part exchange",
             "jlpt": "n1"
         },
         {
             "kanji": "決行する",
-            "furigana": "けっこうする",
+            "hiragana": "けっこうする",
             "english": "doing (with resolve); carrying out (e.g. a plan)",
             "jlpt": "n1"
         },
         {
             "kanji": "転校する",
-            "furigana": "てんこうする",
+            "hiragana": "てんこうする",
             "english": "changing schools",
             "jlpt": "n1"
         },
         {
             "kanji": "窮乏する",
-            "furigana": "きゅうぼうする",
+            "hiragana": "きゅうぼうする",
             "english": "poverty; destitution; privation; indigence; penury",
             "jlpt": "n1"
         },
         {
             "kanji": "照合する",
-            "furigana": "しょうごうする",
+            "hiragana": "しょうごうする",
             "english": "collation; comparison",
             "jlpt": "n1"
         },
         {
             "kanji": "伝来する",
-            "furigana": "でんらいする",
+            "hiragana": "でんらいする",
             "english": "introduction (from abroad)",
             "jlpt": "n1"
         },
         {
             "kanji": "兼用する",
-            "furigana": "けんようする",
+            "hiragana": "けんようする",
             "english": "multi-use; combined use; combination; serving two purposes",
             "jlpt": "n1"
         },
         {
             "kanji": "宙返りする",
-            "furigana": "ちゅうがえりする",
+            "hiragana": "ちゅうがえりする",
             "english": "somersault; looping-the-loop",
             "jlpt": "n1"
         },
         {
             "kanji": "回覧する",
-            "furigana": "かいらんする",
+            "hiragana": "かいらんする",
             "english": "circulation (esp. documents); sending round",
             "jlpt": "n1"
         },
         {
             "kanji": "統率する",
-            "furigana": "とうそつする",
+            "hiragana": "とうそつする",
             "english": "command; lead; generalship; leadership",
             "jlpt": "n1"
         },
         {
             "kanji": "封建する",
-            "furigana": "ほうけんする",
+            "hiragana": "ほうけんする",
             "english": "feudalistic",
             "jlpt": "n1"
         },
         {
             "kanji": "優越する",
-            "furigana": "ゆうえつする",
+            "hiragana": "ゆうえつする",
             "english": "supremacy; predominance; being superior to",
             "jlpt": "n1"
         },
         {
             "kanji": "潜入する",
-            "furigana": "せんにゅうする",
+            "hiragana": "せんにゅうする",
             "english": "infiltration; sneaking in; going undercover",
             "jlpt": "n1"
         },
         {
             "kanji": "アンコールする",
-            "furigana": "アンコールする",
+            "hiragana": "アンコールする",
             "english": "encore",
             "jlpt": "n1"
         },
         {
             "kanji": "降伏する",
-            "furigana": "こうふくする",
+            "hiragana": "こうふくする",
             "english": "surrender; capitulation; submission",
             "jlpt": "n1"
         },
         {
             "kanji": "焚き火する",
-            "furigana": "たきびする",
+            "hiragana": "たきびする",
             "english": "open-air fire (e.g. for garden refuse); bonfire",
             "jlpt": "n1"
         },
         {
             "kanji": "蒸留する",
-            "furigana": "じょうりゅうする",
+            "hiragana": "じょうりゅうする",
             "english": "distillation",
             "jlpt": "n1"
         },
         {
             "kanji": "修飾する",
-            "furigana": "しゅうしょくする",
+            "hiragana": "しゅうしょくする",
             "english": "ornamentation; embellishment; decoration; adornment",
             "jlpt": "n1"
         },
         {
             "kanji": "デザインする",
-            "furigana": "デザインする",
+            "hiragana": "デザインする",
             "english": "design",
             "jlpt": "n1"
         },
         {
             "kanji": "カンニングする",
-            "furigana": "カンニングする",
+            "hiragana": "カンニングする",
             "english": "cheating (on an examination); cribbing",
             "jlpt": "n1"
         },
         {
             "kanji": "ご馳走する",
-            "furigana": "ごちそうする",
+            "hiragana": "ごちそうする",
             "english": "treat (esp. food and drink); entertainment; treating someone (to a meal); taking someone to dinner",
             "jlpt": "n1"
         },
         {
             "kanji": "ジャンプする",
-            "furigana": "ジャンプする",
+            "hiragana": "ジャンプする",
             "english": "jump",
             "jlpt": "n1"
         },
         {
             "kanji": "ブームする",
-            "furigana": "ブームする",
+            "hiragana": "ブームする",
             "english": "boom; rage; fad",
             "jlpt": "n1"
         },
         {
             "kanji": "パチンコする",
-            "furigana": "パチンコする",
+            "hiragana": "パチンコする",
             "english": "pachinko; mechanical gambling game superficially resembling pinball",
             "jlpt": "n1"
         },
         {
             "kanji": "オープンする",
-            "furigana": "オープンする",
+            "hiragana": "オープンする",
             "english": "opening (a new store, golf course, runway, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "ダウンする",
-            "furigana": "ダウンする",
+            "hiragana": "ダウンする",
             "english": "fall; decrease; drop; going down",
             "jlpt": "n1"
         },
         {
             "kanji": "コメントする",
-            "furigana": "コメントする",
+            "hiragana": "コメントする",
             "english": "comment",
             "jlpt": "n1"
         },
         {
             "kanji": "コンタクトする",
-            "furigana": "コンタクトする",
+            "hiragana": "コンタクトする",
             "english": "contact",
             "jlpt": "n1"
         },
         {
             "kanji": "モニターする",
-            "furigana": "モニターする",
+            "hiragana": "モニターする",
             "english": "monitor (device, software or person); monitoring",
             "jlpt": "n1"
         },
         {
             "kanji": "キャッチする",
-            "furigana": "キャッチする",
+            "hiragana": "キャッチする",
             "english": "catch; catching; obtaining (e.g. information); receiving (e.g. radio transmission or phone call)",
             "jlpt": "n1"
         },
         {
             "kanji": "デッサンする",
-            "furigana": "デッサンする",
+            "hiragana": "デッサンする",
             "english": "rough sketch",
             "jlpt": "n1"
         },
         {
             "kanji": "ボイコットする",
-            "furigana": "ボイコットする",
+            "hiragana": "ボイコットする",
             "english": "boycott",
             "jlpt": "n1"
         },
         {
             "kanji": "流行する",
-            "furigana": "りゅうこうする",
+            "hiragana": "りゅうこうする",
             "english": "fashion; trend; vogue; craze; fad; popularity",
             "jlpt": "n1"
         },
         {
             "kanji": "悪口する",
-            "furigana": "わるぐちする",
+            "hiragana": "わるぐちする",
             "english": "slander; bad-mouthing; abuse; insult; speaking ill (of)",
             "jlpt": "n1"
         },
         {
             "kanji": "彼方此方する",
-            "furigana": "あちこちする",
+            "hiragana": "あちこちする",
             "english": "here and there; various places; all around; all over; everywhere; throughout",
             "jlpt": "n1"
         },
         {
             "kanji": "並行する",
-            "furigana": "へいこうする",
+            "hiragana": "へいこうする",
             "english": "going side-by-side; going abreast",
             "jlpt": "n1"
         },
         {
             "kanji": "火傷する",
-            "furigana": "やけどする",
+            "hiragana": "やけどする",
             "english": "burn; scald",
             "jlpt": "n1"
         },
         {
             "kanji": "相応する",
-            "furigana": "そうおうする",
+            "hiragana": "そうおうする",
             "english": "suitable; appropriate; befitting; becoming; adequate; reasonable; proper",
             "jlpt": "n1"
         },
         {
             "kanji": "お供する",
-            "furigana": "おともする",
+            "hiragana": "おともする",
             "english": "attendant; companion",
             "jlpt": "n1"
         },
         {
             "kanji": "盛装する",
-            "furigana": "せいそうする",
+            "hiragana": "せいそうする",
             "english": "dressing up in fine clothes; splendid clothes; one's best clothes",
             "jlpt": "n1"
         },
         {
             "kanji": "瞬きする",
-            "furigana": "まばたきする",
+            "hiragana": "まばたきする",
             "english": "blink (of eyes); wink",
             "jlpt": "n1"
         },
         {
             "kanji": "心中する",
-            "furigana": "しんじゅうする",
+            "hiragana": "しんじゅうする",
             "english": "double suicide; lovers' suicide",
             "jlpt": "n1"
         },
         {
             "kanji": "介抱する",
-            "furigana": "かいほうする",
+            "hiragana": "かいほうする",
             "english": "nursing; looking after",
             "jlpt": "n1"
         },
         {
             "kanji": "辟易する",
-            "furigana": "へきえきする",
+            "hiragana": "へきえきする",
             "english": "to be fed up (with); to be tired (of); to be bored (with); to be unable to bear",
             "jlpt": "n1"
         },
         {
             "kanji": "供するする",
-            "furigana": "きょうするする",
+            "hiragana": "きょうするする",
             "english": "to offer; to present; to submit; to supply; to make available",
             "jlpt": "n1"
         },
         {
             "kanji": "供するする",
-            "furigana": "きょうするする",
+            "hiragana": "きょうするする",
             "english": "to offer; to present; to submit; to supply; to make available",
             "jlpt": "n1"
         },
         {
             "kanji": "細工する",
-            "furigana": "さいくする",
+            "hiragana": "さいくする",
             "english": "work; workmanship; craftsmanship; handiwork",
             "jlpt": "n1"
         },
         {
             "kanji": "立法する",
-            "furigana": "りっぽうする",
+            "hiragana": "りっぽうする",
             "english": "legislation; lawmaking",
             "jlpt": "n1"
         },
         {
             "kanji": "飽和する",
-            "furigana": "ほうわする",
+            "hiragana": "ほうわする",
             "english": "saturation; satiation",
             "jlpt": "n1"
         },
         {
             "kanji": "革新する",
-            "furigana": "かくしんする",
+            "hiragana": "かくしんする",
             "english": "reform; innovation",
             "jlpt": "n1"
         },
         {
             "kanji": "動員する",
-            "furigana": "どういんする",
+            "hiragana": "どういんする",
             "english": "mobilization; mobilisation",
             "jlpt": "n1"
         },
         {
             "kanji": "配列する",
-            "furigana": "はいれつする",
+            "hiragana": "はいれつする",
             "english": "arrangement; disposition",
             "jlpt": "n1"
         },
         {
             "kanji": "持続する",
-            "furigana": "じぞくする",
+            "hiragana": "じぞくする",
             "english": "continuation; persisting; lasting; sustaining; enduring",
             "jlpt": "n1"
         },
         {
             "kanji": "振動する",
-            "furigana": "しんどうする",
+            "hiragana": "しんどうする",
             "english": "oscillation; vibration; swing (e.g. of a pendulum)",
             "jlpt": "n1"
         },
         {
             "kanji": "分業する",
-            "furigana": "ぶんぎょうする",
+            "hiragana": "ぶんぎょうする",
             "english": "division of labor; division of labour; specialization; specialisation; assembly-line production",
             "jlpt": "n1"
         },
         {
             "kanji": "分散する",
-            "furigana": "ぶんさんする",
+            "hiragana": "ぶんさんする",
             "english": "dispersion; breakup; scattering; decentralization; decentralisation; distribution",
             "jlpt": "n1"
         },
         {
             "kanji": "どうにかする",
-            "furigana": "どうにかする",
+            "hiragana": "どうにかする",
             "english": "in some way or other; one way or another; somehow; only just; barely",
             "jlpt": "n1"
         },
         {
             "kanji": "きっぱりする",
-            "furigana": "きっぱりする",
+            "hiragana": "きっぱりする",
             "english": "clearly; plainly; distinctly; decisively; flatly; definitely; resolutely",
             "jlpt": "n1"
         },
         {
             "kanji": "ぶらぶらする",
-            "furigana": "ぶらぶらする",
+            "hiragana": "ぶらぶらする",
             "english": "dangling; swaying; swinging",
             "jlpt": "n1"
         },
         {
             "kanji": "ガイドする",
-            "furigana": "ガイドする",
+            "hiragana": "ガイドする",
             "english": "guide; tour guide; conductor; guiding; leading",
             "jlpt": "n1"
         },
         {
             "kanji": "あっさりする",
-            "furigana": "あっさりする",
+            "hiragana": "あっさりする",
             "english": "easily; readily; quickly; flatly (refuse)",
             "jlpt": "n1"
         },
         {
             "kanji": "セックスする",
-            "furigana": "セックスする",
+            "hiragana": "セックスする",
             "english": "sex; sexual intercourse",
             "jlpt": "n1"
         },
         {
             "kanji": "だぶだぶする",
-            "furigana": "だぶだぶする",
+            "hiragana": "だぶだぶする",
             "english": "loose (of clothing); baggy",
             "jlpt": "n1"
         },
         {
             "kanji": "おどおどする",
-            "furigana": "オドオドする",
+            "hiragana": "オドオドする",
             "english": "timidly; nervously; hesitantly; trembling (with fear); fearfully; anxiously",
             "jlpt": "n1"
         },
         {
             "kanji": "アップする",
-            "furigana": "アップする",
+            "hiragana": "アップする",
             "english": "rise; increase; raising; lifting; going up",
             "jlpt": "n1"
         },
         {
             "kanji": "がっちりする",
-            "furigana": "がっちりする",
+            "hiragana": "がっちりする",
             "english": "solid; robust; well-built",
             "jlpt": "n1"
         },
         {
             "kanji": "きっちりする",
-            "furigana": "きっちりする",
+            "hiragana": "きっちりする",
             "english": "exactly; precisely; punctually; on the dot",
             "jlpt": "n1"
         },
         {
             "kanji": "がっしりする",
-            "furigana": "がっしりする",
+            "hiragana": "がっしりする",
             "english": "firmly; solidly; sturdily; strongly; toughly",
             "jlpt": "n1"
         },
         {
             "kanji": "修行する",
-            "furigana": "しゅぎょうする",
+            "hiragana": "しゅぎょうする",
             "english": "training; practice; discipline; study",
             "jlpt": "n1"
         },
         {
             "kanji": "冬眠する",
-            "furigana": "とうみんする",
+            "hiragana": "とうみんする",
             "english": "hibernation; winter sleep; torpor",
             "jlpt": "n1"
         },
         {
             "kanji": "類推する",
-            "furigana": "るいすいする",
+            "hiragana": "るいすいする",
             "english": "analogy",
             "jlpt": "n1"
         },
         {
             "kanji": "発芽する",
-            "furigana": "はつがする",
+            "hiragana": "はつがする",
             "english": "germination; sprouting; budding",
             "jlpt": "n1"
         },
         {
             "kanji": "屈折する",
-            "furigana": "くっせつする",
+            "hiragana": "くっせつする",
             "english": "bending; curving; twisting; turning; winding",
             "jlpt": "n1"
         },
         {
             "kanji": "うんざりする",
-            "furigana": "うんざりする",
+            "hiragana": "うんざりする",
             "english": "tedious; boring; being fed up with",
             "jlpt": "n1"
         },
         {
             "kanji": "ほっとする",
-            "furigana": "ほっとする",
+            "hiragana": "ほっとする",
             "english": "with a feeling of relief; with a sigh of relief",
             "jlpt": "n1"
         },
         {
             "kanji": "ＯＫする",
-            "furigana": "オッケーする",
+            "hiragana": "オッケーする",
             "english": "OK; okay",
             "jlpt": "n1"
         },
         {
             "kanji": "がっくりする",
-            "furigana": "がっくりする",
+            "hiragana": "がっくりする",
             "english": "heartbroken; crestfallen; dejected; disappointed",
             "jlpt": "n1"
         },
         {
             "kanji": "くっきりする",
-            "furigana": "くっきりする",
+            "hiragana": "くっきりする",
             "english": "clearly (standing out); distinctly; sharply; boldly; in sharp relief",
             "jlpt": "n1"
         },
         {
             "kanji": "消去する",
-            "furigana": "しょうきょする",
+            "hiragana": "しょうきょする",
             "english": "erasure; deletion; elimination; clearing",
             "jlpt": "n1"
         },
         {
             "kanji": "アプローチする",
-            "furigana": "アプローチする",
+            "hiragana": "アプローチする",
             "english": "approach (to a problem, issue, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "コントロールする",
-            "furigana": "コントロールする",
+            "hiragana": "コントロールする",
             "english": "control",
             "jlpt": "n1"
         },
         {
             "kanji": "吃驚する",
-            "furigana": "びっくりする",
+            "hiragana": "びっくりする",
             "english": "to be surprised; to be amazed; to be frightened; to be astonished; to get startled; to jump",
             "jlpt": "n1"
         },
         {
             "kanji": "化するする",
-            "furigana": "かするする",
+            "hiragana": "かするする",
             "english": "to change (into); to turn (into); to transform (into); to become",
             "jlpt": "n1"
         },
         {
             "kanji": "回送する",
-            "furigana": "かいそうする",
+            "hiragana": "かいそうする",
             "english": "forwarding; sending on; redirecting (e.g. mail)",
             "jlpt": "n1"
         },
         {
             "kanji": "退化する",
-            "furigana": "たいかする",
+            "hiragana": "たいかする",
             "english": "degeneration; retrogression; atrophy",
             "jlpt": "n1"
         },
         {
             "kanji": "割り算する",
-            "furigana": "わりざんする",
+            "hiragana": "わりざんする",
             "english": "division",
             "jlpt": "n1"
         },
         {
             "kanji": "施行する",
-            "furigana": "しこうする",
+            "hiragana": "しこうする",
             "english": "putting in force (a law); putting into operation; putting into effect; enforcement",
             "jlpt": "n1"
         },
         {
             "kanji": "守備する",
-            "furigana": "しゅびする",
+            "hiragana": "しゅびする",
             "english": "defense; defence",
             "jlpt": "n1"
         },
         {
             "kanji": "中継する",
-            "furigana": "ちゅうけいする",
+            "hiragana": "ちゅうけいする",
             "english": "relay; hook-up",
             "jlpt": "n1"
         },
         {
             "kanji": "採掘する",
-            "furigana": "さいくつする",
+            "hiragana": "さいくつする",
             "english": "mining; digging; working (a mine)",
             "jlpt": "n1"
         },
         {
             "kanji": "運送する",
-            "furigana": "うんそうする",
+            "hiragana": "うんそうする",
             "english": "transport; freight; shipping; moving (goods)",
             "jlpt": "n1"
         },
         {
             "kanji": "改修する",
-            "furigana": "かいしゅうする",
+            "hiragana": "かいしゅうする",
             "english": "repair; improvement",
             "jlpt": "n1"
         },
         {
             "kanji": "信任する",
-            "furigana": "しんにんする",
+            "hiragana": "しんにんする",
             "english": "trust; confidence; credence",
             "jlpt": "n1"
         },
         {
             "kanji": "公認する",
-            "furigana": "こうにんする",
+            "hiragana": "こうにんする",
             "english": "official recognition; official approval; certification; authorization; authorisation",
             "jlpt": "n1"
         },
         {
             "kanji": "納入する",
-            "furigana": "のうにゅうする",
+            "hiragana": "のうにゅうする",
             "english": "payment (of taxes, fees, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "改定する",
-            "furigana": "かいていする",
+            "hiragana": "かいていする",
             "english": "revision (of a rule, price, etc.); alteration; change",
             "jlpt": "n1"
         },
         {
             "kanji": "結束する",
-            "furigana": "けっそくする",
+            "hiragana": "けっそくする",
             "english": "union; unity; solidarity",
             "jlpt": "n1"
         },
         {
             "kanji": "共存する",
-            "furigana": "きょうぞんする",
+            "hiragana": "きょうぞんする",
             "english": "coexistence",
             "jlpt": "n1"
         },
         {
             "kanji": "軽減する",
-            "furigana": "けいげんする",
+            "hiragana": "けいげんする",
             "english": "abatement; reduction",
             "jlpt": "n1"
         },
         {
             "kanji": "独裁する",
-            "furigana": "どくさいする",
+            "hiragana": "どくさいする",
             "english": "dictatorship; despotism; autocracy",
             "jlpt": "n1"
         },
         {
             "kanji": "演習する",
-            "furigana": "えんしゅうする",
+            "hiragana": "えんしゅうする",
             "english": "practice; exercise; drill",
             "jlpt": "n1"
         },
         {
             "kanji": "橋渡しする",
-            "furigana": "はしわたしする",
+            "hiragana": "はしわたしする",
             "english": "mediation; good offices; go-between; intermediary; mediator; bridge (between)",
             "jlpt": "n1"
         },
         {
             "kanji": "折衷する",
-            "furigana": "せっちゅうする",
+            "hiragana": "せっちゅうする",
             "english": "compromise; cross; blending; eclecticism",
             "jlpt": "n1"
         },
         {
             "kanji": "刊行する",
-            "furigana": "かんこうする",
+            "hiragana": "かんこうする",
             "english": "publication; issue",
             "jlpt": "n1"
         },
         {
             "kanji": "対面する",
-            "furigana": "たいめんする",
+            "hiragana": "たいめんする",
             "english": "meeting face-to-face; seeing in person",
             "jlpt": "n1"
         },
         {
             "kanji": "保育する",
-            "furigana": "ほいくする",
+            "hiragana": "ほいくする",
             "english": "nurturing; rearing; childcare; day care",
             "jlpt": "n1"
         },
         {
             "kanji": "専修する",
-            "furigana": "せんしゅうする",
+            "hiragana": "せんしゅうする",
             "english": "specialization; specialisation",
             "jlpt": "n1"
         },
         {
             "kanji": "合議する",
-            "furigana": "ごうぎする",
+            "hiragana": "ごうぎする",
             "english": "consultation; conference; discussion; counsel",
             "jlpt": "n1"
         },
         {
             "kanji": "独裁する",
-            "furigana": "どくさいする",
+            "hiragana": "どくさいする",
             "english": "dictatorship; despotism; autocracy",
             "jlpt": "n1"
         },
         {
             "kanji": "手引する",
-            "furigana": "てびきする",
+            "hiragana": "てびきする",
             "english": "guidance; lead; acting as guide; giving assistance",
             "jlpt": "n1"
         },
         {
             "kanji": "公募する",
-            "furigana": "こうぼする",
+            "hiragana": "こうぼする",
             "english": "public appeal (e.g. for contributions); public advertisement (of a post); open recruitment",
             "jlpt": "n1"
         },
         {
             "kanji": "妥結する",
-            "furigana": "だけつする",
+            "hiragana": "だけつする",
             "english": "settlement; an agreement",
             "jlpt": "n1"
         },
         {
             "kanji": "先着する",
-            "furigana": "せんちゃくする",
+            "hiragana": "せんちゃくする",
             "english": "arriving first",
             "jlpt": "n1"
         },
         {
             "kanji": "着目する",
-            "furigana": "ちゃくもくする",
+            "hiragana": "ちゃくもくする",
             "english": "attention; giving one's attention; focusing",
             "jlpt": "n1"
         },
         {
             "kanji": "起伏する",
-            "furigana": "きふくする",
+            "hiragana": "きふくする",
             "english": "undulation",
             "jlpt": "n1"
         },
         {
             "kanji": "抽選する",
-            "furigana": "ちゅうせんする",
+            "hiragana": "ちゅうせんする",
             "english": "lottery; raffle; drawing (of lots)",
             "jlpt": "n1"
         },
         {
             "kanji": "加味する",
-            "furigana": "かみする",
+            "hiragana": "かみする",
             "english": "seasoning; flavoring; flavouring",
             "jlpt": "n1"
         },
         {
             "kanji": "徴収する",
-            "furigana": "ちょうしゅうする",
+            "hiragana": "ちょうしゅうする",
             "english": "collection (of fees, taxes, etc.); levy",
             "jlpt": "n1"
         },
         {
             "kanji": "自主する",
-            "furigana": "じしゅする",
+            "hiragana": "じしゅする",
             "english": "independence; autonomy; self-reliance",
             "jlpt": "n1"
         },
         {
             "kanji": "納入する",
-            "furigana": "のうにゅうする",
+            "hiragana": "のうにゅうする",
             "english": "payment (of taxes, fees, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "独創する",
-            "furigana": "どくそうする",
+            "hiragana": "どくそうする",
             "english": "originality",
             "jlpt": "n1"
         },
         {
             "kanji": "独創する",
-            "furigana": "どくそうする",
+            "hiragana": "どくそうする",
             "english": "originality",
             "jlpt": "n1"
         },
         {
             "kanji": "発病する",
-            "furigana": "はつびょうする",
+            "hiragana": "はつびょうする",
             "english": "onset of an illness; falling ill",
             "jlpt": "n1"
         },
         {
             "kanji": "共学する",
-            "furigana": "きょうがくする",
+            "hiragana": "きょうがくする",
             "english": "coeducation",
             "jlpt": "n1"
         },
         {
             "kanji": "私有する",
-            "furigana": "しゆうする",
+            "hiragana": "しゆうする",
             "english": "private ownership",
             "jlpt": "n1"
         },
         {
             "kanji": "閲覧する",
-            "furigana": "えつらんする",
+            "hiragana": "えつらんする",
             "english": "inspection; reading; perusal",
             "jlpt": "n1"
         },
         {
             "kanji": "特産する",
-            "furigana": "とくさんする",
+            "hiragana": "とくさんする",
             "english": "being produced in a particular region; local specialty",
             "jlpt": "n1"
         },
         {
             "kanji": "質疑する",
-            "furigana": "しつぎする",
+            "hiragana": "しつぎする",
             "english": "question",
             "jlpt": "n1"
         },
         {
             "kanji": "教習する",
-            "furigana": "きょうしゅうする",
+            "hiragana": "きょうしゅうする",
             "english": "training; instruction",
             "jlpt": "n1"
         },
         {
             "kanji": "主導する",
-            "furigana": "しゅどうする",
+            "hiragana": "しゅどうする",
             "english": "leadership; initiative; spearhead",
             "jlpt": "n1"
         },
         {
             "kanji": "赴任する",
-            "furigana": "ふにんする",
+            "hiragana": "ふにんする",
             "english": "moving to a different location to start a new job; (proceeding to) new appointment",
             "jlpt": "n1"
         },
         {
             "kanji": "複合する",
-            "furigana": "ふくごうする",
+            "hiragana": "ふくごうする",
             "english": "composite; combined; complex",
             "jlpt": "n1"
         },
         {
             "kanji": "合議する",
-            "furigana": "ごうぎする",
+            "hiragana": "ごうぎする",
             "english": "consultation; conference; discussion; counsel",
             "jlpt": "n1"
         },
         {
             "kanji": "返還する",
-            "furigana": "へんかんする",
+            "hiragana": "へんかんする",
             "english": "return; restoration",
             "jlpt": "n1"
         },
         {
             "kanji": "保温する",
-            "furigana": "ほおんする",
+            "hiragana": "ほおんする",
             "english": "retaining warmth; keeping heat in; heat insulation",
             "jlpt": "n1"
         },
         {
             "kanji": "保養する",
-            "furigana": "ほようする",
+            "hiragana": "ほようする",
             "english": "health preservation; recuperation; recreation",
             "jlpt": "n1"
         },
         {
             "kanji": "転居する",
-            "furigana": "てんきょする",
+            "hiragana": "てんきょする",
             "english": "moving; changing residence; change of address",
             "jlpt": "n1"
         },
         {
             "kanji": "就業する",
-            "furigana": "しゅうぎょうする",
+            "hiragana": "しゅうぎょうする",
             "english": "employment; starting work",
             "jlpt": "n1"
         },
         {
             "kanji": "模索する",
-            "furigana": "もさくする",
+            "hiragana": "もさくする",
             "english": "groping (for); fumbling around (for); searching (for an answer, solution, etc.); trying to find",
             "jlpt": "n1"
         },
         {
             "kanji": "遊牧する",
-            "furigana": "ゆうぼくする",
+            "hiragana": "ゆうぼくする",
             "english": "nomadism",
             "jlpt": "n1"
         },
         {
             "kanji": "祝賀する",
-            "furigana": "しゅくがする",
+            "hiragana": "しゅくがする",
             "english": "celebration; congratulations",
             "jlpt": "n1"
         },
         {
             "kanji": "出直しする",
-            "furigana": "でなおしする",
+            "hiragana": "でなおしする",
             "english": "adjustment; touch up",
             "jlpt": "n1"
         },
         {
             "kanji": "興業する",
-            "furigana": "こうぎょうする",
+            "hiragana": "こうぎょうする",
             "english": "promotion of industry; inauguration of a new industrial enterprise",
             "jlpt": "n1"
         },
         {
             "kanji": "異動する",
-            "furigana": "いどうする",
+            "hiragana": "いどうする",
             "english": "(personnel) change; transfer; relocation; reassignment; reshuffle",
             "jlpt": "n1"
         },
         {
             "kanji": "籤引きする",
-            "furigana": "くじびきする",
+            "hiragana": "くじびきする",
             "english": "lottery; drawn lot",
             "jlpt": "n1"
         },
         {
             "kanji": "帰京する",
-            "furigana": "ききょうする",
+            "hiragana": "ききょうする",
             "english": "returning (home) to Tokyo; returning to the capital",
             "jlpt": "n1"
         },
         {
             "kanji": "養護する",
-            "furigana": "ようごする",
+            "hiragana": "ようごする",
             "english": "nursing; (protective) care",
             "jlpt": "n1"
         },
         {
             "kanji": "水洗する",
-            "furigana": "すいせんする",
+            "hiragana": "すいせんする",
             "english": "washing with water; rinsing; flushing",
             "jlpt": "n1"
         },
         {
             "kanji": "気兼ねする",
-            "furigana": "きがねする",
+            "hiragana": "きがねする",
             "english": "constraint; reserve; feeling hesitant; being afraid of troubling someone",
             "jlpt": "n1"
         },
         {
             "kanji": "着色する",
-            "furigana": "ちゃくしょくする",
+            "hiragana": "ちゃくしょくする",
             "english": "colouring; coloring; colorant",
             "jlpt": "n1"
         },
         {
             "kanji": "休学する",
-            "furigana": "きゅうがくする",
+            "hiragana": "きゅうがくする",
             "english": "temporary absence from school",
             "jlpt": "n1"
         },
         {
             "kanji": "並列する",
-            "furigana": "へいれつする",
+            "hiragana": "へいれつする",
             "english": "arranging in a line; standing in a row",
             "jlpt": "n1"
         },
         {
             "kanji": "点火する",
-            "furigana": "てんかする",
+            "hiragana": "てんかする",
             "english": "ignition; lighting; firing; setting off",
             "jlpt": "n1"
         },
         {
             "kanji": "化合する",
-            "furigana": "かごうする",
+            "hiragana": "かごうする",
             "english": "chemical combination",
             "jlpt": "n1"
         },
         {
             "kanji": "減点する",
-            "furigana": "げんてんする",
+            "hiragana": "げんてんする",
             "english": "subtracting points",
             "jlpt": "n1"
         },
         {
             "kanji": "よそ見する",
-            "furigana": "よそみする",
+            "hiragana": "よそみする",
             "english": "looking away; looking aside",
             "jlpt": "n1"
         },
         {
             "kanji": "冷蔵する",
-            "furigana": "れいぞうする",
+            "hiragana": "れいぞうする",
             "english": "cold storage; refrigeration",
             "jlpt": "n1"
         },
         {
             "kanji": "嗜好する",
-            "furigana": "しこうする",
+            "hiragana": "しこうする",
             "english": "taste; liking; preference",
             "jlpt": "n1"
         },
         {
             "kanji": "駆けっこする",
-            "furigana": "かけっこする",
+            "hiragana": "かけっこする",
             "english": "(foot) race; sprint",
             "jlpt": "n1"
         },
         {
             "kanji": "夜行する",
-            "furigana": "やこうする",
+            "hiragana": "やこうする",
             "english": "walking around at night; night travel",
             "jlpt": "n1"
         },
         {
             "kanji": "進呈する",
-            "furigana": "しんていする",
+            "hiragana": "しんていする",
             "english": "presentation (e.g. of a gift)",
             "jlpt": "n1"
         },
         {
             "kanji": "来場する",
-            "furigana": "らいじょうする",
+            "hiragana": "らいじょうする",
             "english": "attendance",
             "jlpt": "n1"
         },
         {
             "kanji": "修学する",
-            "furigana": "しゅうがくする",
+            "hiragana": "しゅうがくする",
             "english": "learning",
             "jlpt": "n1"
         },
         {
             "kanji": "特派する",
-            "furigana": "とくはする",
+            "hiragana": "とくはする",
             "english": "send specially; special envoy",
             "jlpt": "n1"
         },
         {
             "kanji": "切開する",
-            "furigana": "せっかいする",
+            "hiragana": "せっかいする",
             "english": "incision; operation; section",
             "jlpt": "n1"
         },
         {
             "kanji": "宣教する",
-            "furigana": "せんきょうする",
+            "hiragana": "せんきょうする",
             "english": "religious mission; religious proclamation",
             "jlpt": "n1"
         },
         {
             "kanji": "改悪する",
-            "furigana": "かいあくする",
+            "hiragana": "かいあくする",
             "english": "changing (something) for the worse; disimprovement; deterioration",
             "jlpt": "n1"
         },
         {
             "kanji": "概説する",
-            "furigana": "がいせつする",
+            "hiragana": "がいせつする",
             "english": "overview; outline; rough summary",
             "jlpt": "n1"
         },
         {
             "kanji": "観覧する",
-            "furigana": "かんらんする",
+            "hiragana": "かんらんする",
             "english": "viewing",
             "jlpt": "n1"
         },
         {
             "kanji": "転任する",
-            "furigana": "てんにんする",
+            "hiragana": "てんにんする",
             "english": "change of post",
             "jlpt": "n1"
         },
         {
             "kanji": "慣用する",
-            "furigana": "かんようする",
+            "hiragana": "かんようする",
             "english": "customary use; common usage; general usage",
             "jlpt": "n1"
         },
         {
             "kanji": "兼業する",
-            "furigana": "けんぎょうする",
+            "hiragana": "けんぎょうする",
             "english": "perusing as a side business; doing in addition to one's main work; running (businesses) simultaneously",
             "jlpt": "n1"
         },
         {
             "kanji": "隠居する",
-            "furigana": "いんきょする",
+            "hiragana": "いんきょする",
             "english": "retirement (from work); leading a quiet life (after retirement)",
             "jlpt": "n1"
         },
         {
             "kanji": "転回する",
-            "furigana": "てんかいする",
+            "hiragana": "てんかいする",
             "english": "revolution; rotation",
             "jlpt": "n1"
         },
         {
             "kanji": "ど忘れする",
-            "furigana": "どわすれする",
+            "hiragana": "どわすれする",
             "english": "lapse of memory; (something) slipping one's mind; forgetting for a moment something one knows well",
             "jlpt": "n1"
         },
         {
             "kanji": "ちやほやする",
-            "furigana": "ちやほやする",
+            "hiragana": "ちやほやする",
             "english": "to make a fuss over; to pamper; to spoil; to indulge; to flatter (with attention)",
             "jlpt": "n1"
         },
         {
             "kanji": "すんなりする",
-            "furigana": "すんなりする",
+            "hiragana": "すんなりする",
             "english": "slim; slender; lithe; supple",
             "jlpt": "n1"
         },
         {
             "kanji": "沈澱する",
-            "furigana": "ちんでんする",
+            "hiragana": "ちんでんする",
             "english": "precipitation; deposition; settlement (e.g. of sediment)",
             "jlpt": "n1"
         },
         {
             "kanji": "パンクする",
-            "furigana": "パンクする",
+            "hiragana": "パンクする",
             "english": "puncture; flat tyre (tire); blowout",
             "jlpt": "n1"
         },
         {
             "kanji": "チェンジする",
-            "furigana": "チェンジする",
+            "hiragana": "チェンジする",
             "english": "change; changing",
             "jlpt": "n1"
         },
         {
             "kanji": "マッサージする",
-            "furigana": "マッサージする",
+            "hiragana": "マッサージする",
             "english": "massage",
             "jlpt": "n1"
         },
         {
             "kanji": "ダンプする",
-            "furigana": "ダンプする",
+            "hiragana": "ダンプする",
             "english": "dump",
             "jlpt": "n1"
         },
         {
             "kanji": "一敗する",
-            "furigana": "いっぱいする",
+            "hiragana": "いっぱいする",
             "english": "one defeat",
             "jlpt": "n1"
         },
         {
             "kanji": "一別する",
-            "furigana": "いちべつする",
+            "hiragana": "いちべつする",
             "english": "parting",
             "jlpt": "n1"
         },
         {
             "kanji": "講読する",
-            "furigana": "こうどくする",
+            "hiragana": "こうどくする",
             "english": "reading; translation",
             "jlpt": "n1"
         },
         {
             "kanji": "謝絶する",
-            "furigana": "しゃぜつする",
+            "hiragana": "しゃぜつする",
             "english": "refusal; declining",
             "jlpt": "n1"
         },
         {
             "kanji": "局限する",
-            "furigana": "きょくげんする",
+            "hiragana": "きょくげんする",
             "english": "limit; localize; localise",
             "jlpt": "n1"
         },
         {
             "kanji": "参上する",
-            "furigana": "さんじょうする",
+            "hiragana": "さんじょうする",
             "english": "calling on; visiting",
             "jlpt": "n1"
         },
         {
             "kanji": "吹奏する",
-            "furigana": "すいそうする",
+            "hiragana": "すいそうする",
             "english": "playing (a wind instrument); blowing",
             "jlpt": "n1"
         },
         {
             "kanji": "下番する",
-            "furigana": "かばんする",
+            "hiragana": "かばんする",
             "english": "going off duty",
             "jlpt": "n1"
         },
         {
             "kanji": "ぶかぶかする",
-            "furigana": "ぶかぶかする",
+            "hiragana": "ぶかぶかする",
             "english": "too large (clothing); baggy; loose-fitting",
             "jlpt": "n1"
         },
         {
             "kanji": "きちっとする",
-            "furigana": "きちっとする",
+            "hiragana": "きちっとする",
             "english": "exactly; perfectly",
             "jlpt": "n1"
         },
         {
             "kanji": "カットする",
-            "furigana": "カットする",
+            "hiragana": "カットする",
             "english": "cut; cutting",
             "jlpt": "n1"
         },
         {
             "kanji": "カムバックする",
-            "furigana": "カムバックする",
+            "hiragana": "カムバックする",
             "english": "comeback",
             "jlpt": "n1"
         },
         {
             "kanji": "ひょっとする",
-            "furigana": "ひょっとする",
+            "hiragana": "ひょっとする",
             "english": "possibly; perhaps; perchance",
             "jlpt": "n1"
         },
         {
             "kanji": "げっそりする",
-            "furigana": "げっそりする",
+            "hiragana": "げっそりする",
             "english": "to be disheartened; to be dejected; to be discouraged; to be disappointed",
             "jlpt": "n1"
         },
         {
             "kanji": "お喋りする",
-            "furigana": "おしゃべりする",
+            "hiragana": "おしゃべりする",
             "english": "chattering; talk; idle talk; chat; chitchat; gossip",
             "jlpt": "n1"
         },
         {
             "kanji": "悪戯する",
-            "furigana": "いたずらする",
+            "hiragana": "いたずらする",
             "english": "mischief; prank; trick; practical joke",
             "jlpt": "n1"
         },
         {
             "kanji": "一定する",
-            "furigana": "いっていする",
+            "hiragana": "いっていする",
             "english": "fixed; settled; constant; definite; uniform; regularized; regularised; defined; standardized; standardised; certain; prescribed",
             "jlpt": "n1"
         },
         {
             "kanji": "非難する",
-            "furigana": "ひなんする",
+            "hiragana": "ひなんする",
             "english": "criticism; blame; censure; attack; reproach",
             "jlpt": "n1"
         },
         {
             "kanji": "貧乏する",
-            "furigana": "びんぼうする",
+            "hiragana": "びんぼうする",
             "english": "poverty-stricken; destitute; poor; penurious",
             "jlpt": "n1"
         },
         {
             "kanji": "浮気する",
-            "furigana": "うわきする",
+            "hiragana": "うわきする",
             "english": "extramarital sex; affair; fooling around",
             "jlpt": "n1"
         },
         {
             "kanji": "始末する",
-            "furigana": "しまつする",
+            "hiragana": "しまつする",
             "english": "management; dealing with; settlement; cleaning up; disposal",
             "jlpt": "n1"
         },
         {
             "kanji": "寛容する",
-            "furigana": "かんようする",
+            "hiragana": "かんようする",
             "english": "tolerance; open-mindedness; forbearance; generosity; magnanimity",
             "jlpt": "n1"
         },
         {
             "kanji": "倹約する",
-            "furigana": "けんやくする",
+            "hiragana": "けんやくする",
             "english": "thrift; economy; frugality",
             "jlpt": "n1"
         },
         {
             "kanji": "閉口する",
-            "furigana": "へいこうする",
+            "hiragana": "へいこうする",
             "english": "to be stumped; to be at a loss; to be at one's wits' end; to be nonplussed",
             "jlpt": "n1"
         },
         {
             "kanji": "中和する",
-            "furigana": "ちゅうわする",
+            "hiragana": "ちゅうわする",
             "english": "neutralization; neutralisation; counteraction",
             "jlpt": "n1"
         },
         {
             "kanji": "オープンする",
-            "furigana": "オープンする",
+            "hiragana": "オープンする",
             "english": "opening (a new store, golf course, runway, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "オープンする",
-            "furigana": "オープンする",
+            "hiragana": "オープンする",
             "english": "opening (a new store, golf course, runway, etc.)",
             "jlpt": "n1"
         },
         {
             "kanji": "彼方此方する",
-            "furigana": "あちこちする",
+            "hiragana": "あちこちする",
             "english": "here and there; various places; all around; all over; everywhere; throughout",
             "jlpt": "n1"
         },
         {
             "kanji": "並行する",
-            "furigana": "へいこうする",
+            "hiragana": "へいこうする",
             "english": "going side-by-side; going abreast",
             "jlpt": "n1"
         },
         {
             "kanji": "相応する",
-            "furigana": "そうおうする",
+            "hiragana": "そうおうする",
             "english": "suitable; appropriate; befitting; becoming; adequate; reasonable; proper",
             "jlpt": "n1"
         },
         {
             "kanji": "ぶらぶらする",
-            "furigana": "ぶらぶらする",
+            "hiragana": "ぶらぶらする",
             "english": "dangling; swaying; swinging",
             "jlpt": "n1"
         },
         {
             "kanji": "だぶだぶする",
-            "furigana": "だぶだぶする",
+            "hiragana": "だぶだぶする",
             "english": "loose (of clothing); baggy",
             "jlpt": "n1"
         },
         {
             "kanji": "強行する",
-            "furigana": "きょうこうする",
+            "hiragana": "きょうこうする",
             "english": "forcing (e.g. a vote); carrying out (forcibly); pushing ahead (with); enforcement",
             "jlpt": "n1"
         },
         {
             "kanji": "気兼ねする",
-            "furigana": "きがねする",
+            "hiragana": "きがねする",
             "english": "constraint; reserve; feeling hesitant; being afraid of troubling someone",
             "jlpt": "n1"
         },
         {
             "kanji": "ぶかぶかする",
-            "furigana": "ぶかぶかする",
+            "hiragana": "ぶかぶかする",
             "english": "too large (clothing); baggy; loose-fitting",
             "jlpt": "n1"
         }
@@ -17504,7 +17504,7 @@ export const jisho = {
     "kuru_verb": [
         {
             "kanji": "来る",
-            "furigana": "くる",
+            "hiragana": "くる",
             "english": "to come (spatially or temporally); to approach; to arrive",
             "jlpt": "n5"
         }
@@ -17512,1561 +17512,1561 @@ export const jisho = {
     "i_adjective": [
         {
             "kanji": "可愛い",
-            "furigana": "かわいい",
+            "hiragana": "かわいい",
             "english": "cute; adorable; charming; lovely; pretty",
             "jlpt": "n5"
         },
         {
             "kanji": "良い",
-            "furigana": "よい",
+            "hiragana": "よい",
             "english": "good; excellent; fine; nice; pleasant; agreeable",
             "jlpt": "n5"
         },
         {
             "kanji": "新しい",
-            "furigana": "あたらしい",
+            "hiragana": "あたらしい",
             "english": "new; novel; fresh; recent; latest; up-to-date; modern",
             "jlpt": "n5"
         },
         {
             "kanji": "欲しい",
-            "furigana": "ほしい",
+            "hiragana": "ほしい",
             "english": "wanting (to have); desiring; wishing for",
             "jlpt": "n5"
         },
         {
             "kanji": "長い",
-            "furigana": "ながい",
+            "hiragana": "ながい",
             "english": "long (distance, length)",
             "jlpt": "n5"
         },
         {
             "kanji": "高い",
-            "furigana": "たかい",
+            "hiragana": "たかい",
             "english": "high; tall",
             "jlpt": "n5"
         },
         {
             "kanji": "難しい",
-            "furigana": "むずかしい",
+            "hiragana": "むずかしい",
             "english": "difficult; hard; troublesome; complicated; serious (disease, problem, etc.)",
             "jlpt": "n5"
         },
         {
             "kanji": "忙しい",
-            "furigana": "いそがしい",
+            "hiragana": "いそがしい",
             "english": "busy; occupied; hectic",
             "jlpt": "n5"
         },
         {
             "kanji": "早い",
-            "furigana": "はやい",
+            "hiragana": "はやい",
             "english": "fast; quick; rapid; swift; speedy; brisk; prompt",
             "jlpt": "n5"
         },
         {
             "kanji": "楽しい",
-            "furigana": "たのしい",
+            "hiragana": "たのしい",
             "english": "enjoyable; fun; pleasant; happy; delightful",
             "jlpt": "n5"
         },
         {
             "kanji": "面白い",
-            "furigana": "おもしろい",
+            "hiragana": "おもしろい",
             "english": "interesting; fascinating; intriguing; enthralling",
             "jlpt": "n5"
         },
         {
             "kanji": "古い",
-            "furigana": "ふるい",
+            "hiragana": "ふるい",
             "english": "old; aged; ancient; antiquated; antique; timeworn",
             "jlpt": "n5"
         },
         {
             "kanji": "強い",
-            "furigana": "つよい",
+            "hiragana": "つよい",
             "english": "strong; potent; competent; domineering; tough",
             "jlpt": "n5"
         },
         {
             "kanji": "大きい",
-            "furigana": "おおきい",
+            "hiragana": "おおきい",
             "english": "big; large; great",
             "jlpt": "n5"
         },
         {
             "kanji": "遅い",
-            "furigana": "おそい",
+            "hiragana": "おそい",
             "english": "slow; time-consuming; sluggish",
             "jlpt": "n5"
         },
         {
             "kanji": "小さい",
-            "furigana": "ちいさい",
+            "hiragana": "ちいさい",
             "english": "small; little; tiny",
             "jlpt": "n5"
         },
         {
             "kanji": "暖かい",
-            "furigana": "あたたかい",
+            "hiragana": "あたたかい",
             "english": "warm; mild; (pleasantly) hot",
             "jlpt": "n5"
         },
         {
             "kanji": "白い",
-            "furigana": "しろい",
+            "hiragana": "しろい",
             "english": "white",
             "jlpt": "n5"
         },
         {
             "kanji": "少ない",
-            "furigana": "すくない",
+            "hiragana": "すくない",
             "english": "few; a little; scarce; insufficient; seldom",
             "jlpt": "n5"
         },
         {
             "kanji": "赤い",
-            "furigana": "あかい",
+            "hiragana": "あかい",
             "english": "red; crimson; scarlet; vermilion",
             "jlpt": "n5"
         },
         {
             "kanji": "広い",
-            "furigana": "ひろい",
+            "hiragana": "ひろい",
             "english": "spacious; vast; wide",
             "jlpt": "n5"
         },
         {
             "kanji": "明るい",
-            "furigana": "あかるい",
+            "hiragana": "あかるい",
             "english": "light; well-lit; well-lighted",
             "jlpt": "n5"
         },
         {
             "kanji": "近い",
-            "furigana": "ちかい",
+            "hiragana": "ちかい",
             "english": "near; close; short (distance)",
             "jlpt": "n5"
         },
         {
             "kanji": "痛い",
-            "furigana": "いたい",
+            "hiragana": "いたい",
             "english": "painful; sore",
             "jlpt": "n5"
         },
         {
             "kanji": "弱い",
-            "furigana": "よわい",
+            "hiragana": "よわい",
             "english": "weak; frail; delicate; tender; unskilled; weak (wine)",
             "jlpt": "n5"
         },
         {
             "kanji": "黒い",
-            "furigana": "くろい",
+            "hiragana": "くろい",
             "english": "black",
             "jlpt": "n5"
         },
         {
             "kanji": "熱い",
-            "furigana": "あつい",
+            "hiragana": "あつい",
             "english": "hot (to the touch)",
             "jlpt": "n5"
         },
         {
             "kanji": "甘い",
-            "furigana": "あまい",
+            "hiragana": "あまい",
             "english": "sweet-tasting; sweet; sugary; sugared",
             "jlpt": "n5"
         },
         {
             "kanji": "低い",
-            "furigana": "ひくい",
+            "hiragana": "ひくい",
             "english": "low (rank, degree, value, content, quality, etc.)",
             "jlpt": "n5"
         },
         {
             "kanji": "丸い",
-            "furigana": "まるい",
+            "hiragana": "まるい",
             "english": "round; circular; spherical",
             "jlpt": "n5"
         },
         {
             "kanji": "薄い",
-            "furigana": "うすい",
+            "hiragana": "うすい",
             "english": "thin (of an object)",
             "jlpt": "n5"
         },
         {
             "kanji": "細い",
-            "furigana": "ほそい",
+            "hiragana": "ほそい",
             "english": "thin; slender; fine",
             "jlpt": "n5"
         },
         {
             "kanji": "太い",
-            "furigana": "ふとい",
+            "hiragana": "ふとい",
             "english": "fat; thick",
             "jlpt": "n5"
         },
         {
             "kanji": "悪い",
-            "furigana": "わるい",
+            "hiragana": "わるい",
             "english": "bad; poor; undesirable",
             "jlpt": "n5"
         },
         {
             "kanji": "多い",
-            "furigana": "おおい",
+            "hiragana": "おおい",
             "english": "many; numerous; a lot",
             "jlpt": "n5"
         },
         {
             "kanji": "若い",
-            "furigana": "わかい",
+            "hiragana": "わかい",
             "english": "young; youthful",
             "jlpt": "n5"
         },
         {
             "kanji": "寒い",
-            "furigana": "さむい",
+            "hiragana": "さむい",
             "english": "cold (e.g. weather)",
             "jlpt": "n5"
         },
         {
             "kanji": "暑い",
-            "furigana": "あつい",
+            "hiragana": "あつい",
             "english": "hot; warm; sultry; heated",
             "jlpt": "n5"
         },
         {
             "kanji": "暗い",
-            "furigana": "くらい",
+            "hiragana": "くらい",
             "english": "dark; gloomy; murky",
             "jlpt": "n5"
         },
         {
             "kanji": "重い",
-            "furigana": "おもい",
+            "hiragana": "おもい",
             "english": "heavy; weighty",
             "jlpt": "n5"
         },
         {
             "kanji": "美味しい",
-            "furigana": "おいしい",
+            "hiragana": "おいしい",
             "english": "good(-tasting); nice; delicious; tasty",
             "jlpt": "n5"
         },
         {
             "kanji": "易しい",
-            "furigana": "やさしい",
+            "hiragana": "やさしい",
             "english": "easy; plain; simple",
             "jlpt": "n5"
         },
         {
             "kanji": "安い",
-            "furigana": "やすい",
+            "hiragana": "やすい",
             "english": "cheap; inexpensive",
             "jlpt": "n5"
         },
         {
             "kanji": "遠い",
-            "furigana": "とおい",
+            "hiragana": "とおい",
             "english": "far; distant; far away; a long way off; in the distance",
             "jlpt": "n5"
         },
         {
             "kanji": "短い",
-            "furigana": "みじかい",
+            "hiragana": "みじかい",
             "english": "short",
             "jlpt": "n5"
         },
         {
             "kanji": "冷たい",
-            "furigana": "つめたい",
+            "hiragana": "つめたい",
             "english": "cold (to the touch); chilly; icy; freezing",
             "jlpt": "n5"
         },
         {
             "kanji": "青い",
-            "furigana": "あおい",
+            "hiragana": "あおい",
             "english": "blue; azure",
             "jlpt": "n5"
         },
         {
             "kanji": "狭い",
-            "furigana": "せまい",
+            "hiragana": "せまい",
             "english": "narrow; confined; small; cramped",
             "jlpt": "n5"
         },
         {
             "kanji": "軽い",
-            "furigana": "かるい",
+            "hiragana": "かるい",
             "english": "light (i.e. not heavy); feeling light (i.e. offering little resistance, moving easily)",
             "jlpt": "n5"
         },
         {
             "kanji": "煩い",
-            "furigana": "うるさい",
+            "hiragana": "うるさい",
             "english": "noisy; loud",
             "jlpt": "n5"
         },
         {
             "kanji": "詰らない",
-            "furigana": "つまらない",
+            "hiragana": "つまらない",
             "english": "dull; uninteresting; boring; tedious",
             "jlpt": "n5"
         },
         {
             "kanji": "涼しい",
-            "furigana": "すずしい",
+            "hiragana": "すずしい",
             "english": "cool; refreshing",
             "jlpt": "n5"
         },
         {
             "kanji": "厚い",
-            "furigana": "あつい",
+            "hiragana": "あつい",
             "english": "thick; deep; heavy",
             "jlpt": "n5"
         },
         {
             "kanji": "危ない",
-            "furigana": "あぶない",
+            "hiragana": "あぶない",
             "english": "dangerous; risky; hazardous; perilous; precarious",
             "jlpt": "n5"
         },
         {
             "kanji": "汚い",
-            "furigana": "きたない",
+            "hiragana": "きたない",
             "english": "dirty; filthy; foul; unclean",
             "jlpt": "n5"
         },
         {
             "kanji": "不味い",
-            "furigana": "まずい",
+            "hiragana": "まずい",
             "english": "bad (taste); unpalatable; unsavoury; unsavory; awful; terrible; unpleasant",
             "jlpt": "n5"
         },
         {
             "kanji": "黄色い",
-            "furigana": "きいろい",
+            "hiragana": "きいろい",
             "english": "yellow",
             "jlpt": "n5"
         },
         {
             "kanji": "辛い",
-            "furigana": "からい",
+            "hiragana": "からい",
             "english": "spicy; hot",
             "jlpt": "n5"
         },
         {
             "kanji": "温い",
-            "furigana": "ぬるい",
+            "hiragana": "ぬるい",
             "english": "lukewarm; tepid",
             "jlpt": "n5"
         },
         {
             "kanji": "美しい",
-            "furigana": "うつくしい",
+            "hiragana": "うつくしい",
             "english": "beautiful; pretty; lovely; sweet; pure (heart, friendship, etc.)",
             "jlpt": "n4"
         },
         {
             "kanji": "正しい",
-            "furigana": "ただしい",
+            "hiragana": "ただしい",
             "english": "right; correct",
             "jlpt": "n4"
         },
         {
             "kanji": "深い",
-            "furigana": "ふかい",
+            "hiragana": "ふかい",
             "english": "deep",
             "jlpt": "n4"
         },
         {
             "kanji": "優しい",
-            "furigana": "やさしい",
+            "hiragana": "やさしい",
             "english": "tender; kind; gentle; graceful; affectionate; amiable",
             "jlpt": "n4"
         },
         {
             "kanji": "厳しい",
-            "furigana": "きびしい",
+            "hiragana": "きびしい",
             "english": "severe; strict; rigid; unsparing; relentless",
             "jlpt": "n4"
         },
         {
             "kanji": "怖い",
-            "furigana": "こわい",
+            "hiragana": "こわい",
             "english": "scary; frightening; eerie; dreadful",
             "jlpt": "n4"
         },
         {
             "kanji": "可笑しい",
-            "furigana": "おかしい",
+            "hiragana": "おかしい",
             "english": "funny; amusing; comical; laughable; ridiculous",
             "jlpt": "n4"
         },
         {
             "kanji": "柔らかい",
-            "furigana": "やわらかい",
+            "hiragana": "やわらかい",
             "english": "soft; tender; supple; flexible; limber; limp",
             "jlpt": "n4"
         },
         {
             "kanji": "細かい",
-            "furigana": "こまかい",
+            "hiragana": "こまかい",
             "english": "small",
             "jlpt": "n4"
         },
         {
             "kanji": "苦い",
-            "furigana": "にがい",
+            "hiragana": "にがい",
             "english": "bitter",
             "jlpt": "n4"
         },
         {
             "kanji": "酷い",
-            "furigana": "ひどい",
+            "hiragana": "ひどい",
             "english": "cruel; heartless; hard; harsh; severe",
             "jlpt": "n4"
         },
         {
             "kanji": "悲しい",
-            "furigana": "かなしい",
+            "hiragana": "かなしい",
             "english": "sad; miserable; unhappy; sorrowful",
             "jlpt": "n4"
         },
         {
             "kanji": "恥ずかしい",
-            "furigana": "はずかしい",
+            "hiragana": "はずかしい",
             "english": "embarrassing; embarrassed; ashamed; humiliated; shy",
             "jlpt": "n4"
         },
         {
             "kanji": "硬い",
-            "furigana": "かたい",
+            "hiragana": "かたい",
             "english": "hard; solid; tough",
             "jlpt": "n4"
         },
         {
             "kanji": "凄い",
-            "furigana": "すごい",
+            "hiragana": "すごい",
             "english": "terrible; dreadful",
             "jlpt": "n4"
         },
         {
             "kanji": "寂しい",
-            "furigana": "さびしい",
+            "hiragana": "さびしい",
             "english": "lonely; lonesome; solitary; desolate",
             "jlpt": "n4"
         },
         {
             "kanji": "珍しい",
-            "furigana": "めずらしい",
+            "hiragana": "めずらしい",
             "english": "unusual; rare; curious",
             "jlpt": "n4"
         },
         {
             "kanji": "眠い",
-            "furigana": "ねむい",
+            "hiragana": "ねむい",
             "english": "sleepy; drowsy; somnolent",
             "jlpt": "n4"
         },
         {
             "kanji": "浅い",
-            "furigana": "あさい",
+            "hiragana": "あさい",
             "english": "shallow; superficial",
             "jlpt": "n4"
         },
         {
             "kanji": "良い",
-            "furigana": "よい",
+            "hiragana": "よい",
             "english": "good; excellent; fine; nice; pleasant; agreeable",
             "jlpt": "n3"
         },
         {
             "kanji": "暖かい",
-            "furigana": "あたたかい",
+            "hiragana": "あたたかい",
             "english": "warm; mild; (pleasantly) hot",
             "jlpt": "n3"
         },
         {
             "kanji": "丸い",
-            "furigana": "まるい",
+            "hiragana": "まるい",
             "english": "round; circular; spherical",
             "jlpt": "n3"
         },
         {
             "kanji": "硬い",
-            "furigana": "かたい",
+            "hiragana": "かたい",
             "english": "hard; solid; tough",
             "jlpt": "n3"
         },
         {
             "kanji": "凄い",
-            "furigana": "すごい",
+            "hiragana": "すごい",
             "english": "terrible; dreadful",
             "jlpt": "n3"
         },
         {
             "kanji": "素晴らしい",
-            "furigana": "すばらしい",
+            "hiragana": "すばらしい",
             "english": "wonderful; splendid; magnificent",
             "jlpt": "n3"
         },
         {
             "kanji": "激しい",
-            "furigana": "はげしい",
+            "hiragana": "はげしい",
             "english": "violent; furious; tempestuous",
             "jlpt": "n3"
         },
         {
             "kanji": "貧しい",
-            "furigana": "まずしい",
+            "hiragana": "まずしい",
             "english": "poor; needy",
             "jlpt": "n3"
         },
         {
             "kanji": "恐ろしい",
-            "furigana": "おそろしい",
+            "hiragana": "おそろしい",
             "english": "terrible; dreadful; terrifying; frightening",
             "jlpt": "n3"
         },
         {
             "kanji": "親しい",
-            "furigana": "したしい",
+            "hiragana": "したしい",
             "english": "close (e.g. friend); familiar; friendly; intimate",
             "jlpt": "n3"
         },
         {
             "kanji": "詳しい",
-            "furigana": "くわしい",
+            "hiragana": "くわしい",
             "english": "detailed; full; minute",
             "jlpt": "n3"
         },
         {
             "kanji": "鋭い",
-            "furigana": "するどい",
+            "hiragana": "するどい",
             "english": "sharp (knife, claws, etc.); pointed",
             "jlpt": "n3"
         },
         {
             "kanji": "苦しい",
-            "furigana": "くるしい",
+            "hiragana": "くるしい",
             "english": "painful; difficult; tough; hard",
             "jlpt": "n3"
         },
         {
             "kanji": "嬉しい",
-            "furigana": "うれしい",
+            "hiragana": "うれしい",
             "english": "happy; glad; pleased; delighted; overjoyed",
             "jlpt": "n3"
         },
         {
             "kanji": "宜しい",
-            "furigana": "よろしい",
+            "hiragana": "よろしい",
             "english": "good; OK; all right; fine; very well; will do; may; can",
             "jlpt": "n3"
         },
         {
             "kanji": "賢い",
-            "furigana": "かしこい",
+            "hiragana": "かしこい",
             "english": "wise; clever; smart",
             "jlpt": "n3"
         },
         {
             "kanji": "堪らない",
-            "furigana": "たまらない",
+            "hiragana": "たまらない",
             "english": "intolerable; unbearable; unendurable",
             "jlpt": "n3"
         },
         {
             "kanji": "濃い",
-            "furigana": "こい",
+            "hiragana": "こい",
             "english": "deep (colour); dark",
             "jlpt": "n3"
         },
         {
             "kanji": "臭い",
-            "furigana": "くさい",
+            "hiragana": "くさい",
             "english": "stinking; smelly",
             "jlpt": "n3"
         },
         {
             "kanji": "幼い",
-            "furigana": "おさない",
+            "hiragana": "おさない",
             "english": "very young; little",
             "jlpt": "n3"
         },
         {
             "kanji": "等しい",
-            "furigana": "ひとしい",
+            "hiragana": "ひとしい",
             "english": "equal; identical; the same",
             "jlpt": "n3"
         },
         {
             "kanji": "可愛らしい",
-            "furigana": "かわいらしい",
+            "hiragana": "かわいらしい",
             "english": "lovely; sweet; pretty; cute; adorable",
             "jlpt": "n3"
         },
         {
             "kanji": "粗い",
-            "furigana": "あらい",
+            "hiragana": "あらい",
             "english": "coarse; rough",
             "jlpt": "n3"
         },
         {
             "kanji": "違いない",
-            "furigana": "ちがいない",
+            "hiragana": "ちがいない",
             "english": "sure; no mistaking it; for certain; without doubt",
             "jlpt": "n3"
         },
         {
             "kanji": "旨い",
-            "furigana": "うまい",
+            "hiragana": "うまい",
             "english": "skillful; skilful; skilled; good; expert; clever (expression, trick, etc.); apt; appropriate",
             "jlpt": "n3"
         },
         {
             "kanji": "きつい",
-            "furigana": "きつい",
+            "hiragana": "きつい",
             "english": "tough; hard; severe; demanding; harsh",
             "jlpt": "n3"
         },
         {
             "kanji": "行けない",
-            "furigana": "いけない",
+            "hiragana": "いけない",
             "english": "bad; wrong; naughty",
             "jlpt": "n3"
         },
         {
             "kanji": "辛い-1",
-            "furigana": "つらい",
+            "hiragana": "つらい",
             "english": "painful; bitter; heart-breaking; difficult (emotionally)",
             "jlpt": "n3"
         },
         {
             "kanji": "とんでも無い",
-            "furigana": "とんでもない",
+            "hiragana": "とんでもない",
             "english": "unthinkable; unexpected; absurd; outrageous; preposterous; terrible",
             "jlpt": "n3"
         },
         {
             "kanji": "長い",
-            "furigana": "ながい",
+            "hiragana": "ながい",
             "english": "long (distance, length)",
             "jlpt": "n2"
         },
         {
             "kanji": "丸い",
-            "furigana": "まるい",
+            "hiragana": "まるい",
             "english": "round; circular; spherical",
             "jlpt": "n2"
         },
         {
             "kanji": "柔らかい",
-            "furigana": "やわらかい",
+            "hiragana": "やわらかい",
             "english": "soft; tender; supple; flexible; limber; limp",
             "jlpt": "n2"
         },
         {
             "kanji": "硬い",
-            "furigana": "かたい",
+            "hiragana": "かたい",
             "english": "hard; solid; tough",
             "jlpt": "n2"
         },
         {
             "kanji": "粗い",
-            "furigana": "あらい",
+            "hiragana": "あらい",
             "english": "coarse; rough",
             "jlpt": "n2"
         },
         {
             "kanji": "懐かしい",
-            "furigana": "なつかしい",
+            "hiragana": "なつかしい",
             "english": "dear (old); fondly-remembered; beloved; missed; nostalgic",
             "jlpt": "n2"
         },
         {
             "kanji": "危うい",
-            "furigana": "あやうい",
+            "hiragana": "あやうい",
             "english": "dangerous; in danger; facing imminent danger",
             "jlpt": "n2"
         },
         {
             "kanji": "薄暗い",
-            "furigana": "うすぐらい",
+            "hiragana": "うすぐらい",
             "english": "dim; gloomy",
             "jlpt": "n2"
         },
         {
             "kanji": "力強い",
-            "furigana": "ちからづよい",
+            "hiragana": "ちからづよい",
             "english": "powerful; strong; forceful; vigorous",
             "jlpt": "n2"
         },
         {
             "kanji": "酸っぱい",
-            "furigana": "すっぱい",
+            "hiragana": "すっぱい",
             "english": "sour; acid",
             "jlpt": "n2"
         },
         {
             "kanji": "羨ましい",
-            "furigana": "うらやましい",
+            "hiragana": "うらやましい",
             "english": "envious; jealous",
             "jlpt": "n2"
         },
         {
             "kanji": "有難い",
-            "furigana": "ありがたい",
+            "hiragana": "ありがたい",
             "english": "grateful; thankful; welcome; appreciated; evoking gratitude",
             "jlpt": "n2"
         },
         {
             "kanji": "騒がしい",
-            "furigana": "さわがしい",
+            "hiragana": "さわがしい",
             "english": "noisy; boisterous",
             "jlpt": "n2"
         },
         {
             "kanji": "怪しい",
-            "furigana": "あやしい",
+            "hiragana": "あやしい",
             "english": "suspicious; dubious; questionable; dodgy; shady; fishy",
             "jlpt": "n2"
         },
         {
             "kanji": "物凄い",
-            "furigana": "ものすごい",
+            "hiragana": "ものすごい",
             "english": "terrific; staggering; tremendous; incredible; extreme",
             "jlpt": "n2"
         },
         {
             "kanji": "偉い",
-            "furigana": "えらい",
+            "hiragana": "えらい",
             "english": "great; excellent; admirable; remarkable; distinguished; important; celebrated; famous; eminent",
             "jlpt": "n2"
         },
         {
             "kanji": "大人しい",
-            "furigana": "おとなしい",
+            "hiragana": "おとなしい",
             "english": "gentle; quiet; mild; meek; obedient; docile; well-behaved; tame",
             "jlpt": "n2"
         },
         {
             "kanji": "喧しい",
-            "furigana": "やかましい",
+            "hiragana": "やかましい",
             "english": "noisy; loud; clamorous; boisterous",
             "jlpt": "n2"
         },
         {
             "kanji": "醜い",
-            "furigana": "みにくい",
+            "hiragana": "みにくい",
             "english": "ugly; unattractive; bad-looking",
             "jlpt": "n2"
         },
         {
             "kanji": "申し訳ない",
-            "furigana": "もうしわけない",
+            "hiragana": "もうしわけない",
             "english": "I'm sorry; (it's) inexcusable; I feel regretful; I feel guilty",
             "jlpt": "n2"
         },
         {
             "kanji": "厚かましい",
-            "furigana": "あつかましい",
+            "hiragana": "あつかましい",
             "english": "impudent; shameless; brazen; cheeky; presumptuous",
             "jlpt": "n2"
         },
         {
             "kanji": "思いがけない",
-            "furigana": "おもいがけない",
+            "hiragana": "おもいがけない",
             "english": "unexpected; contrary to expectations; by chance; casual",
             "jlpt": "n2"
         },
         {
             "kanji": "鈍い",
-            "furigana": "にぶい",
+            "hiragana": "にぶい",
             "english": "dull (e.g. a knife); blunt",
             "jlpt": "n2"
         },
         {
             "kanji": "恋しい",
-            "furigana": "こいしい",
+            "hiragana": "こいしい",
             "english": "yearned for; longed for; missed",
             "jlpt": "n2"
         },
         {
             "kanji": "済まない",
-            "furigana": "すまない",
+            "hiragana": "すまない",
             "english": "inexcusable; unjustifiable; unpardonable",
             "jlpt": "n2"
         },
         {
             "kanji": "図々しい",
-            "furigana": "ずうずうしい",
+            "hiragana": "ずうずうしい",
             "english": "impudent; shameless; brazen; forward; audacious; cheeky",
             "jlpt": "n2"
         },
         {
             "kanji": "蒸し暑い",
-            "furigana": "むしあつい",
+            "hiragana": "むしあつい",
             "english": "humid; sultry",
             "jlpt": "n2"
         },
         {
             "kanji": "下らない",
-            "furigana": "くだらない",
+            "hiragana": "くだらない",
             "english": "trivial; trifling; insignificant; not worth bothering with; worthless; useless; good-for-nothing",
             "jlpt": "n2"
         },
         {
             "kanji": "青白い",
-            "furigana": "あおじろい",
+            "hiragana": "あおじろい",
             "english": "pale; pallid",
             "jlpt": "n2"
         },
         {
             "kanji": "険しい",
-            "furigana": "けわしい",
+            "hiragana": "けわしい",
             "english": "precipitous; rugged; inaccessible; impregnable; steep",
             "jlpt": "n2"
         },
         {
             "kanji": "勿体ない",
-            "furigana": "もったいない",
+            "hiragana": "もったいない",
             "english": "wasteful; a waste",
             "jlpt": "n2"
         },
         {
             "kanji": "痒い",
-            "furigana": "かゆい",
+            "hiragana": "かゆい",
             "english": "itchy",
             "jlpt": "n2"
         },
         {
             "kanji": "騒々しい",
-            "furigana": "そうぞうしい",
+            "hiragana": "そうぞうしい",
             "english": "noisy; loud; boisterous; clamorous; raucous",
             "jlpt": "n2"
         },
         {
             "kanji": "惜しい",
-            "furigana": "おしい",
+            "hiragana": "おしい",
             "english": "regrettable; disappointing; unfortunate",
             "jlpt": "n2"
         },
         {
             "kanji": "塩辛い",
-            "furigana": "しおからい",
+            "hiragana": "しおからい",
             "english": "salty (taste); briny",
             "jlpt": "n2"
         },
         {
             "kanji": "重たい",
-            "furigana": "おもたい",
+            "hiragana": "おもたい",
             "english": "heavy; weighty",
             "jlpt": "n2"
         },
         {
             "kanji": "見っともない",
-            "furigana": "みっともない",
+            "hiragana": "みっともない",
             "english": "shameful; disgraceful; unsightly; indecent; unseemly; unbecoming; improper",
             "jlpt": "n2"
         },
         {
             "kanji": "荒い",
-            "furigana": "あらい",
+            "hiragana": "あらい",
             "english": "rough; wild; violent; rude; coarse; harsh; fierce; heavy (e.g. breathing)",
             "jlpt": "n2"
         },
         {
             "kanji": "眩しい",
-            "furigana": "まぶしい",
+            "hiragana": "まぶしい",
             "english": "dazzling; radiant",
             "jlpt": "n2"
         },
         {
             "kanji": "面倒くさい",
-            "furigana": "めんどくさい",
+            "hiragana": "めんどくさい",
             "english": "bothersome; tiresome; bother to do",
             "jlpt": "n2"
         },
         {
             "kanji": "面倒くさい",
-            "furigana": "めんどくさい",
+            "hiragana": "めんどくさい",
             "english": "bothersome; tiresome; bother to do",
             "jlpt": "n2"
         },
         {
             "kanji": "若々しい",
-            "furigana": "わかわかしい",
+            "hiragana": "わかわかしい",
             "english": "youthful; young; young-looking",
             "jlpt": "n2"
         },
         {
             "kanji": "悔しい",
-            "furigana": "くやしい",
+            "hiragana": "くやしい",
             "english": "frustrated (over a failure, humiliation or injustice); annoyed; chagrined; (bitterly) disappointed; bitter; vexed; frustrating; annoying; regrettable",
             "jlpt": "n2"
         },
         {
             "kanji": "目出度い",
-            "furigana": "めでたい",
+            "hiragana": "めでたい",
             "english": "happy; auspicious; propitious; joyous",
             "jlpt": "n2"
         },
         {
             "kanji": "勇ましい",
-            "furigana": "いさましい",
+            "hiragana": "いさましい",
             "english": "brave; valiant; gallant; courageous",
             "jlpt": "n2"
         },
         {
             "kanji": "清い",
-            "furigana": "きよい",
+            "hiragana": "きよい",
             "english": "clean; clear",
             "jlpt": "n2"
         },
         {
             "kanji": "慌ただしい",
-            "furigana": "あわただしい",
+            "hiragana": "あわただしい",
             "english": "busy; hectic; hurried; rushed",
             "jlpt": "n2"
         },
         {
             "kanji": "憎らしい",
-            "furigana": "にくらしい",
+            "hiragana": "にくらしい",
             "english": "odious; hateful; detestable; horrible",
             "jlpt": "n2"
         },
         {
             "kanji": "四角い",
-            "furigana": "しかくい",
+            "hiragana": "しかくい",
             "english": "square; rectangular",
             "jlpt": "n2"
         },
         {
             "kanji": "甚だしい",
-            "furigana": "はなはだしい",
+            "hiragana": "はなはだしい",
             "english": "extreme; excessive; terrible; intense; severe; serious; tremendous; heavy (damage)",
             "jlpt": "n2"
         },
         {
             "kanji": "頼もしい",
-            "furigana": "たのもしい",
+            "hiragana": "たのもしい",
             "english": "reliable; dependable; trustworthy; reassuring",
             "jlpt": "n2"
         },
         {
             "kanji": "馬鹿らしい",
-            "furigana": "ばからしい",
+            "hiragana": "ばからしい",
             "english": "absurd; foolish; stupid; silly; nonsense; ludicrous; preposterous; laughable; ridiculous",
             "jlpt": "n2"
         },
         {
             "kanji": "やむを得ない",
-            "furigana": "やむをえない",
+            "hiragana": "やむをえない",
             "english": "cannot be helped; unavoidable",
             "jlpt": "n2"
         },
         {
             "kanji": "憎い",
-            "furigana": "にくい",
+            "hiragana": "にくい",
             "english": "hateful; detestable; abominable; vexing; provoking",
             "jlpt": "n2"
         },
         {
             "kanji": "お目出度い",
-            "furigana": "おめでたい",
+            "hiragana": "おめでたい",
             "english": "(matter) for congratulations; worthy of celebration; happy (occasion, ending, etc.); joyous; auspicious",
             "jlpt": "n2"
         },
         {
             "kanji": "茶色い",
-            "furigana": "ちゃいろい",
+            "hiragana": "ちゃいろい",
             "english": "light brown; tawny",
             "jlpt": "n2"
         },
         {
             "kanji": "しつこい",
-            "furigana": "しつこい",
+            "hiragana": "しつこい",
             "english": "insistent; obstinate; persistent; tenacious",
             "jlpt": "n2"
         },
         {
             "kanji": "狡い",
-            "furigana": "ずるい",
+            "hiragana": "ずるい",
             "english": "sly; cunning; sneaky; crafty; unfair; dishonest",
             "jlpt": "n2"
         },
         {
             "kanji": "そそっかしい",
-            "furigana": "そそっかしい",
+            "hiragana": "そそっかしい",
             "english": "careless; thoughtless; hasty; rash",
             "jlpt": "n2"
         },
         {
             "kanji": "だらし無い",
-            "furigana": "だらしない",
+            "hiragana": "だらしない",
             "english": "slovenly (appearance, work, etc.); sloppy; untidy; undisciplined; careless; loose; slack",
             "jlpt": "n2"
         },
         {
             "kanji": "緩い",
-            "furigana": "ゆるい",
+            "hiragana": "ゆるい",
             "english": "loose",
             "jlpt": "n2"
         },
         {
             "kanji": "煙い",
-            "furigana": "けむい",
+            "hiragana": "けむい",
             "english": "smoky",
             "jlpt": "n2"
         },
         {
             "kanji": "仕様が無い",
-            "furigana": "しょうがない",
+            "hiragana": "しょうがない",
             "english": "there's no (other) way",
             "jlpt": "n2"
         },
         {
             "kanji": "可愛い",
-            "furigana": "かわいい",
+            "hiragana": "かわいい",
             "english": "cute; adorable; charming; lovely; pretty",
             "jlpt": "n1"
         },
         {
             "kanji": "良い",
-            "furigana": "よい",
+            "hiragana": "よい",
             "english": "good; excellent; fine; nice; pleasant; agreeable",
             "jlpt": "n1"
         },
         {
             "kanji": "面白い",
-            "furigana": "おもしろい",
+            "hiragana": "おもしろい",
             "english": "interesting; fascinating; intriguing; enthralling",
             "jlpt": "n1"
         },
         {
             "kanji": "明るい",
-            "furigana": "あかるい",
+            "hiragana": "あかるい",
             "english": "light; well-lit; well-lighted",
             "jlpt": "n1"
         },
         {
             "kanji": "美味しい",
-            "furigana": "おいしい",
+            "hiragana": "おいしい",
             "english": "good(-tasting); nice; delicious; tasty",
             "jlpt": "n1"
         },
         {
             "kanji": "煩い",
-            "furigana": "うるさい",
+            "hiragana": "うるさい",
             "english": "noisy; loud",
             "jlpt": "n1"
         },
         {
             "kanji": "詰らない",
-            "furigana": "つまらない",
+            "hiragana": "つまらない",
             "english": "dull; uninteresting; boring; tedious",
             "jlpt": "n1"
         },
         {
             "kanji": "不味い",
-            "furigana": "まずい",
+            "hiragana": "まずい",
             "english": "bad (taste); unpalatable; unsavoury; unsavory; awful; terrible; unpleasant",
             "jlpt": "n1"
         },
         {
             "kanji": "可笑しい",
-            "furigana": "おかしい",
+            "hiragana": "おかしい",
             "english": "funny; amusing; comical; laughable; ridiculous",
             "jlpt": "n1"
         },
         {
             "kanji": "酷い",
-            "furigana": "ひどい",
+            "hiragana": "ひどい",
             "english": "cruel; heartless; hard; harsh; severe",
             "jlpt": "n1"
         },
         {
             "kanji": "堪らない",
-            "furigana": "たまらない",
+            "hiragana": "たまらない",
             "english": "intolerable; unbearable; unendurable",
             "jlpt": "n1"
         },
         {
             "kanji": "可愛らしい",
-            "furigana": "かわいらしい",
+            "hiragana": "かわいらしい",
             "english": "lovely; sweet; pretty; cute; adorable",
             "jlpt": "n1"
         },
         {
             "kanji": "旨い",
-            "furigana": "うまい",
+            "hiragana": "うまい",
             "english": "skillful; skilful; skilled; good; expert; clever (expression, trick, etc.); apt; appropriate",
             "jlpt": "n1"
         },
         {
             "kanji": "酸っぱい",
-            "furigana": "すっぱい",
+            "hiragana": "すっぱい",
             "english": "sour; acid",
             "jlpt": "n1"
         },
         {
             "kanji": "喧しい",
-            "furigana": "やかましい",
+            "hiragana": "やかましい",
             "english": "noisy; loud; clamorous; boisterous",
             "jlpt": "n1"
         },
         {
             "kanji": "大人しい",
-            "furigana": "おとなしい",
+            "hiragana": "おとなしい",
             "english": "gentle; quiet; mild; meek; obedient; docile; well-behaved; tame",
             "jlpt": "n1"
         },
         {
             "kanji": "済まない",
-            "furigana": "すまない",
+            "hiragana": "すまない",
             "english": "inexcusable; unjustifiable; unpardonable",
             "jlpt": "n1"
         },
         {
             "kanji": "図々しい",
-            "furigana": "ずうずうしい",
+            "hiragana": "ずうずうしい",
             "english": "impudent; shameless; brazen; forward; audacious; cheeky",
             "jlpt": "n1"
         },
         {
             "kanji": "下らない",
-            "furigana": "くだらない",
+            "hiragana": "くだらない",
             "english": "trivial; trifling; insignificant; not worth bothering with; worthless; useless; good-for-nothing",
             "jlpt": "n1"
         },
         {
             "kanji": "痒い",
-            "furigana": "かゆい",
+            "hiragana": "かゆい",
             "english": "itchy",
             "jlpt": "n1"
         },
         {
             "kanji": "勿体ない",
-            "furigana": "もったいない",
+            "hiragana": "もったいない",
             "english": "wasteful; a waste",
             "jlpt": "n1"
         },
         {
             "kanji": "見っともない",
-            "furigana": "みっともない",
+            "hiragana": "みっともない",
             "english": "shameful; disgraceful; unsightly; indecent; unseemly; unbecoming; improper",
             "jlpt": "n1"
         },
         {
             "kanji": "眩しい",
-            "furigana": "まぶしい",
+            "hiragana": "まぶしい",
             "english": "dazzling; radiant",
             "jlpt": "n1"
         },
         {
             "kanji": "諄い",
-            "furigana": "くどい",
+            "hiragana": "くどい",
             "english": "repetitious; long-winded; tedious; wordy; verbose; insistent; importunate",
             "jlpt": "n1"
         },
         {
             "kanji": "目出度い",
-            "furigana": "めでたい",
+            "hiragana": "めでたい",
             "english": "happy; auspicious; propitious; joyous",
             "jlpt": "n1"
         },
         {
             "kanji": "慌ただしい",
-            "furigana": "あわただしい",
+            "hiragana": "あわただしい",
             "english": "busy; hectic; hurried; rushed",
             "jlpt": "n1"
         },
         {
             "kanji": "馬鹿らしい",
-            "furigana": "ばからしい",
+            "hiragana": "ばからしい",
             "english": "absurd; foolish; stupid; silly; nonsense; ludicrous; preposterous; laughable; ridiculous",
             "jlpt": "n1"
         },
         {
             "kanji": "やむを得ない",
-            "furigana": "やむをえない",
+            "hiragana": "やむをえない",
             "english": "cannot be helped; unavoidable",
             "jlpt": "n1"
         },
         {
             "kanji": "素早い",
-            "furigana": "すばやい",
+            "hiragana": "すばやい",
             "english": "quick; swift; nimble; agile",
             "jlpt": "n1"
         },
         {
             "kanji": "快い",
-            "furigana": "こころよい",
+            "hiragana": "こころよい",
             "english": "pleasant; agreeable; comfortable; refreshing",
             "jlpt": "n1"
         },
         {
             "kanji": "望ましい",
-            "furigana": "のぞましい",
+            "hiragana": "のぞましい",
             "english": "desirable; hoped for; preferable; advisable",
             "jlpt": "n1"
         },
         {
             "kanji": "好ましい",
-            "furigana": "このましい",
+            "hiragana": "このましい",
             "english": "nice; likeable; desirable",
             "jlpt": "n1"
         },
         {
             "kanji": "何気ない",
-            "furigana": "なにげない",
+            "hiragana": "なにげない",
             "english": "casual; unconcerned; nonchalant; indifferent; offhand",
             "jlpt": "n1"
         },
         {
             "kanji": "名高い",
-            "furigana": "なだかい",
+            "hiragana": "なだかい",
             "english": "famous; noted; renowned; celebrated; well-known",
             "jlpt": "n1"
         },
         {
             "kanji": "易い",
-            "furigana": "やすい",
+            "hiragana": "やすい",
             "english": "easy",
             "jlpt": "n1"
         },
         {
             "kanji": "相応しい",
-            "furigana": "ふさわしい",
+            "hiragana": "ふさわしい",
             "english": "appropriate; adequate; suitable; fitting; worthy",
             "jlpt": "n1"
         },
         {
             "kanji": "容易い",
-            "furigana": "たやすい",
+            "hiragana": "たやすい",
             "english": "easy; simple; light",
             "jlpt": "n1"
         },
         {
             "kanji": "乏しい",
-            "furigana": "とぼしい",
+            "hiragana": "とぼしい",
             "english": "meagre; meager; scarce; limited; destitute; hard up; lacking; scanty; poor",
             "jlpt": "n1"
         },
         {
             "kanji": "逞しい",
-            "furigana": "たくましい",
+            "hiragana": "たくましい",
             "english": "burly; strong; sturdy",
             "jlpt": "n1"
         },
         {
             "kanji": "久しい",
-            "furigana": "ひさしい",
+            "hiragana": "ひさしい",
             "english": "long (time that has passed); old (story)",
             "jlpt": "n1"
         },
         {
             "kanji": "目覚ましい",
-            "furigana": "めざましい",
+            "hiragana": "めざましい",
             "english": "remarkable; striking; brilliant; splendid; spectacular; wonderful; conspicuous; outstanding; amazing",
             "jlpt": "n1"
         },
         {
             "kanji": "空しい",
-            "furigana": "むなしい",
+            "hiragana": "むなしい",
             "english": "empty; void; vacant",
             "jlpt": "n1"
         },
         {
             "kanji": "待ち遠しい",
-            "furigana": "まちどおしい",
+            "hiragana": "まちどおしい",
             "english": "longed-for; anxiously awaited",
             "jlpt": "n1"
         },
         {
             "kanji": "著しい",
-            "furigana": "いちじるしい",
+            "hiragana": "いちじるしい",
             "english": "striking; remarkable; considerable",
             "jlpt": "n1"
         },
         {
             "kanji": "脆い",
-            "furigana": "もろい",
+            "hiragana": "もろい",
             "english": "brittle; fragile; weak; frail",
             "jlpt": "n1"
         },
         {
             "kanji": "眠たい",
-            "furigana": "ねむたい",
+            "hiragana": "ねむたい",
             "english": "sleepy; drowsy",
             "jlpt": "n1"
         },
         {
             "kanji": "尊い",
-            "furigana": "とうとい",
+            "hiragana": "とうとい",
             "english": "precious; valuable; priceless",
             "jlpt": "n1"
         },
         {
             "kanji": "鬱陶しい",
-            "furigana": "うっとうしい",
+            "hiragana": "うっとうしい",
             "english": "gloomy (e.g. mood); depressing",
             "jlpt": "n1"
         },
         {
             "kanji": "怠い",
-            "furigana": "だるい",
+            "hiragana": "だるい",
             "english": "sluggish; languid; listless; heavy (heart, legs, etc.); dull",
             "jlpt": "n1"
         },
         {
             "kanji": "儚い",
-            "furigana": "はかない",
+            "hiragana": "はかない",
             "english": "fleeting; transient; short-lived; momentary; ephemeral; fickle; vain",
             "jlpt": "n1"
         },
         {
             "kanji": "夥しい",
-            "furigana": "おびただしい",
+            "hiragana": "おびただしい",
             "english": "large number; innumerable; great many; immense; vast; abundant",
             "jlpt": "n1"
         },
         {
             "kanji": "卑しい",
-            "furigana": "いやしい",
+            "hiragana": "いやしい",
             "english": "lowborn; humble; lowly",
             "jlpt": "n1"
         },
         {
             "kanji": "嫌らしい",
-            "furigana": "いやらしい",
+            "hiragana": "いやらしい",
             "english": "unpleasant; disagreeable; nasty",
             "jlpt": "n1"
         },
         {
             "kanji": "馴れ馴れしい",
-            "furigana": "なれなれしい",
+            "hiragana": "なれなれしい",
             "english": "overly familiar; overfamiliar; too friendly; too free; cheeky",
             "jlpt": "n1"
         },
         {
             "kanji": "渋い",
-            "furigana": "しぶい",
+            "hiragana": "しぶい",
             "english": "astringent; bitter; puckery; rough; harsh; tart",
             "jlpt": "n1"
         },
         {
             "kanji": "心強い",
-            "furigana": "こころづよい",
+            "hiragana": "こころづよい",
             "english": "heartening; reassuring",
             "jlpt": "n1"
         },
         {
             "kanji": "煙たい",
-            "furigana": "けむたい",
+            "hiragana": "けむたい",
             "english": "smoky",
             "jlpt": "n1"
         },
         {
             "kanji": "煩わしい",
-            "furigana": "わずらわしい",
+            "hiragana": "わずらわしい",
             "english": "troublesome; annoying; complicated",
             "jlpt": "n1"
         },
         {
             "kanji": "安っぽい",
-            "furigana": "やすっぽい",
+            "hiragana": "やすっぽい",
             "english": "cheap-looking; tawdry; insignificant",
             "jlpt": "n1"
         },
         {
             "kanji": "平たい",
-            "furigana": "ひらたい",
+            "hiragana": "ひらたい",
             "english": "flat; even; level",
             "jlpt": "n1"
         },
         {
             "kanji": "心細い",
-            "furigana": "こころぼそい",
+            "hiragana": "こころぼそい",
             "english": "helpless; forlorn; hopeless; unpromising; lonely; discouraging; disheartening",
             "jlpt": "n1"
         },
         {
             "kanji": "清々しい",
-            "furigana": "すがすがしい",
+            "hiragana": "すがすがしい",
             "english": "refreshing (e.g. feeling, scene, wind, morning air); brisk; bracing; fresh; refreshed",
             "jlpt": "n1"
         },
         {
             "kanji": "荒っぽい",
-            "furigana": "あらっぽい",
+            "hiragana": "あらっぽい",
             "english": "wild; violent; rough-mannered; rude",
             "jlpt": "n1"
         },
         {
             "kanji": "物足りない",
-            "furigana": "ものたりない",
+            "hiragana": "ものたりない",
             "english": "unsatisfied; unsatisfactory; insufficient",
             "jlpt": "n1"
         },
         {
             "kanji": "見苦しい",
-            "furigana": "みぐるしい",
+            "hiragana": "みぐるしい",
             "english": "unsightly; ugly; unseemly; indecent; deplorable; disgraceful; shameful",
             "jlpt": "n1"
         },
         {
             "kanji": "生臭い",
-            "furigana": "なまぐさい",
+            "hiragana": "なまぐさい",
             "english": "smelling of fish; fishy; smelling of blood; bloody",
             "jlpt": "n1"
         },
         {
             "kanji": "憎い",
-            "furigana": "にくい",
+            "hiragana": "にくい",
             "english": "hateful; detestable; abominable; vexing; provoking",
             "jlpt": "n1"
         },
         {
             "kanji": "素っ気ない",
-            "furigana": "そっけない",
+            "hiragana": "そっけない",
             "english": "cold; short; curt; blunt",
             "jlpt": "n1"
         },
         {
             "kanji": "悩ましい",
-            "furigana": "なやましい",
+            "hiragana": "なやましい",
             "english": "seductive; carnal; enchanting",
             "jlpt": "n1"
         },
         {
             "kanji": "見窄らしい",
-            "furigana": "みすぼらしい",
+            "hiragana": "みすぼらしい",
             "english": "shabby; unsightly; unkempt; seedy",
             "jlpt": "n1"
         },
         {
             "kanji": "難い",
-            "furigana": "かたい",
+            "hiragana": "かたい",
             "english": "difficult; hard",
             "jlpt": "n1"
         },
         {
             "kanji": "悪どい",
-            "furigana": "あくどい",
+            "hiragana": "あくどい",
             "english": "gaudy; showy; garish; loud",
             "jlpt": "n1"
         },
         {
             "kanji": "呆気ない",
-            "furigana": "あっけない",
+            "hiragana": "あっけない",
             "english": "unsatisfying; disappointing; abrupt; not enough; too quick; too short; over too soon",
             "jlpt": "n1"
         },
         {
             "kanji": "馬鹿馬鹿しい",
-            "furigana": "ばかばかしい",
+            "hiragana": "ばかばかしい",
             "english": "absurd; ridiculous; silly; ludicrous; nonsensical; asinine; foolish",
             "jlpt": "n1"
         },
         {
             "kanji": "汚らわしい",
-            "furigana": "けがらわしい",
+            "hiragana": "けがらわしい",
             "english": "filthy; unfair; dirty; untouchable; disgusting; nasty; foul; odious; repulsive",
             "jlpt": "n1"
         },
         {
             "kanji": "ややこしい",
-            "furigana": "ややこしい",
+            "hiragana": "ややこしい",
             "english": "complicated; complex; intricate; confusing; difficult; troublesome",
             "jlpt": "n1"
         },
         {
             "kanji": "でかい",
-            "furigana": "でかい",
+            "hiragana": "でかい",
             "english": "huge; big; gargantuan",
             "jlpt": "n1"
         },
         {
             "kanji": "切ない",
-            "furigana": "せつない",
+            "hiragana": "せつない",
             "english": "painful; heartrending; trying",
             "jlpt": "n1"
         },
         {
             "kanji": "情け深い",
-            "furigana": "なさけぶかい",
+            "hiragana": "なさけぶかい",
             "english": "tender-hearted; compassionate; charitable; good-hearted",
             "jlpt": "n1"
         },
         {
             "kanji": "生ぬるい",
-            "furigana": "なまぬるい",
+            "hiragana": "なまぬるい",
             "english": "lukewarm; tepid",
             "jlpt": "n1"
         },
         {
             "kanji": "生ぬるい",
-            "furigana": "なまぬるい",
+            "hiragana": "なまぬるい",
             "english": "lukewarm; tepid",
             "jlpt": "n1"
         },
         {
             "kanji": "華々しい",
-            "furigana": "はなばなしい",
+            "hiragana": "はなばなしい",
             "english": "brilliant; splendid; glorious; magnificent; spectacular",
             "jlpt": "n1"
         },
         {
             "kanji": "紛らわしい",
-            "furigana": "まぎらわしい",
+            "hiragana": "まぎらわしい",
             "english": "easily mixed up (e.g. similar words); easily mistaken; confusing; misleading; equivocal; ambiguous",
             "jlpt": "n1"
         },
         {
             "kanji": "きまり悪い",
-            "furigana": "きまりわるい",
+            "hiragana": "きまりわるい",
             "english": "embarrassed; ashamed",
             "jlpt": "n1"
         },
         {
             "kanji": "すばしこい",
-            "furigana": "すばしっこい",
+            "hiragana": "すばしっこい",
             "english": "nimble; smart; quick",
             "jlpt": "n1"
         },
         {
             "kanji": "しぶとい",
-            "furigana": "しぶとい",
+            "hiragana": "しぶとい",
             "english": "tenacious; tough; enduring; dogged; headstrong; stubborn; obstinate; unyielding",
             "jlpt": "n1"
         },
         {
             "kanji": "欲深い",
-            "furigana": "よくぶかい",
+            "hiragana": "よくぶかい",
             "english": "greedy",
             "jlpt": "n1"
         },
         {
             "kanji": "浅ましい",
-            "furigana": "あさましい",
+            "hiragana": "あさましい",
             "english": "wretched; miserable; shameful; mean; despicable; abject",
             "jlpt": "n1"
         },
         {
             "kanji": "真ん円い",
-            "furigana": "まんまるい",
+            "hiragana": "まんまるい",
             "english": "perfectly round; perfectly circular",
             "jlpt": "n1"
         },
         {
             "kanji": "おっかない",
-            "furigana": "おっかない",
+            "hiragana": "おっかない",
             "english": "frightening; scary",
             "jlpt": "n1"
         }
@@ -19074,3373 +19074,3373 @@ export const jisho = {
     "na_adjective": [
         {
             "kanji": "大人",
-            "furigana": "おとな",
+            "hiragana": "おとな",
             "english": "adult; grown-up",
             "jlpt": "n5"
         },
         {
             "kanji": "黄色",
-            "furigana": "きいろ",
+            "hiragana": "きいろ",
             "english": "yellow; amber",
             "jlpt": "n5"
         },
         {
             "kanji": "本当",
-            "furigana": "ほんとう",
+            "hiragana": "ほんとう",
             "english": "truth; reality; actuality; fact",
             "jlpt": "n5"
         },
         {
             "kanji": "上手",
-            "furigana": "じょうず",
+            "hiragana": "じょうず",
             "english": "skillful; skilled; proficient; good (at); adept; clever",
             "jlpt": "n5"
         },
         {
             "kanji": "有名",
-            "furigana": "ゆうめい",
+            "hiragana": "ゆうめい",
             "english": "famous",
             "jlpt": "n5"
         },
         {
             "kanji": "元気",
-            "furigana": "げんき",
+            "hiragana": "げんき",
             "english": "lively; full of spirit; energetic; vigorous; vital; spirited",
             "jlpt": "n5"
         },
         {
             "kanji": "静か",
-            "furigana": "しずか",
+            "hiragana": "しずか",
             "english": "quiet; silent",
             "jlpt": "n5"
         },
         {
             "kanji": "大切",
-            "furigana": "たいせつ",
+            "hiragana": "たいせつ",
             "english": "important; significant; serious; crucial",
             "jlpt": "n5"
         },
         {
             "kanji": "嫌い",
-            "furigana": "きらい",
+            "hiragana": "きらい",
             "english": "disliked; hated; disagreeable",
             "jlpt": "n5"
         },
         {
             "kanji": "立派",
-            "furigana": "りっぱ",
+            "hiragana": "りっぱ",
             "english": "splendid; fine; handsome; elegant; imposing; prominent; impressive",
             "jlpt": "n5"
         },
         {
             "kanji": "大好き",
-            "furigana": "だいすき",
+            "hiragana": "だいすき",
             "english": "liking very much; loving (something or someone); adoring; being very fond of",
             "jlpt": "n5"
         },
         {
             "kanji": "嫌",
-            "furigana": "いや",
+            "hiragana": "いや",
             "english": "disliking; not wanting; unwilling (to do); reluctant",
             "jlpt": "n5"
         },
         {
             "kanji": "結構",
-            "furigana": "けっこう",
+            "hiragana": "けっこう",
             "english": "splendid; nice; wonderful; delightful; lovely; excellent; fine",
             "jlpt": "n5"
         },
         {
             "kanji": "大丈夫",
-            "furigana": "だいじょうぶ",
+            "hiragana": "だいじょうぶ",
             "english": "safe; secure; sound; problem-free; without fear; all right; alright; OK; okay",
             "jlpt": "n5"
         },
         {
             "kanji": "下手-2",
-            "furigana": "へた",
+            "hiragana": "へた",
             "english": "unskillful; poor; awkward",
             "jlpt": "n5"
         },
         {
             "kanji": "便利",
-            "furigana": "べんり",
+            "hiragana": "べんり",
             "english": "convenient; handy; useful",
             "jlpt": "n5"
         },
         {
             "kanji": "丈夫",
-            "furigana": "じょうぶ",
+            "hiragana": "じょうぶ",
             "english": "healthy; robust; strong; solid; durable",
             "jlpt": "n5"
         },
         {
             "kanji": "好き",
-            "furigana": "すき",
+            "hiragana": "すき",
             "english": "liking; being fond of; to one's liking; to one's taste; preferred; favourite",
             "jlpt": "n5"
         },
         {
             "kanji": "沢山",
-            "furigana": "たくさん",
+            "hiragana": "たくさん",
             "english": "a lot; lots; plenty; many; a large number; much; a great deal; a good deal",
             "jlpt": "n5"
         },
         {
             "kanji": "奇麗",
-            "furigana": "きれい",
+            "hiragana": "きれい",
             "english": "pretty; lovely; beautiful; fair",
             "jlpt": "n5"
         },
         {
             "kanji": "色々",
-            "furigana": "いろいろ",
+            "hiragana": "いろいろ",
             "english": "various; all sorts of; variety of",
             "jlpt": "n5"
         },
         {
             "kanji": "真っ直ぐ",
-            "furigana": "まっすぐ",
+            "hiragana": "まっすぐ",
             "english": "straight (ahead); direct; upright; erect",
             "jlpt": "n5"
         },
         {
             "kanji": "賑やか",
-            "furigana": "にぎやか",
+            "hiragana": "にぎやか",
             "english": "bustling; busy; crowded; lively; prosperous; thriving",
             "jlpt": "n5"
         },
         {
             "kanji": "十分",
-            "furigana": "じゅうぶん",
+            "hiragana": "じゅうぶん",
             "english": "enough; sufficient; plenty; adequate; satisfactory",
             "jlpt": "n4"
         },
         {
             "kanji": "反対",
-            "furigana": "はんたい",
+            "hiragana": "はんたい",
             "english": "opposition; resistance; antagonism; hostility; objection; dissent",
             "jlpt": "n4"
         },
         {
             "kanji": "無理",
-            "furigana": "むり",
+            "hiragana": "むり",
             "english": "unreasonable; unnatural; unjustifiable",
             "jlpt": "n4"
         },
         {
             "kanji": "安心",
-            "furigana": "あんしん",
+            "hiragana": "あんしん",
             "english": "peace of mind; relief; (sense of) security; safety; assurance; confidence",
             "jlpt": "n4"
         },
         {
             "kanji": "寝坊",
-            "furigana": "ねぼう",
+            "hiragana": "ねぼう",
             "english": "sleeping in late; oversleeping",
             "jlpt": "n4"
         },
         {
             "kanji": "危険",
-            "furigana": "きけん",
+            "hiragana": "きけん",
             "english": "danger; peril; hazard",
             "jlpt": "n4"
         },
         {
             "kanji": "普通",
-            "furigana": "ふつう",
+            "hiragana": "ふつう",
             "english": "normal; ordinary; regular; usual; common; average",
             "jlpt": "n4"
         },
         {
             "kanji": "自由",
-            "furigana": "じゆう",
+            "hiragana": "じゆう",
             "english": "freedom; liberty",
             "jlpt": "n4"
         },
         {
             "kanji": "残念",
-            "furigana": "ざんねん",
+            "hiragana": "ざんねん",
             "english": "regrettable; unfortunate; disappointing; vexing",
             "jlpt": "n4"
         },
         {
             "kanji": "特別",
-            "furigana": "とくべつ",
+            "hiragana": "とくべつ",
             "english": "special; particular; extraordinary; exceptional; especial",
             "jlpt": "n4"
         },
         {
             "kanji": "必要",
-            "furigana": "ひつよう",
+            "hiragana": "ひつよう",
             "english": "necessary; needed; essential; indispensable",
             "jlpt": "n4"
         },
         {
             "kanji": "親切",
-            "furigana": "しんせつ",
+            "hiragana": "しんせつ",
             "english": "kind; gentle; considerate; generous; friendly; nice",
             "jlpt": "n4"
         },
         {
             "kanji": "十分",
-            "furigana": "じゅうぶん",
+            "hiragana": "じゅうぶん",
             "english": "enough; sufficient; plenty; adequate; satisfactory",
             "jlpt": "n4"
         },
         {
             "kanji": "一生懸命",
-            "furigana": "いっしょうけんめい",
+            "hiragana": "いっしょうけんめい",
             "english": "very hard; with utmost effort; as hard as one can; with all one's might; for dear life; eagerly; desperately",
             "jlpt": "n4"
         },
         {
             "kanji": "反対",
-            "furigana": "はんたい",
+            "hiragana": "はんたい",
             "english": "opposition; resistance; antagonism; hostility; objection; dissent",
             "jlpt": "n4"
         },
         {
             "kanji": "簡単",
-            "furigana": "かんたん",
+            "hiragana": "かんたん",
             "english": "simple; easy; uncomplicated",
             "jlpt": "n4"
         },
         {
             "kanji": "大抵",
-            "furigana": "たいてい",
+            "hiragana": "たいてい",
             "english": "mostly; ordinarily; usually; generally",
             "jlpt": "n4"
         },
         {
             "kanji": "無理",
-            "furigana": "むり",
+            "hiragana": "むり",
             "english": "unreasonable; unnatural; unjustifiable",
             "jlpt": "n4"
         },
         {
             "kanji": "安全",
-            "furigana": "あんぜん",
+            "hiragana": "あんぜん",
             "english": "safety; security",
             "jlpt": "n4"
         },
         {
             "kanji": "変",
-            "furigana": "へん",
+            "hiragana": "へん",
             "english": "strange; odd; peculiar; weird; curious; queer; eccentric; funny; suspicious; fishy",
             "jlpt": "n4"
         },
         {
             "kanji": "大事",
-            "furigana": "だいじ",
+            "hiragana": "だいじ",
             "english": "important; serious; crucial",
             "jlpt": "n4"
         },
         {
             "kanji": "楽しみ",
-            "furigana": "たのしみ",
+            "hiragana": "たのしみ",
             "english": "enjoyment; pleasure; amusement; delight; joy; fun; diversion; hobby",
             "jlpt": "n4"
         },
         {
             "kanji": "確か",
-            "furigana": "たしか",
+            "hiragana": "たしか",
             "english": "sure; certain; positive; definite",
             "jlpt": "n4"
         },
         {
             "kanji": "複雑",
-            "furigana": "ふくざつ",
+            "hiragana": "ふくざつ",
             "english": "complex; complicated; intricate; mixed (feelings)",
             "jlpt": "n4"
         },
         {
             "kanji": "安心",
-            "furigana": "あんしん",
+            "hiragana": "あんしん",
             "english": "peace of mind; relief; (sense of) security; safety; assurance; confidence",
             "jlpt": "n4"
         },
         {
             "kanji": "丁寧",
-            "furigana": "ていねい",
+            "hiragana": "ていねい",
             "english": "polite; courteous; civil",
             "jlpt": "n4"
         },
         {
             "kanji": "久しぶり",
-            "furigana": "ひさしぶり",
+            "hiragana": "ひさしぶり",
             "english": "a long time (since the last time); first in a long time",
             "jlpt": "n4"
         },
         {
             "kanji": "急",
-            "furigana": "きゅう",
+            "hiragana": "きゅう",
             "english": "sudden; abrupt; unexpected",
             "jlpt": "n4"
         },
         {
             "kanji": "適当",
-            "furigana": "てきとう",
+            "hiragana": "てきとう",
             "english": "suitable; proper; appropriate; adequate; fit; fair",
             "jlpt": "n4"
         },
         {
             "kanji": "盛ん",
-            "furigana": "さかん",
+            "hiragana": "さかん",
             "english": "prosperous; flourishing; thriving; successful",
             "jlpt": "n4"
         },
         {
             "kanji": "不便",
-            "furigana": "ふべん",
+            "hiragana": "ふべん",
             "english": "inconvenience; inexpediency; unhandiness",
             "jlpt": "n4"
         },
         {
             "kanji": "寝坊",
-            "furigana": "ねぼう",
+            "hiragana": "ねぼう",
             "english": "sleeping in late; oversleeping",
             "jlpt": "n4"
         },
         {
             "kanji": "ソフト",
-            "furigana": "ソフト",
+            "hiragana": "ソフト",
             "english": "soft",
             "jlpt": "n4"
         },
         {
             "kanji": "そう",
-            "furigana": "そう",
+            "hiragana": "そう",
             "english": "appearing that; seeming that; looking like; having the appearance of",
             "jlpt": "n4"
         },
         {
             "kanji": "退屈",
-            "furigana": "たいくつ",
+            "hiragana": "たいくつ",
             "english": "tedious; boring; dull; uninteresting; tiresome; monotonous",
             "jlpt": "n3"
         },
         {
             "kanji": "心配",
-            "furigana": "しんぱい",
+            "hiragana": "しんぱい",
             "english": "worry; concern; anxiety; uneasiness; fear",
             "jlpt": "n3"
         },
         {
             "kanji": "満足",
-            "furigana": "まんぞく",
+            "hiragana": "まんぞく",
             "english": "satisfaction; contentment; gratification",
             "jlpt": "n3"
         },
         {
             "kanji": "不足",
-            "furigana": "ふそく",
+            "hiragana": "ふそく",
             "english": "insufficiency; deficiency; shortage; lack; scarcity; deficit",
             "jlpt": "n3"
         },
         {
             "kanji": "邪魔",
-            "furigana": "じゃま",
+            "hiragana": "じゃま",
             "english": "hindrance; obstacle; nuisance; disturbance; interruption; interference",
             "jlpt": "n3"
         },
         {
             "kanji": "不自由",
-            "furigana": "ふじゆう",
+            "hiragana": "ふじゆう",
             "english": "discomfort; inconvenience",
             "jlpt": "n3"
         },
         {
             "kanji": "共通",
-            "furigana": "きょうつう",
+            "hiragana": "きょうつう",
             "english": "common; shared; mutual",
             "jlpt": "n3"
         },
         {
             "kanji": "損",
-            "furigana": "そん",
+            "hiragana": "そん",
             "english": "loss; damage; harm; unprofitable",
             "jlpt": "n3"
         },
         {
             "kanji": "迷惑",
-            "furigana": "めいわく",
+            "hiragana": "めいわく",
             "english": "trouble; bother; annoyance; nuisance; inconvenience",
             "jlpt": "n3"
         },
         {
             "kanji": "贅沢",
-            "furigana": "ぜいたく",
+            "hiragana": "ぜいたく",
             "english": "luxury; extravagance",
             "jlpt": "n3"
         },
         {
             "kanji": "たっぷり",
-            "furigana": "たっぷり",
+            "hiragana": "たっぷり",
             "english": "plentifully; amply; abundantly; copiously; generously; fully; a lot",
             "jlpt": "n3"
         },
         {
             "kanji": "正直",
-            "furigana": "しょうじき",
+            "hiragana": "しょうじき",
             "english": "honest; frank; candid; straightforward",
             "jlpt": "n3"
         },
         {
             "kanji": "平等",
-            "furigana": "びょうどう",
+            "hiragana": "びょうどう",
             "english": "equality; impartiality; evenness",
             "jlpt": "n3"
         },
         {
             "kanji": "幸福",
-            "furigana": "こうふく",
+            "hiragana": "こうふく",
             "english": "happiness; well-being; joy; welfare; blessedness",
             "jlpt": "n3"
         },
         {
             "kanji": "秘密",
-            "furigana": "ひみつ",
+            "hiragana": "ひみつ",
             "english": "secret; secrecy; confidentiality; privacy",
             "jlpt": "n3"
         },
         {
             "kanji": "偶然",
-            "furigana": "ぐうぜん",
+            "hiragana": "ぐうぜん",
             "english": "coincidence; chance; accident; fortuity",
             "jlpt": "n3"
         },
         {
             "kanji": "平和",
-            "furigana": "へいわ",
+            "hiragana": "へいわ",
             "english": "peace; harmony",
             "jlpt": "n3"
         },
         {
             "kanji": "不安",
-            "furigana": "ふあん",
+            "hiragana": "ふあん",
             "english": "anxiety; uneasiness; worry; apprehension; fear; insecurity; suspense",
             "jlpt": "n3"
         },
         {
             "kanji": "公平",
-            "furigana": "こうへい",
+            "hiragana": "こうへい",
             "english": "fairness; impartiality; justice; objectivity",
             "jlpt": "n3"
         },
         {
             "kanji": "永遠",
-            "furigana": "えいえん",
+            "hiragana": "えいえん",
             "english": "eternity; perpetuity; permanence; immortality",
             "jlpt": "n3"
         },
         {
             "kanji": "異常",
-            "furigana": "いじょう",
+            "hiragana": "いじょう",
             "english": "strangeness; abnormality; disorder",
             "jlpt": "n3"
         },
         {
             "kanji": "退屈",
-            "furigana": "たいくつ",
+            "hiragana": "たいくつ",
             "english": "tedious; boring; dull; uninteresting; tiresome; monotonous",
             "jlpt": "n3"
         },
         {
             "kanji": "莫大",
-            "furigana": "ばくだい",
+            "hiragana": "ばくだい",
             "english": "vast; huge; immense; enormous; colossal",
             "jlpt": "n3"
         },
         {
             "kanji": "本当",
-            "furigana": "ほんとう",
+            "hiragana": "ほんとう",
             "english": "truth; reality; actuality; fact",
             "jlpt": "n3"
         },
         {
             "kanji": "立派",
-            "furigana": "りっぱ",
+            "hiragana": "りっぱ",
             "english": "splendid; fine; handsome; elegant; imposing; prominent; impressive",
             "jlpt": "n3"
         },
         {
             "kanji": "真っ直ぐ",
-            "furigana": "まっすぐ",
+            "hiragana": "まっすぐ",
             "english": "straight (ahead); direct; upright; erect",
             "jlpt": "n3"
         },
         {
             "kanji": "大抵",
-            "furigana": "たいてい",
+            "hiragana": "たいてい",
             "english": "mostly; ordinarily; usually; generally",
             "jlpt": "n3"
         },
         {
             "kanji": "重要",
-            "furigana": "じゅうよう",
+            "hiragana": "じゅうよう",
             "english": "important; essential; significant; major; key; principal",
             "jlpt": "n3"
         },
         {
             "kanji": "幸せ",
-            "furigana": "しあわせ",
+            "hiragana": "しあわせ",
             "english": "happiness; good fortune; luck; blessing",
             "jlpt": "n3"
         },
         {
             "kanji": "心配",
-            "furigana": "しんぱい",
+            "hiragana": "しんぱい",
             "english": "worry; concern; anxiety; uneasiness; fear",
             "jlpt": "n3"
         },
         {
             "kanji": "突然",
-            "furigana": "とつぜん",
+            "hiragana": "とつぜん",
             "english": "abrupt; sudden; unexpected",
             "jlpt": "n3"
         },
         {
             "kanji": "満足",
-            "furigana": "まんぞく",
+            "hiragana": "まんぞく",
             "english": "satisfaction; contentment; gratification",
             "jlpt": "n3"
         },
         {
             "kanji": "無駄",
-            "furigana": "むだ",
+            "hiragana": "むだ",
             "english": "futility; waste; uselessness; pointlessness; idleness",
             "jlpt": "n3"
         },
         {
             "kanji": "困難",
-            "furigana": "こんなん",
+            "hiragana": "こんなん",
             "english": "difficulty; hardship; trouble; distress",
             "jlpt": "n3"
         },
         {
             "kanji": "駄目",
-            "furigana": "だめ",
+            "hiragana": "だめ",
             "english": "no good; not serving its purpose; useless; broken",
             "jlpt": "n3"
         },
         {
             "kanji": "偉大",
-            "furigana": "いだい",
+            "hiragana": "いだい",
             "english": "great; grand; magnificent; outstanding; mighty",
             "jlpt": "n3"
         },
         {
             "kanji": "完全",
-            "furigana": "かんぜん",
+            "hiragana": "かんぜん",
             "english": "perfect; complete",
             "jlpt": "n3"
         },
         {
             "kanji": "素敵",
-            "furigana": "すてき",
+            "hiragana": "すてき",
             "english": "lovely; wonderful; nice; great; fantastic; superb; cool",
             "jlpt": "n3"
         },
         {
             "kanji": "熱心",
-            "furigana": "ねっしん",
+            "hiragana": "ねっしん",
             "english": "zealous; enthusiastic; ardent; fervent; keen; eager",
             "jlpt": "n3"
         },
         {
             "kanji": "正確",
-            "furigana": "せいかく",
+            "hiragana": "せいかく",
             "english": "accurate; correct; precise; exact",
             "jlpt": "n3"
         },
         {
             "kanji": "明らか",
-            "furigana": "あきらか",
+            "hiragana": "あきらか",
             "english": "clear; obvious; evident; plain; definite",
             "jlpt": "n3"
         },
         {
             "kanji": "不足",
-            "furigana": "ふそく",
+            "hiragana": "ふそく",
             "english": "insufficiency; deficiency; shortage; lack; scarcity; deficit",
             "jlpt": "n3"
         },
         {
             "kanji": "邪魔",
-            "furigana": "じゃま",
+            "hiragana": "じゃま",
             "english": "hindrance; obstacle; nuisance; disturbance; interruption; interference",
             "jlpt": "n3"
         },
         {
             "kanji": "最高",
-            "furigana": "さいこう",
+            "hiragana": "さいこう",
             "english": "best; supreme; wonderful; finest",
             "jlpt": "n3"
         },
         {
             "kanji": "幸運",
-            "furigana": "こううん",
+            "hiragana": "こううん",
             "english": "good luck; fortune",
             "jlpt": "n3"
         },
         {
             "kanji": "得意",
-            "furigana": "とくい",
+            "hiragana": "とくい",
             "english": "satisfaction; pride; triumph; elation",
             "jlpt": "n3"
         },
         {
             "kanji": "容易",
-            "furigana": "ようい",
+            "hiragana": "ようい",
             "english": "easy; simple; plain",
             "jlpt": "n3"
         },
         {
             "kanji": "罪",
-            "furigana": "つみ",
+            "hiragana": "つみ",
             "english": "crime; sin; wrongdoing; indiscretion",
             "jlpt": "n3"
         },
         {
             "kanji": "不思議",
-            "furigana": "ふしぎ",
+            "hiragana": "ふしぎ",
             "english": "wonderful; marvelous; strange; incredible; amazing; curious; miraculous; mysterious",
             "jlpt": "n3"
         },
         {
             "kanji": "不幸",
-            "furigana": "ふこう",
+            "hiragana": "ふこう",
             "english": "unhappiness; sorrow; misfortune; disaster; accident",
             "jlpt": "n3"
         },
         {
             "kanji": "奇妙",
-            "furigana": "きみょう",
+            "hiragana": "きみょう",
             "english": "strange; odd; peculiar; queer; curious",
             "jlpt": "n3"
         },
         {
             "kanji": "無事",
-            "furigana": "ぶじ",
+            "hiragana": "ぶじ",
             "english": "safety; security; peace; quiet",
             "jlpt": "n3"
         },
         {
             "kanji": "様々",
-            "furigana": "さまざま",
+            "hiragana": "さまざま",
             "english": "various; varied; diverse; all sorts of",
             "jlpt": "n3"
         },
         {
             "kanji": "同様",
-            "furigana": "どうよう",
+            "hiragana": "どうよう",
             "english": "same; similar; (just) like; equal",
             "jlpt": "n3"
         },
         {
             "kanji": "可能",
-            "furigana": "かのう",
+            "hiragana": "かのう",
             "english": "possible; potential; practicable; feasible",
             "jlpt": "n3"
         },
         {
             "kanji": "高価",
-            "furigana": "こうか",
+            "hiragana": "こうか",
             "english": "highly priced; expensive; valuable; costly",
             "jlpt": "n3"
         },
         {
             "kanji": "深刻",
-            "furigana": "しんこく",
+            "hiragana": "しんこく",
             "english": "serious; severe; grave; acute",
             "jlpt": "n3"
         },
         {
             "kanji": "重大",
-            "furigana": "じゅうだい",
+            "hiragana": "じゅうだい",
             "english": "serious; important; significant; grave; weighty",
             "jlpt": "n3"
         },
         {
             "kanji": "慎重",
-            "furigana": "しんちょう",
+            "hiragana": "しんちょう",
             "english": "careful; cautious; prudent; discreet; deliberate",
             "jlpt": "n3"
         },
         {
             "kanji": "幸い",
-            "furigana": "さいわい",
+            "hiragana": "さいわい",
             "english": "happiness; blessedness; luck; fortune; felicity",
             "jlpt": "n3"
         },
         {
             "kanji": "有効",
-            "furigana": "ゆうこう",
+            "hiragana": "ゆうこう",
             "english": "valid; effective",
             "jlpt": "n3"
         },
         {
             "kanji": "有能",
-            "furigana": "ゆうのう",
+            "hiragana": "ゆうのう",
             "english": "able; capable; competent; talented; efficient",
             "jlpt": "n3"
         },
         {
             "kanji": "不自由",
-            "furigana": "ふじゆう",
+            "hiragana": "ふじゆう",
             "english": "discomfort; inconvenience",
             "jlpt": "n3"
         },
         {
             "kanji": "不満",
-            "furigana": "ふまん",
+            "hiragana": "ふまん",
             "english": "dissatisfaction; discontent; displeasure; complaint; unhappiness",
             "jlpt": "n3"
         },
         {
             "kanji": "貴重",
-            "furigana": "きちょう",
+            "hiragana": "きちょう",
             "english": "precious; valuable",
             "jlpt": "n3"
         },
         {
             "kanji": "豊か",
-            "furigana": "ゆたか",
+            "hiragana": "ゆたか",
             "english": "abundant; plentiful; rich; ample",
             "jlpt": "n3"
         },
         {
             "kanji": "面倒",
-            "furigana": "めんどう",
+            "hiragana": "めんどう",
             "english": "trouble; bother",
             "jlpt": "n3"
         },
         {
             "kanji": "急速",
-            "furigana": "きゅうそく",
+            "hiragana": "きゅうそく",
             "english": "rapid (e.g. progress)",
             "jlpt": "n3"
         },
         {
             "kanji": "新鮮",
-            "furigana": "しんせん",
+            "hiragana": "しんせん",
             "english": "fresh",
             "jlpt": "n3"
         },
         {
             "kanji": "豊富",
-            "furigana": "ほうふ",
+            "hiragana": "ほうふ",
             "english": "abundant; plentiful; rich; ample",
             "jlpt": "n3"
         },
         {
             "kanji": "新た",
-            "furigana": "あらた",
+            "hiragana": "あらた",
             "english": "new; fresh; novel",
             "jlpt": "n3"
         },
         {
             "kanji": "有利",
-            "furigana": "ゆうり",
+            "hiragana": "ゆうり",
             "english": "advantageous; favourable; better; stronger",
             "jlpt": "n3"
         },
         {
             "kanji": "快適",
-            "furigana": "かいてき",
+            "hiragana": "かいてき",
             "english": "pleasant; agreeable; comfortable",
             "jlpt": "n3"
         },
         {
             "kanji": "直接",
-            "furigana": "ちょくせつ",
+            "hiragana": "ちょくせつ",
             "english": "direct; immediate; personal; firsthand",
             "jlpt": "n3"
         },
         {
             "kanji": "苦手",
-            "furigana": "にがて",
+            "hiragana": "にがて",
             "english": "poor (at); weak (in); not very good (at)",
             "jlpt": "n3"
         },
         {
             "kanji": "冷静",
-            "furigana": "れいせい",
+            "hiragana": "れいせい",
             "english": "calmness; composure; coolness; serenity; presence of mind",
             "jlpt": "n3"
         },
         {
             "kanji": "確実",
-            "furigana": "かくじつ",
+            "hiragana": "かくじつ",
             "english": "certain; sure; definite; reliable; sound; solid; safe; secure",
             "jlpt": "n3"
         },
         {
             "kanji": "適切",
-            "furigana": "てきせつ",
+            "hiragana": "てきせつ",
             "english": "appropriate; suitable; fitting; apt; proper; right; pertinent; relevant",
             "jlpt": "n3"
         },
         {
             "kanji": "不利",
-            "furigana": "ふり",
+            "hiragana": "ふり",
             "english": "disadvantage; handicap; unfavorable position",
             "jlpt": "n3"
         },
         {
             "kanji": "主要",
-            "furigana": "しゅよう",
+            "hiragana": "しゅよう",
             "english": "chief; main; principal; major",
             "jlpt": "n3"
         },
         {
             "kanji": "可哀相",
-            "furigana": "かわいそう",
+            "hiragana": "かわいそう",
             "english": "poor; pitiable; pathetic; pitiful",
             "jlpt": "n3"
         },
         {
             "kanji": "優秀",
-            "furigana": "ゆうしゅう",
+            "hiragana": "ゆうしゅう",
             "english": "superior; excellent; brilliant; outstanding",
             "jlpt": "n3"
         },
         {
             "kanji": "順調",
-            "furigana": "じゅんちょう",
+            "hiragana": "じゅんちょう",
             "english": "favourable; favorable; doing well; OK; all right",
             "jlpt": "n3"
         },
         {
             "kanji": "見事",
-            "furigana": "みごと",
+            "hiragana": "みごと",
             "english": "splendid; magnificent; excellent; fine; superb; beautiful; admirable",
             "jlpt": "n3"
         },
         {
             "kanji": "永久",
-            "furigana": "えいきゅう",
+            "hiragana": "えいきゅう",
             "english": "eternity; permanence; perpetuity",
             "jlpt": "n3"
         },
         {
             "kanji": "穏やか",
-            "furigana": "おだやか",
+            "hiragana": "おだやか",
             "english": "calm; quiet; gentle; peaceful; mild",
             "jlpt": "n3"
         },
         {
             "kanji": "明確",
-            "furigana": "めいかく",
+            "hiragana": "めいかく",
             "english": "clear; precise; definite; distinct",
             "jlpt": "n3"
         },
         {
             "kanji": "陽気",
-            "furigana": "ようき",
+            "hiragana": "ようき",
             "english": "cheerful; jovial; merry; lively",
             "jlpt": "n3"
         },
         {
             "kanji": "共通",
-            "furigana": "きょうつう",
+            "hiragana": "きょうつう",
             "english": "common; shared; mutual",
             "jlpt": "n3"
         },
         {
             "kanji": "巨大",
-            "furigana": "きょだい",
+            "hiragana": "きょだい",
             "english": "huge; gigantic; enormous",
             "jlpt": "n3"
         },
         {
             "kanji": "独特",
-            "furigana": "どくとく",
+            "hiragana": "どくとく",
             "english": "peculiarity; uniqueness; characteristic",
             "jlpt": "n3"
         },
         {
             "kanji": "損",
-            "furigana": "そん",
+            "hiragana": "そん",
             "english": "loss; damage; harm; unprofitable",
             "jlpt": "n3"
         },
         {
             "kanji": "温暖",
-            "furigana": "おんだん",
+            "hiragana": "おんだん",
             "english": "warm; mild; temperate",
             "jlpt": "n3"
         },
         {
             "kanji": "真っ赤",
-            "furigana": "まっか",
+            "hiragana": "まっか",
             "english": "bright red; deep red; flushed (of face)",
             "jlpt": "n3"
         },
         {
             "kanji": "積極的",
-            "furigana": "せっきょくてき",
+            "hiragana": "せっきょくてき",
             "english": "positive; assertive; active; proactive; aggressive",
             "jlpt": "n3"
         },
         {
             "kanji": "適度",
-            "furigana": "てきど",
+            "hiragana": "てきど",
             "english": "moderate (degree); proper (amount); temperate; suitable",
             "jlpt": "n3"
         },
         {
             "kanji": "単純",
-            "furigana": "たんじゅん",
+            "hiragana": "たんじゅん",
             "english": "simple; plain; uncomplicated; straightforward; simple-minded; naive",
             "jlpt": "n3"
         },
         {
             "kanji": "意外",
-            "furigana": "いがい",
+            "hiragana": "いがい",
             "english": "unexpected; surprising",
             "jlpt": "n3"
         },
         {
             "kanji": "妙",
-            "furigana": "みょう",
+            "hiragana": "みょう",
             "english": "strange; weird; odd; curious",
             "jlpt": "n3"
         },
         {
             "kanji": "粗末",
-            "furigana": "そまつ",
+            "hiragana": "そまつ",
             "english": "crude; rough; plain; humble; shabby; poor-quality; low-quality",
             "jlpt": "n3"
         },
         {
             "kanji": "清潔",
-            "furigana": "せいけつ",
+            "hiragana": "せいけつ",
             "english": "clean; hygienic; sanitary",
             "jlpt": "n3"
         },
         {
             "kanji": "不正",
-            "furigana": "ふせい",
+            "hiragana": "ふせい",
             "english": "injustice; unfairness; wrongdoing; iniquity; impropriety; irregularity; dishonesty; illegality; fraud",
             "jlpt": "n3"
         },
         {
             "kanji": "最低",
-            "furigana": "さいてい",
+            "hiragana": "さいてい",
             "english": "least; lowest; minimum",
             "jlpt": "n3"
         },
         {
             "kanji": "急激",
-            "furigana": "きゅうげき",
+            "hiragana": "きゅうげき",
             "english": "sudden; abrupt; rapid; sharp; drastic; radical",
             "jlpt": "n3"
         },
         {
             "kanji": "厄介",
-            "furigana": "やっかい",
+            "hiragana": "やっかい",
             "english": "trouble; burden; nuisance; bother; worry",
             "jlpt": "n3"
         },
         {
             "kanji": "微妙",
-            "furigana": "びみょう",
+            "hiragana": "びみょう",
             "english": "subtle; delicate; fine",
             "jlpt": "n3"
         },
         {
             "kanji": "正式",
-            "furigana": "せいしき",
+            "hiragana": "せいしき",
             "english": "formal; official; regular; proper; legal; due (formalities)",
             "jlpt": "n3"
         },
         {
             "kanji": "豪華",
-            "furigana": "ごうか",
+            "hiragana": "ごうか",
             "english": "extravagant; lavish; opulent; luxurious; magnificent; splendid; fancy; gorgeous",
             "jlpt": "n3"
         },
         {
             "kanji": "強力",
-            "furigana": "きょうりょく",
+            "hiragana": "きょうりょく",
             "english": "powerful; strong",
             "jlpt": "n3"
         },
         {
             "kanji": "愉快",
-            "furigana": "ゆかい",
+            "hiragana": "ゆかい",
             "english": "pleasant; delightful; enjoyable; joyful; cheerful; amusing; happy",
             "jlpt": "n3"
         },
         {
             "kanji": "迷惑",
-            "furigana": "めいわく",
+            "hiragana": "めいわく",
             "english": "trouble; bother; annoyance; nuisance; inconvenience",
             "jlpt": "n3"
         },
         {
             "kanji": "必死",
-            "furigana": "ひっし",
+            "hiragana": "ひっし",
             "english": "frantic; frenetic; desperate",
             "jlpt": "n3"
         },
         {
             "kanji": "高速",
-            "furigana": "こうそく",
+            "hiragana": "こうそく",
             "english": "high-speed; rapid; express",
             "jlpt": "n3"
         },
         {
             "kanji": "不可",
-            "furigana": "ふか",
+            "hiragana": "ふか",
             "english": "wrong; bad; improper; unjustifiable; inadvisable",
             "jlpt": "n3"
         },
         {
             "kanji": "可也",
-            "furigana": "かなり",
+            "hiragana": "かなり",
             "english": "considerably; fairly; quite; rather; pretty",
             "jlpt": "n3"
         },
         {
             "kanji": "中中",
-            "furigana": "なかなか",
+            "hiragana": "なかなか",
             "english": "very; considerably; easily; readily; fairly; quite; highly; rather",
             "jlpt": "n3"
         },
         {
             "kanji": "僅か",
-            "furigana": "わずか",
+            "hiragana": "わずか",
             "english": "a little; a few; small; slight; trifling; meagre; meager; narrow (margin)",
             "jlpt": "n3"
         },
         {
             "kanji": "夢中",
-            "furigana": "むちゅう",
+            "hiragana": "むちゅう",
             "english": "absorbed in; immersed in; crazy about; obsessed with; devoted to",
             "jlpt": "n3"
         },
         {
             "kanji": "利口",
-            "furigana": "りこう",
+            "hiragana": "りこう",
             "english": "clever; intelligent; bright; smart; wise; sensible; shrewd",
             "jlpt": "n3"
         },
         {
             "kanji": "不平",
-            "furigana": "ふへい",
+            "hiragana": "ふへい",
             "english": "discontent; dissatisfaction; complaint; grievance",
             "jlpt": "n3"
         },
         {
             "kanji": "生憎",
-            "furigana": "あいにく",
+            "hiragana": "あいにく",
             "english": "unfortunately; sorry, but ...",
             "jlpt": "n3"
         },
         {
             "kanji": "真面目-1",
-            "furigana": "まじめ",
+            "hiragana": "まじめ",
             "english": "serious; earnest; sober; grave",
             "jlpt": "n3"
         },
         {
             "kanji": "気の毒",
-            "furigana": "きのどく",
+            "hiragana": "きのどく",
             "english": "pitiful; unfortunate; poor; miserable; wretched",
             "jlpt": "n3"
         },
         {
             "kanji": "我が儘",
-            "furigana": "わがまま",
+            "hiragana": "わがまま",
             "english": "selfish; egoist",
             "jlpt": "n3"
         },
         {
             "kanji": "真剣",
-            "furigana": "しんけん",
+            "hiragana": "しんけん",
             "english": "serious; earnest",
             "jlpt": "n3"
         },
         {
             "kanji": "贅沢",
-            "furigana": "ぜいたく",
+            "hiragana": "ぜいたく",
             "english": "luxury; extravagance",
             "jlpt": "n3"
         },
         {
             "kanji": "余分",
-            "furigana": "よぶん",
+            "hiragana": "よぶん",
             "english": "extra; excess; surplus",
             "jlpt": "n3"
         },
         {
             "kanji": "上等",
-            "furigana": "じょうとう",
+            "hiragana": "じょうとう",
             "english": "superior; first-class; excellent; top quality",
             "jlpt": "n3"
         },
         {
             "kanji": "平ら",
-            "furigana": "たいら",
+            "hiragana": "たいら",
             "english": "flat; level; even; smooth",
             "jlpt": "n3"
         },
         {
             "kanji": "器用",
-            "furigana": "きよう",
+            "hiragana": "きよう",
             "english": "skillful; skilful; adroit; dexterous; dextrous; deft; nimble; handy",
             "jlpt": "n3"
         },
         {
             "kanji": "そう",
-            "furigana": "そう",
+            "hiragana": "そう",
             "english": "appearing that; seeming that; looking like; having the appearance of",
             "jlpt": "n3"
         },
         {
             "kanji": "楽",
-            "furigana": "らく",
+            "hiragana": "らく",
             "english": "comfort; ease; relief; (at) peace; relaxation",
             "jlpt": "n3"
         },
         {
             "kanji": "逆",
-            "furigana": "ぎゃく",
+            "hiragana": "ぎゃく",
             "english": "reverse; opposite",
             "jlpt": "n3"
         },
         {
             "kanji": "同一",
-            "furigana": "どういつ",
+            "hiragana": "どういつ",
             "english": "identical; same; one and the same; equal",
             "jlpt": "n3"
         },
         {
             "kanji": "密",
-            "furigana": "みつ",
+            "hiragana": "みつ",
             "english": "dense; thick; crowded",
             "jlpt": "n3"
         },
         {
             "kanji": "ハンサム",
-            "furigana": "ハンサム",
+            "hiragana": "ハンサム",
             "english": "handsome",
             "jlpt": "n3"
         },
         {
             "kanji": "たっぷり",
-            "furigana": "たっぷり",
+            "hiragana": "たっぷり",
             "english": "plentifully; amply; abundantly; copiously; generously; fully; a lot",
             "jlpt": "n3"
         },
         {
             "kanji": "けち",
-            "furigana": "ケチ",
+            "hiragana": "ケチ",
             "english": "stinginess; miserliness; penny-pinching; miser; pinchpenny; skinflint; cheapskate; tightwad; niggard",
             "jlpt": "n3"
         },
         {
             "kanji": "直",
-            "furigana": "なお",
+            "hiragana": "なお",
             "english": "straight",
             "jlpt": "n3"
         },
         {
             "kanji": "一定",
-            "furigana": "いってい",
+            "hiragana": "いってい",
             "english": "fixed; settled; constant; definite; uniform; regularized; regularised; defined; standardized; standardised; certain; prescribed",
             "jlpt": "n2"
         },
         {
             "kanji": "乱暴",
-            "furigana": "らんぼう",
+            "hiragana": "らんぼう",
             "english": "violence; assault; rowdiness; wildness; running riot",
             "jlpt": "n2"
         },
         {
             "kanji": "膨大",
-            "furigana": "ぼうだい",
+            "hiragana": "ぼうだい",
             "english": "huge; vast; enormous; colossal; extensive; large",
             "jlpt": "n2"
         },
         {
             "kanji": "孝行",
-            "furigana": "こうこう",
+            "hiragana": "こうこう",
             "english": "filial piety",
             "jlpt": "n2"
         },
         {
             "kanji": "意地悪",
-            "furigana": "いじわる",
+            "hiragana": "いじわる",
             "english": "malicious; ill-tempered; unkind; mean; nasty",
             "jlpt": "n2"
         },
         {
             "kanji": "妥当",
-            "furigana": "だとう",
+            "hiragana": "だとう",
             "english": "valid; proper; right; appropriate; reasonable",
             "jlpt": "n2"
         },
         {
             "kanji": "御洒落",
-            "furigana": "おしゃれ",
+            "hiragana": "おしゃれ",
             "english": "stylish; fashionable; trendy; chic; smartly dressed; careful about one's appearance",
             "jlpt": "n2"
         },
         {
             "kanji": "凸凹",
-            "furigana": "でこぼこ",
+            "hiragana": "でこぼこ",
             "english": "unevenness; roughness; ruggedness; bumpiness",
             "jlpt": "n2"
         },
         {
             "kanji": "謙遜",
-            "furigana": "けんそん",
+            "hiragana": "けんそん",
             "english": "modesty; humility; being humble",
             "jlpt": "n2"
         },
         {
             "kanji": "謙遜",
-            "furigana": "けんそん",
+            "hiragana": "けんそん",
             "english": "modesty; humility; being humble",
             "jlpt": "n2"
         },
         {
             "kanji": "広々",
-            "furigana": "ひろびろ",
+            "hiragana": "ひろびろ",
             "english": "extensive; spacious",
             "jlpt": "n2"
         },
         {
             "kanji": "ぴかぴか",
-            "furigana": "ピカピカ",
+            "hiragana": "ピカピカ",
             "english": "with a glitter; with a sparkle",
             "jlpt": "n2"
         },
         {
             "kanji": "垂直",
-            "furigana": "すいちょく",
+            "hiragana": "すいちょく",
             "english": "vertical",
             "jlpt": "n2"
         },
         {
             "kanji": "水平",
-            "furigana": "すいへい",
+            "hiragana": "すいへい",
             "english": "horizontal; level; even",
             "jlpt": "n2"
         },
         {
             "kanji": "透明",
-            "furigana": "とうめい",
+            "hiragana": "とうめい",
             "english": "transparent; clear",
             "jlpt": "n2"
         },
         {
             "kanji": "真空",
-            "furigana": "しんくう",
+            "hiragana": "しんくう",
             "english": "vacuum; hollow; empty",
             "jlpt": "n2"
         },
         {
             "kanji": "曖昧",
-            "furigana": "あいまい",
+            "hiragana": "あいまい",
             "english": "vague; ambiguous; unclear",
             "jlpt": "n2"
         },
         {
             "kanji": "直角",
-            "furigana": "ちょっかく",
+            "hiragana": "ちょっかく",
             "english": "right angle; perpendicular",
             "jlpt": "n2"
         },
         {
             "kanji": "率直",
-            "furigana": "そっちょく",
+            "hiragana": "そっちょく",
             "english": "frank; candid; straightforward; openhearted; direct; outspoken",
             "jlpt": "n2"
         },
         {
             "kanji": "稀",
-            "furigana": "まれ",
+            "hiragana": "まれ",
             "english": "rare; seldom",
             "jlpt": "n2"
         },
         {
             "kanji": "当たり前",
-            "furigana": "あたりまえ",
+            "hiragana": "あたりまえ",
             "english": "natural; reasonable; obvious",
             "jlpt": "n2"
         },
         {
             "kanji": "余計",
-            "furigana": "よけい",
+            "hiragana": "よけい",
             "english": "extra; more; too much; too many; excessive; superfluous; spare; surplus",
             "jlpt": "n2"
         },
         {
             "kanji": "皮肉",
-            "furigana": "ひにく",
+            "hiragana": "ひにく",
             "english": "irony; sarcasm; cynicism; satire",
             "jlpt": "n2"
         },
         {
             "kanji": "不運",
-            "furigana": "ふうん",
+            "hiragana": "ふうん",
             "english": "misfortune; bad luck; ill luck; ill fortune",
             "jlpt": "n2"
         },
         {
             "kanji": "一定",
-            "furigana": "いってい",
+            "hiragana": "いってい",
             "english": "fixed; settled; constant; definite; uniform; regularized; regularised; defined; standardized; standardised; certain; prescribed",
             "jlpt": "n2"
         },
         {
             "kanji": "公正",
-            "furigana": "こうせい",
+            "hiragana": "こうせい",
             "english": "justice; fairness; impartiality",
             "jlpt": "n2"
         },
         {
             "kanji": "手ごろ",
-            "furigana": "てごろ",
+            "hiragana": "てごろ",
             "english": "handy; convenient",
             "jlpt": "n2"
         },
         {
             "kanji": "乱暴",
-            "furigana": "らんぼう",
+            "hiragana": "らんぼう",
             "english": "violence; assault; rowdiness; wildness; running riot",
             "jlpt": "n2"
         },
         {
             "kanji": "素直",
-            "furigana": "すなお",
+            "hiragana": "すなお",
             "english": "obedient; meek; docile; unaffected",
             "jlpt": "n2"
         },
         {
             "kanji": "無数",
-            "furigana": "むすう",
+            "hiragana": "むすう",
             "english": "innumerable; countless; numberless",
             "jlpt": "n2"
         },
         {
             "kanji": "派手",
-            "furigana": "はで",
+            "hiragana": "はで",
             "english": "showy; loud; flashy; gaudy",
             "jlpt": "n2"
         },
         {
             "kanji": "純粋",
-            "furigana": "じゅんすい",
+            "hiragana": "じゅんすい",
             "english": "pure; true; genuine; unmixed",
             "jlpt": "n2"
         },
         {
             "kanji": "真っ暗",
-            "furigana": "まっくら",
+            "hiragana": "まっくら",
             "english": "total darkness; pitch dark",
             "jlpt": "n2"
         },
         {
             "kanji": "消極的",
-            "furigana": "しょうきょくてき",
+            "hiragana": "しょうきょくてき",
             "english": "negative; passive; half-hearted; unmotivated",
             "jlpt": "n2"
         },
         {
             "kanji": "謙虚",
-            "furigana": "けんきょ",
+            "hiragana": "けんきょ",
             "english": "modest; humble",
             "jlpt": "n2"
         },
         {
             "kanji": "過剰",
-            "furigana": "かじょう",
+            "hiragana": "かじょう",
             "english": "excess; surplus; superabundance; overabundance",
             "jlpt": "n2"
         },
         {
             "kanji": "膨大",
-            "furigana": "ぼうだい",
+            "hiragana": "ぼうだい",
             "english": "huge; vast; enormous; colossal; extensive; large",
             "jlpt": "n2"
         },
         {
             "kanji": "真っ白",
-            "furigana": "まっしろ",
+            "hiragana": "まっしろ",
             "english": "pure white",
             "jlpt": "n2"
         },
         {
             "kanji": "強引",
-            "furigana": "ごういん",
+            "hiragana": "ごういん",
             "english": "overbearing; coercive; pushy; forcible; high-handed",
             "jlpt": "n2"
         },
         {
             "kanji": "斜め",
-            "furigana": "ななめ",
+            "hiragana": "ななめ",
             "english": "slanting; tilted; sloping; diagonal; oblique",
             "jlpt": "n2"
         },
         {
             "kanji": "逆さ",
-            "furigana": "さかさ",
+            "hiragana": "さかさ",
             "english": "inverted; upside down; reversed; back to front",
             "jlpt": "n2"
         },
         {
             "kanji": "高級",
-            "furigana": "こうきゅう",
+            "hiragana": "こうきゅう",
             "english": "high-class; high-grade; high-quality; high-end; luxury",
             "jlpt": "n2"
         },
         {
             "kanji": "特殊",
-            "furigana": "とくしゅ",
+            "hiragana": "とくしゅ",
             "english": "special; particular; peculiar; unique",
             "jlpt": "n2"
         },
         {
             "kanji": "厳重",
-            "furigana": "げんじゅう",
+            "hiragana": "げんじゅう",
             "english": "strict; severe; stringent; rigorous; rigid; firm; strong; secure",
             "jlpt": "n2"
         },
         {
             "kanji": "的確",
-            "furigana": "てきかく",
+            "hiragana": "てきかく",
             "english": "accurate; precise; exact; appropriate; apt; right",
             "jlpt": "n2"
         },
         {
             "kanji": "地味",
-            "furigana": "じみ",
+            "hiragana": "じみ",
             "english": "plain; simple; subdued; sober",
             "jlpt": "n2"
         },
         {
             "kanji": "不規則",
-            "furigana": "ふきそく",
+            "hiragana": "ふきそく",
             "english": "irregular; unsystematic; unsteady; disorderly",
             "jlpt": "n2"
         },
         {
             "kanji": "強気",
-            "furigana": "つよき",
+            "hiragana": "つよき",
             "english": "confident; assured; self-assured; firm; strong; cocksure",
             "jlpt": "n2"
         },
         {
             "kanji": "別々",
-            "furigana": "べつべつ",
+            "hiragana": "べつべつ",
             "english": "separate; respective; different",
             "jlpt": "n2"
         },
         {
             "kanji": "安易",
-            "furigana": "あんい",
+            "hiragana": "あんい",
             "english": "easy; simple",
             "jlpt": "n2"
         },
         {
             "kanji": "孝行",
-            "furigana": "こうこう",
+            "hiragana": "こうこう",
             "english": "filial piety",
             "jlpt": "n2"
         },
         {
             "kanji": "格別",
-            "furigana": "かくべつ",
+            "hiragana": "かくべつ",
             "english": "particular; special; exceptional; especial",
             "jlpt": "n2"
         },
         {
             "kanji": "高等",
-            "furigana": "こうとう",
+            "hiragana": "こうとう",
             "english": "high class; high grade",
             "jlpt": "n2"
         },
         {
             "kanji": "惨め",
-            "furigana": "みじめ",
+            "hiragana": "みじめ",
             "english": "miserable; wretched; unhappy; sad; pitiable",
             "jlpt": "n2"
         },
         {
             "kanji": "平気",
-            "furigana": "へいき",
+            "hiragana": "へいき",
             "english": "cool; calm; composed; unconcerned; nonchalant; unmoved; indifferent",
             "jlpt": "n2"
         },
         {
             "kanji": "空っぽ",
-            "furigana": "からっぽ",
+            "hiragana": "からっぽ",
             "english": "empty; vacant; hollow",
             "jlpt": "n2"
         },
         {
             "kanji": "真っ青",
-            "furigana": "まっさお",
+            "hiragana": "まっさお",
             "english": "deep blue; bright blue",
             "jlpt": "n2"
         },
         {
             "kanji": "意地悪",
-            "furigana": "いじわる",
+            "hiragana": "いじわる",
             "english": "malicious; ill-tempered; unkind; mean; nasty",
             "jlpt": "n2"
         },
         {
             "kanji": "爽やか",
-            "furigana": "さわやか",
+            "hiragana": "さわやか",
             "english": "fresh; refreshing; invigorating; pleasant; delightful",
             "jlpt": "n2"
         },
         {
             "kanji": "生意気",
-            "furigana": "なまいき",
+            "hiragana": "なまいき",
             "english": "impertinent; saucy; cheeky; impudent; audacious; cocky; pert; brash",
             "jlpt": "n2"
         },
         {
             "kanji": "妥当",
-            "furigana": "だとう",
+            "hiragana": "だとう",
             "english": "valid; proper; right; appropriate; reasonable",
             "jlpt": "n2"
         },
         {
             "kanji": "目茶苦茶",
-            "furigana": "めちゃくちゃ",
+            "hiragana": "めちゃくちゃ",
             "english": "absurd; unreasonable; nonsensical; preposterous; incoherent",
             "jlpt": "n2"
         },
         {
             "kanji": "暢気",
-            "furigana": "のんき",
+            "hiragana": "のんき",
             "english": "carefree; optimistic; careless; reckless; heedless; happy-go-lucky; easygoing; thoughtless",
             "jlpt": "n2"
         },
         {
             "kanji": "平凡",
-            "furigana": "へいぼん",
+            "hiragana": "へいぼん",
             "english": "ordinary; common; commonplace; mediocre; unremarkable; undistinguished; uneventful",
             "jlpt": "n2"
         },
         {
             "kanji": "出鱈目",
-            "furigana": "でたらめ",
+            "hiragana": "でたらめ",
             "english": "nonsense; irresponsible remark; codswallop; hogwash; rubbish",
             "jlpt": "n2"
         },
         {
             "kanji": "下品-1",
-            "furigana": "げひん",
+            "hiragana": "げひん",
             "english": "vulgar; indecent; coarse; crude",
             "jlpt": "n2"
         },
         {
             "kanji": "御洒落",
-            "furigana": "おしゃれ",
+            "hiragana": "おしゃれ",
             "english": "stylish; fashionable; trendy; chic; smartly dressed; careful about one's appearance",
             "jlpt": "n2"
         },
         {
             "kanji": "流石",
-            "furigana": "さすが",
+            "hiragana": "さすが",
             "english": "as one would expect; just as you'd expect (from); just like (someone)",
             "jlpt": "n2"
         },
         {
             "kanji": "凸凹",
-            "furigana": "でこぼこ",
+            "hiragana": "でこぼこ",
             "english": "unevenness; roughness; ruggedness; bumpiness",
             "jlpt": "n2"
         },
         {
             "kanji": "大ざっぱ",
-            "furigana": "おおざっぱ",
+            "hiragana": "おおざっぱ",
             "english": "rough (estimate, summary, etc.); broad; general; sweeping; loose",
             "jlpt": "n2"
         },
         {
             "kanji": "真っ黒",
-            "furigana": "まっくろ",
+            "hiragana": "まっくろ",
             "english": "pitch black",
             "jlpt": "n2"
         },
         {
             "kanji": "謙遜",
-            "furigana": "けんそん",
+            "hiragana": "けんそん",
             "english": "modesty; humility; being humble",
             "jlpt": "n2"
         },
         {
             "kanji": "不潔",
-            "furigana": "ふけつ",
+            "hiragana": "ふけつ",
             "english": "unclean; dirty; unsanitary; filthy",
             "jlpt": "n2"
         },
         {
             "kanji": "物騒",
-            "furigana": "ぶっそう",
+            "hiragana": "ぶっそう",
             "english": "dangerous; unsettled; troubled; disturbed; insecure",
             "jlpt": "n2"
         },
         {
             "kanji": "四角",
-            "furigana": "しかく",
+            "hiragana": "しかく",
             "english": "quadrilateral; square",
             "jlpt": "n2"
         },
         {
             "kanji": "朗らか",
-            "furigana": "ほがらか",
+            "hiragana": "ほがらか",
             "english": "cheerful; merry; sunny; melodious",
             "jlpt": "n2"
         },
         {
             "kanji": "欲張り",
-            "furigana": "よくばり",
+            "hiragana": "よくばり",
             "english": "greed; avarice; covetousness; greedy person",
             "jlpt": "n2"
         },
         {
             "kanji": "四角",
-            "furigana": "しかく",
+            "hiragana": "しかく",
             "english": "quadrilateral; square",
             "jlpt": "n2"
         },
         {
             "kanji": "純情",
-            "furigana": "じゅんじょう",
+            "hiragana": "じゅんじょう",
             "english": "pure heart; naivete; innocence",
             "jlpt": "n2"
         },
         {
             "kanji": "俄",
-            "furigana": "にわか",
+            "hiragana": "にわか",
             "english": "sudden; abrupt; unexpected; improvised; hasty; offhand",
             "jlpt": "n2"
         },
         {
             "kanji": "ご苦労さま",
-            "furigana": "ごくろうさま",
+            "hiragana": "ごくろうさま",
             "english": "thank you (for your hard work); I appreciate your efforts",
             "jlpt": "n2"
         },
         {
             "kanji": "卑怯",
-            "furigana": "ひきょう",
+            "hiragana": "ひきょう",
             "english": "cowardly; craven",
             "jlpt": "n2"
         },
         {
             "kanji": "広々",
-            "furigana": "ひろびろ",
+            "hiragana": "ひろびろ",
             "english": "extensive; spacious",
             "jlpt": "n2"
         },
         {
             "kanji": "逆様",
-            "furigana": "さかさま",
+            "hiragana": "さかさま",
             "english": "inverted; upside down; reversed; back to front; wrong way round",
             "jlpt": "n2"
         },
         {
             "kanji": "スマート",
-            "furigana": "スマート",
+            "hiragana": "スマート",
             "english": "smart (clothing, etc.); stylish",
             "jlpt": "n2"
         },
         {
             "kanji": "イコール",
-            "furigana": "イコール",
+            "hiragana": "イコール",
             "english": "equal; equivalent",
             "jlpt": "n2"
         },
         {
             "kanji": "傾らか",
-            "furigana": "なだらか",
+            "hiragana": "なだらか",
             "english": "gently sloping; gentle; gradual; easy",
             "jlpt": "n2"
         },
         {
             "kanji": "まあまあ",
-            "furigana": "まあまあ",
+            "hiragana": "まあまあ",
             "english": "so-so; passable; not (so) bad; reasonable",
             "jlpt": "n2"
         },
         {
             "kanji": "ぴかぴか",
-            "furigana": "ピカピカ",
+            "hiragana": "ピカピカ",
             "english": "with a glitter; with a sparkle",
             "jlpt": "n2"
         },
         {
             "kanji": "モダン",
-            "furigana": "モダン",
+            "hiragana": "モダン",
             "english": "modern",
             "jlpt": "n2"
         },
         {
             "kanji": "同格",
-            "furigana": "どうかく",
+            "hiragana": "どうかく",
             "english": "the same rank; equality",
             "jlpt": "n2"
         },
         {
             "kanji": "フリー",
-            "furigana": "フリー",
+            "hiragana": "フリー",
             "english": "free (of restraint, controls, etc.)",
             "jlpt": "n2"
         },
         {
             "kanji": "一定",
-            "furigana": "いってい",
+            "hiragana": "いってい",
             "english": "fixed; settled; constant; definite; uniform; regularized; regularised; defined; standardized; standardised; certain; prescribed",
             "jlpt": "n1"
         },
         {
             "kanji": "御洒落",
-            "furigana": "おしゃれ",
+            "hiragana": "おしゃれ",
             "english": "stylish; fashionable; trendy; chic; smartly dressed; careful about one's appearance",
             "jlpt": "n1"
         },
         {
             "kanji": "非難",
-            "furigana": "ひなん",
+            "hiragana": "ひなん",
             "english": "criticism; blame; censure; attack; reproach",
             "jlpt": "n1"
         },
         {
             "kanji": "貧乏",
-            "furigana": "びんぼう",
+            "hiragana": "びんぼう",
             "english": "poverty-stricken; destitute; poor; penurious",
             "jlpt": "n1"
         },
         {
             "kanji": "密接",
-            "furigana": "みっせつ",
+            "hiragana": "みっせつ",
             "english": "close (relationship, connection, etc.); intimate; near",
             "jlpt": "n1"
         },
         {
             "kanji": "浮気",
-            "furigana": "うわき",
+            "hiragana": "うわき",
             "english": "extramarital sex; affair; fooling around",
             "jlpt": "n1"
         },
         {
             "kanji": "寛容",
-            "furigana": "かんよう",
+            "hiragana": "かんよう",
             "english": "tolerance; open-mindedness; forbearance; generosity; magnanimity",
             "jlpt": "n1"
         },
         {
             "kanji": "軽快",
-            "furigana": "けいかい",
+            "hiragana": "けいかい",
             "english": "light (of movements); nimble; sprightly; springy",
             "jlpt": "n1"
         },
         {
             "kanji": "軽快",
-            "furigana": "けいかい",
+            "hiragana": "けいかい",
             "english": "light (of movements); nimble; sprightly; springy",
             "jlpt": "n1"
         },
         {
             "kanji": "寛容",
-            "furigana": "かんよう",
+            "hiragana": "かんよう",
             "english": "tolerance; open-mindedness; forbearance; generosity; magnanimity",
             "jlpt": "n1"
         },
         {
             "kanji": "倹約",
-            "furigana": "けんやく",
+            "hiragana": "けんやく",
             "english": "thrift; economy; frugality",
             "jlpt": "n1"
         },
         {
             "kanji": "几帳面",
-            "furigana": "きちょうめん",
+            "hiragana": "きちょうめん",
             "english": "methodical; precise; meticulous; scrupulous; regular; punctual",
             "jlpt": "n1"
         },
         {
             "kanji": "重宝",
-            "furigana": "ちょうほう",
+            "hiragana": "ちょうほう",
             "english": "convenient; useful; handy; helpful",
             "jlpt": "n1"
         },
         {
             "kanji": "相応",
-            "furigana": "そうおう",
+            "hiragana": "そうおう",
             "english": "suitable; appropriate; befitting; becoming; adequate; reasonable; proper",
             "jlpt": "n1"
         },
         {
             "kanji": "ぶらぶら",
-            "furigana": "ぶらぶら",
+            "hiragana": "ぶらぶら",
             "english": "dangling; swaying; swinging",
             "jlpt": "n1"
         },
         {
             "kanji": "だぶだぶ",
-            "furigana": "だぶだぶ",
+            "hiragana": "だぶだぶ",
             "english": "loose (of clothing); baggy",
             "jlpt": "n1"
         },
         {
             "kanji": "ぺこぺこ",
-            "furigana": "ペコペコ",
+            "hiragana": "ペコペコ",
             "english": "very hungry; starving; famished",
             "jlpt": "n1"
         },
         {
             "kanji": "ぶかぶか",
-            "furigana": "ぶかぶか",
+            "hiragana": "ぶかぶか",
             "english": "too large (clothing); baggy; loose-fitting",
             "jlpt": "n1"
         },
         {
             "kanji": "黄色",
-            "furigana": "きいろ",
+            "hiragana": "きいろ",
             "english": "yellow; amber",
             "jlpt": "n1"
         },
         {
             "kanji": "沢山",
-            "furigana": "たくさん",
+            "hiragana": "たくさん",
             "english": "a lot; lots; plenty; many; a large number; much; a great deal; a good deal",
             "jlpt": "n1"
         },
         {
             "kanji": "奇麗",
-            "furigana": "きれい",
+            "hiragana": "きれい",
             "english": "pretty; lovely; beautiful; fair",
             "jlpt": "n1"
         },
         {
             "kanji": "色々",
-            "furigana": "いろいろ",
+            "hiragana": "いろいろ",
             "english": "various; all sorts of; variety of",
             "jlpt": "n1"
         },
         {
             "kanji": "曖昧",
-            "furigana": "あいまい",
+            "hiragana": "あいまい",
             "english": "vague; ambiguous; unclear",
             "jlpt": "n1"
         },
         {
             "kanji": "大事",
-            "furigana": "だいじ",
+            "hiragana": "だいじ",
             "english": "important; serious; crucial",
             "jlpt": "n1"
         },
         {
             "kanji": "名誉",
-            "furigana": "めいよ",
+            "hiragana": "めいよ",
             "english": "honor; honour; credit; glory; fame; distinction",
             "jlpt": "n1"
         },
         {
             "kanji": "貧困",
-            "furigana": "ひんこん",
+            "hiragana": "ひんこん",
             "english": "poverty; penury; need; destitution",
             "jlpt": "n1"
         },
         {
             "kanji": "孤独",
-            "furigana": "こどく",
+            "hiragana": "こどく",
             "english": "solitude; loneliness; isolation",
             "jlpt": "n1"
         },
         {
             "kanji": "久しぶり",
-            "furigana": "ひさしぶり",
+            "hiragana": "ひさしぶり",
             "english": "a long time (since the last time); first in a long time",
             "jlpt": "n1"
         },
         {
             "kanji": "神秘",
-            "furigana": "しんぴ",
+            "hiragana": "しんぴ",
             "english": "mystery; mysteriousness; secret",
             "jlpt": "n1"
         },
         {
             "kanji": "無効",
-            "furigana": "むこう",
+            "hiragana": "むこう",
             "english": "invalid; void; ineffective; unavailable",
             "jlpt": "n1"
         },
         {
             "kanji": "味覚",
-            "furigana": "みかく",
+            "hiragana": "みかく",
             "english": "taste; palate; sense of taste",
             "jlpt": "n1"
         },
         {
             "kanji": "無知",
-            "furigana": "むち",
+            "hiragana": "むち",
             "english": "ignorance; innocence; stupidity",
             "jlpt": "n1"
         },
         {
             "kanji": "無口",
-            "furigana": "むくち",
+            "hiragana": "むくち",
             "english": "taciturn; reticent; quiet; silent; untalkative",
             "jlpt": "n1"
         },
         {
             "kanji": "素敵",
-            "furigana": "すてき",
+            "hiragana": "すてき",
             "english": "lovely; wonderful; nice; great; fantastic; superb; cool",
             "jlpt": "n1"
         },
         {
             "kanji": "可哀相",
-            "furigana": "かわいそう",
+            "hiragana": "かわいそう",
             "english": "poor; pitiable; pathetic; pitiful",
             "jlpt": "n1"
         },
         {
             "kanji": "可也",
-            "furigana": "かなり",
+            "hiragana": "かなり",
             "english": "considerably; fairly; quite; rather; pretty",
             "jlpt": "n1"
         },
         {
             "kanji": "我が儘",
-            "furigana": "わがまま",
+            "hiragana": "わがまま",
             "english": "selfish; egoist",
             "jlpt": "n1"
         },
         {
             "kanji": "率直",
-            "furigana": "そっちょく",
+            "hiragana": "そっちょく",
             "english": "frank; candid; straightforward; openhearted; direct; outspoken",
             "jlpt": "n1"
         },
         {
             "kanji": "当たり前",
-            "furigana": "あたりまえ",
+            "hiragana": "あたりまえ",
             "english": "natural; reasonable; obvious",
             "jlpt": "n1"
         },
         {
             "kanji": "一定",
-            "furigana": "いってい",
+            "hiragana": "いってい",
             "english": "fixed; settled; constant; definite; uniform; regularized; regularised; defined; standardized; standardised; certain; prescribed",
             "jlpt": "n1"
         },
         {
             "kanji": "不当",
-            "furigana": "ふとう",
+            "hiragana": "ふとう",
             "english": "injustice; impropriety; unreasonableness; undeserved; unfair; invalid",
             "jlpt": "n1"
         },
         {
             "kanji": "円満",
-            "furigana": "えんまん",
+            "hiragana": "えんまん",
             "english": "harmonious; peaceful; happy; amicable; smooth; free from trouble",
             "jlpt": "n1"
         },
         {
             "kanji": "惨め",
-            "furigana": "みじめ",
+            "hiragana": "みじめ",
             "english": "miserable; wretched; unhappy; sad; pitiable",
             "jlpt": "n1"
         },
         {
             "kanji": "爽やか",
-            "furigana": "さわやか",
+            "hiragana": "さわやか",
             "english": "fresh; refreshing; invigorating; pleasant; delightful",
             "jlpt": "n1"
         },
         {
             "kanji": "目茶苦茶",
-            "furigana": "めちゃくちゃ",
+            "hiragana": "めちゃくちゃ",
             "english": "absurd; unreasonable; nonsensical; preposterous; incoherent",
             "jlpt": "n1"
         },
         {
             "kanji": "出鱈目",
-            "furigana": "でたらめ",
+            "hiragana": "でたらめ",
             "english": "nonsense; irresponsible remark; codswallop; hogwash; rubbish",
             "jlpt": "n1"
         },
         {
             "kanji": "御洒落",
-            "furigana": "おしゃれ",
+            "hiragana": "おしゃれ",
             "english": "stylish; fashionable; trendy; chic; smartly dressed; careful about one's appearance",
             "jlpt": "n1"
         },
         {
             "kanji": "大ざっぱ",
-            "furigana": "おおざっぱ",
+            "hiragana": "おおざっぱ",
             "english": "rough (estimate, summary, etc.); broad; general; sweeping; loose",
             "jlpt": "n1"
         },
         {
             "kanji": "俄",
-            "furigana": "にわか",
+            "hiragana": "にわか",
             "english": "sudden; abrupt; unexpected; improvised; hasty; offhand",
             "jlpt": "n1"
         },
         {
             "kanji": "ご苦労さま",
-            "furigana": "ごくろうさま",
+            "hiragana": "ごくろうさま",
             "english": "thank you (for your hard work); I appreciate your efforts",
             "jlpt": "n1"
         },
         {
             "kanji": "真実",
-            "furigana": "しんじつ",
+            "hiragana": "しんじつ",
             "english": "truth; reality",
             "jlpt": "n1"
         },
         {
             "kanji": "勤勉",
-            "furigana": "きんべん",
+            "hiragana": "きんべん",
             "english": "diligent; hard-working; industrious",
             "jlpt": "n1"
         },
         {
             "kanji": "非難",
-            "furigana": "ひなん",
+            "hiragana": "ひなん",
             "english": "criticism; blame; censure; attack; reproach",
             "jlpt": "n1"
         },
         {
             "kanji": "貧乏",
-            "furigana": "びんぼう",
+            "hiragana": "びんぼう",
             "english": "poverty-stricken; destitute; poor; penurious",
             "jlpt": "n1"
         },
         {
             "kanji": "賢明",
-            "furigana": "けんめい",
+            "hiragana": "けんめい",
             "english": "wise; sensible; well-advised; intelligent; sagacious; prudent",
             "jlpt": "n1"
         },
         {
             "kanji": "誠実",
-            "furigana": "せいじつ",
+            "hiragana": "せいじつ",
             "english": "sincere; honest; faithful",
             "jlpt": "n1"
         },
         {
             "kanji": "本気",
-            "furigana": "ほんき",
+            "hiragana": "ほんき",
             "english": "seriousness; earnestness; truth; sanctity",
             "jlpt": "n1"
         },
         {
             "kanji": "忠実",
-            "furigana": "ちゅうじつ",
+            "hiragana": "ちゅうじつ",
             "english": "faithful; devoted; loyal; honest; true",
             "jlpt": "n1"
         },
         {
             "kanji": "緊急",
-            "furigana": "きんきゅう",
+            "hiragana": "きんきゅう",
             "english": "urgency; emergency",
             "jlpt": "n1"
         },
         {
             "kanji": "不可欠",
-            "furigana": "ふかけつ",
+            "hiragana": "ふかけつ",
             "english": "indispensable; essential",
             "jlpt": "n1"
         },
         {
             "kanji": "敏感",
-            "furigana": "びんかん",
+            "hiragana": "びんかん",
             "english": "sensitive; alert; aware; susceptible",
             "jlpt": "n1"
         },
         {
             "kanji": "残酷",
-            "furigana": "ざんこく",
+            "hiragana": "ざんこく",
             "english": "cruel; brutal; ruthless; merciless; inhuman",
             "jlpt": "n1"
         },
         {
             "kanji": "気楽",
-            "furigana": "きらく",
+            "hiragana": "きらく",
             "english": "carefree; comfortable; at ease",
             "jlpt": "n1"
         },
         {
             "kanji": "不況",
-            "furigana": "ふきょう",
+            "hiragana": "ふきょう",
             "english": "depression; recession; slump",
             "jlpt": "n1"
         },
         {
             "kanji": "特有",
-            "furigana": "とくゆう",
+            "hiragana": "とくゆう",
             "english": "characteristic (of); peculiar (to)",
             "jlpt": "n1"
         },
         {
             "kanji": "大胆",
-            "furigana": "だいたん",
+            "hiragana": "だいたん",
             "english": "bold; daring; audacious",
             "jlpt": "n1"
         },
         {
             "kanji": "有益",
-            "furigana": "ゆうえき",
+            "hiragana": "ゆうえき",
             "english": "beneficial; profitable; useful; helpful; instructive",
             "jlpt": "n1"
         },
         {
             "kanji": "人柄",
-            "furigana": "ひとがら",
+            "hiragana": "ひとがら",
             "english": "personality; character; personal appearance; gentility",
             "jlpt": "n1"
         },
         {
             "kanji": "人柄",
-            "furigana": "ひとがら",
+            "hiragana": "ひとがら",
             "english": "personality; character; personal appearance; gentility",
             "jlpt": "n1"
         },
         {
             "kanji": "極端",
-            "furigana": "きょくたん",
+            "hiragana": "きょくたん",
             "english": "extreme; extremity",
             "jlpt": "n1"
         },
         {
             "kanji": "独自",
-            "furigana": "どくじ",
+            "hiragana": "どくじ",
             "english": "original; unique; distinctive; characteristic; peculiar",
             "jlpt": "n1"
         },
         {
             "kanji": "頑固",
-            "furigana": "がんこ",
+            "hiragana": "がんこ",
             "english": "stubborn; obstinate; pigheaded",
             "jlpt": "n1"
         },
         {
             "kanji": "簡潔",
-            "furigana": "かんけつ",
+            "hiragana": "かんけつ",
             "english": "concise; brief; succinct; compact (style)",
             "jlpt": "n1"
         },
         {
             "kanji": "滑らか",
-            "furigana": "なめらか",
+            "hiragana": "なめらか",
             "english": "smooth (of a surface); glassy; velvety; soft",
             "jlpt": "n1"
         },
         {
             "kanji": "怠慢",
-            "furigana": "たいまん",
+            "hiragana": "たいまん",
             "english": "negligence; neglect; carelessness; procrastination",
             "jlpt": "n1"
         },
         {
             "kanji": "大幅",
-            "furigana": "おおはば",
+            "hiragana": "おおはば",
             "english": "big; large; drastic; substantial",
             "jlpt": "n1"
         },
         {
             "kanji": "活発",
-            "furigana": "かっぱつ",
+            "hiragana": "かっぱつ",
             "english": "lively; active; vigorous; animated; brisk",
             "jlpt": "n1"
         },
         {
             "kanji": "単調",
-            "furigana": "たんちょう",
+            "hiragana": "たんちょう",
             "english": "monotony; monotone; dullness",
             "jlpt": "n1"
         },
         {
             "kanji": "著名",
-            "furigana": "ちょめい",
+            "hiragana": "ちょめい",
             "english": "well-known; noted; celebrated",
             "jlpt": "n1"
         },
         {
             "kanji": "大げさ",
-            "furigana": "おおげさ",
+            "hiragana": "おおげさ",
             "english": "exaggerated; overdone; overblown; hyperbolic; bombastic; grandiose",
             "jlpt": "n1"
         },
         {
             "kanji": "迅速",
-            "furigana": "じんそく",
+            "hiragana": "じんそく",
             "english": "quick; fast; rapid; swift; prompt; streamlined; expedited; expeditious",
             "jlpt": "n1"
         },
         {
             "kanji": "健全",
-            "furigana": "けんぜん",
+            "hiragana": "けんぜん",
             "english": "healthy; sound; wholesome",
             "jlpt": "n1"
         },
         {
             "kanji": "正常",
-            "furigana": "せいじょう",
+            "hiragana": "せいじょう",
             "english": "normalcy; normality; normal",
             "jlpt": "n1"
         },
         {
             "kanji": "増し",
-            "furigana": "まし",
+            "hiragana": "まし",
             "english": "better; preferable; less objectionable; least-worst",
             "jlpt": "n1"
         },
         {
             "kanji": "通",
-            "furigana": "つう",
+            "hiragana": "つう",
             "english": "authority; expert; connoisseur; well-informed person",
             "jlpt": "n1"
         },
         {
             "kanji": "密接",
-            "furigana": "みっせつ",
+            "hiragana": "みっせつ",
             "english": "close (relationship, connection, etc.); intimate; near",
             "jlpt": "n1"
         },
         {
             "kanji": "知的",
-            "furigana": "ちてき",
+            "hiragana": "ちてき",
             "english": "intellectual",
             "jlpt": "n1"
         },
         {
             "kanji": "鮮やか",
-            "furigana": "あざやか",
+            "hiragana": "あざやか",
             "english": "vivid; bright; brilliant; clear; fresh; vibrant",
             "jlpt": "n1"
         },
         {
             "kanji": "軽率",
-            "furigana": "けいそつ",
+            "hiragana": "けいそつ",
             "english": "rash; thoughtless; careless; hasty; imprudent",
             "jlpt": "n1"
         },
         {
             "kanji": "有望",
-            "furigana": "ゆうぼう",
+            "hiragana": "ゆうぼう",
             "english": "promising; hopeful; full of promise",
             "jlpt": "n1"
         },
         {
             "kanji": "良質",
-            "furigana": "りょうしつ",
+            "hiragana": "りょうしつ",
             "english": "good quality; fine quality; superior quality; high quality",
             "jlpt": "n1"
         },
         {
             "kanji": "単独",
-            "furigana": "たんどく",
+            "hiragana": "たんどく",
             "english": "sole; single; solo",
             "jlpt": "n1"
         },
         {
             "kanji": "猛烈",
-            "furigana": "もうれつ",
+            "hiragana": "もうれつ",
             "english": "fierce; intense; severe; violent; strong; vehement; terrific; terrible",
             "jlpt": "n1"
         },
         {
             "kanji": "巧み",
-            "furigana": "たくみ",
+            "hiragana": "たくみ",
             "english": "skillful; adroit; dexterous; masterful; clever; ingenious; cunning",
             "jlpt": "n1"
         },
         {
             "kanji": "神聖",
-            "furigana": "しんせい",
+            "hiragana": "しんせい",
             "english": "holiness; sacredness; sanctity; dignity",
             "jlpt": "n1"
         },
         {
             "kanji": "肝心",
-            "furigana": "かんじん",
+            "hiragana": "かんじん",
             "english": "essential; important; crucial; vital; main",
             "jlpt": "n1"
         },
         {
             "kanji": "不景気",
-            "furigana": "ふけいき",
+            "hiragana": "ふけいき",
             "english": "economic slump; hard times; depression; recession",
             "jlpt": "n1"
         },
         {
             "kanji": "対等",
-            "furigana": "たいとう",
+            "hiragana": "たいとう",
             "english": "equality (esp. of status); equal footing; equal terms",
             "jlpt": "n1"
         },
         {
             "kanji": "不明",
-            "furigana": "ふめい",
+            "hiragana": "ふめい",
             "english": "unclear; obscure; indistinct; uncertain; ambiguous",
             "jlpt": "n1"
         },
         {
             "kanji": "強烈",
-            "furigana": "きょうれつ",
+            "hiragana": "きょうれつ",
             "english": "strong; intense; severe",
             "jlpt": "n1"
         },
         {
             "kanji": "柔軟",
-            "furigana": "じゅうなん",
+            "hiragana": "じゅうなん",
             "english": "flexible; lithe; soft; pliable",
             "jlpt": "n1"
         },
         {
             "kanji": "浮気",
-            "furigana": "うわき",
+            "hiragana": "うわき",
             "english": "extramarital sex; affair; fooling around",
             "jlpt": "n1"
         },
         {
             "kanji": "優勢",
-            "furigana": "ゆうせい",
+            "hiragana": "ゆうせい",
             "english": "superiority; superior power; predominance; preponderance",
             "jlpt": "n1"
         },
         {
             "kanji": "正当",
-            "furigana": "せいとう",
+            "hiragana": "せいとう",
             "english": "just; justifiable; right; due; proper; equitable; reasonable; legitimate; legal; lawful",
             "jlpt": "n1"
         },
         {
             "kanji": "盛大",
-            "furigana": "せいだい",
+            "hiragana": "せいだい",
             "english": "grand; magnificent; lavish; large scale; prosperous; thriving; lively",
             "jlpt": "n1"
         },
         {
             "kanji": "多様",
-            "furigana": "たよう",
+            "hiragana": "たよう",
             "english": "diverse; varied",
             "jlpt": "n1"
         },
         {
             "kanji": "好評",
-            "furigana": "こうひょう",
+            "hiragana": "こうひょう",
             "english": "favorable reception; good reputation; popularity",
             "jlpt": "n1"
         },
         {
             "kanji": "悲惨",
-            "furigana": "ひさん",
+            "hiragana": "ひさん",
             "english": "disastrous; tragic; miserable; wretched; pitiful; woeful",
             "jlpt": "n1"
         },
         {
             "kanji": "不服",
-            "furigana": "ふふく",
+            "hiragana": "ふふく",
             "english": "dissatisfaction; discontent; disapproval; objection; complaint; protest; disagreement",
             "jlpt": "n1"
         },
         {
             "kanji": "緩やか",
-            "furigana": "ゆるやか",
+            "hiragana": "ゆるやか",
             "english": "loose; slack",
             "jlpt": "n1"
         },
         {
             "kanji": "無用",
-            "furigana": "むよう",
+            "hiragana": "むよう",
             "english": "useless; futile",
             "jlpt": "n1"
         },
         {
             "kanji": "有力",
-            "furigana": "ゆうりょく",
+            "hiragana": "ゆうりょく",
             "english": "influential; prominent",
             "jlpt": "n1"
         },
         {
             "kanji": "強硬",
-            "furigana": "きょうこう",
+            "hiragana": "きょうこう",
             "english": "firm; strong; unbending; unyielding; uncompromising; stubborn; tough; hard-line",
             "jlpt": "n1"
         },
         {
             "kanji": "不良",
-            "furigana": "ふりょう",
+            "hiragana": "ふりょう",
             "english": "bad; poor; inferior; defective",
             "jlpt": "n1"
         },
         {
             "kanji": "固有",
-            "furigana": "こゆう",
+            "hiragana": "こゆう",
             "english": "characteristic; traditional; peculiar; inherent; native; eigen-",
             "jlpt": "n1"
         },
         {
             "kanji": "気軽",
-            "furigana": "きがる",
+            "hiragana": "きがる",
             "english": "carefree; buoyant; lighthearted; sprightly",
             "jlpt": "n1"
         },
         {
             "kanji": "優美",
-            "furigana": "ゆうび",
+            "hiragana": "ゆうび",
             "english": "grace; refinement; elegance; daintiness",
             "jlpt": "n1"
         },
         {
             "kanji": "多忙",
-            "furigana": "たぼう",
+            "hiragana": "たぼう",
             "english": "being very busy; busyness",
             "jlpt": "n1"
         },
         {
             "kanji": "達者",
-            "furigana": "たっしゃ",
+            "hiragana": "たっしゃ",
             "english": "in good health; healthy; well; fit; robust; strong",
             "jlpt": "n1"
         },
         {
             "kanji": "簡素",
-            "furigana": "かんそ",
+            "hiragana": "かんそ",
             "english": "simple; plain; modest",
             "jlpt": "n1"
         },
         {
             "kanji": "厳密",
-            "furigana": "げんみつ",
+            "hiragana": "げんみつ",
             "english": "strict; close; precise; scrupulous",
             "jlpt": "n1"
         },
         {
             "kanji": "壮大",
-            "furigana": "そうだい",
+            "hiragana": "そうだい",
             "english": "magnificent; grand; majestic; splendid",
             "jlpt": "n1"
         },
         {
             "kanji": "種々",
-            "furigana": "しゅじゅ",
+            "hiragana": "しゅじゅ",
             "english": "various; a variety of; all kinds of; many; diverse",
             "jlpt": "n1"
         },
         {
             "kanji": "好調",
-            "furigana": "こうちょう",
+            "hiragana": "こうちょう",
             "english": "favourable; favorable; promising; satisfactory; in good shape",
             "jlpt": "n1"
         },
         {
             "kanji": "小柄",
-            "furigana": "こがら",
+            "hiragana": "こがら",
             "english": "small build; small stature; petite",
             "jlpt": "n1"
         },
         {
             "kanji": "未定",
-            "furigana": "みてい",
+            "hiragana": "みてい",
             "english": "not yet fixed; undecided; pending; TBD",
             "jlpt": "n1"
         },
         {
             "kanji": "良好",
-            "furigana": "りょうこう",
+            "hiragana": "りょうこう",
             "english": "good; fine; excellent; favorable; favourable; satisfactory",
             "jlpt": "n1"
         },
         {
             "kanji": "貧弱",
-            "furigana": "ひんじゃく",
+            "hiragana": "ひんじゃく",
             "english": "poor; meagre; meager; feeble; scanty; shabby; insubstantial",
             "jlpt": "n1"
         },
         {
             "kanji": "好調",
-            "furigana": "こうちょう",
+            "hiragana": "こうちょう",
             "english": "favourable; favorable; promising; satisfactory; in good shape",
             "jlpt": "n1"
         },
         {
             "kanji": "華やか",
-            "furigana": "はなやか",
+            "hiragana": "はなやか",
             "english": "bright and beautiful; gorgeous; showy; brilliant; splendid; gay; colorful; flowery",
             "jlpt": "n1"
         },
         {
             "kanji": "巧妙",
-            "furigana": "こうみょう",
+            "hiragana": "こうみょう",
             "english": "ingenious; skillful; clever; deft",
             "jlpt": "n1"
         },
         {
             "kanji": "受身",
-            "furigana": "うけみ",
+            "hiragana": "うけみ",
             "english": "the defensive",
             "jlpt": "n1"
         },
         {
             "kanji": "健在",
-            "furigana": "けんざい",
+            "hiragana": "けんざい",
             "english": "in good health; alive and well; going strong",
             "jlpt": "n1"
         },
         {
             "kanji": "露骨",
-            "furigana": "ろこつ",
+            "hiragana": "ろこつ",
             "english": "open; unconcealed; undisguised; blatant; plain; frank",
             "jlpt": "n1"
         },
         {
             "kanji": "未熟",
-            "furigana": "みじゅく",
+            "hiragana": "みじゅく",
             "english": "unripe; green",
             "jlpt": "n1"
         },
         {
             "kanji": "粋",
-            "furigana": "いき",
+            "hiragana": "いき",
             "english": "chic; smart; stylish; tasteful; refined; sophisticated",
             "jlpt": "n1"
         },
         {
             "kanji": "単一",
-            "furigana": "たんいつ",
+            "hiragana": "たんいつ",
             "english": "single; simple; sole; individual; unitary",
             "jlpt": "n1"
         },
         {
             "kanji": "同等",
-            "furigana": "どうとう",
+            "hiragana": "どうとう",
             "english": "equality; equal; same rights; same rank; equivalence",
             "jlpt": "n1"
         },
         {
             "kanji": "不審",
-            "furigana": "ふしん",
+            "hiragana": "ふしん",
             "english": "doubt; suspicion; question; strangeness",
             "jlpt": "n1"
         },
         {
             "kanji": "身近",
-            "furigana": "みぢか",
+            "hiragana": "みぢか",
             "english": "near oneself; close to one; familiar",
             "jlpt": "n1"
         },
         {
             "kanji": "窮屈",
-            "furigana": "きゅうくつ",
+            "hiragana": "きゅうくつ",
             "english": "narrow; tight; cramped",
             "jlpt": "n1"
         },
         {
             "kanji": "精巧",
-            "furigana": "せいこう",
+            "hiragana": "せいこう",
             "english": "elaborate; delicate; exquisite",
             "jlpt": "n1"
         },
         {
             "kanji": "精密",
-            "furigana": "せいみつ",
+            "hiragana": "せいみつ",
             "english": "precise; exact; detailed; accurate; minute; close",
             "jlpt": "n1"
         },
         {
             "kanji": "寛容",
-            "furigana": "かんよう",
+            "hiragana": "かんよう",
             "english": "tolerance; open-mindedness; forbearance; generosity; magnanimity",
             "jlpt": "n1"
         },
         {
             "kanji": "明朗",
-            "furigana": "めいろう",
+            "hiragana": "めいろう",
             "english": "cheerful; bright",
             "jlpt": "n1"
         },
         {
             "kanji": "未練",
-            "furigana": "みれん",
+            "hiragana": "みれん",
             "english": "lingering attachment; lingering affection; regret; reluctance; ruefulness",
             "jlpt": "n1"
         },
         {
             "kanji": "無難",
-            "furigana": "ぶなん",
+            "hiragana": "ぶなん",
             "english": "safe (e.g. choice); secure; innocuous; inoffensive",
             "jlpt": "n1"
         },
         {
             "kanji": "半端",
-            "furigana": "はんぱ",
+            "hiragana": "はんぱ",
             "english": "remnant; fragment; incomplete set; incompleteness",
             "jlpt": "n1"
         },
         {
             "kanji": "素朴",
-            "furigana": "そぼく",
+            "hiragana": "そぼく",
             "english": "simple; artless; naive; unsophisticated",
             "jlpt": "n1"
         },
         {
             "kanji": "切実",
-            "furigana": "せつじつ",
+            "hiragana": "せつじつ",
             "english": "earnest; sincere; acute; keen; fervent",
             "jlpt": "n1"
         },
         {
             "kanji": "軽快",
-            "furigana": "けいかい",
+            "hiragana": "けいかい",
             "english": "light (of movements); nimble; sprightly; springy",
             "jlpt": "n1"
         },
         {
             "kanji": "不調",
-            "furigana": "ふちょう",
+            "hiragana": "ふちょう",
             "english": "bad condition; poor condition; disorder; slump; being out of form",
             "jlpt": "n1"
         },
         {
             "kanji": "過密",
-            "furigana": "かみつ",
+            "hiragana": "かみつ",
             "english": "overcrowding; congestion; overpopulation",
             "jlpt": "n1"
         },
         {
             "kanji": "自在",
-            "furigana": "じざい",
+            "hiragana": "じざい",
             "english": "being able to do as one pleases; doing at will",
             "jlpt": "n1"
         },
         {
             "kanji": "症",
-            "furigana": "しょう",
+            "hiragana": "しょう",
             "english": "illness",
             "jlpt": "n1"
         },
         {
             "kanji": "円滑",
-            "furigana": "えんかつ",
+            "hiragana": "えんかつ",
             "english": "smooth; undisturbed; uninterrupted; harmonious",
             "jlpt": "n1"
         },
         {
             "kanji": "不順",
-            "furigana": "ふじゅん",
+            "hiragana": "ふじゅん",
             "english": "irregular; unseasonable; changeable; unsettled; abnormal",
             "jlpt": "n1"
         },
         {
             "kanji": "手軽",
-            "furigana": "てがる",
+            "hiragana": "てがる",
             "english": "easy; simple; informal; offhand; cheap",
             "jlpt": "n1"
         },
         {
             "kanji": "優位",
-            "furigana": "ゆうい",
+            "hiragana": "ゆうい",
             "english": "predominance; superiority; ascendancy; advantage; supremacy",
             "jlpt": "n1"
         },
         {
             "kanji": "的",
-            "furigana": "てき",
+            "hiragana": "てき",
             "english": "-ical; -ive; -al; -ic; -y",
             "jlpt": "n1"
         },
         {
             "kanji": "愚か",
-            "furigana": "おろか",
+            "hiragana": "おろか",
             "english": "foolish; stupid; silly",
             "jlpt": "n1"
         },
         {
             "kanji": "勇敢",
-            "furigana": "ゆうかん",
+            "hiragana": "ゆうかん",
             "english": "brave; heroic; gallant",
             "jlpt": "n1"
         },
         {
             "kanji": "遥か",
-            "furigana": "はるか",
+            "hiragana": "はるか",
             "english": "far away; far off; far; distant; in the distance",
             "jlpt": "n1"
         },
         {
             "kanji": "空腹",
-            "furigana": "くうふく",
+            "hiragana": "くうふく",
             "english": "empty stomach; hunger",
             "jlpt": "n1"
         },
         {
             "kanji": "完璧",
-            "furigana": "かんぺき",
+            "hiragana": "かんぺき",
             "english": "perfect; complete; flawless",
             "jlpt": "n1"
         },
         {
             "kanji": "無礼",
-            "furigana": "ぶれい",
+            "hiragana": "ぶれい",
             "english": "rudeness; impoliteness; discourtesy; insolence",
             "jlpt": "n1"
         },
         {
             "kanji": "憂鬱",
-            "furigana": "ゆううつ",
+            "hiragana": "ゆううつ",
             "english": "depression; melancholy; dejection; gloom; despondency",
             "jlpt": "n1"
         },
         {
             "kanji": "台無し",
-            "furigana": "だいなし",
+            "hiragana": "だいなし",
             "english": "spoiled; spoilt; ruined; wasted (chance, etc.); messed up; destroyed; (coming to) nothing",
             "jlpt": "n1"
         },
         {
             "kanji": "いい加減",
-            "furigana": "いいかげん",
+            "hiragana": "いいかげん",
             "english": "irresponsible; perfunctory; careless",
             "jlpt": "n1"
         },
         {
             "kanji": "無邪気",
-            "furigana": "むじゃき",
+            "hiragana": "むじゃき",
             "english": "innocent; simple-minded",
             "jlpt": "n1"
         },
         {
             "kanji": "臆病",
-            "furigana": "おくびょう",
+            "hiragana": "おくびょう",
             "english": "cowardly; timid; easily frightened",
             "jlpt": "n1"
         },
         {
             "kanji": "温和",
-            "furigana": "おんわ",
+            "hiragana": "おんわ",
             "english": "mild (climate); temperate; clement; pleasant; agreeable",
             "jlpt": "n1"
         },
         {
             "kanji": "滑稽",
-            "furigana": "こっけい",
+            "hiragana": "こっけい",
             "english": "funny; comical; humorous; laughable",
             "jlpt": "n1"
         },
         {
             "kanji": "短気",
-            "furigana": "たんき",
+            "hiragana": "たんき",
             "english": "short temper; quick temper; hot temper; impatience; irritability",
             "jlpt": "n1"
         },
         {
             "kanji": "微か",
-            "furigana": "かすか",
+            "hiragana": "かすか",
             "english": "faint; dim; weak; slight; vague; indistinct; hazy",
             "jlpt": "n1"
         },
         {
             "kanji": "不意",
-            "furigana": "ふい",
+            "hiragana": "ふい",
             "english": "sudden; abrupt; unexpected; unforeseen",
             "jlpt": "n1"
         },
         {
             "kanji": "無茶",
-            "furigana": "むちゃ",
+            "hiragana": "むちゃ",
             "english": "absurd; unreasonable; ridiculous",
             "jlpt": "n1"
         },
         {
             "kanji": "無意味",
-            "furigana": "むいみ",
+            "hiragana": "むいみ",
             "english": "nonsense; no meaning; meaningless",
             "jlpt": "n1"
         },
         {
             "kanji": "質素",
-            "furigana": "しっそ",
+            "hiragana": "しっそ",
             "english": "simple; plain",
             "jlpt": "n1"
         },
         {
             "kanji": "密か",
-            "furigana": "ひそか",
+            "hiragana": "ひそか",
             "english": "secret; private; surreptitious",
             "jlpt": "n1"
         },
         {
             "kanji": "倹約",
-            "furigana": "けんやく",
+            "hiragana": "けんやく",
             "english": "thrift; economy; frugality",
             "jlpt": "n1"
         },
         {
             "kanji": "几帳面",
-            "furigana": "きちょうめん",
+            "hiragana": "きちょうめん",
             "english": "methodical; precise; meticulous; scrupulous; regular; punctual",
             "jlpt": "n1"
         },
         {
             "kanji": "頑丈",
-            "furigana": "がんじょう",
+            "hiragana": "がんじょう",
             "english": "solid; firm; stout; burly; strong; sturdy",
             "jlpt": "n1"
         },
         {
             "kanji": "無能",
-            "furigana": "むのう",
+            "hiragana": "むのう",
             "english": "incompetence; inefficiency; inability; incapacity",
             "jlpt": "n1"
         },
         {
             "kanji": "余っ程",
-            "furigana": "よほど",
+            "hiragana": "よほど",
             "english": "very; greatly; much; to a large extent; quite",
             "jlpt": "n1"
         },
         {
             "kanji": "不吉",
-            "furigana": "ふきつ",
+            "hiragana": "ふきつ",
             "english": "ominous; sinister; unlucky; inauspicious",
             "jlpt": "n1"
         },
         {
             "kanji": "先天的",
-            "furigana": "せんてんてき",
+            "hiragana": "せんてんてき",
             "english": "inborn; innate; inherent; congenital; hereditary",
             "jlpt": "n1"
         },
         {
             "kanji": "長閑",
-            "furigana": "のどか",
+            "hiragana": "のどか",
             "english": "tranquil; calm; quiet; peaceful; serene",
             "jlpt": "n1"
         },
         {
             "kanji": "閉口",
-            "furigana": "へいこう",
+            "hiragana": "へいこう",
             "english": "to be stumped; to be at a loss; to be at one's wits' end; to be nonplussed",
             "jlpt": "n1"
         },
         {
             "kanji": "明瞭",
-            "furigana": "めいりょう",
+            "hiragana": "めいりょう",
             "english": "clear; plain; distinct; obvious; evident; articulate",
             "jlpt": "n1"
         },
         {
             "kanji": "安静",
-            "furigana": "あんせい",
+            "hiragana": "あんせい",
             "english": "rest; quiet; repose",
             "jlpt": "n1"
         },
         {
             "kanji": "雑",
-            "furigana": "ざつ",
+            "hiragana": "ざつ",
             "english": "rough; crude; sloppy; messy",
             "jlpt": "n1"
         },
         {
             "kanji": "只管",
-            "furigana": "ひたすら",
+            "hiragana": "ひたすら",
             "english": "intently; single-mindedly; devotedly; solely; earnestly; with all one's heart",
             "jlpt": "n1"
         },
         {
             "kanji": "重宝",
-            "furigana": "ちょうほう",
+            "hiragana": "ちょうほう",
             "english": "convenient; useful; handy; helpful",
             "jlpt": "n1"
         },
         {
             "kanji": "気まぐれ",
-            "furigana": "きまぐれ",
+            "hiragana": "きまぐれ",
             "english": "whim; caprice; whimsy; fickle; moody; uneven temper",
             "jlpt": "n1"
         },
         {
             "kanji": "健やか",
-            "furigana": "すこやか",
+            "hiragana": "すこやか",
             "english": "vigorous; healthy; sound",
             "jlpt": "n1"
         },
         {
             "kanji": "陰気",
-            "furigana": "いんき",
+            "hiragana": "いんき",
             "english": "gloomy; dismal; miserable; melancholy",
             "jlpt": "n1"
         },
         {
             "kanji": "鈍感",
-            "furigana": "どんかん",
+            "hiragana": "どんかん",
             "english": "thickheaded; insensitive; dull; thick-skinned",
             "jlpt": "n1"
         },
         {
             "kanji": "冷酷",
-            "furigana": "れいこく",
+            "hiragana": "れいこく",
             "english": "cruelty; coldheartedness; relentless; ruthless",
             "jlpt": "n1"
         },
         {
             "kanji": "年長",
-            "furigana": "ねんちょう",
+            "hiragana": "ねんちょう",
             "english": "senior; older",
             "jlpt": "n1"
         },
         {
             "kanji": "厳か",
-            "furigana": "おごそか",
+            "hiragana": "おごそか",
             "english": "solemn (ceremony, atmosphere, etc.); austere; grave; majestic; dignified; stately; impressive",
             "jlpt": "n1"
         },
         {
             "kanji": "適宜",
-            "furigana": "てきぎ",
+            "hiragana": "てきぎ",
             "english": "suitable; appropriate; fitting; proper",
             "jlpt": "n1"
         },
         {
             "kanji": "無茶苦茶",
-            "furigana": "むちゃくちゃ",
+            "hiragana": "むちゃくちゃ",
             "english": "nonsensical; unreasonable; absurd; unrealistic",
             "jlpt": "n1"
         },
         {
             "kanji": "近眼",
-            "furigana": "きんがん",
+            "hiragana": "きんがん",
             "english": "nearsightedness; shortsightedness; myopia",
             "jlpt": "n1"
         },
         {
             "kanji": "粉々",
-            "furigana": "こなごな",
+            "hiragana": "こなごな",
             "english": "in very small pieces",
             "jlpt": "n1"
         },
         {
             "kanji": "善良",
-            "furigana": "ぜんりょう",
+            "hiragana": "ぜんりょう",
             "english": "good (person, nature, etc.); good-natured; virtuous; honest",
             "jlpt": "n1"
         },
         {
             "kanji": "大柄",
-            "furigana": "おおがら",
+            "hiragana": "おおがら",
             "english": "large build",
             "jlpt": "n1"
         },
         {
             "kanji": "痛切",
-            "furigana": "つうせつ",
+            "hiragana": "つうせつ",
             "english": "keen; acute; heartfelt",
             "jlpt": "n1"
         },
         {
             "kanji": "手近",
-            "furigana": "てぢか",
+            "hiragana": "てぢか",
             "english": "near; close by; within reach; handy",
             "jlpt": "n1"
         },
         {
             "kanji": "甘口",
-            "furigana": "あまくち",
+            "hiragana": "あまくち",
             "english": "sweet flavour; sweet flavor; mildness",
             "jlpt": "n1"
         },
         {
             "kanji": "高尚",
-            "furigana": "こうしょう",
+            "hiragana": "こうしょう",
             "english": "high; noble; refined; advanced",
             "jlpt": "n1"
         },
         {
             "kanji": "ドライ",
-            "furigana": "ドライ",
+            "hiragana": "ドライ",
             "english": "dry",
             "jlpt": "n1"
         },
         {
             "kanji": "早急",
-            "furigana": "そうきゅう",
+            "hiragana": "そうきゅう",
             "english": "immediate; prompt; quick; rapid; urgent; pressing",
             "jlpt": "n1"
         },
         {
             "kanji": "相応",
-            "furigana": "そうおう",
+            "hiragana": "そうおう",
             "english": "suitable; appropriate; befitting; becoming; adequate; reasonable; proper",
             "jlpt": "n1"
         },
         {
             "kanji": "虚ろ",
-            "furigana": "うつろ",
+            "hiragana": "うつろ",
             "english": "cavity; hollow; void",
             "jlpt": "n1"
         },
         {
             "kanji": "生真面目",
-            "furigana": "きまじめ",
+            "hiragana": "きまじめ",
             "english": "overserious; deeply sincere; very earnest",
             "jlpt": "n1"
         },
         {
             "kanji": "ぶらぶら",
-            "furigana": "ぶらぶら",
+            "hiragana": "ぶらぶら",
             "english": "dangling; swaying; swinging",
             "jlpt": "n1"
         },
         {
             "kanji": "ロマンチック",
-            "furigana": "ロマンチック",
+            "hiragana": "ロマンチック",
             "english": "romantic",
             "jlpt": "n1"
         },
         {
             "kanji": "だぶだぶ",
-            "furigana": "だぶだぶ",
+            "hiragana": "だぶだぶ",
             "english": "loose (of clothing); baggy",
             "jlpt": "n1"
         },
         {
             "kanji": "疎か",
-            "furigana": "おろそか",
+            "hiragana": "おろそか",
             "english": "negligent; neglectful; careless; remiss",
             "jlpt": "n1"
         },
         {
             "kanji": "びっしょり",
-            "furigana": "びっしょり",
+            "hiragana": "びっしょり",
             "english": "wet through; drenched",
             "jlpt": "n1"
         },
         {
             "kanji": "区々-1",
-            "furigana": "まちまち",
+            "hiragana": "まちまち",
             "english": "various; diverse; different; divergent; divided; conflicting",
             "jlpt": "n1"
         },
         {
             "kanji": "ぺこぺこ",
-            "furigana": "ペコペコ",
+            "hiragana": "ペコペコ",
             "english": "very hungry; starving; famished",
             "jlpt": "n1"
         },
         {
             "kanji": "ぞんざい",
-            "furigana": "ぞんざい",
+            "hiragana": "ぞんざい",
             "english": "rough; careless; slovenly; slipshod; rude; impolite",
             "jlpt": "n1"
         },
         {
             "kanji": "気障",
-            "furigana": "きざ",
+            "hiragana": "きざ",
             "english": "affected; smug; pompous; conceited; snobby; pretentious",
             "jlpt": "n1"
         },
         {
             "kanji": "あやふや",
-            "furigana": "あやふや",
+            "hiragana": "あやふや",
             "english": "uncertain; indefinite; vague; ambiguous; equivocal; dubious; doubtful; non-committal",
             "jlpt": "n1"
         },
         {
             "kanji": "あべこべ",
-            "furigana": "あべこべ",
+            "hiragana": "あべこべ",
             "english": "contrary; opposite; inverse; reverse; back-to-front",
             "jlpt": "n1"
         },
         {
             "kanji": "ユニーク",
-            "furigana": "ユニーク",
+            "hiragana": "ユニーク",
             "english": "unique; individual; original; unusual",
             "jlpt": "n1"
         },
         {
             "kanji": "ナンセンス",
-            "furigana": "ナンセンス",
+            "hiragana": "ナンセンス",
             "english": "nonsense",
             "jlpt": "n1"
         },
         {
             "kanji": "ホット",
-            "furigana": "ホット",
+            "hiragana": "ホット",
             "english": "hot",
             "jlpt": "n1"
         },
         {
             "kanji": "不振",
-            "furigana": "ふしん",
+            "hiragana": "ふしん",
             "english": "dullness; slump; stagnation; inactivity; depression",
             "jlpt": "n1"
         },
         {
             "kanji": "一律",
-            "furigana": "いちりつ",
+            "hiragana": "いちりつ",
             "english": "uniform; even; across-the-board; equal",
             "jlpt": "n1"
         },
         {
             "kanji": "無念",
-            "furigana": "むねん",
+            "hiragana": "むねん",
             "english": "regret; chagrin; mortification",
             "jlpt": "n1"
         },
         {
             "kanji": "必然",
-            "furigana": "ひつぜん",
+            "hiragana": "ひつぜん",
             "english": "inevitable; necessary; certain; sure",
             "jlpt": "n1"
         },
         {
             "kanji": "簡易",
-            "furigana": "かんい",
+            "hiragana": "かんい",
             "english": "simplicity; convenience; easiness; quasi-",
             "jlpt": "n1"
         },
         {
             "kanji": "微量",
-            "furigana": "びりょう",
+            "hiragana": "びりょう",
             "english": "minuscule amount; extremely small quantity",
             "jlpt": "n1"
         },
         {
             "kanji": "過多",
-            "furigana": "かた",
+            "hiragana": "かた",
             "english": "excess; surplus; superabundance",
             "jlpt": "n1"
         },
         {
             "kanji": "一様",
-            "furigana": "いちよう",
+            "hiragana": "いちよう",
             "english": "uniform; equal; even; the same; identical",
             "jlpt": "n1"
         },
         {
             "kanji": "正規",
-            "furigana": "せいき",
+            "hiragana": "せいき",
             "english": "regular; normal; formal; legal; established; legitimate",
             "jlpt": "n1"
         },
         {
             "kanji": "和やか",
-            "furigana": "なごやか",
+            "hiragana": "なごやか",
             "english": "mild; calm; gentle; quiet; congenial; amicable; amiable; friendly; genial; harmonious; peaceful",
             "jlpt": "n1"
         },
         {
             "kanji": "煌びやか",
-            "furigana": "きらびやか",
+            "hiragana": "きらびやか",
             "english": "gorgeous; gaudy; dazzling; gay; resplendent",
             "jlpt": "n1"
         },
         {
             "kanji": "清らか",
-            "furigana": "きよらか",
+            "hiragana": "きよらか",
             "english": "clean; clear",
             "jlpt": "n1"
         },
         {
             "kanji": "煌びやか",
-            "furigana": "きらびやか",
+            "hiragana": "きらびやか",
             "english": "gorgeous; gaudy; dazzling; gay; resplendent",
             "jlpt": "n1"
         },
         {
             "kanji": "物好き",
-            "furigana": "ものずき",
+            "hiragana": "ものずき",
             "english": "(idle) curiosity; fancifulness; whimsy; (having) strange tastes",
             "jlpt": "n1"
         },
         {
             "kanji": "婉曲",
-            "furigana": "えんきょく",
+            "hiragana": "えんきょく",
             "english": "euphemistic; circumlocutory; roundabout; indirect",
             "jlpt": "n1"
         },
         {
             "kanji": "長大",
-            "furigana": "ちょうだい",
+            "hiragana": "ちょうだい",
             "english": "long and large; tall and large; grand; huge",
             "jlpt": "n1"
         },
         {
             "kanji": "薄弱",
-            "furigana": "はくじゃく",
+            "hiragana": "はくじゃく",
             "english": "feebleness; weakness; weak",
             "jlpt": "n1"
         },
         {
             "kanji": "けち",
-            "furigana": "ケチ",
+            "hiragana": "ケチ",
             "english": "stinginess; miserliness; penny-pinching; miser; pinchpenny; skinflint; cheapskate; tightwad; niggard",
             "jlpt": "n1"
         },
         {
             "kanji": "動的",
-            "furigana": "どうてき",
+            "hiragana": "どうてき",
             "english": "dynamic; kinetic",
             "jlpt": "n1"
         },
         {
             "kanji": "華美",
-            "furigana": "かび",
+            "hiragana": "かび",
             "english": "splendor; splendour; gorgeousness; pomp; magnificence",
             "jlpt": "n1"
         },
         {
             "kanji": "清純",
-            "furigana": "せいじゅん",
+            "hiragana": "せいじゅん",
             "english": "purity; innocence",
             "jlpt": "n1"
         },
         {
             "kanji": "静的",
-            "furigana": "せいてき",
+            "hiragana": "せいてき",
             "english": "static",
             "jlpt": "n1"
         },
         {
             "kanji": "利根",
-            "furigana": "りこん",
+            "hiragana": "りこん",
             "english": "intelligence; cleverness; innate aptitude",
             "jlpt": "n1"
         },
         {
             "kanji": "上手-1",
-            "furigana": "うわて",
+            "hiragana": "うわて",
             "english": "upper part",
             "jlpt": "n1"
         },
         {
             "kanji": "明白-1",
-            "furigana": "あからさま",
+            "hiragana": "あからさま",
             "english": "plain; frank; candid; open; direct; straightforward; unabashed; blatant; flagrant",
             "jlpt": "n1"
         },
         {
             "kanji": "細やか",
-            "furigana": "こまやか",
+            "hiragana": "こまやか",
             "english": "tender; warm; caring; thoughtful",
             "jlpt": "n1"
         },
         {
             "kanji": "ベスト",
-            "furigana": "ベスト",
+            "hiragana": "ベスト",
             "english": "best",
             "jlpt": "n1"
         },
         {
             "kanji": "シック",
-            "furigana": "シック",
+            "hiragana": "シック",
             "english": "chic; stylish; smart",
             "jlpt": "n1"
         },
         {
             "kanji": "ジャンボ",
-            "furigana": "ジャンボ",
+            "hiragana": "ジャンボ",
             "english": "jumbo; jumbo-sized",
             "jlpt": "n1"
         },
         {
             "kanji": "オートマチック",
-            "furigana": "オートマチック",
+            "hiragana": "オートマチック",
             "english": "automatic",
             "jlpt": "n1"
         },
         {
             "kanji": "洒落",
-            "furigana": "しゃらく",
+            "hiragana": "しゃらく",
             "english": "free and easy; open-hearted; relaxed; not fussy; frank",
             "jlpt": "n1"
         },
         {
             "kanji": "豪儀",
-            "furigana": "ごうぎ",
+            "hiragana": "ごうぎ",
             "english": "great; grand",
             "jlpt": "n1"
         },
         {
             "kanji": "感無量",
-            "furigana": "かんむりょう",
+            "hiragana": "かんむりょう",
             "english": "deep emotion; being filled with emotion",
             "jlpt": "n1"
         },
         {
             "kanji": "ぶかぶか",
-            "furigana": "ぶかぶか",
+            "hiragana": "ぶかぶか",
             "english": "too large (clothing); baggy; loose-fitting",
             "jlpt": "n1"
         },
         {
             "kanji": "嫋か",
-            "furigana": "しなやか",
+            "hiragana": "しなやか",
             "english": "supple; flexible; elastic",
             "jlpt": "n1"
         },
         {
             "kanji": "エレガント",
-            "furigana": "エレガント",
+            "hiragana": "エレガント",
             "english": "elegant",
             "jlpt": "n1"
         },
         {
             "kanji": "タイムリー",
-            "furigana": "タイムリー",
+            "hiragana": "タイムリー",
             "english": "timely; well-timed",
             "jlpt": "n1"
         },
         {
             "kanji": "ルーズ",
-            "furigana": "ルーズ",
+            "hiragana": "ルーズ",
             "english": "loose (e.g. belt)",
             "jlpt": "n1"
         },
         {
             "kanji": "インターナショナル",
-            "furigana": "インターナショナル",
+            "hiragana": "インターナショナル",
             "english": "international",
             "jlpt": "n1"
         },
         {
             "kanji": "丈夫-1",
-            "furigana": "じょうふ",
+            "hiragana": "じょうふ",
             "english": "hero; manly person; warrior",
             "jlpt": "n1"
         },
         {
             "kanji": "不便-1",
-            "furigana": "ふびん",
+            "hiragana": "ふびん",
             "english": "poor; pitiful; piteous; pitiable",
             "jlpt": "n1"
         },
         {
             "kanji": "華奢-1",
-            "furigana": "かしゃ",
+            "hiragana": "かしゃ",
             "english": "lavish; luxurious; showy; gaudy",
             "jlpt": "n1"
         },
         {
             "kanji": "艶-1",
-            "furigana": "えん",
+            "hiragana": "えん",
             "english": "charming; fascinating; voluptuous",
             "jlpt": "n1"
         },
         {
             "kanji": "ふんだん",
-            "furigana": "ふんだん",
+            "hiragana": "ふんだん",
             "english": "plentiful; abundant; ample; lavish",
             "jlpt": "n1"
         }

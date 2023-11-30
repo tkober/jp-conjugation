@@ -50,7 +50,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.givenAnswer = wanakana.toHiragana(this.answerInput.nativeElement.value);
         const word = new Word(
             this.currentExercise.vocabulary.kanji,
-            this.currentExercise.vocabulary.furigana,
+            this.currentExercise.vocabulary.hiragana,
             this.currentExercise.practiceItem.wordType
         )
 
@@ -60,7 +60,7 @@ export class AppComponent implements OnInit, AfterViewInit {
             return;
         }
         this.solution = solution
-        this.isAnswerCorrect = this.givenAnswer === this.solution.furigana
+        this.isAnswerCorrect = this.givenAnswer === this.solution.hiragana
 
         // this.nextExercise();
     }
