@@ -2,6 +2,7 @@ import {Pipe, PipeTransform} from '@angular/core';
 import {Vocabulary} from "../services/practice.service";
 import * as wanakana from 'wanakana';
 import {Word} from "../conjugation/conjugation";
+import {DropTrailingHiraganaPipe} from "./drop-trailing-hiragana.pipe";
 
 @Pipe({
     name: 'furigana'
@@ -9,6 +10,10 @@ import {Word} from "../conjugation/conjugation";
 export class FuriganaPipe implements PipeTransform {
 
     transform(vocabulary: Vocabulary | Word): string {
+        if (!wanakana.isKanji(new DropTrailingHiraganaPipe().transform(vocabulary))) {
+            return '';
+        }
+
         let kanji = vocabulary.kanji
         let hiragana = wanakana.toHiragana(vocabulary.furigana)
 
