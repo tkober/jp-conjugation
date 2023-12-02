@@ -59,6 +59,7 @@ export class AppComponent implements OnInit, AfterViewInit {
             // TODO: Raise error
             return;
         }
+        console.log(solution.transformations)
         this.solution = solution
         this.isAnswerCorrect = this.givenAnswer === this.solution.hiragana
 

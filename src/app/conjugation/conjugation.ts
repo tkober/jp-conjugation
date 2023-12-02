@@ -7,6 +7,47 @@ export enum WordType {
     NaAdjective = 'na_adjective'
 }
 
+
+export class Transformation {
+    private readonly _unaltered: string;
+    private readonly _alteredPart: string;
+    private readonly _alteration: string;
+    private readonly _operation: string;
+
+    private _previousTransformation: (Transformation | undefined) = undefined;
+
+    constructor(unaltered: string, alteredPart: string, alteration: string, operation: string) {
+        this._unaltered = unaltered;
+        this._alteredPart = alteredPart;
+        this._alteration = alteration;
+        this._operation = operation;
+    }
+
+    get unaltered(): string {
+        return this._unaltered;
+    }
+
+    get alteredPart(): string {
+        return this._alteredPart;
+    }
+
+    get alteration(): string {
+        return this._alteration;
+    }
+
+    get operation(): string {
+        return this._operation;
+    }
+
+    get previousTransformation(): (Transformation | undefined) {
+        return this._previousTransformation;
+    }
+
+    set previousTransformation(value: (Transformation | undefined)) {
+        this._previousTransformation = value;
+    }
+}
+
 export class Word {
 
     get kanji(): string {
@@ -20,20 +61,36 @@ export class Word {
     get wordType(): WordType {
         return this._wordType;
     }
+
+    get transformations(): Transformation[] {
+        return this._transformations;
+    }
+
     private _kanji: string;
     private _hiragana: string;
     private _wordType: WordType;
+    private _transformations: Transformation[] = [];
+
+    private currentExplanationElement: string;
 
     constructor(kanji: string, hiragana: string, wordType: WordType) {
-        this._kanji = kanji
-        this._hiragana = hiragana
+        this._kanji = kanji;
+        this._hiragana = hiragana;
         this._wordType = wordType;
+        this.currentExplanationElement = kanji;
     }
 
     // @ts-ignore
     addSuffix(suffix: string): Word {
         this._kanji = this._kanji + suffix;
         this._hiragana = this._hiragana + suffix
+
+        this.addTransformation(new Transformation(
+            this.currentExplanationElement,
+            '',
+            suffix,
+            '+'
+        ))
         return this;
     }
 
@@ -45,6 +102,13 @@ export class Word {
     replaceLastKana(replacement: string, n: number = 1): Word {
         this._kanji = this._kanji.slice(0, -n) + replacement;
         this._hiragana = this._hiragana.slice(0, -n) + replacement;
+
+        this.addTransformation(new Transformation(
+            this.currentExplanationElement.slice(0, -n),
+            this.currentExplanationElement.slice(-n),
+            replacement,
+            '+'
+        ))
         return this;
     }
 
@@ -62,7 +126,23 @@ export class Word {
     replace(kanji: string, hiragana: string): Word {
         this._kanji = kanji;
         this._hiragana = hiragana;
+
+        this.addTransformation(new Transformation(
+            '',
+            this.currentExplanationElement,
+            kanji,
+            '->'
+        ))
         return this;
+    }
+
+    private addTransformation(transformation: Transformation) {
+        if (this.transformations.length > 0) {
+            transformation.previousTransformation = this.transformations[this.transformations.length-1]
+        }
+
+        this._transformations.push(transformation);
+        this.currentExplanationElement = transformation.alteration;
     }
 }
 
