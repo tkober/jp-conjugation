@@ -2,6 +2,11 @@
     <div matDialogContent>
         <mat-tab-group mat-align-tabs="center" animationDuration="0ms" color="accent" [disablePagination]="true" dynamicHeight>
             <mat-tab label="Verbs">
+                <div class="all-action">
+                    <span class="all-action-title">All:</span>
+                    <button mat-button color="accent" (click)="setAllVerbConjugations(true)">On</button>
+                    <button mat-button color="accent" (click)="setAllVerbConjugations(false)">Off</button>
+                </div>
                 <div *ngFor="let group of verbConjugationGroups" class="conjugation-group">
                     <div class="group-title">
                         <span>{{ group.title }}</span>
@@ -19,6 +24,11 @@
             </mat-tab>
 
             <mat-tab label="Adjectives">
+                <div class="all-action">
+                    <span class="all-action-title">All:</span>
+                    <button mat-button color="accent" (click)="setAllAdjectiveConjugations(true)">On</button>
+                    <button mat-button color="accent" (click)="setAllAdjectiveConjugations(false)">Off</button>
+                </div>
                 <div *ngFor="let group of adjectiveConjugationGroups" class="conjugation-group">
                     <div class="group-title">
                         <span>{{ group.title }}</span>

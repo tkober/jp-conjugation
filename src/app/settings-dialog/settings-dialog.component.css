@@ -1,5 +1,17 @@
 .settings-dialog {
 
+    .all-action {
+        margin-top: 1rem;
+
+        .all-action-title {
+            font-weight: bold;
+        }
+
+        & button {
+            margin-left: 1rem;
+        }
+    }
+
     .conjugation-group {
         .group-title {
             padding-top: 1rem;
@@ -21,7 +33,8 @@
             font-weight: bold;
         }
 
-        .jlpt-level {}
+        .jlpt-level {
+        }
     }
 
     .mat-slide-toggle {

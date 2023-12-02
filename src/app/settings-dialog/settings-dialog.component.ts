@@ -214,4 +214,20 @@ export class SettingsDialogComponent implements OnInit {
 
         this.dialogRef.close();
     }
+
+    setAllAdjectiveConjugations(checked: boolean) {
+        this.adjectiveConjugationGroups.forEach(group => {
+            group.items.forEach(item => {
+                item.checked = checked
+            })
+        })
+    }
+
+    setAllVerbConjugations(checked: boolean) {
+        this.verbConjugationGroups.forEach(group => {
+            group.items.forEach(item => {
+                item.checked = checked
+            })
+        })
+    }
 }
