@@ -184,7 +184,6 @@ export class SettingsDialogComponent implements OnInit {
     }
 
     ngOnInit(): void {
-        console.log("ngOnInit()")
     }
 
     public getAdjectiveConjugationTitle(key: string): string {

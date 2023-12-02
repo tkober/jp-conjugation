@@ -2,7 +2,7 @@ import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/
 import * as wanakana from 'wanakana';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Exercise, PracticeService, Vocabulary} from "./services/practice.service";
-import {Word} from "./conjugation/conjugation";
+import {Word, WordType} from "./conjugation/conjugation";
 import {MatDialog} from "@angular/material/dialog";
 import {SettingsDialogComponent} from "./settings-dialog/settings-dialog.component";
 
@@ -59,7 +59,7 @@ export class AppComponent implements OnInit, AfterViewInit {
             // TODO: Raise error
             return;
         }
-        console.log(solution.transformations)
+
         this.solution = solution
         this.isAnswerCorrect = this.givenAnswer === this.solution.hiragana
 
@@ -76,6 +76,28 @@ export class AppComponent implements OnInit, AfterViewInit {
             this.practiceService.initialize();
             this.nextExercise();
         })
+    }
+
+    public conjugationRuleHeadlineForWord(word: Word): string {
+        switch (word.wordType) {
+            case WordType.IAdjective:
+                return 'い-Adjective'
+
+            case WordType.NaAdjective:
+                return 'な-Adjective'
+
+            case WordType.KuruVerb:
+                return 'Suru Verb'
+
+            case WordType.SuruVerb:
+                return 'Kuru Verb'
+
+            case WordType.IchidanVerb:
+                return 'Ichidan Verb'
+
+            case WordType.GodanVerb:
+                return `Godan Verb [${this.currentExercise.vocabulary.hiragana.slice(-1)}]`
+        }
     }
 
     private static isHiragana(formControl: FormControl) {
@@ -96,4 +118,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
         this.currentExercise = this.practiceService.nextExercise();
     }
+
+    protected readonly WordType = WordType;
 }

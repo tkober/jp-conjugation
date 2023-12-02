@@ -41,6 +41,30 @@
 
     .correction {
         color: #c62828;
+
+        .conjugation-rule {
+            color: #333;
+            font-size: smaller;
+
+            .headline {
+                font-weight: bold;
+            }
+
+            .altered-part {
+                text-decoration: line-through;
+            }
+
+            .operation {
+                margin-left: .75rem;
+                margin-right: .75rem;
+            }
+
+            .unaltered,
+            .alteration {
+                font-weight: bold;
+                color: #008cd5;
+            }
+        }
     }
 
     .mat-form-field {

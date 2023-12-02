@@ -18,6 +18,20 @@
                     {{ solution | dropKanji }}
                 </ruby>
             </h3>
+
+            <div *ngIf="solution.transformations" class="conjugation-rule">
+                <div class="headline">
+                    {{ conjugationRuleHeadlineForWord(solution) }}
+                </div>
+                <div>
+                    <span *ngFor="let transformation of solution.transformations; last as isLast">
+                        <span class="unaltered">{{ transformation.unaltered }}</span>
+                        <span class="altered-part">{{ transformation.alteredPart }}</span>
+                        <span class="operation">{{ transformation.operation }}</span>
+                        <span class="alteration" *ngIf="isLast">{{ transformation.alteration }}</span>
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 
