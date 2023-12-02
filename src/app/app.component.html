@@ -20,9 +20,9 @@
             </h3>
 
             <div *ngIf="solution.transformations" class="conjugation-rule">
-                <div class="headline">
+                <p class="headline">
                     {{ conjugationRuleHeadlineForWord(solution) }}
-                </div>
+                </p>
                 <div>
                     <span *ngFor="let transformation of solution.transformations; last as isLast">
                         <span class="unaltered">{{ transformation.unaltered }}</span>
