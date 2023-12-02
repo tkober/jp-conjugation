@@ -20,7 +20,7 @@ import {CausativePassiveNegative} from "../conjugation/forms/causative-passive-n
 import {ImperativeAffirmative} from "../conjugation/forms/imperative-affirmative";
 import {ImperativeNegative} from "../conjugation/forms/imperative-negative";
 import {jisho} from "../jisho";
-import {Conjugation, Word, WordType} from "../conjugation/conjugation";
+import {Conjugation, WordType} from "../conjugation/conjugation";
 
 
 export class Vocabulary {
