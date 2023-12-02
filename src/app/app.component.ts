@@ -87,10 +87,10 @@ export class AppComponent implements OnInit, AfterViewInit {
                 return 'な-Adjective'
 
             case WordType.KuruVerb:
-                return 'Suru Verb'
+                return 'Kuru Verb'
 
             case WordType.SuruVerb:
-                return 'Kuru Verb'
+                return 'Suru Verb'
 
             case WordType.IchidanVerb:
                 return 'Ichidan Verb'
