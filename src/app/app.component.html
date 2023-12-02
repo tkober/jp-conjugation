@@ -19,7 +19,7 @@
                 </ruby>
             </h3>
 
-            <div *ngIf="solution.transformations" class="conjugation-rule">
+            <div *ngIf="solution.transformations && solution.transformations.length > 0" class="conjugation-rule">
                 <p class="headline">
                     {{ conjugationRuleHeadlineForWord(solution) }}
                 </p>
