@@ -205,28 +205,7 @@ export class PracticeService {
         const practiceItem: PracticeItem = this.drawRandom(this.practiceItems);
         let word = this.drawRandom(this.vocabulary[practiceItem.wordType.valueOf()])
 
-        // word = {
-        //     "kanji": "下手-2",
-        //     "hiragana": "へた",
-        //     "english": "unskillful; poor; awkward",
-        //     "jlpt": "n5"
-        // }
-
-        // word = {
-        //     "kanji": "コピーする",
-        //     "hiragana": "コピーする",
-        //     "english": "copy; photocopy",
-        //     "jlpt": "n5"
-        // }
-
         return new Exercise(practiceItem, word)
-
-        // return new Exercise(practiceItem, {
-        //     "kanji": "きつい",
-        //     "hiragana": "きつい",
-        //     "english": "tough; hard; severe; demanding; harsh",
-        //     "jlpt": "n3"
-        // })
     }
 
     private drawRandom(items: any[]): any {
