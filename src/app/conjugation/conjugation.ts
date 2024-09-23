@@ -154,3 +154,32 @@ export interface Conjugation {
 
     getSettingsTitle(): string;
 }
+
+export const Adjectives__NonPastShortAffirmative = 'Adjectives__NonPastShortAffirmative';
+export const Adjectives__NonPastShortNegative = 'Adjectives__NonPastShortNegative';
+export const Adjectives__NonPastPoliteAffirmative = 'Adjectives__NonPastPoliteAffirmative';
+export const Adjectives__NonPastPoliteNegative = 'Adjectives__NonPastPoliteNegative';
+export const Adjectives__PastShortAffirmative = 'Adjectives__PastShortAffirmative';
+export const Adjectives__PastShortNegative = 'Adjectives__PastShortNegative';
+export const Adjectives__PastPoliteAffirmative = 'Adjectives__PastPoliteAffirmative';
+export const Adjectives__PastPoliteNegative = 'Adjectives__PastPoliteNegative';
+export const Verbs__NonPastShortAffirmative = 'Verbs__NonPastShortAffirmative';
+export const Verbs__NonPastShortNegative = 'Verbs__NonPastShortNegative';
+export const Verbs__NonPastPoliteNegative = 'Verbs__NonPastPoliteNegative';
+export const Verbs__NonPastPoliteAffirmative = 'Verbs__NonPastPoliteAffirmative';
+export const Verbs__PastShortAffirmative = 'Verbs__PastShortAffirmative';
+export const Verbs__PastShortNegative = 'Verbs__PastShortNegative';
+export const Verbs__PastPoliteAffirmative = 'Verbs__PastPoliteAffirmative';
+export const Verbs__PastPoliteNegative = 'Verbs__PastPoliteNegative';
+export const Verbs__TeFormAffirmative = 'Verbs__TeFormAffirmative';
+export const Verbs__TeFormNegative = 'Verbs__TeFormNegative';
+export const Verbs__PotentialAffirmative = 'Verbs__PotentialAffirmative';
+export const Verbs__PotentialNegative = 'Verbs__PotentialNegative';
+export const Verbs__PassiveAffirmative = 'Verbs__PassiveAffirmative';
+export const Verbs__PassiveNegative = 'Verbs__PassiveNegative';
+export const Verbs__CausativeAffirmative = 'Verbs__CausativeAffirmative';
+export const Verbs__CausativeNegative = 'Verbs__CausativeNegative';
+export const Verbs__CausativePassiveAffirmative = 'Verbs__CausativePassiveAffirmative';
+export const Verbs__CausativePassiveNegative = 'Verbs__CausativePassiveNegative';
+export const Verbs__ImperativeAffirmative = 'Verbs__ImperativeAffirmative';
+export const Verbs__ImperativeNegative = 'Verbs__ImperativeNegative';

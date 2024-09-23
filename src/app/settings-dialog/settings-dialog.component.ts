@@ -8,8 +8,8 @@ import {
     Adjectives__PastPoliteAffirmative,
     Adjectives__PastPoliteNegative,
     Adjectives__PastShortAffirmative,
-    Adjectives__PastShortNegative, LocalStorageKey_ExcludedConjugations, LocalStorageKey_ExcludedJpltLevels,
-    PracticeService,
+    Adjectives__PastShortNegative,
+    Conjugation,
     Verbs__CausativeAffirmative,
     Verbs__CausativeNegative,
     Verbs__CausativePassiveAffirmative,
@@ -30,8 +30,7 @@ import {
     Verbs__PotentialNegative,
     Verbs__TeFormAffirmative,
     Verbs__TeFormNegative
-} from "../services/practice.service";
-import {Conjugation} from "../conjugation/conjugation";
+} from "../conjugation/conjugation";
 import {NonPastShortAffirmative} from "../conjugation/forms/non-past-short-affirmative";
 import {NonPastShortNegative} from "../conjugation/forms/non-past-short-negative";
 import {NonPastPoliteAffirmative} from "../conjugation/forms/non-past-polite-affirmative";
@@ -52,6 +51,7 @@ import {CausativePassiveAffirmative} from "../conjugation/forms/causative-passiv
 import {CausativePassiveNegative} from "../conjugation/forms/causative-passive-negative";
 import {ImperativeAffirmative} from "../conjugation/forms/imperative-affirmative";
 import {ImperativeNegative} from "../conjugation/forms/imperative-negative";
+import {LocalStorageKey_ExcludedConjugations, LocalStorageKey_ExcludedJpltLevels, PracticeService} from "../services/practice.service";
 
 
 class ConjugationGroupItem {
