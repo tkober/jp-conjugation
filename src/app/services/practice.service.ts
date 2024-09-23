@@ -1,26 +1,6 @@
 import {Injectable} from '@angular/core';
-import {NonPastShortNegative} from "../conjugation/forms/non-past-short-negative";
-import {NonPastShortAffirmative} from "../conjugation/forms/non-past-short-affirmative";
-import {NonPastPoliteAffirmative} from "../conjugation/forms/non-past-polite-affirmative";
-import {NonPastPoliteNegative} from "../conjugation/forms/non-past-polite-negative";
-import {PastShortAffirmative} from "../conjugation/forms/past-short-affirmative";
-import {PastShortNegative} from "../conjugation/forms/past-short-negative";
-import {PastPoliteAffirmative} from "../conjugation/forms/past-polite-affirmative";
-import {PastPoliteNegative} from "../conjugation/forms/past-polite-negative";
-import {TeFormAffirmative} from "../conjugation/forms/te-form-affirmative";
-import {TeFormNegative} from "../conjugation/forms/te-form-negative";
-import {PotentialAffirmative} from "../conjugation/forms/potential-affirmative";
-import {PotentialNegative} from "../conjugation/forms/potential-negative";
-import {PassiveAffirmative} from "../conjugation/forms/passive-affirmative";
-import {PassiveNegative} from "../conjugation/forms/passive-negative";
-import {CausativeAffirmative} from "../conjugation/forms/causative-affirmative";
-import {CausativeNegative} from "../conjugation/forms/causative-negative";
-import {CausativePassiveAffirmative} from "../conjugation/forms/causative-passive-affirmative";
-import {CausativePassiveNegative} from "../conjugation/forms/causative-passive-negative";
-import {ImperativeAffirmative} from "../conjugation/forms/imperative-affirmative";
-import {ImperativeNegative} from "../conjugation/forms/imperative-negative";
 import {jisho} from "../jisho";
-import {Conjugation, WordType} from "../conjugation/conjugation";
+import {AdjectiveForms, Conjugation, VerbForms, WordType} from "../conjugation/conjugation";
 import {PersistentService} from "./persistent-service";
 import {SrsService} from "./srs.service";
 
@@ -70,59 +50,6 @@ export const LocalStorageKey_ExcludedJpltLevels = 'EXCLUDED_JLPT_LEVELS'
 })
 export class PracticeService extends PersistentService {
 
-    public adjectiveForms: any = {
-        // Non-past
-        Adjectives__NonPastShortAffirmative: new NonPastShortAffirmative(),
-        Adjectives__NonPastShortNegative: new NonPastShortNegative(),
-        Adjectives__NonPastPoliteAffirmative: new NonPastPoliteAffirmative(),
-        Adjectives__NonPastPoliteNegative: new NonPastPoliteNegative(),
-
-        // Past
-        Adjectives__PastShortAffirmative: new PastShortAffirmative(),
-        Adjectives__PastShortNegative: new PastShortNegative(),
-        Adjectives__PastPoliteAffirmative: new PastPoliteAffirmative(),
-        Adjectives__PastPoliteNegative: new PastPoliteNegative(),
-    }
-
-    public verbForms: any = {
-        // Non-past
-        Verbs__NonPastShortAffirmative: new NonPastShortAffirmative(),
-        Verbs__NonPastShortNegative: new NonPastShortNegative(),
-        Verbs__NonPastPoliteNegative: new NonPastPoliteNegative(),
-        Verbs__NonPastPoliteAffirmative: new NonPastPoliteAffirmative(),
-
-        // Past
-        Verbs__PastShortAffirmative: new PastShortAffirmative(),
-        Verbs__PastShortNegative: new PastShortNegative(),
-        Verbs__PastPoliteAffirmative: new PastPoliteAffirmative(),
-        Verbs__PastPoliteNegative: new PastPoliteNegative(),
-
-        // Te-Form
-        Verbs__TeFormAffirmative: new TeFormAffirmative(),
-        Verbs__TeFormNegative: new TeFormNegative(),
-
-        // Potential
-        Verbs__PotentialAffirmative: new PotentialAffirmative(),
-        Verbs__PotentialNegative: new PotentialNegative(),
-
-        // Passive
-        Verbs__PassiveAffirmative: new PassiveAffirmative(),
-        Verbs__PassiveNegative: new PassiveNegative(),
-
-        // Causative
-        Verbs__CausativeAffirmative: new CausativeAffirmative(),
-        Verbs__CausativeNegative: new CausativeNegative(),
-
-        // Causative Passive
-        Verbs__CausativePassiveAffirmative: new CausativePassiveAffirmative(),
-        Verbs__CausativePassiveNegative: new CausativePassiveNegative(),
-
-        // Imperative
-        Verbs__ImperativeAffirmative: new ImperativeAffirmative(),
-        Verbs__ImperativeNegative: new ImperativeNegative()
-    }
-
-
     private practiceItems: PracticeItem[];
     private vocabulary: any;
     private excludedForms: string[]
@@ -138,8 +65,8 @@ export class PracticeService extends PersistentService {
         this.excludedJlptLevels = this.loadFromLocalStorage(LocalStorageKey_ExcludedJpltLevels, [])
 
         // Filter out disabled forms
-        const selectedAdjectiveForms = Object.keys(this.adjectiveForms).filter((key) => this.excludedForms.indexOf(key) === -1);
-        const selectedVerbForms = Object.keys(this.verbForms).filter((key) => this.excludedForms.indexOf(key) === -1);
+        const selectedAdjectiveForms = Object.keys(AdjectiveForms).filter((key) => this.excludedForms.indexOf(key) === -1);
+        const selectedVerbForms = Object.keys(VerbForms).filter((key) => this.excludedForms.indexOf(key) === -1);
 
         // Build Practice Items
         const practiceItems: PracticeItem[] = []
@@ -148,7 +75,7 @@ export class PracticeService extends PersistentService {
         for (let formKey of selectedAdjectiveForms) {
             for (let wordType of [WordType.IAdjective, WordType.NaAdjective]) {
                 practiceItems.push(new PracticeItem(
-                    this.adjectiveForms[formKey], wordType, `${this.adjectiveForms[formKey].constructor.name}__${wordType}`
+                    AdjectiveForms[formKey], wordType, `${AdjectiveForms[formKey].constructor.name}__${wordType}`
                 ))
             }
         }
@@ -157,7 +84,7 @@ export class PracticeService extends PersistentService {
         for (let formKey of selectedVerbForms) {
             for (let wordType of [WordType.IchidanVerb, WordType.GodanVerb, WordType.SuruVerb, WordType.KuruVerb]) {
                 practiceItems.push(new PracticeItem(
-                    this.verbForms[formKey], wordType, `${this.verbForms[formKey].constructor.name}__${wordType}`
+                    VerbForms[formKey], wordType, `${VerbForms[formKey].constructor.name}__${wordType}`
                 ))
             }
         }
