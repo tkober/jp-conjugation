@@ -1,3 +1,24 @@
+import {NonPastShortAffirmative} from "./forms/non-past-short-affirmative";
+import {NonPastShortNegative} from "./forms/non-past-short-negative";
+import {NonPastPoliteAffirmative} from "./forms/non-past-polite-affirmative";
+import {NonPastPoliteNegative} from "./forms/non-past-polite-negative";
+import {PastShortAffirmative} from "./forms/past-short-affirmative";
+import {PastShortNegative} from "./forms/past-short-negative";
+import {PastPoliteAffirmative} from "./forms/past-polite-affirmative";
+import {PastPoliteNegative} from "./forms/past-polite-negative";
+import {TeFormAffirmative} from "./forms/te-form-affirmative";
+import {TeFormNegative} from "./forms/te-form-negative";
+import {PotentialAffirmative} from "./forms/potential-affirmative";
+import {PotentialNegative} from "./forms/potential-negative";
+import {PassiveAffirmative} from "./forms/passive-affirmative";
+import {PassiveNegative} from "./forms/passive-negative";
+import {CausativeAffirmative} from "./forms/causative-affirmative";
+import {CausativeNegative} from "./forms/causative-negative";
+import {CausativePassiveAffirmative} from "./forms/causative-passive-affirmative";
+import {CausativePassiveNegative} from "./forms/causative-passive-negative";
+import {ImperativeAffirmative} from "./forms/imperative-affirmative";
+import {ImperativeNegative} from "./forms/imperative-negative";
+
 export enum WordType {
     IchidanVerb = 'ichidan_verb',
     GodanVerb = 'godan_verb',
@@ -138,7 +159,7 @@ export class Word {
 
     private addTransformation(transformation: Transformation) {
         if (this.transformations.length > 0) {
-            transformation.previousTransformation = this.transformations[this.transformations.length-1]
+            transformation.previousTransformation = this.transformations[this.transformations.length - 1]
         }
 
         this._transformations.push(transformation);
@@ -183,3 +204,57 @@ export const Verbs__CausativePassiveAffirmative = 'Verbs__CausativePassiveAffirm
 export const Verbs__CausativePassiveNegative = 'Verbs__CausativePassiveNegative';
 export const Verbs__ImperativeAffirmative = 'Verbs__ImperativeAffirmative';
 export const Verbs__ImperativeNegative = 'Verbs__ImperativeNegative';
+
+export const AdjectiveForms: any = {
+    // Non-past
+    Adjectives__NonPastShortAffirmative: new NonPastShortAffirmative(),
+    Adjectives__NonPastShortNegative: new NonPastShortNegative(),
+    Adjectives__NonPastPoliteAffirmative: new NonPastPoliteAffirmative(),
+    Adjectives__NonPastPoliteNegative: new NonPastPoliteNegative(),
+
+    // Past
+    Adjectives__PastShortAffirmative: new PastShortAffirmative(),
+    Adjectives__PastShortNegative: new PastShortNegative(),
+    Adjectives__PastPoliteAffirmative: new PastPoliteAffirmative(),
+    Adjectives__PastPoliteNegative: new PastPoliteNegative(),
+};
+
+export const VerbForms: any = {
+    // Non-past
+    Verbs__NonPastShortAffirmative: new NonPastShortAffirmative(),
+    Verbs__NonPastShortNegative: new NonPastShortNegative(),
+    Verbs__NonPastPoliteNegative: new NonPastPoliteNegative(),
+    Verbs__NonPastPoliteAffirmative: new NonPastPoliteAffirmative(),
+
+    // Past
+    Verbs__PastShortAffirmative: new PastShortAffirmative(),
+    Verbs__PastShortNegative: new PastShortNegative(),
+    Verbs__PastPoliteAffirmative: new PastPoliteAffirmative(),
+    Verbs__PastPoliteNegative: new PastPoliteNegative(),
+
+    // Te-Form
+    Verbs__TeFormAffirmative: new TeFormAffirmative(),
+    Verbs__TeFormNegative: new TeFormNegative(),
+
+    // Potential
+    Verbs__PotentialAffirmative: new PotentialAffirmative(),
+    Verbs__PotentialNegative: new PotentialNegative(),
+
+    // Passive
+    Verbs__PassiveAffirmative: new PassiveAffirmative(),
+    Verbs__PassiveNegative: new PassiveNegative(),
+
+    // Causative
+    Verbs__CausativeAffirmative: new CausativeAffirmative(),
+    Verbs__CausativeNegative: new CausativeNegative(),
+
+    // Causative Passive
+    Verbs__CausativePassiveAffirmative: new CausativePassiveAffirmative(),
+    Verbs__CausativePassiveNegative: new CausativePassiveNegative(),
+
+    // Imperative
+    Verbs__ImperativeAffirmative: new ImperativeAffirmative(),
+    Verbs__ImperativeNegative: new ImperativeNegative()
+}
+
+export const AllForms: any = {...AdjectiveForms, ...VerbForms};
