@@ -21,6 +21,7 @@ import {ImperativeAffirmative} from "../conjugation/forms/imperative-affirmative
 import {ImperativeNegative} from "../conjugation/forms/imperative-negative";
 import {jisho} from "../jisho";
 import {Conjugation, WordType} from "../conjugation/conjugation";
+import {PersistentService} from "./persistent-service";
 
 
 export class Vocabulary {
@@ -95,7 +96,7 @@ export const Verbs__ImperativeNegative = 'Verbs__ImperativeNegative';
 @Injectable({
     providedIn: 'root'
 })
-export class PracticeService {
+export class PracticeService extends PersistentService {
 
     public adjectiveForms: any = {
         // Non-past
@@ -156,6 +157,7 @@ export class PracticeService {
     private excludedJlptLevels: string[]
 
     constructor() {
+        super();
         this.initialize()
     }
 
@@ -210,14 +212,6 @@ export class PracticeService {
 
     private drawRandom(items: any[]): any {
         return items[Math.floor(Math.random() * items.length)];
-    }
-
-    private loadFromLocalStorage(key: string, fallback: any): any {
-        const stored = localStorage.getItem(key)
-        if (stored) {
-            return JSON.parse(stored)
-        }
-        return fallback
     }
 
     getExcludedForms(): string[] {
