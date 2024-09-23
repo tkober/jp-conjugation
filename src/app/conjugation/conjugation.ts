@@ -205,56 +205,82 @@ export const Verbs__CausativePassiveNegative = 'Verbs__CausativePassiveNegative'
 export const Verbs__ImperativeAffirmative = 'Verbs__ImperativeAffirmative';
 export const Verbs__ImperativeNegative = 'Verbs__ImperativeNegative';
 
-export const AdjectiveForms: any = {
-    // Non-past
+
+export const Adjectives__NonePast_Forms: any = {
     Adjectives__NonPastShortAffirmative: new NonPastShortAffirmative(),
     Adjectives__NonPastShortNegative: new NonPastShortNegative(),
     Adjectives__NonPastPoliteAffirmative: new NonPastPoliteAffirmative(),
     Adjectives__NonPastPoliteNegative: new NonPastPoliteNegative(),
+}
 
-    // Past
+export const Adjectives__Past_Forms: any = {
     Adjectives__PastShortAffirmative: new PastShortAffirmative(),
     Adjectives__PastShortNegative: new PastShortNegative(),
     Adjectives__PastPoliteAffirmative: new PastPoliteAffirmative(),
     Adjectives__PastPoliteNegative: new PastPoliteNegative(),
-};
+}
 
-export const VerbForms: any = {
-    // Non-past
+export const Verbs__NonPast_Forms: any = {
     Verbs__NonPastShortAffirmative: new NonPastShortAffirmative(),
     Verbs__NonPastShortNegative: new NonPastShortNegative(),
     Verbs__NonPastPoliteNegative: new NonPastPoliteNegative(),
     Verbs__NonPastPoliteAffirmative: new NonPastPoliteAffirmative(),
+};
 
-    // Past
+export const Verbs__Past_Forms: any = {
     Verbs__PastShortAffirmative: new PastShortAffirmative(),
     Verbs__PastShortNegative: new PastShortNegative(),
     Verbs__PastPoliteAffirmative: new PastPoliteAffirmative(),
     Verbs__PastPoliteNegative: new PastPoliteNegative(),
+};
 
-    // Te-Form
+export const Verbs__TeForm_Forms: any = {
     Verbs__TeFormAffirmative: new TeFormAffirmative(),
     Verbs__TeFormNegative: new TeFormNegative(),
+};
 
-    // Potential
+export const Verbs__Potential_Forms: any = {
     Verbs__PotentialAffirmative: new PotentialAffirmative(),
     Verbs__PotentialNegative: new PotentialNegative(),
+};
 
-    // Passive
+export const Verbs__Passive_Forms: any = {
     Verbs__PassiveAffirmative: new PassiveAffirmative(),
     Verbs__PassiveNegative: new PassiveNegative(),
+};
 
-    // Causative
+export const Verbs__Causative_Forms: any = {
     Verbs__CausativeAffirmative: new CausativeAffirmative(),
     Verbs__CausativeNegative: new CausativeNegative(),
+};
 
-    // Causative Passive
+export const Verbs__CausativePassive_Forms: any = {
     Verbs__CausativePassiveAffirmative: new CausativePassiveAffirmative(),
     Verbs__CausativePassiveNegative: new CausativePassiveNegative(),
+};
 
-    // Imperative
+export const Verbs__Imperative_Forms: any = {
     Verbs__ImperativeAffirmative: new ImperativeAffirmative(),
-    Verbs__ImperativeNegative: new ImperativeNegative()
-}
+    Verbs__ImperativeNegative: new ImperativeNegative(),
+};
 
-export const AllForms: any = {...AdjectiveForms, ...VerbForms};
+export const AdjectiveForms: any = {
+    ...Adjectives__NonePast_Forms,
+    ...Adjectives__Past_Forms
+};
+
+export const VerbForms: any = {
+    ...Verbs__NonPast_Forms,
+    ...Verbs__Past_Forms,
+    ...Verbs__TeForm_Forms,
+    ...Verbs__Potential_Forms,
+    ...Verbs__Passive_Forms,
+    ...Verbs__Causative_Forms,
+    ...Verbs__CausativePassive_Forms,
+    ...Verbs__Imperative_Forms
+};
+
+export const AllForms: any = {
+    ...AdjectiveForms,
+    ...VerbForms
+};
