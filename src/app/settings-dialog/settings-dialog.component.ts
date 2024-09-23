@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialogRef} from "@angular/material/dialog";
 import {
+    AdjectiveForms,
     Adjectives__NonPastPoliteAffirmative,
     Adjectives__NonPastPoliteNegative,
     Adjectives__NonPastShortAffirmative,
@@ -187,7 +188,7 @@ export class SettingsDialogComponent implements OnInit {
     }
 
     public getAdjectiveConjugationTitle(key: string): string {
-        return this.practiceService.adjectiveForms[key].getTitle()
+        return AdjectiveForms[key].getTitle()
     }
 
     save() {
