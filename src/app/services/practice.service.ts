@@ -106,6 +106,9 @@ export class PracticeService extends PersistentService {
         const practiceItem: PracticeItem = this.drawRandom(this.practiceItems);
         let word = this.drawRandom(this.vocabulary[practiceItem.wordType.valueOf()])
 
+        console.log(practiceItem.srsKey)
+        console.log(this.srs.stateForForm(practiceItem.srsKey))
+
         return new Exercise(practiceItem, word)
     }
 
