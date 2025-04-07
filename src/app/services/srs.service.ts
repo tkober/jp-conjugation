@@ -43,6 +43,32 @@ class SrsItem {
         this.currentStreak = Math.min(this.currentStreak-1, -1)
         this.failureCount++;
     }
+
+    public getScore(): number {
+        const streakWeight = -5;          // Positive streak lowers priority, negative increases it
+        const failRatioWeight = 3;        // High failure rate increases priority
+        const recentnessWeight = 1;       // The longer ago, the higher the priority (slightly)
+        const noiseFactor = 0.1;          // Random offset to avoid strict repetition
+
+        // 1. Streak score
+        const streakScore = streakWeight * this.currentStreak;
+
+        // 2. Failure ratio score
+        const totalAttempts = this.successCount + this.failureCount;
+        const failRatio = totalAttempts > 0 ? this.failureCount / totalAttempts : 0;
+        const failRatioScore = failRatioWeight * failRatio;
+
+        // 3. Time since last review
+        const now = Date.now();
+        const lastReview = this.lastReview?.getTime() ?? 0;
+        const minutesSinceReview = (now - lastReview) / (60 * 1000);
+        const recentnessScore = recentnessWeight * Math.log1p(minutesSinceReview); // log1p(x) = log(1 + x)
+
+        // 4. Small random noise to break ties
+        const randomNoise = Math.random() * noiseFactor;
+
+        return streakScore + failRatioScore - recentnessScore + randomNoise;
+    }
 }
 
 class SrsState {
@@ -150,5 +176,12 @@ export class SrsService extends PersistentService {
     public updateStateForForm(form: string, item: SrsItem) {
         this.state.items.set(form, item);
         this.saveState();
+    }
+
+    public getItemQueue(queueSize: number): SrsItem[] {
+        const sortedItems = Array.from(this.state.items.values())
+        .sort((a, b) => a.getScore() - b.getScore());
+    
+        return sortedItems.slice(0, queueSize);
     }
 }
