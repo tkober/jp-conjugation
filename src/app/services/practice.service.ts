@@ -3,6 +3,7 @@ import {jisho} from "../jisho";
 import {AdjectiveForms, Conjugation, VerbForms, WordType} from "../conjugation/conjugation";
 import {PersistentService} from "./persistent-service";
 import {SrsService} from "./srs.service";
+import { format } from 'path';
 
 
 export class Vocabulary {
@@ -111,6 +112,18 @@ export class PracticeService extends PersistentService {
 
         return new Exercise(practiceItem, word)
     }
+
+    public feedbackForExercise(exercise: Exercise, isCorrect: boolean) {
+        const srsItem = this.srs.stateForForm(exercise.practiceItem.srsKey)
+        if (isCorrect) {
+            srsItem.success(new Date());
+        } else {
+            srsItem.fail(new Date());
+        }
+
+        this.srs.updateStateForForm(exercise.practiceItem.srsKey, srsItem);
+    }
+
 
     private drawRandom(items: any[]): any {
         return items[Math.floor(Math.random() * items.length)];

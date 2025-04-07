@@ -62,6 +62,7 @@ export class AppComponent implements OnInit, AfterViewInit {
 
         this.solution = solution
         this.isAnswerCorrect = this.givenAnswer === this.solution.hiragana
+        this.practiceService.feedbackForExercise(this.currentExercise, this.isAnswerCorrect);
     }
 
     finishCurrentExercise() {

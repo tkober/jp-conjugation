@@ -16,7 +16,7 @@ class SrsItem {
     }
 
     public deepCopy(): SrsItem {
-        return JSON.parse(JSON.stringify(this)) as SrsItem;
+        return SrsItem.fromJson(JSON.parse(JSON.stringify(this)))
     }
 
     public static fromJson(json: any): SrsItem {
@@ -28,6 +28,20 @@ class SrsItem {
         item.successCount = json.successCount || 0;
         item.failureCount = json.failureCount || 0;
         return item;
+    }
+
+    public success(timestamp: Date) {
+        this.lastReview = timestamp;
+        this.lastSuccess = timestamp;
+        this.currentStreak = Math.max(this.currentStreak+1, 1)
+        this.successCount++;
+    }
+
+    public fail(timestamp: Date) {
+        this.lastReview = timestamp;
+        this.lastFailure = timestamp;
+        this.currentStreak = Math.min(this.currentStreak-1, -1)
+        this.failureCount++;
     }
 }
 
@@ -125,7 +139,16 @@ export class SrsService extends PersistentService {
         localStorage.setItem(LocalStorageKey_SrsState__Items, JSON.stringify(Object.fromEntries(this.state.items.entries())))
     }
 
-    public stateForForm(form: string): (SrsItem | undefined) {
-        return this.state.items.get(form)?.deepCopy();
+    public stateForForm(form: string): (SrsItem) {
+        if (this.state.items.has(form)) {
+            return this.state.items.get(form)!.deepCopy();
+        }
+        
+        return new SrsItem(form);
+    }
+
+    public updateStateForForm(form: string, item: SrsItem) {
+        this.state.items.set(form, item);
+        this.saveState();
     }
 }
