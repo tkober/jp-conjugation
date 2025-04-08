@@ -3,7 +3,6 @@ import {jisho} from "../jisho";
 import {AdjectiveForms, composeAdjectiveSrsKey, composeVerbsSrsKey, Conjugation, VerbForms, WordType} from "../conjugation/conjugation";
 import {PersistentService} from "./persistent-service";
 import {SrsItem, SrsService} from "./srs.service";
-import { format } from 'path';
 
 
 export class Vocabulary {
