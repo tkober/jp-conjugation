@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {PersistentService} from "./persistent-service";
+import {LocalStorageKey_SrsState__Items, LocalStorageKey_SrState__Version, PersistentService} from "./persistent-service";
 import {AdjectiveForms, AllForms, composeAdjectiveSrsKey, composeVerbsSrsKey, VerbForms, WordType} from "../conjugation/conjugation";
 
 export class SrsItem {
@@ -80,10 +80,6 @@ class SrsState {
         this.items = items;
     }
 }
-
-export const LocalStorageKey_SrsState__Items = 'SRS_STATE_ITEMS'
-
-export const LocalStorageKey_SrState__Version = 'SRS_STATE_VERSION'
 
 export const SRS_CURRENT_VERSION: string = '1.0';
 

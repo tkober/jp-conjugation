@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {jisho} from "../jisho";
 import {AdjectiveForms, composeAdjectiveSrsKey, composeVerbsSrsKey, Conjugation, VerbForms, WordType} from "../conjugation/conjugation";
-import {PersistentService} from "./persistent-service";
+import {LocalStorageKey_ExcludedConjugations, LocalStorageKey_ExcludedJpltLevels, PersistentService} from "./persistent-service";
 import {SrsItem, SrsService} from "./srs.service";
 
 
@@ -40,9 +40,6 @@ export class Exercise {
         this.vocabulary = vocabulary;
     }
 }
-
-export const LocalStorageKey_ExcludedConjugations = 'EXCLUDED_CONJUGATIONS'
-export const LocalStorageKey_ExcludedJpltLevels = 'EXCLUDED_JLPT_LEVELS'
 
 
 @Injectable({

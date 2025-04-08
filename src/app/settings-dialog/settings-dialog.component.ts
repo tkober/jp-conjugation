@@ -14,7 +14,8 @@ import {
     Verbs__Potential_Forms,
     Verbs__TeForm_Forms
 } from "../conjugation/conjugation";
-import {LocalStorageKey_ExcludedConjugations, LocalStorageKey_ExcludedJpltLevels, PracticeService} from "../services/practice.service";
+import {PracticeService} from "../services/practice.service";
+import { LocalStorageKey_ExcludedConjugations, LocalStorageKey_ExcludedJpltLevels } from '../services/persistent-service';
 
 
 class ConjugationGroupItem {
