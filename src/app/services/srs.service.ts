@@ -1,8 +1,8 @@
 import {Injectable} from "@angular/core";
 import {PersistentService} from "./persistent-service";
-import {AdjectiveForms, AllForms, VerbForms, WordType} from "../conjugation/conjugation";
+import {AdjectiveForms, AllForms, composeAdjectiveSrsKey, composeVerbsSrsKey, VerbForms, WordType} from "../conjugation/conjugation";
 
-class SrsItem {
+export class SrsItem {
     public key: string;
     public lastReview: (Date | null) = null;
     public lastSuccess: (Date | null) = null;
@@ -116,14 +116,14 @@ export class SrsService extends PersistentService {
         // Adjective Practice Items
         for (let formKey in AdjectiveForms) {
             for (let wordType of [WordType.IAdjective, WordType.NaAdjective]) {
-                result.push(`${AdjectiveForms[formKey].constructor.name}__${wordType}`)
+                result.push(composeAdjectiveSrsKey(formKey, wordType))
             }
         }
 
         // Verbs Practice Items
         for (let formKey in VerbForms) {
             for (let wordType of [WordType.IchidanVerb, WordType.GodanVerb, WordType.SuruVerb, WordType.KuruVerb]) {
-                result.push(`${VerbForms[formKey].constructor.name}__${wordType}`)
+                result.push(composeVerbsSrsKey(formKey, wordType))
             }
         }
 
@@ -178,8 +178,9 @@ export class SrsService extends PersistentService {
         this.saveState();
     }
 
-    public getItemQueue(queueSize: number): SrsItem[] {
+    public getItemQueue(formsToConsider: string[], queueSize: number): SrsItem[] {
         const sortedItems = Array.from(this.state.items.values())
+        .filter((item) => formsToConsider.indexOf(item.key) !== -1)
         .sort((a, b) => a.getScore() - b.getScore());
     
         return sortedItems.slice(0, queueSize);

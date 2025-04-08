@@ -1,8 +1,8 @@
 import {Injectable} from '@angular/core';
 import {jisho} from "../jisho";
-import {AdjectiveForms, Conjugation, VerbForms, WordType} from "../conjugation/conjugation";
+import {AdjectiveForms, composeAdjectiveSrsKey, composeVerbsSrsKey, Conjugation, VerbForms, WordType} from "../conjugation/conjugation";
 import {PersistentService} from "./persistent-service";
-import {SrsService} from "./srs.service";
+import {SrsItem, SrsService} from "./srs.service";
 import { format } from 'path';
 
 
@@ -51,10 +51,13 @@ export const LocalStorageKey_ExcludedJpltLevels = 'EXCLUDED_JLPT_LEVELS'
 })
 export class PracticeService extends PersistentService {
 
-    private practiceItems: PracticeItem[];
+    private practiceItems: Map<string, PracticeItem> = new Map();
     private vocabulary: any;
-    private excludedForms: string[]
-    private excludedJlptLevels: string[]
+    private excludedForms: string[];
+    private excludedJlptLevels: string[];
+    private srsQueue: SrsItem[] = [];
+
+    private static readonly SRS_QUEUE_SIZE = 5;
 
     constructor(private srs: SrsService) {
         super();
@@ -70,23 +73,21 @@ export class PracticeService extends PersistentService {
         const selectedVerbForms = Object.keys(VerbForms).filter((key) => this.excludedForms.indexOf(key) === -1);
 
         // Build Practice Items
-        const practiceItems: PracticeItem[] = []
+        const practiceItems: Map<string, PracticeItem> = new Map();
 
         // Adjective Practice Items
         for (let formKey of selectedAdjectiveForms) {
             for (let wordType of [WordType.IAdjective, WordType.NaAdjective]) {
-                practiceItems.push(new PracticeItem(
-                    AdjectiveForms[formKey], wordType, `${AdjectiveForms[formKey].constructor.name}__${wordType}`
-                ))
+                const srsKey = composeAdjectiveSrsKey(formKey, wordType);
+                practiceItems.set(srsKey, new PracticeItem(AdjectiveForms[formKey], wordType, srsKey))
             }
         }
 
         // Verbs Practice Items
         for (let formKey of selectedVerbForms) {
             for (let wordType of [WordType.IchidanVerb, WordType.GodanVerb, WordType.SuruVerb, WordType.KuruVerb]) {
-                practiceItems.push(new PracticeItem(
-                    VerbForms[formKey], wordType, `${VerbForms[formKey].constructor.name}__${wordType}`
-                ))
+                const srsKey = composeVerbsSrsKey(formKey, wordType);
+                practiceItems.set(srsKey, new PracticeItem(VerbForms[formKey], wordType, srsKey))
             }
         }
         this.practiceItems = practiceItems;
@@ -102,14 +103,27 @@ export class PracticeService extends PersistentService {
         }
     }
 
+    public newExerciseQueue(): SrsItem[] {
+        const consideredForms = Array.from(this.practiceItems.keys())
+        return this.srs.getItemQueue(consideredForms, PracticeService.SRS_QUEUE_SIZE)
+
+    }
+
     public nextExercise(): Exercise {
+        if (this.srsQueue.length < 1) {
+            this.srsQueue = this.newExerciseQueue();
+        }
+        const srsItem = this.srsQueue.shift();
 
-        const practiceItem: PracticeItem = this.drawRandom(this.practiceItems);
+        let practiceItem: PracticeItem = this.drawRandom(Array.from(this.practiceItems.values()));
+        if (srsItem) {
+            const item = this.practiceItems.get(srsItem.key);
+            if (item) {
+                practiceItem = item;
+            }
+        }
+
         let word = this.drawRandom(this.vocabulary[practiceItem.wordType.valueOf()])
-
-        console.log(practiceItem.srsKey)
-        console.log(this.srs.stateForForm(practiceItem.srsKey))
-
         return new Exercise(practiceItem, word)
     }
 
@@ -123,7 +137,6 @@ export class PracticeService extends PersistentService {
 
         this.srs.updateStateForForm(exercise.practiceItem.srsKey, srsItem);
     }
-
 
     private drawRandom(items: any[]): any {
         return items[Math.floor(Math.random() * items.length)];

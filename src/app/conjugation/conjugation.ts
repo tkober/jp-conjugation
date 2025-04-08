@@ -284,3 +284,11 @@ export const AllForms: any = {
     ...AdjectiveForms,
     ...VerbForms
 };
+
+export function composeAdjectiveSrsKey(formKey: string, wordType: WordType): string {
+    return `Adjectives__${AdjectiveForms[formKey].constructor.name}__${wordType}`
+} 
+
+export function composeVerbsSrsKey(formKey: string, wordType: WordType): string {
+    return `Verbs__${VerbForms[formKey].constructor.name}__${wordType}`
+} 
