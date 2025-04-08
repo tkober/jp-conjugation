@@ -39,6 +39,14 @@
         padding-right: 1rem;
     }
 
+    .srs-button {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        padding-top: 1rem;
+        padding-left: 1rem;
+    }
+
     .correction {
         color: #c62828;
 

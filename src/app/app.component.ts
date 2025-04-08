@@ -77,6 +77,10 @@ export class AppComponent implements OnInit, AfterViewInit {
         })
     }
 
+    openSrs() {
+        
+    }
+
     public conjugationRuleHeadlineForWord(word: Word): string {
         switch (word.wordType) {
             case WordType.IAdjective:
