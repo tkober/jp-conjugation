@@ -1,7 +1,7 @@
 import {Injectable} from '@angular/core';
 import {jisho} from "../jisho";
 import {AdjectiveForms, composeAdjectiveSrsKey, composeVerbsSrsKey, Conjugation, VerbForms, WordType} from "../conjugation/conjugation";
-import {LocalStorageKey_ExcludedConjugations, LocalStorageKey_ExcludedJpltLevels, PersistentService} from "./persistent-service";
+import {StorageKey_ExcludedConjugations, StorageKey_ExcludedJpltLevels, PersistentService} from "./persistent-service";
 import {SrsItem, SrsService} from "./srs.service";
 
 
@@ -61,8 +61,8 @@ export class PracticeService extends PersistentService {
     }
 
     public initialize() {
-        this.excludedForms = this.loadFromStorage(LocalStorageKey_ExcludedConjugations, [])
-        this.excludedJlptLevels = this.loadFromStorage(LocalStorageKey_ExcludedJpltLevels, [])
+        this.excludedForms = this.loadFromStorage(StorageKey_ExcludedConjugations, [])
+        this.excludedJlptLevels = this.loadFromStorage(StorageKey_ExcludedJpltLevels, [])
 
         // Filter out disabled forms
         const selectedAdjectiveForms = Object.keys(AdjectiveForms).filter((key) => this.excludedForms.indexOf(key) === -1);

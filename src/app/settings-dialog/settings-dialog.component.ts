@@ -15,7 +15,7 @@ import {
     Verbs__TeForm_Forms
 } from "../conjugation/conjugation";
 import {PracticeService} from "../services/practice.service";
-import { LocalStorageKey_ExcludedConjugations, LocalStorageKey_ExcludedJpltLevels } from '../services/persistent-service';
+import { StorageKey_ExcludedConjugations, StorageKey_ExcludedJpltLevels } from '../services/persistent-service';
 
 
 class ConjugationGroupItem {
@@ -136,8 +136,8 @@ export class SettingsDialogComponent implements OnInit {
             }
         }
 
-        localStorage.setItem(LocalStorageKey_ExcludedConjugations, JSON.stringify(excludedConjugationKeys))
-        localStorage.setItem(LocalStorageKey_ExcludedJpltLevels, JSON.stringify(excludedJlptKeys))
+        localStorage.setItem(StorageKey_ExcludedConjugations, JSON.stringify(excludedConjugationKeys))
+        localStorage.setItem(StorageKey_ExcludedJpltLevels, JSON.stringify(excludedJlptKeys))
 
         this.dialogRef.close();
     }

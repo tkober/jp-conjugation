@@ -1,5 +1,5 @@
 import {Injectable} from "@angular/core";
-import {LocalStorageKey_SrsState__Items, LocalStorageKey_SrState__Version, PersistentService} from "./persistent-service";
+import {StorageKey_SrsState__Items, StorageKey_SrState__Version, PersistentService} from "./persistent-service";
 import {AdjectiveForms, AllForms, composeAdjectiveSrsKey, composeVerbsSrsKey, VerbForms, WordType} from "../conjugation/conjugation";
 
 export class SrsItem {
@@ -127,8 +127,8 @@ export class SrsService extends PersistentService {
     }
 
     private loadState() {
-        const savedItems = this.loadFromStorage(LocalStorageKey_SrsState__Items, {})
-        const savedVersion = this.loadFromStorage(LocalStorageKey_SrState__Version, '')
+        const savedItems = this.loadFromStorage(StorageKey_SrsState__Items, {})
+        const savedVersion = this.loadFromStorage(StorageKey_SrState__Version, '')
 
         if (savedVersion !== '' && savedVersion !== SRS_CURRENT_VERSION) {
             console.warn(`Found SRS data for version ${savedVersion}. Current version is ${SRS_CURRENT_VERSION}. Attempting migration`);
@@ -157,8 +157,8 @@ export class SrsService extends PersistentService {
     }
 
     private saveState() {
-        this.saveToStorage(LocalStorageKey_SrState__Version, this.state.version)
-        this.saveToStorage(LocalStorageKey_SrsState__Items, Object.fromEntries(this.state.items.entries()))
+        this.saveToStorage(StorageKey_SrState__Version, this.state.version)
+        this.saveToStorage(StorageKey_SrsState__Items, Object.fromEntries(this.state.items.entries()))
     }
 
     public stateForForm(form: string): (SrsItem) {

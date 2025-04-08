@@ -1,8 +1,8 @@
-export const LocalStorageKey_SrsState__Items = 'SRS_STATE_ITEMS'
-export const LocalStorageKey_SrState__Version = 'SRS_STATE_VERSION'
+export const StorageKey_SrsState__Items = 'SRS_STATE_ITEMS'
+export const StorageKey_SrState__Version = 'SRS_STATE_VERSION'
 
-export const LocalStorageKey_ExcludedConjugations = 'EXCLUDED_CONJUGATIONS'
-export const LocalStorageKey_ExcludedJpltLevels = 'EXCLUDED_JLPT_LEVELS'
+export const StorageKey_ExcludedConjugations = 'EXCLUDED_CONJUGATIONS'
+export const StorageKey_ExcludedJpltLevels = 'EXCLUDED_JLPT_LEVELS'
 
 export abstract class PersistentService {
 
