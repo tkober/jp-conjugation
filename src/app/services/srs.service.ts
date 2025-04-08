@@ -1,7 +1,6 @@
 import {Injectable} from "@angular/core";
 import {PersistentService} from "./persistent-service";
 import {AdjectiveForms, AllForms, composeAdjectiveSrsKey, composeVerbsSrsKey, VerbForms, WordType} from "../conjugation/conjugation";
-import { stat } from "fs";
 
 export class SrsItem {
     public key: string;
