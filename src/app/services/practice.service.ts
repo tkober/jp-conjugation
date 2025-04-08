@@ -64,8 +64,8 @@ export class PracticeService extends PersistentService {
     }
 
     public initialize() {
-        this.excludedForms = this.loadFromLocalStorage(LocalStorageKey_ExcludedConjugations, [])
-        this.excludedJlptLevels = this.loadFromLocalStorage(LocalStorageKey_ExcludedJpltLevels, [])
+        this.excludedForms = this.loadFromStorage(LocalStorageKey_ExcludedConjugations, [])
+        this.excludedJlptLevels = this.loadFromStorage(LocalStorageKey_ExcludedJpltLevels, [])
 
         // Filter out disabled forms
         const selectedAdjectiveForms = Object.keys(AdjectiveForms).filter((key) => this.excludedForms.indexOf(key) === -1);
