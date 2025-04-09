@@ -1,0 +1,25 @@
+.srs-dialog {
+
+    .all-actions {
+        margin-top: 1rem;
+
+        .all-action-title {
+            font-weight: bold;
+        }
+
+        & button {
+            margin-left: 1rem;
+        }
+    }
+
+    .mat-slide-toggle {
+        padding-bottom: .5rem;
+    }
+}
+
+::ng-deep .mat-dialog-container {
+    width: 600px;
+    padding: 15px !important;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}

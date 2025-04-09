@@ -5,6 +5,7 @@ import {Exercise, PracticeService, Vocabulary} from "./services/practice.service
 import {Word, WordType} from "./conjugation/conjugation";
 import {MatDialog} from "@angular/material/dialog";
 import {SettingsDialogComponent} from "./settings-dialog/settings-dialog.component";
+import { SrsDialogComponent } from './srs-dialog/srs-dialog.component';
 
 
 @Component({
@@ -78,7 +79,11 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
 
     openSrs() {
-        
+        const dialogRef = this.dialog.open(SrsDialogComponent, {panelClass: 'srs-dialog-pane'})
+        dialogRef.afterClosed().subscribe(value => {
+            this.practiceService.initialize();
+            this.nextExercise();
+        })
     }
 
     public conjugationRuleHeadlineForWord(word: Word): string {

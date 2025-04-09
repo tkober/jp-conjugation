@@ -18,6 +18,7 @@ import {MatTabsModule} from "@angular/material/tabs";
 import {MatExpansionModule} from "@angular/material/expansion";
 import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
+import { SrsDialogComponent } from './srs-dialog/srs-dialog.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
     FuriganaPipe,
     DropTrailingHiraganaPipe,
     DropKanjiPipe,
-    SettingsDialogComponent
+    SettingsDialogComponent,
+    SrsDialogComponent
   ],
     imports: [
         BrowserModule,
