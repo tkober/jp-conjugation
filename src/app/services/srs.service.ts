@@ -79,6 +79,14 @@ class SrsState {
         this.version = version;
         this.items = items;
     }
+
+    public deepCopy(): SrsState {
+        const items = new Map<string, SrsItem>();
+        for (const [key, item] of this.items.entries()) {
+            items.set(key, item.deepCopy());
+        }
+        return new SrsState(this.version, items);
+    }
 }
 
 export const SRS_CURRENT_VERSION: string = '1.0';
@@ -180,5 +188,9 @@ export class SrsService extends PersistentService {
         .sort((a, b) => a.getScore() - b.getScore());
     
         return sortedItems.slice(0, queueSize);
+    }
+
+    public getState() {
+        return this.state.deepCopy();
     }
 }
