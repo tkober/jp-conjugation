@@ -4,7 +4,6 @@ import {
     AdjectiveForms,
     Adjectives__NonePast_Forms,
     Adjectives__Past_Forms,
-    Conjugation,
     Verbs__Causative_Forms,
     Verbs__CausativePassive_Forms,
     Verbs__Imperative_Forms,
@@ -16,48 +15,8 @@ import {
 } from "../conjugation/conjugation";
 import {PracticeService} from "../services/practice.service";
 import { StorageKey_ExcludedConjugations, StorageKey_ExcludedJpltLevels } from '../services/persistent-service';
+import { ConjugationGroup, VocabularyItem } from '../dtos';
 
-
-class ConjugationGroupItem {
-    public settingsKey: string;
-    public conjugation: Conjugation;
-    public checked = false;
-
-    constructor(settingsKey: string, conjugation: Conjugation) {
-        this.settingsKey = settingsKey;
-        this.conjugation = conjugation;
-    }
-}
-
-class ConjugationGroup {
-    public title: string;
-    public items: ConjugationGroupItem[];
-
-    constructor(title: string, items: ConjugationGroupItem[]) {
-        this.title = title;
-        this.items = items;
-    }
-
-    static groupFromForms(name: string, forms: any): ConjugationGroup {
-        let items = [];
-        for (const form in forms) {
-            items.push(new ConjugationGroupItem(form, forms[form]));
-        }
-
-        return new ConjugationGroup(name, items);
-    }
-}
-
-class VocabularyItem {
-    public title: string;
-    public settingsKey: string;
-    public checked = false;
-
-    constructor(title: string, settingsKey: string) {
-        this.title = title;
-        this.settingsKey = settingsKey;
-    }
-}
 
 @Component({
     selector: 'app-settings-dialog',
