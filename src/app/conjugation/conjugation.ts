@@ -28,6 +28,8 @@ export enum WordType {
     NaAdjective = 'na_adjective'
 }
 
+export const AdjectiveTypes: WordType[] = [WordType.IAdjective, WordType.NaAdjective];
+export const VerbTypes: WordType[] = [WordType.IchidanVerb, WordType.GodanVerb, WordType.SuruVerb, WordType.KuruVerb]
 
 export class Transformation {
     private readonly _unaltered: string;
@@ -291,4 +293,8 @@ export function composeAdjectiveSrsKey(formKey: string, wordType: WordType): str
 
 export function composeVerbsSrsKey(formKey: string, wordType: WordType): string {
     return `Verbs__${VerbForms[formKey].constructor.name}__${wordType}`
+} 
+
+export function composeSrsKey(formKey: string, wordType: WordType): string {
+    return `${AllForms[formKey].constructor.name}__${wordType}`
 } 

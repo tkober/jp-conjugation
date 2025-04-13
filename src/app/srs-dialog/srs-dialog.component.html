@@ -1,7 +1,21 @@
 <div class="srs-dialog">
     <div matDialogContent>
         <mat-tab-group mat-align-tabs="center" animationDuration="0ms" color="accent" [disablePagination]="true" dynamicHeight>
-            <mat-tab label="Progress">
+            <mat-tab label="Progress">                
+
+                <div *ngFor="let category of progressCategories | keyvalue" class="progress-category">
+                    <h2>{{ category.key }}</h2>
+                  
+                    <div *ngFor="let group of category.value" class="progress-group-wrapper">
+                      <h3>{{ group.title }}</h3>
+                  
+                      <div class="progress-group">
+                        <div *ngFor="let item of progressItemsFromConjugationGroup(group)" class="progress-item">
+                          <span>{{ item.form }}, {{ item.wordType }}</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
 
             </mat-tab>
 

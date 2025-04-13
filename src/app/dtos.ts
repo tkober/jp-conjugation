@@ -1,4 +1,4 @@
-import { Conjugation } from './conjugation/conjugation';
+import { Conjugation, WordType } from './conjugation/conjugation';
 
 
 class ConjugationGroupItem {
@@ -14,19 +14,21 @@ class ConjugationGroupItem {
 export class ConjugationGroup {
     public title: string;
     public items: ConjugationGroupItem[];
+    public wordTypes: WordType[];
 
-    constructor(title: string, items: ConjugationGroupItem[]) {
+    constructor(title: string, items: ConjugationGroupItem[], wordTypes: WordType[]) {
         this.title = title;
         this.items = items;
+        this.wordTypes = wordTypes;
     }
 
-    static groupFromForms(name: string, forms: any): ConjugationGroup {
+    static groupFromForms(name: string, forms: any, wordTypes: WordType[]): ConjugationGroup {
         let items = [];
         for (const form in forms) {
             items.push(new ConjugationGroupItem(form, forms[form]));
         }
 
-        return new ConjugationGroup(name, items);
+        return new ConjugationGroup(name, items, wordTypes);
     }
 }
 export class VocabularyItem {

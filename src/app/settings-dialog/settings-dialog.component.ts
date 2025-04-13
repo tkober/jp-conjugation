@@ -4,6 +4,7 @@ import {
     AdjectiveForms,
     Adjectives__NonePast_Forms,
     Adjectives__Past_Forms,
+    AdjectiveTypes,
     Verbs__Causative_Forms,
     Verbs__CausativePassive_Forms,
     Verbs__Imperative_Forms,
@@ -11,7 +12,8 @@ import {
     Verbs__Passive_Forms,
     Verbs__Past_Forms,
     Verbs__Potential_Forms,
-    Verbs__TeForm_Forms
+    Verbs__TeForm_Forms,
+    VerbTypes
 } from "../conjugation/conjugation";
 import {PracticeService} from "../services/practice.service";
 import { StorageKey_ExcludedConjugations, StorageKey_ExcludedJpltLevels } from '../services/persistent-service';
@@ -26,20 +28,21 @@ import { ConjugationGroup, VocabularyItem } from '../dtos';
 export class SettingsDialogComponent implements OnInit {
 
     public adjectiveConjugationGroups = [
-        ConjugationGroup.groupFromForms('Non-past', Adjectives__NonePast_Forms),
-        ConjugationGroup.groupFromForms('Past', Adjectives__Past_Forms),
-    ]
-
-    public verbConjugationGroups = [
-        ConjugationGroup.groupFromForms('Non-past', Verbs__NonPast_Forms),
-        ConjugationGroup.groupFromForms('Past', Verbs__Past_Forms),
-        ConjugationGroup.groupFromForms('Te-Form', Verbs__TeForm_Forms),
-        ConjugationGroup.groupFromForms('Potential', Verbs__Potential_Forms),
-        ConjugationGroup.groupFromForms('Passive', Verbs__Passive_Forms),
-        ConjugationGroup.groupFromForms('Causative', Verbs__Causative_Forms),
-        ConjugationGroup.groupFromForms('Causative-Passive', Verbs__CausativePassive_Forms),
-        ConjugationGroup.groupFromForms('Imperative', Verbs__Imperative_Forms),
-    ]
+        ConjugationGroup.groupFromForms('Non-past', Adjectives__NonePast_Forms, AdjectiveTypes),
+        ConjugationGroup.groupFromForms('Past', Adjectives__Past_Forms, AdjectiveTypes),
+      ]
+    
+    
+      public verbConjugationGroups = [
+        ConjugationGroup.groupFromForms('Non-past', Verbs__NonPast_Forms, VerbTypes),
+        ConjugationGroup.groupFromForms('Past', Verbs__Past_Forms, VerbTypes),
+        ConjugationGroup.groupFromForms('Te-Form', Verbs__TeForm_Forms, VerbTypes),
+        ConjugationGroup.groupFromForms('Potential', Verbs__Potential_Forms, VerbTypes),
+        ConjugationGroup.groupFromForms('Passive', Verbs__Passive_Forms, VerbTypes),
+        ConjugationGroup.groupFromForms('Causative', Verbs__Causative_Forms, VerbTypes),
+        ConjugationGroup.groupFromForms('Causative-Passive', Verbs__CausativePassive_Forms, VerbTypes),
+        ConjugationGroup.groupFromForms('Imperative', Verbs__Imperative_Forms, VerbTypes),
+      ]
 
     public jlptItems = [
         new VocabularyItem('N1', 'n1'),
