@@ -11,7 +11,7 @@
                   
                       <div class="progress-group">
                         <div *ngFor="let item of progressItemsFromConjugationGroup(group)" class="progress-item">
-                          <span>{{ item.form }}, {{ item.wordType }}</span>
+                          <span>{{ item.form }}, {{ item.wordType | wordtypeReadable }}</span>
                         </div>
                       </div>
                     </div>
