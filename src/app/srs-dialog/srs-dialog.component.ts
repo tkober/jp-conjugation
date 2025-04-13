@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from "@angular/material/dialog";
 import { SrsService } from '../services/srs.service';
-import { AdjectiveTypes, VerbTypes, composeSrsKey, WordType } from '../conjugation/conjugation';
+import { AdjectiveTypes, VerbTypes, composeSrsKey } from '../conjugation/conjugation';
 import {
   AdjectiveForms,
   Adjectives__NonePast_Forms,
@@ -16,16 +16,7 @@ import {
   Verbs__TeForm_Forms
 } from "../conjugation/conjugation";
 import { ConjugationGroup } from '../dtos';
-
-class ProgressItem {
-  constructor(
-    public grammar: string,
-    public form: string,
-    public wordType: WordType,
-    public srsKey: string
-  ) {}
-}
-
+import { ProgressItem } from '../srs-progress/srs-progress.component';
 
 @Component({
   selector: 'app-srs-dialog',

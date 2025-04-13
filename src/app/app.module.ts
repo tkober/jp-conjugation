@@ -20,6 +20,7 @@ import {MatSidenavModule} from "@angular/material/sidenav";
 import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import { SrsDialogComponent } from './srs-dialog/srs-dialog.component';
 import { WordtypeReadablePipe } from './wordtype-readable.pipe';
+import { SrsProgressComponent } from './srs-progress/srs-progress.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { WordtypeReadablePipe } from './wordtype-readable.pipe';
     DropKanjiPipe,
     SettingsDialogComponent,
     SrsDialogComponent,
-    WordtypeReadablePipe
+    WordtypeReadablePipe,
+    SrsProgressComponent
   ],
     imports: [
         BrowserModule,
