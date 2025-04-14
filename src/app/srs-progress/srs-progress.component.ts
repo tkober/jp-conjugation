@@ -25,7 +25,6 @@ export class SrsProgressComponent implements OnInit {
   constructor(private srsService: SrsService) { }
 
   ngOnInit(): void {
-    // console.log(this.progressItem.srsKey)
     this.srsState = this.srsService.stateForForm(this.progressItem.srsKey);
   }
 
