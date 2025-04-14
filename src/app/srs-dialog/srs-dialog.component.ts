@@ -3,7 +3,6 @@ import { MatDialogRef } from "@angular/material/dialog";
 import { SrsService } from '../services/srs.service';
 import { composeAdjectiveSrsKey, composeVerbsSrsKey } from '../conjugation/conjugation';
 import {
-  AdjectiveForms,
   Adjectives__NonePast_Forms,
   Adjectives__Past_Forms,
   Verbs__Causative_Forms,
