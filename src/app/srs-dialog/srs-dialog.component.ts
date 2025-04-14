@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from "@angular/material/dialog";
-import { SrsService } from '../services/srs.service';
 import { composeAdjectiveSrsKey, composeVerbsSrsKey } from '../conjugation/conjugation';
 import {
   Adjectives__NonePast_Forms,
@@ -43,8 +42,7 @@ export class SrsDialogComponent implements OnInit {
   public progressCategories: Map<string, ConjugationGroup[]> = new Map<string, Array<ConjugationGroup>>();
 
   constructor(
-    private dialogRef: MatDialogRef<SrsDialogComponent>,
-    private srsService: SrsService
+    private dialogRef: MatDialogRef<SrsDialogComponent>
   ) {
     this.progressCategories.set('Adjectives', this.adjectiveConjugationGroups);
     this.progressCategories.set('Verbs', this.verbConjugationGroups);
