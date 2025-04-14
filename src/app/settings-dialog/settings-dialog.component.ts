@@ -4,7 +4,6 @@ import {
     AdjectiveForms,
     Adjectives__NonePast_Forms,
     Adjectives__Past_Forms,
-    AdjectiveTypes,
     Verbs__Causative_Forms,
     Verbs__CausativePassive_Forms,
     Verbs__Imperative_Forms,
@@ -12,8 +11,7 @@ import {
     Verbs__Passive_Forms,
     Verbs__Past_Forms,
     Verbs__Potential_Forms,
-    Verbs__TeForm_Forms,
-    VerbTypes
+    Verbs__TeForm_Forms
 } from "../conjugation/conjugation";
 import {PracticeService} from "../services/practice.service";
 import { StorageKey_ExcludedConjugations, StorageKey_ExcludedJpltLevels } from '../services/persistent-service';
