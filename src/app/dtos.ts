@@ -1,4 +1,4 @@
-import { Conjugation, WordType } from './conjugation/conjugation';
+import { AdjectiveTypes, Conjugation, VerbTypes, WordType } from './conjugation/conjugation';
 
 
 class ConjugationGroupItem {
@@ -11,26 +11,52 @@ class ConjugationGroupItem {
         this.conjugation = conjugation;
     }
 }
+
+export enum ConjugationType {
+    Adjective = 'adjective',
+    Verb = 'Verb'
+}
+
 export class ConjugationGroup {
     public title: string;
     public items: ConjugationGroupItem[];
-    public wordTypes: WordType[];
+    public type: ConjugationType;
 
-    constructor(title: string, items: ConjugationGroupItem[], wordTypes: WordType[]) {
+    constructor(title: string, items: ConjugationGroupItem[], type: ConjugationType) {
         this.title = title;
         this.items = items;
-        this.wordTypes = wordTypes;
+        this.type = type;
     }
 
-    static groupFromForms(name: string, forms: any, wordTypes: WordType[]): ConjugationGroup {
+    getWordTypes(): WordType[] {
+        switch (this.type) {
+            case ConjugationType.Adjective:
+                return AdjectiveTypes;
+            case ConjugationType.Verb:
+                return VerbTypes;
+            default:
+                return [];
+        }
+    }
+
+    static groupFromForms(name: string, forms: any, type: ConjugationType): ConjugationGroup {
         let items = [];
         for (const form in forms) {
             items.push(new ConjugationGroupItem(form, forms[form]));
         }
 
-        return new ConjugationGroup(name, items, wordTypes);
+        return new ConjugationGroup(name, items, type);
+    }
+
+    static groupForAdjectiveForms(name: string, forms: any): ConjugationGroup {
+        return this.groupFromForms(name, forms, ConjugationType.Adjective);
+    }
+
+    static groupForVerbVerb(name: string, forms: any): ConjugationGroup {
+        return this.groupFromForms(name, forms, ConjugationType.Verb);
     }
 }
+
 export class VocabularyItem {
     public title: string;
     public settingsKey: string;

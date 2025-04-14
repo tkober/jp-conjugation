@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { WordType } from '../conjugation/conjugation';
+import { SrsItem, SrsService } from '../services/srs.service';
 
 export class ProgressItem {
   constructor(
@@ -19,9 +20,13 @@ export class SrsProgressComponent implements OnInit {
 
   @Input() progressItem: ProgressItem;
 
-  constructor() { }
+  public srsState: SrsItem;
+
+  constructor(private srsService: SrsService) { }
 
   ngOnInit(): void {
+    // console.log(this.progressItem.srsKey)
+    this.srsState = this.srsService.stateForForm(this.progressItem.srsKey);
   }
 
 }

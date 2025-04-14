@@ -28,21 +28,20 @@ import { ConjugationGroup, VocabularyItem } from '../dtos';
 export class SettingsDialogComponent implements OnInit {
 
     public adjectiveConjugationGroups = [
-        ConjugationGroup.groupFromForms('Non-past', Adjectives__NonePast_Forms, AdjectiveTypes),
-        ConjugationGroup.groupFromForms('Past', Adjectives__Past_Forms, AdjectiveTypes),
-      ]
-    
-    
-      public verbConjugationGroups = [
-        ConjugationGroup.groupFromForms('Non-past', Verbs__NonPast_Forms, VerbTypes),
-        ConjugationGroup.groupFromForms('Past', Verbs__Past_Forms, VerbTypes),
-        ConjugationGroup.groupFromForms('Te-Form', Verbs__TeForm_Forms, VerbTypes),
-        ConjugationGroup.groupFromForms('Potential', Verbs__Potential_Forms, VerbTypes),
-        ConjugationGroup.groupFromForms('Passive', Verbs__Passive_Forms, VerbTypes),
-        ConjugationGroup.groupFromForms('Causative', Verbs__Causative_Forms, VerbTypes),
-        ConjugationGroup.groupFromForms('Causative-Passive', Verbs__CausativePassive_Forms, VerbTypes),
-        ConjugationGroup.groupFromForms('Imperative', Verbs__Imperative_Forms, VerbTypes),
-      ]
+        ConjugationGroup.groupForAdjectiveForms('Non-past', Adjectives__NonePast_Forms),
+        ConjugationGroup.groupForAdjectiveForms('Past', Adjectives__Past_Forms),
+    ]
+
+    public verbConjugationGroups = [
+        ConjugationGroup.groupForVerbVerb('Non-past', Verbs__NonPast_Forms),
+        ConjugationGroup.groupForVerbVerb('Past', Verbs__Past_Forms),
+        ConjugationGroup.groupForVerbVerb('Te-Form', Verbs__TeForm_Forms),
+        ConjugationGroup.groupForVerbVerb('Potential', Verbs__Potential_Forms),
+        ConjugationGroup.groupForVerbVerb('Passive', Verbs__Passive_Forms),
+        ConjugationGroup.groupForVerbVerb('Causative', Verbs__Causative_Forms),
+        ConjugationGroup.groupForVerbVerb('Causative-Passive', Verbs__CausativePassive_Forms),
+        ConjugationGroup.groupForVerbVerb('Imperative', Verbs__Imperative_Forms),
+    ]
 
     public jlptItems = [
         new VocabularyItem('N1', 'n1'),

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialogRef } from "@angular/material/dialog";
 import { SrsService } from '../services/srs.service';
-import { AdjectiveTypes, VerbTypes, composeSrsKey } from '../conjugation/conjugation';
+import { composeAdjectiveSrsKey, composeVerbsSrsKey } from '../conjugation/conjugation';
 import {
   AdjectiveForms,
   Adjectives__NonePast_Forms,
@@ -15,7 +15,7 @@ import {
   Verbs__Potential_Forms,
   Verbs__TeForm_Forms
 } from "../conjugation/conjugation";
-import { ConjugationGroup } from '../dtos';
+import { ConjugationGroup, ConjugationType } from '../dtos';
 import { ProgressItem } from '../srs-progress/srs-progress.component';
 
 @Component({
@@ -26,20 +26,19 @@ import { ProgressItem } from '../srs-progress/srs-progress.component';
 export class SrsDialogComponent implements OnInit {
 
   public adjectiveConjugationGroups = [
-    ConjugationGroup.groupFromForms('Non-past', Adjectives__NonePast_Forms, AdjectiveTypes),
-    ConjugationGroup.groupFromForms('Past', Adjectives__Past_Forms, AdjectiveTypes),
+    ConjugationGroup.groupForAdjectiveForms('Non-past', Adjectives__NonePast_Forms),
+    ConjugationGroup.groupForAdjectiveForms('Past', Adjectives__Past_Forms),
   ]
 
-
   public verbConjugationGroups = [
-    ConjugationGroup.groupFromForms('Non-past', Verbs__NonPast_Forms, VerbTypes),
-    ConjugationGroup.groupFromForms('Past', Verbs__Past_Forms, VerbTypes),
-    ConjugationGroup.groupFromForms('Te-Form', Verbs__TeForm_Forms, VerbTypes),
-    ConjugationGroup.groupFromForms('Potential', Verbs__Potential_Forms, VerbTypes),
-    ConjugationGroup.groupFromForms('Passive', Verbs__Passive_Forms, VerbTypes),
-    ConjugationGroup.groupFromForms('Causative', Verbs__Causative_Forms, VerbTypes),
-    ConjugationGroup.groupFromForms('Causative-Passive', Verbs__CausativePassive_Forms, VerbTypes),
-    ConjugationGroup.groupFromForms('Imperative', Verbs__Imperative_Forms, VerbTypes),
+    ConjugationGroup.groupForVerbVerb('Non-past', Verbs__NonPast_Forms),
+    ConjugationGroup.groupForVerbVerb('Past', Verbs__Past_Forms),
+    ConjugationGroup.groupForVerbVerb('Te-Form', Verbs__TeForm_Forms),
+    ConjugationGroup.groupForVerbVerb('Potential', Verbs__Potential_Forms),
+    ConjugationGroup.groupForVerbVerb('Passive', Verbs__Passive_Forms),
+    ConjugationGroup.groupForVerbVerb('Causative', Verbs__Causative_Forms),
+    ConjugationGroup.groupForVerbVerb('Causative-Passive', Verbs__CausativePassive_Forms),
+    ConjugationGroup.groupForVerbVerb('Imperative', Verbs__Imperative_Forms),
   ]
 
   public progressCategories: Map<string, ConjugationGroup[]> = new Map<string, Array<ConjugationGroup>>();
@@ -56,12 +55,22 @@ export class SrsDialogComponent implements OnInit {
     const result: ProgressItem[] = []
 
     for (let form of group.items) {
-      for (let wordType of group.wordTypes) {
+      for (let wordType of group.getWordTypes()) {
+
+        let srsKey = ''
+        if (group.type === ConjugationType.Adjective) {
+            srsKey = composeAdjectiveSrsKey(form.settingsKey, wordType);
+        }
+
+        if (group.type === ConjugationType.Verb) {
+            srsKey = composeVerbsSrsKey(form.settingsKey, wordType);
+        }
+
         result.push(new ProgressItem(
           group.title,
           form.conjugation.getSettingsTitle(),
           wordType,
-          composeSrsKey(form.settingsKey, wordType)
+          srsKey
         ))
       }
     }
