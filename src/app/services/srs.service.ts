@@ -74,6 +74,14 @@ export class SrsItem {
         const totalAttempts = this.successCount + this.failureCount;
         return totalAttempts > 0 ? (this.successCount / totalAttempts) * 100 : 0;
     }
+
+    public getCurrentStreak(): string {
+        if (this.currentStreak === 0) {
+            return '-'
+        }
+
+        return this.currentStreak > 0 ? '+' + this.currentStreak : '' + this.currentStreak;
+    }
 }
 
 class SrsState {

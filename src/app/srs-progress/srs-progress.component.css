@@ -1,21 +1,45 @@
 .srs-progress-item {
 
-    span.current-streak {
-        min-width: 2rem;
-        display: inline-block;
+    background: #f0f0f0;
+    border: 1px solid #ccc;
 
-        &.success-streak {
-            color: green;
+    .content {
+        padding: 8px;
+
+        div.item-text {
+
+            position: relative;
+            padding-left: 2.5rem;
+    
+            .form-text {
+                font-weight: 500;
+            }
+    
+            .current-streak {
+                position: absolute;
+                left: 0px;
+                top: 1rem;
+                font-size: larger;
+                font-weight: bold;
+        
+                &.success-streak {
+                    color: rgb(0, 183, 255);
+                }
+        
+                &.failure-streak {
+                    color: rgb(255, 0, 0);
+                }
+
+                &.no-streak {
+                    color: rgb(128, 128, 128);
+                }
+            }
         }
-
-        &.failure-streak {
-            color: red;
+    
+        .last-review-timestamp {
+            padding-top: 8px;
+            font-size: x-small;
+            text-align: right;
         }
-    }
-
-    .last-review-timestamp {
-        padding-top: 8px;
-        font-size: x-small;
-        text-align: right;
     }
 }

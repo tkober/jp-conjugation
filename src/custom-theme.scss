@@ -12,7 +12,7 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$jp-conjugation-primary: mat.define-palette(mat.$gray-palette);
+$jp-conjugation-primary: mat.define-palette(mat.$blue-grey-palette, 800);
 $jp-conjugation-accent: mat.define-palette(mat.$red-palette, 800);
 
 // The warn palette is optional (defaults to red).

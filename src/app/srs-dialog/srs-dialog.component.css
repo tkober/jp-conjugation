@@ -12,10 +12,6 @@
         }
     }
 
-    .mat-slide-toggle {
-        padding-bottom: .5rem;
-    }
-
     .progress-category {
 
         .progress-group {
@@ -23,13 +19,6 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 1rem;
             margin-bottom: 2rem;
-
-            .progress-item {
-                background: #f0f0f0;
-                padding: 1rem;
-                border-radius: 8px;
-                border: 1px solid #ccc;
-            }
         }
     }
 }
