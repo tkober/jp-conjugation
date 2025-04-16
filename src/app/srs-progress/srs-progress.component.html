@@ -1,5 +1,19 @@
-<ng-container *ngIf="progressItem">
-    <span>{{ progressItem.form }}, {{ progressItem.wordType | wordtypeReadable }}</span>
-    <span>{{ srsState.currentStreak }}</span>
-    <span>{{ srsState.lastReview }}</span>
-</ng-container>
+<div class="srs-progress-item">
+    <ng-container *ngIf="progressItem">
+        <!-- <mat-progress-bar mode="determinate" value="{{ srsState.getSuccessRate() }}" color="primary"></mat-progress-bar> -->
+        <mat-progress-bar mode="determinate" value="50" color="primary"></mat-progress-bar>
+        <div>
+            <span
+                class="current-streak"
+                [ngClass]="{
+                    'success-streak': srsState.currentStreak > 0,
+                    'failure-streak': srsState.currentStreak < 0,
+                    'no-streak': srsState.currentStreak === 0
+                }">
+                {{ srsState.currentStreak }}
+            </span>
+            <span>{{ progressItem.form }}, {{ progressItem.wordType | wordtypeReadable }}</span>
+        </div>
+        <div class="last-review-timestamp">{{ srsState.lastReview | date:'short' }}</div>
+    </ng-container>
+</div>

@@ -21,6 +21,7 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import { SrsDialogComponent } from './srs-dialog/srs-dialog.component';
 import { WordtypeReadablePipe } from './wordtype-readable.pipe';
 import { SrsProgressComponent } from './srs-progress/srs-progress.component';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { SrsProgressComponent } from './srs-progress/srs-progress.component';
         MatTabsModule,
         MatExpansionModule,
         MatSidenavModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatProgressBarModule
     ],
   providers: [],
   bootstrap: [AppComponent]

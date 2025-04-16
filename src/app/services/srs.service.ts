@@ -69,6 +69,11 @@ export class SrsItem {
 
         return streakScore + failRatioScore - recentnessScore + randomNoise;
     }
+
+    public getSuccessRate(): number {
+        const totalAttempts = this.successCount + this.failureCount;
+        return totalAttempts > 0 ? (this.successCount / totalAttempts) * 100 : 0;
+    }
 }
 
 class SrsState {
@@ -173,7 +178,7 @@ export class SrsService extends PersistentService {
         if (this.state.items.has(form)) {
             return this.state.items.get(form)!.deepCopy();
         }
-        
+
         return new SrsItem(form);
     }
 
@@ -186,7 +191,7 @@ export class SrsService extends PersistentService {
         const sortedItems = Array.from(this.state.items.values())
         .filter((item) => formsToConsider.indexOf(item.key) !== -1)
         .sort((a, b) => a.getScore() - b.getScore());
-    
+
         return sortedItems.slice(0, queueSize);
     }
 

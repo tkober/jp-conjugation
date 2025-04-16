@@ -1,0 +1,21 @@
+.srs-progress-item {
+
+    span.current-streak {
+        min-width: 2rem;
+        display: inline-block;
+
+        &.success-streak {
+            color: green;
+        }
+
+        &.failure-streak {
+            color: red;
+        }
+    }
+
+    .last-review-timestamp {
+        padding-top: 8px;
+        font-size: x-small;
+        text-align: right;
+    }
+}
