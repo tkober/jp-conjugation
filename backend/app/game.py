@@ -60,6 +60,14 @@ REVIEW_CHANCE = 0.12  # a word well below it, to check it really stuck
 PROBE_OFFSET = (120.0, 400.0)
 REVIEW_OFFSET = (250.0, 600.0)
 
+# Aiming the pair at the user's rating is the Elo fixed point, and it settles
+# at roughly a 50 % hit rate. Serving deliberately easier pairs does *not* fix
+# that: the expectation in the Elo update is computed from the pair actually
+# served, so a constant offset just makes the rating converge to "the level
+# where I score 70 %" and drags the item selection down with it — measured, and
+# it tilted practice towards the forms already mastered. If a gentler ride is
+# wanted it belongs in the scoring or as an explicit setting, not here.
+
 FIT_WIDTH = 300.0  # Elo distance at which an item's weight has dropped to 1/e
 STALENESS_WEIGHT = 1.5
 WEAKNESS_WEIGHT = 1.5
