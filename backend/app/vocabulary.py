@@ -5,6 +5,11 @@ One JSON file per source, each mapping a word type to its entries:
     {"godan_verb": [{"kanji": …, "hiragana": …, "english": …, "jlpt": …}, …], …}
 
 Files are read in path order so the result is deterministic.
+
+jisho lists a word once per JLPT level it appears in, so the raw crawl carries
+duplicates (上げる sits in N5, N4 and N2). They are collapsed on load, and the
+easiest level wins — that is where a learner meets the word first, and it is
+the level the word's starting difficulty should be derived from.
 """
 
 from __future__ import annotations
@@ -19,6 +24,17 @@ from .conjugation import WordType
 DEFAULT_VOCABULARY_DIR = Path(__file__).resolve().parents[2] / 'data' / 'vocabulary'
 
 REQUIRED_KEYS = frozenset({'kanji', 'hiragana', 'english', 'jlpt'})
+
+# Easiest first — the order decides which duplicate survives.
+JLPT_LEVELS = ('n5', 'n4', 'n3', 'n2', 'n1')
+
+
+def jlpt_rank(jlpt: str) -> int:
+    """0 for N5 … 4 for N1; anything unknown counts as hardest."""
+    try:
+        return JLPT_LEVELS.index(jlpt)
+    except ValueError:
+        return len(JLPT_LEVELS)
 
 
 @dataclass(frozen=True)
@@ -38,7 +54,7 @@ def vocabulary_dir() -> Path:
 def load_vocabulary(directory: Path | None = None) -> list[VocabularyEntry]:
     directory = directory or vocabulary_dir()
 
-    entries: list[VocabularyEntry] = []
+    best: dict[tuple[WordType, str, str], VocabularyEntry] = {}
     for path in sorted(directory.glob('*.json')):
         source = path.stem
         raw = json.loads(path.read_text(encoding='utf-8'))
@@ -52,13 +68,17 @@ def load_vocabulary(directory: Path | None = None) -> list[VocabularyEntry]:
                         f'{path.name}: {type_key} entry {item!r} is missing {sorted(missing)}'
                     )
 
-                entries.append(VocabularyEntry(
+                entry = VocabularyEntry(
                     kanji=item['kanji'],
                     hiragana=item['hiragana'],
                     english=item['english'],
                     jlpt=item['jlpt'],
                     word_type=word_type,
                     source=source,
-                ))
+                )
+                key = (entry.word_type, entry.kanji, entry.hiragana)
+                previous = best.get(key)
+                if previous is None or jlpt_rank(entry.jlpt) < jlpt_rank(previous.jlpt):
+                    best[key] = entry
 
-    return entries
+    return list(best.values())

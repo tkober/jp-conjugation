@@ -26,6 +26,27 @@ def test_vocabulary_loads() -> None:
     assert {e.word_type for e in entries} == set(WordType)
 
 
+def test_entries_are_unique_and_keep_the_easiest_level() -> None:
+    entries = load_vocabulary()
+    keys = [(e.word_type, e.kanji, e.hiragana) for e in entries]
+
+    assert len(keys) == len(set(keys))
+
+    # 上げる is listed under N5, N4 and N2 in the raw crawl.
+    ageru = next(e for e in entries if e.kanji == '上げる' and e.hiragana == 'あげる')
+    assert ageru.jlpt == 'n5'
+
+
+def test_suru_verbs_carry_exactly_one_suru() -> None:
+    doubled = [
+        f'{e.kanji} / {e.hiragana}'
+        for e in load_vocabulary()
+        if e.word_type is WordType.SURU_VERB and e.hiragana.endswith('するする')
+    ]
+
+    assert not doubled, doubled[:5]
+
+
 def test_every_entry_conjugates_in_every_applicable_form() -> None:
     gaps = []
 

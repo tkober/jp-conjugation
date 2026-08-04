@@ -49,6 +49,11 @@ def optimize_word(word) -> dict:
     }
 
 def add_suffix(word, suffix) -> dict:
+    # jisho tags 愛する, 達する & co. as suru verbs, and their slug already
+    # carries する — appending it again would yield 愛するする.
+    if word['kanji'].endswith(suffix) and word['hiragana'].endswith(suffix):
+        return word
+
     return {
         'kanji': word['kanji'] + suffix,
         'hiragana': word['hiragana'] + suffix,
