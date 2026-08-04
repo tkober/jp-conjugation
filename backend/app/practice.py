@@ -23,6 +23,7 @@ from .conjugation import (
     VERB_FORMS,
     VERB_TYPES,
     Conjugation,
+    Word,
     WordType,
 )
 from .vocabulary import VocabularyEntry, jlpt_rank
@@ -112,6 +113,13 @@ def iter_practice_items() -> list[PracticeItemSpec]:
                 items.append(PracticeItemSpec(form_key, word_type, trigger))
 
     return items
+
+
+def conjugate(word_type: WordType, kanji: str, hiragana: str, form_key: str) -> Word | None:
+    """The expected answer, computed on demand — nothing is materialised."""
+    form = forms_for(word_type)[form_key]
+
+    return form.conjugate(Word(kanji, hiragana, word_type))
 
 
 def item_base_rating(spec: PracticeItemSpec) -> float:
