@@ -12,19 +12,44 @@ Vorlage für Architektur und Betrieb ist `tkober/katakana-reading` — die
 
 `main` trägt die alte Version: Angular 13, alles im Browser, Fortschritt im
 `localStorage`, Deployment als GitHub Pages aus `docs/`. Auf `modernization`
-entsteht die neue Aufteilung. **Phase 1–3 sind fertig** (Struktur, Vokabular,
-portierte Regel-Engine, Backend mit API); Phase 4–6 stehen aus, siehe unten.
+entsteht die neue Aufteilung. **Phase 1–5 sind fertig** — die App läuft im
+Compose-Stack und ist benutzbar. Offen ist Phase 6 (Stats-Ansicht,
+Vokabelbrowser, Settings-UI).
+
+**`src/` und `docs/` stehen noch da.** Der Plan sah vor, sie mit Phase 4 zu
+löschen; das wäre verfrüht gewesen, weil die Settings-UI (Formen- und
+JLPT-Auswahl) noch nicht portiert ist. Sie fliegen mit Phase 6, wenn die
+Parität wirklich erreicht ist. Aktiv ist von beidem nichts.
 
 ## Architektur (Ziel)
 
 ```
 backend/     FastAPI + PostgreSQL (SQLAlchemy async/asyncpg), verwaltet mit uv
-frontend/    Angular 20 (standalone, signals, Router), Dockerfile → nginx
+             + Dockerfile (uv-Image python3.14, uvicorn) + tests/
+frontend/    Angular 20 (standalone, signals, Router)
+             + Dockerfile (Node 22 Build → nginx) + nginx.conf + proxy.conf.json
 data/        Vokabular als JSON (jisho.json, aus dem Crawler)
 jisho-crawler/  Holt Verben/Adjektive von jisho.org nach data/vocabulary/
-src/         ALT: die Angular-13-App, wird in Phase 4 ersetzt
-docs/        ALT: Build-Output für GitHub Pages, entfällt mit dem Deployment
+dbeaver/     Einmaliges DB-Bootstrap (Rollen, Datenbank, Default-Privileges)
+dev/initdb/  Dieselben Rollen für den lokalen Postgres-Container
+compose.yaml Lokaler Stack: Postgres + Backend + Frontend auf :8084
+src/, docs/  ALT: Angular-13-App und ihr Pages-Build, entfallen mit Phase 6
 ```
+
+Der Compose-Stack ist eine **Kette von Healthchecks**: Backend startet erst,
+wenn Postgres `pg_isready` meldet, Frontend erst, wenn das Backend
+`/api/health` beantwortet (dafür gibt es die Route). `dev/initdb` legt dieselben
+zwei Rollen an wie die Produktion — der Owner/App-Split wird also lokal
+wirklich durchlaufen und nicht nur behauptet.
+
+**Zwei Container plus Datenbank.** nginx liefert die SPA aus und proxyt `/api/`
+intern ans Backend (`API_UPSTREAM`, Default `jp-conjugation-backend:8000`) —
+dadurch ruft das Frontend die API immer *same-origin* auf, egal über welche
+Adresse man die App erreicht, und CORS spielt keine Rolle. Der Backend-Port
+muss nicht veröffentlicht werden.
+
+**Lokal Port 8084, nicht 8080**, weil dort schon der katakana-reading-Stack
+läuft; 8084 ist auch der vorgesehene Unraid-Port.
 
 ### Backend-Module (`backend/app/`)
 
@@ -44,6 +69,28 @@ docs/        ALT: Build-Output für GitHub Pages, entfällt mit dem Deployment
   Modulkonstanten: die Tests biegen die DB um, nachdem längst importiert wurde.
 - `api.py`, `main.py` — Routen und App-Setup. Keine Statics, die SPA liefert
   nginx.
+
+### Frontend (`frontend/src/app/`)
+
+- `app.component.ts` — Shell: Header mit Level/Elo/Streak-Chips (geteiltes
+  Signal in `api.service.ts`, beim Start über `/api/profile` befüllt),
+  Fortschrittsbalken zum nächsten Level, Theme-Umschalter
+  (system/hell/dunkel, in `localStorage`).
+- `practice.component.ts` — Übungsansicht mit explizitem Session-Lebenszyklus
+  (`idle` → `active` → `answered` → `ended`). Die Session startet **nicht**
+  automatisch. Countdown-Ring (SVG, `stroke-dashoffset`, r=19 in einer 44er-Box;
+  Restsekunden in der Mitte, letztes Viertel und Überzeit rot, bei Überzeit
+  zählt er als „+x,x s" hoch), Auflösung mit Herleitungskette,
+  Session-Zusammenfassung.
+- `furigana.ts` — Zerlegung fürs `<ruby>`: welcher Teil eine Lesung darüber
+  bekommt und was Okurigana ist. Portiert aus den drei Pipes der alten App.
+- `api.service.ts`, `models.ts`, `routes.ts` — HTTP, Typen, Routen.
+- Light + Dark über CSS Custom Properties in `styles.css`.
+
+**Komponenten laufen auf `OnPush`.** Aller Zustand liegt in Signals, damit
+Change Detection an Signal-Writes hängt und nicht an zone.js — sonst schlagen
+genau die Writes nicht durch, die außerhalb eines gepatchten Callbacks
+passieren (siehe wanakana unten).
 
 Das Deployment wird wie bei katakana-reading: zwei GHCR-Images (Backend, nginx
 mit der SPA), nginx proxyt `/api` same-origin ans Backend, zwei Postgres-Rollen
@@ -237,9 +284,12 @@ als „Elo kalibriert sich selbst" vermuten lässt.
 | 1 | Repo-Struktur, `jisho.ts` → `data/vocabulary/jisho.json`, Crawler umgestellt | fertig |
 | 2 | Engine-Port + Specs nach pytest + Vollständigkeitslauf | fertig |
 | 3 | Backend: Modelle, Seeding, Drei-Elo-Auswahl, `/api/*`, testcontainers | fertig |
-| 4 | Frontend Angular 20, Practice-Route mit Feature-Parität, `src/` entfällt | offen |
-| 5 | Docker/Compose/nginx/GHCR/Unraid (Frontend :8084), E2E im Container | offen |
-| 6 | Stats (Heatmap Form × Wortart), Vokabel-Browser, Settings, Mobile-Runde | offen |
+| 4 | Frontend Angular 20, Practice-Route | fertig |
+| 5 | Docker/Compose/nginx/GHCR (Frontend :8084), E2E im Container | fertig |
+| 6 | Stats (Heatmap Form × Wortart), Vokabel-Browser, Settings-UI, `src/`+`docs/` löschen | offen |
+
+Der Unraid-Stack selbst liegt in `tkober/compose-stacks-unraid` und ist noch
+nicht angelegt — Images und Bootstrap-SQL stehen dafür bereit.
 
 ## Entwicklung
 
@@ -262,6 +312,27 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
 - Postgres ≠ SQLite: `LIKE` ist case-sensitiv (die Wortsuche nutzt `ilike`),
   `correct` ist ein `boolean` (Aggregate über `count().filter(...)`, nicht
   `SUM`), und `created_at` kommt als ISO-8601 mit Offset zurück.
+- **`(ngSubmit)` ohne `FormsModule` bindet nichts.** `ngSubmit` ist ein Output
+  von `NgForm`; fehlt das Modul, hängt Angular stattdessen einen Listener auf
+  ein DOM-Event namens „ngSubmit", das nie feuert — und der Browser schickt das
+  Formular **nativ** ab, die Seite lädt neu. Deshalb steht hier `(submit)` mit
+  eigenem `preventDefault()`. Symptom war ein „Check"-Klick, der die Übung
+  kommentarlos auf den Startbildschirm zurücksetzte.
+- **wanakana schreibt das Eingabefeld aus seinem eigenen Listener um**, und
+  nicht immer im selben Task. Wer den Wert synchron im `(input)`-Handler liest,
+  sieht das Romaji, das gleich ersetzt wird. Die Übung liest deshalb verzögert
+  (`setTimeout`) und hört zusätzlich auf `keyup`. Das ist auch der Grund für
+  `OnPush`: der verzögerte Write liegt außerhalb der zone.js-Patches.
+- `frontend/nginx.conf` ist ein **envsubst-Template**: `PORT` und
+  `API_UPSTREAM` brauchen `ENV`-Defaults im Dockerfile (envsubst ersetzt nur
+  *gesetzte* Variablen — eine ungesetzte bliebe wörtlich stehen und nginx
+  startet nicht), und envsubst schreibt auch **Kommentare** um, weshalb die
+  Datei die Variablennamen im Fließtext meidet.
+- Der Angular-Dev-Server lädt bei jedem Rebuild neu und setzt damit den
+  Session-Zustand zurück. **UI im Container prüfen**, nicht auf `:4200`:
+  `docker compose up --build -d`, dann per Chrome-DevTools-MCP mit
+  `emulate viewport 360x880x3,mobile` durchgehen und pro Route
+  `document.documentElement.scrollWidth == clientWidth` gegenprüfen.
 - `WordType` ist `StrEnum` mit den **unveränderten** Werten aus der TS-Fassung
   (`godan_verb`, …), damit DB, API und Frontend dieselben Strings sprechen.
 - Formklassen sind zustandslos und liegen als Singletons in `registry.py` —
