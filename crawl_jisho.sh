@@ -1,1 +1,1 @@
-python jisho-crawler/main.py --out ./src/app/jisho.ts
+python jisho-crawler/main.py --out ./data/vocabulary/jisho.json

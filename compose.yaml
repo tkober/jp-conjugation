@@ -1,0 +1,62 @@
+# Local end-to-end stack: Postgres + backend + nginx frontend on :8084.
+#
+# 8084 rather than 8080 because the katakana-reading stack already sits there;
+# it is also the port the Unraid deployment uses.
+#
+# It mirrors the deployment down to the two Postgres roles — dev/initdb creates
+# them, so the owner/app split is exercised here and not only in production.
+services:
+  postgres:
+    image: postgres:17
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: conjugation
+      TZ: Europe/Berlin
+    volumes:
+      - conjugation-db:/var/lib/postgresql/data
+      - ./dev/initdb:/docker-entrypoint-initdb.d:ro
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d conjugation"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    restart: unless-stopped
+
+  backend:
+    build:
+      context: .
+      dockerfile: backend/Dockerfile
+    environment:
+      DB_URL: postgresql://postgres:5432/conjugation
+      DB_USER: conjugation_app
+      DB_PASSWORD: conjugation
+      DB_OWNER_USER: conjugation_owner
+      DB_OWNER_PASSWORD: conjugation
+    depends_on:
+      postgres:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD-SHELL", "python -c \"import urllib.request; urllib.request.urlopen('http://localhost:8000/api/health')\""]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: unless-stopped
+
+  frontend:
+    build: ./frontend
+    environment:
+      # The image default points at the deployment's container name; locally
+      # the backend answers to its compose service name.
+      API_UPSTREAM: backend:8000
+    depends_on:
+      backend:
+        condition: service_healthy
+    ports:
+      - "8084:80"
+    restart: unless-stopped
+
+volumes:
+  conjugation-db:

@@ -43,15 +43,20 @@ def optimize_json(words: dict) -> dict:
 def optimize_word(word) -> dict:
     return {
         'kanji': word['slug'],
-        'furigana': word['furigana'],
+        'hiragana': word['furigana'],
         'english': word['english'],
         'jlpt': word['jlpt']
     }
 
 def add_suffix(word, suffix) -> dict:
+    # jisho tags 愛する, 達する & co. as suru verbs, and their slug already
+    # carries する — appending it again would yield 愛するする.
+    if word['kanji'].endswith(suffix) and word['hiragana'].endswith(suffix):
+        return word
+
     return {
         'kanji': word['kanji'] + suffix,
-        'furigana': word['furigana'] + suffix,
+        'hiragana': word['hiragana'] + suffix,
         'english': word['english'],
         'jlpt': word['jlpt']
     }
@@ -98,7 +103,6 @@ if __name__ == '__main__':
         result[level_readable] = words
 
     optimized = optimize_json(result)
-    json_object = json.dumps(optimized, indent=4, ensure_ascii=False)
-    jisho_ts = 'export const jisho = ' + json_object
+    json_object = json.dumps(optimized, indent=2, ensure_ascii=False)
     with open(args.out, 'w', encoding='utf-8') as outfile:
-        outfile.write(jisho_ts)
+        outfile.write(json_object + '\n')
