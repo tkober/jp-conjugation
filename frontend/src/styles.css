@@ -7,12 +7,22 @@
   --border: #dcdfe6;
   --text: #1b1d21;
   --text-muted: #616671;
-  --accent: #0069c2;
-  --accent-soft: #e3f0fb;
-  --correct: #17734a;
-  --correct-soft: #e2f3ea;
-  --wrong: #b3261e;
-  --wrong-soft: #fbe6e4;
+  /* Red 800 — the accent of the original app, kept. It doubles as the "wrong"
+     colour there too; the verdict block carries 不正解 and the given → expected
+     pair, so the meaning never rests on hue alone. */
+  --accent: #c62828;
+  --accent-soft: #fbeaea;
+  --correct: #2e7d32;
+  --correct-soft: #e8f5e9;
+  --wrong: #c62828;
+  --wrong-soft: #fbeaea;
+  /* The derivation chain stays blue, exactly as in the original: red on the
+     pale-red correction block would be unreadable. */
+  --rule-accent: #008cd5;
+  /* Blue-grey, echoing the original's primary palette. Carries the chrome that
+     must NOT be red — above all the countdown ring, which needs red free to
+     mean "running out". */
+  --neutral: #546e7a;
   --shadow: 0 1px 2px rgb(16 24 40 / 6%), 0 4px 16px rgb(16 24 40 / 6%);
   --radius: 14px;
 
@@ -35,12 +45,15 @@
     --border: #333944;
     --text: #e8eaee;
     --text-muted: #a0a7b4;
-    --accent: #63b3f5;
-    --accent-soft: #16293a;
-    --correct: #6edba6;
-    --correct-soft: #143026;
-    --wrong: #ff9a90;
-    --wrong-soft: #351c1a;
+    --accent: #ef5350;
+    --accent-soft: #3a1f20;
+    --correct: #81c784;
+    --correct-soft: #1b3320;
+    --wrong: #ef5350;
+    --wrong-soft: #3a1f20;
+    --rule-accent: #4fc3f7;
+  --neutral: #90a4ae;
+    --neutral: #90a4ae;
     --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 4px 16px rgb(0 0 0 / 30%);
 
     /* Reversed: on a dark surface "more" has to run lighter, not darker.
@@ -63,12 +76,22 @@
   --border: #dcdfe6;
   --text: #1b1d21;
   --text-muted: #616671;
-  --accent: #0069c2;
-  --accent-soft: #e3f0fb;
-  --correct: #17734a;
-  --correct-soft: #e2f3ea;
-  --wrong: #b3261e;
-  --wrong-soft: #fbe6e4;
+  /* Red 800 — the accent of the original app, kept. It doubles as the "wrong"
+     colour there too; the verdict block carries 不正解 and the given → expected
+     pair, so the meaning never rests on hue alone. */
+  --accent: #c62828;
+  --accent-soft: #fbeaea;
+  --correct: #2e7d32;
+  --correct-soft: #e8f5e9;
+  --wrong: #c62828;
+  --wrong-soft: #fbeaea;
+  /* The derivation chain stays blue, exactly as in the original: red on the
+     pale-red correction block would be unreadable. */
+  --rule-accent: #008cd5;
+  /* Blue-grey, echoing the original's primary palette. Carries the chrome that
+     must NOT be red — above all the countdown ring, which needs red free to
+     mean "running out". */
+  --neutral: #546e7a;
   --shadow: 0 1px 2px rgb(16 24 40 / 6%), 0 4px 16px rgb(16 24 40 / 6%);
   /* Must be repeated here: on an OS set to dark, the media query above would
      otherwise keep the dark ramp under an explicitly light theme. */
@@ -88,12 +111,14 @@
   --border: #333944;
   --text: #e8eaee;
   --text-muted: #a0a7b4;
-  --accent: #63b3f5;
-  --accent-soft: #16293a;
-  --correct: #6edba6;
-  --correct-soft: #143026;
-  --wrong: #ff9a90;
-  --wrong-soft: #351c1a;
+  --accent: #ef5350;
+  --accent-soft: #3a1f20;
+  --correct: #81c784;
+  --correct-soft: #1b3320;
+  --wrong: #ef5350;
+  --wrong-soft: #3a1f20;
+  --rule-accent: #4fc3f7;
+  --neutral: #90a4ae;
   --shadow: 0 1px 2px rgb(0 0 0 / 40%), 0 4px 16px rgb(0 0 0 / 30%);
   --heat-0: #184f95;
   --heat-1: #256abf;
@@ -137,7 +162,10 @@ input {
   min-width: 0;
 }
 
+/* Neutral, not the accent: the accent is red, and a red halo around a green
+   "correct" field would read as a contradiction. Focus is an affordance, it
+   has no business in the right/wrong colour channel. */
 :focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--neutral);
   outline-offset: 2px;
 }

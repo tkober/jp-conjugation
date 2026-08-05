@@ -210,9 +210,11 @@ const TICK_MS = 100;
       gap: 12px;
     }
 
+    /* Plain bold, like the original. Red here would compete with the verdict
+       block and leave the whole screen one colour on a wrong answer. */
     .form {
-      font-weight: 600;
-      color: var(--accent);
+      font-weight: 700;
+      color: var(--text);
     }
 
     .ring {
@@ -231,7 +233,7 @@ const TICK_MS = 100;
     }
 
     .ring .value {
-      stroke: var(--accent);
+      stroke: var(--neutral);
       transform: rotate(-90deg);
       transform-origin: 50% 50%;
       transition: stroke-dashoffset 0.1s linear;
@@ -407,10 +409,12 @@ const TICK_MS = 100;
       color: var(--text-muted);
     }
 
+    /* Blue, not the accent: this sits inside the pale-red correction block,
+       where red on red would vanish. Same choice the original made. */
     .rule .unaltered,
     .rule .alteration {
       font-weight: 700;
-      color: var(--accent);
+      color: var(--rule-accent);
     }
 
     .summary h2 {
