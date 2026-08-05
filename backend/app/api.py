@@ -40,6 +40,10 @@ RECENT_LIMIT = 20
 WEAKEST_LIMIT = 8
 MIN_ATTEMPTS_FOR_WEAKNESS = 3
 
+# Answer lengths the settings screen previews the time budget with, so the UI
+# never has to know the formula.
+BUDGET_EXAMPLE_LENGTHS = (3, 6, 10)
+
 
 class AnswerRequest(BaseModel):
     practice_item_id: int
@@ -250,6 +254,10 @@ async def get_settings(session: Session) -> dict[str, Any]:
             'time_base_ms': list(TIME_BASE_RANGE),
             'time_per_kana_ms': list(TIME_PER_KANA_RANGE),
         },
+        'examples': [
+            {'kana': n, 'budget_ms': game.user_target_time_ms(user, n)}
+            for n in BUDGET_EXAMPLE_LENGTHS
+        ],
     }
 
 

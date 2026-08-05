@@ -12,14 +12,11 @@ Vorlage für Architektur und Betrieb ist `tkober/katakana-reading` — die
 
 `main` trägt die alte Version: Angular 13, alles im Browser, Fortschritt im
 `localStorage`, Deployment als GitHub Pages aus `docs/`. Auf `modernization`
-entsteht die neue Aufteilung. **Phase 1–5 sind fertig** — die App läuft im
-Compose-Stack und ist benutzbar. Offen ist Phase 6 (Stats-Ansicht,
-Vokabelbrowser, Settings-UI).
+ist der Umbau **komplett** — alle sechs Phasen stehen, die alte App (`src/`,
+`docs/` und ihre Angular-13-Konfiguration) ist entfernt.
 
-**`src/` und `docs/` stehen noch da.** Der Plan sah vor, sie mit Phase 4 zu
-löschen; das wäre verfrüht gewesen, weil die Settings-UI (Formen- und
-JLPT-Auswahl) noch nicht portiert ist. Sie fliegen mit Phase 6, wenn die
-Parität wirklich erreicht ist. Aktiv ist von beidem nichts.
+Offen ist nur noch das, was außerhalb dieses Repos liegt: der Unraid-Stack in
+`tkober/compose-stacks-unraid`. Images und Bootstrap-SQL sind dafür fertig.
 
 ## Architektur (Ziel)
 
@@ -33,7 +30,6 @@ jisho-crawler/  Holt Verben/Adjektive von jisho.org nach data/vocabulary/
 dbeaver/     Einmaliges DB-Bootstrap (Rollen, Datenbank, Default-Privileges)
 dev/initdb/  Dieselben Rollen für den lokalen Postgres-Container
 compose.yaml Lokaler Stack: Postgres + Backend + Frontend auf :8084
-src/, docs/  ALT: Angular-13-App und ihr Pages-Build, entfallen mit Phase 6
 ```
 
 Der Compose-Stack ist eine **Kette von Healthchecks**: Backend startet erst,
@@ -82,10 +78,33 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   Restsekunden in der Mitte, letztes Viertel und Überzeit rot, bei Überzeit
   zählt er als „+x,x s" hoch), Auflösung mit Herleitungskette,
   Session-Zusammenfassung.
+- `stats.component.ts` — KPI-Kacheln, Elo-Sparkline (SVG, eine Serie, deshalb
+  ohne Legende) und als Kernstück die **Heatmap Form × Wortart**, getrennt für
+  Adjektive und Verben, plus Chips für die neun Godan-Endungen. Kodiert wird die
+  **Fehlerquote**, nicht die Trefferquote: so sticht hervor, was Arbeit braucht,
+  statt zu verblassen. „Noch nie geübt" ist ein eigener Zustand (gestrichelte
+  Zelle) und nicht der hellste Rampenschritt — 0 % richtig und „nie probiert"
+  dürfen nicht gleich aussehen.
+- `words.component.ts` — Vokabelbrowser mit Filtern (Wortart, JLPT, Suche mit
+  Entprellung), Sortierung und Blättern zu 50.
+- `settings.component.ts` — Formen- und JLPT-Auswahl in denselben Gruppen wie
+  der alte Dialog, Zeitbudget mit zwei Reglern und Live-Vorschau, Reset mit
+  Mehrfach-Bestätigung. **Die Zeitbudget-Beispiele kommen aus
+  `/api/settings`**, damit die Formel nicht doppelt gepflegt wird.
 - `furigana.ts` — Zerlegung fürs `<ruby>`: welcher Teil eine Lesung darüber
   bekommt und was Okurigana ist. Portiert aus den drei Pipes der alten App.
 - `api.service.ts`, `models.ts`, `routes.ts` — HTTP, Typen, Routen.
 - Light + Dark über CSS Custom Properties in `styles.css`.
+
+**Die Heatmap-Rampe** ist eine sequenzielle Ein-Hue-Skala (blau) aus der
+validierten Referenzpalette des `dataviz`-Skills, Schritte 250→650. Sie steht in
+`styles.css` neben dem restlichen Theme und ist **im Dark Mode umgedreht**,
+damit „mehr" immer vom Hintergrund wegläuft. Beide Richtungen sind gegen die
+tatsächlichen Flächen dieser App validiert (`#ffffff` bzw. `#1c1f25`), nicht
+gegen die Default-Flächen des Skills — der hellste Schritt der Originalrampe
+fiel gegen Weiß mit 1,32:1 durch. Wer die Farben anfasst: den Validator erneut
+laufen lassen, nicht schätzen. Und die Bildunterschrift sagt bewusst
+„stronger", nicht „darker" — „dunkler" wäre im Dark Mode schlicht falsch.
 
 **Komponenten laufen auf `OnPush`.** Aller Zustand liegt in Signals, damit
 Change Detection an Signal-Writes hängt und nicht an zone.js — sonst schlagen
@@ -127,9 +146,11 @@ Kommentare wörtlich übernommen.
   `compose_adjective_srs_key` / `compose_verbs_srs_key`. Die Dict-Keys
   (`Verbs__TeFormAffirmative`) sind die stabilen Form-Keys für Settings und
   SRS. Dieselbe Klasse bedient Adjektive und Verben, deshalb der Präfix.
-  **Reihenfolge unverändert übernommen**, inklusive der Eigenheit, dass in
-  `VERBS__NON_PAST_FORMS` die höfliche Verneinung *vor* der höflichen Bejahung
-  steht (im Adjektiv-Pendant ist es andersherum).
+  Reihenfolge wie im Original — mit einer Ausnahme: in `VERBS__NON_PAST_FORMS`
+  stand die höfliche Verneinung vor der höflichen Bejahung, anders als in
+  jeder anderen Gruppe. Das war in der alten App unsichtbar, in der neuen
+  Settings-Liste liest es sich als Fehler, deshalb ist es begradigt. Die Keys
+  bleiben unverändert.
 
 ### Was der Port an der Vorlage geändert hat
 
@@ -286,10 +307,18 @@ als „Elo kalibriert sich selbst" vermuten lässt.
 | 3 | Backend: Modelle, Seeding, Drei-Elo-Auswahl, `/api/*`, testcontainers | fertig |
 | 4 | Frontend Angular 20, Practice-Route | fertig |
 | 5 | Docker/Compose/nginx/GHCR (Frontend :8084), E2E im Container | fertig |
-| 6 | Stats (Heatmap Form × Wortart), Vokabel-Browser, Settings-UI, `src/`+`docs/` löschen | offen |
+| 6 | Stats (Heatmap Form × Wortart), Vokabel-Browser, Settings-UI, alte App entfernt | fertig |
 
 Der Unraid-Stack selbst liegt in `tkober/compose-stacks-unraid` und ist noch
 nicht angelegt — Images und Bootstrap-SQL stehen dafür bereit.
+
+### Ideen / offen
+
+- Wort-Elo-Verlauf, Level-History
+- Export/Import des Fortschritts
+- Trefferquote-Regler (siehe die Simulation oben: der Elo-Fixpunkt liegt bei
+  ~50 %; wer es milder will, muss an die Score-Stufen, nicht an die Zielformel)
+- Alternative gültige Formen akzeptieren (ら抜き: 食べれる neben 食べられる)
 
 ## Entwicklung
 

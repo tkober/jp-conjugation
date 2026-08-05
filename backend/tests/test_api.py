@@ -138,6 +138,16 @@ def test_time_budget_is_clamped(client) -> None:
     assert body['time_base_ms'] == body['limits']['time_base_ms'][1]
 
 
+def test_settings_carry_worked_examples_of_the_time_budget(client) -> None:
+    """The UI shows the budget for real answer lengths without knowing the formula."""
+    body = client.put(
+        '/api/settings', json={'time_base_ms': 2000, 'time_per_kana_ms': 500}
+    ).json()
+
+    assert [e['kana'] for e in body['examples']] == [3, 6, 10]
+    assert [e['budget_ms'] for e in body['examples']] == [3500, 5000, 7000]
+
+
 def test_words_can_be_filtered_and_paged(client) -> None:
     body = client.get('/api/words', params={'word_type': 'godan_verb', 'limit': 5}).json()
 

@@ -42,11 +42,15 @@ ADJECTIVES__PAST_FORMS: dict[str, Conjugation] = {
     'Adjectives__PastPoliteNegative': PastPoliteNegative(),
 }
 
+# Affirmative before negative, like every other group — the TypeScript original
+# had the polite pair the other way round, which only ever showed up as a stray
+# ordering in the settings list. The keys are untouched, so no stored setting
+# and no practice item is affected.
 VERBS__NON_PAST_FORMS: dict[str, Conjugation] = {
     'Verbs__NonPastShortAffirmative': NonPastShortAffirmative(),
     'Verbs__NonPastShortNegative': NonPastShortNegative(),
-    'Verbs__NonPastPoliteNegative': NonPastPoliteNegative(),
     'Verbs__NonPastPoliteAffirmative': NonPastPoliteAffirmative(),
+    'Verbs__NonPastPoliteNegative': NonPastPoliteNegative(),
 }
 
 VERBS__PAST_FORMS: dict[str, Conjugation] = {

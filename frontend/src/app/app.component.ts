@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 
 import { ApiService } from './api.service';
 
@@ -11,7 +11,7 @@ const THEME_KEY = 'conjugation-theme';
 @Component({
   selector: 'app-root',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DecimalPipe, RouterOutlet],
+  imports: [DecimalPipe, RouterLink, RouterLinkActive, RouterOutlet],
   template: `
     <header>
       <div class="bar">
@@ -39,6 +39,12 @@ const THEME_KEY = 'conjugation-theme';
           <span [style.width.%]="profile.level_progress * 100"></span>
         </div>
       }
+
+      <nav>
+        @for (tab of tabs; track tab.path) {
+          <a [routerLink]="tab.path" routerLinkActive="active">{{ tab.label }}</a>
+        }
+      </nav>
     </header>
 
     <main>
@@ -122,15 +128,48 @@ const THEME_KEY = 'conjugation-theme';
       transition: width 0.4s ease;
     }
 
+    nav {
+      display: flex;
+      gap: 6px;
+      margin-top: 12px;
+      /* Allowed to wrap: a scaled-up system font must not widen the page. */
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      padding: 6px 12px;
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    nav a.active {
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+    }
+
     @media (max-width: 430px) {
       :host {
         padding: 0 14px 24px;
+      }
+
+      nav a {
+        padding: 6px 10px;
       }
     }
   `,
 })
 export class AppComponent {
   readonly api = inject(ApiService);
+
+  readonly tabs = [
+    { path: '/practice', label: 'Practice' },
+    { path: '/stats', label: 'Stats' },
+    { path: '/words', label: 'Words' },
+    { path: '/settings', label: 'Settings' },
+  ];
 
   private theme = signal<Theme>(readStoredTheme());
 
