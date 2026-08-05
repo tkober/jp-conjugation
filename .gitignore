@@ -47,5 +47,6 @@ __pycache__/
 .venv/
 .pytest_cache/
 
-# Backend runtime config
+# Runtime config and credentials — never committed
+.env
 backend/.env
