@@ -15,7 +15,10 @@ const THEME_KEY = 'conjugation-theme';
   template: `
     <header>
       <div class="bar">
-        <h1>活用</h1>
+        <a class="brand" routerLink="/practice">
+          <span class="brand-mark">活</span>
+          <span class="brand-name">Conjugation Trainer</span>
+        </a>
 
         <div class="chips">
           @if (api.profile(); as profile) {
@@ -74,10 +77,34 @@ const THEME_KEY = 'conjugation-theme';
       gap: 12px;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 1.25rem;
-      letter-spacing: 0.08em;
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      color: inherit;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      flex: none;
+      border-radius: 8px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 19px;
+      font-weight: 600;
+      line-height: 1;
+    }
+
+    .brand-name {
+      font-weight: 650;
+      font-size: 1.0625rem;
+      white-space: nowrap;
     }
 
     .chips {
@@ -157,6 +184,12 @@ const THEME_KEY = 'conjugation-theme';
 
       nav a {
         padding: 6px 10px;
+      }
+
+      /* The mark alone carries the identity here — the wordmark plus the chips
+         would push the row past a 360px screen. */
+      .brand-name {
+        display: none;
       }
     }
   `,

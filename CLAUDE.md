@@ -68,10 +68,13 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
 
 ### Frontend (`frontend/src/app/`)
 
-- `app.component.ts` — Shell: Header mit Level/Elo/Streak-Chips (geteiltes
+- `app.component.ts` — Shell: Marke (活 im Akzent-Quadrat plus Wortmarke, wie
+  bei katakana-reading; die Wortmarke wird unter 430px ausgeblendet, sonst
+  schiebt sie die Chips aus dem Viewport), Level/Elo/Streak-Chips (geteiltes
   Signal in `api.service.ts`, beim Start über `/api/profile` befüllt),
-  Fortschrittsbalken zum nächsten Level, Theme-Umschalter
-  (system/hell/dunkel, in `localStorage`).
+  Fortschrittsbalken zum nächsten Level, Tabs und Theme-Umschalter
+  (system/hell/dunkel, in `localStorage`). Das Favicon ist dasselbe Zeichen als
+  Inline-SVG-Data-URI in `index.html` — kein Asset, nichts synchron zu halten.
 - `practice.component.ts` — Übungsansicht mit explizitem Session-Lebenszyklus
   (`idle` → `active` → `answered` → `ended`). Die Session startet **nicht**
   automatisch. Countdown-Ring (SVG, `stroke-dashoffset`, r=19 in einer 44er-Box;
