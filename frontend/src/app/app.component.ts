@@ -177,6 +177,27 @@ const THEME_KEY = 'conjugation-theme';
       font-weight: 600;
     }
 
+    /* Same idea as in the exercise view: with the keyboard up every row of
+       chrome costs content height. The header keeps all its parts, just
+       tighter. */
+    @media (max-height: 500px) {
+      header {
+        padding-top: 8px;
+      }
+
+      .progress {
+        margin-top: 6px;
+      }
+
+      nav {
+        margin-top: 8px;
+      }
+
+      :host {
+        padding-bottom: 12px;
+      }
+    }
+
     @media (max-width: 430px) {
       :host {
         padding: 0 14px 24px;

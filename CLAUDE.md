@@ -80,7 +80,9 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   automatisch. Countdown-Ring (SVG, `stroke-dashoffset`, r=19 in einer 44er-Box;
   Restsekunden in der Mitte, letztes Viertel und Überzeit rot, bei Überzeit
   zählt er als „+x,x s" hoch), Auflösung mit Herleitungskette,
-  Session-Zusammenfassung.
+  Session-Zusammenfassung. **Der Fokus bleibt die ganze Session im
+  Eingabefeld** — auf dem Handy hängt daran die Bildschirmtastatur (siehe
+  unten).
 - `stats.component.ts` — KPI-Kacheln, Elo-Sparkline (SVG, eine Serie, deshalb
   ohne Legende) und als Kernstück die **Heatmap Form × Wortart**, getrennt für
   Adjektive und Verben, plus Chips für die neun Godan-Endungen. Kodiert wird die
@@ -377,3 +379,29 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
 - Referenzbreite ist ein 360px-Handy. Jede Flex-Zeile mit einem `<input>`
   braucht am Input `min-width: 0`; Gegenprobe pro Route:
   `document.documentElement.scrollWidth == clientWidth`.
+- **Die Bildschirmtastatur ist ein zweiter Viewport.** `index.html` setzt
+  `interactive-widget=resizes-content`: die Tastatur verkleinert damit den
+  *Layout*-Viewport statt nur den visuellen. Mit dem Standard
+  (`resizes-visual`) behält die Seite ihre volle Höhe hinter der Tastatur, der
+  Browser scrollt das fokussierte Feld sichtbar — und der sticky Header
+  verschwindet über dem sichtbaren Streifen. Zweite Referenzgröße ist deshalb
+  **360×380**: das bleibt von einem 787px-Handy übrig, wenn die Tastatur steht.
+  Die `@media (max-height: 500px)`-Blöcke in `app.component.ts` und
+  `practice.component.ts` stutzen die Übung genau darauf, damit beim Tippen ins
+  Feld gar nichts mehr zu scrollen ist.
+- **Die Tastatur geht nur für einen Fokus auf, den der Nutzer ausgelöst hat** —
+  einmal offen, darf sie zwischen zwei Übungen also nie verloren gehen. Drei
+  Dinge nähmen sie einem: `readonly` (Android schließt die Tastatur für ein
+  read-only-Feld — statt `[readOnly]` stellt `scheduleSync()` den bewerteten
+  Wert wieder her), der Fokus, den ein Button beim Tippen an sich zieht
+  (`(mousedown)` mit `preventDefault()`, der Klick kommt trotzdem), und ein
+  `focus()`, das erst nach der Antwort des Servers kommt — „Next" fokussiert
+  deshalb **synchron in der Geste**, bevor die nächste Übung überhaupt
+  angefragt ist. Das `focus()` nach dem Rendern (`afterNextRender`, sonst gibt
+  es das Feld noch gar nicht) bleibt als Netz für den Sessionstart.
+- Mit stehender Tastatur passen Aufgabe, Eingabe *und* Auflösung nicht
+  gleichzeitig auf den Schirm. Nach dem Prüfen rückt deshalb die Eingabezeile
+  unter den Header (`scrollIntoView` + `scroll-margin-top` in Höhe des
+  Headers), damit Korrektur und „Next" sich den sichtbaren Streifen teilen; die
+  nächste Übung scrollt wieder nach oben. Auf einem Schirm, auf dem alles
+  passt, tun beide Aufrufe nichts.
