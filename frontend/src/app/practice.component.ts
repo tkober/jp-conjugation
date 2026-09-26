@@ -2,7 +2,9 @@ import {
   ChangeDetectionStrategy,
   Component,
   ElementRef,
+  Injector,
   OnDestroy,
+  afterNextRender,
   computed,
   effect,
   inject,
@@ -99,7 +101,7 @@ const TICK_MS = 100;
           <!-- Native submit, not ngSubmit: that one comes from NgForm and would
                need FormsModule; without it the browser would really submit the
                form and reload the page. -->
-          <form (submit)="submit($event)">
+          <form #answerRow (submit)="submit($event)">
             <div class="row">
               <input
                 #answerInput
@@ -108,7 +110,7 @@ const TICK_MS = 100;
                 autocapitalize="off"
                 spellcheck="false"
                 placeholder="答え"
-                [readOnly]="phase() === 'answered'"
+                enterkeyhint="go"
                 [class.correct]="result()?.correct === true"
                 [class.wrong]="result()?.correct === false"
                 (input)="scheduleSync()"
@@ -117,6 +119,7 @@ const TICK_MS = 100;
               <button
                 type="submit"
                 class="primary"
+                (mousedown)="keepFocus($event)"
                 [disabled]="phase() === 'active' && !ready()"
               >
                 {{ phase() === 'answered' ? 'Next' : 'Check' }}
@@ -278,6 +281,10 @@ const TICK_MS = 100;
 
     form {
       margin-bottom: 16px;
+      /* The height of the sticky header: when the answer row is scrolled to
+         the top after a verdict, it has to stop below the header, not under
+         it. Its compact counterpart sits in the short-viewport block. */
+      scroll-margin-top: 104px;
     }
 
     .row {
@@ -446,11 +453,54 @@ const TICK_MS = 100;
       font-weight: 400;
       color: var(--text-muted);
     }
+
+    /* Keyboard up. The on-screen keyboard now shrinks the layout viewport
+       (see the interactive-widget meta in index.html), which leaves roughly
+       380px on a phone — so the exercise is trimmed to fit into it. What fits
+       does not scroll, and what does not scroll cannot jump away under the
+       finger that just tapped the field. */
+    @media (max-height: 500px) {
+      :host {
+        padding-top: 10px;
+      }
+
+      .card {
+        padding: 14px;
+        margin-bottom: 10px;
+      }
+
+      /* Only the box shrinks — the ring is drawn in viewBox units and scales
+         with it, numbers and all. */
+      .ring {
+        width: 36px;
+        height: 36px;
+      }
+
+      .word {
+        margin: 8px 0 2px;
+        font-size: 2rem;
+      }
+
+      form {
+        margin-bottom: 10px;
+        scroll-margin-top: 100px;
+      }
+
+      button.ghost {
+        padding: 8px;
+      }
+
+      .solution {
+        font-size: 1.625rem;
+      }
+    }
   `,
 })
 export class PracticeComponent implements OnDestroy {
   private api = inject(ApiService);
+  private injector = inject(Injector);
   private answerInput = viewChild<ElementRef<HTMLInputElement>>('answerInput');
+  private answerRow = viewChild<ElementRef<HTMLElement>>('answerRow');
 
   readonly radius = RING_RADIUS;
   readonly circumference = RING_CIRCUMFERENCE;
@@ -469,6 +519,9 @@ export class PracticeComponent implements OnDestroy {
   private shownAt = 0;
   private timer: ReturnType<typeof setInterval> | undefined;
   private bound: HTMLInputElement | null = null;
+  /** The graded answer, so the field can be put back after a stray keystroke
+   *  while the verdict is up — see `scheduleSync`. */
+  private submitted = '';
 
   readonly prompt = computed(() => {
     const ex = this.exercise();
@@ -538,7 +591,7 @@ export class PracticeComponent implements OnDestroy {
       this.bound = element;
       if (element) {
         wanakana.bind(element);
-        element.focus();
+        this.focusAnswer();
       }
     });
   }
@@ -577,6 +630,11 @@ export class PracticeComponent implements OnDestroy {
   submit(event: Event): void {
     event.preventDefault();
     if (this.phase() === 'answered') {
+      // Still inside the tap that triggered this: a phone opens its keyboard
+      // only for a focus that happens within the gesture, so it has to be done
+      // here and not when the next exercise arrives. This is what brings the
+      // keyboard back if it was swiped away while reading the correction.
+      this.answerInput()?.nativeElement.focus({ preventScroll: true });
       this.next();
     } else {
       this.check();
@@ -592,6 +650,7 @@ export class PracticeComponent implements OnDestroy {
 
     this.stopTimer();
     const timeMs = Math.round(performance.now() - this.shownAt);
+    this.submitted = element.value;
 
     this.api
       .answer({
@@ -603,6 +662,7 @@ export class PracticeComponent implements OnDestroy {
       .subscribe((result) => {
         this.result.set(result);
         this.phase.set('answered');
+        this.revealVerdict();
         this.answered.update((n) => n + 1);
         this.totalTime.update((t) => t + timeMs);
         if (result.correct) {
@@ -628,7 +688,21 @@ export class PracticeComponent implements OnDestroy {
    */
   scheduleSync(): void {
     setTimeout(() => {
-      const value = this.answerInput()?.nativeElement.value ?? '';
+      const element = this.answerInput()?.nativeElement;
+      if (!element) {
+        return;
+      }
+      // While the verdict is up the field stays *editable* on purpose: a
+      // `readonly` input makes Android close the on-screen keyboard, and it
+      // would not open again by itself for the next exercise. Anything typed
+      // here is simply undone instead.
+      if (this.phase() !== 'active') {
+        if (element.value !== this.submitted) {
+          element.value = this.submitted;
+        }
+        return;
+      }
+      const value = element.value;
       // Only complete syllables get converted, so a half-typed "tabet" would
       // be graded as a miss. Hold the button until the kana are done.
       const unconverted = /[a-zA-Z]/.test(value);
@@ -637,14 +711,62 @@ export class PracticeComponent implements OnDestroy {
     });
   }
 
+  /** Keep the on-screen keyboard open when the Check/Next button is tapped.
+   *
+   *  A phone only opens the keyboard for a focus the *user* caused, so once it
+   *  is up it must never be lost in between: a button takes the focus on
+   *  mousedown (which a tap also fires, right before the click), and with it
+   *  goes the keyboard. Cancelling that default leaves the focus in the field;
+   *  the click itself still happens.
+   */
+  keepFocus(event: Event): void {
+    event.preventDefault();
+  }
+
+  /** Bring the correction into view.
+   *
+   *  With the keyboard up there is no room for prompt, answer *and* verdict at
+   *  once, so the answer row moves up under the header: the correction and the
+   *  Next button then share the visible strip, and the prompt word is repeated
+   *  in the derivation chain anyway. On a screen where everything fits there is
+   *  nothing to scroll and this does nothing. */
+  private revealVerdict(): void {
+    afterNextRender(
+      () =>
+        this.answerRow()?.nativeElement.scrollIntoView({
+          block: 'start',
+          behavior: 'smooth',
+        }),
+      { injector: this.injector },
+    );
+  }
+
+  /** Put the cursor back into the answer field once the new exercise is on
+   *  screen. The field is (re)created by the very change detection run this
+   *  call belongs to, so focusing it any earlier would find nothing — that is
+   *  why it waits for the render instead of doing it inline. */
+  private focusAnswer(): void {
+    afterNextRender(
+      () => this.answerInput()?.nativeElement.focus({ preventScroll: true }),
+      { injector: this.injector },
+    );
+  }
+
   private clearInput(): void {
     const element = this.answerInput()?.nativeElement;
     if (element) {
       element.value = '';
-      element.focus();
     }
+    this.submitted = '';
     this.romajiLeft.set(false);
     this.ready.set(false);
+    this.focusAnswer();
+    // Undo the scroll the previous verdict caused — the new prompt belongs at
+    // the top, and the browser's own clamping would leave it half under the
+    // header.
+    afterNextRender(() => window.scrollTo({ top: 0, behavior: 'smooth' }), {
+      injector: this.injector,
+    });
   }
 
   private startTimer(): void {

@@ -4,7 +4,13 @@
   <meta charset="utf-8">
   <title>Conjugation Trainer</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- interactive-widget: the on-screen keyboard has to shrink the *layout*
+       viewport, not only the visual one. With the default (resizes-visual) the
+       page keeps its full height behind the keyboard, the browser scrolls the
+       focused input into view, and the sticky header disappears above the
+       visible strip — the app looked like it had jumped on every tap into the
+       answer field. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
   <meta name="color-scheme" content="light dark">
   <!-- Same mark as the header: 活 on the accent red. Inline SVG, so there is no
        asset to ship and nothing to keep in sync. -->
