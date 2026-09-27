@@ -1,11 +1,14 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Category, Polarity
 from ..hiragana import HIRAGANA
 
 
 class PotentialAffirmative(Conjugation):
 
-    title = 'Potential, affirmative'
-    settings_title = 'Affirmative'
+    title = 'Potential, positive'
+    settings_title = 'Positive'
+    category = Category.POTENTIAL
+    polarity = Polarity.AFFIRMATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         match word.word_type:

@@ -15,6 +15,7 @@ import { DecimalPipe } from '@angular/common';
 import * as wanakana from 'wanakana';
 
 import { ApiService } from './api.service';
+import { FormInstructionComponent } from './form-instruction.component';
 import { ruby } from './furigana';
 import { AnswerResult, Exercise } from './models';
 
@@ -32,7 +33,7 @@ const TICK_MS = 100;
   // by signal writes instead of by zone.js — which also covers the writes that
   // happen in a microtask, outside any patched callback.
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DecimalPipe],
+  imports: [DecimalPipe, FormInstructionComponent],
   template: `
     @switch (phase()) {
       @case ('idle') {
@@ -70,7 +71,11 @@ const TICK_MS = 100;
         @if (exercise(); as ex) {
           <section class="card prompt">
             <div class="task">
-              <span class="form">{{ ex.form_title }}</span>
+              <app-form-instruction
+                class="form"
+                [parts]="ex.instruction"
+                [mode]="ex.instruction_style"
+              />
               <svg class="ring" viewBox="0 0 44 44" aria-hidden="true">
                 <circle class="track" cx="22" cy="22" [attr.r]="radius" />
                 <circle
@@ -213,11 +218,12 @@ const TICK_MS = 100;
       gap: 12px;
     }
 
-    /* Plain bold, like the original. Red here would compete with the verdict
-       block and leave the whole screen one colour on a wrong answer. */
+    /* Chips now, not a bold title (see form-instruction.component.ts) — the
+       row can grow to four chips, so it gets the space and the ring stays
+       fixed on the right. */
     .form {
-      font-weight: 700;
-      color: var(--text);
+      flex: 1;
+      min-width: 0;
     }
 
     .ring {

@@ -1,11 +1,14 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Category, Polarity
 from ..hiragana import HIRAGANA
 
 
 class CausativeAffirmative(Conjugation):
 
-    title = 'Causative, affirmative'
-    settings_title = 'Affirmative'
+    title = 'Causative, positive'
+    settings_title = 'Positive'
+    category = Category.CAUSATIVE
+    polarity = Polarity.AFFIRMATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         match word.word_type:

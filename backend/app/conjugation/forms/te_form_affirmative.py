@@ -1,11 +1,14 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Category, Polarity
 from ..hiragana import HIRAGANA
 
 
 class TeFormAffirmative(Conjugation):
 
-    title = 'Te-Form, affirmative'
-    settings_title = 'Affirmative'
+    title = 'Te-form, positive'
+    settings_title = 'Positive'
+    category = Category.TE_FORM
+    polarity = Polarity.AFFIRMATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         match word.word_type:

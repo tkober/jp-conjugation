@@ -15,7 +15,17 @@ from sqlalchemy import case, func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from . import game
-from .conjugation import FORM_GROUPS, WordType
+from .conjugation import (
+    DEFAULT_INSTRUCTION_ORDER,
+    DEFAULT_INSTRUCTION_STYLE,
+    FORM_GROUPS,
+    INSTRUCTION_STYLES,
+    VERB_FORMS,
+    WordType,
+    dimension_catalog,
+    instruction_parts,
+    is_valid_order,
+)
 from .db import (
     DEFAULT_TIME_BASE_MS,
     DEFAULT_TIME_PER_KANA_MS,
@@ -44,6 +54,16 @@ MIN_ATTEMPTS_FOR_WEAKNESS = 3
 # never has to know the formula.
 BUDGET_EXAMPLE_LENGTHS = (3, 6, 10)
 
+# Same idea, one level up: the instruction-order preview in settings comes
+# from the server too, so the chip layout isn't duplicated in the frontend.
+# One plain form (three dimensions), one category form, one imperative — a
+# spread that exercises three and two chips alike.
+INSTRUCTION_EXAMPLE_FORMS = (
+    'Verbs__PastPoliteNegative',
+    'Verbs__CausativePassiveAffirmative',
+    'Verbs__ImperativeNegative',
+)
+
 
 class AnswerRequest(BaseModel):
     practice_item_id: int
@@ -57,6 +77,8 @@ class SettingsRequest(BaseModel):
     disabled_jlpt: list[str] | None = None
     time_base_ms: int | None = Field(default=None)
     time_per_kana_ms: int | None = Field(default=None)
+    instruction_style: str | None = None
+    instruction_order: list[str] | None = None
 
 
 class ResetRequest(BaseModel):
@@ -92,14 +114,15 @@ async def next_exercise(session: Session) -> dict[str, Any]:
 
     user = await game.get_user(session)
     kana_count = len(exercise.expected_hiragana)
+    form = forms_for(WordType(exercise.item.word_type))[exercise.item.form_key]
 
     return {
         'practice_item_id': exercise.item.id,
         'word_id': exercise.word.id,
         'form_key': exercise.item.form_key,
-        'form_title': forms_for(WordType(exercise.item.word_type))[
-            exercise.item.form_key
-        ].title,
+        'form_title': form.title,
+        'instruction': instruction_parts(form, user.instruction_order),
+        'instruction_style': user.instruction_style,
         'word_type': exercise.item.word_type,
         'trigger': exercise.item.trigger,
         'kanji': exercise.word.kanji,
@@ -246,9 +269,19 @@ async def get_settings(session: Session) -> dict[str, Any]:
         'disabled_jlpt': user.disabled_jlpt,
         'time_base_ms': user.time_base_ms,
         'time_per_kana_ms': user.time_per_kana_ms,
+        'instruction_style': user.instruction_style,
+        'instruction_order': user.instruction_order,
+        'instruction_styles': list(INSTRUCTION_STYLES),
+        'instruction_dimensions': dimension_catalog(),
+        'instruction_examples': [
+            instruction_parts(VERB_FORMS[key], user.instruction_order)
+            for key in INSTRUCTION_EXAMPLE_FORMS
+        ],
         'defaults': {
             'time_base_ms': DEFAULT_TIME_BASE_MS,
             'time_per_kana_ms': DEFAULT_TIME_PER_KANA_MS,
+            'instruction_style': DEFAULT_INSTRUCTION_STYLE,
+            'instruction_order': list(DEFAULT_INSTRUCTION_ORDER),
         },
         'limits': {
             'time_base_ms': list(TIME_BASE_RANGE),
@@ -289,6 +322,20 @@ async def put_settings(request: SettingsRequest, session: Session) -> dict[str, 
     if request.time_per_kana_ms is not None:
         low, high = TIME_PER_KANA_RANGE
         user.time_per_kana_ms = max(low, min(high, request.time_per_kana_ms))
+
+    if request.instruction_style is not None:
+        if request.instruction_style not in INSTRUCTION_STYLES:
+            raise HTTPException(status_code=400, detail='unknown instruction style')
+        user.instruction_style = request.instruction_style
+
+    if request.instruction_order is not None:
+        if not is_valid_order(request.instruction_order):
+            raise HTTPException(
+                status_code=400,
+                detail='instruction order must name each of: '
+                       'category, tense, politeness, polarity exactly once',
+            )
+        user.instruction_order = list(request.instruction_order)
 
     user.updated_at = func.now()
     await session.commit()

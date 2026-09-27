@@ -1,12 +1,15 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Category, Polarity
 from .causative_affirmative import CausativeAffirmative
 from .passive_negative import PassiveNegative
 
 
 class CausativePassiveNegative(Conjugation):
 
-    title = 'Causative-Passive, negative'
+    title = 'Causative-passive, negative'
     settings_title = 'Negative'
+    category = Category.CAUSATIVE_PASSIVE
+    polarity = Polarity.NEGATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         original_type = word.word_type

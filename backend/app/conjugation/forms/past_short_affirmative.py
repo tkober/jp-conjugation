@@ -1,11 +1,15 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Politeness, Polarity, Tense
 from .te_form_affirmative import TeFormAffirmative
 
 
 class PastShortAffirmative(Conjugation):
 
-    title = 'Past, short, affirmative'
-    settings_title = 'Short, affirmative'
+    title = 'Past, casual, positive'
+    settings_title = 'Casual, positive'
+    tense = Tense.PAST
+    politeness = Politeness.CASUAL
+    polarity = Polarity.AFFIRMATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         match word.word_type:

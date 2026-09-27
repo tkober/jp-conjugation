@@ -1,11 +1,15 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Politeness, Polarity, Tense
 from .non_past_short_negative import NonPastShortNegative
 
 
 class PastShortNegative(Conjugation):
 
-    title = 'Past, short, negative'
-    settings_title = 'Short, negative'
+    title = 'Past, casual, negative'
+    settings_title = 'Casual, negative'
+    tense = Tense.PAST
+    politeness = Politeness.CASUAL
+    polarity = Polarity.NEGATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         match word.word_type:

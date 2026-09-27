@@ -1,10 +1,14 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Politeness, Polarity, Tense
 
 
 class NonPastShortAffirmative(Conjugation):
 
-    title = 'Non-past, short, affirmative'
-    settings_title = 'Short, affirmative'
+    title = 'Present, casual, positive'
+    settings_title = 'Casual, positive'
+    tense = Tense.NON_PAST
+    politeness = Politeness.CASUAL
+    polarity = Polarity.AFFIRMATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         match word.word_type:

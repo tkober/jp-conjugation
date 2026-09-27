@@ -1,11 +1,15 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Politeness, Polarity, Tense
 from ..hiragana import HIRAGANA
 
 
 class PastPoliteAffirmative(Conjugation):
 
-    title = 'Past, polite, affirmative'
-    settings_title = 'Polite, affirmative'
+    title = 'Past, polite, positive'
+    settings_title = 'Polite, positive'
+    tense = Tense.PAST
+    politeness = Politeness.POLITE
+    polarity = Polarity.AFFIRMATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         match word.word_type:

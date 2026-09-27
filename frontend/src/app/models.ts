@@ -6,11 +6,30 @@ export interface Profile {
   best_streak: number;
 }
 
+export type InstructionDimension = 'category' | 'tense' | 'politeness' | 'polarity';
+export type InstructionStyle = 'text' | 'emoji' | 'both';
+
+export interface InstructionPart {
+  dimension: InstructionDimension;
+  value: string;
+  label: string;
+  emoji: string;
+  marked: boolean;
+}
+
+export interface InstructionDimensionInfo {
+  dimension: InstructionDimension;
+  label: string;
+  values: { value: string; label: string; emoji: string }[];
+}
+
 export interface Exercise extends Profile {
   practice_item_id: number;
   word_id: number;
   form_key: string;
   form_title: string;
+  instruction: InstructionPart[];
+  instruction_style: InstructionStyle;
   word_type: string;
   trigger: string;
   kanji: string;
@@ -72,7 +91,17 @@ export interface Settings {
   disabled_jlpt: string[];
   time_base_ms: number;
   time_per_kana_ms: number;
-  defaults: { time_base_ms: number; time_per_kana_ms: number };
+  instruction_style: InstructionStyle;
+  instruction_order: InstructionDimension[];
+  instruction_styles: InstructionStyle[];
+  instruction_dimensions: InstructionDimensionInfo[];
+  instruction_examples: InstructionPart[][];
+  defaults: {
+    time_base_ms: number;
+    time_per_kana_ms: number;
+    instruction_style: InstructionStyle;
+    instruction_order: InstructionDimension[];
+  };
   limits: { time_base_ms: [number, number]; time_per_kana_ms: [number, number] };
   examples: { kana: number; budget_ms: number }[];
 }
@@ -82,6 +111,8 @@ export interface SettingsUpdate {
   disabled_jlpt?: string[];
   time_base_ms?: number;
   time_per_kana_ms?: number;
+  instruction_style?: InstructionStyle;
+  instruction_order?: InstructionDimension[];
 }
 
 export interface ItemStat {
