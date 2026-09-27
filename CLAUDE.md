@@ -175,7 +175,9 @@ Kommentare wörtlich übernommen.
   bis zu vier **Dimensionen** (`category`, `tense`, `politeness`, `polarity`)
   statt einer Titel-Prosa wie „Non-past, short, negative": der eine
   Unterschied, der zählt, sitzt dann in seiner eigenen Chip statt hinter einem
-  gemeinsamen „-ativ"-Suffix, jede Dimension kann ein Emoji tragen, und die
+  gemeinsamen „-ativ"-Suffix, Tempus/Höflichkeit/Polarität können ein Emoji
+  tragen (die Kategorie bewusst nicht — die eigentliche Grammatik als
+  Piktogramm verwirrt mehr, als sie hilft; sie bleibt in jedem Stil Text), und die
   Reihenfolge ist eine Nutzereinstellung statt in Prosa eingefroren. Die 8
   einfachen Formen setzen `tense`/`politeness`/`polarity`, die 12 abgeleiteten
   (Te-Form, Potential, Passiv, Kausativ, Kausativ-Passiv, Imperativ) setzen

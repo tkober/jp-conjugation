@@ -22,27 +22,24 @@ import { InstructionPart, InstructionStyle } from './models';
   },
   template: `
     @for (p of parts(); track p.dimension) {
-      @switch (mode()) {
-        @case ('emoji') {
-          <span
-            class="chip emoji-only"
-            [class.marked]="p.marked"
-            [attr.data-dim]="p.dimension"
-            role="img"
-            [attr.aria-label]="p.label"
-            [attr.title]="p.label"
-          >{{ p.emoji }}</span>
-        }
-        @case ('both') {
-          <span class="chip" [class.marked]="p.marked" [attr.data-dim]="p.dimension">
-            <span aria-hidden="true">{{ p.emoji }}</span>{{ p.label }}
-          </span>
-        }
-        @default {
-          <span class="chip" [class.marked]="p.marked" [attr.data-dim]="p.dimension">
-            {{ p.label }}
-          </span>
-        }
+      <!-- No emoji (the category) or text style: always the label. -->
+      @if (!p.emoji || mode() === 'text') {
+        <span class="chip" [class.marked]="p.marked" [attr.data-dim]="p.dimension">
+          {{ p.label }}
+        </span>
+      } @else if (mode() === 'emoji') {
+        <span
+          class="chip emoji-only"
+          [class.marked]="p.marked"
+          [attr.data-dim]="p.dimension"
+          role="img"
+          [attr.aria-label]="p.label"
+          [attr.title]="p.label"
+        >{{ p.emoji }}</span>
+      } @else {
+        <span class="chip" [class.marked]="p.marked" [attr.data-dim]="p.dimension">
+          <span aria-hidden="true">{{ p.emoji }}</span>{{ p.label }}
+        </span>
       }
     }
   `,

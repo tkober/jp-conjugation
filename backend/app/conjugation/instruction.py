@@ -13,6 +13,11 @@ dimension renders as its own scannable chip, can carry an emoji so the practice
 screen reads at a glance, and the four chips can be reordered per user instead
 of being frozen into a sentence.
 
+Only tense, politeness and polarity carry an emoji. Those are binary switches
+that a pair of symbols maps cleanly (⏪/▶️, 🎩/👕, 🚫/✅); the category is the
+grammar itself, and a pictogram for "causative-passive" is one more thing to
+decode rather than one less. Category chips therefore stay text in every style.
+
 The eight plain forms (non-past/past × casual/polite × affirmative/negative)
 set ``tense``, ``politeness`` and ``polarity`` — three independent choices. The
 twelve derived forms (te-form, potential, passive, causative,
@@ -66,20 +71,20 @@ class Polarity(StrEnum):
 @dataclass(frozen=True)
 class ValueInfo:
     label: str
-    emoji: str
+    emoji: str | None
     marked: bool
 
 
-#: Emoji sequences with a variation selector (▶️, 🕹️) must keep the U+FE0F in
+#: Emoji sequences with a variation selector (▶️) must keep the U+FE0F in
 #: the literal — dropping it renders the text-style glyph on some platforms.
 VALUES: dict[Dimension, dict[str, ValueInfo]] = {
     Dimension.CATEGORY: {
-        Category.TE_FORM: ValueInfo('Te-form', '🔗', False),
-        Category.POTENTIAL: ValueInfo('Potential', '💪', False),
-        Category.PASSIVE: ValueInfo('Passive', '📥', False),
-        Category.CAUSATIVE: ValueInfo('Causative', '🕹️', False),
-        Category.CAUSATIVE_PASSIVE: ValueInfo('Causative-passive', '🕹️📥', False),
-        Category.IMPERATIVE: ValueInfo('Imperative', '📢', False),
+        Category.TE_FORM: ValueInfo('Te-form', None, False),
+        Category.POTENTIAL: ValueInfo('Potential', None, False),
+        Category.PASSIVE: ValueInfo('Passive', None, False),
+        Category.CAUSATIVE: ValueInfo('Causative', None, False),
+        Category.CAUSATIVE_PASSIVE: ValueInfo('Causative-passive', None, False),
+        Category.IMPERATIVE: ValueInfo('Imperative', None, False),
     },
     Dimension.TENSE: {
         Tense.NON_PAST: ValueInfo('Present', '▶️', False),

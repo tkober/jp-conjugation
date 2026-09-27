@@ -13,14 +13,15 @@ export interface InstructionPart {
   dimension: InstructionDimension;
   value: string;
   label: string;
-  emoji: string;
+  /** `null` for the category: grammar stays text in every style. */
+  emoji: string | null;
   marked: boolean;
 }
 
 export interface InstructionDimensionInfo {
   dimension: InstructionDimension;
   label: string;
-  values: { value: string; label: string; emoji: string }[];
+  values: { value: string; label: string; emoji: string | null }[];
 }
 
 export interface Exercise extends Profile {

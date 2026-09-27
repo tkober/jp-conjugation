@@ -42,7 +42,7 @@ def test_dimension_fingerprints_are_unique_per_word_class():
         assert len(fingerprints) == len(set(fingerprints))
 
 
-def test_every_used_value_has_a_catalog_entry_with_non_empty_label_and_emoji():
+def test_every_used_value_has_a_catalog_entry_with_label_and_emoji_only_off_category():
     for forms in (ADJECTIVE_FORMS, VERB_FORMS):
         for form in forms.values():
             for dim, value in (
@@ -55,7 +55,8 @@ def test_every_used_value_has_a_catalog_entry_with_non_empty_label_and_emoji():
                     continue
                 info = VALUES[dim][value]
                 assert info.label
-                assert info.emoji
+                # Categories are grammar, not a switch: text only (issue #3).
+                assert (info.emoji is None) == (dim == Dimension.CATEGORY)
 
 
 def test_labels_are_unique_per_dimension():
@@ -79,7 +80,7 @@ def test_causative_passive_negative_omits_tense_and_politeness():
 
     parts = instruction_parts(form, DEFAULT_INSTRUCTION_ORDER)
     assert [p['dimension'] for p in parts] == ['category', 'polarity']
-    assert parts[0]['emoji'] == '🕹️📥'
+    assert parts[0]['emoji'] is None
 
 
 def test_is_valid_order_accepts_the_two_presets():

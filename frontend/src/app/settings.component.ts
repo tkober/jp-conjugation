@@ -130,7 +130,9 @@ const TENSE_FIRST_ORDER: InstructionDimension[] = ['category', 'tense', 'politen
           <ul class="legend">
             @for (dim of s.instruction_dimensions; track dim.dimension) {
               @for (value of dim.values; track value.value) {
-                <li><span aria-hidden="true">{{ value.emoji }}</span> {{ value.label }}</li>
+                @if (value.emoji) {
+                  <li><span aria-hidden="true">{{ value.emoji }}</span> {{ value.label }}</li>
+                }
               }
             }
           </ul>
