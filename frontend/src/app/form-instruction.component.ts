@@ -82,6 +82,15 @@ import { InstructionPart, InstructionStyle } from './models';
       color: var(--surface);
     }
 
+    /* A dark fill swallows dark emoji (🎩) and mutes red ones (🚫) — the
+       emoji already differ, so an emoji-only chip marks with a heavier
+       outline instead. */
+    .chip.emoji-only.marked {
+      background: transparent;
+      border-color: var(--text);
+      box-shadow: inset 0 0 0 1px var(--text);
+    }
+
     /* The form/category chip gets the same blue used for the derivation
        chain — it is the one dimension every exercise has, so it anchors the
        row. No red: red already means "wrong" on this screen. */
