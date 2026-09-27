@@ -2,12 +2,18 @@ import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@a
 import { DecimalPipe } from '@angular/common';
 
 import { ApiService } from './api.service';
-import { Settings } from './models';
+import { FormInstructionComponent } from './form-instruction.component';
+import { InstructionDimension, InstructionStyle, Settings } from './models';
+
+/** The old, English-order preset — kept as a TS constant because the
+ *  settings screen needs it to draw the toggle even before it knows which
+ *  preset (if either) is currently active. */
+const TENSE_FIRST_ORDER: InstructionDimension[] = ['category', 'tense', 'politeness', 'polarity'];
 
 @Component({
   selector: 'app-settings',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DecimalPipe],
+  imports: [DecimalPipe, FormInstructionComponent],
   template: `
     @if (settings(); as s) {
       <section class="card">
@@ -44,6 +50,94 @@ import { Settings } from './models';
         @if (noFormsLeft()) {
           <p class="warn">At least one form has to stay on.</p>
         }
+      </section>
+
+      <section class="card">
+        <h2>Instructions</h2>
+        <p class="hint">
+          How the target form is shown during practice: one chip per property
+          instead of a title to parse.
+        </p>
+
+        <div class="options" role="radiogroup" aria-label="Chip style">
+          @for (option of s.instruction_styles; track option) {
+            <label class="toggle" [class.on]="instructionStyle() === option">
+              <input
+                type="radio"
+                name="instruction-style"
+                [checked]="instructionStyle() === option"
+                (change)="setInstructionStyle(option)"
+              />
+              {{ styleLabel(option) }}
+            </label>
+          }
+        </div>
+
+        <h3>Order</h3>
+        <p class="hint">Move a property up or down; it saves right away.</p>
+        <ol class="order-list">
+          @for (dim of instructionOrder(); track dim; let i = $index) {
+            <li>
+              <span class="order-label">{{ dimensionLabel(dim) }}</span>
+              <span class="order-buttons">
+                <button
+                  type="button"
+                  class="ghost small"
+                  [disabled]="i === 0"
+                  (click)="moveInstruction(i, -1)"
+                  aria-label="Move up"
+                >▲</button>
+                <button
+                  type="button"
+                  class="ghost small"
+                  [disabled]="i === instructionOrder().length - 1"
+                  (click)="moveInstruction(i, 1)"
+                  aria-label="Move down"
+                >▼</button>
+              </span>
+            </li>
+          }
+        </ol>
+
+        <div class="actions">
+          <button
+            type="button"
+            class="ghost"
+            [disabled]="isActiveOrder(s.defaults.instruction_order)"
+            (click)="applyOrder(s.defaults.instruction_order)"
+          >
+            Japanese build order
+          </button>
+          <button
+            type="button"
+            class="ghost"
+            [disabled]="isActiveOrder(tenseFirstOrder)"
+            (click)="applyOrder(tenseFirstOrder)"
+          >
+            Tense first
+          </button>
+        </div>
+
+        <h3>Preview</h3>
+        <div class="preview">
+          @for (example of s.instruction_examples; track $index) {
+            <app-form-instruction [parts]="example" [mode]="instructionStyle()" />
+          }
+        </div>
+
+        @if (instructionStyle() !== 'text') {
+          <h3>Legend</h3>
+          <ul class="legend">
+            @for (dim of s.instruction_dimensions; track dim.dimension) {
+              @for (value of dim.values; track value.value) {
+                @if (value.emoji) {
+                  <li><span aria-hidden="true">{{ value.emoji }}</span> {{ value.label }}</li>
+                }
+              }
+            }
+          </ul>
+        }
+        <p class="hint">Present covers present and future (non-past).</p>
       </section>
 
       <section class="card">
@@ -322,6 +416,64 @@ import { Settings } from './models';
     .danger {
       border-color: var(--wrong);
     }
+
+    .order-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      padding: 0;
+      margin: 0 0 14px;
+    }
+
+    .order-list li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: var(--surface-sunken);
+    }
+
+    .order-label {
+      font-size: 0.9375rem;
+    }
+
+    .order-buttons {
+      display: flex;
+      gap: 4px;
+    }
+
+    button.ghost.small {
+      padding: 4px 10px;
+      font-size: 0.8125rem;
+      line-height: 1;
+    }
+
+    button.ghost.small:disabled {
+      opacity: 0.35;
+      cursor: not-allowed;
+    }
+
+    .preview {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin: 4px 0 16px;
+    }
+
+    .legend {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 14px;
+      padding: 0;
+      margin: 0 0 16px;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
   `,
 })
 export class SettingsComponent {
@@ -334,6 +486,10 @@ export class SettingsComponent {
   readonly perKanaMs = signal(0);
   readonly budgetSaved = signal(false);
   readonly resetStep = signal(0);
+  readonly instructionStyle = signal<InstructionStyle>('text');
+  readonly instructionOrder = signal<InstructionDimension[]>([]);
+
+  readonly tenseFirstOrder = TENSE_FIRST_ORDER;
 
   private savedBase = 0;
   private savedPerKana = 0;
@@ -405,6 +561,40 @@ export class SettingsComponent {
     this.perKanaMs.set(settings.defaults.time_per_kana_ms);
   }
 
+  styleLabel(style: InstructionStyle): string {
+    return { text: 'Text', emoji: 'Emoji', both: 'Text + emoji' }[style];
+  }
+
+  dimensionLabel(dim: InstructionDimension): string {
+    const info = this.settings()?.instruction_dimensions.find((d) => d.dimension === dim);
+    return info?.label ?? dim;
+  }
+
+  setInstructionStyle(style: InstructionStyle): void {
+    this.instructionStyle.set(style);
+    this.api.saveSettings({ instruction_style: style }).subscribe((s) => this.apply(s));
+  }
+
+  moveInstruction(index: number, delta: number): void {
+    const order = [...this.instructionOrder()];
+    const target = index + delta;
+    if (target < 0 || target >= order.length) {
+      return;
+    }
+    [order[index], order[target]] = [order[target], order[index]];
+    this.applyOrder(order);
+  }
+
+  isActiveOrder(order: InstructionDimension[]): boolean {
+    const current = this.instructionOrder();
+    return current.length === order.length && current.every((d, i) => d === order[i]);
+  }
+
+  applyOrder(order: InstructionDimension[]): void {
+    this.instructionOrder.set(order);
+    this.api.saveSettings({ instruction_order: order }).subscribe((s) => this.apply(s));
+  }
+
   doReset(): void {
     this.api.reset().subscribe(() => {
       this.resetStep.set(3);
@@ -424,5 +614,7 @@ export class SettingsComponent {
     this.perKanaMs.set(settings.time_per_kana_ms);
     this.savedBase = settings.time_base_ms;
     this.savedPerKana = settings.time_per_kana_ms;
+    this.instructionStyle.set(settings.instruction_style);
+    this.instructionOrder.set(settings.instruction_order);
   }
 }

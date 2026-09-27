@@ -1,11 +1,14 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Category, Polarity
 from ..hiragana import HIRAGANA
 
 
 class ImperativeAffirmative(Conjugation):
 
-    title = 'Imperative, affirmative'
-    settings_title = 'Affirmative'
+    title = 'Imperative, positive'
+    settings_title = 'Positive'
+    category = Category.IMPERATIVE
+    polarity = Polarity.AFFIRMATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         match word.word_type:

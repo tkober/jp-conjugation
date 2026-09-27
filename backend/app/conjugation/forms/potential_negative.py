@@ -1,4 +1,5 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Category, Polarity
 from .non_past_short_negative import NonPastShortNegative
 from .potential_affirmative import PotentialAffirmative
 
@@ -7,6 +8,8 @@ class PotentialNegative(Conjugation):
 
     title = 'Potential, negative'
     settings_title = 'Negative'
+    category = Category.POTENTIAL
+    polarity = Polarity.NEGATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         original_type = word.word_type

@@ -14,6 +14,7 @@ ever going stale against a materialised table of 65k forms.
 
 from __future__ import annotations
 
+import json
 import logging
 from collections.abc import AsyncIterator, Callable, Iterator, Sequence
 from datetime import datetime
@@ -28,6 +29,7 @@ from sqlalchemy import (
     Index,
     Integer,
     String,
+    Text,
     UniqueConstraint,
     delete,
     func,
@@ -44,6 +46,7 @@ from sqlalchemy.ext.asyncio import (
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column
 
 from .config import app_database_url, owner_database_url
+from .conjugation import DEFAULT_INSTRUCTION_ORDER, DEFAULT_INSTRUCTION_STYLE
 from .practice import item_base_rating, iter_practice_items, trigger_of, word_base_rating
 from .vocabulary import load_vocabulary
 
@@ -53,9 +56,12 @@ START_ELO = 1000.0
 UPSERT_CHUNK = 500  # rows per INSERT ... ON CONFLICT (keeps the bind count sane)
 
 # Answering budget: base + per kana of the expected answer. Covers thinking
-# *and* typing, which is why it is tunable — a touchscreen needs more.
-DEFAULT_TIME_BASE_MS = 3000
-DEFAULT_TIME_PER_KANA_MS = 700
+# *and* typing, which is why it is tunable — a touchscreen needs more. Raised
+# ~50% over the original 3000/700 (issue #3): that budget was tight enough
+# that reading the (now clearer) instruction chips and typing on a phone
+# keyboard often ran out the clock before the answer did.
+DEFAULT_TIME_BASE_MS = 4500
+DEFAULT_TIME_PER_KANA_MS = 1000
 TIME_BASE_RANGE = (500, 15_000)
 TIME_PER_KANA_RANGE = (200, 5_000)
 
@@ -85,6 +91,15 @@ class UserProfile(Base):
     )
     disabled_jlpt: Mapped[list[str]] = mapped_column(
         JSONB, nullable=False, server_default=text("'[]'::jsonb")
+    )
+    # How the instruction chips look (see conjugation/instruction.py) and in
+    # which order the four dimensions are shown.
+    instruction_style: Mapped[str] = mapped_column(
+        Text, nullable=False, server_default=DEFAULT_INSTRUCTION_STYLE
+    )
+    instruction_order: Mapped[list[str]] = mapped_column(
+        JSONB, nullable=False,
+        server_default=text(f"'{json.dumps(list(DEFAULT_INSTRUCTION_ORDER))}'::jsonb"),
     )
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, server_default=func.now()
@@ -204,7 +219,17 @@ async def migrate_schema(connection: Any) -> None:
     ``create_all`` only creates missing *tables*, never missing columns, so
     every new column needs a line here. Idempotent, runs on every boot.
     """
-    statements: Sequence[str] = ()
+    instruction_order_json = json.dumps(list(DEFAULT_INSTRUCTION_ORDER))
+    statements: Sequence[str] = (
+        f"ALTER TABLE user_profile ADD COLUMN IF NOT EXISTS instruction_style "
+        f"text NOT NULL DEFAULT '{DEFAULT_INSTRUCTION_STYLE}'",
+        f"ALTER TABLE user_profile ADD COLUMN IF NOT EXISTS instruction_order "
+        f"jsonb NOT NULL DEFAULT '{instruction_order_json}'::jsonb",
+        f"ALTER TABLE user_profile ALTER COLUMN time_base_ms "
+        f"SET DEFAULT {DEFAULT_TIME_BASE_MS}",
+        f"ALTER TABLE user_profile ALTER COLUMN time_per_kana_ms "
+        f"SET DEFAULT {DEFAULT_TIME_PER_KANA_MS}",
+    )
 
     for statement in statements:
         await connection.execute(text(statement))

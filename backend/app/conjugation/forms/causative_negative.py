@@ -1,4 +1,5 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Category, Polarity
 from .causative_affirmative import CausativeAffirmative
 from .non_past_short_negative import NonPastShortNegative
 
@@ -7,6 +8,8 @@ class CausativeNegative(Conjugation):
 
     title = 'Causative, negative'
     settings_title = 'Negative'
+    category = Category.CAUSATIVE
+    polarity = Polarity.NEGATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         original_type = word.word_type

@@ -56,6 +56,15 @@ def test_next_exercise_does_not_leak_the_answer(client) -> None:
     assert 'solution' not in serialized
 
 
+def test_next_exercise_carries_the_instruction(client) -> None:
+    body = client.get('/api/exercise/next').json()
+
+    assert body['instruction']
+    for part in body['instruction']:
+        assert {'dimension', 'value', 'label', 'emoji', 'marked'} <= part.keys()
+    assert body['instruction_style'] == 'text'
+
+
 def test_answering_correctly(client) -> None:
     body = solve(client)
 
@@ -106,7 +115,7 @@ def test_stats_after_a_few_answers(client) -> None:
 def test_settings_roundtrip(client) -> None:
     body = client.get('/api/settings').json()
     assert body['disabled_forms'] == []
-    assert [g['title'] for g in body['groups']][:2] == ['Non-past', 'Past']
+    assert [g['title'] for g in body['groups']][:2] == ['Present', 'Past']
 
     updated = client.put('/api/settings', json={
         'disabled_jlpt': ['n1', 'n2'],
@@ -136,6 +145,64 @@ def test_time_budget_is_clamped(client) -> None:
     body = client.put('/api/settings', json={'time_base_ms': 10_000_000}).json()
 
     assert body['time_base_ms'] == body['limits']['time_base_ms'][1]
+
+
+def test_fresh_profile_uses_the_new_time_budget_defaults(client) -> None:
+    body = client.get('/api/settings').json()
+
+    assert body['time_base_ms'] == 4500
+    assert body['time_per_kana_ms'] == 1000
+    assert body['defaults']['time_base_ms'] == 4500
+    assert body['defaults']['time_per_kana_ms'] == 1000
+    assert body['time_base_ms'] == body['defaults']['time_base_ms']
+    assert body['time_per_kana_ms'] == body['defaults']['time_per_kana_ms']
+
+
+def test_instruction_order_changes_which_chips_a_forced_exercise_shows(client) -> None:
+    body = client.get('/api/settings').json()
+    every_form = [f['form_key'] for g in body['groups'] for f in g['forms']]
+    disable = [k for k in every_form if k != 'Verbs__PastPoliteNegative']
+    assert client.put('/api/settings', json={'disabled_forms': disable}).status_code == 200
+
+    assert client.put(
+        '/api/settings', json={'instruction_order': ['category', 'tense', 'politeness', 'polarity']}
+    ).status_code == 200
+    exercise = client.get('/api/exercise/next').json()
+    assert [p['dimension'] for p in exercise['instruction']] == ['tense', 'politeness', 'polarity']
+
+    assert client.put(
+        '/api/settings', json={'instruction_order': ['category', 'politeness', 'polarity', 'tense']}
+    ).status_code == 200
+    exercise = client.get('/api/exercise/next').json()
+    assert [p['dimension'] for p in exercise['instruction']] == ['politeness', 'polarity', 'tense']
+
+
+def test_settings_roundtrip_for_instruction_style(client) -> None:
+    updated = client.put('/api/settings', json={'instruction_style': 'emoji'}).json()
+
+    assert updated['instruction_style'] == 'emoji'
+    assert client.get('/api/settings').json()['instruction_style'] == 'emoji'
+    assert updated['instruction_styles'] == ['text', 'emoji', 'both']
+    assert updated['defaults']['instruction_style'] == 'text'
+    assert updated['defaults']['instruction_order'] == ['category', 'politeness', 'polarity', 'tense']
+    assert isinstance(updated['instruction_examples'], list)
+    assert all(isinstance(example, list) for example in updated['instruction_examples'])
+
+
+def test_settings_reject_unknown_instruction_style(client) -> None:
+    response = client.put('/api/settings', json={'instruction_style': 'fancy'})
+
+    assert response.status_code == 400
+
+
+def test_settings_reject_broken_instruction_orders(client) -> None:
+    assert client.put(
+        '/api/settings', json={'instruction_order': ['tense']}
+    ).status_code == 400
+    assert client.put(
+        '/api/settings',
+        json={'instruction_order': ['category', 'tense', 'tense', 'polarity']},
+    ).status_code == 400
 
 
 def test_settings_carry_worked_examples_of_the_time_budget(client) -> None:

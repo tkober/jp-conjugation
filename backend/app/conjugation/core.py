@@ -4,6 +4,8 @@ from abc import ABC, abstractmethod
 from dataclasses import dataclass
 from enum import StrEnum
 
+from .instruction import Category, Politeness, Polarity, Tense
+
 
 class WordType(StrEnum):
     ICHIDAN_VERB = 'ichidan_verb'
@@ -118,6 +120,15 @@ class Conjugation(ABC):
 
     title: str
     settings_title: str
+
+    # The four instruction dimensions (see instruction.py). Plain forms set
+    # tense/politeness and leave category unset; derived forms do the
+    # opposite — a category never varies in tense or politeness, so nothing
+    # would show there anyway. Every form sets polarity.
+    category: Category | None = None
+    tense: Tense | None = None
+    politeness: Politeness | None = None
+    polarity: Polarity
 
     @abstractmethod
     def conjugate(self, word: Word) -> Word | None:

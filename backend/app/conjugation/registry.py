@@ -114,15 +114,15 @@ ALL_FORMS: dict[str, Conjugation] = {
 
 #: The grouping the settings screen shows, in display order.
 FORM_GROUPS: tuple[tuple[str, str, dict[str, Conjugation]], ...] = (
-    ('Adjectives', 'Non-past', ADJECTIVES__NON_PAST_FORMS),
+    ('Adjectives', 'Present', ADJECTIVES__NON_PAST_FORMS),
     ('Adjectives', 'Past', ADJECTIVES__PAST_FORMS),
-    ('Verbs', 'Non-past', VERBS__NON_PAST_FORMS),
+    ('Verbs', 'Present', VERBS__NON_PAST_FORMS),
     ('Verbs', 'Past', VERBS__PAST_FORMS),
-    ('Verbs', 'Te-Form', VERBS__TE_FORM_FORMS),
+    ('Verbs', 'Te-form', VERBS__TE_FORM_FORMS),
     ('Verbs', 'Potential', VERBS__POTENTIAL_FORMS),
     ('Verbs', 'Passive', VERBS__PASSIVE_FORMS),
     ('Verbs', 'Causative', VERBS__CAUSATIVE_FORMS),
-    ('Verbs', 'Causative-Passive', VERBS__CAUSATIVE_PASSIVE_FORMS),
+    ('Verbs', 'Causative-passive', VERBS__CAUSATIVE_PASSIVE_FORMS),
     ('Verbs', 'Imperative', VERBS__IMPERATIVE_FORMS),
 )
 

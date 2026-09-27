@@ -1,7 +1,8 @@
-from sqlalchemy import func, select
+from sqlalchemy import func, select, text
+from sqlalchemy.ext.asyncio import create_async_engine
 
-from app import db
-from app.conjugation import WordType
+from app import config, db
+from app.conjugation import DEFAULT_INSTRUCTION_ORDER, DEFAULT_INSTRUCTION_STYLE, WordType
 from app.db import Attempt, PracticeItem, UserProfile, Word
 from app.practice import GODAN_ENDINGS, NO_TRIGGER
 
@@ -134,3 +135,30 @@ async def test_reset_clears_progress_but_keeps_vocabulary(session) -> None:
     assert await session.scalar(select(func.count()).select_from(Word)) > 3000
     # The time budget describes the input device, not the progress.
     assert user.time_base_ms == 4321
+
+
+async def test_migrate_schema_adds_the_instruction_columns_idempotently(session) -> None:
+    """Simulates a deploy where the columns are new: drop them, boot again."""
+    user = await session.get(UserProfile, 1)
+    user.time_base_ms = 4321
+    await session.commit()
+
+    engine = create_async_engine(config.owner_database_url())
+    try:
+        async with engine.begin() as connection:
+            await connection.execute(text(
+                'ALTER TABLE user_profile DROP COLUMN instruction_style, '
+                'DROP COLUMN instruction_order'
+            ))
+    finally:
+        await engine.dispose()
+
+    await db.init_db()
+
+    async with db.get_sessionmaker()() as fresh_session:
+        reloaded = await fresh_session.get(UserProfile, 1)
+        assert reloaded.instruction_style == DEFAULT_INSTRUCTION_STYLE
+        assert reloaded.instruction_order == list(DEFAULT_INSTRUCTION_ORDER)
+        # The migration only adds columns — an existing, already-customised
+        # value is untouched.
+        assert reloaded.time_base_ms == 4321

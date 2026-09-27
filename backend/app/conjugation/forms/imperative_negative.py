@@ -1,10 +1,13 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Category, Polarity
 
 
 class ImperativeNegative(Conjugation):
 
     title = 'Imperative, negative'
     settings_title = 'Negative'
+    category = Category.IMPERATIVE
+    polarity = Polarity.NEGATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         match word.word_type:

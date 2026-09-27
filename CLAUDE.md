@@ -8,12 +8,11 @@ den Stand pro Regel *und* pro Vokabel und wählt die nächste Aufgabe adaptiv.
 Vorlage für Architektur und Betrieb ist `tkober/katakana-reading` — die
 übertragbaren Muster stehen dort in CLAUDE.md unter „Übertragbare Muster".
 
-## Stand: Umbau läuft (Branch `modernization`)
+## Stand
 
-`main` trägt die alte Version: Angular 13, alles im Browser, Fortschritt im
-`localStorage`, Deployment als GitHub Pages aus `docs/`. Auf `modernization`
-ist der Umbau **komplett** — alle sechs Phasen stehen, die alte App (`src/`,
-`docs/` und ihre Angular-13-Konfiguration) ist entfernt.
+Der Umbau auf Angular 20 + FastAPI/Postgres ist **komplett** und auf `main`
+gemerged — die alte Angular-13-Version (`src/`, `docs/`, GitHub-Pages-Deploy)
+ist entfernt. Feature-Arbeit läuft seither auf Branch + PR gegen `main`.
 
 Offen ist nur noch das, was außerhalb dieses Repos liegt: der Unraid-Stack in
 `tkober/compose-stacks-unraid`. Images und Bootstrap-SQL sind dafür fertig.
@@ -82,7 +81,15 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   zählt er als „+x,x s" hoch), Auflösung mit Herleitungskette,
   Session-Zusammenfassung. **Der Fokus bleibt die ganze Session im
   Eingabefeld** — auf dem Handy hängt daran die Bildschirmtastatur (siehe
-  unten).
+  unten). Die Zielform zeigt `form-instruction.component.ts` statt eines
+  Titels (siehe unten, „Anweisungen als Chips").
+- `form-instruction.component.ts` — rendert `Exercise.instruction` (eine
+  geordnete Liste strukturierter Teile, siehe
+  `backend/app/conjugation/instruction.py`) als Chip-Reihe, in einem von drei
+  Stilen (`text` / `emoji` / `both`, Signal-Input `mode`). **Nicht `style`
+  nennen** — das kollidiert mit der eingebauten DOM-Eigenschaft, die Angular
+  auf jedem Host-Element schon bindet, ein gleichnamiger Component-Input bekäme
+  nie einen Wert.
 - `stats.component.ts` — KPI-Kacheln, Elo-Sparkline (SVG, eine Serie, deshalb
   ohne Legende) und als Kernstück die **Heatmap Form × Wortart**, getrennt für
   Adjektive und Verben, plus Chips für die neun Godan-Endungen. Kodiert wird die
@@ -95,7 +102,14 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
 - `settings.component.ts` — Formen- und JLPT-Auswahl in denselben Gruppen wie
   der alte Dialog, Zeitbudget mit zwei Reglern und Live-Vorschau, Reset mit
   Mehrfach-Bestätigung. **Die Zeitbudget-Beispiele kommen aus
-  `/api/settings`**, damit die Formel nicht doppelt gepflegt wird.
+  `/api/settings`**, damit die Formel nicht doppelt gepflegt wird. Dazwischen
+  die Karte „Instructions": Chip-Stil (Text/Emoji/Text + Emoji, sofort
+  gespeichert), die Reihenfolge der vier Dimensionen als Liste mit ▲/▼ (Swap in
+  einer Kopie, sofort gespeichert), zwei Presets („Japanese build order" =
+  `defaults.instruction_order`, „Tense first" als TS-Konstante — der jeweils
+  aktive ist deaktiviert), eine Live-Vorschau aus `instruction_examples` und,
+  außer im Text-Stil, eine Legende aus `instruction_dimensions`. Auch hier
+  kommt die Vorschau vom Server, aus demselben Grund wie beim Zeitbudget.
 - `furigana.ts` — Zerlegung fürs `<ruby>`: welcher Teil eine Lesung darüber
   bekommt und was Okurigana ist. Portiert aus den drei Pipes der alten App.
 - `api.service.ts`, `models.ts`, `routes.ts` — HTTP, Typen, Routen.
@@ -145,8 +159,9 @@ Kommentare wörtlich übernommen.
   **Lücke wie im Original:** für 'y', 'w', 'nn' und 'j' gibt es keine
   `HiraganaGroup`. Verben enden nie auf diesen Kana, deshalb fällt es nicht
   auf — ein Zugriff würde einen `KeyError` werfen.
-- `forms/` — 20 Formklassen, jede mit `title`, `settings_title` und
-  `conjugate(word) -> Word | None`.
+- `forms/` — 20 Formklassen, jede mit `title`, `settings_title`,
+  `conjugate(word) -> Word | None` und (seit #3) vier Klassenattributen
+  `category`/`tense`/`politeness`/`polarity` — siehe `instruction.py`.
 - `registry.py` — die Formgruppen, wie der Settings-Dialog sie zeigt, plus
   `compose_adjective_srs_key` / `compose_verbs_srs_key`. Die Dict-Keys
   (`Verbs__TeFormAffirmative`) sind die stabilen Form-Keys für Settings und
@@ -156,6 +171,23 @@ Kommentare wörtlich übernommen.
   jeder anderen Gruppe. Das war in der alten App unsichtbar, in der neuen
   Settings-Liste liest es sich als Fehler, deshalb ist es begradigt. Die Keys
   bleiben unverändert.
+- `instruction.py` (#3, „Verwirrende Anweisungen") — zerlegt eine Zielform in
+  bis zu vier **Dimensionen** (`category`, `tense`, `politeness`, `polarity`)
+  statt einer Titel-Prosa wie „Non-past, short, negative": der eine
+  Unterschied, der zählt, sitzt dann in seiner eigenen Chip statt hinter einem
+  gemeinsamen „-ativ"-Suffix, Tempus/Höflichkeit/Polarität können ein Emoji
+  tragen (die Kategorie bewusst nicht — die eigentliche Grammatik als
+  Piktogramm verwirrt mehr, als sie hilft; sie bleibt in jedem Stil Text), und die
+  Reihenfolge ist eine Nutzereinstellung statt in Prosa eingefroren. Die 8
+  einfachen Formen setzen `tense`/`politeness`/`polarity`, die 12 abgeleiteten
+  (Te-Form, Potential, Passiv, Kausativ, Kausativ-Passiv, Imperativ) setzen
+  `category` statt `tense`/`politeness` — die beiden variieren innerhalb einer
+  Kategorie ohnehin nie, eine Chip dafür würde nur immer dasselbe wiederholen.
+  `instruction_parts(form, order)` baut die Chips in der gegebenen
+  Dimensionsreihenfolge, `is_valid_order()` prüft eine vom User gewählte
+  Reihenfolge (genau die vier Dimensionen, je einmal), `dimension_catalog()`
+  liefert die Legende für die Settings-Seite. `core.py` importiert die Enums
+  von hier, nicht umgekehrt — `instruction.py` weiß nichts von `Conjugation`.
 
 ### Was der Port an der Vorlage geändert hat
 
@@ -171,10 +203,11 @@ Kommentare wörtlich übernommen.
 ## Tests (`backend/tests/`)
 
 ```bash
-cd backend && uv run pytest        # 354 Tests
+cd backend && uv run pytest        # 370 Tests
 ```
 
-Die Konjugationstests (290) brauchen nichts weiter. Die übrigen starten sich
+Die Konjugationstests (290) und `test_instruction.py` (8, s.u.) brauchen
+nichts weiter. Die übrigen starten sich
 per testcontainers selbst ein `postgres:17-alpine` → **Docker muss laufen**.
 `TEST_DB_URL=…` zeigt stattdessen auf eine vorhandene Datenbank. Owner und App
 sind in den Tests derselbe Superuser: der Rechte-Split ist ein
@@ -190,6 +223,12 @@ Deployment-Thema und wird vom Compose-Stack abgedeckt.
 - `conjugation/test_vocabulary.py` — der Gegenpart: jede Vokabel in jeder
   anwendbaren Form. Ein `None` hieße, die App hätte eine Aufgabe ohne Lösung.
   Aktuell 64.916 Konjugationen, keine Lücke.
+- `test_instruction.py` — Dimensionen ohne DB: jede Form setzt `polarity` und
+  entweder `category` oder `tense`+`politeness` (nie beides), die
+  Dimensions-Fingerabdrücke sind pro Wortklasse eindeutig, jeder benutzte Wert
+  hat einen `VALUES`-Eintrag, `instruction_parts()` liefert die Chips in der
+  gewünschten Reihenfolge, `is_valid_order()` prüft die Presets und lehnt
+  kaputte Reihenfolgen ab.
 - `test_answer.py` — Normalisierung und Stamm/Endung-Split, ohne DB.
 - `test_game.py` — die Rating-Mathematik, ohne DB.
 - `test_db.py` — Seeding, Idempotenz, Rating-Verschiebung bei geändertem
@@ -376,6 +415,17 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
 - Kein Test-Runner fürs Frontend (wie in der Vorlage) — bei einer
   Single-User-App mehr Gerüst als Nutzen. Die Fachlogik liegt ohnehin im
   Backend, und genau die ist getestet.
+- **Ein Component-Input darf nicht `style` heißen.** Angular bindet auf jedem
+  Host-Element schon die eingebaute DOM-Eigenschaft `style`; ein gleichnamiger
+  `input()` bekommt dadurch nie einen Wert, ohne dass es einen Fehler gibt.
+  `form-instruction.component.ts` nennt seinen Stil-Input deshalb `mode`.
+- Der Zeitbudget-Default stieg mit #3 von 3000+700/Kana auf 4500+1000/Kana
+  (~50 %) — nicht wegen der Formel, sondern weil die alte Vorgabe knapp genug
+  war, dass Lesen der (jetzt klareren) Anweisungs-Chips plus Tippen auf einer
+  Handytastatur die Uhr oft vor der Antwort ablaufen ließ. Bereits gespeicherte
+  Werte werden **nicht** migriert — `migrate_schema()` setzt nur den
+  Spalten-`DEFAULT` für künftige Zeilen; „Auf Standard zurücksetzen" in den
+  Einstellungen liefert die neuen Werte.
 - Referenzbreite ist ein 360px-Handy. Jede Flex-Zeile mit einem `<input>`
   braucht am Input `min-width: 0`; Gegenprobe pro Route:
   `document.documentElement.scrollWidth == clientWidth`.

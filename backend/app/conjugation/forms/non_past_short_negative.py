@@ -1,11 +1,15 @@
 from ..core import Conjugation, Word, WordType
+from ..instruction import Politeness, Polarity, Tense
 from ..hiragana import HIRAGANA
 
 
 class NonPastShortNegative(Conjugation):
 
-    title = 'Non-past, short, negative'
-    settings_title = 'Short, negative'
+    title = 'Present, casual, negative'
+    settings_title = 'Casual, negative'
+    tense = Tense.NON_PAST
+    politeness = Politeness.CASUAL
+    polarity = Polarity.NEGATIVE
 
     def conjugate(self, word: Word) -> Word | None:
         match word.word_type:
