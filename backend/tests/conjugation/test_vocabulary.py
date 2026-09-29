@@ -5,6 +5,8 @@ right, this one checks that no rule silently gives up. A form returning None
 here means the app would have an exercise it cannot solve.
 """
 
+import re
+
 from app.conjugation import (
     ADJECTIVE_FORMS,
     ADJECTIVE_TYPES,
@@ -57,6 +59,23 @@ def test_every_entry_conjugates_in_every_applicable_form() -> None:
                 gaps.append(f'{form_key}: {entry.kanji} / {entry.hiragana}')
 
     assert not gaps, f'{len(gaps)} conjugations returned None, first: {gaps[:5]}'
+
+
+def test_no_entry_carries_jishos_homograph_slug_suffix() -> None:
+    """Issue #5: jisho disambiguates homographs by appending "-1", "-2", …
+
+    to the slug (上手-1/うわて next to 上手/じょうず). The crawler strips that
+    before writing ``data/vocabulary/jisho.json``, so no loaded kanji or
+    hiragana should ever contain a digit again — this guards against a future
+    re-crawl reintroducing it silently.
+    """
+    offenders = [
+        f'{e.word_type.value}: {e.kanji} / {e.hiragana}'
+        for e in load_vocabulary()
+        if re.search(r'-\d+', e.kanji) or re.search(r'-\d+', e.hiragana)
+    ]
+
+    assert not offenders, offenders[:5]
 
 
 def test_conjugation_never_shortens_a_word_to_nothing() -> None:

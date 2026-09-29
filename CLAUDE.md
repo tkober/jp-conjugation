@@ -56,10 +56,14 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
 - `game.py` — Elo, Auswahl, `submit_answer`. Bekommt die `AsyncSession`
   durchgereicht, wie in der Vorlage.
 - `db.py` — ORM-Modelle, Engines (lazy, `reset_engines()` für Tests und
-  Shutdown), `init_db()` mit `create_all` + `migrate_schema()` + Seeding.
+  Shutdown), `init_db()` mit `create_all` + `migrate_schema()` +
+  `migrate_data()` + Seeding.
   **`create_all` legt nur fehlende Tabellen an, keine Spalten** — neue Spalten
   brauchen eine Zeile in `migrate_schema()` (`ADD COLUMN IF NOT EXISTS`,
-  idempotent, läuft bei jedem Boot).
+  idempotent, läuft bei jedem Boot). `migrate_data()` ist das Pendant für
+  Datenkorrekturen statt Spalten — aktuell die einmalige Umbenennung der
+  Jisho-Homograph-Zeilen (#5, siehe „Vokabular" unten), idempotent und bei
+  jedem Boot direkt nach `migrate_schema()`.
 - `config.py` — Env-Konfiguration. Die URLs sind **Funktionen**, keine
   Modulkonstanten: die Tests biegen die DB um, nachdem längst importiert wurde.
 - `api.py`, `main.py` — Routen und App-Setup. Keine Statics, die SPA liefert
@@ -203,7 +207,7 @@ Kommentare wörtlich übernommen.
 ## Tests (`backend/tests/`)
 
 ```bash
-cd backend && uv run pytest        # 370 Tests
+cd backend && uv run pytest        # 372 Tests
 ```
 
 Die Konjugationstests (290) und `test_instruction.py` (8, s.u.) brauchen
@@ -232,7 +236,8 @@ Deployment-Thema und wird vom Compose-Stack abgedeckt.
 - `test_answer.py` — Normalisierung und Stamm/Endung-Split, ohne DB.
 - `test_game.py` — die Rating-Mathematik, ohne DB.
 - `test_db.py` — Seeding, Idempotenz, Rating-Verschiebung bei geändertem
-  base_rating, Pruning mit Historienschutz, Reset.
+  base_rating, Pruning mit Historienschutz, Reset, die Jisho-Homograph-
+  Umbenennung aus `migrate_data()` (#5).
 - `test_selection.py` — Auswahl und Antwort Ende-zu-Ende gegen die DB.
 - `test_api.py` — die Routen über den `TestClient`, der die Lifespan mitfährt
   (also auch Schema und Seeding).
@@ -276,6 +281,17 @@ Default `<repo>/data/vocabulary`) in Pfad-Reihenfolge und prüft die Pflichtkeys
 Geprüfte Datenannahmen (alle erfüllt): suru-Verben enden auf する in Kanji
 *und* Kana, kuru ist ausschließlich 来る/くる, Ichidan endet auf る, Godan auf
 der う-Reihe, i-Adjektive auf い.
+
+**Jishos Homograph-Suffix (#5, „Falsches Word").** Jisho unterscheidet
+Homographe, indem es an den Slug „-1", „-2", … hängt (上手-1/うわて neben
+上手/じょうず). `jisho-crawler/main.py` speicherte den Slug früher
+unverändert als `kanji` — die Praxis zeigte dann z. B. „下手-2じゃない" statt
+„下手じゃない". `optimize_word()` schneidet das Suffix jetzt ab
+(`re.sub(r'-\d+$', ...)`, `add_suffix()` hängt する an den bereinigten Slug),
+`data/vocabulary/jisho.json` ist neu geschrieben (40 betroffene Einträge), ein
+Test in `test_vocabulary.py` bewacht, dass kein geladener Eintrag wieder
+Ziffern trägt, und `db.migrate_data()` benennt bereits gesäte, ggf. beantwortete
+Zeilen in Produktion in-place um, statt sie über Seeding+Pruning zu ersetzen.
 
 **Offen: 96 Einträge tragen Katakana in der Lesung** (バテる, サボる,
 コピーする, テストする …). Die Konjugation stimmt — das letzte Kana ist
