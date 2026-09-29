@@ -86,7 +86,11 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   Session-Zusammenfassung. **Der Fokus bleibt die ganze Session im
   Eingabefeld** — auf dem Handy hängt daran die Bildschirmtastatur (siehe
   unten). Die Zielform zeigt `form-instruction.component.ts` statt eines
-  Titels (siehe unten, „Anweisungen als Chips").
+  Titels (siehe unten, „Anweisungen als Chips"). Die Auflösung nennt seit #6
+  auch die abgefragte Grammatik (`.grammar`, z. B. „Godan verb (ぐ) · Te-form,
+  positive") — bei beiden Ausgängen, richtig wie falsch, direkt unter der
+  正解/不正解-Headline. Die Wortart-Titel kommen aus `word-types.ts`
+  (`wordTypeTitle()`), geteilt mit `stats.component.ts`.
 - `form-instruction.component.ts` — rendert `Exercise.instruction` (eine
   geordnete Liste strukturierter Teile, siehe
   `backend/app/conjugation/instruction.py`) als Chip-Reihe, in einem von drei

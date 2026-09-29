@@ -3,6 +3,7 @@ import { DecimalPipe, PercentPipe } from '@angular/common';
 
 import { ApiService } from './api.service';
 import { ItemStat, Stats } from './models';
+import { TYPE_TITLES, wordTypeLabel, wordTypeTitle } from './word-types';
 
 /** A heatmap cell: one (form × word type) pair, or one godan ending. */
 interface Cell {
@@ -23,24 +24,6 @@ interface HeatRow {
 
 const VERB_TYPES = ['ichidan_verb', 'godan_verb', 'suru_verb', 'kuru_verb'];
 const ADJECTIVE_TYPES = ['i_adjective', 'na_adjective'];
-
-const TYPE_LABELS: Record<string, string> = {
-  ichidan_verb: '一段',
-  godan_verb: '五段',
-  suru_verb: 'する',
-  kuru_verb: '来る',
-  i_adjective: 'い',
-  na_adjective: 'な',
-};
-
-const TYPE_TITLES: Record<string, string> = {
-  ichidan_verb: 'Ichidan verb',
-  godan_verb: 'Godan verb',
-  suru_verb: 'Suru verb',
-  kuru_verb: 'Kuru verb',
-  i_adjective: 'I-adjective',
-  na_adjective: 'Na-adjective',
-};
 
 // Miss rate, so the cells that need work are the ones that stand out.
 const HEAT_BOUNDS = [0.1, 0.25, 0.45, 0.7];
@@ -513,11 +496,11 @@ export class StatsComponent {
   }
 
   typeLabel(type: string): string {
-    return TYPE_LABELS[type] ?? type;
+    return wordTypeLabel(type);
   }
 
   typeTitle(type: string): string {
-    return TYPE_TITLES[type] ?? type;
+    return wordTypeTitle(type);
   }
 
   cellTitle(rowTitle: string, cell: Cell): string {
