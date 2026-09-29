@@ -137,6 +137,68 @@ async def test_reset_clears_progress_but_keeps_vocabulary(session) -> None:
     assert user.time_base_ms == 4321
 
 
+async def test_migrate_data_renames_jisho_homograph_suffixed_rows(session) -> None:
+    """Issue #5: a row seeded from the old, un-stripped jisho slug ("下手-2")
+
+    must be renamed to the clean kanji in place — not replaced by a fresh
+    row — so its id, rating and attempt history survive. Starting from the
+    already-seeded clean "下手" row and renaming it back to "下手-2"
+    reproduces the pre-fix production state: only the stale row exists, no
+    clean counterpart yet.
+    """
+    stale = await session.scalar(
+        select(Word).where(Word.word_type == WordType.NA_ADJECTIVE.value, Word.kanji == '下手')
+    )
+    assert stale is not None
+    stale_id = stale.id
+    stale.kanji = '下手-2'
+    stale.times_served = 7
+    stale.times_correct = 3
+    await session.commit()
+
+    item = await session.scalar(select(PracticeItem).limit(1))
+    session.add(Attempt(
+        word_id=stale_id,
+        practice_item_id=item.id,
+        given='へたじゃない',
+        expected='へたじゃない',
+        correct=True,
+        stem_correct=True,
+        ending_correct=True,
+        time_ms=1500,
+        elo_before=1000.0,
+        elo_after=1010.0,
+    ))
+    await session.commit()
+
+    await db.init_db()
+
+    async with db.get_sessionmaker()() as fresh_session:
+        renamed = await fresh_session.get(Word, stale_id)
+        assert renamed.kanji == '下手'
+        # times_served/times_correct aren't touched by the upsert, so the
+        # rename (not a delete + insert) is what keeps them intact.
+        assert renamed.times_served == 7
+        assert renamed.times_correct == 3
+
+        rows = list((await fresh_session.execute(
+            select(Word).where(
+                Word.word_type == WordType.NA_ADJECTIVE.value, Word.hiragana == 'へた'
+            )
+        )).scalars())
+        assert [r.id for r in rows] == [stale_id]
+
+    # Idempotent: nothing left to rename, running it again changes nothing.
+    await db.init_db()
+    async with db.get_sessionmaker()() as fresh_session:
+        rows = list((await fresh_session.execute(
+            select(Word).where(
+                Word.word_type == WordType.NA_ADJECTIVE.value, Word.hiragana == 'へた'
+            )
+        )).scalars())
+        assert [r.id for r in rows] == [stale_id]
+
+
 async def test_migrate_schema_adds_the_instruction_columns_idempotently(session) -> None:
     """Simulates a deploy where the columns are new: drop them, boot again."""
     user = await session.get(UserProfile, 1)

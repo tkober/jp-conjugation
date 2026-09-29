@@ -235,6 +235,37 @@ async def migrate_schema(connection: Any) -> None:
         await connection.execute(text(statement))
 
 
+async def migrate_data(connection: Any) -> None:
+    """One-off data fixups, as opposed to :func:`migrate_schema`'s columns.
+
+    Issue #5: `jisho-crawler` used to store jisho's *slug* as ``kanji``
+    verbatim, and jisho disambiguates homographs by appending "-1", "-2", …
+    to the slug (上手-1/うわて next to 上手/じょうず). ~40 words in
+    ``data/vocabulary/jisho.json`` carried such a suffix; the crawler and the
+    data file are now fixed, but rows seeded from the old data are already
+    sitting in production, some with attempts against them. Without this,
+    they would never go away: `_prune` in `seed_words` keeps any row that has
+    an attempt, so the broken "下手-2" row would linger forever next to the
+    freshly seeded, clean "下手" row instead of being replaced by it.
+
+    This renames the row *in place* (same id) rather than letting seeding
+    insert a new clean row and prune drop the old one, so the id, rating and
+    attempt history survive under the corrected kanji. The `NOT EXISTS` guard
+    skips a rename that would collide with a clean row that already exists
+    (unique constraint on word_type/kanji/hiragana) — in that unlikely case
+    the ordinary prune in `seed_words` cleans up the leftover instead.
+    Idempotent: once renamed, a row no longer matches the `WHERE` clause.
+    """
+    await connection.execute(text(
+        "UPDATE words w SET kanji = regexp_replace(w.kanji, '-[0-9]+', '') "
+        "WHERE w.kanji ~ '-[0-9]+' AND NOT EXISTS ("
+        "  SELECT 1 FROM words o WHERE o.word_type = w.word_type "
+        "  AND o.hiragana = w.hiragana "
+        "  AND o.kanji = regexp_replace(w.kanji, '-[0-9]+', '')"
+        ")"
+    ))
+
+
 async def init_db() -> None:
     """Create the schema and refresh the seeded data, as the owner role."""
     engine = create_async_engine(owner_database_url())
@@ -242,6 +273,7 @@ async def init_db() -> None:
         async with engine.begin() as connection:
             await connection.run_sync(Base.metadata.create_all)
             await migrate_schema(connection)
+            await migrate_data(connection)
 
         async with async_sessionmaker(engine, expire_on_commit=False)() as session:
             await ensure_user(session)

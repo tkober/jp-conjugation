@@ -1,5 +1,6 @@
 import json
 import argparse
+import re
 
 
 from jisho.api import ApiClient, JlptLevel
@@ -41,8 +42,12 @@ def optimize_json(words: dict) -> dict:
 
 
 def optimize_word(word) -> dict:
+    # jisho disambiguates homographs by appending "-1", "-2", … to the slug
+    # (e.g. 上手-1/うわて next to 上手/じょうず). That numbering is a jisho
+    # implementation detail, not part of the word, so it is stripped here.
+    kanji = re.sub(r'-\d+$', '', word['slug'])
     return {
-        'kanji': word['slug'],
+        'kanji': kanji,
         'hiragana': word['furigana'],
         'english': word['english'],
         'jlpt': word['jlpt']
