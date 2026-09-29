@@ -18,6 +18,7 @@ import { ApiService } from './api.service';
 import { FormInstructionComponent } from './form-instruction.component';
 import { ruby } from './furigana';
 import { AnswerResult, Exercise } from './models';
+import { wordTypeTitle } from './word-types';
 
 /** A session is explicit: nothing runs until it is started, and the summary
  *  only means something because it has a beginning and an end. */
@@ -139,8 +140,10 @@ const TICK_MS = 100;
             <section class="card verdict" [class.ok]="r.correct">
               @if (r.correct) {
                 <p class="headline">正解 <i>{{ r.fast ? 'fast' : '' }}</i></p>
+                <p class="grammar">{{ grammarLine() }}</p>
               } @else {
                 <p class="headline">不正解</p>
+                <p class="grammar">{{ grammarLine() }}</p>
                 <p class="solution">
                   @if (solution(); as s) {
                     @if (s.base) {
@@ -371,6 +374,15 @@ const TICK_MS = 100;
       margin-left: 6px;
     }
 
+    /* Which grammar was asked, shown for a correct answer too (#6) — mirrors
+       .partial/.elo below it: muted and small, not competing with the
+       headline or the solution. */
+    .grammar {
+      margin: 4px 0 0;
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
     .solution {
       margin: 10px 0 0;
       font-size: 2rem;
@@ -499,6 +511,10 @@ const TICK_MS = 100;
       .solution {
         font-size: 1.625rem;
       }
+
+      .grammar {
+        margin: 2px 0 0;
+      }
     }
   `,
 })
@@ -569,6 +585,22 @@ export class PracticeComponent implements OnDestroy {
   );
 
   readonly eloDelta = computed(() => (this.api.profile()?.elo ?? 0) - this.startElo);
+
+  /** "I-adjective · Present, casual, negative" — which grammar was actually
+   *  asked, shown under the verdict for both a hit and a miss (#6). For a
+   *  godan verb the trigger is appended: the SRS item is form × word type ×
+   *  trigger, and the ending is exactly what the rule hinges on. */
+  readonly grammarLine = computed(() => {
+    const ex = this.exercise();
+    if (!ex) {
+      return '';
+    }
+    const type =
+      ex.word_type === 'godan_verb' && ex.trigger !== '-'
+        ? `${wordTypeTitle(ex.word_type)} (${ex.trigger})`
+        : wordTypeTitle(ex.word_type);
+    return `${type} · ${ex.form_title}`;
+  });
 
   /** Which half of a wrong answer was right — the useful part of a miss. */
   readonly partial = computed(() => {
