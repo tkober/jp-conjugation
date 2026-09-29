@@ -86,7 +86,13 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   auch die abgefragte Grammatik (`.grammar`, z. B. „Godan verb (ぐ) · Te-form,
   positive") — bei beiden Ausgängen, richtig wie falsch, direkt unter der
   正解/不正解-Headline. Die Wortart-Titel kommen aus `word-types.ts`
-  (`wordTypeTitle()`), geteilt mit `stats.component.ts`.
+  (`wordTypeTitle()`), geteilt mit `stats.component.ts`. Seit #7 verlinkt die
+  Auflösung zusätzlich, in einer Zeile mit dem Elo-Delta, auf den
+  jisho.org-Eintrag des Worts (Kanji + Leerzeichen + Lesung im Suchpfad — das
+  setzt bei Jisho auch bei Homographen und suru-Verben den exakten Eintrag an
+  erste Stelle). Der Link öffnet in einem neuen Tab und nimmt per
+  `(mousedown)="keepFocus($event)"` dem Eingabefeld nicht den Fokus, genau wie
+  Check/Next.
 - `form-instruction.component.ts` — rendert `Exercise.instruction` (eine
   geordnete Liste strukturierter Teile, siehe
   `backend/app/conjugation/instruction.py`) als Chip-Reihe, in einem von drei

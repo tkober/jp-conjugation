@@ -158,9 +158,19 @@ const TICK_MS = 100;
                 }
               }
 
-              <p class="elo" [class.up]="r.elo.delta > 0" [class.down]="r.elo.delta < 0">
-                {{ r.elo.delta > 0 ? '+' : '' }}{{ r.elo.delta | number: '1.0-1' }} Elo
-              </p>
+              <div class="elo-row">
+                <p class="elo" [class.up]="r.elo.delta > 0" [class.down]="r.elo.delta < 0">
+                  {{ r.elo.delta > 0 ? '+' : '' }}{{ r.elo.delta | number: '1.0-1' }} Elo
+                </p>
+                <a
+                  class="jisho"
+                  [href]="jishoUrl()"
+                  target="_blank"
+                  rel="noopener"
+                  (mousedown)="keepFocus($event)"
+                  >Jisho ↗</a
+                >
+              </div>
 
               @if (r.transformations.length) {
                 <div class="rule">
@@ -400,10 +410,34 @@ const TICK_MS = 100;
       color: var(--text-muted);
     }
 
-    .elo {
+    /* Elo delta and the Jisho link share one row — the link costs no extra
+       line that way. */
+    .elo-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 8px;
       margin: 10px 0 0;
+    }
+
+    .elo {
+      margin: 0;
       font-size: 0.875rem;
       color: var(--text-muted);
+    }
+
+    /* Blue like the derivation chain accent below (--rule-accent) — reads as
+       a link in both themes without doubling as --accent, which is also the
+       "wrong answer" red here. */
+    .jisho {
+      font-size: 0.875rem;
+      color: var(--rule-accent);
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .jisho:hover {
+      text-decoration: underline;
     }
 
     .up {
@@ -600,6 +634,18 @@ export class PracticeComponent implements OnDestroy {
         ? `${wordTypeTitle(ex.word_type)} (${ex.trigger})`
         : wordTypeTitle(ex.word_type);
     return `${type} · ${ex.form_title}`;
+  });
+
+  /** Link to the word's jisho.org entry (#7). Kanji + reading, not kanji
+   *  alone: tested against jisho's search, that combination puts the exact
+   *  dictionary entry first even for homographs (上手 うわて → 上手-1, 下手
+   *  へた → 下手-2) and suru verbs (勉強する べんきょうする → 勉強). */
+  readonly jishoUrl = computed(() => {
+    const ex = this.exercise();
+    if (!ex) {
+      return '';
+    }
+    return `https://jisho.org/search/${encodeURIComponent(`${ex.kanji} ${ex.hiragana}`)}`;
   });
 
   /** Which half of a wrong answer was right — the useful part of a miss. */
