@@ -1,6 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { PracticeComponent } from './practice.component';
+import { RulesComponent } from './rules.component';
 import { SettingsComponent } from './settings.component';
 import { StatsComponent } from './stats.component';
 import { WordsComponent } from './words.component';
@@ -12,6 +13,8 @@ export const routes: Routes = [
     component: PracticeComponent,
     title: 'Practice · Conjugation Trainer',
   },
+  { path: 'rules', component: RulesComponent, title: 'Rules · Conjugation Trainer' },
+  { path: 'rules/:form', component: RulesComponent, title: 'Rules · Conjugation Trainer' },
   { path: 'stats', component: StatsComponent, title: 'Stats · Conjugation Trainer' },
   { path: 'words', component: WordsComponent, title: 'Words · Conjugation Trainer' },
   {

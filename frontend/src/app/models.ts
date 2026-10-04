@@ -175,3 +175,39 @@ export interface WordsResponse {
   offset: number;
   words: WordRow[];
 }
+
+export interface RuleRow {
+  word_type: string;
+  trigger: string;
+  /** One of the engine's special cases (行く, 呉れる, 良い) — only listed where
+   *  it actually breaks the regular rule. */
+  exception: boolean;
+  /** The kana the rule replaces; '' means "append" (and with an empty
+   *  replacement too, "unchanged"). */
+  ending: string;
+  replacement: string;
+  example: {
+    kanji: string;
+    hiragana: string;
+    english: string;
+    result_kanji: string;
+    result_hiragana: string;
+  };
+  transformations: Transformation[];
+}
+
+export interface RuleForm extends FormOption {
+  rules: RuleRow[];
+}
+
+export interface RuleGroup {
+  category: string;
+  title: string;
+  summary: string;
+  build: string;
+  forms: RuleForm[];
+}
+
+export interface RulesResponse {
+  groups: RuleGroup[];
+}

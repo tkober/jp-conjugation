@@ -39,6 +39,7 @@ from .db import (
     reset_all,
 )
 from .practice import forms_for
+from .rules import rules_catalog
 from .vocabulary import JLPT_LEVELS
 
 router = APIRouter(prefix='/api')
@@ -244,6 +245,11 @@ async def stats(session: Session) -> dict[str, Any]:
             for r in recent
         ],
     }
+
+
+@router.get('/rules')
+async def rules() -> dict[str, Any]:
+    return {'groups': rules_catalog()}
 
 
 @router.get('/settings')
