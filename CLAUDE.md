@@ -53,6 +53,17 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
 - `practice.py` — was ein Übungsitem ist (Form × Wortart × Trigger) und wie
   schwer es startet, plus `conjugate()` als einziger Einstieg in die Engine.
 - `answer.py` — Normalisierung und Stamm/Endung-Split der Antwort.
+- `rules.py` (#11, „Rules Section") — der Nachschlageteil: pro Settings-Gruppe
+  ein handgeschriebener Absatz (`GROUP_TEXTS`: wofür die Form steht, wie sie
+  gebaut wird), pro Form eine Regeltabelle. **Die Tabellen sind nicht
+  handgeschrieben**: jede Zeile konjugiert ein Beispielwort (`SAMPLES`, dieselben
+  Wörter wie `tests/conjugation/cases.py`) mit der Engine und liest die Regel
+  am Ergebnis ab (`rule_of()`: Stamm nach Wortart abschneiden, `う → わない`;
+  bleibt die Endung stehen, wird ein Suffix daraus, `+ な`; unverändert ist
+  `('', '')`). So kann die Referenz nie von dem abweichen, was die Übung als
+  richtig wertet. Die Sonderfälle der Engine (行く, 呉れる, 良い) bekommen nur
+  dort eine eigene Zeile, wo die reguläre Regel sie falsch vorhersagen würde.
+  Ausgeliefert über `/api/rules`, statisch, ohne DB.
 - `game.py` — Elo, Auswahl, `submit_answer`. Bekommt die `AsyncSession`
   durchgereicht, wie in der Vorlage.
 - `db.py` — ORM-Modelle, Engines (lazy, `reset_engines()` für Tests und
@@ -111,6 +122,15 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   statt zu verblassen. „Noch nie geübt" ist ein eigener Zustand (gestrichelte
   Zelle) und nicht der hellste Rampenschritt — 0 % richtig und „nie probiert"
   dürfen nicht gleich aussehen.
+- `rules.component.ts` (#11) — Tab „Rules": Gruppen-Chips (Adjectives /
+  Verbs), darunter Erklärung und ein Segment-Umschalter für die Formen der
+  Gruppe, dann die Regeltabelle pro Wortart. Die gewählte Form steht in der URL
+  (`/rules/:form`, Links mit `replaceUrl`), ohne Parameter Te-Form positiv.
+  Muster und Beispiel teilen sich eine Zeile, solange beide passen; die
+  Herleitungskette (gleiches Styling wie in der Auflösung) erscheint nur bei
+  zusammengesetzten Formen — bei einem Schritt sagt sie nichts, was das Muster
+  nicht schon sagt. Mit fünf Tabs werden die Tabs unter 430px enger und
+  kleiner, damit sie bei 360px in eine Zeile passen.
 - `words.component.ts` — Vokabelbrowser mit Filtern (Wortart, JLPT, Suche mit
   Entprellung), Sortierung und Blättern zu 50.
 - `settings.component.ts` — Formen- und JLPT-Auswahl in denselben Gruppen wie
@@ -217,11 +237,11 @@ Kommentare wörtlich übernommen.
 ## Tests (`backend/tests/`)
 
 ```bash
-cd backend && uv run pytest        # 372 Tests
+cd backend && uv run pytest        # 645 Tests
 ```
 
-Die Konjugationstests (290) und `test_instruction.py` (8, s.u.) brauchen
-nichts weiter. Die übrigen starten sich
+Die Konjugationstests, `test_instruction.py` und `test_rules.py` (s.u.)
+brauchen nichts weiter. Die übrigen starten sich
 per testcontainers selbst ein `postgres:17-alpine` → **Docker muss laufen**.
 `TEST_DB_URL=…` zeigt stattdessen auf eine vorhandene Datenbank. Owner und App
 sind in den Tests derselbe Superuser: der Rechte-Split ist ein
@@ -243,6 +263,9 @@ Deployment-Thema und wird vom Compose-Stack abgedeckt.
   hat einen `VALUES`-Eintrag, `instruction_parts()` liefert die Chips in der
   gewünschten Reihenfolge, `is_valid_order()` prüft die Presets und lehnt
   kaputte Reihenfolgen ab.
+- `test_rules.py` — die Regeltabellen ohne DB: jede Gruppe hat Text, jede
+  Zeile reproduziert ihr Beispiel aus Endung + Ersatz, jede Godan-Endung hat ein
+  Beispiel, Ausnahmen erscheinen genau dort, wo sie die Regel brechen.
 - `test_answer.py` — Normalisierung und Stamm/Endung-Split, ohne DB.
 - `test_game.py` — die Rating-Mathematik, ohne DB.
 - `test_db.py` — Seeding, Idempotenz, Rating-Verschiebung bei geändertem

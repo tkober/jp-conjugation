@@ -203,8 +203,14 @@ const THEME_KEY = 'conjugation-theme';
         padding: 0 14px 24px;
       }
 
+      /* Five tabs have to fit one row on a 360px screen. */
+      nav {
+        gap: 2px;
+      }
+
       nav a {
-        padding: 6px 10px;
+        padding: 6px 8px;
+        font-size: 0.8125rem;
       }
 
       /* The mark alone carries the identity here — the wordmark plus the chips
@@ -220,6 +226,7 @@ export class AppComponent {
 
   readonly tabs = [
     { path: '/practice', label: 'Practice' },
+    { path: '/rules', label: 'Rules' },
     { path: '/stats', label: 'Stats' },
     { path: '/words', label: 'Words' },
     { path: '/settings', label: 'Settings' },

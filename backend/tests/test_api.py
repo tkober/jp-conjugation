@@ -236,3 +236,14 @@ def test_reset_needs_the_confirmation(client) -> None:
     body = client.get('/api/stats').json()
     assert body['attempts'] == 0
     assert body['elo'] == 1000.0
+
+
+def test_rules_cover_every_settings_form(client) -> None:
+    body = client.get('/api/rules').json()
+
+    form_keys = [f['form_key'] for g in body['groups'] for f in g['forms']]
+    settings_keys = [
+        f['form_key'] for g in client.get('/api/settings').json()['groups'] for f in g['forms']
+    ]
+    assert form_keys == settings_keys
+    assert all(f['rules'] for g in body['groups'] for f in g['forms'])

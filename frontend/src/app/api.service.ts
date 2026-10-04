@@ -7,6 +7,7 @@ import {
   AnswerResult,
   Exercise,
   Profile,
+  RulesResponse,
   Settings,
   SettingsUpdate,
   Stats,
@@ -66,6 +67,10 @@ export class ApiService {
         }),
       ),
     );
+  }
+
+  rules(): Observable<RulesResponse> {
+    return this.http.get<RulesResponse>('/api/rules');
   }
 
   settings(): Observable<Settings> {
