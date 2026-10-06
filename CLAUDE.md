@@ -487,6 +487,15 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
   Specs liegen neben der Quelle (`*.spec.ts`), `tsconfig.spec.json` nimmt sie
   auf, `tsconfig.app.json` schließt sie von `ng build` aus. `frontend-ci.yml`
   baut und testet jeden PR, der `frontend/**` ändert.
+- **Japanisch braucht eine explizite Schrift im Font-Stack** (#13). Ohne sie
+  greift Chrome unter Windows auf Yu Gothic zurück (bei `lang="en"` auch auf
+  eine chinesische Schrift), und die wirkt bei normaler Strichstärke dünn und
+  drahtig. `styles.css` nennt deshalb nach den Latin-Systemschriften Hiragino
+  (macOS/iOS bleiben unverändert) und dann `Noto Sans JP Variable`. Die kommt
+  aus `@fontsource-variable/noto-sans-jp`, ist in `angular.json` unter
+  `styles` eingebunden und wird mit der App ausgeliefert, ohne Google Fonts.
+  Die 124 Teil-Fonts haben `unicode-range`s, ein Browser lädt also nur, was
+  die Seite braucht.
 - **Ein Component-Input darf nicht `style` heißen.** Angular bindet auf jedem
   Host-Element schon die eingebaute DOM-Eigenschaft `style`; ein gleichnamiger
   `input()` bekommt dadurch nie einen Wert, ohne dass es einen Fehler gibt.
