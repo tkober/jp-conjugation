@@ -1,0 +1,81 @@
+<section class="card">
+  <h2>Where it still slips</h2>
+  <!-- Not "darker": the ramp is reversed in dark mode so that "more"
+       always runs away from the background. "Stronger" holds either way. -->
+  <p class="hint">
+    Share of wrong answers per rule. The stronger the colour, the more
+    misses — the faint cells are the ones that sit.
+  </p>
+
+  <div class="legend">
+    <span class="legend-label">miss rate</span>
+    @for (label of heatLabels; track label; let i = $index) {
+      <span class="legend-step"><i [class]="'heat heat-' + i"></i>{{ label }}</span>
+    }
+    <span class="legend-step"><i class="heat heat-none"></i>unpractised</span>
+  </div>
+
+  @for (block of blocks(); track block.title) {
+    <h3>{{ block.title }}</h3>
+    <div class="grid-scroll">
+      <table class="heat-table">
+        <thead>
+          <tr>
+            <th class="corner"></th>
+            @for (type of block.types; track type) {
+              <th [title]="typeTitle(type)">{{ typeLabel(type) }}</th>
+            }
+          </tr>
+        </thead>
+        <tbody>
+          @for (row of block.rows; track row.formKey) {
+            <tr>
+              <th class="row-label" [title]="row.title">{{ row.title }}</th>
+              @for (cell of row.cells; track cell.key) {
+                <td>
+                  <button
+                    type="button"
+                    [class]="'heat heat-' + (cell.heat < 0 ? 'none' : cell.heat)"
+                    [title]="cellTitle(row.title, cell)"
+                    (click)="selected.set(cell)"
+                    (mouseenter)="selected.set(cell)"
+                  ></button>
+                </td>
+              }
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+  }
+
+  <h3>Godan endings</h3>
+  <div class="chips">
+    @for (cell of triggers(); track cell.key) {
+      <button
+        type="button"
+        class="chip-cell"
+        [title]="cellTitle('Godan ' + cell.label, cell)"
+        (click)="selected.set(cell)"
+        (mouseenter)="selected.set(cell)"
+      >
+        <i [class]="'heat heat-' + (cell.heat < 0 ? 'none' : cell.heat)"></i>
+        {{ cell.label }}
+      </button>
+    }
+  </div>
+
+  <p class="readout">
+    @if (selected(); as cell) {
+      <b>{{ cell.label }}</b>
+      @if (cell.attempts) {
+        — {{ cell.correct }}/{{ cell.attempts }} correct
+        ({{ (cell.accuracy ?? 0) | percent: '1.0-0' }})
+      } @else {
+        — not practised yet
+      }
+    } @else {
+      Pick a cell to see its numbers.
+    }
+  </p>
+</section>
