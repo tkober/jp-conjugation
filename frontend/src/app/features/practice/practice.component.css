@@ -31,46 +31,6 @@
   min-width: 0;
 }
 
-.ring {
-  width: 44px;
-  height: 44px;
-  flex: none;
-}
-
-.ring circle {
-  fill: none;
-  stroke-width: 3;
-}
-
-.ring .track {
-  stroke: var(--surface-sunken);
-}
-
-.ring .value {
-  stroke: var(--neutral);
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
-  transition: stroke-dashoffset 0.1s linear;
-}
-
-/* Only the stroke may turn red — filling the circle would swallow the
-   number sitting inside it. */
-.ring .value.low {
-  stroke: var(--wrong);
-}
-
-.ring text {
-  fill: var(--text-muted);
-  font-size: 12px;
-  text-anchor: middle;
-  dominant-baseline: central;
-  stroke: none;
-}
-
-.ring text.low {
-  fill: var(--wrong);
-}
-
 .word {
   margin: 18px 0 4px;
   font-size: 2.5rem;
@@ -141,156 +101,6 @@ button.ghost {
   color: var(--text-muted);
 }
 
-.verdict {
-  margin-top: 16px;
-  background: var(--wrong-soft);
-  border-color: transparent;
-}
-
-.verdict.ok {
-  background: var(--correct-soft);
-}
-
-.headline {
-  margin: 0;
-  font-weight: 700;
-  color: var(--wrong);
-}
-
-.verdict.ok .headline {
-  color: var(--correct);
-}
-
-.headline i {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 0.8125rem;
-  color: var(--text-muted);
-  margin-left: 6px;
-}
-
-/* Which grammar was asked, shown for a correct answer too (#6) — mirrors
-   .partial/.elo below it: muted and small, not competing with the
-   headline or the solution. */
-.grammar {
-  margin: 4px 0 0;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-.solution {
-  margin: 10px 0 0;
-  font-size: 2rem;
-  line-height: 1.6;
-}
-
-.solution rt {
-  font-size: 0.4em;
-  color: var(--text-muted);
-}
-
-.partial {
-  margin: 6px 0 0;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-/* Elo delta and the Jisho link share one row — the link costs no extra
-   line that way. */
-.elo-row {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-  gap: 8px;
-  margin: 10px 0 0;
-}
-
-.elo {
-  margin: 0;
-  font-size: 0.875rem;
-  color: var(--text-muted);
-}
-
-/* Blue like the derivation chain accent below (--rule-accent) — reads as
-   a link in both themes without doubling as --accent, which is also the
-   "wrong answer" red here. */
-.jisho {
-  font-size: 0.875rem;
-  color: var(--rule-accent);
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.jisho:hover {
-  text-decoration: underline;
-}
-
-.up {
-  color: var(--correct);
-}
-
-.down {
-  color: var(--wrong);
-}
-
-.rule {
-  margin-top: 14px;
-  padding-top: 12px;
-  border-top: 1px solid var(--border);
-  font-size: 1.0625rem;
-  /* The chain can outgrow a narrow screen; let it scroll on its own. */
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.rule .altered {
-  text-decoration: line-through;
-  color: var(--text-muted);
-}
-
-.rule .operation {
-  margin: 0 0.5rem;
-  color: var(--text-muted);
-}
-
-/* Blue, not the accent: this sits inside the pale-red correction block,
-   where red on red would vanish. Same choice the original made. */
-.rule .unaltered,
-.rule .alteration {
-  font-weight: 700;
-  color: var(--rule-accent);
-}
-
-.summary h2 {
-  margin: 0 0 14px;
-  font-size: 1.125rem;
-}
-
-.summary dl {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
-  margin: 0 0 18px;
-}
-
-.summary dt {
-  color: var(--text-muted);
-  font-size: 0.8125rem;
-}
-
-.summary dd {
-  margin: 2px 0 0;
-  font-size: 1.375rem;
-  font-weight: 600;
-}
-
-.summary dd i {
-  font-style: normal;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: var(--text-muted);
-}
-
 /* Keyboard up. The on-screen keyboard now shrinks the layout viewport
    (see the interactive-widget meta in index.html), which leaves roughly
    380px on a phone — so the exercise is trimmed to fit into it. What fits
@@ -306,13 +116,6 @@ button.ghost {
     margin-bottom: 10px;
   }
 
-  /* Only the box shrinks — the ring is drawn in viewBox units and scales
-     with it, numbers and all. */
-  .ring {
-    width: 36px;
-    height: 36px;
-  }
-
   .word {
     margin: 8px 0 2px;
     font-size: 2rem;
@@ -325,13 +128,5 @@ button.ghost {
 
   button.ghost {
     padding: 8px;
-  }
-
-  .solution {
-    font-size: 1.625rem;
-  }
-
-  .grammar {
-    margin: 2px 0 0;
   }
 }

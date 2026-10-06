@@ -1,0 +1,50 @@
+<section class="card verdict" [class.ok]="result().correct">
+  @if (result().correct) {
+    <p class="headline">正解 <i>{{ result().fast ? 'fast' : '' }}</i></p>
+    <p class="grammar">{{ grammarLine() }}</p>
+  } @else {
+    <p class="headline">不正解</p>
+    <p class="grammar">{{ grammarLine() }}</p>
+    <p class="solution">
+      @if (solution(); as s) {
+        @if (s.base) {
+          <ruby>{{ s.base }}<rt>{{ s.reading }}</rt></ruby>{{ s.tail }}
+        } @else {
+          {{ s.tail }}
+        }
+      }
+    </p>
+    @if (partial(); as label) {
+      <p class="partial">{{ label }}</p>
+    }
+  }
+
+  <div class="elo-row">
+    <p class="elo" [class.up]="result().elo.delta > 0" [class.down]="result().elo.delta < 0">
+      {{ result().elo.delta > 0 ? '+' : '' }}{{ result().elo.delta | number: '1.0-1' }} Elo
+    </p>
+    <a
+      class="jisho"
+      [href]="jishoUrl()"
+      target="_blank"
+      rel="noopener"
+      (mousedown)="keepFocus($event)"
+      >Jisho ↗</a
+    >
+  </div>
+
+  @if (result().transformations.length) {
+    <div class="rule">
+      @for (t of result().transformations; track $index; let last = $last) {
+        <span class="step">
+          <span class="unaltered">{{ t.unaltered }}</span
+          ><span class="altered">{{ t.altered_part }}</span>
+          <span class="operation">{{ t.operation }}</span>
+          @if (last) {
+            <span class="alteration">{{ t.alteration }}</span>
+          }
+        </span>
+      }
+    </div>
+  }
+</section>
