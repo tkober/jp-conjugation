@@ -1,0 +1,35 @@
+<section class="card">
+  <h2>Forms</h2>
+  <p class="hint">
+    What can come up in practice. Turning a form off leaves its progress
+    untouched — it just stops being served.
+  </p>
+
+  @for (category of categories(); track category) {
+    <h3>{{ category }}</h3>
+    @for (group of groupsOf(category); track group.title) {
+      <div class="group">
+        <span class="group-title">{{ group.title }}</span>
+        <div class="options">
+          @for (form of group.forms; track form.form_key) {
+            <label
+              class="toggle"
+              [class.on]="!disabledForms().has(form.form_key)"
+              [title]="form.title"
+            >
+              <input
+                type="checkbox"
+                [checked]="!disabledForms().has(form.form_key)"
+                (change)="toggleForm(form.form_key)"
+              />
+              {{ form.settings_title }}
+            </label>
+          }
+        </div>
+      </div>
+    }
+  }
+  @if (noFormsLeft()) {
+    <p class="warn">At least one form has to stay on.</p>
+  }
+</section>

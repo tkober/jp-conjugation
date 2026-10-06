@@ -1,0 +1,87 @@
+<section class="card">
+  <h2>Instructions</h2>
+  <p class="hint">
+    How the target form is shown during practice: one chip per property
+    instead of a title to parse.
+  </p>
+
+  <div class="options" role="radiogroup" aria-label="Chip style">
+    @for (option of settings().instruction_styles; track option) {
+      <label class="toggle" [class.on]="instructionStyle() === option">
+        <input
+          type="radio"
+          name="instruction-style"
+          [checked]="instructionStyle() === option"
+          (change)="setInstructionStyle(option)"
+        />
+        {{ styleLabel(option) }}
+      </label>
+    }
+  </div>
+
+  <h3>Order</h3>
+  <p class="hint">Move a property up or down; it saves right away.</p>
+  <ol class="order-list">
+    @for (dim of instructionOrder(); track dim; let i = $index) {
+      <li>
+        <span class="order-label">{{ dimensionLabel(dim) }}</span>
+        <span class="order-buttons">
+          <button
+            type="button"
+            class="ghost small"
+            [disabled]="i === 0"
+            (click)="moveInstruction(i, -1)"
+            aria-label="Move up"
+          >▲</button>
+          <button
+            type="button"
+            class="ghost small"
+            [disabled]="i === instructionOrder().length - 1"
+            (click)="moveInstruction(i, 1)"
+            aria-label="Move down"
+          >▼</button>
+        </span>
+      </li>
+    }
+  </ol>
+
+  <div class="actions">
+    <button
+      type="button"
+      class="ghost"
+      [disabled]="isActiveOrder(settings().defaults.instruction_order)"
+      (click)="applyOrder(settings().defaults.instruction_order)"
+    >
+      Japanese build order
+    </button>
+    <button
+      type="button"
+      class="ghost"
+      [disabled]="isActiveOrder(tenseFirstOrder)"
+      (click)="applyOrder(tenseFirstOrder)"
+    >
+      Tense first
+    </button>
+  </div>
+
+  <h3>Preview</h3>
+  <div class="preview">
+    @for (example of settings().instruction_examples; track $index) {
+      <app-form-instruction [parts]="example" [mode]="instructionStyle()" />
+    }
+  </div>
+
+  @if (instructionStyle() !== 'text') {
+    <h3>Legend</h3>
+    <ul class="legend">
+      @for (dim of settings().instruction_dimensions; track dim.dimension) {
+        @for (value of dim.values; track value.value) {
+          @if (value.emoji) {
+            <li><span aria-hidden="true">{{ value.emoji }}</span> {{ value.label }}</li>
+          }
+        }
+      }
+    </ul>
+  }
+  <p class="hint">Present covers present and future (non-past).</p>
+</section>

@@ -1,0 +1,123 @@
+.card {
+  padding: 16px;
+}
+
+.form-title {
+  margin: 0 0 4px;
+  font-size: 1.0625rem;
+}
+
+h3 {
+  margin: 18px 0 4px;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.type-label {
+  margin-left: 4px;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Pattern and example share a row while both fit; a long pattern
+   (〜う → 〜いませんでした) pushes the example onto its own line. */
+li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 2px 12px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+li:last-child {
+  border-bottom: none;
+}
+
+.pattern {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  flex: 1 0 7rem;
+  gap: 0 4px;
+  font-size: 1.0625rem;
+}
+
+.tilde {
+  color: var(--text-muted);
+}
+
+.pattern s {
+  color: var(--text-muted);
+}
+
+.pattern b {
+  color: var(--rule-accent);
+}
+
+.op {
+  color: var(--text-muted);
+}
+
+.badge {
+  align-self: center;
+  margin-left: 4px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.6875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.example {
+  flex: 1 1 9rem;
+}
+
+.word {
+  display: block;
+}
+
+.reading {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.muted {
+  color: var(--text-muted);
+  font-size: 0.9375rem;
+}
+
+/* The derivation chain, styled like the one in the practice verdict. */
+.rule {
+  flex-basis: 100%;
+  margin-top: 2px;
+  font-size: 0.9375rem;
+  /* A long chain scrolls on its own; the page never does. */
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.rule .altered {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+
+.rule .operation {
+  margin: 0 0.4rem;
+  color: var(--text-muted);
+}
+
+.rule .unaltered,
+.rule .alteration {
+  font-weight: 700;
+  color: var(--rule-accent);
+}

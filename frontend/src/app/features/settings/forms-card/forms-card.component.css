@@ -1,0 +1,10 @@
+.group {
+  margin-bottom: 12px;
+}
+
+.group-title {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
