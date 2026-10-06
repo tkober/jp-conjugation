@@ -461,9 +461,11 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
   `conjugate()` mutiert das übergebene `Word`, nie die Form.
 - Beim Testen einer Form nie dasselbe `Word` zweimal konjugieren: die erste
   Konjugation hat es bereits verändert.
-- Kein Test-Runner fürs Frontend (wie in der Vorlage) — bei einer
-  Single-User-App mehr Gerüst als Nutzen. Die Fachlogik liegt ohnehin im
-  Backend, und genau die ist getestet.
+- Frontend-Tests (#15): `cd frontend && npm test` (= `ng test --watch=false`),
+  Vitest + jsdom über `@angular/build:unit-test` (`experimental`, kein Karma).
+  Specs liegen neben der Quelle (`*.spec.ts`), `tsconfig.spec.json` nimmt sie
+  auf, `tsconfig.app.json` schließt sie von `ng build` aus. `frontend-ci.yml`
+  baut und testet jeden PR, der `frontend/**` ändert.
 - **Ein Component-Input darf nicht `style` heißen.** Angular bindet auf jedem
   Host-Element schon die eingebaute DOM-Eigenschaft `style`; ein gleichnamiger
   `input()` bekommt dadurch nie einen Wert, ohne dass es einen Fehler gibt.
