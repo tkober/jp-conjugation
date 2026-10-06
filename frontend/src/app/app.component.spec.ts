@@ -6,8 +6,6 @@ import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
 import { AppComponent } from './app.component';
 
-const THEME_KEY = 'conjugation-theme';
-
 function createComponent() {
   const fixture = TestBed.createComponent(AppComponent);
   const httpMock = TestBed.inject(HttpTestingController);
@@ -26,59 +24,27 @@ function createComponent() {
 
 describe('AppComponent', () => {
   beforeEach(() => {
-    localStorage.clear();
-    document.documentElement.removeAttribute('data-theme');
     TestBed.configureTestingModule({
       providers: [provideRouter([]), provideHttpClient(), provideHttpClientTesting()],
     });
   });
 
   afterEach(() => {
-    localStorage.clear();
-    document.documentElement.removeAttribute('data-theme');
     TestBed.inject(HttpTestingController).verify();
   });
 
-  it('renders all five tabs', async () => {
+  it('renders the header and the router outlet', async () => {
     const { fixture } = createComponent();
     await fixture.whenStable();
 
-    const labels = Array.from(fixture.nativeElement.querySelectorAll('nav a')).map((a) =>
-      (a as HTMLElement).textContent?.trim(),
-    );
-    expect(labels).toEqual(['Practice', 'Rules', 'Stats', 'Words', 'Settings']);
+    expect(fixture.nativeElement.querySelector('app-header')).toBeTruthy();
+    expect(fixture.nativeElement.querySelector('main router-outlet')).toBeTruthy();
   });
 
-  it('starts in system theme with no data-theme attribute and nothing stored', async () => {
+  it('requests /api/profile exactly once on init', async () => {
+    // createComponent's expectOne + the afterEach verify() together prove
+    // there is exactly one request and nothing left unanswered.
     const { fixture } = createComponent();
     await fixture.whenStable();
-
-    expect(document.documentElement.hasAttribute('data-theme')).toBe(false);
-    expect(localStorage.getItem(THEME_KEY)).toBeNull();
-  });
-
-  it('cycles system -> light -> dark -> system on each click, updating the DOM and localStorage', async () => {
-    const { fixture } = createComponent();
-    await fixture.whenStable();
-
-    const button: HTMLButtonElement = fixture.nativeElement.querySelector('button.theme');
-
-    button.click();
-    fixture.detectChanges();
-    await fixture.whenStable();
-    expect(document.documentElement.getAttribute('data-theme')).toBe('light');
-    expect(localStorage.getItem(THEME_KEY)).toBe('light');
-
-    button.click();
-    fixture.detectChanges();
-    await fixture.whenStable();
-    expect(document.documentElement.getAttribute('data-theme')).toBe('dark');
-    expect(localStorage.getItem(THEME_KEY)).toBe('dark');
-
-    button.click();
-    fixture.detectChanges();
-    await fixture.whenStable();
-    expect(document.documentElement.hasAttribute('data-theme')).toBe(false);
-    expect(localStorage.getItem(THEME_KEY)).toBe('system');
   });
 });

@@ -1,39 +1,4 @@
-<header>
-  <div class="bar">
-    <a class="brand" routerLink="/practice">
-      <span class="brand-mark">活</span>
-      <span class="brand-name">Conjugation Trainer</span>
-    </a>
-
-    <div class="chips">
-      @if (api.profile(); as profile) {
-        <span class="chip" title="Level">
-          <b>Lv {{ profile.level }}</b>
-          <i>{{ profile.elo | number: '1.0-0' }}</i>
-        </span>
-        <span class="chip" title="Current streak">
-          <b>{{ profile.current_streak }}</b>
-          <i>streak</i>
-        </span>
-      }
-      <button type="button" class="theme" (click)="cycleTheme()" [title]="themeTitle()">
-        {{ themeIcon() }}
-      </button>
-    </div>
-  </div>
-
-  @if (api.profile(); as profile) {
-    <div class="progress" [attr.aria-label]="'Progress to level ' + (profile.level + 1)">
-      <span [style.width.%]="profile.level_progress * 100"></span>
-    </div>
-  }
-
-  <nav>
-    @for (tab of tabs; track tab.path) {
-      <a [routerLink]="tab.path" routerLinkActive="active">{{ tab.label }}</a>
-    }
-  </nav>
-</header>
+<app-header />
 
 <main>
   <router-outlet />
