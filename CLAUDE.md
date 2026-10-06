@@ -185,28 +185,65 @@ inline) statt Template-Literalen im `.ts`. `app.config.ts` trägt die
   die `Cell`/`HeatRow`-Typen und `VERB_TYPES`/`ADJECTIVE_TYPES`/`HEAT_BOUNDS`/
   `HEAT_LABELS`. `stats-math.spec.ts` deckt Bucket-Grenzen, Godan-Sortierung
   und die Sparkline-Randfälle (< 2 Punkte, flacher Verlauf) ab, ohne TestBed.
-- `features/rules/rules.component.ts` (#11) — Tab „Rules": Gruppen-Chips (Adjectives /
-  Verbs), darunter Erklärung und ein Segment-Umschalter für die Formen der
-  Gruppe, dann die Regeltabelle pro Wortart. Die gewählte Form steht in der URL
-  (`/rules/:form`, Links mit `replaceUrl`), ohne Parameter Te-Form positiv.
+- `features/rules/rules.component.ts` (#11, Tabelle ausgelagert #21) — Tab
+  „Rules": Gruppen-Chips (Adjectives / Verbs), darunter Erklärung und ein
+  Segment-Umschalter für die Formen der Gruppe. Die gewählte Form steht in der
+  URL (`/rules/:form`, Links mit `replaceUrl`), ohne Parameter Te-Form positiv.
+  Picker und Erklärkarte bleiben hier; die Tabelle selbst ist
+  `rule-table/rule-table.component.ts` — Inputs `formTitle`/`sections`
+  (Gruppierung nach Wortart, `Section`-Typ lebt dort), dazu `patternKind()`
+  (unchanged/append/drop/replace) und `tilde()` samt ihren Doc-Kommentaren.
   Muster und Beispiel teilen sich eine Zeile, solange beide passen; die
   Herleitungskette (gleiches Styling wie in der Auflösung) erscheint nur bei
   zusammengesetzten Formen — bei einem Schritt sagt sie nichts, was das Muster
   nicht schon sagt. Mit fünf Tabs werden die Tabs unter 430px enger und
-  kleiner, damit sie bei 360px in eine Zeile passen.
+  kleiner, damit sie bei 360px in eine Zeile passen. `rules.component.css`
+  behält `.card { padding: 16px }` für Picker/Erklärkarte, `rule-table`
+  wiederholt dieselbe Regel für die eigene `.card.table` (Emulated
+  Encapsulation reicht keine Eltern-Overrides in ein Kind durch).
 - `features/words/words.component.ts` — Vokabelbrowser mit Filtern (Wortart, JLPT, Suche mit
-  Entprellung), Sortierung und Blättern zu 50.
-- `features/settings/settings.component.ts` — Formen- und JLPT-Auswahl in denselben Gruppen wie
-  der alte Dialog, Zeitbudget mit zwei Reglern und Live-Vorschau, Reset mit
-  Mehrfach-Bestätigung. **Die Zeitbudget-Beispiele kommen aus
-  `/api/settings`**, damit die Formel nicht doppelt gepflegt wird. Dazwischen
-  die Karte „Instructions": Chip-Stil (Text/Emoji/Text + Emoji, sofort
-  gespeichert), die Reihenfolge der vier Dimensionen als Liste mit ▲/▼ (Swap in
-  einer Kopie, sofort gespeichert), zwei Presets („Japanese build order" =
-  `defaults.instruction_order`, „Tense first" als TS-Konstante — der jeweils
-  aktive ist deaktiviert), eine Live-Vorschau aus `instruction_examples` und,
-  außer im Text-Stil, eine Legende aus `instruction_dimensions`. Auch hier
-  kommt die Vorschau vom Server, aus demselben Grund wie beim Zeitbudget.
+  Entprellung), Sortierung und Blättern zu 50. Bewusst **nicht** aufgeteilt
+  (#21): mit 105/95/134 Zeilen klein genug und in sich geschlossen, anders als
+  Settings und Rules.
+- `features/settings/settings.component.ts` (#21, vorher ein Monolith) — lädt
+  `Settings` einmal und `apply()`t jede Antwort; das Template reiht fünf
+  Karten-Components, jede mit eigenem `.card`-Template inkl. h2/Hint:
+  `forms-card/`, `instructions-card/`, `vocabulary-card/`, `time-budget-card/`,
+  `reset-card/`. Jede Karte (außer `reset-card`) bekommt `settings: Settings`
+  als Input und hat einen `save = output<SettingsUpdate>()`; der Elternteil
+  ruft `api.saveSettings()` **genau einmal pro Nutzeraktion**, wie vorher, und
+  `apply()`t die Antwort. **Optimistisches UI über `linkedSignal`**: Karten
+  halten ihren lokalen Entwurf (`disabledForms`, `instructionOrder`,
+  `baseMs`, …) als `linkedSignal(() => this.settings().…)` — der Klick setzt
+  den Entwurf sofort (ohne auf die Antwort zu warten), und sobald der
+  Elternteil neue `settings` durchreicht, resettet der `linkedSignal`
+  automatisch auf den Serverstand. Die Guards sind unverändert: `toggleForm`/
+  `toggleLevel` brechen vor dem Senden ab, wenn danach keine Form/kein Level
+  mehr übrig bliebe. `instructions-card` hält `TENSE_FIRST_ORDER` als
+  TS-Konstante (die alte „Tense first"-Preset) neben `styleLabel`/
+  `dimensionLabel`/`moveInstruction`/`applyOrder`/`isActiveOrder`.
+  `time-budget-card` vergleicht seinen Entwurf direkt gegen `settings()` statt
+  gegen ein gemerktes Feld — die „Saved"-Flash braucht trotzdem eine explizite
+  Bestätigung, *welche* Karte gerade gespeichert hat (ein globaler Zähler
+  würde bei jedem Save in irgendeiner Karte aufblitzen): der Elternteil bumpt
+  ein `budgetSaveTick`-Signal nur nach der Antwort auf *diese* Karte, die Karte
+  beobachtet es per `effect()` und zeigt „Saved" für 1500 ms. `reset-card` ist
+  bewusst eigenständig — ein Reset betrifft keine `Settings`, also ruft die
+  Karte `api.reset()` + `api.loadProfile()` selbst, statt ein Output
+  durchzureichen, das der Elternteil nur weitergeben würde. Gemeinsame Regeln
+  (`h3`, `.hint`-Margin, `.options`, `.toggle`+`.on`+Input, `.actions`,
+  `button`/`button.ghost`/`button.destructive`, `.warn`) stehen in
+  `settings-shared.css`, das jede Karte per zweitem `styleUrls`-Eintrag
+  einbindet — nur echte Abweichungen bleiben in der Karten-CSS.
+  **Die Zeitbudget-Beispiele kommen aus `/api/settings`**, damit die Formel
+  nicht doppelt gepflegt wird. Die Karte „Instructions": Chip-Stil
+  (Text/Emoji/Text + emoji, sofort gespeichert), die Reihenfolge der vier
+  Dimensionen als Liste mit ▲/▼ (Swap in einer Kopie, sofort gespeichert),
+  zwei Presets („Japanese build order" = `defaults.instruction_order`, „Tense
+  first" s.o. — der jeweils aktive ist deaktiviert), eine Live-Vorschau aus
+  `instruction_examples` und, außer im Text-Stil, eine Legende aus
+  `instruction_dimensions`. Auch hier kommt die Vorschau vom Server, aus
+  demselben Grund wie beim Zeitbudget.
 - `shared/furigana.ts` — Zerlegung fürs `<ruby>`: welcher Teil eine Lesung darüber
   bekommt und was Okurigana ist. Portiert aus den drei Pipes der alten App.
 - `core/api.service.ts`, `core/models.ts`, `app.routes.ts` — HTTP, Typen, Routen.

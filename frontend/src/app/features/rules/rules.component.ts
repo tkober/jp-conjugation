@@ -4,22 +4,17 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
 
 import { ApiService } from '../../core/api.service';
-import { RuleGroup, RuleRow, RulesResponse } from '../../core/models';
-import { wordTypeLabel, wordTypeTitle } from '../../shared/word-types';
+import { RuleGroup, RulesResponse } from '../../core/models';
+import { RuleTableComponent, Section } from './rule-table/rule-table.component';
 
 /** Shown when the URL names no form: the rule set with the most sound
  *  changes, and the one learners come back to most. */
 const DEFAULT_FORM = 'Verbs__TeFormAffirmative';
 
-interface Section {
-  wordType: string;
-  rows: RuleRow[];
-}
-
 @Component({
   selector: 'app-rules',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink],
+  imports: [RouterLink, RuleTableComponent],
   templateUrl: './rules.component.html',
   styleUrl: './rules.component.css',
 })
@@ -82,26 +77,5 @@ export class RulesComponent {
       next: (r) => this.data.set(r),
       error: () => this.failed.set(true),
     });
-  }
-
-  typeTitle(type: string): string {
-    return wordTypeTitle(type);
-  }
-
-  typeLabel(type: string): string {
-    return wordTypeLabel(type);
-  }
-
-  patternKind(row: RuleRow): 'unchanged' | 'append' | 'drop' | 'replace' {
-    if (!row.ending) {
-      return row.replacement ? 'append' : 'unchanged';
-    }
-    return row.replacement ? 'replace' : 'drop';
-  }
-
-  /** 〜 marks "the rest of the word stays" — not for whole-word rules
-   *  like 来る → 来ない (くる → こない), where nothing stays. */
-  tilde(row: RuleRow): string {
-    return row.ending === row.example.hiragana ? '' : '〜';
   }
 }

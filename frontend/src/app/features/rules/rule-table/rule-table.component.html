@@ -1,0 +1,66 @@
+<section class="card table">
+  <h2 class="form-title">{{ formTitle() }}</h2>
+
+  @for (section of sections(); track section.wordType) {
+    <h3>
+      {{ typeTitle(section.wordType) }}
+      <span class="type-label">{{ typeLabel(section.wordType) }}</span>
+    </h3>
+
+    <ul>
+      @for (row of section.rows; track $index) {
+        <li [class.exception]="row.exception">
+          <div class="pattern">
+            @switch (patternKind(row)) {
+              @case ('unchanged') {
+                <span class="muted">dictionary form</span>
+              }
+              @case ('append') {
+                <span class="op">+</span><b>{{ row.replacement }}</b>
+              }
+              @case ('drop') {
+                <span class="op">−</span><s>{{ row.ending }}</s>
+              }
+              @default {
+                <span class="tilde">{{ tilde(row) }}</span><s>{{ row.ending }}</s>
+                <span class="op">→</span>
+                <span class="tilde">{{ tilde(row) }}</span><b>{{ row.replacement }}</b>
+              }
+            }
+            @if (row.exception) {
+              <span class="badge">exception</span>
+            }
+          </div>
+
+          <div class="example">
+            <span class="word">
+              {{ row.example.kanji }} <span class="op">→</span>
+              <b>{{ row.example.result_kanji }}</b>
+            </span>
+            <span class="reading">
+              {{ row.example.hiragana }} → {{ row.example.result_hiragana }}
+              · {{ row.example.english }}
+            </span>
+          </div>
+
+          <!-- Only for composed forms: a single step says nothing the
+               pattern above does not already say. -->
+          @if (row.transformations.length > 1) {
+            <div class="rule">
+              @for (t of row.transformations; track $index; let last = $last) {
+                <span class="step">
+                  <span class="unaltered">{{ t.unaltered }}</span
+                  ><span class="altered">{{ t.altered_part }}</span>
+                  <span class="operation">{{ t.operation }}</span>
+                  @if (last) {
+                    <span class="alteration">{{ t.alteration }}</span>
+                  }
+                </span>
+              }
+            </div>
+          }
+        </li>
+      }
+    </ul>
+  }
+</section>

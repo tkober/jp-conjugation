@@ -1,0 +1,47 @@
+<section class="card">
+  <h2>Time budget</h2>
+  <p class="hint">
+    How long an answer may take before it counts as slow. Covers working
+    out the form and typing it — a touchscreen needs more than a keyboard.
+  </p>
+
+  <label class="slider">
+    <span>Base <b>{{ baseMs() | number: '1.0-0' }} ms</b></span>
+    <input
+      type="range"
+      [min]="settings().limits.time_base_ms[0]"
+      [max]="settings().limits.time_base_ms[1]"
+      step="100"
+      [value]="baseMs()"
+      (input)="baseMs.set(+$any($event.target).value)"
+    />
+  </label>
+
+  <label class="slider">
+    <span>Per kana <b>{{ perKanaMs() | number: '1.0-0' }} ms</b></span>
+    <input
+      type="range"
+      [min]="settings().limits.time_per_kana_ms[0]"
+      [max]="settings().limits.time_per_kana_ms[1]"
+      step="50"
+      [value]="perKanaMs()"
+      (input)="perKanaMs.set(+$any($event.target).value)"
+    />
+  </label>
+
+  <ul class="examples">
+    @for (example of settings().examples; track example.kana) {
+      <li>
+        <span>{{ example.kana }} kana</span>
+        <b>{{ preview(example.kana) / 1000 | number: '1.1-1' }} s</b>
+      </li>
+    }
+  </ul>
+
+  <div class="actions">
+    <button type="button" class="primary" [disabled]="!budgetChanged()" (click)="saveBudget()">
+      {{ budgetSaved() ? 'Saved' : 'Save' }}
+    </button>
+    <button type="button" class="ghost" (click)="resetBudget()">Back to defaults</button>
+  </div>
+</section>
