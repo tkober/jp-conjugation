@@ -1,0 +1,59 @@
+/* Light and dark are both first-class: the page follows the system unless the
+   viewer overrides it. Everything downstream reads these custom properties.
+
+   Each token is defined exactly once, with light-dark(<light-value>,
+   <dark-value>): the browser resolves it from the element's computed
+   `color-scheme` below. `:root` leaves that as `light dark`, so the OS
+   preference decides; `:root[data-theme='light'|'dark']` below just pins
+   `color-scheme` to the viewer's explicit override — every token still comes
+   from here, nothing is redefined per theme. Needs Chrome 123, Safari 17.5 or
+   Firefox 120+ (light-dark()). */
+:root {
+  color-scheme: light dark;
+  --bg: light-dark(#f6f7f9, #14161a);
+  --surface: light-dark(#ffffff, #1c1f25);
+  --surface-sunken: light-dark(#eef0f4, #23272e);
+  --border: light-dark(#dcdfe6, #333944);
+  --text: light-dark(#1b1d21, #e8eaee);
+  --text-muted: light-dark(#616671, #a0a7b4);
+  /* Red 800 — the accent of the original app, kept. It doubles as the "wrong"
+     colour there too; the verdict block carries 不正解 and the given → expected
+     pair, so the meaning never rests on hue alone. */
+  --accent: light-dark(#c62828, #ef5350);
+  --accent-soft: light-dark(#fbeaea, #3a1f20);
+  --correct: light-dark(#2e7d32, #81c784);
+  --correct-soft: light-dark(#e8f5e9, #1b3320);
+  --wrong: light-dark(#c62828, #ef5350);
+  --wrong-soft: light-dark(#fbeaea, #3a1f20);
+  /* The derivation chain stays blue, exactly as in the original: red on the
+     pale-red correction block would be unreadable. */
+  --rule-accent: light-dark(#008cd5, #4fc3f7);
+  /* Blue-grey, echoing the original's primary palette. Carries the chrome that
+     must NOT be red — above all the countdown ring, which needs red free to
+     mean "running out". */
+  --neutral: light-dark(#546e7a, #90a4ae);
+  --shadow: 0 1px 2px light-dark(rgb(16 24 40 / 6%), rgb(0 0 0 / 40%)),
+    0 4px 16px light-dark(rgb(16 24 40 / 6%), rgb(0 0 0 / 30%));
+  --radius: 14px;
+
+  /* Sequential single-hue ramp (blue) for the miss-rate heatmap, steps 250→650
+     of the reference palette. Validated against this surface: monotone
+     lightness, visible step gaps, lightest step 2.11:1 over white.
+     Reversed in dark: on a dark surface "more" has to run lighter, not
+     darker. Darkest step 2.04:1 over the dark surface. */
+  --heat-0: light-dark(#86b6ef, #184f95);
+  --heat-1: light-dark(#5598e7, #256abf);
+  --heat-2: light-dark(#2a78d6, #3987e5);
+  --heat-3: light-dark(#1c5cab, #6da7ec);
+  --heat-4: light-dark(#104281, #9ec5f4);
+  --spark: light-dark(#2a78d6, #63b3f5);
+}
+
+/* The viewer's explicit choice wins over the system in both directions. */
+:root[data-theme='light'] {
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+}

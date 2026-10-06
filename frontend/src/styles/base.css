@@ -1,0 +1,49 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  min-height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  /* Latin from the system font; kana and kanji from an explicit Japanese face
+     (#13). Without one, Chrome on Windows falls back to Yu Gothic (or a
+     Chinese face, since the page is lang="en"), which renders thin and wiry at
+     regular weight. Hiragino keeps macOS/iOS unchanged; everywhere else the
+     bundled Noto Sans JP takes over. Its subsets carry unicode-ranges, so a
+     browser only fetches the ones a page actually needs — and none at all
+     where Hiragino already covers the glyphs. */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, 'Hiragino Sans', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP Variable',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button {
+  font: inherit;
+  cursor: pointer;
+}
+
+input {
+  font: inherit;
+  /* Without this a flex row keeps the input at its intrinsic width and pushes
+     the button off a 360px screen. */
+  min-width: 0;
+}
+
+/* Neutral, not the accent: the accent is red, and a red halo around a green
+   "correct" field would read as a contradiction. Focus is an affordance, it
+   has no business in the right/wrong colour channel. */
+:focus-visible {
+  outline: 2px solid var(--neutral);
+  outline-offset: 2px;
+}

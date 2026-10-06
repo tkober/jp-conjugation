@@ -110,16 +110,43 @@ inline) statt Template-Literalen im `.ts`. `app.config.ts` trägt die
 - `core/theme.service.ts` (#17) — Theme-Zustand (system/hell/dunkel) als
   Singleton: `theme`/`icon`/`title` als Signals, `cycle()`, Persistenz in
   `localStorage` hinter try/catch (private Modus kann den Zugriff werfen).
-- `features/practice/practice.component.ts` — Übungsansicht mit explizitem Session-Lebenszyklus
-  (`idle` → `active` → `answered` → `ended`). Die Session startet **nicht**
-  automatisch. Countdown-Ring (SVG, `stroke-dashoffset`, r=19 in einer 44er-Box;
-  Restsekunden in der Mitte, letztes Viertel und Überzeit rot, bei Überzeit
-  zählt er als „+x,x s" hoch), Auflösung mit Herleitungskette,
-  Session-Zusammenfassung. **Der Fokus bleibt die ganze Session im
-  Eingabefeld** — auf dem Handy hängt daran die Bildschirmtastatur (siehe
-  unten). Die Zielform zeigt `shared/form-instruction/form-instruction.component.ts` statt eines
-  Titels (siehe unten, „Anweisungen als Chips"). Die Auflösung nennt seit #6
-  auch die abgefragte Grammatik (`.grammar`, z. B. „Godan verb (ぐ) · Te-form,
+- `features/practice/practice.component.ts` (#19) — Übungsansicht mit explizitem
+  Session-Lebenszyklus (`idle` → `active` → `answered` → `ended`). Die Session
+  startet **nicht** automatisch. Hält Session-Zustand, Timer und
+  wanakana-Bindung; das Eingabefeld, Fokus-Handling (siehe unten) und der
+  Check/Next-Button bleiben hier, weil sie die ganze Session über existieren
+  müssen. Die drei präsentationalen Kind-Komponenten bekommen nur Signal-
+  `input()`s/`output()`s, keinen eigenen Zustand:
+  - `countdown-ring/countdown-ring.component.ts` — der Ring selbst (SVG,
+    `stroke-dashoffset`, r=19 in einer 44er-Box; Restsekunden in der Mitte,
+    letztes Viertel und Überzeit rot, bei Überzeit zählt er als „+x,x s" hoch).
+    Inputs `elapsedMs`/`targetMs`, Host `display: contents`, weil der Ring als
+    Flex-Item in der `.task`-Zeile des Eltern-Templates sitzt und keine eigene
+    Box dafür aufmachen darf.
+  - `verdict/verdict.component.ts` — die Auflösung: Headline, Grammatik-Zeile,
+    Lösung mit Furigana, Elo-Delta, Jisho-Link, Herleitungskette. Inputs
+    `result`/`exercise`. Der Jisho-Link nimmt per lokalem
+    `(mousedown)="keepFocus($event)"` dem Eingabefeld weiterhin nicht den
+    Fokus — dasselbe Muster wie beim Check/Next-Button im Elternteil, nur hier
+    dupliziert, weil der Handler jetzt am Link selbst hängt.
+  - `session-summary/session-summary.component.ts` — die
+    Session-Zusammenfassung. Inputs `answered`/`correct`/`totalTimeMs`/
+    `eloDelta`, Output `restart` statt direktem `(click)="start()"`.
+
+  Alle drei Hosts stehen auf `display: block` (verdict, session-summary) bzw.
+  `display: contents` (countdown-ring) — ein Angular-Custom-Element ist sonst
+  `display: inline` und würde den Flow/Flex-Kontext der Eltern-Styles
+  verändern. Emulated Encapsulation heißt auch: jede CSS-Regel ist mit ihrem
+  Markup gewandert, inklusive der `@media (max-height: 500px)`-Anteile (siehe
+  unten) und der zwei `.up`/`.down`-Zeilen, die in verdict und session-summary
+  bewusst dupliziert sind statt über eine globale Klasse geteilt — für zwei
+  Einzeiler lohnt sich keine gemeinsame Datei.
+
+  **Der Fokus bleibt die ganze Session im Eingabefeld** — auf dem Handy hängt
+  daran die Bildschirmtastatur (siehe unten). Die Zielform zeigt
+  `shared/form-instruction/form-instruction.component.ts` statt eines Titels
+  (siehe unten, „Anweisungen als Chips"). Die Auflösung nennt seit #6 auch die
+  abgefragte Grammatik (`.grammar`, z. B. „Godan verb (ぐ) · Te-form,
   positive") — bei beiden Ausgängen, richtig wie falsch, direkt unter der
   正解/不正解-Headline. Die Wortart-Titel kommen aus `shared/word-types.ts`
   (`wordTypeTitle()`), geteilt mit `features/stats/stats.component.ts`. Seit #7 verlinkt die
@@ -168,11 +195,27 @@ inline) statt Template-Literalen im `.ts`. `app.config.ts` trägt die
 - `shared/furigana.ts` — Zerlegung fürs `<ruby>`: welcher Teil eine Lesung darüber
   bekommt und was Okurigana ist. Portiert aus den drei Pipes der alten App.
 - `core/api.service.ts`, `core/models.ts`, `app.routes.ts` — HTTP, Typen, Routen.
-- Light + Dark über CSS Custom Properties in `styles.css`.
+- Light + Dark über CSS Custom Properties in `styles/tokens.css` (#18).
+
+**Globale Styles (#18)** liegen in drei Dateien statt einer, in dieser
+Reihenfolge in `angular.json` nach dem Font-CSS: `styles/tokens.css` (Custom
+Properties), `styles/base.css` (Element-Grundstile: `*`, `html`/`body`,
+`button`, `input`, `:focus-visible`), `styles/components.css` (global geteilte
+Bausteine). Jedes Token steht **genau einmal**, mit `light-dark(hell, dunkel)`
+statt getrennten Blöcken für `:root`, `@media (prefers-color-scheme: dark)`
+und `[data-theme]`: `:root` setzt `color-scheme: light dark` (die Systemwahl
+entscheidet), `[data-theme='light'|'dark']` kippt nur noch `color-scheme` auf
+die explizite Wahl — kein Token wird dort neu definiert. Braucht Chrome 123 /
+Safari 17.5 / Firefox 120+. Geteilte Bausteine wie `.card`, `.hint`,
+`button.primary` (inkl. `:disabled`) und die `h2`-Grundgröße leben als globale
+Klassen in `styles/components.css`; die Feature-Komponenten (`features/*/*.component.css`)
+behalten nur noch die echten Abweichungen (z. B. `.card { padding: 16px; }`
+in rules/words statt 20px, die abweichenden `.hint`-margins, die zusätzlichen
+`button.primary`-Eigenschaften in practice).
 
 **Die Heatmap-Rampe** ist eine sequenzielle Ein-Hue-Skala (blau) aus der
 validierten Referenzpalette des `dataviz`-Skills, Schritte 250→650. Sie steht in
-`styles.css` neben dem restlichen Theme und ist **im Dark Mode umgedreht**,
+`styles/tokens.css` neben dem restlichen Theme und ist **im Dark Mode umgedreht**,
 damit „mehr" immer vom Hintergrund wegläuft. Beide Richtungen sind gegen die
 tatsächlichen Flächen dieser App validiert (`#ffffff` bzw. `#1c1f25`), nicht
 gegen die Default-Flächen des Skills — der hellste Schritt der Originalrampe
@@ -490,7 +533,7 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
 - **Japanisch braucht eine explizite Schrift im Font-Stack** (#13). Ohne sie
   greift Chrome unter Windows auf Yu Gothic zurück (bei `lang="en"` auch auf
   eine chinesische Schrift), und die wirkt bei normaler Strichstärke dünn und
-  drahtig. `styles.css` nennt deshalb nach den Latin-Systemschriften Hiragino
+  drahtig. `styles/base.css` nennt deshalb nach den Latin-Systemschriften Hiragino
   (macOS/iOS bleiben unverändert) und dann `Noto Sans JP Variable`. Die kommt
   aus `@fontsource-variable/noto-sans-jp`, ist in `angular.json` unter
   `styles` eingebunden und wird mit der App ausgeliefert, ohne Google Fonts.
@@ -520,9 +563,10 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
   Browser scrollt das fokussierte Feld sichtbar — und der sticky Header
   verschwindet über dem sichtbaren Streifen. Zweite Referenzgröße ist deshalb
   **360×380**: das bleibt von einem 787px-Handy übrig, wenn die Tastatur steht.
-  Die `@media (max-height: 500px)`-Blöcke in `app.component.css` und
-  `features/practice/practice.component.css` stutzen die Übung genau darauf, damit beim Tippen ins
-  Feld gar nichts mehr zu scrollen ist.
+  Die `@media (max-height: 500px)`-Blöcke in `app.component.css` und, seit #19
+  auf vier Dateien verteilt (`practice.component.css` plus je ihr Anteil in
+  `countdown-ring/`, `verdict/`, `session-summary/`), stutzen die Übung genau
+  darauf, damit beim Tippen ins Feld gar nichts mehr zu scrollen ist.
 - **Die Tastatur geht nur für einen Fokus auf, den der Nutzer ausgelöst hat** —
   einmal offen, darf sie zwischen zwei Übungen also nie verloren gehen. Drei
   Dinge nähmen sie einem: `readonly` (Android schließt die Tastatur für ein

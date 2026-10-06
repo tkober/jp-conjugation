@@ -1,0 +1,48 @@
+.ring {
+  width: 44px;
+  height: 44px;
+  flex: none;
+}
+
+.ring circle {
+  fill: none;
+  stroke-width: 3;
+}
+
+.ring .track {
+  stroke: var(--surface-sunken);
+}
+
+.ring .value {
+  stroke: var(--neutral);
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+  transition: stroke-dashoffset 0.1s linear;
+}
+
+/* Only the stroke may turn red — filling the circle would swallow the
+   number sitting inside it. */
+.ring .value.low {
+  stroke: var(--wrong);
+}
+
+.ring text {
+  fill: var(--text-muted);
+  font-size: 12px;
+  text-anchor: middle;
+  dominant-baseline: central;
+  stroke: none;
+}
+
+.ring text.low {
+  fill: var(--wrong);
+}
+
+/* Keyboard up (see practice.component.css): only the box shrinks — the ring
+   is drawn in viewBox units and scales with it, numbers and all. */
+@media (max-height: 500px) {
+  .ring {
+    width: 36px;
+    height: 36px;
+  }
+}

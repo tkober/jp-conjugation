@@ -10,24 +10,13 @@
   }
 
   @case ('ended') {
-    <section class="card summary">
-      <h2>Session finished</h2>
-      <dl>
-        <div><dt>Answered</dt><dd>{{ answered() }}</dd></div>
-        <div>
-          <dt>Correct</dt>
-          <dd>{{ correct() }} <i>({{ accuracy() | number: '1.0-0' }}%)</i></dd>
-        </div>
-        <div><dt>Ø time</dt><dd>{{ averageSeconds() | number: '1.1-1' }} s</dd></div>
-        <div>
-          <dt>Elo</dt>
-          <dd [class.up]="eloDelta() > 0" [class.down]="eloDelta() < 0">
-            {{ eloDelta() > 0 ? '+' : '' }}{{ eloDelta() | number: '1.0-1' }}
-          </dd>
-        </div>
-      </dl>
-      <button type="button" class="primary" (click)="start()">Practice again</button>
-    </section>
+    <app-session-summary
+      [answered]="answered()"
+      [correct]="correct()"
+      [totalTimeMs]="totalTimeMs()"
+      [eloDelta]="eloDelta()"
+      (restart)="start()"
+    />
   }
 
   @default {
@@ -39,19 +28,7 @@
             [parts]="ex.instruction"
             [mode]="ex.instruction_style"
           />
-          <svg class="ring" viewBox="0 0 44 44" aria-hidden="true">
-            <circle class="track" cx="22" cy="22" [attr.r]="radius" />
-            <circle
-              class="value"
-              [class.low]="fractionLeft() < 0.25"
-              cx="22"
-              cy="22"
-              [attr.r]="radius"
-              [attr.stroke-dasharray]="circumference"
-              [attr.stroke-dashoffset]="ringOffset()"
-            />
-            <text x="22" y="22" [class.low]="fractionLeft() < 0.25">{{ ringLabel() }}</text>
-          </svg>
+          <app-countdown-ring [elapsedMs]="elapsed()" [targetMs]="ex.target_time_ms" />
         </div>
 
         <p class="word">
@@ -99,56 +76,7 @@
       </form>
 
       @if (result(); as r) {
-        <section class="card verdict" [class.ok]="r.correct">
-          @if (r.correct) {
-            <p class="headline">正解 <i>{{ r.fast ? 'fast' : '' }}</i></p>
-            <p class="grammar">{{ grammarLine() }}</p>
-          } @else {
-            <p class="headline">不正解</p>
-            <p class="grammar">{{ grammarLine() }}</p>
-            <p class="solution">
-              @if (solution(); as s) {
-                @if (s.base) {
-                  <ruby>{{ s.base }}<rt>{{ s.reading }}</rt></ruby>{{ s.tail }}
-                } @else {
-                  {{ s.tail }}
-                }
-              }
-            </p>
-            @if (partial(); as label) {
-              <p class="partial">{{ label }}</p>
-            }
-          }
-
-          <div class="elo-row">
-            <p class="elo" [class.up]="r.elo.delta > 0" [class.down]="r.elo.delta < 0">
-              {{ r.elo.delta > 0 ? '+' : '' }}{{ r.elo.delta | number: '1.0-1' }} Elo
-            </p>
-            <a
-              class="jisho"
-              [href]="jishoUrl()"
-              target="_blank"
-              rel="noopener"
-              (mousedown)="keepFocus($event)"
-              >Jisho ↗</a
-            >
-          </div>
-
-          @if (r.transformations.length) {
-            <div class="rule">
-              @for (t of r.transformations; track $index; let last = $last) {
-                <span class="step">
-                  <span class="unaltered">{{ t.unaltered }}</span
-                  ><span class="altered">{{ t.altered_part }}</span>
-                  <span class="operation">{{ t.operation }}</span>
-                  @if (last) {
-                    <span class="alteration">{{ t.alteration }}</span>
-                  }
-                </span>
-              }
-            </div>
-          }
-        </section>
+        <app-verdict [result]="r" [exercise]="ex" />
       }
 
       <button type="button" class="ghost" (click)="end()">End session</button>
