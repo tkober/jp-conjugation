@@ -1,0 +1,23 @@
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.tile {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+}
+
+.tile span {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--text-muted);
+}
+
+.tile b {
+  font-size: 1.5rem;
+}

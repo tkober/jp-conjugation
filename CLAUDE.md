@@ -163,13 +163,28 @@ inline) statt Template-Literalen im `.ts`. `app.config.ts` trägt die
   nennen** — das kollidiert mit der eingebauten DOM-Eigenschaft, die Angular
   auf jedem Host-Element schon bindet, ein gleichnamiger Component-Input bekäme
   nie einen Wert.
-- `features/stats/stats.component.ts` — KPI-Kacheln, Elo-Sparkline (SVG, eine Serie, deshalb
-  ohne Legende) und als Kernstück die **Heatmap Form × Wortart**, getrennt für
-  Adjektive und Verben, plus Chips für die neun Godan-Endungen. Kodiert wird die
-  **Fehlerquote**, nicht die Trefferquote: so sticht hervor, was Arbeit braucht,
-  statt zu verblassen. „Noch nie geübt" ist ein eigener Zustand (gestrichelte
-  Zelle) und nicht der hellste Rampenschritt — 0 % richtig und „nie probiert"
-  dürfen nicht gleich aussehen.
+- `features/stats/stats.component.ts` (#20) — lädt die Stats, Empty-/Loading-Zustand,
+  Layout; behält die kleinen Karten (Weakest rules, Misses-Split, Recent) selbst.
+  Drei Kind-Komponenten bekommen nur `input()`s, keinen Server-Zugriff:
+  - `kpi-tiles/kpi-tiles.component.ts` — die vier Kacheln oben (Answered,
+    Accuracy, Ø time, Best streak).
+  - `elo-sparkline/elo-sparkline.component.ts` — die Elo-Karte: Verlauf als
+    SVG-Polyline (eine Serie, deshalb ohne Legende) plus Min/Max-Skala.
+  - `miss-rate-heatmap/miss-rate-heatmap.component.ts` — als Kernstück die
+    **Heatmap Form × Wortart**, getrennt für Adjektive und Verben, plus Chips
+    für die neun Godan-Endungen. Hält das `selected`-Signal selbst, weil Chips
+    und Readout es teilen und deshalb zusammengehören. Kodiert wird die
+    **Fehlerquote**, nicht die Trefferquote: so sticht hervor, was Arbeit
+    braucht, statt zu verblassen. „Noch nie geübt" ist ein eigener Zustand
+    (gestrichelte Zelle) und nicht der hellste Rampenschritt — 0 % richtig und
+    „nie probiert" dürfen nicht gleich aussehen.
+
+  `stats-math.ts` trägt den testbaren Kern als freie Funktionen statt
+  Komponenten-Methoden: `bucket()`, `toCell()`, `rowsFor()`, `triggerCells()`
+  (Godan-Gruppierung + ja-Sortierung) und `sparkline()` (Punktgeometrie), dazu
+  die `Cell`/`HeatRow`-Typen und `VERB_TYPES`/`ADJECTIVE_TYPES`/`HEAT_BOUNDS`/
+  `HEAT_LABELS`. `stats-math.spec.ts` deckt Bucket-Grenzen, Godan-Sortierung
+  und die Sparkline-Randfälle (< 2 Punkte, flacher Verlauf) ab, ohne TestBed.
 - `features/rules/rules.component.ts` (#11) — Tab „Rules": Gruppen-Chips (Adjectives /
   Verbs), darunter Erklärung und ein Segment-Umschalter für die Formen der
   Gruppe, dann die Regeltabelle pro Wortart. Die gewählte Form steht in der URL
