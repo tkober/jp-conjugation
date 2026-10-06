@@ -10,9 +10,10 @@ Vorlage für Architektur und Betrieb ist `tkober/katakana-reading` — die
 
 ## Stand
 
-Der Umbau auf Angular 20 + FastAPI/Postgres ist **komplett** und auf `main`
+Der Umbau auf Angular + FastAPI/Postgres ist **komplett** und auf `main`
 gemerged — die alte Angular-13-Version (`src/`, `docs/`, GitHub-Pages-Deploy)
-ist entfernt. Feature-Arbeit läuft seither auf Branch + PR gegen `main`.
+ist entfernt. Feature-Arbeit läuft seither auf Branch + PR gegen `main`. Das
+Frontend ist seit #29 auf Angular 22 und zoneless.
 
 Offen ist nur noch das, was außerhalb dieses Repos liegt: der Unraid-Stack in
 `tkober/compose-stacks-unraid`. Images und Bootstrap-SQL sind dafür fertig.
@@ -22,8 +23,8 @@ Offen ist nur noch das, was außerhalb dieses Repos liegt: der Unraid-Stack in
 ```
 backend/     FastAPI + PostgreSQL (SQLAlchemy async/asyncpg), verwaltet mit uv
              + Dockerfile (uv-Image python3.14, uvicorn) + tests/
-frontend/    Angular 20 (standalone, signals, Router)
-             + Dockerfile (Node 22 Build → nginx) + nginx.conf + proxy.conf.json
+frontend/    Angular 22, zoneless (standalone, signals, Router)
+             + Dockerfile (Node 24 Build → nginx) + nginx.conf + proxy.conf.json
 data/        Vokabular als JSON (jisho.json, aus dem Crawler)
 jisho-crawler/  Holt Verben/Adjektive von jisho.org nach data/vocabulary/
 dbeaver/     Einmaliges DB-Bootstrap (Rollen, Datenbank, Default-Privileges)
@@ -275,10 +276,13 @@ fiel gegen Weiß mit 1,32:1 durch. Wer die Farben anfasst: den Validator erneut
 laufen lassen, nicht schätzen. Und die Bildunterschrift sagt bewusst
 „stronger", nicht „darker" — „dunkler" wäre im Dark Mode schlicht falsch.
 
-**Komponenten laufen auf `OnPush`.** Aller Zustand liegt in Signals, damit
-Change Detection an Signal-Writes hängt und nicht an zone.js — sonst schlagen
-genau die Writes nicht durch, die außerhalb eines gepatchten Callbacks
-passieren (siehe wanakana unten).
+**Komponenten laufen auf `OnPush`, die App ist seit #29 zoneless**
+(`provideZonelessChangeDetection()` in `app.config.ts`, kein `zone.js` mehr in
+`package.json`/`angular.json`). Aller Zustand liegt in Signals, damit Change
+Detection an Signal-Writes hängt statt an zone.js — das hat sich beim Umstieg
+ausgezahlt: kein Component musste angepasst werden, weil hier noch nie etwas
+auf zone.js-gepatchte Callbacks statt auf Signal-Writes vertraut hat (siehe
+wanakana unten).
 
 Das Deployment wird wie bei katakana-reading: zwei GHCR-Images (Backend, nginx
 mit der SPA), nginx proxyt `/api` same-origin ans Backend, zwei Postgres-Rollen
@@ -517,6 +521,7 @@ als „Elo kalibriert sich selbst" vermuten lässt.
 | 4 | Frontend Angular 20, Practice-Route | fertig |
 | 5 | Docker/Compose/nginx/GHCR (Frontend :8084), E2E im Container | fertig |
 | 6 | Stats (Heatmap Form × Wortart), Vokabel-Browser, Settings-UI, alte App entfernt | fertig |
+| – | #29: Frontend-Upgrade auf Angular 22, zoneless | fertig |
 
 Der Unraid-Stack selbst liegt in `tkober/compose-stacks-unraid` und ist noch
 nicht angelegt — Images und Bootstrap-SQL stehen dafür bereit.
@@ -559,8 +564,11 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
 - **wanakana schreibt das Eingabefeld aus seinem eigenen Listener um**, und
   nicht immer im selben Task. Wer den Wert synchron im `(input)`-Handler liest,
   sieht das Romaji, das gleich ersetzt wird. Die Übung liest deshalb verzögert
-  (`setTimeout`) und hört zusätzlich auf `keyup`. Das ist auch der Grund für
-  `OnPush`: der verzögerte Write liegt außerhalb der zone.js-Patches.
+  (`setTimeout`) und hört zusätzlich auf `keyup`. Der verzögerte Write landet
+  trotzdem als Signal-Write (`romajiLeft.set()`/`ready.set()`), und genau
+  deshalb läuft das zoneless (#29) weiter wie vorher — ein `setTimeout`-Rumpf,
+  der nur auf DOM-Properties schreibt, bräuchte ohne zone.js einen manuellen
+  Trigger, einer, der ein Signal setzt, nicht.
 - `frontend/nginx.conf` ist ein **envsubst-Template**: `PORT` und
   `API_UPSTREAM` brauchen `ENV`-Defaults im Dockerfile (envsubst ersetzt nur
   *gesetzte* Variablen — eine ungesetzte bliebe wörtlich stehen und nginx
