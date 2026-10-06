@@ -1,22 +1,8 @@
-/* The heat ramp lives in styles.css, so light and dark swap in one place
-   alongside the rest of the theme. */
+/* The heat ramp lives in styles/tokens.css, so light and dark swap in one
+   place alongside the rest of the theme. */
 :host {
   display: block;
   padding-top: 24px;
-}
-
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
-  margin-bottom: 16px;
-}
-
-h2 {
-  margin: 0 0 4px;
-  font-size: 1.0625rem;
 }
 
 h3 {
@@ -29,8 +15,6 @@ h3 {
 
 .hint {
   margin: 0 0 12px;
-  color: var(--text-muted);
-  font-size: 0.875rem;
 }
 
 .tiles {

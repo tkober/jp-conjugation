@@ -3,15 +3,6 @@
   padding-top: 24px;
 }
 
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
-  margin-bottom: 16px;
-}
-
 .intro .lead {
   margin: 0 0 6px;
   font-size: 1.0625rem;
@@ -19,8 +10,6 @@
 
 .hint {
   margin: 6px 0 0;
-  color: var(--text-muted);
-  font-size: 0.875rem;
 }
 
 .intro button {
@@ -138,15 +127,8 @@ button.primary {
   padding: 12px 20px;
   border: none;
   border-radius: 10px;
-  background: var(--accent);
-  color: #fff;
   font-weight: 600;
   flex: none;
-}
-
-button.primary:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 button.ghost {

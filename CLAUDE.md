@@ -168,11 +168,27 @@ inline) statt Template-Literalen im `.ts`. `app.config.ts` trägt die
 - `shared/furigana.ts` — Zerlegung fürs `<ruby>`: welcher Teil eine Lesung darüber
   bekommt und was Okurigana ist. Portiert aus den drei Pipes der alten App.
 - `core/api.service.ts`, `core/models.ts`, `app.routes.ts` — HTTP, Typen, Routen.
-- Light + Dark über CSS Custom Properties in `styles.css`.
+- Light + Dark über CSS Custom Properties in `styles/tokens.css` (#18).
+
+**Globale Styles (#18)** liegen in drei Dateien statt einer, in dieser
+Reihenfolge in `angular.json` nach dem Font-CSS: `styles/tokens.css` (Custom
+Properties), `styles/base.css` (Element-Grundstile: `*`, `html`/`body`,
+`button`, `input`, `:focus-visible`), `styles/components.css` (global geteilte
+Bausteine). Jedes Token steht **genau einmal**, mit `light-dark(hell, dunkel)`
+statt getrennten Blöcken für `:root`, `@media (prefers-color-scheme: dark)`
+und `[data-theme]`: `:root` setzt `color-scheme: light dark` (die Systemwahl
+entscheidet), `[data-theme='light'|'dark']` kippt nur noch `color-scheme` auf
+die explizite Wahl — kein Token wird dort neu definiert. Braucht Chrome 123 /
+Safari 17.5 / Firefox 120+. Geteilte Bausteine wie `.card`, `.hint`,
+`button.primary` (inkl. `:disabled`) und die `h2`-Grundgröße leben als globale
+Klassen in `styles/components.css`; die Feature-Komponenten (`features/*/*.component.css`)
+behalten nur noch die echten Abweichungen (z. B. `.card { padding: 16px; }`
+in rules/words statt 20px, die abweichenden `.hint`-margins, die zusätzlichen
+`button.primary`-Eigenschaften in practice).
 
 **Die Heatmap-Rampe** ist eine sequenzielle Ein-Hue-Skala (blau) aus der
 validierten Referenzpalette des `dataviz`-Skills, Schritte 250→650. Sie steht in
-`styles.css` neben dem restlichen Theme und ist **im Dark Mode umgedreht**,
+`styles/tokens.css` neben dem restlichen Theme und ist **im Dark Mode umgedreht**,
 damit „mehr" immer vom Hintergrund wegläuft. Beide Richtungen sind gegen die
 tatsächlichen Flächen dieser App validiert (`#ffffff` bzw. `#1c1f25`), nicht
 gegen die Default-Flächen des Skills — der hellste Schritt der Originalrampe
@@ -490,7 +506,7 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
 - **Japanisch braucht eine explizite Schrift im Font-Stack** (#13). Ohne sie
   greift Chrome unter Windows auf Yu Gothic zurück (bei `lang="en"` auch auf
   eine chinesische Schrift), und die wirkt bei normaler Strichstärke dünn und
-  drahtig. `styles.css` nennt deshalb nach den Latin-Systemschriften Hiragino
+  drahtig. `styles/base.css` nennt deshalb nach den Latin-Systemschriften Hiragino
   (macOS/iOS bleiben unverändert) und dann `Noto Sans JP Variable`. Die kommt
   aus `@fontsource-variable/noto-sans-jp`, ist in `angular.json` unter
   `styles` eingebunden und wird mit der App ausgeliefert, ohne Google Fonts.

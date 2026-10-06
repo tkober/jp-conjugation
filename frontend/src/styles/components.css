@@ -1,0 +1,32 @@
+/* Shared building blocks reused across features/*.component.css. Each one
+   carries only what every user agrees on; genuine deviations (padding, a
+   margin, extra button states) stay in the component that needs them. */
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 16px;
+}
+
+.hint {
+  color: var(--text-muted);
+  font-size: 0.875rem;
+}
+
+h2 {
+  margin: 0 0 4px;
+  font-size: 1.0625rem;
+}
+
+button.primary {
+  background: var(--accent);
+  color: #fff;
+}
+
+button.primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

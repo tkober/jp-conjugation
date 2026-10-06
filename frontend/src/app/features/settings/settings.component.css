@@ -3,20 +3,6 @@
   padding-top: 24px;
 }
 
-.card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
-  padding: 20px;
-  margin-bottom: 16px;
-}
-
-h2 {
-  margin: 0 0 4px;
-  font-size: 1.0625rem;
-}
-
 h3 {
   margin: 18px 0 8px;
   font-size: 0.8125rem;
@@ -27,8 +13,6 @@ h3 {
 
 .hint {
   margin: 0 0 12px;
-  color: var(--text-muted);
-  font-size: 0.875rem;
 }
 
 .group {
@@ -128,16 +112,6 @@ button {
   border-radius: 10px;
   font-weight: 600;
   border: 1px solid transparent;
-}
-
-button.primary {
-  background: var(--accent);
-  color: #fff;
-}
-
-button.primary:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 button.ghost {
