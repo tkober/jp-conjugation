@@ -85,7 +85,8 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
 Ordnerkonvention (#16): `core/` sind Singletons und Typen, die die ganze App
 teilt (`api.service.ts`, `models.ts`), `shared/` sind wiederverwendete Bausteine
 ohne Feature-Zugehörigkeit (`furigana.ts`, `word-types.ts`,
-`form-instruction/`), `features/` hat einen Ordner pro Route
+`form-instruction/`), `layout/` (#17) ist die App-Chrome außerhalb der Features
+(`header/`), `features/` hat einen Ordner pro Route
 (`practice/`, `rules/`, `stats/`, `words/`, `settings/`). Jede Komponente hat
 Template und Styles in eigenen Dateien (`templateUrl`/`styleUrl`, nicht
 inline) statt Template-Literalen im `.ts`. `app.config.ts` trägt die
@@ -93,13 +94,22 @@ inline) statt Template-Literalen im `.ts`. `app.config.ts` trägt die
 `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
 `app.routes.ts` (vormals `routes.ts`).
 
-- `app.component.ts` — Shell: Marke (活 im Akzent-Quadrat plus Wortmarke, wie
-  bei katakana-reading; die Wortmarke wird unter 430px ausgeblendet, sonst
-  schiebt sie die Chips aus dem Viewport), Level/Elo/Streak-Chips (geteiltes
-  Signal in `core/api.service.ts`, beim Start über `/api/profile` befüllt),
-  Fortschrittsbalken zum nächsten Level, Tabs und Theme-Umschalter
-  (system/hell/dunkel, in `localStorage`). Das Favicon ist dasselbe Zeichen als
+- `app.component.ts` (#17) — nur noch Layout-Rahmen (`:host`-Maße/Padding) und
+  Profil-Load beim Start (`api.loadProfile()`); Template ist `<app-header />`
+  plus `<main><router-outlet /></main>`. Das Favicon ist dasselbe Zeichen als
   Inline-SVG-Data-URI in `index.html` — kein Asset, nichts synchron zu halten.
+- `layout/header/header.component.ts` (#17) — Marke (活 im Akzent-Quadrat plus
+  Wortmarke, wie bei katakana-reading; die Wortmarke wird unter 430px
+  ausgeblendet, sonst schiebt sie die Chips aus dem Viewport),
+  Level/Elo/Streak-Chips (geteiltes Signal in `core/api.service.ts`),
+  Fortschrittsbalken zum nächsten Level, Tabs und Theme-Button (liest
+  `core/theme.service.ts`). **Sticky sitzt auf `:host`, nicht auf `<header>`**:
+  ein sticky Element klebt nur innerhalb seines *Parents*, und `<header>`
+  wäre jetzt ein Kind von `app-header`, dessen Host-Element genau so hoch ist
+  wie der Header selbst — also müssen `position: sticky` & Co. auf den Host.
+- `core/theme.service.ts` (#17) — Theme-Zustand (system/hell/dunkel) als
+  Singleton: `theme`/`icon`/`title` als Signals, `cycle()`, Persistenz in
+  `localStorage` hinter try/catch (private Modus kann den Zugriff werfen).
 - `features/practice/practice.component.ts` — Übungsansicht mit explizitem Session-Lebenszyklus
   (`idle` → `active` → `answered` → `ended`). Die Session startet **nicht**
   automatisch. Countdown-Ring (SVG, `stroke-dashoffset`, r=19 in einer 44er-Box;
@@ -481,6 +491,9 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
   Host-Element schon die eingebaute DOM-Eigenschaft `style`; ein gleichnamiger
   `input()` bekommt dadurch nie einen Wert, ohne dass es einen Fehler gibt.
   `shared/form-instruction/form-instruction.component.ts` nennt seinen Stil-Input deshalb `mode`.
+- Die Routen in `app.routes.ts` sind seit #17 alle `loadComponent` (Lazy
+  Loading) statt `component` — jedes Feature wird ein eigener Chunk, der
+  Initial-Bundle sinkt entsprechend.
 - Der Zeitbudget-Default stieg mit #3 von 3000+700/Kana auf 4500+1000/Kana
   (~50 %) — nicht wegen der Formel, sondern weil die alte Vorgabe knapp genug
   war, dass Lesen der (jetzt klareren) Anweisungs-Chips plus Tippen auf einer

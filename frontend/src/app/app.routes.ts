@@ -1,25 +1,41 @@
 import { Routes } from '@angular/router';
 
-import { PracticeComponent } from './features/practice/practice.component';
-import { RulesComponent } from './features/rules/rules.component';
-import { SettingsComponent } from './features/settings/settings.component';
-import { StatsComponent } from './features/stats/stats.component';
-import { WordsComponent } from './features/words/words.component';
-
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'practice' },
   {
     path: 'practice',
-    component: PracticeComponent,
+    loadComponent: () =>
+      import('./features/practice/practice.component').then((m) => m.PracticeComponent),
     title: 'Practice · Conjugation Trainer',
   },
-  { path: 'rules', component: RulesComponent, title: 'Rules · Conjugation Trainer' },
-  { path: 'rules/:form', component: RulesComponent, title: 'Rules · Conjugation Trainer' },
-  { path: 'stats', component: StatsComponent, title: 'Stats · Conjugation Trainer' },
-  { path: 'words', component: WordsComponent, title: 'Words · Conjugation Trainer' },
+  {
+    path: 'rules',
+    loadComponent: () =>
+      import('./features/rules/rules.component').then((m) => m.RulesComponent),
+    title: 'Rules · Conjugation Trainer',
+  },
+  {
+    path: 'rules/:form',
+    loadComponent: () =>
+      import('./features/rules/rules.component').then((m) => m.RulesComponent),
+    title: 'Rules · Conjugation Trainer',
+  },
+  {
+    path: 'stats',
+    loadComponent: () =>
+      import('./features/stats/stats.component').then((m) => m.StatsComponent),
+    title: 'Stats · Conjugation Trainer',
+  },
+  {
+    path: 'words',
+    loadComponent: () =>
+      import('./features/words/words.component').then((m) => m.WordsComponent),
+    title: 'Words · Conjugation Trainer',
+  },
   {
     path: 'settings',
-    component: SettingsComponent,
+    loadComponent: () =>
+      import('./features/settings/settings.component').then((m) => m.SettingsComponent),
     title: 'Settings · Conjugation Trainer',
   },
   { path: '**', redirectTo: 'practice' },
