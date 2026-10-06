@@ -1,0 +1,157 @@
+@switch (phase()) {
+  @case ('idle') {
+    <section class="card intro">
+      <p class="lead">Conjugate the word into the form you are asked for.</p>
+      <p class="hint">
+        Type the reading in romaji — it turns into kana as you go.
+      </p>
+      <button type="button" class="primary" (click)="start()">Start session</button>
+    </section>
+  }
+
+  @case ('ended') {
+    <section class="card summary">
+      <h2>Session finished</h2>
+      <dl>
+        <div><dt>Answered</dt><dd>{{ answered() }}</dd></div>
+        <div>
+          <dt>Correct</dt>
+          <dd>{{ correct() }} <i>({{ accuracy() | number: '1.0-0' }}%)</i></dd>
+        </div>
+        <div><dt>Ø time</dt><dd>{{ averageSeconds() | number: '1.1-1' }} s</dd></div>
+        <div>
+          <dt>Elo</dt>
+          <dd [class.up]="eloDelta() > 0" [class.down]="eloDelta() < 0">
+            {{ eloDelta() > 0 ? '+' : '' }}{{ eloDelta() | number: '1.0-1' }}
+          </dd>
+        </div>
+      </dl>
+      <button type="button" class="primary" (click)="start()">Practice again</button>
+    </section>
+  }
+
+  @default {
+    @if (exercise(); as ex) {
+      <section class="card prompt">
+        <div class="task">
+          <app-form-instruction
+            class="form"
+            [parts]="ex.instruction"
+            [mode]="ex.instruction_style"
+          />
+          <svg class="ring" viewBox="0 0 44 44" aria-hidden="true">
+            <circle class="track" cx="22" cy="22" [attr.r]="radius" />
+            <circle
+              class="value"
+              [class.low]="fractionLeft() < 0.25"
+              cx="22"
+              cy="22"
+              [attr.r]="radius"
+              [attr.stroke-dasharray]="circumference"
+              [attr.stroke-dashoffset]="ringOffset()"
+            />
+            <text x="22" y="22" [class.low]="fractionLeft() < 0.25">{{ ringLabel() }}</text>
+          </svg>
+        </div>
+
+        <p class="word">
+          @if (prompt(); as r) {
+            @if (r.base) {
+              <ruby>{{ r.base }}<rt>{{ r.reading }}</rt></ruby>{{ r.tail }}
+            } @else {
+              {{ r.tail }}
+            }
+          }
+        </p>
+        <p class="english">{{ ex.english }}</p>
+      </section>
+
+      <!-- Native submit, not ngSubmit: that one comes from NgForm and would
+           need FormsModule; without it the browser would really submit the
+           form and reload the page. -->
+      <form #answerRow (submit)="submit($event)">
+        <div class="row">
+          <input
+            #answerInput
+            type="text"
+            autocomplete="off"
+            autocapitalize="off"
+            spellcheck="false"
+            placeholder="答え"
+            enterkeyhint="go"
+            [class.correct]="result()?.correct === true"
+            [class.wrong]="result()?.correct === false"
+            (input)="scheduleSync()"
+            (keyup)="scheduleSync()"
+          />
+          <button
+            type="submit"
+            class="primary"
+            (mousedown)="keepFocus($event)"
+            [disabled]="phase() === 'active' && !ready()"
+          >
+            {{ phase() === 'answered' ? 'Next' : 'Check' }}
+          </button>
+        </div>
+        @if (romajiLeft() && phase() === 'active') {
+          <p class="hint">Finish the syllable — the answer has to be kana.</p>
+        }
+      </form>
+
+      @if (result(); as r) {
+        <section class="card verdict" [class.ok]="r.correct">
+          @if (r.correct) {
+            <p class="headline">正解 <i>{{ r.fast ? 'fast' : '' }}</i></p>
+            <p class="grammar">{{ grammarLine() }}</p>
+          } @else {
+            <p class="headline">不正解</p>
+            <p class="grammar">{{ grammarLine() }}</p>
+            <p class="solution">
+              @if (solution(); as s) {
+                @if (s.base) {
+                  <ruby>{{ s.base }}<rt>{{ s.reading }}</rt></ruby>{{ s.tail }}
+                } @else {
+                  {{ s.tail }}
+                }
+              }
+            </p>
+            @if (partial(); as label) {
+              <p class="partial">{{ label }}</p>
+            }
+          }
+
+          <div class="elo-row">
+            <p class="elo" [class.up]="r.elo.delta > 0" [class.down]="r.elo.delta < 0">
+              {{ r.elo.delta > 0 ? '+' : '' }}{{ r.elo.delta | number: '1.0-1' }} Elo
+            </p>
+            <a
+              class="jisho"
+              [href]="jishoUrl()"
+              target="_blank"
+              rel="noopener"
+              (mousedown)="keepFocus($event)"
+              >Jisho ↗</a
+            >
+          </div>
+
+          @if (r.transformations.length) {
+            <div class="rule">
+              @for (t of r.transformations; track $index; let last = $last) {
+                <span class="step">
+                  <span class="unaltered">{{ t.unaltered }}</span
+                  ><span class="altered">{{ t.altered_part }}</span>
+                  <span class="operation">{{ t.operation }}</span>
+                  @if (last) {
+                    <span class="alteration">{{ t.alteration }}</span>
+                  }
+                </span>
+              }
+            </div>
+          }
+        </section>
+      }
+
+      <button type="button" class="ghost" (click)="end()">End session</button>
+    }
+  }
+}

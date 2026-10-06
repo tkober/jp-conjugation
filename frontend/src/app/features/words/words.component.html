@@ -1,0 +1,95 @@
+<section class="card filters">
+  <input
+    type="search"
+    placeholder="Search kanji, kana or meaning"
+    [value]="query()"
+    (input)="onSearch($any($event.target).value)"
+  />
+
+  <div class="row">
+    <label>
+      <span>Type</span>
+      <select [value]="wordType()" (change)="setWordType($any($event.target).value)">
+        @for (type of wordTypes; track type.value) {
+          <option [value]="type.value">{{ type.label }}</option>
+        }
+      </select>
+    </label>
+
+    <label>
+      <span>JLPT</span>
+      <select [value]="jlpt()" (change)="setJlpt($any($event.target).value)">
+        <option value="">All</option>
+        @for (level of levels; track level) {
+          <option [value]="level">{{ level.toUpperCase() }}</option>
+        }
+      </select>
+    </label>
+
+    <label>
+      <span>Sort</span>
+      <select [value]="sort()" (change)="setSort($any($event.target).value)">
+        @for (option of sorts; track option.value) {
+          <option [value]="option.value">{{ option.label }}</option>
+        }
+      </select>
+    </label>
+  </div>
+</section>
+
+@if (result(); as data) {
+  <section class="card">
+    <p class="count">
+      {{ data.total | number }} words
+      @if (data.total > pageSize) {
+        <span class="muted">
+          · showing {{ data.offset + 1 }}–{{ data.offset + data.words.length }}
+        </span>
+      }
+    </p>
+
+    <div class="grid-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Word</th>
+            <th>Meaning</th>
+            <th class="num">JLPT</th>
+            <th class="num">Rating</th>
+            <th class="num">Seen</th>
+          </tr>
+        </thead>
+        <tbody>
+          @for (word of data.words; track word.id) {
+            <tr>
+              <td>
+                <b>{{ word.kanji }}</b>
+                <i>{{ word.hiragana }}</i>
+              </td>
+              <td class="meaning" [title]="word.english">{{ word.english }}</td>
+              <td class="num muted">{{ word.jlpt.toUpperCase() }}</td>
+              <td class="num">{{ word.rating | number: '1.0-0' }}</td>
+              <td class="num muted">
+                {{ word.attempts ? word.correct + '/' + word.attempts : '—' }}
+              </td>
+            </tr>
+          } @empty {
+            <tr>
+              <td colspan="5" class="muted">Nothing matches that.</td>
+            </tr>
+          }
+        </tbody>
+      </table>
+    </div>
+
+    @if (data.total > pageSize) {
+      <div class="pager">
+        <button type="button" [disabled]="offset() === 0" (click)="page(-1)">Previous</button>
+        <span class="muted">{{ pageNumber() }} / {{ pageCount() }}</span>
+        <button type="button" [disabled]="!hasNext()" (click)="page(1)">Next</button>
+      </div>
+    }
+  </section>
+} @else {
+  <p class="loading">Loading…</p>
+}

@@ -1,0 +1,111 @@
+@if (data(); as data) {
+  <section class="card picker">
+    @for (category of categories(); track category.name) {
+      <div class="category">
+        <h2>{{ category.name }}</h2>
+        <nav class="chips" [attr.aria-label]="category.name">
+          @for (group of category.groups; track group.title) {
+            <a
+              class="chip"
+              [class.active]="group === selected()?.group"
+              [routerLink]="['/rules', group.forms[0].form_key]"
+              replaceUrl
+              >{{ group.title }}</a
+            >
+          }
+        </nav>
+      </div>
+    }
+  </section>
+
+  @if (selected(); as sel) {
+    <section class="card explain">
+      <p class="eyebrow">{{ sel.group.category }}</p>
+      <h1>{{ sel.group.title }}</h1>
+      <p class="summary">{{ sel.group.summary }}</p>
+      <p class="build">{{ sel.group.build }}</p>
+
+      <nav class="forms" aria-label="Form">
+        @for (form of sel.group.forms; track form.form_key) {
+          <a
+            [class.active]="form === sel.form"
+            [routerLink]="['/rules', form.form_key]"
+            replaceUrl
+            >{{ form.settings_title }}</a
+          >
+        }
+      </nav>
+    </section>
+
+    <section class="card table">
+      <h2 class="form-title">{{ sel.form.title }}</h2>
+
+      @for (section of sections(); track section.wordType) {
+        <h3>
+          {{ typeTitle(section.wordType) }}
+          <span class="type-label">{{ typeLabel(section.wordType) }}</span>
+        </h3>
+
+        <ul>
+          @for (row of section.rows; track $index) {
+            <li [class.exception]="row.exception">
+              <div class="pattern">
+                @switch (patternKind(row)) {
+                  @case ('unchanged') {
+                    <span class="muted">dictionary form</span>
+                  }
+                  @case ('append') {
+                    <span class="op">+</span><b>{{ row.replacement }}</b>
+                  }
+                  @case ('drop') {
+                    <span class="op">−</span><s>{{ row.ending }}</s>
+                  }
+                  @default {
+                    <span class="tilde">{{ tilde(row) }}</span><s>{{ row.ending }}</s>
+                    <span class="op">→</span>
+                    <span class="tilde">{{ tilde(row) }}</span><b>{{ row.replacement }}</b>
+                  }
+                }
+                @if (row.exception) {
+                  <span class="badge">exception</span>
+                }
+              </div>
+
+              <div class="example">
+                <span class="word">
+                  {{ row.example.kanji }} <span class="op">→</span>
+                  <b>{{ row.example.result_kanji }}</b>
+                </span>
+                <span class="reading">
+                  {{ row.example.hiragana }} → {{ row.example.result_hiragana }}
+                  · {{ row.example.english }}
+                </span>
+              </div>
+
+              <!-- Only for composed forms: a single step says nothing the
+                   pattern above does not already say. -->
+              @if (row.transformations.length > 1) {
+                <div class="rule">
+                  @for (t of row.transformations; track $index; let last = $last) {
+                    <span class="step">
+                      <span class="unaltered">{{ t.unaltered }}</span
+                      ><span class="altered">{{ t.altered_part }}</span>
+                      <span class="operation">{{ t.operation }}</span>
+                      @if (last) {
+                        <span class="alteration">{{ t.alteration }}</span>
+                      }
+                    </span>
+                  }
+                </div>
+              }
+            </li>
+          }
+        </ul>
+      }
+    </section>
+  }
+} @else if (failed()) {
+  <p class="loading">Could not load the rules.</p>
+} @else {
+  <p class="loading">Loading…</p>
+}

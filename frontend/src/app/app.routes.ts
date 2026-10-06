@@ -1,10 +1,10 @@
 import { Routes } from '@angular/router';
 
-import { PracticeComponent } from './practice.component';
-import { RulesComponent } from './rules.component';
-import { SettingsComponent } from './settings.component';
-import { StatsComponent } from './stats.component';
-import { WordsComponent } from './words.component';
+import { PracticeComponent } from './features/practice/practice.component';
+import { RulesComponent } from './features/rules/rules.component';
+import { SettingsComponent } from './features/settings/settings.component';
+import { StatsComponent } from './features/stats/stats.component';
+import { WordsComponent } from './features/words/words.component';
 
 export const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'practice' },
