@@ -82,47 +82,58 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
 
 ### Frontend (`frontend/src/app/`)
 
+Ordnerkonvention (#16): `core/` sind Singletons und Typen, die die ganze App
+teilt (`api.service.ts`, `models.ts`), `shared/` sind wiederverwendete Bausteine
+ohne Feature-Zugehörigkeit (`furigana.ts`, `word-types.ts`,
+`form-instruction/`), `features/` hat einen Ordner pro Route
+(`practice/`, `rules/`, `stats/`, `words/`, `settings/`). Jede Komponente hat
+Template und Styles in eigenen Dateien (`templateUrl`/`styleUrl`, nicht
+inline) statt Template-Literalen im `.ts`. `app.config.ts` trägt die
+`ApplicationConfig` (HttpClient, Router), `main.ts` ruft nur noch
+`bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
+`app.routes.ts` (vormals `routes.ts`).
+
 - `app.component.ts` — Shell: Marke (活 im Akzent-Quadrat plus Wortmarke, wie
   bei katakana-reading; die Wortmarke wird unter 430px ausgeblendet, sonst
   schiebt sie die Chips aus dem Viewport), Level/Elo/Streak-Chips (geteiltes
-  Signal in `api.service.ts`, beim Start über `/api/profile` befüllt),
+  Signal in `core/api.service.ts`, beim Start über `/api/profile` befüllt),
   Fortschrittsbalken zum nächsten Level, Tabs und Theme-Umschalter
   (system/hell/dunkel, in `localStorage`). Das Favicon ist dasselbe Zeichen als
   Inline-SVG-Data-URI in `index.html` — kein Asset, nichts synchron zu halten.
-- `practice.component.ts` — Übungsansicht mit explizitem Session-Lebenszyklus
+- `features/practice/practice.component.ts` — Übungsansicht mit explizitem Session-Lebenszyklus
   (`idle` → `active` → `answered` → `ended`). Die Session startet **nicht**
   automatisch. Countdown-Ring (SVG, `stroke-dashoffset`, r=19 in einer 44er-Box;
   Restsekunden in der Mitte, letztes Viertel und Überzeit rot, bei Überzeit
   zählt er als „+x,x s" hoch), Auflösung mit Herleitungskette,
   Session-Zusammenfassung. **Der Fokus bleibt die ganze Session im
   Eingabefeld** — auf dem Handy hängt daran die Bildschirmtastatur (siehe
-  unten). Die Zielform zeigt `form-instruction.component.ts` statt eines
+  unten). Die Zielform zeigt `shared/form-instruction/form-instruction.component.ts` statt eines
   Titels (siehe unten, „Anweisungen als Chips"). Die Auflösung nennt seit #6
   auch die abgefragte Grammatik (`.grammar`, z. B. „Godan verb (ぐ) · Te-form,
   positive") — bei beiden Ausgängen, richtig wie falsch, direkt unter der
-  正解/不正解-Headline. Die Wortart-Titel kommen aus `word-types.ts`
-  (`wordTypeTitle()`), geteilt mit `stats.component.ts`. Seit #7 verlinkt die
+  正解/不正解-Headline. Die Wortart-Titel kommen aus `shared/word-types.ts`
+  (`wordTypeTitle()`), geteilt mit `features/stats/stats.component.ts`. Seit #7 verlinkt die
   Auflösung zusätzlich, in einer Zeile mit dem Elo-Delta, auf den
   jisho.org-Eintrag des Worts (Kanji + Leerzeichen + Lesung im Suchpfad — das
   setzt bei Jisho auch bei Homographen und suru-Verben den exakten Eintrag an
   erste Stelle). Der Link öffnet in einem neuen Tab und nimmt per
   `(mousedown)="keepFocus($event)"` dem Eingabefeld nicht den Fokus, genau wie
   Check/Next.
-- `form-instruction.component.ts` — rendert `Exercise.instruction` (eine
+- `shared/form-instruction/form-instruction.component.ts` — rendert `Exercise.instruction` (eine
   geordnete Liste strukturierter Teile, siehe
   `backend/app/conjugation/instruction.py`) als Chip-Reihe, in einem von drei
   Stilen (`text` / `emoji` / `both`, Signal-Input `mode`). **Nicht `style`
   nennen** — das kollidiert mit der eingebauten DOM-Eigenschaft, die Angular
   auf jedem Host-Element schon bindet, ein gleichnamiger Component-Input bekäme
   nie einen Wert.
-- `stats.component.ts` — KPI-Kacheln, Elo-Sparkline (SVG, eine Serie, deshalb
+- `features/stats/stats.component.ts` — KPI-Kacheln, Elo-Sparkline (SVG, eine Serie, deshalb
   ohne Legende) und als Kernstück die **Heatmap Form × Wortart**, getrennt für
   Adjektive und Verben, plus Chips für die neun Godan-Endungen. Kodiert wird die
   **Fehlerquote**, nicht die Trefferquote: so sticht hervor, was Arbeit braucht,
   statt zu verblassen. „Noch nie geübt" ist ein eigener Zustand (gestrichelte
   Zelle) und nicht der hellste Rampenschritt — 0 % richtig und „nie probiert"
   dürfen nicht gleich aussehen.
-- `rules.component.ts` (#11) — Tab „Rules": Gruppen-Chips (Adjectives /
+- `features/rules/rules.component.ts` (#11) — Tab „Rules": Gruppen-Chips (Adjectives /
   Verbs), darunter Erklärung und ein Segment-Umschalter für die Formen der
   Gruppe, dann die Regeltabelle pro Wortart. Die gewählte Form steht in der URL
   (`/rules/:form`, Links mit `replaceUrl`), ohne Parameter Te-Form positiv.
@@ -131,9 +142,9 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   zusammengesetzten Formen — bei einem Schritt sagt sie nichts, was das Muster
   nicht schon sagt. Mit fünf Tabs werden die Tabs unter 430px enger und
   kleiner, damit sie bei 360px in eine Zeile passen.
-- `words.component.ts` — Vokabelbrowser mit Filtern (Wortart, JLPT, Suche mit
+- `features/words/words.component.ts` — Vokabelbrowser mit Filtern (Wortart, JLPT, Suche mit
   Entprellung), Sortierung und Blättern zu 50.
-- `settings.component.ts` — Formen- und JLPT-Auswahl in denselben Gruppen wie
+- `features/settings/settings.component.ts` — Formen- und JLPT-Auswahl in denselben Gruppen wie
   der alte Dialog, Zeitbudget mit zwei Reglern und Live-Vorschau, Reset mit
   Mehrfach-Bestätigung. **Die Zeitbudget-Beispiele kommen aus
   `/api/settings`**, damit die Formel nicht doppelt gepflegt wird. Dazwischen
@@ -144,9 +155,9 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   aktive ist deaktiviert), eine Live-Vorschau aus `instruction_examples` und,
   außer im Text-Stil, eine Legende aus `instruction_dimensions`. Auch hier
   kommt die Vorschau vom Server, aus demselben Grund wie beim Zeitbudget.
-- `furigana.ts` — Zerlegung fürs `<ruby>`: welcher Teil eine Lesung darüber
+- `shared/furigana.ts` — Zerlegung fürs `<ruby>`: welcher Teil eine Lesung darüber
   bekommt und was Okurigana ist. Portiert aus den drei Pipes der alten App.
-- `api.service.ts`, `models.ts`, `routes.ts` — HTTP, Typen, Routen.
+- `core/api.service.ts`, `core/models.ts`, `app.routes.ts` — HTTP, Typen, Routen.
 - Light + Dark über CSS Custom Properties in `styles.css`.
 
 **Die Heatmap-Rampe** ist eine sequenzielle Ein-Hue-Skala (blau) aus der
@@ -469,7 +480,7 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
 - **Ein Component-Input darf nicht `style` heißen.** Angular bindet auf jedem
   Host-Element schon die eingebaute DOM-Eigenschaft `style`; ein gleichnamiger
   `input()` bekommt dadurch nie einen Wert, ohne dass es einen Fehler gibt.
-  `form-instruction.component.ts` nennt seinen Stil-Input deshalb `mode`.
+  `shared/form-instruction/form-instruction.component.ts` nennt seinen Stil-Input deshalb `mode`.
 - Der Zeitbudget-Default stieg mit #3 von 3000+700/Kana auf 4500+1000/Kana
   (~50 %) — nicht wegen der Formel, sondern weil die alte Vorgabe knapp genug
   war, dass Lesen der (jetzt klareren) Anweisungs-Chips plus Tippen auf einer
@@ -487,8 +498,8 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
   Browser scrollt das fokussierte Feld sichtbar — und der sticky Header
   verschwindet über dem sichtbaren Streifen. Zweite Referenzgröße ist deshalb
   **360×380**: das bleibt von einem 787px-Handy übrig, wenn die Tastatur steht.
-  Die `@media (max-height: 500px)`-Blöcke in `app.component.ts` und
-  `practice.component.ts` stutzen die Übung genau darauf, damit beim Tippen ins
+  Die `@media (max-height: 500px)`-Blöcke in `app.component.css` und
+  `features/practice/practice.component.css` stutzen die Übung genau darauf, damit beim Tippen ins
   Feld gar nichts mehr zu scrollen ist.
 - **Die Tastatur geht nur für einen Fokus auf, den der Nutzer ausgelöst hat** —
   einmal offen, darf sie zwischen zwei Übungen also nie verloren gehen. Drei

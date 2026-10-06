@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { beforeEach, describe, expect, it } from 'vitest';
 
-import { InstructionPart } from './models';
+import { InstructionPart } from '../../core/models';
 import { FormInstructionComponent } from './form-instruction.component';
 
 const CATEGORY_PART: InstructionPart = {

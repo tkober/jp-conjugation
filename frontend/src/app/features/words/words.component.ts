@@ -1,0 +1,105 @@
+import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+import { DecimalPipe } from '@angular/common';
+
+import { ApiService } from '../../core/api.service';
+import { WordsResponse } from '../../core/models';
+
+const PAGE_SIZE = 50;
+const SEARCH_DEBOUNCE_MS = 250;
+
+const WORD_TYPES = [
+  { value: '', label: 'All' },
+  { value: 'ichidan_verb', label: '一段' },
+  { value: 'godan_verb', label: '五段' },
+  { value: 'suru_verb', label: 'する' },
+  { value: 'kuru_verb', label: '来る' },
+  { value: 'i_adjective', label: 'い-Adj' },
+  { value: 'na_adjective', label: 'な-Adj' },
+];
+
+const SORTS = [
+  { value: 'rating', label: 'Hardest' },
+  { value: 'jlpt', label: 'Level' },
+  { value: 'kanji', label: 'A–Z' },
+  { value: 'attempts', label: 'Most seen' },
+];
+
+@Component({
+  selector: 'app-words',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  imports: [DecimalPipe],
+  templateUrl: './words.component.html',
+  styleUrl: './words.component.css',
+})
+export class WordsComponent {
+  private api = inject(ApiService);
+
+  readonly wordTypes = WORD_TYPES;
+  readonly sorts = SORTS;
+  readonly levels = ['n5', 'n4', 'n3', 'n2', 'n1'];
+  readonly pageSize = PAGE_SIZE;
+
+  readonly result = signal<WordsResponse | null>(null);
+  readonly query = signal('');
+  readonly wordType = signal('');
+  readonly jlpt = signal('');
+  readonly sort = signal('rating');
+  readonly offset = signal(0);
+
+  private searchTimer: ReturnType<typeof setTimeout> | undefined;
+
+  readonly pageCount = computed(() =>
+    Math.max(1, Math.ceil((this.result()?.total ?? 0) / PAGE_SIZE)),
+  );
+  readonly pageNumber = computed(() => Math.floor(this.offset() / PAGE_SIZE) + 1);
+  readonly hasNext = computed(() => this.pageNumber() < this.pageCount());
+
+  constructor() {
+    this.load();
+  }
+
+  onSearch(value: string): void {
+    this.query.set(value);
+    clearTimeout(this.searchTimer);
+    this.searchTimer = setTimeout(() => {
+      this.offset.set(0);
+      this.load();
+    }, SEARCH_DEBOUNCE_MS);
+  }
+
+  setWordType(value: string): void {
+    this.wordType.set(value);
+    this.offset.set(0);
+    this.load();
+  }
+
+  setJlpt(value: string): void {
+    this.jlpt.set(value);
+    this.offset.set(0);
+    this.load();
+  }
+
+  setSort(value: string): void {
+    this.sort.set(value);
+    this.offset.set(0);
+    this.load();
+  }
+
+  page(direction: number): void {
+    this.offset.update((current) => Math.max(0, current + direction * PAGE_SIZE));
+    this.load();
+  }
+
+  private load(): void {
+    this.api
+      .words({
+        word_type: this.wordType(),
+        jlpt: this.jlpt(),
+        q: this.query(),
+        sort: this.sort(),
+        limit: PAGE_SIZE,
+        offset: this.offset(),
+      })
+      .subscribe((data) => this.result.set(data));
+  }
+}
