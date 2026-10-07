@@ -12,9 +12,16 @@
        answer field. -->
   <meta name="viewport" content="width=device-width, initial-scale=1, interactive-widget=resizes-content">
   <meta name="color-scheme" content="light dark">
-  <!-- Same mark as the header: 活 on the accent red. Inline SVG, so there is no
-       asset to ship and nothing to keep in sync. -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%23c62828%22/><text x=%2250%22 y=%2274%22 font-size=%2266%22 text-anchor=%22middle%22 fill=%22%23ffffff%22 font-family=%22system-ui,sans-serif%22>活</text></svg>">
+  <!-- Same mark as the shell's brand: 活 on the accent. Inline SVG, so there is
+       no asset to ship and nothing to keep in sync. The fill is the fuji
+       accent preset's light value (#6b4f96, see sumi-ui's core/accent.ts) —
+       it follows whichever accent provideSumi() is given in app.config.ts,
+       so update it by hand if that accent ever changes. -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><rect width=%22100%22 height=%22100%22 rx=%2220%22 fill=%22%236b4f96%22/><text x=%2250%22 y=%2274%22 font-size=%2266%22 text-anchor=%22middle%22 fill=%22%23ffffff%22 font-family=%22system-ui,sans-serif%22>活</text></svg>">
+  <!-- Sumi UI's font-face rules, loaded as their own non-blocking stylesheet
+       (not injected into styles.scss) — see sumi-ui's README, "Using Sumi UI
+       in an app", step 6. -->
+  <link rel="stylesheet" href="sumi-fonts.css">
 </head>
 <body>
   <app-root></app-root>

@@ -1,0 +1,8 @@
+// Global styles entry point (#31). Sumi UI's tokens and base styles come
+// first, then the app's own small set of leftover tokens and shared
+// building blocks (see styles/app-tokens.css, styles/base.css,
+// styles/components.css).
+@use 'sumi-ui/projects/sumi-ui/styles/sumi';
+@use 'styles/app-tokens.css';
+@use 'styles/base.css';
+@use 'styles/components.css';

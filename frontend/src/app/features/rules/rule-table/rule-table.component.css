@@ -16,7 +16,7 @@ h3 {
 .type-label {
   margin-left: 4px;
   font-weight: 400;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 ul {
@@ -33,7 +33,7 @@ li {
   align-items: baseline;
   gap: 2px 12px;
   padding: 8px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--sumi-line);
 }
 
 li:last-child {
@@ -50,11 +50,11 @@ li:last-child {
 }
 
 .tilde {
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .pattern s {
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .pattern b {
@@ -62,7 +62,7 @@ li:last-child {
 }
 
 .op {
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .badge {
@@ -70,8 +70,8 @@ li:last-child {
   margin-left: 4px;
   padding: 1px 8px;
   border-radius: 999px;
-  border: 1px solid var(--accent);
-  color: var(--accent);
+  border: 1px solid var(--sumi-accent);
+  color: var(--sumi-accent);
   font-size: 0.6875rem;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -88,11 +88,11 @@ li:last-child {
 .reading {
   display: block;
   font-size: 0.8125rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .muted {
-  color: var(--text-muted);
+  color: var(--sumi-muted);
   font-size: 0.9375rem;
 }
 
@@ -108,12 +108,12 @@ li:last-child {
 
 .rule .altered {
   text-decoration: line-through;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .rule .operation {
   margin: 0 0.4rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .rule .unaltered,

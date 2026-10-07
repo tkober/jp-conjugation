@@ -1,5 +1,18 @@
-<app-header />
+<sumi-app-shell [brand]="brand" [nav]="navItems">
+  <sumi-app-switcher sumiShellSwitcher />
 
-<main>
-  <router-outlet />
-</main>
+  @if (api.profile(); as profile) {
+    <div sumiShellActions class="profile-pill">
+      <sumi-badge tone="accent" title="Level and Elo">Lv {{ profile.level }} · {{ profile.elo | number: '1.0-0' }}</sumi-badge>
+      <sumi-badge tone="neutral" title="Current streak">{{ profile.current_streak }}</sumi-badge>
+      <span class="level-progress" [attr.aria-label]="'Progress to level ' + (profile.level + 1)">
+        <span [style.width.%]="profile.level_progress * 100"></span>
+      </span>
+    </div>
+  }
+
+  <div class="page">
+    <router-outlet />
+  </div>
+  <sumi-hotkey-help />
+</sumi-app-shell>

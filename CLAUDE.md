@@ -86,31 +86,33 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
 Ordnerkonvention (#16): `core/` sind Singletons und Typen, die die ganze App
 teilt (`api.service.ts`, `models.ts`), `shared/` sind wiederverwendete Bausteine
 ohne Feature-Zugehörigkeit (`furigana.ts`, `word-types.ts`,
-`form-instruction/`), `layout/` (#17) ist die App-Chrome außerhalb der Features
-(`header/`), `features/` hat einen Ordner pro Route
-(`practice/`, `rules/`, `stats/`, `words/`, `settings/`). Jede Komponente hat
+`form-instruction/`), `features/` hat einen Ordner pro Route
+(`practice/`, `rules/`, `stats/`, `words/`, `settings/`). Seit #31 gibt es kein
+eigenes `layout/` mehr — die App-Chrome kommt aus Sumi UI (s. u.), `app/`
+bleibt also bei `core/`, `shared/` und `features/`. Jede Komponente hat
 Template und Styles in eigenen Dateien (`templateUrl`/`styleUrl`, nicht
 inline) statt Template-Literalen im `.ts`. `app.config.ts` trägt die
-`ApplicationConfig` (HttpClient, Router), `main.ts` ruft nur noch
-`bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
+`ApplicationConfig` (HttpClient, Router, `provideSumi()`), `main.ts` ruft nur
+noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
 `app.routes.ts` (vormals `routes.ts`).
 
-- `app.component.ts` (#17) — nur noch Layout-Rahmen (`:host`-Maße/Padding) und
-  Profil-Load beim Start (`api.loadProfile()`); Template ist `<app-header />`
-  plus `<main><router-outlet /></main>`. Das Favicon ist dasselbe Zeichen als
-  Inline-SVG-Data-URI in `index.html` — kein Asset, nichts synchron zu halten.
-- `layout/header/header.component.ts` (#17) — Marke (活 im Akzent-Quadrat plus
-  Wortmarke, wie bei katakana-reading; die Wortmarke wird unter 430px
-  ausgeblendet, sonst schiebt sie die Chips aus dem Viewport),
-  Level/Elo/Streak-Chips (geteiltes Signal in `core/api.service.ts`),
-  Fortschrittsbalken zum nächsten Level, Tabs und Theme-Button (liest
-  `core/theme.service.ts`). **Sticky sitzt auf `:host`, nicht auf `<header>`**:
-  ein sticky Element klebt nur innerhalb seines *Parents*, und `<header>`
-  wäre jetzt ein Kind von `app-header`, dessen Host-Element genau so hoch ist
-  wie der Header selbst — also müssen `position: sticky` & Co. auf den Host.
-- `core/theme.service.ts` (#17) — Theme-Zustand (system/hell/dunkel) als
-  Singleton: `theme`/`icon`/`title` als Signals, `cycle()`, Persistenz in
-  `localStorage` hinter try/catch (private Modus kann den Zugriff werfen).
+- `app.component.ts` (#17, Chrome seit #31 `sumi-app-shell`) — Profil-Load
+  beim Start (`api.loadProfile()`) plus die Shell-Verdrahtung: `brand` (活),
+  `navItems` (Practice/Rules/Stats/Words/Settings, je mit Icon, Links relativ
+  wie in sumi-ui's Showcase), `<sumi-app-switcher sumiShellSwitcher />` und
+  `<sumi-hotkey-help />`. Level/Elo/Streak stehen als zwei `sumi-badge`s plus
+  ein schmaler Fortschrittsbalken in `sumiShellActions` — kompakt genug für
+  ein 360px-Handy neben der Marke. `app.component.css` zentriert den
+  `<router-outlet />`-Inhalt nur noch auf ~640px (`.page`), ohne eigenes
+  Padding: das liefert bereits `sumi-app-shell__main`, doppeltes Padding wäre
+  sonst die Folge. Die Seiten selbst wandern erst in #34 auf `sumi-page`. Das
+  Favicon ist dasselbe Zeichen als Inline-SVG-Data-URI in `index.html` — kein
+  Asset, nichts synchron zu halten; die Füllung folgt dem Fuji-Akzent (s. u.).
+  **Theme-Umschalter, Sticky-Header und Tab-Leiste kommen jetzt aus der
+  Shell** — `core/theme.service.ts` und `layout/header/` sind mit #31
+  entfallen, `sumi-app-shell` übernimmt Sticky-Positionierung, die
+  Tab-Leiste unter 720px und den Theme-Toggle (`SumiTheme`, `data-theme` auf
+  `<html>`) selbst.
 - `features/practice/practice.component.ts` (#19) — Übungsansicht mit explizitem
   Session-Lebenszyklus (`idle` → `active` → `answered` → `ended`). Die Session
   startet **nicht** automatisch. Hält Session-Zustand, Timer und
@@ -248,33 +250,63 @@ inline) statt Template-Literalen im `.ts`. `app.config.ts` trägt die
 - `shared/furigana.ts` — Zerlegung fürs `<ruby>`: welcher Teil eine Lesung darüber
   bekommt und was Okurigana ist. Portiert aus den drei Pipes der alten App.
 - `core/api.service.ts`, `core/models.ts`, `app.routes.ts` — HTTP, Typen, Routen.
-- Light + Dark über CSS Custom Properties in `styles/tokens.css` (#18).
+- Light + Dark über Sumi UIs `--sumi-*` CSS Custom Properties (#31, vormals
+  die App-eigenen `styles/tokens.css`, #18).
 
-**Globale Styles (#18)** liegen in drei Dateien statt einer, in dieser
-Reihenfolge in `angular.json` nach dem Font-CSS: `styles/tokens.css` (Custom
-Properties), `styles/base.css` (Element-Grundstile: `*`, `html`/`body`,
-`button`, `input`, `:focus-visible`), `styles/components.css` (global geteilte
-Bausteine). Jedes Token steht **genau einmal**, mit `light-dark(hell, dunkel)`
-statt getrennten Blöcken für `:root`, `@media (prefers-color-scheme: dark)`
-und `[data-theme]`: `:root` setzt `color-scheme: light dark` (die Systemwahl
-entscheidet), `[data-theme='light'|'dark']` kippt nur noch `color-scheme` auf
-die explizite Wahl — kein Token wird dort neu definiert. Braucht Chrome 123 /
-Safari 17.5 / Firefox 120+. Geteilte Bausteine wie `.card`, `.hint`,
-`button.primary` (inkl. `:disabled`) und die `h2`-Grundgröße leben als globale
-Klassen in `styles/components.css`; die Feature-Komponenten (`features/*/*.component.css`)
-behalten nur noch die echten Abweichungen (z. B. `.card { padding: 16px; }`
-in rules/words statt 20px, die abweichenden `.hint`-margins, die zusätzlichen
-`button.primary`-Eigenschaften in practice).
+**Sumi UI (#31).** `frontend/sumi-ui` ist ein Git-Submodule
+(`tkober/sumi-ui`, siehe dessen README „Using Sumi UI in an app") — **kein
+`npm install` darin**, es kompiliert gegen die Pakete der App. Eingebunden
+über `tsconfig.json`-`paths` (`sumi-ui/*` → `./sumi-ui/projects/sumi-ui/src/*`,
+TypeScript-Quellen direkt, kein eigener Library-Build) und einen Sass-
+Load-Path (`stylePreprocessorOptions.includePaths: ["."]` in `angular.json`,
+damit `src/styles.scss` einfach `@use 'sumi-ui/projects/sumi-ui/styles/sumi'`
+schreiben kann). Sumis Font-`@font-face`-Regeln laufen als eigener,
+nicht injizierter Build-Output (`sumi-fonts.css`, `bundleName`, `inject: false`
+in `angular.json`) und werden in `index.html` separat, nicht-blockierend
+verlinkt — `frontend/nginx.conf` hat dafür ein `location = /sumi-fonts.css`
+mit `no-cache`, weil der Dateiname fix bleibt und sonst ein Jahr lang
+gecacht würde. `app.config.ts` ruft `provideSumi({ accent: 'fuji', motif:
+'bamboo' })` — **Platzhalter**, das endgültige Design kommt erst mit
+tkober/sumi-ui#25, deshalb bewusst kein `pattern` und nichts weiter fest
+verdrahtet. CI checkt das Submodule aus (`actions/checkout@v4` mit
+`submodules: true` in `frontend-ci.yml`/`publish-frontend.yml`; der
+`paths: frontend/**`-Filter deckt einen Submodule-Bump schon ab, weil
+GitHubs Pfad-Globs `**` auch auf `frontend/sumi-ui` selbst matchen), ein
+`dependabot.yml` mit `gitsubmodule`-Ecosystem hält es aktuell.
+
+**Globale Styles (#31, vormals #18)** liegen in `src/styles.scss`: zuerst
+`@use 'sumi-ui/projects/sumi-ui/styles/sumi'` (Sumis `--sumi-*`-Tokens plus
+Basisstile), danach die App-eigenen Reste als `@use` von drei plain-CSS-
+Dateien — `styles/app-tokens.css` (die Tokens, die Sumi UI nicht hat, s. u.),
+`styles/base.css` (was Sumis eigene `_base.scss` noch nicht abdeckt:
+`html`/`body`-Mindesthöhe, `button`, `input`; `:focus-visible`,
+`box-sizing` und der Schrift-Stack kommen jetzt von Sumi) und
+`styles/components.css` (`.card`, `.hint`, `button.primary`, `h2` — bleiben
+bis #34 auf Sumi-Tokens laufend bestehen, dann wandern sie auf Sumi UIs
+eigene Komponenten). Jedes App-Token steht weiterhin **genau einmal**, mit
+`light-dark(hell, dunkel)`, exakt wie Sumi es selbst für seine Tokens macht.
+`--rule-accent` (Herleitungskette), `--neutral` (Countdown-Ring, bis #32)
+und `--heat-0…4`/`--spark` (Heatmap/Sparkline, bis #33) bleiben App-Tokens
+in `styles/app-tokens.css`, weil Sumi UI dafür keine Entsprechung hat; jede
+andere `var(--…)`-Nutzung in den Feature-Styles ist auf die passende
+`--sumi-*`-Variable umgeschrieben (`--bg`→`--sumi-bg`, `--surface`→
+`--sumi-surface`, `--surface-sunken`→`--sumi-sunken`, `--border`→
+`--sumi-line`, `--text`→`--sumi-text`, `--text-muted`→`--sumi-muted`,
+`--accent(-soft)`→`--sumi-accent(-soft)`, `--correct(-soft)`→
+`--sumi-correct(-soft)`, `--wrong(-soft)`→`--sumi-wrong(-soft)`, `--shadow`→
+`--sumi-shadow`, `--radius`→`--sumi-radius`; weißer Text auf Akzent wurde zu
+`--sumi-on-accent`).
 
 **Die Heatmap-Rampe** ist eine sequenzielle Ein-Hue-Skala (blau) aus der
-validierten Referenzpalette des `dataviz`-Skills, Schritte 250→650. Sie steht in
-`styles/tokens.css` neben dem restlichen Theme und ist **im Dark Mode umgedreht**,
-damit „mehr" immer vom Hintergrund wegläuft. Beide Richtungen sind gegen die
-tatsächlichen Flächen dieser App validiert (`#ffffff` bzw. `#1c1f25`), nicht
-gegen die Default-Flächen des Skills — der hellste Schritt der Originalrampe
-fiel gegen Weiß mit 1,32:1 durch. Wer die Farben anfasst: den Validator erneut
-laufen lassen, nicht schätzen. Und die Bildunterschrift sagt bewusst
-„stronger", nicht „darker" — „dunkler" wäre im Dark Mode schlicht falsch.
+validierten Referenzpalette des `dataviz`-Skills, Schritte 250→650. Sie steht
+in `styles/app-tokens.css` (App-Token, s. o.) und ist **im Dark Mode
+umgedreht**, damit „mehr" immer vom Hintergrund wegläuft. Beide Richtungen
+sind gegen die tatsächlichen Flächen dieser App validiert (`#ffffff` bzw.
+`#1c1f25`), nicht gegen die Default-Flächen des Skills — der hellste Schritt
+der Originalrampe fiel gegen Weiß mit 1,32:1 durch. Wer die Farben anfasst:
+den Validator erneut laufen lassen, nicht schätzen. Und die Bildunterschrift
+sagt bewusst „stronger", nicht „darker" — „dunkler" wäre im Dark Mode
+schlicht falsch.
 
 **Komponenten laufen auf `OnPush`, die App ist seit #29 zoneless**
 (`provideZonelessChangeDetection()` in `app.config.ts`, kein `zone.js` mehr in
@@ -590,15 +622,17 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
   Specs liegen neben der Quelle (`*.spec.ts`), `tsconfig.spec.json` nimmt sie
   auf, `tsconfig.app.json` schließt sie von `ng build` aus. `frontend-ci.yml`
   baut und testet jeden PR, der `frontend/**` ändert.
-- **Japanisch braucht eine explizite Schrift im Font-Stack** (#13). Ohne sie
-  greift Chrome unter Windows auf Yu Gothic zurück (bei `lang="en"` auch auf
-  eine chinesische Schrift), und die wirkt bei normaler Strichstärke dünn und
-  drahtig. `styles/base.css` nennt deshalb nach den Latin-Systemschriften Hiragino
-  (macOS/iOS bleiben unverändert) und dann `Noto Sans JP Variable`. Die kommt
-  aus `@fontsource-variable/noto-sans-jp`, ist in `angular.json` unter
-  `styles` eingebunden und wird mit der App ausgeliefert, ohne Google Fonts.
-  Die 124 Teil-Fonts haben `unicode-range`s, ein Browser lädt also nur, was
-  die Seite braucht.
+- **Japanisch braucht eine explizite Schrift im Font-Stack** (#13, seit #31
+  Sumi UIs Sache). Ohne sie greift Chrome unter Windows auf Yu Gothic zurück
+  (bei `lang="en"` auch auf eine chinesische Schrift), und die wirkt bei
+  normaler Strichstärke dünn und drahtig. Sumi UIs `_base.scss` nennt dafür
+  für `[lang='ja']`/`.sumi-jp` Zen Kaku Gothic New, Hiragino, Yu Gothic und
+  Noto Sans JP; die eigentlichen Fonts (Murecho, Zen Kaku Gothic New, IBM
+  Plex Mono) liefert die App als `@fontsource/*`-Pakete (`peerDependencies`
+  der Bibliothek), eingebunden über den separaten `sumi-fonts.css`-Build
+  (s. o.), nicht über Google Fonts. Das alte `@fontsource-variable/
+  noto-sans-jp` ist mit #31 raus — Sumis Fonts decken Latin wie Kana/Kanji
+  jetzt ab.
 - **Ein Component-Input darf nicht `style` heißen.** Angular bindet auf jedem
   Host-Element schon die eingebaute DOM-Eigenschaft `style`; ein gleichnamiger
   `input()` bekommt dadurch nie einen Wert, ohne dass es einen Fehler gibt.

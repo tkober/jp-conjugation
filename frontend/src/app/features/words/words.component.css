@@ -11,9 +11,9 @@
   width: 100%;
   padding: 10px 12px;
   border-radius: 10px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
+  border: 1px solid var(--sumi-line);
+  background: var(--sumi-surface);
+  color: var(--sumi-text);
   margin-bottom: 10px;
 }
 
@@ -31,7 +31,7 @@
 .row span {
   display: block;
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
   margin-bottom: 2px;
 }
 
@@ -39,9 +39,9 @@ select {
   width: 100%;
   padding: 8px 10px;
   border-radius: 10px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
+  border: 1px solid var(--sumi-line);
+  background: var(--sumi-surface);
+  color: var(--sumi-text);
   font: inherit;
 }
 
@@ -65,15 +65,15 @@ th {
   text-align: left;
   font-weight: 500;
   font-size: 0.75rem;
-  color: var(--text-muted);
-  border-bottom: 1px solid var(--border);
+  color: var(--sumi-muted);
+  border-bottom: 1px solid var(--sumi-line);
   padding: 4px 8px 4px 0;
   white-space: nowrap;
 }
 
 td {
   padding: 8px 8px 8px 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--sumi-line);
   vertical-align: top;
 }
 
@@ -86,7 +86,7 @@ td b {
 
 td i {
   font-style: normal;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
   font-size: 0.8125rem;
   white-space: nowrap;
 }
@@ -94,7 +94,7 @@ td i {
 .meaning {
   min-width: 160px;
   max-width: 260px;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .num {
@@ -105,7 +105,7 @@ td i {
 }
 
 .muted {
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .pager {
@@ -119,9 +119,9 @@ td i {
 .pager button {
   padding: 8px 14px;
   border-radius: 10px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--sumi-line);
   background: transparent;
-  color: var(--text);
+  color: var(--sumi-text);
 }
 
 .pager button:disabled {
@@ -130,5 +130,5 @@ td i {
 }
 
 .loading {
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
