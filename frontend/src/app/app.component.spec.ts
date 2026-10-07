@@ -82,7 +82,7 @@ describe('AppComponent', () => {
     const badges = fixture.nativeElement.querySelectorAll('.profile-pill sumi-badge');
     expect(badges[0].textContent).toContain('Lv 3');
     expect(badges[0].textContent).toContain('1,234');
-    expect(badges[1].textContent).toContain('7');
+    expect(badges[1].textContent?.trim()).toBe('7 streak');
   });
 
   it('requests /api/profile exactly once on init', async () => {
