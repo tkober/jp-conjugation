@@ -10,7 +10,7 @@ h3 {
   font-size: 0.8125rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .legend {
@@ -19,7 +19,7 @@ h3 {
   align-items: center;
   gap: 4px 10px;
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
   margin-bottom: 4px;
 }
 
@@ -55,8 +55,8 @@ h3 {
 .heat-4 { background: var(--heat-4); }
 
 .heat-none {
-  background: var(--surface-sunken);
-  border: 1px dashed var(--border);
+  background: var(--sumi-sunken);
+  border: 1px dashed var(--sumi-line);
 }
 
 /* Wide content scrolls inside its own box; the page never does. */
@@ -73,7 +73,7 @@ h3 {
 .heat-table th {
   font-weight: 500;
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
   text-align: left;
   white-space: nowrap;
 }
@@ -96,9 +96,9 @@ h3 {
   gap: 6px;
   padding: 4px 10px 4px 4px;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
+  border: 1px solid var(--sumi-line);
+  background: var(--sumi-surface);
+  color: var(--sumi-text);
   font-size: 0.9375rem;
 }
 
@@ -111,10 +111,10 @@ h3 {
 .readout {
   margin: 14px 0 0;
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
   min-height: 1.5em;
 }
 
 .readout b {
-  color: var(--text);
+  color: var(--sumi-text);
 }

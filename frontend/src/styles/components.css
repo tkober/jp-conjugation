@@ -1,18 +1,20 @@
 /* Shared building blocks reused across features/*.component.css. Each one
    carries only what every user agrees on; genuine deviations (padding, a
-   margin, extra button states) stay in the component that needs them. */
+   margin, extra button states) stay in the component that needs them.
+   Sumi UI's own component styles (issue #34) will eventually replace these;
+   until then they keep working, just on Sumi's tokens (#31). */
 
 .card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  box-shadow: var(--shadow);
+  background: var(--sumi-surface);
+  border: 1px solid var(--sumi-line);
+  border-radius: var(--sumi-radius);
+  box-shadow: var(--sumi-shadow);
   padding: 20px;
   margin-bottom: 16px;
 }
 
 .hint {
-  color: var(--text-muted);
+  color: var(--sumi-muted);
   font-size: 0.875rem;
 }
 
@@ -22,8 +24,8 @@ h2 {
 }
 
 button.primary {
-  background: var(--accent);
-  color: #fff;
+  background: var(--sumi-accent);
+  color: var(--sumi-on-accent);
 }
 
 button.primary:disabled {

@@ -1,28 +1,28 @@
 .verdict {
   margin-top: 16px;
-  background: var(--wrong-soft);
+  background: var(--sumi-wrong-soft);
   border-color: transparent;
 }
 
 .verdict.ok {
-  background: var(--correct-soft);
+  background: var(--sumi-correct-soft);
 }
 
 .headline {
   margin: 0;
   font-weight: 700;
-  color: var(--wrong);
+  color: var(--sumi-wrong);
 }
 
 .verdict.ok .headline {
-  color: var(--correct);
+  color: var(--sumi-correct);
 }
 
 .headline i {
   font-style: normal;
   font-weight: 400;
   font-size: 0.8125rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
   margin-left: 6px;
 }
 
@@ -32,7 +32,7 @@
 .grammar {
   margin: 4px 0 0;
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .solution {
@@ -43,13 +43,13 @@
 
 .solution rt {
   font-size: 0.4em;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .partial {
   margin: 6px 0 0;
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 /* Elo delta and the Jisho link share one row — the link costs no extra
@@ -65,7 +65,7 @@
 .elo {
   margin: 0;
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 /* Blue like the derivation chain accent below (--rule-accent) — reads as
@@ -83,17 +83,17 @@
 }
 
 .up {
-  color: var(--correct);
+  color: var(--sumi-correct);
 }
 
 .down {
-  color: var(--wrong);
+  color: var(--sumi-wrong);
 }
 
 .rule {
   margin-top: 14px;
   padding-top: 12px;
-  border-top: 1px solid var(--border);
+  border-top: 1px solid var(--sumi-line);
   font-size: 1.0625rem;
   /* The chain can outgrow a narrow screen; let it scroll on its own. */
   overflow-x: auto;
@@ -102,12 +102,12 @@
 
 .rule .altered {
   text-decoration: line-through;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .rule .operation {
   margin: 0 0.5rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 /* Blue, not the accent: this sits inside the pale-red correction block,

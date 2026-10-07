@@ -13,9 +13,9 @@
   justify-content: space-between;
   gap: 8px;
   padding: 8px 12px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--sumi-line);
   border-radius: 10px;
-  background: var(--surface-sunken);
+  background: var(--sumi-sunken);
 }
 
 .order-label {
@@ -53,5 +53,5 @@ button.ghost.small:disabled {
   padding: 0;
   margin: 0 0 16px;
   font-size: 0.8125rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }

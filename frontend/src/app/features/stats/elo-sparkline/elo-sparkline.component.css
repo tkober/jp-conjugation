@@ -21,6 +21,6 @@
   display: flex;
   justify-content: space-between;
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
   font-variant-numeric: tabular-nums;
 }

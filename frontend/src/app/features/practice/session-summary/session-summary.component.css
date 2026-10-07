@@ -11,7 +11,7 @@
 }
 
 .summary dt {
-  color: var(--text-muted);
+  color: var(--sumi-muted);
   font-size: 0.8125rem;
 }
 
@@ -25,7 +25,7 @@
   font-style: normal;
   font-size: 0.875rem;
   font-weight: 400;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 /* Duplicated from practice.component.css: that rule now only reaches the
@@ -42,11 +42,11 @@ button.primary {
 /* Duplicated from verdict.component.css rather than shared: two one-line
    rules, not worth a shared file or a global class for. */
 .up {
-  color: var(--correct);
+  color: var(--sumi-correct);
 }
 
 .down {
-  color: var(--wrong);
+  color: var(--sumi-wrong);
 }
 
 /* Keyboard up (see practice.component.css). */

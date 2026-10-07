@@ -6,16 +6,16 @@
 }
 
 .tile {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
+  background: var(--sumi-surface);
+  border: 1px solid var(--sumi-line);
+  border-radius: var(--sumi-radius);
   padding: 12px 14px;
 }
 
 .tile span {
   display: block;
   font-size: 0.8125rem;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .tile b {

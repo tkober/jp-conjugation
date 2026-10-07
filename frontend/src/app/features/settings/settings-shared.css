@@ -6,7 +6,7 @@ h3 {
   font-size: 0.8125rem;
   text-transform: uppercase;
   letter-spacing: 0.06em;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .hint {
@@ -25,21 +25,21 @@ h3 {
   gap: 6px;
   padding: 6px 12px;
   border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface-sunken);
-  color: var(--text-muted);
+  border: 1px solid var(--sumi-line);
+  background: var(--sumi-sunken);
+  color: var(--sumi-muted);
   font-size: 0.875rem;
   cursor: pointer;
 }
 
 .toggle.on {
-  background: var(--accent-soft);
-  border-color: var(--accent);
-  color: var(--text);
+  background: var(--sumi-accent-soft);
+  border-color: var(--sumi-accent);
+  color: var(--sumi-text);
 }
 
 .toggle input {
-  accent-color: var(--accent);
+  accent-color: var(--sumi-accent);
   margin: 0;
 }
 
@@ -58,17 +58,17 @@ button {
 
 button.ghost {
   background: transparent;
-  border-color: var(--border);
-  color: var(--text-muted);
+  border-color: var(--sumi-line);
+  color: var(--sumi-muted);
 }
 
 button.destructive {
-  background: var(--wrong);
+  background: var(--sumi-wrong);
   color: #fff;
 }
 
 .warn {
-  color: var(--wrong);
+  color: var(--sumi-wrong);
   font-size: 0.875rem;
   margin: 0 0 10px;
 }

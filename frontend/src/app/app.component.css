@@ -1,18 +1,38 @@
-:host {
-  display: block;
+/* The shell's own <main> (sumi-app-shell__main) already supplies the page
+   padding; this wrapper only centers content at the ~640px width the app
+   used before Sumi UI (#31) — no extra padding, so it doesn't double up
+   with the shell's. Pages themselves move onto sumi-page in #34. */
+.page {
   max-width: 640px;
   margin: 0 auto;
-  padding: 0 20px 32px;
 }
 
-@media (max-height: 500px) {
-  :host {
-    padding-bottom: 12px;
-  }
+.profile-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* Thin progress indicator tucked under the level/streak badges — compact
+   enough to sit next to the brand on a 360px phone. */
+.level-progress {
+  display: block;
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+  background: var(--sumi-sunken);
+  overflow: hidden;
+  flex: none;
+}
+
+.level-progress span {
+  display: block;
+  height: 100%;
+  background: var(--sumi-accent);
 }
 
 @media (max-width: 430px) {
-  :host {
-    padding: 0 14px 24px;
+  .level-progress {
+    width: 24px;
   }
 }

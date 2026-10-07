@@ -1,9 +1,9 @@
 .danger {
-  border-color: var(--wrong);
+  border-color: var(--sumi-wrong);
 }
 
 .done {
-  color: var(--correct);
+  color: var(--sumi-correct);
   font-size: 0.875rem;
   margin: 0;
 }

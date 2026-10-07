@@ -40,13 +40,13 @@
 
 .word rt {
   font-size: 0.4em;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 .english {
   margin: 0;
   text-align: center;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
   font-size: 0.875rem;
 }
 
@@ -68,19 +68,19 @@ input {
   padding: 12px 14px;
   font-size: 1.25rem;
   border-radius: 10px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--text);
+  border: 1px solid var(--sumi-line);
+  background: var(--sumi-surface);
+  color: var(--sumi-text);
 }
 
 input.correct {
-  border-color: var(--correct);
-  color: var(--correct);
+  border-color: var(--sumi-correct);
+  color: var(--sumi-correct);
 }
 
 input.wrong {
-  border-color: var(--wrong);
-  color: var(--wrong);
+  border-color: var(--sumi-wrong);
+  color: var(--sumi-wrong);
 }
 
 button.primary {
@@ -95,10 +95,10 @@ button.ghost {
   display: block;
   width: 100%;
   padding: 10px;
-  border: 1px solid var(--border);
+  border: 1px solid var(--sumi-line);
   border-radius: 10px;
   background: transparent;
-  color: var(--text-muted);
+  color: var(--sumi-muted);
 }
 
 /* Keyboard up. The on-screen keyboard now shrinks the layout viewport
