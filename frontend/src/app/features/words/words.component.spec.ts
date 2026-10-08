@@ -57,6 +57,30 @@ describe('WordsComponent', () => {
     expect(el.textContent).toContain('食べる');
   });
 
+  it('shows kanji over reading, the meaning as tooltip and the plain columns in sumi-data-table', async () => {
+    const fixture = render();
+    httpMock.expectOne((r) => r.url === '/api/words').flush(
+      response({
+        words: [{ ...response().words[0], rating: 1234.4, attempts: 5, correct: 3 }],
+      }),
+    );
+    await fixture.whenStable();
+
+    const cells = Array.from(
+      (fixture.nativeElement as HTMLElement).querySelectorAll('sumi-data-table tbody td'),
+    ) as HTMLElement[];
+    expect(cells.map((c) => c.textContent?.trim().replace(/\s+/g, ' '))).toEqual([
+      '食べるたべる',
+      'to eat',
+      'N5',
+      '1,234',
+      '3/5',
+    ]);
+    expect(cells[0].querySelector('b')?.textContent).toBe('食べる');
+    expect(cells[0].querySelector('i')?.textContent).toBe('たべる');
+    expect(cells[1].querySelector('.meaning')?.getAttribute('title')).toBe('to eat');
+  });
+
   it('shows the empty state with its companion instead of the table when nothing matches', async () => {
     const fixture = render();
     httpMock.expectOne((r) => r.url === '/api/words').flush(response({ total: 0, words: [] }));

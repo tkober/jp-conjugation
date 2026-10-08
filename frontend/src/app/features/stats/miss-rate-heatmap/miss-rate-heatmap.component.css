@@ -8,7 +8,7 @@ h2 {
 }
 
 .hint {
-  margin: 0 0 12px;
+  margin: 0;
   color: var(--sumi-muted);
   font-size: 0.875rem;
 }
@@ -19,6 +19,11 @@ h3 {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--sumi-muted);
+}
+
+/* The first block heading opens the card body, which sumi-card already pads. */
+h3:first-of-type {
+  margin-top: 0;
 }
 
 sumi-matrix-heatmap {

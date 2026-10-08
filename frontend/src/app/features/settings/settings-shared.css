@@ -44,3 +44,10 @@ h3 {
   font-size: 0.875rem;
   margin: 0 0 10px;
 }
+
+/* A hint closing the card header needs no bottom margin: sumi-card already
+   pads the body, and this class rule outranks the library's own last-child
+   reset. Hints inside the body keep their 12px. */
+[sumiCardHeader] .hint:last-child {
+  margin-bottom: 0;
+}

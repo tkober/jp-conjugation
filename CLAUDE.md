@@ -313,9 +313,12 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   Chips. Alle drei Felder (Type/JLPT/Sort) stehen bei 640px in einer Zeile
   nebeneinander (Label darüber) und brechen bei 360px sauber um (`.row`/
   `.field` in `words.component.css`, unverändert seit vor #34). Die
-  Wortliste bleibt ein semantisches `<table>` — eine Zelle trägt Kanji **und**
-  Hiragana in zwei unterschiedlich gestylten Zeilen, das kann
-  `sumi-data-table`s reine Text-pro-Zelle-Darstellung nicht abbilden. Ohne
+  Wortliste ist seit #41 ein `sumi-data-table`: Kanji über Lesung und die
+  Bedeutung (gekappt, voller Text als Tooltip) sind `sumiTableCell`-
+  Templates, JLPT/Rating/Seen reiner Text aus `wordRows()`. Die Styles der
+  Templates (`b`, `i`, `.meaning`) bleiben in `words.component.css`, weil
+  das Template im Words-Template deklariert ist und damit dessen
+  Encapsulation-Attribut trägt. Ohne
   Treffer (`data.words.length === 0`) steht seit #41 `sumi-empty-state
   title="No matches" companion="tanuki"` statt der alten `<tr><td
   colspan="5">`-Zeile — derselbe Begleiter wie Stats' Leerzustand und das
