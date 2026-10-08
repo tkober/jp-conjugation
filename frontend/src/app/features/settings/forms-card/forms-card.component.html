@@ -1,9 +1,11 @@
-<section class="card">
-  <h2>Forms</h2>
-  <p class="hint">
-    What can come up in practice. Turning a form off leaves its progress
-    untouched — it just stops being served.
-  </p>
+<sumi-card>
+  <div sumiCardHeader>
+    <h2>Forms</h2>
+    <p class="hint">
+      What can come up in practice. Turning a form off leaves its progress
+      untouched — it just stops being served.
+    </p>
+  </div>
 
   @for (category of categories(); track category) {
     <h3>{{ category }}</h3>
@@ -12,18 +14,14 @@
         <span class="group-title">{{ group.title }}</span>
         <div class="options">
           @for (form of group.forms; track form.form_key) {
-            <label
-              class="toggle"
-              [class.on]="!disabledForms().has(form.form_key)"
+            <sumi-toggle
+              #toggleRef
               [title]="form.title"
+              [value]="!disabledForms().has(form.form_key)"
+              (valueChange)="toggleForm(form.form_key, toggleRef)"
             >
-              <input
-                type="checkbox"
-                [checked]="!disabledForms().has(form.form_key)"
-                (change)="toggleForm(form.form_key)"
-              />
               {{ form.settings_title }}
-            </label>
+            </sumi-toggle>
           }
         </div>
       </div>
@@ -32,4 +30,4 @@
   @if (noFormsLeft()) {
     <p class="warn">At least one form has to stay on.</p>
   }
-</section>
+</sumi-card>

@@ -1,19 +1,16 @@
-<section class="card">
-  <h2>Vocabulary</h2>
-  <p class="hint">Which JLPT levels words are drawn from.</p>
+<sumi-card>
+  <div sumiCardHeader>
+    <h2>Vocabulary</h2>
+    <p class="hint">Which JLPT levels words are drawn from.</p>
+  </div>
   <div class="options">
     @for (level of settings().jlpt_levels; track level) {
-      <label class="toggle" [class.on]="!disabledJlpt().has(level)">
-        <input
-          type="checkbox"
-          [checked]="!disabledJlpt().has(level)"
-          (change)="toggleLevel(level)"
-        />
+      <sumi-toggle #toggleRef [value]="!disabledJlpt().has(level)" (valueChange)="toggleLevel(level, toggleRef)">
         {{ level.toUpperCase() }}
-      </label>
+      </sumi-toggle>
     }
   </div>
   @if (noLevelsLeft()) {
     <p class="warn">At least one level has to stay on.</p>
   }
-</section>
+</sumi-card>

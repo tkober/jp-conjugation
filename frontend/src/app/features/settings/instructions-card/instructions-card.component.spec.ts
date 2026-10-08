@@ -57,10 +57,10 @@ describe('InstructionsCardComponent', () => {
     const spy = vi.fn();
     fixture.componentInstance.save.subscribe(spy);
 
-    const emojiRadio = Array.from(fixture.nativeElement.querySelectorAll('.toggle')).find(
-      (el) => (el as HTMLElement).textContent?.trim() === 'Emoji',
-    ) as HTMLElement;
-    emojiRadio.querySelector('input')!.dispatchEvent(new Event('change'));
+    const emojiOption = Array.from(
+      fixture.nativeElement.querySelectorAll('.sumi-segmented-control__option'),
+    ).find((el) => (el as HTMLElement).textContent?.trim() === 'Emoji') as HTMLButtonElement;
+    emojiOption.click();
     fixture.detectChanges();
 
     expect(spy).toHaveBeenCalledWith({ instruction_style: 'emoji' });

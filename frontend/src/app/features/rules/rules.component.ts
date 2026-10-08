@@ -1,10 +1,13 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { ActivatedRoute, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
 
+import { SumiCard, SumiPage } from 'sumi-ui/layout';
+import { SumiSegmentedControl, type SumiSegmentedOption } from 'sumi-ui/forms';
+
 import { ApiService } from '../../core/api.service';
-import { RuleGroup, RulesResponse } from '../../core/models';
+import { RuleForm, RuleGroup, RulesResponse } from '../../core/models';
 import { RuleTableComponent, Section } from './rule-table/rule-table.component';
 
 /** Shown when the URL names no form: the rule set with the most sound
@@ -14,13 +17,14 @@ const DEFAULT_FORM = 'Verbs__TeFormAffirmative';
 @Component({
   selector: 'app-rules',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, RuleTableComponent],
+  imports: [SumiPage, SumiCard, SumiSegmentedControl, RouterLink, RuleTableComponent],
   templateUrl: './rules.component.html',
   styleUrl: './rules.component.css',
 })
 export class RulesComponent {
   private api = inject(ApiService);
   private route = inject(ActivatedRoute);
+  private router = inject(Router);
 
   readonly data = signal<RulesResponse | null>(null);
   readonly failed = signal(false);
@@ -77,5 +81,13 @@ export class RulesComponent {
       next: (r) => this.data.set(r),
       error: () => this.failed.set(true),
     });
+  }
+
+  formOptions(group: RuleGroup): SumiSegmentedOption<RuleForm>[] {
+    return group.forms.map((form) => ({ value: form, label: form.settings_title }));
+  }
+
+  selectForm(form: RuleForm): void {
+    this.router.navigate(['/rules', form.form_key], { replaceUrl: true });
   }
 }

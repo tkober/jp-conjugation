@@ -102,20 +102,27 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   wie in sumi-ui's Showcase), `<sumi-app-switcher sumiShellSwitcher />` und
   `<sumi-hotkey-help />`. Level/Elo/Streak stehen als zwei `sumi-badge`s plus
   ein schmaler Fortschrittsbalken in `sumiShellActions` — kompakt genug für
-  ein 360px-Handy neben der Marke. `app.component.css` zentriert den
-  `<router-outlet />`-Inhalt nur noch auf ~640px (`.page`), ohne eigenes
-  Padding: das liefert bereits `sumi-app-shell__main`, doppeltes Padding wäre
-  sonst die Folge. Die Seiten selbst wandern erst in #34 auf `sumi-page`. Das
-  Favicon ist dasselbe Zeichen als Inline-SVG-Data-URI in `index.html` — kein
+  ein 360px-Handy neben der Marke. Seit #34 hat `app.component.html` keinen
+  eigenen Breiten-Wrapper mehr um `<router-outlet />` — das `.page`-Provisorium
+  (~640px, ohne eigenes Padding, weil `sumi-app-shell__main` das schon liefert)
+  ist weg, jede Seite bringt ihre Breite jetzt selbst über `sumi-page` mit
+  (s. u.). Das Favicon ist dasselbe Zeichen als Inline-SVG-Data-URI in `index.html` — kein
   Asset, nichts synchron zu halten; die Füllung folgt dem Fuji-Akzent (s. u.).
   **Theme-Umschalter, Sticky-Header und Tab-Leiste kommen jetzt aus der
   Shell** — `core/theme.service.ts` und `layout/header/` sind mit #31
   entfallen, `sumi-app-shell` übernimmt Sticky-Positionierung, die
   Tab-Leiste unter 720px und den Theme-Toggle (`SumiTheme`, `data-theme` auf
   `<html>`) selbst.
-- `features/practice/practice.component.ts` (#19, auf Sumi UI umgestellt #32) —
-  Übungsansicht mit explizitem Session-Lebenszyklus (`idle` → `active` →
-  `answered` → `ended`). Die Session startet **nicht** automatisch. Start-
+- `features/practice/practice.component.ts` (#19, auf Sumi UI umgestellt #32,
+  Seite auf `sumi-page` #34) — Übungsansicht mit explizitem Session-Lebenszyklus
+  (`idle` → `active` → `answered` → `ended`), eingerahmt in `<sumi-page
+  width="narrow">` (kein Titel — die Start-/Ende-Screens haben schon ihre
+  eigenen Überschriften). Die Prompt-Karte ist seit #34 `sumi-card` statt
+  `section.card` (Inhalt unverändert: Instruktions-Chips, Countdown-Ring, Wort,
+  englische Bedeutung); im Keyboard-up-Media-Query (`@media (max-height:
+  500px)`) wird ihr Innenpadding über `::ng-deep .sumi-card__body` verkleinert,
+  weil die Bibliothek dafür kein Padding-Input hat. Die Session startet
+  **nicht** automatisch. Start-
   und Ende-Screen sind `sumi-session-gate` (`Enter` startet, von der
   Bibliothek selbst registriert); der Ende-Screen projiziert
   `sumi-session-summary` (`answered`/`correct`/`durationMs`/`delta`
@@ -174,12 +181,14 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   auf jedem Host-Element schon bindet, ein gleichnamiger Component-Input bekäme
   nie einen Wert.
 - `features/stats/stats.component.ts` (#20, Charts auf Sumi UI umgestellt
-  #33) — lädt die Stats, Empty-/Loading-Zustand, Layout; behält die kleinen
-  Karten (Weakest rules, Misses-Split, Recent) selbst. Die vier KPI-Kacheln
-  sind `sumi-stat-tile` in einem `sumi-stat-grid` direkt im Template (die
-  alte `kpi-tiles/`-Komponente brauchte dafür kein eigenes Wrapping mehr und
-  ist weg); die Elo-Karte bleibt eine eigene `<section class="card">` mit der
-  gewohnten Überschrift/Hinweiszeile, aber der Verlauf selbst ist jetzt
+  #33, Karten auf `sumi-card`/`sumi-page` #34) — lädt die Stats, Empty-/
+  Loading-Zustand, Layout, eingerahmt in `<sumi-page width="narrow">`; behält
+  die kleinen Karten (Weakest rules, Misses-Split, Recent) selbst, jetzt als
+  `sumi-card` mit Titel/Hint in `[sumiCardHeader]` statt `section.card`. Die
+  vier KPI-Kacheln sind `sumi-stat-tile` in einem `sumi-stat-grid` direkt im
+  Template (die alte `kpi-tiles/`-Komponente brauchte dafür kein eigenes
+  Wrapping mehr und ist weg); die Elo-Karte bleibt eine eigene `sumi-card` mit
+  der gewohnten Überschrift/Hinweiszeile, aber der Verlauf selbst ist jetzt
   `sumi-sparkline` (`[points]="elo_history"`, `[value]` das gerundete Elo,
   `[delta]` letzter minus erster Punkt der Historie, `null` unter zwei
   Punkten — dann fehlt der Chart ganz, wie vorher auch; die alte
@@ -191,8 +200,14 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   Eine Skalenzeile unter dem Chart landete hinter „Show as table" und damit
   vom Chart getrennt. Die vier Kacheln stehen ab 481px per App-CSS in einer
   Reihe: das `auto-fit`-Grid der Bibliothek machte bei 640px Seitenbreite
-  3 + 1 daraus.
-  - `miss-rate-heatmap/miss-rate-heatmap.component.ts` — als Kernstück **drei**
+  3 + 1 daraus. „Weakest rules" ist seit #34 `sumi-data-table` (reiner Text
+  pro Zelle: Regel, Typ, `n/m`-Trefferquote als ein String). „Recent" bleibt
+  ein eigenes `<table>`, aus Sumi-Tokens gestylt — richtig/falsch-Einfärbung
+  und die „gegeben → erwartet"-Antwortzelle sind pro-Zelle-Semantik, die
+  `sumi-data-table` (reine Key/Value-Zellen) nicht ausdrücken kann; mögliche
+  Bibliotheks-Erweiterung, siehe PR-Beschreibung von #34.
+  - `miss-rate-heatmap/miss-rate-heatmap.component.ts` — der Rahmen ist seit
+    #34 `sumi-card` statt `section.card`, als Kernstück stehen weiter **drei**
     `sumi-matrix-heatmap`s: Form × Wortart für Adjektive, dasselbe für Verben,
     und eine dritte mit einer einzigen Zeile „Godan" und den neun
     Trigger-Kana als Spalten (ersetzt die alte Chip-Reihe). Ein gemeinsames
@@ -226,29 +241,54 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   Bibliothekskonsistenz hat hier Vorrang). `stats-math.spec.ts`
   deckt Summation/„nie geübt" in `toCell()` und die Godan-Sortierung ab, ohne
   TestBed.
-- `features/rules/rules.component.ts` (#11, Tabelle ausgelagert #21) — Tab
-  „Rules": Gruppen-Chips (Adjectives / Verbs), darunter Erklärung und ein
-  Segment-Umschalter für die Formen der Gruppe. Die gewählte Form steht in der
-  URL (`/rules/:form`, Links mit `replaceUrl`), ohne Parameter Te-Form positiv.
-  Picker und Erklärkarte bleiben hier; die Tabelle selbst ist
+- `features/rules/rules.component.ts` (#11, Tabelle ausgelagert #21, Seite
+  auf Sumi UI #34) — Tab „Rules", eingerahmt in `<sumi-page title="Rules"
+  width="narrow">`, wie jede andere Seite — die Regeltabellen passen bei
+  640px, gegengeprüft am Screenshot. Picker und Erklärkarte sind `sumi-card`.
+  Die Gruppen-Chips (Kategorie → Gruppe, z. B. „Te-form", „Potential", acht
+  Stück allein bei Verbs) sind **Navigation, kein Einzelwert** — ein erster
+  Versuch mit `sumi-segmented-control` dafür verbarg die Hälfte der Gruppen
+  hinter horizontalem Scroll (bei 390px nur 4 von 8 sichtbar) und bildete
+  „Adjectives"/„Verbs" als zwei getrennte Radiogruppen ab, obwohl sie eine
+  gemeinsame Auswahl teilen — beides falsch für eine Linkliste. Sie sind
+  deshalb wieder plain `<a [routerLink]="['/rules', group.forms[0].form_key]"
+  [replaceUrl]="true">`-Chips, die umbrechen (`.chips`/`.chip` in
+  `rules.component.css`, lokal auf Sumi-Tokens gestylt: `--sumi-line`-Rahmen,
+  aktiv `--sumi-accent-soft`/`--sumi-accent-ink`, `aria-current="page"`) —
+  damit funktionieren Mittelklick/„In neuem Tab öffnen" wieder, die main-
+  Version hatte das auch so. Der Formen-Umschalter *innerhalb* einer Gruppe
+  (meist Positive/Negative, bei Non-past/Past vier Werte) bleibt dagegen
+  `sumi-segmented-control` — das ist eine echte Einzelauswahl unter wenigen,
+  kurzen Optionen, kein Navigations-Hiding-Problem. Die Tabelle selbst ist
   `rule-table/rule-table.component.ts` — Inputs `formTitle`/`sections`
   (Gruppierung nach Wortart, `Section`-Typ lebt dort), dazu `patternKind()`
   (unchanged/append/drop/replace) und `tilde()` samt ihren Doc-Kommentaren.
   Muster und Beispiel teilen sich eine Zeile, solange beide passen; die
   Herleitungskette (gleiches Styling wie in der Auflösung) erscheint nur bei
   zusammengesetzten Formen — bei einem Schritt sagt sie nichts, was das Muster
-  nicht schon sagt. Mit fünf Tabs werden die Tabs unter 430px enger und
-  kleiner, damit sie bei 360px in eine Zeile passen. `rules.component.css`
-  behält `.card { padding: 16px }` für Picker/Erklärkarte, `rule-table`
-  wiederholt dieselbe Regel für die eigene `.card.table` (Emulated
-  Encapsulation reicht keine Eltern-Overrides in ein Kind durch).
-- `features/words/words.component.ts` — Vokabelbrowser mit Filtern (Wortart, JLPT, Suche mit
-  Entprellung), Sortierung und Blättern zu 50. Bewusst **nicht** aufgeteilt
-  (#21): mit 105/95/134 Zeilen klein genug und in sich geschlossen, anders als
-  Settings und Rules.
-- `features/settings/settings.component.ts` (#21, vorher ein Monolith) — lädt
-  `Settings` einmal und `apply()`t jede Antwort; das Template reiht fünf
-  Karten-Components, jede mit eigenem `.card`-Template inkl. h2/Hint:
+  nicht schon sagt. Die Tabelle selbst bleibt ein semantisches `<table>`
+  (Furigana/Herleitungs-Markup pro Zelle, das `sumi-data-table` nicht
+  ausdrücken kann), nur noch in einer `sumi-card` statt `section.card.table`.
+- `features/words/words.component.ts` (Seite auf Sumi UI #34) — Vokabelbrowser
+  mit Filtern (Wortart, JLPT, Suche mit Entprellung), Sortierung und Blättern
+  zu 50, eingerahmt in `<sumi-page title="Words" width="narrow">`. Bewusst
+  **nicht** aufgeteilt (#21): mit 105/95/134 Zeilen klein genug und in sich
+  geschlossen, anders als Settings und Rules. Such-Input und Sortier-`<select>`
+  sind `sumiInput`/`sumiSelect`; Wortart- und JLPT-Filter sind ebenfalls
+  `sumiSelect` statt `sumi-segmented-control` — mit sieben bzw. sechs
+  Optionen (する, 来る, N2, N1, …) schnitt die Segmented-Control-Variante
+  Optionen am Rand der scrollenden Box ab, genau wie bei Rules' Gruppen-
+  Chips. Alle drei Felder (Type/JLPT/Sort) stehen bei 640px in einer Zeile
+  nebeneinander (Label darüber) und brechen bei 360px sauber um (`.row`/
+  `.field` in `words.component.css`, unverändert seit vor #34). Die
+  Wortliste bleibt ein semantisches `<table>` — eine Zelle trägt Kanji **und**
+  Hiragana in zwei unterschiedlich gestylten Zeilen, das kann
+  `sumi-data-table`s reine Text-pro-Zelle-Darstellung nicht abbilden.
+- `features/settings/settings.component.ts` (#21, vorher ein Monolith, Seite
+  und Karten auf Sumi UI #34) — lädt `Settings` einmal und `apply()`t jede
+  Antwort; das Template reiht fünf Karten-Components in `<sumi-page
+  title="Settings" width="narrow">`, jede mit eigenem `sumi-card`-Template
+  (Titel/Hint in `[sumiCardHeader]`) statt `section.card`:
   `forms-card/`, `instructions-card/`, `vocabulary-card/`, `time-budget-card/`,
   `reset-card/`. Jede Karte (außer `reset-card`) bekommt `settings: Settings`
   als Input und hat einen `save = output<SettingsUpdate>()`; der Elternteil
@@ -260,22 +300,50 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   Elternteil neue `settings` durchreicht, resettet der `linkedSignal`
   automatisch auf den Serverstand. Die Guards sind unverändert: `toggleForm`/
   `toggleLevel` brechen vor dem Senden ab, wenn danach keine Form/kein Level
-  mehr übrig bliebe. `instructions-card` hält `TENSE_FIRST_ORDER` als
+  mehr übrig bliebe — **einen Unterschied macht das seit #34 für die
+  `sumi-toggle`-Markup**: der Toggle hat seinen eigenen `value`-Signal-Input
+  schon lokal umgeschaltet, bevor der Guard greift, und ein `[value]`-Binding,
+  das danach wieder auf denselben (unveränderten) Bool-Wert auswertet, wird
+  von Angular als No-Op übersprungen (Ausdruck „hat sich nicht geändert"), der
+  Schalter bliebe also optisch im falschen Zustand hängen. Deshalb reicht die
+  Guard-Stelle eine Template-Referenz auf den angeklickten `sumi-toggle` durch
+  (`toggleForm(key, toggleRef)`) und ruft bei einem Abbruch direkt
+  `toggleRef.value.set(...)` auf der Instanz — das umgeht die Bindungsprüfung,
+  weil es kein Template-Rebind ist, sondern ein direkter Signal-Write. Formen
+  sind Mehrfachauswahl, deshalb `sumi-toggle` pro Form (nicht
+  `sumi-segmented-control`, die ist Einfachauswahl); dieselbe JLPT-Mehrfachwahl
+  steckt in `vocabulary-card`. `instructions-card` hält `TENSE_FIRST_ORDER` als
   TS-Konstante (die alte „Tense first"-Preset) neben `styleLabel`/
-  `dimensionLabel`/`moveInstruction`/`applyOrder`/`isActiveOrder`.
+  `dimensionLabel`/`moveInstruction`/`applyOrder`/`isActiveOrder`; der
+  Chip-Stil ist dort `sumi-segmented-control` (Einfachauswahl), die ▲/▼- und
+  Preset-Buttons sind `sumiButton variant="ghost"`.
   `time-budget-card` vergleicht seinen Entwurf direkt gegen `settings()` statt
   gegen ein gemerktes Feld — die „Saved"-Flash braucht trotzdem eine explizite
   Bestätigung, *welche* Karte gerade gespeichert hat (ein globaler Zähler
   würde bei jedem Save in irgendeiner Karte aufblitzen): der Elternteil bumpt
   ein `budgetSaveTick`-Signal nur nach der Antwort auf *diese* Karte, die Karte
-  beobachtet es per `effect()` und zeigt „Saved" für 1500 ms. `reset-card` ist
-  bewusst eigenständig — ein Reset betrifft keine `Settings`, also ruft die
-  Karte `api.reset()` + `api.loadProfile()` selbst, statt ein Output
-  durchzureichen, das der Elternteil nur weitergeben würde. Gemeinsame Regeln
-  (`h3`, `.hint`-Margin, `.options`, `.toggle`+`.on`+Input, `.actions`,
-  `button`/`button.ghost`/`button.destructive`, `.warn`) stehen in
-  `settings-shared.css`, das jede Karte per zweitem `styleUrls`-Eintrag
-  einbindet — nur echte Abweichungen bleiben in der Karten-CSS.
+  beobachtet es per `effect()` und zeigt „Saved" für 1500 ms; die Slider sind
+  `<input type="range" sumiSlider>` (reine Styling-Direktive, die exakten
+  Werte/Schritte sind unverändert App-Logik), Save/Reset sind `sumiButton`
+  (`primary`/`ghost`). `reset-card` ist bewusst eigenständig — ein Reset
+  betrifft keine `Settings`, also ruft die Karte `api.reset()` +
+  `api.loadProfile()` selbst, statt ein Output durchzureichen, das der
+  Elternteil nur weitergeben würde; die drei Bestätigungs-Buttons sind
+  `sumiButton variant="ghost"`/`variant="danger"`, die Karte trägt zusätzlich
+  `class="danger"` für den roten Rahmen. Was an gemeinsamem CSS nach #34
+  übrig bleibt, steht weiterhin in `settings-shared.css` (per zweitem
+  `styleUrls`-Eintrag in jeder Karte eingebunden) — aber nur noch, was die
+  Bibliothek nicht selbst mitbringt: `h2`/`h3`-Überschriften-Stile, `.hint`
+  (Farbe + Größe, da `sumi-page`s eigene Subtitle-Klasse nur im Seitenkopf
+  sitzt, nicht pro Karte), `.options` als Toggle-Grid (`repeat(auto-fill,
+  minmax(220px, 1fr))` — Flex-Wrap ließ die letzte Reihe uneben, z. B. 3 + 1;
+  siehe „Globale Styles" für den sumi-ui-Follow-up dazu), `.actions` als
+  Flex-Wrap-Layout für die Button-Reihen, `.warn` für die
+  Guard-/Bestätigungstexte, und `[sumiCardHeader] > *:last-child {
+  margin-bottom: 0 }` gegen die doppelte Lücke zwischen Kartenkopf und
+  -körper (ebenfalls ein sumi-ui-Follow-up, s. u.). Buttons, Toggles und
+  Segmented Controls selbst, `.card`, `h2` ohne eigene Klasse und
+  `button.primary`/`.ghost`/`.destructive` sind komplett entfallen.
   **Die Zeitbudget-Beispiele kommen aus `/api/settings`**, damit die Formel
   nicht doppelt gepflegt wird. Die Karte „Instructions": Chip-Stil
   (Text/Emoji/Text + emoji, sofort gespeichert), die Reihenfolge der vier
@@ -312,16 +380,35 @@ verdrahtet. CI checkt das Submodule aus (`actions/checkout@v4` mit
 GitHubs Pfad-Globs `**` auch auf `frontend/sumi-ui` selbst matchen), ein
 `dependabot.yml` mit `gitsubmodule`-Ecosystem hält es aktuell.
 
-**Globale Styles (#31, vormals #18)** liegen in `src/styles.scss`: zuerst
-`@use 'sumi-ui/projects/sumi-ui/styles/sumi'` (Sumis `--sumi-*`-Tokens plus
-Basisstile), danach die App-eigenen Reste als `@use` von drei plain-CSS-
-Dateien — `styles/app-tokens.css` (die Tokens, die Sumi UI nicht hat, s. u.),
-`styles/base.css` (was Sumis eigene `_base.scss` noch nicht abdeckt:
-`html`/`body`-Mindesthöhe, `button`, `input`; `:focus-visible`,
-`box-sizing` und der Schrift-Stack kommen jetzt von Sumi) und
-`styles/components.css` (`.card`, `.hint`, `button.primary`, `h2` — bleiben
-bis #34 auf Sumi-Tokens laufend bestehen, dann wandern sie auf Sumi UIs
-eigene Komponenten). Jedes App-Token steht weiterhin **genau einmal**, mit
+**Globale Styles (#31, vormals #18, auf Sumi UIs eigene Komponenten
+umgestellt #34)** liegen in `src/styles.scss` und sind seit #34 nur noch
+zwei Zeilen: `@use 'sumi-ui/projects/sumi-ui/styles/sumi'` (Sumis
+`--sumi-*`-Tokens plus Basisstile) und `@use 'styles/app-tokens.css'` (die
+Tokens, die Sumi UI nicht hat, s. u.). `styles/base.css` (eigene
+`html`/`body`/`button`/`input`-Regeln) und `styles/components.css` (`.card`,
+`.hint`, `button.primary`, `h2`) sind komplett entfernt — jede Seite läuft
+jetzt auf `sumi-page`/`sumi-card` und den Formular-Direktiven/-Komponenten
+aus `sumi-ui/forms` (`sumiButton`, `sumiInput`, `sumiSelect`, `sumiSlider`,
+`sumi-segmented-control`, `sumi-toggle`), die ihr Styling selbst mitbringen;
+`button`/`input` brauchten dadurch keine eigenen Default-Regeln mehr, und
+`html`/`body`-Mindesthöhe ist redundant zu `sumi-app-shell`s eigenem
+`min-height: 100vh`. Übrig gebliebene, wirklich app-/komponentenspezifische
+Regeln (eine `.hint`-Farbe, `h2`-Kartentitel-Größe, Flex-Wrap-Layouts wie
+`.options`/`.actions`, die wiederkehrenden `.chip`-Link-Styles) stehen jetzt
+lokal in der jeweiligen Komponenten-CSS bzw., wo mehrere Settings-Karten sie
+teilen, in `settings-shared.css` (s. o.) — nicht mehr global. Zwei Lücken,
+die jede Seite lokal selbst schließt, wären mögliche sumi-ui-Follow-ups:
+`sumi-page` spaced seinen Inhalt nicht selbst (jede Seite braucht ein
+eigenes `sumi-page > * + * { margin-top: 16px }`, sonst stoßen die
+`sumi-card`s aneinander), und `sumi-card`s `[sumiCardHeader]`-Slot lässt die
+Bottom-Margin seines letzten Kindes stehen, die sich mit dem Body-Padding
+addiert (jede Karte mit Header braucht `[sumiCardHeader] > *:last-child {
+margin-bottom: 0 }`, in `settings-shared.css` einmal für alle fünf Karten,
+sonst pro Komponente). Settings' Toggle-Reihen (`.options`) sind seit dem
+Rules/Words-Nacharbeiten (s. o.) außerdem ein Grid
+(`repeat(auto-fill, minmax(220px, 1fr))`) statt Flex-Wrap — Flex-Wrap ließ
+die letzte Reihe uneben (3 + 1), das Grid steht bei 640px zweispaltig, bei
+360px einspaltig. Jedes App-Token steht weiterhin **genau einmal**, mit
 `light-dark(hell, dunkel)`, exakt wie Sumi es selbst für seine Tokens macht.
 `--rule-accent` (Herleitungskette) bleibt als einziges App-Token in
 `styles/app-tokens.css` übrig, weil Sumi UI dafür keine Entsprechung hat

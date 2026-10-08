@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 
+import { SumiPage } from 'sumi-ui/layout';
+
 import { ApiService } from '../../core/api.service';
 import { Settings, SettingsUpdate } from '../../core/models';
 import { FormsCardComponent } from './forms-card/forms-card.component';
@@ -17,6 +19,7 @@ import { ResetCardComponent } from './reset-card/reset-card.component';
   selector: 'app-settings',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
+    SumiPage,
     FormsCardComponent,
     InstructionsCardComponent,
     VocabularyCardComponent,

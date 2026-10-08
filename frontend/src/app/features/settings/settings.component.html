@@ -1,9 +1,11 @@
-@if (settings(); as s) {
-  <app-forms-card [settings]="s" (save)="save($event)" />
-  <app-instructions-card [settings]="s" (save)="save($event)" />
-  <app-vocabulary-card [settings]="s" (save)="save($event)" />
-  <app-time-budget-card [settings]="s" [saveTick]="budgetSaveTick()" (save)="saveBudget($event)" />
-  <app-reset-card />
-} @else {
-  <p class="loading">Loading…</p>
-}
+<sumi-page title="Settings" width="narrow">
+  @if (settings(); as s) {
+    <app-forms-card [settings]="s" (save)="save($event)" />
+    <app-instructions-card [settings]="s" (save)="save($event)" />
+    <app-vocabulary-card [settings]="s" (save)="save($event)" />
+    <app-time-budget-card [settings]="s" [saveTick]="budgetSaveTick()" (save)="saveBudget($event)" />
+    <app-reset-card />
+  } @else {
+    <p class="loading">Loading…</p>
+  }
+</sumi-page>

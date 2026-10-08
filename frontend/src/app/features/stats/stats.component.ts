@@ -2,16 +2,24 @@ import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@a
 import { DecimalPipe } from '@angular/common';
 
 import { SUMI_CHARTS } from 'sumi-ui/charts';
+import type { SumiTableColumn } from 'sumi-ui/charts';
+import { SumiCard, SumiPage } from 'sumi-ui/layout';
 
 import { ApiService } from '../../core/api.service';
 import { Stats } from '../../core/models';
 import { wordTypeTitle } from '../../shared/word-types';
 import { MissRateHeatmapComponent } from './miss-rate-heatmap/miss-rate-heatmap.component';
 
+const WEAKEST_COLUMNS: SumiTableColumn[] = [
+  { key: 'rule', label: 'Rule' },
+  { key: 'type', label: 'Type' },
+  { key: 'correct', label: 'Correct', align: 'end' },
+];
+
 @Component({
   selector: 'app-stats',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DecimalPipe, MissRateHeatmapComponent, ...SUMI_CHARTS],
+  imports: [DecimalPipe, SumiPage, SumiCard, MissRateHeatmapComponent, ...SUMI_CHARTS],
   templateUrl: './stats.component.html',
   styleUrl: './stats.component.css',
 })
@@ -53,6 +61,16 @@ export class StatsComponent {
     }
     return Math.round((history[history.length - 1] - history[0]) * 10) / 10;
   });
+
+  readonly weakestColumns = WEAKEST_COLUMNS;
+
+  readonly weakestRows = computed(() =>
+    (this.stats()?.weakest_items ?? []).map((item) => ({
+      rule: item.title,
+      type: wordTypeTitle(item.word_type) + (item.trigger === '-' ? '' : ` · ${item.trigger}`),
+      correct: `${item.correct}/${item.attempts}`,
+    })),
+  );
 
   constructor() {
     this.api.stats().subscribe((s) => this.stats.set(s));

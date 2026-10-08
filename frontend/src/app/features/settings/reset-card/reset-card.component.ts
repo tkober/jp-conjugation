@@ -1,5 +1,8 @@
 import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 
+import { SumiCard } from 'sumi-ui/layout';
+import { SumiButtonDirective } from 'sumi-ui/forms';
+
 import { ApiService } from '../../../core/api.service';
 
 /** The "Reset progress" card. Unlike the other cards it does not touch
@@ -11,7 +14,7 @@ import { ApiService } from '../../../core/api.service';
   changeDetection: ChangeDetectionStrategy.OnPush,
   // Block: owns a whole `.card` section in normal flow, like its siblings.
   host: { style: 'display: block' },
-  imports: [],
+  imports: [SumiCard, SumiButtonDirective],
   templateUrl: './reset-card.component.html',
   styleUrls: ['./reset-card.component.css', '../settings-shared.css'],
 })

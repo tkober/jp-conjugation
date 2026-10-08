@@ -1,23 +1,17 @@
-<section class="card">
-  <h2>Instructions</h2>
-  <p class="hint">
-    How the target form is shown during practice: one chip per property
-    instead of a title to parse.
-  </p>
-
-  <div class="options" role="radiogroup" aria-label="Chip style">
-    @for (option of settings().instruction_styles; track option) {
-      <label class="toggle" [class.on]="instructionStyle() === option">
-        <input
-          type="radio"
-          name="instruction-style"
-          [checked]="instructionStyle() === option"
-          (change)="setInstructionStyle(option)"
-        />
-        {{ styleLabel(option) }}
-      </label>
-    }
+<sumi-card>
+  <div sumiCardHeader>
+    <h2>Instructions</h2>
+    <p class="hint">
+      How the target form is shown during practice: one chip per property
+      instead of a title to parse.
+    </p>
   </div>
+
+  <sumi-segmented-control
+    [options]="styleOptions()"
+    [value]="instructionStyle()"
+    (valueChange)="setInstructionStyle($event)"
+  />
 
   <h3>Order</h3>
   <p class="hint">Move a property up or down; it saves right away.</p>
@@ -28,14 +22,18 @@
         <span class="order-buttons">
           <button
             type="button"
-            class="ghost small"
+            sumiButton
+            variant="ghost"
+            size="sm"
             [disabled]="i === 0"
             (click)="moveInstruction(i, -1)"
             aria-label="Move up"
           >▲</button>
           <button
             type="button"
-            class="ghost small"
+            sumiButton
+            variant="ghost"
+            size="sm"
             [disabled]="i === instructionOrder().length - 1"
             (click)="moveInstruction(i, 1)"
             aria-label="Move down"
@@ -48,7 +46,8 @@
   <div class="actions">
     <button
       type="button"
-      class="ghost"
+      sumiButton
+      variant="ghost"
       [disabled]="isActiveOrder(settings().defaults.instruction_order)"
       (click)="applyOrder(settings().defaults.instruction_order)"
     >
@@ -56,7 +55,8 @@
     </button>
     <button
       type="button"
-      class="ghost"
+      sumiButton
+      variant="ghost"
       [disabled]="isActiveOrder(tenseFirstOrder)"
       (click)="applyOrder(tenseFirstOrder)"
     >
@@ -84,4 +84,4 @@
     </ul>
   }
   <p class="hint">Present covers present and future (non-past).</p>
-</section>
+</sumi-card>

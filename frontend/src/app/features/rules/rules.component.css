@@ -1,10 +1,7 @@
-:host {
-  display: block;
-  padding-top: 24px;
-}
-
-.card {
-  padding: 16px;
+/* sumi-page doesn't space its own content (follow-up worth proposing to
+   sumi-ui itself) — without this, sumi-cards sit flush, borders touching. */
+sumi-page > * + * {
+  margin-top: 16px;
 }
 
 .category + .category {
@@ -20,6 +17,9 @@
   letter-spacing: 0.04em;
 }
 
+/* Navigation across many groups, not a single value — plain link chips that
+   wrap, same as before #34, just restyled on Sumi tokens instead of the old
+   app-wide --border/--accent-soft variables. */
 .chips {
   display: flex;
   flex-wrap: wrap;
@@ -28,7 +28,7 @@
 
 .chip {
   padding: 5px 12px;
-  border-radius: 999px;
+  border-radius: var(--sumi-radius-pill, 999px);
   border: 1px solid var(--sumi-line);
   color: var(--sumi-text);
   text-decoration: none;
@@ -38,7 +38,7 @@
 .chip.active {
   background: var(--sumi-accent-soft);
   border-color: var(--sumi-accent);
-  color: var(--sumi-accent);
+  color: var(--sumi-accent-ink);
   font-weight: 600;
 }
 
@@ -65,34 +65,8 @@
   line-height: 1.55;
 }
 
-/* Segmented control: every form of the group in one row, wrapping on a
-   narrow screen instead of widening the page. */
 .forms {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
   margin-top: 14px;
-  padding: 3px;
-  border-radius: 12px;
-  background: var(--sumi-sunken);
-}
-
-.forms a {
-  flex: 1 1 auto;
-  text-align: center;
-  padding: 6px 10px;
-  border-radius: 9px;
-  color: var(--sumi-muted);
-  text-decoration: none;
-  font-size: 0.875rem;
-  white-space: nowrap;
-}
-
-.forms a.active {
-  background: var(--sumi-surface);
-  color: var(--sumi-text);
-  font-weight: 600;
-  box-shadow: var(--sumi-shadow);
 }
 
 .loading {

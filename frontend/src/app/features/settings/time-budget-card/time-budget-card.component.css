@@ -14,11 +14,6 @@
   color: var(--sumi-text);
 }
 
-.slider input {
-  width: 100%;
-  accent-color: var(--sumi-accent);
-}
-
 .examples {
   list-style: none;
   display: flex;

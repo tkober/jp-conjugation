@@ -12,7 +12,7 @@ import {
 } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { SUMI_KEYS, SumiHotkeys, injectHotkey } from 'sumi-ui/core';
-import { SumiFocusModeDirective, SumiShellFocusActionsDirective } from 'sumi-ui/layout';
+import { SumiCard, SumiFocusModeDirective, SumiPage, SumiShellFocusActionsDirective } from 'sumi-ui/layout';
 import { SumiButtonDirective } from 'sumi-ui/forms';
 import { SUMI_PRACTICE, SumiAnswerField, type SumiVerdict } from 'sumi-ui/practice';
 
@@ -37,7 +37,9 @@ const TICK_MS = 100;
     DecimalPipe,
     FormInstructionComponent,
     SumiButtonDirective,
+    SumiCard,
     SumiFocusModeDirective,
+    SumiPage,
     SumiShellFocusActionsDirective,
     ...SUMI_PRACTICE,
   ],

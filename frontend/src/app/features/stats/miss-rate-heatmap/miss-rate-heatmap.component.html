@@ -1,13 +1,15 @@
-<section class="card">
-  <h2>Where it still slips</h2>
-  <!-- Not "darker": the sequential ramp runs light-to-dark but the ramp
-       itself is the library's, not a reversible app token anymore (see
-       CLAUDE.md's Stats section). "Stronger" holds in both themes. -->
-  <p class="hint">
-    Share of wrong answers per rule. The stronger the colour, the more
-    misses — the faint cells are the ones that sit. Never practised is its
-    own hatched state, not the faintest colour.
-  </p>
+<sumi-card>
+  <div sumiCardHeader>
+    <h2>Where it still slips</h2>
+    <!-- Not "darker": the sequential ramp runs light-to-dark but the ramp
+         itself is the library's, not a reversible app token anymore (see
+         CLAUDE.md's Stats section). "Stronger" holds in both themes. -->
+    <p class="hint">
+      Share of wrong answers per rule. The stronger the colour, the more
+      misses — the faint cells are the ones that sit. Never practised is its
+      own hatched state, not the faintest colour.
+    </p>
+  </div>
 
   @for (matrix of matrices(); track matrix.id) {
     <h3>{{ matrix.title }}</h3>
@@ -38,4 +40,4 @@
       Pick a cell to see its numbers.
     }
   </p>
-</section>
+</sumi-card>

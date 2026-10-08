@@ -45,6 +45,14 @@ function render(s: Settings) {
   return fixture;
 }
 
+function isOn(toggle: Element): boolean {
+  return toggle.querySelector('.sumi-toggle__control')!.classList.contains('sumi-toggle__control--on');
+}
+
+function click(toggle: Element): void {
+  (toggle.querySelector('.sumi-toggle__control') as HTMLButtonElement).click();
+}
+
 describe('FormsCardComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
@@ -52,9 +60,9 @@ describe('FormsCardComponent', () => {
 
   it('renders a toggle per form, all on when nothing is disabled', () => {
     const fixture = render(settings());
-    const toggles = fixture.nativeElement.querySelectorAll('.toggle');
+    const toggles = fixture.nativeElement.querySelectorAll('sumi-toggle');
     expect(toggles.length).toBe(2);
-    expect(toggles[0].classList.contains('on')).toBe(true);
+    expect(isOn(toggles[0])).toBe(true);
   });
 
   it('emits save with the toggled form added to disabled_forms', () => {
@@ -62,11 +70,11 @@ describe('FormsCardComponent', () => {
     const spy = vi.fn();
     fixture.componentInstance.save.subscribe(spy);
 
-    fixture.nativeElement.querySelectorAll('.toggle input')[0].dispatchEvent(new Event('change'));
+    click(fixture.nativeElement.querySelectorAll('sumi-toggle')[0]);
     fixture.detectChanges();
 
     expect(spy).toHaveBeenCalledWith({ disabled_forms: ['Verbs__NonPastAffirmative'] });
-    expect(fixture.nativeElement.querySelectorAll('.toggle')[0].classList.contains('on')).toBe(false);
+    expect(isOn(fixture.nativeElement.querySelectorAll('sumi-toggle')[0])).toBe(false);
   });
 
   it('does not emit when turning off the last remaining form (guard before the save)', () => {
@@ -74,24 +82,24 @@ describe('FormsCardComponent', () => {
     const spy = vi.fn();
     fixture.componentInstance.save.subscribe(spy);
 
-    // The second (last enabled) toggle's input.
-    fixture.nativeElement.querySelectorAll('.toggle input')[1].dispatchEvent(new Event('change'));
+    // The second (last enabled) toggle.
+    click(fixture.nativeElement.querySelectorAll('sumi-toggle')[1]);
     fixture.detectChanges();
 
     expect(spy).not.toHaveBeenCalled();
     // The guard returns before touching the signal, so the toggle stays on.
-    expect(fixture.nativeElement.querySelectorAll('.toggle')[1].classList.contains('on')).toBe(true);
+    expect(isOn(fixture.nativeElement.querySelectorAll('sumi-toggle')[1])).toBe(true);
   });
 
   it('resets its optimistic state when the parent pushes new settings', () => {
     const fixture = render(settings());
-    fixture.nativeElement.querySelectorAll('.toggle input')[0].dispatchEvent(new Event('change'));
+    click(fixture.nativeElement.querySelectorAll('sumi-toggle')[0]);
     fixture.detectChanges();
-    expect(fixture.nativeElement.querySelectorAll('.toggle')[0].classList.contains('on')).toBe(false);
+    expect(isOn(fixture.nativeElement.querySelectorAll('sumi-toggle')[0])).toBe(false);
 
     fixture.componentRef.setInput('settings', settings({ disabled_forms: [] }));
     fixture.detectChanges();
 
-    expect(fixture.nativeElement.querySelectorAll('.toggle')[0].classList.contains('on')).toBe(true);
+    expect(isOn(fixture.nativeElement.querySelectorAll('sumi-toggle')[0])).toBe(true);
   });
 });

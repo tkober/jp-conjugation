@@ -1,5 +1,7 @@
-<section class="card table">
-  <h2 class="form-title">{{ formTitle() }}</h2>
+<sumi-card class="table">
+  <div sumiCardHeader>
+    <h2 class="form-title">{{ formTitle() }}</h2>
+  </div>
 
   @for (section of sections(); track section.wordType) {
     <h3>
@@ -63,4 +65,4 @@
       }
     </ul>
   }
-</section>
+</sumi-card>

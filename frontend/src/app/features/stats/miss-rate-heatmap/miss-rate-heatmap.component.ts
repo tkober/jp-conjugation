@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, input, signal } from '@angular/core';
 
 import { SUMI_CHARTS, type SumiMatrixCellInput, type SumiMatrixCellSelection } from 'sumi-ui/charts';
+import { SumiCard } from 'sumi-ui/layout';
 
 import { ItemStat } from '../../../core/models';
 import { wordTypeLabel, wordTypeTitle } from '../../../shared/word-types';
@@ -78,7 +79,7 @@ function missRateCells(
   changeDetection: ChangeDetectionStrategy.OnPush,
   // Block: `.card` is a top-level section in normal flow, like its siblings.
   host: { style: 'display: block' },
-  imports: [...SUMI_CHARTS],
+  imports: [SumiCard, ...SUMI_CHARTS],
   templateUrl: './miss-rate-heatmap.component.html',
   styleUrl: './miss-rate-heatmap.component.css',
 })

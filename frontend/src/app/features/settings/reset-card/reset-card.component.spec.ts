@@ -38,11 +38,11 @@ describe('ResetCardComponent', () => {
     fixture.detectChanges();
     expect(el.querySelector('.warn')!.textContent).toContain('cannot be undone');
 
-    (el.querySelector('button.destructive') as HTMLButtonElement).click();
+    (el.querySelector('.sumi-button--danger') as HTMLButtonElement).click();
     fixture.detectChanges();
     expect(el.querySelector('.warn')!.textContent).toContain('Really delete');
 
-    (el.querySelector('button.destructive') as HTMLButtonElement).click();
+    (el.querySelector('.sumi-button--danger') as HTMLButtonElement).click();
     fixture.detectChanges();
 
     httpMock.expectOne('/api/reset').flush({ status: 'ok' });

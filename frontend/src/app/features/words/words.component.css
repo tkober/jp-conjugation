@@ -1,19 +1,15 @@
 :host {
   display: block;
-  padding-top: 24px;
 }
 
-.card {
-  padding: 16px;
+/* sumi-page doesn't space its own content (follow-up worth proposing to
+   sumi-ui itself) — without this, sumi-cards sit flush, borders touching. */
+sumi-page > * + * {
+  margin-top: 16px;
 }
 
 .filters input[type='search'] {
   width: 100%;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid var(--sumi-line);
-  background: var(--sumi-surface);
-  color: var(--sumi-text);
   margin-bottom: 10px;
 }
 
@@ -23,7 +19,7 @@
   flex-wrap: wrap;
 }
 
-.row label {
+.row .field {
   flex: 1;
   min-width: 96px;
 }
@@ -37,12 +33,6 @@
 
 select {
   width: 100%;
-  padding: 8px 10px;
-  border-radius: 10px;
-  border: 1px solid var(--sumi-line);
-  background: var(--sumi-surface);
-  color: var(--sumi-text);
-  font: inherit;
 }
 
 .count {
@@ -114,19 +104,6 @@ td i {
   justify-content: space-between;
   gap: 8px;
   margin-top: 12px;
-}
-
-.pager button {
-  padding: 8px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--sumi-line);
-  background: transparent;
-  color: var(--sumi-text);
-}
-
-.pager button:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
 }
 
 .loading {
