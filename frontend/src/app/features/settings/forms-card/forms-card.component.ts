@@ -43,20 +43,25 @@ export class FormsCardComponent {
     return this.settings().groups.filter((g) => g.category === category);
   }
 
-  /** `toggleRef` is the clicked `sumi-toggle` itself: it has already
-   *  flipped its own `value` signal by the time this runs (that's how the
-   *  library's toggle works), so the guard below reverts it directly on
-   *  the instance rather than through the `[value]` binding — a template
-   *  binding that recomputes to the *same* boolean it already had (true,
-   *  unchanged) is skipped by Angular as a no-op, which would otherwise
-   *  leave the switch visually off even though nothing was disabled. */
-  toggleForm(key: string, toggleRef: SumiToggle): void {
+  /** Vetoes turning a form off when it is the last one still on — passed
+   *  to `sumi-toggle`'s `[canChange]` (sumi-ui#36), which asks before
+   *  writing anything, so there is nothing to revert on the control
+   *  afterwards (see `SumiToggle`'s doc comment). */
+  canDisable(key: string): (next: boolean) => boolean {
+    return (next) => {
+      if (next) {
+        return true;
+      }
+      const stillOff = this.disabledForms().has(key)
+        ? this.disabledForms().size
+        : this.disabledForms().size + 1;
+      return stillOff < this.totalForms();
+    };
+  }
+
+  toggleForm(key: string, isOn: boolean): void {
     const next = new Set(this.disabledForms());
-    next.has(key) ? next.delete(key) : next.add(key);
-    if (next.size >= this.totalForms()) {
-      toggleRef.value.set(!this.disabledForms().has(key)); // revert — see doc comment above
-      return; // the backend would reject it anyway — at least one form stays on
-    }
+    isOn ? next.delete(key) : next.add(key);
     this.disabledForms.set(next);
     this.save.emit({ disabled_forms: [...next] });
   }

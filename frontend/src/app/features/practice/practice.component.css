@@ -48,6 +48,14 @@
   justify-content: center;
 }
 
+/* sumi-session-summary's [sumiSummaryArt] slot: companion and hanko side by
+   side, as in sumi-ui's README example. */
+.session-art {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
 /* --- Content of sumi-verdict's [sumiVerdictDetails] slot --------------- */
 
 .gave-up {

@@ -5,7 +5,11 @@
   </div>
   <div class="options">
     @for (level of settings().jlpt_levels; track level) {
-      <sumi-toggle #toggleRef [value]="!disabledJlpt().has(level)" (valueChange)="toggleLevel(level, toggleRef)">
+      <sumi-toggle
+        [value]="!disabledJlpt().has(level)"
+        [canChange]="canDisable(level)"
+        (valueChange)="toggleLevel(level, $event)"
+      >
         {{ level.toUpperCase() }}
       </sumi-toggle>
     }

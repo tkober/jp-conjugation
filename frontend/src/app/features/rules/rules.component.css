@@ -1,9 +1,3 @@
-/* sumi-page doesn't space its own content (follow-up worth proposing to
-   sumi-ui itself) — without this, sumi-cards sit flush, borders touching. */
-sumi-page > * + * {
-  margin-top: 16px;
-}
-
 .category + .category {
   margin-top: 12px;
 }

@@ -5,6 +5,7 @@
       title="Ready to practice?"
       text="Conjugate the word into the form you are asked for. Type the reading — it turns into kana as you go."
       actionLabel="Start session"
+      companion="tanuki"
       (start)="start()"
     />
   }
@@ -19,7 +20,12 @@
         [delta]="eloDelta()"
         deltaLabel="Elo"
         (restart)="start()"
-      />
+      >
+        <span sumiSummaryArt class="session-art">
+          <sumi-companion kind="tanuki" [size]="72" />
+          <sumi-hanko [characters]="hankoCharacters()" [label]="hankoLabel()" />
+        </span>
+      </sumi-session-summary>
     </sumi-session-gate>
   }
 

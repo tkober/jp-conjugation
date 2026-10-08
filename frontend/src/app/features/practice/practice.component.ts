@@ -12,7 +12,14 @@ import {
 } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { SUMI_KEYS, SumiHotkeys, injectHotkey } from 'sumi-ui/core';
-import { SumiCard, SumiFocusModeDirective, SumiPage, SumiShellFocusActionsDirective } from 'sumi-ui/layout';
+import {
+  SumiCard,
+  SumiCompanion,
+  SumiFocusModeDirective,
+  SumiHanko,
+  SumiPage,
+  SumiShellFocusActionsDirective,
+} from 'sumi-ui/layout';
 import { SumiButtonDirective } from 'sumi-ui/forms';
 import { SUMI_PRACTICE, SumiAnswerField, type SumiVerdict } from 'sumi-ui/practice';
 
@@ -38,7 +45,9 @@ const TICK_MS = 100;
     FormInstructionComponent,
     SumiButtonDirective,
     SumiCard,
+    SumiCompanion,
     SumiFocusModeDirective,
+    SumiHanko,
     SumiPage,
     SumiShellFocusActionsDirective,
     ...SUMI_PRACTICE,
@@ -88,6 +97,18 @@ export class PracticeComponent {
   readonly eloDelta = computed(
     () => Math.round(((this.api.profile()?.elo ?? 0) - this.startElo) * 10) / 10,
   );
+
+  /** The session's own accuracy, not the all-time one — the hanko marks
+   *  how *this* round went, next to its own answered/correct tiles. */
+  private readonly sessionAccuracy = computed(() => {
+    const answered = this.answered();
+    return answered > 0 ? this.correct() / answered : 0;
+  });
+
+  /** 合格 ("passed") at 80 % or above, 練習 ("practice") otherwise — see
+   *  docs/concept.md#tuschemotive and sumi-ui#38's `sumi-hanko` example. */
+  readonly hankoCharacters = computed(() => (this.sessionAccuracy() >= 0.8 ? '合格' : '練習'));
+  readonly hankoLabel = computed(() => (this.sessionAccuracy() >= 0.8 ? 'Passed' : 'Practice'));
 
   /** Drives both `sumi-answer-field`'s `[verdict]` and `sumi-verdict`'s
    *  `[kind]`/`[message]` — the same object, exactly as the showcase wires

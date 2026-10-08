@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 
-import { SumiCard, SumiPage } from 'sumi-ui/layout';
+import { SumiCard, SumiEmptyState, SumiPage } from 'sumi-ui/layout';
 import { SumiButtonDirective, SumiInputDirective, SumiSelectDirective } from 'sumi-ui/forms';
 
 import { ApiService } from '../../core/api.service';
@@ -39,7 +39,15 @@ const SORTS = [
 @Component({
   selector: 'app-words',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DecimalPipe, SumiPage, SumiCard, SumiButtonDirective, SumiInputDirective, SumiSelectDirective],
+  imports: [
+    DecimalPipe,
+    SumiPage,
+    SumiCard,
+    SumiEmptyState,
+    SumiButtonDirective,
+    SumiInputDirective,
+    SumiSelectDirective,
+  ],
   templateUrl: './words.component.html',
   styleUrl: './words.component.css',
 })
