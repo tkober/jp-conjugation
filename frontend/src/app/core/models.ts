@@ -71,6 +71,9 @@ export interface AnswerRequest {
   word_id: number;
   answer: string;
   time_ms: number;
+  /** Alt+H — the learner gave up; the backend ignores `answer` and scores it
+   *  as a plain miss. */
+  gave_up?: boolean;
 }
 
 export interface FormOption {

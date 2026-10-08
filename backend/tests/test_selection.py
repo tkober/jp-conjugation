@@ -146,6 +146,32 @@ async def test_answering_records_an_attempt_and_moves_all_three_ratings(session)
     assert item.last_served_at is not None
 
 
+async def test_giving_up_is_scored_as_wrong_regardless_of_what_was_typed(session) -> None:
+    exercise = await game.pick_next_exercise(session)
+    before = (await session.get(UserProfile, 1)).elo
+
+    # Even an answer that would otherwise be correct must not count once
+    # gave_up is set — Alt+H means "show me", not "grade this".
+    result = await game.submit_answer(
+        session, exercise.item.id, exercise.word.id, exercise.expected_hiragana, 900,
+        gave_up=True,
+    )
+
+    assert not result['correct']
+    assert not result['stem_correct']
+    assert not result['ending_correct']
+    assert not result['fast']
+    assert result['elo']['after'] < before
+    assert result['streak'] == 0
+
+    attempt = await session.scalar(select(Attempt))
+    assert attempt is not None
+    assert attempt.given == ''
+    assert not attempt.correct
+    assert not attempt.stem_correct
+    assert not attempt.ending_correct
+
+
 async def test_partial_credit_beats_a_blank_miss(session) -> None:
     """Right rule on a misread stem should cost less than getting nothing."""
     exercise = await game.pick_next_exercise(session)

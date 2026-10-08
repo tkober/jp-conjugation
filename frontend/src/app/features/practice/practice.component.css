@@ -3,17 +3,10 @@
   padding-top: 24px;
 }
 
-.intro .lead {
-  margin: 0 0 6px;
-  font-size: 1.0625rem;
-}
-
-.hint {
-  margin: 6px 0 0;
-}
-
-.intro button {
-  margin-top: 18px;
+.round {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .task {
@@ -23,9 +16,9 @@
   gap: 12px;
 }
 
-/* Chips now, not a bold title (see form-instruction.component.ts) — the
-   row can grow to four chips, so it gets the space and the ring stays
-   fixed on the right. */
+/* Chips, not a bold title (see form-instruction.component.ts) — the row can
+   grow to four chips, so it gets the space and the ring stays fixed on the
+   right. */
 .form {
   flex: 1;
   min-width: 0;
@@ -50,83 +43,131 @@
   font-size: 0.875rem;
 }
 
-form {
-  margin-bottom: 16px;
-  /* The height of the sticky header: when the answer row is scrolled to
-     the top after a verdict, it has to stop below the header, not under
-     it. Its compact counterpart sits in the short-viewport block. */
-  scroll-margin-top: 104px;
-}
-
-.row {
+.actions {
   display: flex;
+  justify-content: center;
+}
+
+/* --- Content of sumi-verdict's [sumiVerdictDetails] slot --------------- */
+
+.gave-up {
+  margin: 0 0 8px;
+  font-size: 0.875rem;
+  font-style: italic;
+}
+
+.grammar {
+  margin: 0;
+}
+
+.solution {
+  margin: 10px 0 0;
+  font-size: 2rem;
+  line-height: 1.6;
+}
+
+.solution rt {
+  font-size: 0.4em;
+}
+
+.partial {
+  margin: 6px 0 0;
+}
+
+/* Elo delta and the Jisho link share one row — the link costs no extra
+   line that way. */
+.elo-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
   gap: 8px;
+  margin: 10px 0 0;
 }
 
-input {
-  flex: 1;
-  padding: 12px 14px;
-  font-size: 1.25rem;
-  border-radius: 10px;
-  border: 1px solid var(--sumi-line);
-  background: var(--sumi-surface);
-  color: var(--sumi-text);
+.elo {
+  margin: 0;
 }
 
-input.correct {
-  border-color: var(--sumi-correct);
+.elo.up {
   color: var(--sumi-correct);
 }
 
-input.wrong {
-  border-color: var(--sumi-wrong);
+.elo.down {
   color: var(--sumi-wrong);
 }
 
-button.primary {
-  padding: 12px 20px;
-  border: none;
-  border-radius: 10px;
-  font-weight: 600;
-  flex: none;
+/* Blue like the derivation chain accent below (--rule-accent) — reads as a
+   link in both themes without doubling as the correct/wrong colours this
+   block otherwise carries. */
+.jisho {
+  color: var(--rule-accent);
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-button.ghost {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--sumi-line);
-  border-radius: 10px;
-  background: transparent;
-  color: var(--sumi-muted);
+.jisho:hover {
+  text-decoration: underline;
 }
 
-/* Keyboard up. The on-screen keyboard now shrinks the layout viewport
-   (see the interactive-widget meta in index.html), which leaves roughly
-   380px on a phone — so the exercise is trimmed to fit into it. What fits
-   does not scroll, and what does not scroll cannot jump away under the
-   finger that just tapped the field. */
+.rule {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px solid var(--sumi-line);
+  font-size: 1.0625rem;
+  /* The chain can outgrow a narrow screen; let it scroll on its own. */
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.rule .altered {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
+
+.rule .operation {
+  margin: 0 0.5rem;
+  opacity: 0.7;
+}
+
+/* Blue, not correct/wrong: this sits inside a correct- or wrong-tinted
+   verdict card, where either colour on its own background would vanish. */
+.rule .unaltered,
+.rule .alteration {
+  font-weight: 700;
+  color: var(--rule-accent);
+}
+
+/* Keyboard up. The on-screen keyboard shrinks the layout viewport (see the
+   interactive-widget meta in index.html), which leaves roughly 380px on a
+   phone — so the exercise is trimmed to fit into it. */
 @media (max-height: 500px) {
   :host {
-    padding-top: 10px;
+    padding-top: 4px;
+  }
+
+  .round {
+    gap: 8px;
   }
 
   .card {
-    padding: 14px;
-    margin-bottom: 10px;
+    padding: 10px 14px;
+  }
+
+  .task {
+    gap: 8px;
   }
 
   .word {
-    margin: 8px 0 2px;
-    font-size: 2rem;
+    margin: 2px 0;
+    font-size: 1.75rem;
+    line-height: 1.4;
   }
 
-  form {
-    margin-bottom: 10px;
-    scroll-margin-top: 100px;
+  .english {
+    font-size: 0.8125rem;
   }
 
-  button.ghost {
-    padding: 8px;
+  .solution {
+    font-size: 1.625rem;
   }
 }

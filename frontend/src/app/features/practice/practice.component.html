@@ -1,85 +1,135 @@
 @switch (phase()) {
   @case ('idle') {
-    <section class="card intro">
-      <p class="lead">Conjugate the word into the form you are asked for.</p>
-      <p class="hint">
-        Type the reading in romaji — it turns into kana as you go.
-      </p>
-      <button type="button" class="primary" (click)="start()">Start session</button>
-    </section>
+    <sumi-session-gate
+      title="Ready to practice?"
+      text="Conjugate the word into the form you are asked for. Type the reading — it turns into kana as you go."
+      actionLabel="Start session"
+      (start)="start()"
+    />
   }
 
   @case ('ended') {
-    <app-session-summary
-      [answered]="answered()"
-      [correct]="correct()"
-      [totalTimeMs]="totalTimeMs()"
-      [eloDelta]="eloDelta()"
-      (restart)="start()"
-    />
+    <!-- No title: sumi-session-summary supplies its own heading. -->
+    <sumi-session-gate [showAction]="false" (start)="start()">
+      <sumi-session-summary
+        [answered]="answered()"
+        [correct]="correct()"
+        [durationMs]="sessionDurationMs()"
+        [delta]="eloDelta()"
+        deltaLabel="Elo"
+        (restart)="start()"
+      />
+    </sumi-session-gate>
   }
 
   @default {
     @if (exercise(); as ex) {
-      <section class="card prompt">
-        <div class="task">
-          <app-form-instruction
-            class="form"
-            [parts]="ex.instruction"
-            [mode]="ex.instruction_style"
+      <!-- Lives in the shell's focus-mode header, not here — see
+           *sumiShellFocusActions's doc comment. -->
+      <sumi-session-bar *sumiShellFocusActions [answered]="answered()" [correct]="correct()" (end)="end()" />
+
+      <div class="round" sumiFocusMode>
+        <section class="card prompt">
+          <div class="task">
+            <app-form-instruction class="form" [parts]="ex.instruction" [mode]="ex.instruction_style" />
+            <sumi-countdown-ring [elapsedMs]="elapsed()" [targetMs]="ex.target_time_ms" />
+          </div>
+
+          <p class="word">
+            @if (prompt(); as r) {
+              @if (r.base) {
+                <ruby>{{ r.base }}<rt>{{ r.reading }}</rt></ruby>{{ r.tail }}
+              } @else {
+                {{ r.tail }}
+              }
+            }
+          </p>
+          <p class="english">{{ ex.english }}</p>
+        </section>
+
+        <div #answerRow>
+          <sumi-answer-field
+            #field
+            mode="kana"
+            [verdict]="verdict()"
+            [iDontKnow]="true"
+            [(value)]="value"
+            label="Answer"
+            placeholder="答え"
+            (submitted)="onSubmitted($event)"
+            (next)="onNext()"
+            (gaveUp)="onGaveUp()"
           />
-          <app-countdown-ring [elapsedMs]="elapsed()" [targetMs]="ex.target_time_ms" />
         </div>
 
-        <p class="word">
-          @if (prompt(); as r) {
-            @if (r.base) {
-              <ruby>{{ r.base }}<rt>{{ r.reading }}</rt></ruby>{{ r.tail }}
-            } @else {
-              {{ r.tail }}
-            }
-          }
-        </p>
-        <p class="english">{{ ex.english }}</p>
-      </section>
-
-      <!-- Native submit, not ngSubmit: that one comes from NgForm and would
-           need FormsModule; without it the browser would really submit the
-           form and reload the page. -->
-      <form #answerRow (submit)="submit($event)">
-        <div class="row">
-          <input
-            #answerInput
-            type="text"
-            autocomplete="off"
-            autocapitalize="off"
-            spellcheck="false"
-            placeholder="答え"
-            enterkeyhint="go"
-            [class.correct]="result()?.correct === true"
-            [class.wrong]="result()?.correct === false"
-            (input)="scheduleSync()"
-            (keyup)="scheduleSync()"
-          />
-          <button
-            type="submit"
-            class="primary"
-            (mousedown)="keepFocus($event)"
-            [disabled]="phase() === 'active' && !ready()"
-          >
-            {{ phase() === 'answered' ? 'Next' : 'Check' }}
+        <div class="actions">
+          <button type="button" sumiButton variant="primary" sumiHoldFocus (click)="onCheckClick()">
+            {{ checkButtonLabel() }}
           </button>
         </div>
-        @if (romajiLeft() && phase() === 'active') {
-          <p class="hint">Finish the syllable — the answer has to be kana.</p>
+
+        @if (verdict(); as v) {
+          <sumi-verdict
+            class="verdict"
+            [kind]="v.kind"
+            [message]="v.kind === 'wrong' ? undefined : v.message"
+            [expected]="v.kind === 'wrong' ? result()?.expected_kanji : undefined"
+            [(detailsOpen)]="detailsOpen"
+          >
+            <div sumiVerdictDetails>
+              @if (gaveUp()) {
+                <p class="gave-up">Gave up — the answer was revealed.</p>
+              }
+              <p class="grammar">{{ grammarLine() }}</p>
+
+              @if (v.kind === 'wrong' && solution(); as s) {
+                <p class="solution">
+                  @if (s.base) {
+                    <ruby>{{ s.base }}<rt>{{ s.reading }}</rt></ruby>{{ s.tail }}
+                  } @else {
+                    {{ s.tail }}
+                  }
+                </p>
+              }
+
+              @if (partial()) {
+                <p class="partial">{{ partial() }}</p>
+              }
+
+              <div class="elo-row">
+                @if (result(); as r) {
+                  <p class="elo" [class.up]="r.elo.delta > 0" [class.down]="r.elo.delta < 0">
+                    {{ r.elo.delta > 0 ? '+' : '' }}{{ r.elo.delta | number: '1.0-1' }} Elo
+                  </p>
+                }
+                <a
+                  class="jisho"
+                  [href]="jishoUrl()"
+                  target="_blank"
+                  rel="noopener"
+                  (mousedown)="keepFocus($event)"
+                  >Jisho ↗</a
+                >
+              </div>
+
+              @if (result()?.transformations?.length) {
+                <div class="rule">
+                  @for (t of result()!.transformations; track $index; let last = $last) {
+                    <span class="step">
+                      <span class="unaltered">{{ t.unaltered }}</span
+                      ><span class="altered">{{ t.altered_part }}</span>
+                      <span class="operation">{{ t.operation }}</span>
+                      @if (last) {
+                        <span class="alteration">{{ t.alteration }}</span>
+                      }
+                    </span>
+                  }
+                </div>
+              }
+            </div>
+          </sumi-verdict>
         }
-      </form>
-
-      @if (result(); as r) {
-        <app-verdict [result]="r" [exercise]="ex" />
-      }
-
-      <button type="button" class="ghost" (click)="end()">End session</button>
+      </div>
     }
   }
 }

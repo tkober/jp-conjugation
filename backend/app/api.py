@@ -71,6 +71,10 @@ class AnswerRequest(BaseModel):
     word_id: int
     answer: str = ''
     time_ms: int = 0
+    # Alt+H on the answer field: the learner gave up and the solution was
+    # revealed. Scored like any other miss (see `game.submit_answer`) — this
+    # just tells the backend to ignore `answer` rather than trust it.
+    gave_up: bool = False
 
 
 class SettingsRequest(BaseModel):
@@ -144,6 +148,7 @@ async def answer(request: AnswerRequest, session: Session) -> dict[str, Any]:
             request.word_id,
             request.answer,
             request.time_ms,
+            gave_up=request.gave_up,
         )
     except KeyError as exc:
         raise HTTPException(status_code=404, detail=str(exc)) from exc

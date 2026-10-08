@@ -9,12 +9,6 @@
      Sumi UI assigns this app. */
   --rule-accent: light-dark(#008cd5, #4fc3f7);
 
-  /* Blue-grey. Carries the countdown ring's "not yet running out" state,
-     which needs to stay free of both the accent and the correct/wrong
-     colours. Kept as an app token until #32 moves the countdown ring onto
-     Sumi UI. */
-  --neutral: light-dark(#546e7a, #90a4ae);
-
   /* Sequential single-hue ramp (blue) for the miss-rate heatmap, steps
      250->650 of the dataviz skill's reference palette. Validated against
      this app's surfaces (#ffffff / #1c1f25), not Sumi UI's own surfaces —

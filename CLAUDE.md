@@ -113,52 +113,58 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   entfallen, `sumi-app-shell` übernimmt Sticky-Positionierung, die
   Tab-Leiste unter 720px und den Theme-Toggle (`SumiTheme`, `data-theme` auf
   `<html>`) selbst.
-- `features/practice/practice.component.ts` (#19) — Übungsansicht mit explizitem
-  Session-Lebenszyklus (`idle` → `active` → `answered` → `ended`). Die Session
-  startet **nicht** automatisch. Hält Session-Zustand, Timer und
-  wanakana-Bindung; das Eingabefeld, Fokus-Handling (siehe unten) und der
-  Check/Next-Button bleiben hier, weil sie die ganze Session über existieren
-  müssen. Die drei präsentationalen Kind-Komponenten bekommen nur Signal-
-  `input()`s/`output()`s, keinen eigenen Zustand:
-  - `countdown-ring/countdown-ring.component.ts` — der Ring selbst (SVG,
-    `stroke-dashoffset`, r=19 in einer 44er-Box; Restsekunden in der Mitte,
-    letztes Viertel und Überzeit rot, bei Überzeit zählt er als „+x,x s" hoch).
-    Inputs `elapsedMs`/`targetMs`, Host `display: contents`, weil der Ring als
-    Flex-Item in der `.task`-Zeile des Eltern-Templates sitzt und keine eigene
-    Box dafür aufmachen darf.
-  - `verdict/verdict.component.ts` — die Auflösung: Headline, Grammatik-Zeile,
-    Lösung mit Furigana, Elo-Delta, Jisho-Link, Herleitungskette. Inputs
-    `result`/`exercise`. Der Jisho-Link nimmt per lokalem
-    `(mousedown)="keepFocus($event)"` dem Eingabefeld weiterhin nicht den
-    Fokus — dasselbe Muster wie beim Check/Next-Button im Elternteil, nur hier
-    dupliziert, weil der Handler jetzt am Link selbst hängt.
-  - `session-summary/session-summary.component.ts` — die
-    Session-Zusammenfassung. Inputs `answered`/`correct`/`totalTimeMs`/
-    `eloDelta`, Output `restart` statt direktem `(click)="start()"`.
+- `features/practice/practice.component.ts` (#19, auf Sumi UI umgestellt #32) —
+  Übungsansicht mit explizitem Session-Lebenszyklus (`idle` → `active` →
+  `answered` → `ended`). Die Session startet **nicht** automatisch. Start-
+  und Ende-Screen sind `sumi-session-gate` (`Enter` startet, von der
+  Bibliothek selbst registriert); der Ende-Screen projiziert
+  `sumi-session-summary` (`answered`/`correct`/`durationMs`/`delta`
+  mit `deltaLabel="Elo"`) in den Gate statt eines eigenen Zusammenfassungs-
+  Templates. Die aktive Runde steht in `sumiFocusMode` (blendet Navigation
+  und Tab-Leiste aus), `sumi-session-bar` hängt **nicht** im Seiten-Template,
+  sondern via `*sumiShellFocusActions` im Fokus-Bereich der Shell-Kopfzeile —
+  ihr `(end)` ruft `end()` auf. Die alte „End session"-Ghost-Button-Zeile ist
+  damit weg.
 
-  Alle drei Hosts stehen auf `display: block` (verdict, session-summary) bzw.
-  `display: contents` (countdown-ring) — ein Angular-Custom-Element ist sonst
-  `display: inline` und würde den Flow/Flex-Kontext der Eltern-Styles
-  verändern. Emulated Encapsulation heißt auch: jede CSS-Regel ist mit ihrem
-  Markup gewandert, inklusive der `@media (max-height: 500px)`-Anteile (siehe
-  unten) und der zwei `.up`/`.down`-Zeilen, die in verdict und session-summary
-  bewusst dupliziert sind statt über eine globale Klasse geteilt — für zwei
-  Einzeiler lohnt sich keine gemeinsame Datei.
+  Eingabe ist `sumi-answer-field` (`mode="kana"`, `[iDontKnow]="true"`, kein
+  `iKnow` — das ist nur kanji-trainer). Die Bibliothek übernimmt Romaji→Kana-
+  Konvertierung, Fokus-Halten, `incomplete`/`typing`/`correct`/`wrong` und die
+  Hotkeys `Enter`/`Esc`/`Alt H` selbst; die app-eigene wanakana-Bindung,
+  `romajiLeft`/`ready`/`scheduleSync` sind komplett entfallen (wanakana bleibt
+  nur noch als `furigana.ts`-Abhängigkeit und Sumi-UI-Peer-Dependency im
+  `package.json`). Check/Next ist ein `sumiButton` mit `sumiHoldFocus`, der
+  `field.submit()` ruft — derselbe Mechanismus wie bei `sumiHoldFocus` sonst
+  auch, nur dass der Jisho-Link (s. u.) weiterhin seinen eigenen
+  `(mousedown)="keepFocus($event)"` braucht, weil es dafür keine Direktive
+  gibt. Das Ergebnis vom Backend wird auf `SumiVerdict` (`kind: 'correct' |
+  'wrong'`) gemappt — die App kennt kein `held`/`retry`, weil das Backend
+  einmalig entscheidet. Dasselbe `verdict()`-Signal geht an `sumi-answer-
+  field` **und** an `sumi-verdict`, exakt wie im Showcase.
 
-  **Der Fokus bleibt die ganze Session im Eingabefeld** — auf dem Handy hängt
-  daran die Bildschirmtastatur (siehe unten). Die Zielform zeigt
-  `shared/form-instruction/form-instruction.component.ts` statt eines Titels
-  (siehe unten, „Anweisungen als Chips"). Die Auflösung nennt seit #6 auch die
-  abgefragte Grammatik (`.grammar`, z. B. „Godan verb (ぐ) · Te-form,
-  positive") — bei beiden Ausgängen, richtig wie falsch, direkt unter der
-  正解/不正解-Headline. Die Wortart-Titel kommen aus `shared/word-types.ts`
-  (`wordTypeTitle()`), geteilt mit `features/stats/stats.component.ts`. Seit #7 verlinkt die
-  Auflösung zusätzlich, in einer Zeile mit dem Elo-Delta, auf den
-  jisho.org-Eintrag des Worts (Kanji + Leerzeichen + Lesung im Suchpfad — das
-  setzt bei Jisho auch bei Homographen und suru-Verben den exakten Eintrag an
-  erste Stelle). Der Link öffnet in einem neuen Tab und nimmt per
-  `(mousedown)="keepFocus($event)"` dem Eingabefeld nicht den Fokus, genau wie
-  Check/Next.
+  `countdown-ring`, `verdict` und `session-summary` als eigene Komponenten
+  sind gelöscht. `sumi-countdown-ring` sitzt jetzt im App-eigenen Prompt-Card-
+  Markup (das bleibt bestehen — `sumi-prompt-card` kann kein Furigana-`<ruby>`
+  rendern, siehe `shared/furigana.ts`). Grammatik-Zeile, Partial-Hinweis
+  (Stamm/Endung getrennt), Elo-Delta, Jisho-Link und Herleitungskette bleiben
+  app-spezifisch, jetzt direkt in `PracticeComponent` statt in einer eigenen
+  `VerdictComponent`, projiziert in `sumi-verdict`s `[sumiVerdictDetails]`-
+  Slot. `F` schaltet diesen Slot um — registriert von `sumi-verdict` selbst,
+  sobald der Slot Inhalt hat (hier immer). Er startet **offen**
+  (`detailsOpen = signal(true)`): die Herleitungskette ist das Haupt-
+  Lernmittel bei einem Fehler, sie soll nicht erst einen zweiten Tastendruck
+  brauchen. Bibliothekseigene Titel („Correct"/„Wrong") ersetzen die alten
+  正解/不正解-Headlines; die „fast"-Markierung auf eine richtige Antwort steht
+  jetzt in `sumi-verdict`s `message`-Slot. Ein Alt+H-Abbruch zeigt zusätzlich
+  eine eigene Zeile im Slot (kein Partial-Hinweis dafür — ohne Eingabe gibt es
+  nichts, das stamm- oder endungs-richtig sein könnte). `?` bleibt als
+  Seiten-Hotkey registriert (Scope `feedback`, aktiv sobald ein Ergebnis da
+  ist) — genau wie im Showcase.
+
+  Die Wortart-Titel kommen weiterhin aus `shared/word-types.ts`
+  (`wordTypeTitle()`), geteilt mit `features/stats/stats.component.ts`. Der
+  Jisho-Link (Kanji + Leerzeichen + Lesung im Suchpfad, setzt auch bei
+  Homographen und suru-Verben den exakten Eintrag an erste Stelle) öffnet
+  weiterhin in einem neuen Tab.
 - `shared/form-instruction/form-instruction.component.ts` — rendert `Exercise.instruction` (eine
   geordnete Liste strukturierter Teile, siehe
   `backend/app/conjugation/instruction.py`) als Chip-Reihe, in einem von drei
@@ -593,14 +599,12 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
   Formular **nativ** ab, die Seite lädt neu. Deshalb steht hier `(submit)` mit
   eigenem `preventDefault()`. Symptom war ein „Check"-Klick, der die Übung
   kommentarlos auf den Startbildschirm zurücksetzte.
-- **wanakana schreibt das Eingabefeld aus seinem eigenen Listener um**, und
-  nicht immer im selben Task. Wer den Wert synchron im `(input)`-Handler liest,
-  sieht das Romaji, das gleich ersetzt wird. Die Übung liest deshalb verzögert
-  (`setTimeout`) und hört zusätzlich auf `keyup`. Der verzögerte Write landet
-  trotzdem als Signal-Write (`romajiLeft.set()`/`ready.set()`), und genau
-  deshalb läuft das zoneless (#29) weiter wie vorher — ein `setTimeout`-Rumpf,
-  der nur auf DOM-Properties schreibt, bräuchte ohne zone.js einen manuellen
-  Trigger, einer, der ein Signal setzt, nicht.
+- **Die Romaji→Kana-Konvertierung ist seit #32 Sache von `sumi-answer-field`**
+  (`mode="kana"`), nicht mehr der App. Der alte wanakana-Workaround
+  (verzögertes Lesen per `setTimeout`+`keyup`, weil wanakana das Feld aus
+  seinem eigenen Listener umschreibt und nicht immer im selben Task) ist mit
+  der App-eigenen Bindung entfallen — die Bibliothek hält ihren eigenen
+  Romaji-Puffer (`absorbInput`) hinter dem sichtbaren `value`.
 - `frontend/nginx.conf` ist ein **envsubst-Template**: `PORT` und
   `API_UPSTREAM` brauchen `ENV`-Defaults im Dockerfile (envsubst ersetzt nur
   *gesetzte* Variablen — eine ungesetzte bliebe wörtlich stehen und nginx
@@ -657,23 +661,24 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
   Browser scrollt das fokussierte Feld sichtbar — und der sticky Header
   verschwindet über dem sichtbaren Streifen. Zweite Referenzgröße ist deshalb
   **360×380**: das bleibt von einem 787px-Handy übrig, wenn die Tastatur steht.
-  Die `@media (max-height: 500px)`-Blöcke in `app.component.css` und, seit #19
-  auf vier Dateien verteilt (`practice.component.css` plus je ihr Anteil in
-  `countdown-ring/`, `verdict/`, `session-summary/`), stutzen die Übung genau
-  darauf, damit beim Tippen ins Feld gar nichts mehr zu scrollen ist.
-- **Die Tastatur geht nur für einen Fokus auf, den der Nutzer ausgelöst hat** —
-  einmal offen, darf sie zwischen zwei Übungen also nie verloren gehen. Drei
-  Dinge nähmen sie einem: `readonly` (Android schließt die Tastatur für ein
-  read-only-Feld — statt `[readOnly]` stellt `scheduleSync()` den bewerteten
-  Wert wieder her), der Fokus, den ein Button beim Tippen an sich zieht
-  (`(mousedown)` mit `preventDefault()`, der Klick kommt trotzdem), und ein
-  `focus()`, das erst nach der Antwort des Servers kommt — „Next" fokussiert
-  deshalb **synchron in der Geste**, bevor die nächste Übung überhaupt
-  angefragt ist. Das `focus()` nach dem Rendern (`afterNextRender`, sonst gibt
-  es das Feld noch gar nicht) bleibt als Netz für den Sessionstart.
+  Der `@media (max-height: 500px)`-Block in `practice.component.css` (seit #32
+  nur noch diese eine Datei, vorher zusätzlich auf `countdown-ring/`,
+  `verdict/`, `session-summary/` verteilt, die mit #32 entfallen sind) stutzt
+  die Übung genau darauf, damit beim Tippen ins Feld gar nichts mehr zu
+  scrollen ist.
+- **Die Tastatur geht nur für einen Fokus auf, den der Nutzer ausgelöst hat**
+  — einmal offen, darf sie zwischen zwei Übungen also nie verloren gehen. Das
+  ist seit #32 Sache von `sumi-answer-field`: nie `readonly`, nie geblurred,
+  ein `effect()` in der Bibliothek fokussiert das Feld bei jedem Verdict-
+  Wechsel (auch zurück auf `null`) neu — die App muss nach einem Check/Next
+  nicht mehr selbst `focus()` aufrufen. `sumiHoldFocus` auf dem Check/Next-
+  Button und dem Jisho-Link (dort weiterhin ein lokales
+  `(mousedown)="keepFocus($event)"`, weil ein `<a>` keine Button-Direktive
+  ist) verhindert nur noch, dass der Fokus beim Antippen überhaupt wegwandert.
 - Mit stehender Tastatur passen Aufgabe, Eingabe *und* Auflösung nicht
-  gleichzeitig auf den Schirm. Nach dem Prüfen rückt deshalb die Eingabezeile
-  unter den Header (`scrollIntoView` + `scroll-margin-top` in Höhe des
-  Headers), damit Korrektur und „Next" sich den sichtbaren Streifen teilen; die
-  nächste Übung scrollt wieder nach oben. Auf einem Schirm, auf dem alles
-  passt, tun beide Aufrufe nichts.
+  gleichzeitig auf den Schirm. Das alte `scrollIntoView` +
+  `scroll-margin-top` auf die Eingabezeile ist mit #32 ersatzlos entfallen:
+  `sumi-answer-field` behält den Fokus ohnehin, und der Browser scrollt ein
+  fokussiertes Feld von selbst in Sicht — gegengeprüft bei 360×380 (aktive
+  Aufgabe und falsche Auflösung mit offener Kette), siehe die Screenshots
+  dieses Issues.
