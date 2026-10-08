@@ -21,7 +21,7 @@ from __future__ import annotations
 
 import math
 import random
-from dataclasses import dataclass
+from dataclasses import dataclass, replace
 from datetime import UTC, datetime
 from typing import Any
 
@@ -273,6 +273,7 @@ async def submit_answer(
     word_id: int,
     given: str,
     time_ms: int,
+    gave_up: bool = False,
 ) -> dict[str, Any]:
     item = await session.get(PracticeItem, practice_item_id)
     word = await session.get(Word, word_id)
@@ -283,7 +284,14 @@ async def submit_answer(
     if conjugated is None:
         raise LookupError(f'{item.form_key} has no form for {word.kanji}')
 
-    ev = evaluate(word.hiragana, conjugated.hiragana, given)
+    # A given-up answer is graded as a plain miss, whatever `given` carried —
+    # Alt+H on the answer field means "show me", not "grade what I typed". The
+    # stored `given`/`Attempt.given` is '' rather than the field's contents:
+    # there is no reading to judge it against (`evaluate` would otherwise
+    # score an empty stem as "stem_correct" for an irregular form).
+    ev = evaluate(word.hiragana, conjugated.hiragana, '' if gave_up else given)
+    if gave_up:
+        ev = replace(ev, correct=False, stem_correct=False, ending_correct=False)
     user = await get_user(session)
 
     time_ms = max(0, min(int(time_ms), 300_000))

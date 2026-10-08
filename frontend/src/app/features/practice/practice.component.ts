@@ -1,25 +1,26 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  DestroyRef,
   ElementRef,
   Injector,
-  OnDestroy,
   afterNextRender,
   computed,
-  effect,
   inject,
   signal,
   viewChild,
 } from '@angular/core';
-import * as wanakana from 'wanakana';
+import { DecimalPipe } from '@angular/common';
+import { SUMI_KEYS, SumiHotkeys, injectHotkey } from 'sumi-ui/core';
+import { SumiFocusModeDirective, SumiShellFocusActionsDirective } from 'sumi-ui/layout';
+import { SumiButtonDirective } from 'sumi-ui/forms';
+import { SUMI_PRACTICE, SumiAnswerField, type SumiVerdict } from 'sumi-ui/practice';
 
 import { ApiService } from '../../core/api.service';
 import { FormInstructionComponent } from '../../shared/form-instruction/form-instruction.component';
 import { ruby } from '../../shared/furigana';
+import { wordTypeTitle } from '../../shared/word-types';
 import { AnswerResult, Exercise } from '../../core/models';
-import { CountdownRingComponent } from './countdown-ring/countdown-ring.component';
-import { VerdictComponent } from './verdict/verdict.component';
-import { SessionSummaryComponent } from './session-summary/session-summary.component';
 
 /** A session is explicit: nothing runs until it is started, and the summary
  *  only means something because it has a beginning and an end. */
@@ -30,74 +31,141 @@ const TICK_MS = 100;
 @Component({
   selector: 'app-practice',
   // Every piece of state here is a signal, so change detection can be driven
-  // by signal writes instead of by zone.js — which also covers the writes that
-  // happen in a microtask, outside any patched callback.
+  // by signal writes instead of by zone.js.
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
+    DecimalPipe,
     FormInstructionComponent,
-    CountdownRingComponent,
-    VerdictComponent,
-    SessionSummaryComponent,
+    SumiButtonDirective,
+    SumiFocusModeDirective,
+    SumiShellFocusActionsDirective,
+    ...SUMI_PRACTICE,
   ],
   templateUrl: './practice.component.html',
   styleUrl: './practice.component.css',
 })
-export class PracticeComponent implements OnDestroy {
+export class PracticeComponent {
   private api = inject(ApiService);
+  private hotkeys = inject(SumiHotkeys);
   private injector = inject(Injector);
-  private answerInput = viewChild<ElementRef<HTMLInputElement>>('answerInput');
+  private field = viewChild<SumiAnswerField>('field');
   private answerRow = viewChild<ElementRef<HTMLElement>>('answerRow');
 
   readonly phase = signal<Phase>('idle');
   readonly exercise = signal<Exercise | null>(null);
   readonly result = signal<AnswerResult | null>(null);
+  /** Whether the current `result` came from Alt+H rather than a typed
+   *  submission — drives the "gave up" note in the details slot. */
+  readonly gaveUp = signal(false);
+  readonly value = signal('');
+  /** Open by default: the derivation chain is the main learning aid on a
+   *  miss, so it should not need a second tap to see. `F` (registered by
+   *  `sumi-verdict` itself) and the toggle button both flip it either way. */
+  readonly detailsOpen = signal(true);
+
   readonly answered = signal(0);
   readonly correct = signal(0);
-  readonly romajiLeft = signal(false);
-  readonly ready = signal(false);
-
   readonly elapsed = signal(0);
-  private totalTime = signal(0);
+  private readonly totalTime = signal(0);
   private startElo = 0;
   private shownAt = 0;
+  private sessionStartedAt = 0;
   private timer: ReturnType<typeof setInterval> | undefined;
-  private bound: HTMLInputElement | null = null;
-  /** The graded answer, so the field can be put back after a stray keystroke
-   *  while the verdict is up — see `scheduleSync`. */
-  private submitted = '';
+
+  readonly sessionDurationMs = signal(0);
 
   readonly prompt = computed(() => {
     const ex = this.exercise();
     return ex ? ruby(ex.kanji, ex.hiragana) : null;
   });
 
-  readonly totalTimeMs = computed(() => this.totalTime());
+  /** Rounded to 1 decimal, like every other Elo figure in this app — the raw
+   *  subtraction of two already-rounded floats otherwise prints noise such
+   *  as "-14.100000000000023" in `sumi-session-summary`, which has no pipe
+   *  of its own to clean that up. */
+  readonly eloDelta = computed(
+    () => Math.round(((this.api.profile()?.elo ?? 0) - this.startElo) * 10) / 10,
+  );
 
-  readonly eloDelta = computed(() => (this.api.profile()?.elo ?? 0) - this.startElo);
+  /** Drives both `sumi-answer-field`'s `[verdict]` and `sumi-verdict`'s
+   *  `[kind]`/`[message]` — the same object, exactly as the showcase wires
+   *  it. This app only ever produces `correct`/`wrong`: there is no
+   *  held/retry state, since the backend is the sole judge of an answer and
+   *  never asks for a second confirmation. */
+  readonly verdict = computed<SumiVerdict | null>(() => {
+    const r = this.result();
+    if (!r) {
+      return null;
+    }
+    if (r.correct) {
+      return { kind: 'correct', message: r.fast ? 'Fast answer.' : undefined };
+    }
+    return { kind: 'wrong' };
+  });
+
+  /** Mirrors the field's own Enter-label switching (see
+   *  `SumiAnswerField.submit()`) — this app never reaches `held`/`retry`. */
+  readonly checkButtonLabel = computed(() => {
+    const kind = this.verdict()?.kind;
+    return kind === 'correct' || kind === 'wrong' ? 'Next' : 'Check';
+  });
+
+  /** "I-adjective · Present, casual, negative" — which grammar was actually
+   *  asked, for both a hit and a miss. For a godan verb the trigger is
+   *  appended: the SRS item is form × word type × trigger, and the ending is
+   *  exactly what the rule hinges on. */
+  readonly grammarLine = computed(() => {
+    const ex = this.exercise();
+    if (!ex) {
+      return '';
+    }
+    const type =
+      ex.word_type === 'godan_verb' && ex.trigger !== '-'
+        ? `${wordTypeTitle(ex.word_type)} (${ex.trigger})`
+        : wordTypeTitle(ex.word_type);
+    return `${type} · ${ex.form_title}`;
+  });
+
+  /** Which half of a wrong answer was right — the useful part of a miss.
+   *  Never shown for a given-up answer: nothing was typed, so neither half
+   *  can be judged. */
+  readonly partial = computed(() => {
+    const r = this.result();
+    if (!r || r.correct || this.gaveUp()) {
+      return '';
+    }
+    if (r.ending_correct && !r.stem_correct) {
+      return 'Right conjugation — the word itself was misread.';
+    }
+    if (r.stem_correct && !r.ending_correct) {
+      return 'Word read correctly — the form was wrong.';
+    }
+    return '';
+  });
+
+  /** Link to the word's jisho.org entry. Kanji + reading, not kanji alone:
+   *  tested against jisho's search, that combination puts the exact
+   *  dictionary entry first even for homographs and suru verbs. */
+  readonly jishoUrl = computed(() => {
+    const ex = this.exercise();
+    return ex ? `https://jisho.org/search/${encodeURIComponent(`${ex.kanji} ${ex.hiragana}`)}` : '';
+  });
 
   constructor() {
-    effect(() => {
-      const element = this.answerInput()?.nativeElement ?? null;
-      if (element === this.bound) {
-        return;
-      }
-      if (this.bound) {
-        wanakana.unbind(this.bound);
-      }
-      this.bound = element;
-      if (element) {
-        wanakana.bind(element);
-        this.focusAnswer();
-      }
+    // `?` only becomes a hotkey once a verdict is on screen — bare keys
+    // otherwise belong to the field. `F` is registered by `sumi-verdict`
+    // itself as soon as its details slot has content, which it always does
+    // here.
+    injectHotkey({
+      keys: SUMI_KEYS.help,
+      label: 'Toggle this menu (after answering)',
+      scope: 'feedback',
+      allowInEditable: true,
+      enabled: () => this.result() !== null,
+      handler: () => this.hotkeys.toggleHelp(),
     });
-  }
 
-  ngOnDestroy(): void {
-    this.stopTimer();
-    if (this.bound) {
-      wanakana.unbind(this.bound);
-      this.bound = null;
-    }
+    inject(DestroyRef).onDestroy(() => this.stopTimer());
   }
 
   start(): void {
@@ -105,164 +173,128 @@ export class PracticeComponent implements OnDestroy {
     this.correct.set(0);
     this.totalTime.set(0);
     this.startElo = this.api.profile()?.elo ?? 0;
+    this.sessionStartedAt = Date.now();
     this.next();
-  }
-
-  next(): void {
-    this.result.set(null);
-    this.api.nextExercise().subscribe({
-      next: (exercise) => {
-        this.exercise.set(exercise);
-        this.phase.set('active');
-        this.clearInput();
-        this.shownAt = performance.now();
-        this.elapsed.set(0);
-        this.startTimer();
-      },
-      error: () => this.phase.set('idle'),
-    });
-  }
-
-  submit(event: Event): void {
-    event.preventDefault();
-    if (this.phase() === 'answered') {
-      // Still inside the tap that triggered this: a phone opens its keyboard
-      // only for a focus that happens within the gesture, so it has to be done
-      // here and not when the next exercise arrives. This is what brings the
-      // keyboard back if it was swiped away while reading the correction.
-      this.answerInput()?.nativeElement.focus({ preventScroll: true });
-      this.next();
-    } else {
-      this.check();
-    }
-  }
-
-  check(): void {
-    const exercise = this.exercise();
-    const element = this.answerInput()?.nativeElement;
-    if (!exercise || !element || this.phase() !== 'active' || !this.ready()) {
-      return;
-    }
-
-    this.stopTimer();
-    const timeMs = Math.round(performance.now() - this.shownAt);
-    this.submitted = element.value;
-
-    this.api
-      .answer({
-        practice_item_id: exercise.practice_item_id,
-        word_id: exercise.word_id,
-        answer: element.value,
-        time_ms: timeMs,
-      })
-      .subscribe((result) => {
-        this.result.set(result);
-        this.phase.set('answered');
-        this.revealVerdict();
-        this.answered.update((n) => n + 1);
-        this.totalTime.update((t) => t + timeMs);
-        if (result.correct) {
-          this.correct.update((n) => n + 1);
-        }
-      });
   }
 
   end(): void {
     this.stopTimer();
+    this.sessionDurationMs.set(Date.now() - this.sessionStartedAt);
     this.phase.set(this.answered() ? 'ended' : 'idle');
     this.exercise.set(null);
     this.result.set(null);
   }
 
-  /** Re-read the field after wanakana has had its turn.
-   *
-   *  wanakana rewrites the input from its own listener, and not always within
-   *  the same task — reading synchronously sees the romaji it is about to
-   *  replace. Deferring to a macrotask and listening on keyup as well as input
-   *  covers typing, pasting and IME conversion alike; the read is idempotent,
-   *  so firing it more often than needed costs nothing.
-   */
-  scheduleSync(): void {
-    setTimeout(() => {
-      const element = this.answerInput()?.nativeElement;
-      if (!element) {
-        return;
-      }
-      // While the verdict is up the field stays *editable* on purpose: a
-      // `readonly` input makes Android close the on-screen keyboard, and it
-      // would not open again by itself for the next exercise. Anything typed
-      // here is simply undone instead.
-      if (this.phase() !== 'active') {
-        if (element.value !== this.submitted) {
-          element.value = this.submitted;
-        }
-        return;
-      }
-      const value = element.value;
-      // Only complete syllables get converted, so a half-typed "tabet" would
-      // be graded as a miss. Hold the button until the kana are done.
-      const unconverted = /[a-zA-Z]/.test(value);
-      this.romajiLeft.set(unconverted);
-      this.ready.set(value.trim().length > 0 && !unconverted);
+  /** `Enter` on a settled verdict, routed here from the field's `(next)`
+   *  output and from the Check/Next button via `field.submit()`. */
+  onNext(): void {
+    this.next();
+  }
+
+  /** `Enter` on a finished, typed answer. */
+  onSubmitted(answer: string): void {
+    this.submit(answer, false);
+  }
+
+  /** Alt+H: reveal the solution, scored as a plain miss. */
+  onGaveUp(): void {
+    this.submit('', true);
+  }
+
+  /** The Check/Next button next to the field — `sumiHoldFocus` keeps the
+   *  caret (and on a phone, the keyboard) in the field; this just does
+   *  whatever `Enter` would do right now. */
+  onCheckClick(): void {
+    this.field()?.submit();
+  }
+
+  private next(): void {
+    this.result.set(null);
+    this.value.set('');
+    this.gaveUp.set(false);
+    this.detailsOpen.set(true);
+    this.api.nextExercise().subscribe({
+      next: (exercise) => {
+        this.exercise.set(exercise);
+        this.phase.set('active');
+        this.shownAt = performance.now();
+        this.elapsed.set(0);
+        this.startTimer();
+        // Undo the scroll the previous verdict caused — the new prompt
+        // belongs at the top.
+        afterNextRender(() => window.scrollTo({ top: 0, behavior: 'smooth' }), {
+          injector: this.injector,
+        });
+      },
+      error: () => this.phase.set('idle'),
     });
   }
 
-  /** Keep the on-screen keyboard open when the Check/Next button is tapped.
-   *
-   *  A phone only opens the keyboard for a focus the *user* caused, so once it
-   *  is up it must never be lost in between: a button takes the focus on
-   *  mousedown (which a tap also fires, right before the click), and with it
-   *  goes the keyboard. Cancelling that default leaves the focus in the field;
-   *  the click itself still happens.
-   */
-  keepFocus(event: Event): void {
-    event.preventDefault();
+  private submit(answer: string, gaveUp: boolean): void {
+    const exercise = this.exercise();
+    if (!exercise || this.phase() !== 'active') {
+      return;
+    }
+
+    this.stopTimer();
+    const timeMs = Math.round(performance.now() - this.shownAt);
+    this.gaveUp.set(gaveUp);
+
+    this.api
+      .answer({
+        practice_item_id: exercise.practice_item_id,
+        word_id: exercise.word_id,
+        answer,
+        time_ms: timeMs,
+        gave_up: gaveUp,
+      })
+      .subscribe((result) => {
+        this.result.set(result);
+        this.phase.set('answered');
+        this.answered.update((n) => n + 1);
+        this.totalTime.update((t) => t + timeMs);
+        if (result.correct) {
+          this.correct.update((n) => n + 1);
+        }
+        this.revealVerdict();
+      });
   }
 
-  /** Bring the correction into view.
+  /** Bring the correction into view, below the sticky header.
    *
-   *  With the keyboard up there is no room for prompt, answer *and* verdict at
-   *  once, so the answer row moves up under the header: the correction and the
-   *  Next button then share the visible strip, and the prompt word is repeated
-   *  in the derivation chain anyway. On a screen where everything fits there is
-   *  nothing to scroll and this does nothing. */
+   *  `sumi-answer-field` keeps its own focus across an answer (see
+   *  docs/concept.md#eingabe-sumi-answer-field), so unlike a field that gets
+   *  refocused, nothing here triggers the browser's native "scroll the
+   *  focused element into view". With the on-screen keyboard up, the task,
+   *  the input *and* the verdict do not fit on screen together (see
+   *  CLAUDE.md, 360×380 reference), so the input row is scrolled to just
+   *  under the header once a verdict lands — the correction and the
+   *  Check/Next button then share the visible strip. The header's height is
+   *  measured live rather than hardcoded: `sumi-app-shell`'s header does not
+   *  publish its height as a token, and it has changed sizes once already
+   *  going from the app's own layout to this one (#32). On a screen where
+   *  everything already fits, this scrolls at most a few px. */
   private revealVerdict(): void {
     afterNextRender(
-      () =>
-        this.answerRow()?.nativeElement.scrollIntoView({
-          block: 'start',
-          behavior: 'smooth',
-        }),
+      () => {
+        const row = this.answerRow()?.nativeElement;
+        if (!row) {
+          return;
+        }
+        const header = document.querySelector('.sumi-app-shell__header');
+        row.style.scrollMarginTop = `${(header?.getBoundingClientRect().height ?? 0) + 8}px`;
+        row.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      },
       { injector: this.injector },
     );
   }
 
-  /** Put the cursor back into the answer field once the new exercise is on
-   *  screen. The field is (re)created by the very change detection run this
-   *  call belongs to, so focusing it any earlier would find nothing — that is
-   *  why it waits for the render instead of doing it inline. */
-  private focusAnswer(): void {
-    afterNextRender(
-      () => this.answerInput()?.nativeElement.focus({ preventScroll: true }),
-      { injector: this.injector },
-    );
-  }
-
-  private clearInput(): void {
-    const element = this.answerInput()?.nativeElement;
-    if (element) {
-      element.value = '';
-    }
-    this.submitted = '';
-    this.romajiLeft.set(false);
-    this.ready.set(false);
-    this.focusAnswer();
-    // Undo the scroll the previous verdict caused — the new prompt belongs at
-    // the top, and the browser's own clamping would leave it half under the
-    // header.
-    afterNextRender(() => window.scrollTo({ top: 0, behavior: 'smooth' }), {
-      injector: this.injector,
-    });
+  /** Keep the on-screen keyboard open: the Jisho link must not steal focus
+   *  from the answer field either (see `sumiHoldFocus` on the Check/Next
+   *  button for the general mechanism — a plain `<a>` has no directive for
+   *  it, so this stays a local handler). */
+  keepFocus(event: Event): void {
+    event.preventDefault();
   }
 
   private startTimer(): void {

@@ -89,6 +89,25 @@ def test_answering_wrongly(client) -> None:
     assert body['elo']['delta'] < 0
 
 
+def test_giving_up_is_scored_as_wrong_and_returns_the_solution(client) -> None:
+    exercise = client.get('/api/exercise/next').json()
+    body = client.post('/api/answer', json={
+        'practice_item_id': exercise['practice_item_id'],
+        'word_id': exercise['word_id'],
+        'answer': 'たぶん',  # whatever was left in the field — must be ignored
+        'time_ms': 1200,
+        'gave_up': True,
+    }).json()
+
+    assert not body['correct']
+    assert not body['stem_correct']
+    assert not body['ending_correct']
+    assert not body['fast']
+    assert body['streak'] == 0
+    assert body['expected_hiragana']
+    assert body['given'] == ''
+
+
 def test_answer_for_an_unknown_exercise_is_404(client) -> None:
     response = client.post('/api/answer', json={
         'practice_item_id': 999_999, 'word_id': 999_999, 'answer': 'x', 'time_ms': 1,
