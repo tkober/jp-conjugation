@@ -1,100 +1,95 @@
-@if (stats(); as s) {
-  <sumi-stat-grid>
-    <sumi-stat-tile [value]="s.attempts" label="Answered" />
-    <sumi-stat-tile [value]="accuracyLabel()" label="Accuracy" />
-    <sumi-stat-tile [value]="avgTimeLabel()" label="Ø time" />
-    <sumi-stat-tile [value]="s.best_streak" label="Best streak" />
-  </sumi-stat-grid>
+<sumi-page title="Stats" width="narrow">
+  @if (stats(); as s) {
+    <sumi-stat-grid>
+      <sumi-stat-tile [value]="s.attempts" label="Answered" />
+      <sumi-stat-tile [value]="accuracyLabel()" label="Accuracy" />
+      <sumi-stat-tile [value]="avgTimeLabel()" label="Ø time" />
+      <sumi-stat-tile [value]="s.best_streak" label="Best streak" />
+    </sumi-stat-grid>
 
-  @if (s.attempts === 0) {
-    <section class="card empty">
-      <p>Nothing practised yet. The numbers show up once you answer something.</p>
-    </section>
-  } @else {
-    <section class="card">
-      <h2>Elo</h2>
-      <p class="hint">
-        Your rating over the last {{ s.elo_history.length }} answers — currently
-        {{ s.elo | number: '1.0-0' }}, level {{ s.level }}.
-        @if (eloRange(); as range) {
-          <span class="range">Range {{ range.min }}–{{ range.max }}.</span>
+    @if (s.attempts === 0) {
+      <sumi-card class="empty">
+        <p>Nothing practised yet. The numbers show up once you answer something.</p>
+      </sumi-card>
+    } @else {
+      <sumi-card>
+        <div sumiCardHeader>
+          <h2>Elo</h2>
+          <p class="hint">
+            Your rating over the last {{ s.elo_history.length }} answers — currently
+            {{ s.elo | number: '1.0-0' }}, level {{ s.level }}.
+            @if (eloRange(); as range) {
+              <span class="range">Range {{ range.min }}–{{ range.max }}.</span>
+            }
+          </p>
+        </div>
+        @if (s.elo_history.length >= 2) {
+          <sumi-sparkline
+            [ariaLabel]="'Elo rating over the last ' + s.elo_history.length + ' answers'"
+            [points]="s.elo_history"
+            [value]="eloValue()"
+            [delta]="eloDelta()"
+            [table]="true"
+          />
         }
-      </p>
-      @if (s.elo_history.length >= 2) {
-        <sumi-sparkline
-          [ariaLabel]="'Elo rating over the last ' + s.elo_history.length + ' answers'"
-          [points]="s.elo_history"
-          [value]="eloValue()"
-          [delta]="eloDelta()"
-          [table]="true"
-        />
+      </sumi-card>
+
+      <app-miss-rate-heatmap [items]="s.items" />
+
+      @if (s.weakest_items.length) {
+        <sumi-card>
+          <div sumiCardHeader>
+            <h2>Weakest rules</h2>
+            <p class="hint">At least 3 answers each, worst first.</p>
+          </div>
+          <sumi-data-table [columns]="weakestColumns" [rows]="weakestRows()" />
+        </sumi-card>
       }
-    </section>
 
-    <app-miss-rate-heatmap [items]="s.items" />
+      <sumi-card>
+        <div sumiCardHeader>
+          <h2>How the misses split</h2>
+        </div>
+        <dl class="split">
+          <div>
+            <dt>Right rule, misread word</dt>
+            <dd>{{ s.missed_with_right_rule }}</dd>
+          </div>
+          <div>
+            <dt>Right reading, wrong form</dt>
+            <dd>{{ s.missed_with_right_reading }}</dd>
+          </div>
+        </dl>
+      </sumi-card>
 
-    @if (s.weakest_items.length) {
-      <section class="card">
-        <h2>Weakest rules</h2>
-        <p class="hint">At least 3 answers each, worst first.</p>
-        <table class="data">
-          <thead>
-            <tr><th>Rule</th><th>Type</th><th class="num">Correct</th></tr>
-          </thead>
-          <tbody>
-            @for (item of s.weakest_items; track item.id) {
-              <tr>
-                <td>{{ item.title }}</td>
-                <td class="muted">
-                  {{ typeTitle(item.word_type) }}{{ item.trigger === '-' ? '' : ' · ' + item.trigger }}
-                </td>
-                <td class="num">{{ item.correct }}/{{ item.attempts }}</td>
-              </tr>
-            }
-          </tbody>
-        </table>
-      </section>
+      <sumi-card>
+        <div sumiCardHeader>
+          <h2>Recent</h2>
+        </div>
+        <div class="grid-scroll">
+          <table class="data">
+            <thead>
+              <tr><th>Word</th><th>Rule</th><th>Answer</th><th class="num">Elo</th></tr>
+            </thead>
+            <tbody>
+              @for (attempt of s.recent; track attempt.created_at) {
+                <tr>
+                  <td>{{ attempt.kanji }}</td>
+                  <td class="muted">{{ attempt.title }}</td>
+                  <td [class.ok]="attempt.correct" [class.bad]="!attempt.correct">
+                    {{ attempt.correct ? attempt.given : attempt.given + ' → ' + attempt.expected }}
+                  </td>
+                  <td class="num" [class.ok]="attempt.elo_delta > 0" [class.bad]="attempt.elo_delta < 0">
+                    {{ attempt.elo_delta > 0 ? '+' : '' }}{{ attempt.elo_delta | number: '1.0-1' }}
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </sumi-card>
     }
-
-    <section class="card">
-      <h2>How the misses split</h2>
-      <dl class="split">
-        <div>
-          <dt>Right rule, misread word</dt>
-          <dd>{{ s.missed_with_right_rule }}</dd>
-        </div>
-        <div>
-          <dt>Right reading, wrong form</dt>
-          <dd>{{ s.missed_with_right_reading }}</dd>
-        </div>
-      </dl>
-    </section>
-
-    <section class="card">
-      <h2>Recent</h2>
-      <div class="grid-scroll">
-        <table class="data">
-          <thead>
-            <tr><th>Word</th><th>Rule</th><th>Answer</th><th class="num">Elo</th></tr>
-          </thead>
-          <tbody>
-            @for (attempt of s.recent; track attempt.created_at) {
-              <tr>
-                <td>{{ attempt.kanji }}</td>
-                <td class="muted">{{ attempt.title }}</td>
-                <td [class.ok]="attempt.correct" [class.bad]="!attempt.correct">
-                  {{ attempt.correct ? attempt.given : attempt.given + ' → ' + attempt.expected }}
-                </td>
-                <td class="num" [class.ok]="attempt.elo_delta > 0" [class.bad]="attempt.elo_delta < 0">
-                  {{ attempt.elo_delta > 0 ? '+' : '' }}{{ attempt.elo_delta | number: '1.0-1' }}
-                </td>
-              </tr>
-            }
-          </tbody>
-        </table>
-      </div>
-    </section>
+  } @else {
+    <p class="loading">Loading…</p>
   }
-} @else {
-  <p class="loading">Loading…</p>
-}
+</sumi-page>

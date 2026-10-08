@@ -1,19 +1,9 @@
 :host {
   display: block;
-  padding-top: 24px;
-}
-
-.card {
-  padding: 16px;
 }
 
 .filters input[type='search'] {
   width: 100%;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid var(--sumi-line);
-  background: var(--sumi-surface);
-  color: var(--sumi-text);
   margin-bottom: 10px;
 }
 
@@ -23,7 +13,7 @@
   flex-wrap: wrap;
 }
 
-.row label {
+.row .field {
   flex: 1;
   min-width: 96px;
 }
@@ -37,12 +27,25 @@
 
 select {
   width: 100%;
-  padding: 8px 10px;
-  border-radius: 10px;
-  border: 1px solid var(--sumi-line);
-  background: var(--sumi-surface);
-  color: var(--sumi-text);
-  font: inherit;
+}
+
+/* sumi-segmented-control is a single row with no wrap — a filter with many
+   options scrolls horizontally inside its own box instead of widening the
+   page. Without `width: max-content` the host's shrink-to-fit sizing stays
+   within the available width and the browser squeezes/wraps the option
+   labels instead of actually overflowing into the scrollbar. */
+.chips-scroll {
+  overflow-x: auto;
+}
+
+.chips-scroll sumi-segmented-control {
+  display: inline-flex;
+  width: max-content;
+}
+
+.chips-scroll ::ng-deep .sumi-segmented-control__option {
+  flex: none;
+  white-space: nowrap;
 }
 
 .count {
@@ -114,19 +117,6 @@ td i {
   justify-content: space-between;
   gap: 8px;
   margin-top: 12px;
-}
-
-.pager button {
-  padding: 8px 14px;
-  border-radius: 10px;
-  border: 1px solid var(--sumi-line);
-  background: transparent;
-  color: var(--sumi-text);
-}
-
-.pager button:disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
 }
 
 .loading {

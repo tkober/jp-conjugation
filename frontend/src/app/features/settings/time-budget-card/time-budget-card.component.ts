@@ -10,6 +10,9 @@ import {
 } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 
+import { SumiCard } from 'sumi-ui/layout';
+import { SumiButtonDirective, SumiSliderDirective } from 'sumi-ui/forms';
+
 import { Settings, SettingsUpdate } from '../../../core/models';
 
 /** The "Time budget" card: the two sliders, the live preview and the
@@ -30,7 +33,7 @@ import { Settings, SettingsUpdate } from '../../../core/models';
   changeDetection: ChangeDetectionStrategy.OnPush,
   // Block: owns a whole `.card` section in normal flow, like its siblings.
   host: { style: 'display: block' },
-  imports: [DecimalPipe],
+  imports: [DecimalPipe, SumiCard, SumiButtonDirective, SumiSliderDirective],
   templateUrl: './time-budget-card.component.html',
   styleUrls: ['./time-budget-card.component.css', '../settings-shared.css'],
 })

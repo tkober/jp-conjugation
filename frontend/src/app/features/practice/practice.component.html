@@ -1,3 +1,4 @@
+<sumi-page width="narrow">
 @switch (phase()) {
   @case ('idle') {
     <sumi-session-gate
@@ -29,7 +30,7 @@
       <sumi-session-bar *sumiShellFocusActions [answered]="answered()" [correct]="correct()" (end)="end()" />
 
       <div class="round" sumiFocusMode>
-        <section class="card prompt">
+        <sumi-card class="prompt">
           <div class="task">
             <app-form-instruction class="form" [parts]="ex.instruction" [mode]="ex.instruction_style" />
             <sumi-countdown-ring [elapsedMs]="elapsed()" [targetMs]="ex.target_time_ms" />
@@ -45,7 +46,7 @@
             }
           </p>
           <p class="english">{{ ex.english }}</p>
-        </section>
+        </sumi-card>
 
         <div #answerRow>
           <sumi-answer-field
@@ -124,3 +125,4 @@
     }
   }
 }
+</sumi-page>

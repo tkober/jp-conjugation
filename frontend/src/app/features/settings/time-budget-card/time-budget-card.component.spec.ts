@@ -44,7 +44,7 @@ describe('TimeBudgetCardComponent', () => {
 
   it('disables Save until a slider moves, then emits the draft values', () => {
     const fixture = render(settings());
-    const saveBtn: HTMLButtonElement = fixture.nativeElement.querySelector('button.primary');
+    const saveBtn: HTMLButtonElement = fixture.nativeElement.querySelector('.sumi-button--primary');
     expect(saveBtn.disabled).toBe(true);
 
     fixture.componentInstance.baseMs.set(5000);
@@ -72,15 +72,15 @@ describe('TimeBudgetCardComponent', () => {
 
   it('flashes "Saved" for 1500ms when saveTick changes, not on the initial render', () => {
     const fixture = render(settings(), 0);
-    const saveBtn = fixture.nativeElement.querySelector('button.primary');
+    const saveBtn = fixture.nativeElement.querySelector('.sumi-button--primary');
     expect(saveBtn.textContent.trim()).toBe('Save');
 
     fixture.componentRef.setInput('saveTick', 1);
     fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('button.primary').textContent.trim()).toBe('Saved');
+    expect(fixture.nativeElement.querySelector('.sumi-button--primary').textContent.trim()).toBe('Saved');
 
     vi.advanceTimersByTime(1500);
     fixture.detectChanges();
-    expect(fixture.nativeElement.querySelector('button.primary').textContent.trim()).toBe('Save');
+    expect(fixture.nativeElement.querySelector('.sumi-button--primary').textContent.trim()).toBe('Save');
   });
 });

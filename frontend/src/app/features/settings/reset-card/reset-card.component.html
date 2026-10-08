@@ -1,18 +1,20 @@
-<section class="card danger">
-  <h2>Reset progress</h2>
-  <p class="hint">
-    Clears every answer, all ratings and both streaks. The vocabulary and
-    the time budget stay.
-  </p>
+<sumi-card class="danger">
+  <div sumiCardHeader>
+    <h2>Reset progress</h2>
+    <p class="hint">
+      Clears every answer, all ratings and both streaks. The vocabulary and
+      the time budget stay.
+    </p>
+  </div>
   @switch (resetStep()) {
     @case (0) {
-      <button type="button" class="ghost" (click)="resetStep.set(1)">Reset…</button>
+      <button type="button" sumiButton variant="ghost" (click)="resetStep.set(1)">Reset…</button>
     }
     @case (1) {
       <p class="warn">This cannot be undone.</p>
       <div class="actions">
-        <button type="button" class="ghost" (click)="resetStep.set(0)">Cancel</button>
-        <button type="button" class="destructive" (click)="resetStep.set(2)">
+        <button type="button" sumiButton variant="ghost" (click)="resetStep.set(0)">Cancel</button>
+        <button type="button" sumiButton variant="danger" (click)="resetStep.set(2)">
           I understand
         </button>
       </div>
@@ -20,12 +22,12 @@
     @case (2) {
       <p class="warn">Really delete all progress?</p>
       <div class="actions">
-        <button type="button" class="ghost" (click)="resetStep.set(0)">Cancel</button>
-        <button type="button" class="destructive" (click)="doReset()">Delete</button>
+        <button type="button" sumiButton variant="ghost" (click)="resetStep.set(0)">Cancel</button>
+        <button type="button" sumiButton variant="danger" (click)="doReset()">Delete</button>
       </div>
     }
     @case (3) {
       <p class="done">Progress cleared.</p>
     }
   }
-</section>
+</sumi-card>

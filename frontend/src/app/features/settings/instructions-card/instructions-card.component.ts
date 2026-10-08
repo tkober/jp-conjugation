@@ -1,4 +1,7 @@
-import { ChangeDetectionStrategy, Component, input, linkedSignal, output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, input, linkedSignal, output } from '@angular/core';
+
+import { SumiCard } from 'sumi-ui/layout';
+import { SumiButtonDirective, SumiSegmentedControl, type SumiSegmentedOption } from 'sumi-ui/forms';
 
 import { FormInstructionComponent } from '../../../shared/form-instruction/form-instruction.component';
 import { InstructionDimension, InstructionStyle, Settings, SettingsUpdate } from '../../../core/models';
@@ -18,7 +21,7 @@ const TENSE_FIRST_ORDER: InstructionDimension[] = ['category', 'tense', 'politen
   changeDetection: ChangeDetectionStrategy.OnPush,
   // Block: owns a whole `.card` section in normal flow, like its siblings.
   host: { style: 'display: block' },
-  imports: [FormInstructionComponent],
+  imports: [SumiCard, SumiButtonDirective, SumiSegmentedControl, FormInstructionComponent],
   templateUrl: './instructions-card.component.html',
   styleUrls: ['./instructions-card.component.css', '../settings-shared.css'],
 })
@@ -30,6 +33,10 @@ export class InstructionsCardComponent {
   readonly instructionOrder = linkedSignal(() => this.settings().instruction_order);
 
   readonly tenseFirstOrder = TENSE_FIRST_ORDER;
+
+  readonly styleOptions = computed<SumiSegmentedOption<InstructionStyle>[]>(() =>
+    this.settings().instruction_styles.map((style) => ({ value: style, label: this.styleLabel(style) })),
+  );
 
   styleLabel(style: InstructionStyle): string {
     return { text: 'Text', emoji: 'Emoji', both: 'Text + emoji' }[style];

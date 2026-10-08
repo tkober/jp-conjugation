@@ -99,7 +99,7 @@ describe('StatsComponent', () => {
     httpMock.expectOne('/api/stats').flush(stats({ attempts: 0, elo_history: [] }));
     await fixture.whenStable();
 
-    expect(fixture.nativeElement.querySelector('.card.empty')).toBeTruthy();
+    expect(fixture.nativeElement.querySelector('sumi-card.empty')).toBeTruthy();
     expect(fixture.nativeElement.querySelector('sumi-sparkline')).toBeNull();
     expect(fixture.nativeElement.querySelector('app-miss-rate-heatmap')).toBeNull();
   });

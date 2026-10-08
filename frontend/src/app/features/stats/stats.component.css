@@ -1,10 +1,16 @@
 :host {
   display: block;
-  padding-top: 24px;
+}
+
+h2 {
+  margin: 0 0 4px;
+  font-size: 1.0625rem;
 }
 
 .hint {
-  margin: 0 0 12px;
+  margin: 0;
+  color: var(--sumi-muted);
+  font-size: 0.875rem;
 }
 
 /* Wide content scrolls inside its own box; the page never does. */
@@ -79,7 +85,7 @@ table.data .num {
   font-variant-numeric: tabular-nums;
 }
 
-/* Same gap as between the .card sections below. */
+/* Same gap as between the sumi-card sections below. */
 sumi-stat-grid {
   margin-bottom: 16px;
 }

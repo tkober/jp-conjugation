@@ -1,5 +1,7 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
+import { SumiCard } from 'sumi-ui/layout';
+
 import { RuleRow } from '../../../core/models';
 import { wordTypeLabel, wordTypeTitle } from '../../../shared/word-types';
 
@@ -18,7 +20,7 @@ export interface Section {
   changeDetection: ChangeDetectionStrategy.OnPush,
   // Block: owns the whole `.card.table` section in normal flow.
   host: { style: 'display: block' },
-  imports: [],
+  imports: [SumiCard],
   templateUrl: './rule-table.component.html',
   styleUrl: './rule-table.component.css',
 })

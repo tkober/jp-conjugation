@@ -2,8 +2,15 @@
    (the accent-derived --sumi-seq-* ramp) — nothing to keep in sync here
    anymore. */
 
+h2 {
+  margin: 0 0 4px;
+  font-size: 1.0625rem;
+}
+
 .hint {
   margin: 0 0 12px;
+  color: var(--sumi-muted);
+  font-size: 0.875rem;
 }
 
 h3 {

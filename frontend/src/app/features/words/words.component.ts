@@ -1,13 +1,17 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 
+import { SumiCard, SumiPage } from 'sumi-ui/layout';
+import { SumiButtonDirective, SumiInputDirective, SumiSegmentedControl, SumiSelectDirective } from 'sumi-ui/forms';
+import type { SumiSegmentedOption } from 'sumi-ui/forms';
+
 import { ApiService } from '../../core/api.service';
 import { WordsResponse } from '../../core/models';
 
 const PAGE_SIZE = 50;
 const SEARCH_DEBOUNCE_MS = 250;
 
-const WORD_TYPES = [
+const WORD_TYPES: SumiSegmentedOption<string>[] = [
   { value: '', label: 'All' },
   { value: 'ichidan_verb', label: '一段' },
   { value: 'godan_verb', label: '五段' },
@@ -15,6 +19,15 @@ const WORD_TYPES = [
   { value: 'kuru_verb', label: '来る' },
   { value: 'i_adjective', label: 'い-Adj' },
   { value: 'na_adjective', label: 'な-Adj' },
+];
+
+const JLPT_OPTIONS: SumiSegmentedOption<string>[] = [
+  { value: '', label: 'All' },
+  { value: 'n5', label: 'N5' },
+  { value: 'n4', label: 'N4' },
+  { value: 'n3', label: 'N3' },
+  { value: 'n2', label: 'N2' },
+  { value: 'n1', label: 'N1' },
 ];
 
 const SORTS = [
@@ -27,7 +40,7 @@ const SORTS = [
 @Component({
   selector: 'app-words',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DecimalPipe],
+  imports: [DecimalPipe, SumiPage, SumiCard, SumiButtonDirective, SumiInputDirective, SumiSelectDirective, SumiSegmentedControl],
   templateUrl: './words.component.html',
   styleUrl: './words.component.css',
 })
@@ -35,8 +48,8 @@ export class WordsComponent {
   private api = inject(ApiService);
 
   readonly wordTypes = WORD_TYPES;
+  readonly jlptOptions = JLPT_OPTIONS;
   readonly sorts = SORTS;
-  readonly levels = ['n5', 'n4', 'n3', 'n2', 'n1'];
   readonly pageSize = PAGE_SIZE;
 
   readonly result = signal<WordsResponse | null>(null);

@@ -1,14 +1,17 @@
-<section class="card">
-  <h2>Time budget</h2>
-  <p class="hint">
-    How long an answer may take before it counts as slow. Covers working
-    out the form and typing it — a touchscreen needs more than a keyboard.
-  </p>
+<sumi-card>
+  <div sumiCardHeader>
+    <h2>Time budget</h2>
+    <p class="hint">
+      How long an answer may take before it counts as slow. Covers working
+      out the form and typing it — a touchscreen needs more than a keyboard.
+    </p>
+  </div>
 
   <label class="slider">
     <span>Base <b>{{ baseMs() | number: '1.0-0' }} ms</b></span>
     <input
       type="range"
+      sumiSlider
       [min]="settings().limits.time_base_ms[0]"
       [max]="settings().limits.time_base_ms[1]"
       step="100"
@@ -21,6 +24,7 @@
     <span>Per kana <b>{{ perKanaMs() | number: '1.0-0' }} ms</b></span>
     <input
       type="range"
+      sumiSlider
       [min]="settings().limits.time_per_kana_ms[0]"
       [max]="settings().limits.time_per_kana_ms[1]"
       step="50"
@@ -39,9 +43,9 @@
   </ul>
 
   <div class="actions">
-    <button type="button" class="primary" [disabled]="!budgetChanged()" (click)="saveBudget()">
+    <button type="button" sumiButton variant="primary" [disabled]="!budgetChanged()" (click)="saveBudget()">
       {{ budgetSaved() ? 'Saved' : 'Save' }}
     </button>
-    <button type="button" class="ghost" (click)="resetBudget()">Back to defaults</button>
+    <button type="button" sumiButton variant="ghost" (click)="resetBudget()">Back to defaults</button>
   </div>
-</section>
+</sumi-card>

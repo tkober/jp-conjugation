@@ -36,6 +36,14 @@ function render(s: Settings) {
   return fixture;
 }
 
+function isOn(toggle: Element): boolean {
+  return toggle.querySelector('.sumi-toggle__control')!.classList.contains('sumi-toggle__control--on');
+}
+
+function click(toggle: Element): void {
+  (toggle.querySelector('.sumi-toggle__control') as HTMLButtonElement).click();
+}
+
 describe('VocabularyCardComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({});
@@ -43,7 +51,7 @@ describe('VocabularyCardComponent', () => {
 
   it('renders a toggle per JLPT level, uppercased', () => {
     const fixture = render(settings());
-    const toggles = fixture.nativeElement.querySelectorAll('.toggle');
+    const toggles = fixture.nativeElement.querySelectorAll('sumi-toggle');
     expect(toggles.length).toBe(3);
     expect(toggles[0].textContent.trim()).toBe('N5');
   });
@@ -53,7 +61,7 @@ describe('VocabularyCardComponent', () => {
     const spy = vi.fn();
     fixture.componentInstance.save.subscribe(spy);
 
-    fixture.nativeElement.querySelectorAll('.toggle input')[0].dispatchEvent(new Event('change'));
+    click(fixture.nativeElement.querySelectorAll('sumi-toggle')[0]);
     fixture.detectChanges();
 
     expect(spy).toHaveBeenCalledWith({ disabled_jlpt: ['n5'] });
@@ -64,11 +72,11 @@ describe('VocabularyCardComponent', () => {
     const spy = vi.fn();
     fixture.componentInstance.save.subscribe(spy);
 
-    fixture.nativeElement.querySelectorAll('.toggle input')[0].dispatchEvent(new Event('change'));
+    click(fixture.nativeElement.querySelectorAll('sumi-toggle')[0]);
     fixture.detectChanges();
 
     expect(spy).not.toHaveBeenCalled();
     // The guard returns before touching the signal, so the toggle stays on.
-    expect(fixture.nativeElement.querySelectorAll('.toggle')[0].classList.contains('on')).toBe(true);
+    expect(isOn(fixture.nativeElement.querySelectorAll('sumi-toggle')[0])).toBe(true);
   });
 });

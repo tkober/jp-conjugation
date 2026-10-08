@@ -1,5 +1,14 @@
 /* Rules shared by several settings cards. Each card lists this file as a
-   second styleUrl next to its own CSS; only genuine one-offs stay there. */
+   second styleUrl next to its own CSS; only genuine one-offs stay there.
+   Buttons/toggles/segmented controls themselves come from Sumi UI now (#34)
+   — this file only keeps the small layout/utility bits the library has no
+   component for: a muted hint line, flex-wrapping rows for chips/toggles
+   and action buttons, and the "can't go lower" warning text. */
+
+h2 {
+  margin: 0 0 4px;
+  font-size: 1.0625rem;
+}
 
 h3 {
   margin: 18px 0 8px;
@@ -11,6 +20,8 @@ h3 {
 
 .hint {
   margin: 0 0 12px;
+  color: var(--sumi-muted);
+  font-size: 0.875rem;
 }
 
 .options {
@@ -19,52 +30,10 @@ h3 {
   gap: 8px;
 }
 
-.toggle {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  padding: 6px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--sumi-line);
-  background: var(--sumi-sunken);
-  color: var(--sumi-muted);
-  font-size: 0.875rem;
-  cursor: pointer;
-}
-
-.toggle.on {
-  background: var(--sumi-accent-soft);
-  border-color: var(--sumi-accent);
-  color: var(--sumi-text);
-}
-
-.toggle input {
-  accent-color: var(--sumi-accent);
-  margin: 0;
-}
-
 .actions {
   display: flex;
   gap: 8px;
   flex-wrap: wrap;
-}
-
-button {
-  padding: 10px 16px;
-  border-radius: 10px;
-  font-weight: 600;
-  border: 1px solid transparent;
-}
-
-button.ghost {
-  background: transparent;
-  border-color: var(--sumi-line);
-  color: var(--sumi-muted);
-}
-
-button.destructive {
-  background: var(--sumi-wrong);
-  color: #fff;
 }
 
 .warn {

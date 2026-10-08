@@ -1,12 +1,3 @@
-/* The shell's own <main> (sumi-app-shell__main) already supplies the page
-   padding; this wrapper only centers content at the ~640px width the app
-   used before Sumi UI (#31) — no extra padding, so it doesn't double up
-   with the shell's. Pages themselves move onto sumi-page in #34. */
-.page {
-  max-width: 640px;
-  margin: 0 auto;
-}
-
 .profile-pill {
   display: flex;
   align-items: center;
