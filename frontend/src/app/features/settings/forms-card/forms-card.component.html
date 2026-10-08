@@ -15,10 +15,10 @@
         <div class="options">
           @for (form of group.forms; track form.form_key) {
             <sumi-toggle
-              #toggleRef
               [title]="form.title"
               [value]="!disabledForms().has(form.form_key)"
-              (valueChange)="toggleForm(form.form_key, toggleRef)"
+              [canChange]="canDisable(form.form_key)"
+              (valueChange)="toggleForm(form.form_key, $event)"
             >
               {{ form.settings_title }}
             </sumi-toggle>

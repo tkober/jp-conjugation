@@ -28,16 +28,24 @@ export class VocabularyCardComponent {
     return levels.length > 0 && this.disabledJlpt().size >= levels.length;
   });
 
-  /** `toggleRef` is the clicked `sumi-toggle`: see `FormsCardComponent
-   *  .toggleForm`'s doc comment for why the guard reverts it directly on
-   *  the instance instead of relying on the `[value]` binding alone. */
-  toggleLevel(level: string, toggleRef: SumiToggle): void {
+  /** Vetoes turning a level off when it is the last one still on — see
+   *  `FormsCardComponent.canDisable`'s doc comment for why this is a
+   *  `[canChange]` predicate rather than a reverted `[value]` binding. */
+  canDisable(level: string): (next: boolean) => boolean {
+    return (next) => {
+      if (next) {
+        return true;
+      }
+      const stillOff = this.disabledJlpt().has(level)
+        ? this.disabledJlpt().size
+        : this.disabledJlpt().size + 1;
+      return stillOff < this.settings().jlpt_levels.length;
+    };
+  }
+
+  toggleLevel(level: string, isOn: boolean): void {
     const next = new Set(this.disabledJlpt());
-    next.has(level) ? next.delete(level) : next.add(level);
-    if (next.size >= this.settings().jlpt_levels.length) {
-      toggleRef.value.set(!this.disabledJlpt().has(level)); // revert
-      return; // at least one level stays on
-    }
+    isOn ? next.delete(level) : next.add(level);
     this.disabledJlpt.set(next);
     this.save.emit({ disabled_jlpt: [...next] });
   }

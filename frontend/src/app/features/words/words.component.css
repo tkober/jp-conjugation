@@ -2,12 +2,6 @@
   display: block;
 }
 
-/* sumi-page doesn't space its own content (follow-up worth proposing to
-   sumi-ui itself) — without this, sumi-cards sit flush, borders touching. */
-sumi-page > * + * {
-  margin-top: 16px;
-}
-
 .filters input[type='search'] {
   width: 100%;
   margin-bottom: 10px;
@@ -40,41 +34,17 @@ select {
   font-size: 0.875rem;
 }
 
-/* Wide content scrolls inside its own box; the page never does. */
-.grid-scroll {
-  overflow-x: auto;
-}
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.875rem;
-}
-
-th {
-  text-align: left;
-  font-weight: 500;
-  font-size: 0.75rem;
-  color: var(--sumi-muted);
-  border-bottom: 1px solid var(--sumi-line);
-  padding: 4px 8px 4px 0;
-  white-space: nowrap;
-}
-
-td {
-  padding: 8px 8px 8px 0;
-  border-bottom: 1px solid var(--sumi-line);
-  vertical-align: top;
-}
-
-td b {
+/* Cell templates of the word list (sumi-data-table): kanji over reading,
+   meaning muted and capped in width. */
+b {
   display: block;
   font-size: 1rem;
   font-weight: 600;
   white-space: nowrap;
 }
 
-td i {
+i {
+  display: block;
   font-style: normal;
   color: var(--sumi-muted);
   font-size: 0.8125rem;
@@ -82,19 +52,10 @@ td i {
 }
 
 .meaning {
+  display: block;
   min-width: 160px;
   max-width: 260px;
-  color: var(--sumi-muted);
-}
-
-.num {
-  text-align: right;
-  white-space: nowrap;
-  font-variant-numeric: tabular-nums;
-  padding-right: 0;
-}
-
-.muted {
+  white-space: normal;
   color: var(--sumi-muted);
 }
 

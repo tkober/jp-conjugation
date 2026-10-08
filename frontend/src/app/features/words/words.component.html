@@ -49,39 +49,21 @@
         }
       </p>
 
-      <div class="grid-scroll">
-        <table>
-          <thead>
-            <tr>
-              <th>Word</th>
-              <th>Meaning</th>
-              <th class="num">JLPT</th>
-              <th class="num">Rating</th>
-              <th class="num">Seen</th>
-            </tr>
-          </thead>
-          <tbody>
-            @for (word of data.words; track word.id) {
-              <tr>
-                <td>
-                  <b>{{ word.kanji }}</b>
-                  <i>{{ word.hiragana }}</i>
-                </td>
-                <td class="meaning" [title]="word.english">{{ word.english }}</td>
-                <td class="num muted">{{ word.jlpt.toUpperCase() }}</td>
-                <td class="num">{{ word.rating | number: '1.0-0' }}</td>
-                <td class="num muted">
-                  {{ word.attempts ? word.correct + '/' + word.attempts : '—' }}
-                </td>
-              </tr>
-            } @empty {
-              <tr>
-                <td colspan="5" class="muted">Nothing matches that.</td>
-              </tr>
-            }
-          </tbody>
-        </table>
-      </div>
+      @if (data.words.length) {
+        <sumi-data-table [columns]="wordColumns" [rows]="wordRows()">
+          <ng-template sumiTableCell="word" let-row>
+            <b lang="ja">{{ row.kanji }}</b>
+            <i lang="ja">{{ row.hiragana }}</i>
+          </ng-template>
+          <ng-template sumiTableCell="english" let-row>
+            <span class="meaning" title="{{ row.english }}">{{ row.english }}</span>
+          </ng-template>
+        </sumi-data-table>
+      } @else {
+        <sumi-empty-state title="No matches" companion="tanuki">
+          Try a different search or filter.
+        </sumi-empty-state>
+      }
 
       @if (data.total > pageSize) {
         <div class="pager">

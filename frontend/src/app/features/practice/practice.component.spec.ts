@@ -92,12 +92,15 @@ describe('PracticeComponent', () => {
     );
   }
 
-  it('starts idle, showing the session gate', () => {
+  it('starts idle, showing the session gate with its companion', () => {
     const fixture = render();
     const el: HTMLElement = fixture.nativeElement;
 
     expect(el.querySelector('sumi-session-gate')).toBeTruthy();
     expect(el.textContent).toContain('Ready to practice?');
+    // Never on the active round itself (docs/concept.md#tuschemotive) — only
+    // the idle/ended gate screens get a companion.
+    expect(el.querySelector('sumi-session-gate sumi-companion')).toBeTruthy();
   });
 
   it('starts a session from the gate and shows the prompt and the answer field', () => {
@@ -227,6 +230,45 @@ describe('PracticeComponent', () => {
     const el: HTMLElement = fixture.nativeElement;
     expect(el.querySelector('sumi-session-summary')).toBeTruthy();
     expect(el.textContent).toContain('Session complete');
+  });
+
+  it('ending a session with at least 80% accuracy stamps the "passed" hanko', () => {
+    const fixture = render();
+    startSession(fixture);
+
+    const input = fieldInput(fixture);
+    input.value = 'tabete';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    pressEnter(input);
+    httpMock.expectOne('/api/answer').flush(makeResult({ correct: true }));
+    fixture.detectChanges();
+
+    fixture.componentInstance.end();
+    fixture.detectChanges();
+
+    const el: HTMLElement = fixture.nativeElement;
+    expect(el.querySelector('[sumiSummaryArt] sumi-companion')).toBeTruthy();
+    expect(el.querySelector('sumi-hanko')?.textContent).toContain('合');
+  });
+
+  it('ending a session below 80% accuracy stamps the "practice" hanko', () => {
+    const fixture = render();
+    startSession(fixture);
+
+    const input = fieldInput(fixture);
+    input.value = 'nomu';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    pressEnter(input);
+    httpMock.expectOne('/api/answer').flush(
+      makeResult({ correct: false, stem_correct: false, ending_correct: false }),
+    );
+    fixture.detectChanges();
+
+    fixture.componentInstance.end();
+    fixture.detectChanges();
+
+    const el: HTMLElement = fixture.nativeElement;
+    expect(el.querySelector('sumi-hanko')?.textContent).toContain('練');
   });
 
   it('ending an untouched session goes back to idle, not to a summary', () => {

@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 
-import { SumiCard, SumiPage } from 'sumi-ui/layout';
+import { SumiDataTable, SumiTableCellTemplate, type SumiTableColumn, type SumiTableRow } from 'sumi-ui/charts';
+import { SumiCard, SumiEmptyState, SumiPage } from 'sumi-ui/layout';
 import { SumiButtonDirective, SumiInputDirective, SumiSelectDirective } from 'sumi-ui/forms';
 
 import { ApiService } from '../../core/api.service';
@@ -39,7 +40,17 @@ const SORTS = [
 @Component({
   selector: 'app-words',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DecimalPipe, SumiPage, SumiCard, SumiButtonDirective, SumiInputDirective, SumiSelectDirective],
+  imports: [
+    DecimalPipe,
+    SumiPage,
+    SumiCard,
+    SumiEmptyState,
+    SumiDataTable,
+    SumiTableCellTemplate,
+    SumiButtonDirective,
+    SumiInputDirective,
+    SumiSelectDirective,
+  ],
   templateUrl: './words.component.html',
   styleUrl: './words.component.css',
 })
@@ -52,6 +63,28 @@ export class WordsComponent {
   readonly pageSize = PAGE_SIZE;
 
   readonly result = signal<WordsResponse | null>(null);
+
+  /** The word list as a sumi-data-table: kanji over reading and the
+   *  meaning (truncated, full text as tooltip) are cell templates, the rest
+   *  is plain text. */
+  readonly wordColumns: SumiTableColumn[] = [
+    { key: 'word', label: 'Word' },
+    { key: 'english', label: 'Meaning' },
+    { key: 'jlpt', label: 'JLPT', align: 'end' },
+    { key: 'rating', label: 'Rating', align: 'end' },
+    { key: 'seen', label: 'Seen', align: 'end' },
+  ];
+
+  readonly wordRows = computed<SumiTableRow[]>(() =>
+    (this.result()?.words ?? []).map((word) => ({
+      kanji: word.kanji,
+      hiragana: word.hiragana,
+      english: word.english,
+      jlpt: word.jlpt.toUpperCase(),
+      rating: Math.round(word.rating).toLocaleString('en-US'),
+      seen: word.attempts ? `${word.correct}/${word.attempts}` : '—',
+    })),
+  );
   readonly query = signal('');
   readonly wordType = signal('');
   readonly jlpt = signal('');

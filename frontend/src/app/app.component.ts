@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { SumiHotkeyHelp } from 'sumi-ui/core';
-import { SUMI_LAYOUT, SumiAppShellBrand, SumiNavItem, SumiShell } from 'sumi-ui/layout';
+import { SUMI_LAYOUT, SumiAppShellBrand, SumiNavItem } from 'sumi-ui/layout';
 
 import { ApiService } from './core/api.service';
 
@@ -15,13 +15,6 @@ import { ApiService } from './core/api.service';
 })
 export class AppComponent {
   readonly api = inject(ApiService);
-  /** Hides the level/Elo/streak pill while a practice session's own
-   *  `sumi-session-bar` occupies the header's focus-actions area (#32) —
-   *  `sumi-app-shell` only hides its own nav/switcher in focus mode (see
-   *  docs/concept.md#layout-und-mobil, "Oben stehen nur Fortschritt und
-   *  Genauigkeit"), not content projected into `sumiShellActions`, and on a
-   *  360–390px phone the two together overflow the header. */
-  protected readonly shell = inject(SumiShell);
 
   protected readonly brand: SumiAppShellBrand = { glyph: '活', name: 'Conjugation Trainer' };
 

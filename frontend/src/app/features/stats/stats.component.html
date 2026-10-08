@@ -8,9 +8,9 @@
     </sumi-stat-grid>
 
     @if (s.attempts === 0) {
-      <sumi-card class="empty">
-        <p>Nothing practised yet. The numbers show up once you answer something.</p>
-      </sumi-card>
+      <sumi-empty-state title="Nothing practised yet" companion="tanuki">
+        The numbers show up once you answer something.
+      </sumi-empty-state>
     } @else {
       <sumi-card>
         <div sumiCardHeader>
@@ -66,27 +66,7 @@
         <div sumiCardHeader>
           <h2>Recent</h2>
         </div>
-        <div class="grid-scroll">
-          <table class="data">
-            <thead>
-              <tr><th>Word</th><th>Rule</th><th>Answer</th><th class="num">Elo</th></tr>
-            </thead>
-            <tbody>
-              @for (attempt of s.recent; track attempt.created_at) {
-                <tr>
-                  <td>{{ attempt.kanji }}</td>
-                  <td class="muted">{{ attempt.title }}</td>
-                  <td [class.ok]="attempt.correct" [class.bad]="!attempt.correct">
-                    {{ attempt.correct ? attempt.given : attempt.given + ' → ' + attempt.expected }}
-                  </td>
-                  <td class="num" [class.ok]="attempt.elo_delta > 0" [class.bad]="attempt.elo_delta < 0">
-                    {{ attempt.elo_delta > 0 ? '+' : '' }}{{ attempt.elo_delta | number: '1.0-1' }}
-                  </td>
-                </tr>
-              }
-            </tbody>
-          </table>
-        </div>
+        <sumi-data-table [columns]="recentColumns" [rows]="recentRows()" />
       </sumi-card>
     }
   } @else {

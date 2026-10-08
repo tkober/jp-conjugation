@@ -2,13 +2,6 @@
   display: block;
 }
 
-/* sumi-page doesn't space its own content (follow-up worth proposing to
-   sumi-ui itself) — without this, sumi-cards sit flush, borders touching.
-   Collapses harmlessly with sumi-stat-grid's own margin-bottom below. */
-sumi-page > * + * {
-  margin-top: 16px;
-}
-
 h2 {
   margin: 0 0 4px;
   font-size: 1.0625rem;
@@ -18,57 +11,6 @@ h2 {
   margin: 0;
   color: var(--sumi-muted);
   font-size: 0.875rem;
-}
-
-/* sumi-card's body always adds its own top padding — a bottom margin left
-   on the header's last element stacks on top of that and opens a double
-   gap before the body. */
-[sumiCardHeader] > *:last-child {
-  margin-bottom: 0;
-}
-
-/* Wide content scrolls inside its own box; the page never does. */
-.grid-scroll {
-  overflow-x: auto;
-}
-
-table.data {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 0.875rem;
-}
-
-table.data th {
-  text-align: left;
-  font-weight: 500;
-  color: var(--sumi-muted);
-  font-size: 0.75rem;
-  border-bottom: 1px solid var(--sumi-line);
-  padding: 4px 8px 4px 0;
-}
-
-table.data td {
-  padding: 6px 8px 6px 0;
-  border-bottom: 1px solid var(--sumi-line);
-  white-space: nowrap;
-}
-
-table.data .num {
-  text-align: right;
-  font-variant-numeric: tabular-nums;
-  padding-right: 0;
-}
-
-.muted {
-  color: var(--sumi-muted);
-}
-
-.ok {
-  color: var(--sumi-correct);
-}
-
-.bad {
-  color: var(--sumi-wrong);
 }
 
 .split {
@@ -89,7 +31,6 @@ table.data .num {
   font-weight: 600;
 }
 
-.empty p,
 .loading {
   margin: 0;
   color: var(--sumi-muted);
@@ -97,18 +38,4 @@ table.data .num {
 
 .range {
   font-variant-numeric: tabular-nums;
-}
-
-/* Same gap as between the sumi-card sections below. */
-sumi-stat-grid {
-  margin-bottom: 16px;
-}
-
-/* Four tiles in one row: the library's auto-fit grid makes 3 + 1 at this
-   page width, which leaves "Best streak" alone in its row. Under 480px the
-   library's own 2 × 2 applies. */
-@media (min-width: 481px) {
-  sumi-stat-grid {
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-  }
 }

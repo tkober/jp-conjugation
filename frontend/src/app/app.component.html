@@ -1,7 +1,7 @@
 <sumi-app-shell [brand]="brand" [nav]="navItems">
   <sumi-app-switcher sumiShellSwitcher />
 
-  @if (!shell.focusMode() && api.profile(); as profile) {
+  @if (api.profile(); as profile) {
     <div sumiShellActions class="profile-pill">
       <sumi-badge tone="accent" title="Level and Elo">Lv {{ profile.level }} · {{ profile.elo | number: '1.0-0' }}</sumi-badge>
       <sumi-badge tone="neutral" title="Current streak">{{ profile.current_streak }} streak</sumi-badge>

@@ -5,7 +5,7 @@ import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
-import { ItemStat, Stats } from '../../core/models';
+import { ItemStat, RecentAttempt, Stats } from '../../core/models';
 import { StatsComponent } from './stats.component';
 
 function item(overrides: Partial<ItemStat> = {}): ItemStat {
@@ -20,6 +20,23 @@ function item(overrides: Partial<ItemStat> = {}): ItemStat {
     correct: 0,
     accuracy: null,
     last_served_at: null,
+    ...overrides,
+  };
+}
+
+function attempt(overrides: Partial<RecentAttempt> = {}): RecentAttempt {
+  return {
+    created_at: '2026-10-08T12:00:00+00:00',
+    kanji: '食べる',
+    form_key: 'Verbs__TeFormAffirmative',
+    title: 'Te-form, positive',
+    given: 'たべて',
+    expected: 'たべて',
+    correct: true,
+    stem_correct: true,
+    ending_correct: true,
+    time_ms: 1200,
+    elo_delta: 5,
     ...overrides,
   };
 }
@@ -99,7 +116,7 @@ describe('StatsComponent', () => {
     httpMock.expectOne('/api/stats').flush(stats({ attempts: 0, elo_history: [] }));
     await fixture.whenStable();
 
-    expect(fixture.nativeElement.querySelector('sumi-card.empty')).toBeTruthy();
+    expect(fixture.nativeElement.querySelector('sumi-empty-state')).toBeTruthy();
     expect(fixture.nativeElement.querySelector('sumi-sparkline')).toBeNull();
     expect(fixture.nativeElement.querySelector('app-miss-rate-heatmap')).toBeNull();
   });
@@ -135,5 +152,28 @@ describe('StatsComponent', () => {
     await fixture.whenStable();
 
     expect(fixture.nativeElement.querySelector('app-miss-rate-heatmap')).toBeTruthy();
+  });
+
+  it('renders "Recent" as a sumi-data-table with given→expected and tone on misses', async () => {
+    const { fixture, httpMock } = createComponent();
+    fixture.detectChanges();
+    httpMock.expectOne('/api/stats').flush(
+      stats({
+        recent: [
+          attempt({ correct: true, given: 'たべて', expected: 'たべて', elo_delta: 5 }),
+          attempt({ correct: false, given: 'のんで', expected: 'のみます', elo_delta: -3 }),
+        ],
+      }),
+    );
+    await fixture.whenStable();
+
+    const el: HTMLElement = fixture.nativeElement;
+    const cards = Array.from(el.querySelectorAll('sumi-card')) as HTMLElement[];
+    const recentCard = cards.find((card) => card.querySelector('h2')?.textContent === 'Recent');
+    const table = recentCard?.querySelector('sumi-data-table');
+    expect(table).toBeTruthy();
+    expect(table?.textContent).toContain('のんで → のみます');
+    expect(table?.querySelector("td[data-tone='wrong']")).toBeTruthy();
+    expect(table?.querySelector("td[data-tone='correct']")).toBeTruthy();
   });
 });
