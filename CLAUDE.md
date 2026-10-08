@@ -185,10 +185,13 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   Punkten — dann fehlt der Chart ganz, wie vorher auch; die alte
   `elo-sparkline/`-Komponente mit eigener SVG-Polyline ist damit auch weg).
   `sumi-sparkline` selbst zeigt nur den aktuellen Wert plus Delta, keine
-  Min/Max-Skala — die alte Skalenzeile unter dem Chart blieb deshalb als
-  eigene, kleine `.spark-scale`-Zeile erhalten (`eloRange()` in
-  `stats.component.ts`), sonst wäre eine Aussage der alten Seite verloren
-  gegangen, die nur noch über den Tabellen-Fallback zu erschließen wäre.
+  Min/Max-Skala — die Spanne steht deshalb in der Hinweiszeile
+  („Range 905–1184.", `eloRange()` in `stats.component.ts`), sonst wäre eine
+  Aussage der alten Seite nur noch über den Tabellen-Fallback zu erschließen.
+  Eine Skalenzeile unter dem Chart landete hinter „Show as table" und damit
+  vom Chart getrennt. Die vier Kacheln stehen ab 481px per App-CSS in einer
+  Reihe: das `auto-fit`-Grid der Bibliothek machte bei 640px Seitenbreite
+  3 + 1 daraus.
   - `miss-rate-heatmap/miss-rate-heatmap.component.ts` — als Kernstück **drei**
     `sumi-matrix-heatmap`s: Form × Wortart für Adjektive, dasselbe für Verben,
     und eine dritte mit einer einzigen Zeile „Godan" und den neun

@@ -114,15 +114,14 @@ describe('StatsComponent', () => {
     expect((fixture.nativeElement.textContent as string)).toContain('currently 1,184, level 3');
   });
 
-  it('shows the Elo history min/max below the sparkline', async () => {
+  it('names the Elo history range in the hint', async () => {
     const { fixture, httpMock } = createComponent();
     fixture.detectChanges();
     httpMock.expectOne('/api/stats').flush(stats({ elo_history: [1000, 905, 1184] }));
     await fixture.whenStable();
 
-    const scale = fixture.nativeElement.querySelector('.spark-scale');
-    expect(scale?.textContent).toContain('905');
-    expect(scale?.textContent).toContain('1184');
+    const range = fixture.nativeElement.querySelector('.hint .range');
+    expect(range?.textContent?.trim()).toBe('Range 905–1184.');
   });
 
   it('renders the heatmap card once there is item data', async () => {

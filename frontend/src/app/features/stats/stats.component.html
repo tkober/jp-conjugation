@@ -16,6 +16,9 @@
       <p class="hint">
         Your rating over the last {{ s.elo_history.length }} answers — currently
         {{ s.elo | number: '1.0-0' }}, level {{ s.level }}.
+        @if (eloRange(); as range) {
+          <span class="range">Range {{ range.min }}–{{ range.max }}.</span>
+        }
       </p>
       @if (s.elo_history.length >= 2) {
         <sumi-sparkline
@@ -25,12 +28,6 @@
           [delta]="eloDelta()"
           [table]="true"
         />
-        @if (eloRange(); as range) {
-          <div class="spark-scale">
-            <span>{{ range.min }}</span>
-            <span>{{ range.max }}</span>
-          </div>
-        }
       }
     </section>
 
