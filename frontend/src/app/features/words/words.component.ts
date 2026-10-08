@@ -2,8 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@a
 import { DecimalPipe } from '@angular/common';
 
 import { SumiCard, SumiPage } from 'sumi-ui/layout';
-import { SumiButtonDirective, SumiInputDirective, SumiSegmentedControl, SumiSelectDirective } from 'sumi-ui/forms';
-import type { SumiSegmentedOption } from 'sumi-ui/forms';
+import { SumiButtonDirective, SumiInputDirective, SumiSelectDirective } from 'sumi-ui/forms';
 
 import { ApiService } from '../../core/api.service';
 import { WordsResponse } from '../../core/models';
@@ -11,7 +10,7 @@ import { WordsResponse } from '../../core/models';
 const PAGE_SIZE = 50;
 const SEARCH_DEBOUNCE_MS = 250;
 
-const WORD_TYPES: SumiSegmentedOption<string>[] = [
+const WORD_TYPES = [
   { value: '', label: 'All' },
   { value: 'ichidan_verb', label: '一段' },
   { value: 'godan_verb', label: '五段' },
@@ -21,7 +20,7 @@ const WORD_TYPES: SumiSegmentedOption<string>[] = [
   { value: 'na_adjective', label: 'な-Adj' },
 ];
 
-const JLPT_OPTIONS: SumiSegmentedOption<string>[] = [
+const JLPT_OPTIONS = [
   { value: '', label: 'All' },
   { value: 'n5', label: 'N5' },
   { value: 'n4', label: 'N4' },
@@ -40,7 +39,7 @@ const SORTS = [
 @Component({
   selector: 'app-words',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DecimalPipe, SumiPage, SumiCard, SumiButtonDirective, SumiInputDirective, SumiSelectDirective, SumiSegmentedControl],
+  imports: [DecimalPipe, SumiPage, SumiCard, SumiButtonDirective, SumiInputDirective, SumiSelectDirective],
   templateUrl: './words.component.html',
   styleUrl: './words.component.css',
 })

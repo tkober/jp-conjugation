@@ -1,16 +1,21 @@
-<sumi-page title="Rules" width="default">
+<sumi-page title="Rules" width="narrow">
   @if (data(); as data) {
     <sumi-card class="picker">
       @for (category of categories(); track category.name) {
         <div class="category">
           <h2>{{ category.name }}</h2>
-          <div class="chips-scroll">
-            <sumi-segmented-control
-              [options]="groupOptions(category)"
-              [value]="selectedGroupIn(category)"
-              (valueChange)="selectGroup($event)"
-            />
-          </div>
+          <nav class="chips" [attr.aria-label]="category.name">
+            @for (group of category.groups; track group.title) {
+              <a
+                class="chip"
+                [class.active]="group === selected()?.group"
+                [attr.aria-current]="group === selected()?.group ? 'page' : null"
+                [routerLink]="['/rules', group.forms[0].form_key]"
+                [replaceUrl]="true"
+                >{{ group.title }}</a
+              >
+            }
+          </nav>
         </div>
       }
     </sumi-card>
@@ -22,13 +27,12 @@
         <p class="summary">{{ sel.group.summary }}</p>
         <p class="build">{{ sel.group.build }}</p>
 
-        <div class="chips-scroll forms">
-          <sumi-segmented-control
-            [options]="formOptions(sel.group)"
-            [value]="sel.form"
-            (valueChange)="selectForm($event)"
-          />
-        </div>
+        <sumi-segmented-control
+          class="forms"
+          [options]="formOptions(sel.group)"
+          [value]="sel.form"
+          (valueChange)="selectForm($event)"
+        />
       </sumi-card>
 
       <app-rule-table [formTitle]="sel.form.title" [sections]="sections()" />

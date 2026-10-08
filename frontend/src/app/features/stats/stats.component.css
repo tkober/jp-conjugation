@@ -2,6 +2,13 @@
   display: block;
 }
 
+/* sumi-page doesn't space its own content (follow-up worth proposing to
+   sumi-ui itself) — without this, sumi-cards sit flush, borders touching.
+   Collapses harmlessly with sumi-stat-grid's own margin-bottom below. */
+sumi-page > * + * {
+  margin-top: 16px;
+}
+
 h2 {
   margin: 0 0 4px;
   font-size: 1.0625rem;
@@ -11,6 +18,13 @@ h2 {
   margin: 0;
   color: var(--sumi-muted);
   font-size: 0.875rem;
+}
+
+/* sumi-card's body always adds its own top padding — a bottom margin left
+   on the header's last element stacks on top of that and opens a double
+   gap before the body. */
+[sumiCardHeader] > *:last-child {
+  margin-bottom: 0;
 }
 
 /* Wide content scrolls inside its own box; the page never does. */

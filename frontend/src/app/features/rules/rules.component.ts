@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
 
 import { SumiCard, SumiPage } from 'sumi-ui/layout';
@@ -17,7 +17,7 @@ const DEFAULT_FORM = 'Verbs__TeFormAffirmative';
 @Component({
   selector: 'app-rules',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SumiPage, SumiCard, SumiSegmentedControl, RuleTableComponent],
+  imports: [SumiPage, SumiCard, SumiSegmentedControl, RouterLink, RuleTableComponent],
   templateUrl: './rules.component.html',
   styleUrl: './rules.component.css',
 })
@@ -81,25 +81,6 @@ export class RulesComponent {
       next: (r) => this.data.set(r),
       error: () => this.failed.set(true),
     });
-  }
-
-  /** Every group in this category, as segmented-control options. */
-  groupOptions(category: { name: string; groups: RuleGroup[] }): SumiSegmentedOption<RuleGroup>[] {
-    return category.groups.map((group) => ({ value: group, label: group.title }));
-  }
-
-  /** The selected group, but only if it belongs to this category — a
-   *  segmented control otherwise has no way to show "nothing selected" per
-   *  category while another category holds the real selection. */
-  selectedGroupIn(category: { name: string; groups: RuleGroup[] }): RuleGroup | undefined {
-    const group = this.selected()?.group;
-    return group && category.groups.includes(group) ? group : undefined;
-  }
-
-  selectGroup(group: RuleGroup | undefined): void {
-    if (group) {
-      this.router.navigate(['/rules', group.forms[0].form_key], { replaceUrl: true });
-    }
   }
 
   formOptions(group: RuleGroup): SumiSegmentedOption<RuleForm>[] {

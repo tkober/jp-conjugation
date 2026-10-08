@@ -2,6 +2,12 @@
   display: block;
 }
 
+/* sumi-page doesn't space its own content (follow-up worth proposing to
+   sumi-ui itself) — without this, sumi-cards sit flush, borders touching. */
+sumi-page > * + * {
+  margin-top: 16px;
+}
+
 .filters input[type='search'] {
   width: 100%;
   margin-bottom: 10px;
@@ -27,25 +33,6 @@
 
 select {
   width: 100%;
-}
-
-/* sumi-segmented-control is a single row with no wrap — a filter with many
-   options scrolls horizontally inside its own box instead of widening the
-   page. Without `width: max-content` the host's shrink-to-fit sizing stays
-   within the available width and the browser squeezes/wraps the option
-   labels instead of actually overflowing into the scrollbar. */
-.chips-scroll {
-  overflow-x: auto;
-}
-
-.chips-scroll sumi-segmented-control {
-  display: inline-flex;
-  width: max-content;
-}
-
-.chips-scroll ::ng-deep .sumi-segmented-control__option {
-  flex: none;
-  white-space: nowrap;
 }
 
 .count {

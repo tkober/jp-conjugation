@@ -24,9 +24,21 @@ h3 {
   font-size: 0.875rem;
 }
 
+/* sumi-card's body always adds its own top padding — a bottom margin left
+   on the header's last element (usually this .hint) stacks on top of that
+   and opens a double gap before the body. Sumi-ui follow-up: sumi-card
+   could collapse this itself, e.g. by zeroing the header's last-child
+   margin the way this rule does locally. */
+[sumiCardHeader] > *:last-child {
+  margin-bottom: 0;
+}
+
+/* A grid instead of flex-wrap so the toggles line up in even columns
+   (flex-wrap left an uneven last row, e.g. 3 + 1) — 2 columns at the
+   640px page width, 1 at 360px. */
 .options {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 8px;
 }
 

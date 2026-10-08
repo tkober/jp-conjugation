@@ -9,19 +9,23 @@
     />
 
     <div class="row">
-      <div class="field">
+      <label class="field">
         <span>Type</span>
-        <div class="chips-scroll">
-          <sumi-segmented-control [options]="wordTypes" [value]="wordType()" (valueChange)="setWordType($event)" />
-        </div>
-      </div>
+        <select sumiSelect [value]="wordType()" (change)="setWordType($any($event.target).value)">
+          @for (type of wordTypes; track type.value) {
+            <option [value]="type.value">{{ type.label }}</option>
+          }
+        </select>
+      </label>
 
-      <div class="field">
+      <label class="field">
         <span>JLPT</span>
-        <div class="chips-scroll">
-          <sumi-segmented-control [options]="jlptOptions" [value]="jlpt()" (valueChange)="setJlpt($event)" />
-        </div>
-      </div>
+        <select sumiSelect [value]="jlpt()" (change)="setJlpt($any($event.target).value)">
+          @for (level of jlptOptions; track level.value) {
+            <option [value]="level.value">{{ level.label }}</option>
+          }
+        </select>
+      </label>
 
       <label class="field">
         <span>Sort</span>

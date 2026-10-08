@@ -243,22 +243,23 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   TestBed.
 - `features/rules/rules.component.ts` (#11, Tabelle ausgelagert #21, Seite
   auf Sumi UI #34) — Tab „Rules", eingerahmt in `<sumi-page title="Rules"
-  width="default">` (`default`, nicht `narrow`, weil die Regeltabellen mehr
-  Breite brauchen als die 640px der anderen Seiten). Picker und Erklärkarte
-  sind `sumi-card`; die Gruppen-Chips (eine `sumi-segmented-control` pro
-  Kategorie, Optionswert die `RuleGroup` selbst) und der Formen-Umschalter der
-  gewählten Gruppe (ebenfalls `sumi-segmented-control`, Optionswert die
-  `RuleForm`) ersetzen die alten `<a routerLink>`-Chip-Reihen — die Bibliothek
-  navigiert nicht selbst, `selectGroup()`/`selectForm()` lösen beim
-  `(valueChange)` ein `router.navigate(['/rules', formKey], { replaceUrl:
-  true })` aus, genau wie die alten Links. Die gewählte Form steht weiter in
-  der URL (`/rules/:form`), ohne Parameter Te-Form positiv. Weil
-  `sumi-segmented-control` eine einzelne Zeile ohne Umbruch ist, steckt jede
-  in einem lokalen `.chips-scroll`-Wrapper (`overflow-x: auto` **plus**
-  `width: max-content`/`flex: none` auf den Optionen — ohne das zweite
-  schrumpft der Browser die Labels statt sie scrollen zu lassen, siehe
-  `rules.component.css`), damit eine Kategorie mit vielen Gruppen/Formen bei
-  360px in sich scrollt statt die Seite zu verbreitern. Die Tabelle selbst ist
+  width="narrow">`, wie jede andere Seite — die Regeltabellen passen bei
+  640px, gegengeprüft am Screenshot. Picker und Erklärkarte sind `sumi-card`.
+  Die Gruppen-Chips (Kategorie → Gruppe, z. B. „Te-form", „Potential", acht
+  Stück allein bei Verbs) sind **Navigation, kein Einzelwert** — ein erster
+  Versuch mit `sumi-segmented-control` dafür verbarg die Hälfte der Gruppen
+  hinter horizontalem Scroll (bei 390px nur 4 von 8 sichtbar) und bildete
+  „Adjectives"/„Verbs" als zwei getrennte Radiogruppen ab, obwohl sie eine
+  gemeinsame Auswahl teilen — beides falsch für eine Linkliste. Sie sind
+  deshalb wieder plain `<a [routerLink]="['/rules', group.forms[0].form_key]"
+  [replaceUrl]="true">`-Chips, die umbrechen (`.chips`/`.chip` in
+  `rules.component.css`, lokal auf Sumi-Tokens gestylt: `--sumi-line`-Rahmen,
+  aktiv `--sumi-accent-soft`/`--sumi-accent-ink`, `aria-current="page"`) —
+  damit funktionieren Mittelklick/„In neuem Tab öffnen" wieder, die main-
+  Version hatte das auch so. Der Formen-Umschalter *innerhalb* einer Gruppe
+  (meist Positive/Negative, bei Non-past/Past vier Werte) bleibt dagegen
+  `sumi-segmented-control` — das ist eine echte Einzelauswahl unter wenigen,
+  kurzen Optionen, kein Navigations-Hiding-Problem. Die Tabelle selbst ist
   `rule-table/rule-table.component.ts` — Inputs `formTitle`/`sections`
   (Gruppierung nach Wortart, `Section`-Typ lebt dort), dazu `patternKind()`
   (unchanged/append/drop/replace) und `tilde()` samt ihren Doc-Kommentaren.
@@ -273,10 +274,14 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   zu 50, eingerahmt in `<sumi-page title="Words" width="narrow">`. Bewusst
   **nicht** aufgeteilt (#21): mit 105/95/134 Zeilen klein genug und in sich
   geschlossen, anders als Settings und Rules. Such-Input und Sortier-`<select>`
-  sind `sumiInput`/`sumiSelect`; Wortart- und JLPT-Filter sind seit #34
-  `sumi-segmented-control` statt `<select>` (einzelne Wahl, siehe Rules'
-  `.chips-scroll`-Pattern oben für denselben Umbruch-Trick). Die Wortliste
-  bleibt ein semantisches `<table>` — eine Zelle trägt Kanji **und**
+  sind `sumiInput`/`sumiSelect`; Wortart- und JLPT-Filter sind ebenfalls
+  `sumiSelect` statt `sumi-segmented-control` — mit sieben bzw. sechs
+  Optionen (する, 来る, N2, N1, …) schnitt die Segmented-Control-Variante
+  Optionen am Rand der scrollenden Box ab, genau wie bei Rules' Gruppen-
+  Chips. Alle drei Felder (Type/JLPT/Sort) stehen bei 640px in einer Zeile
+  nebeneinander (Label darüber) und brechen bei 360px sauber um (`.row`/
+  `.field` in `words.component.css`, unverändert seit vor #34). Die
+  Wortliste bleibt ein semantisches `<table>` — eine Zelle trägt Kanji **und**
   Hiragana in zwei unterschiedlich gestylten Zeilen, das kann
   `sumi-data-table`s reine Text-pro-Zelle-Darstellung nicht abbilden.
 - `features/settings/settings.component.ts` (#21, vorher ein Monolith, Seite
@@ -330,10 +335,15 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   `styleUrls`-Eintrag in jeder Karte eingebunden) — aber nur noch, was die
   Bibliothek nicht selbst mitbringt: `h2`/`h3`-Überschriften-Stile, `.hint`
   (Farbe + Größe, da `sumi-page`s eigene Subtitle-Klasse nur im Seitenkopf
-  sitzt, nicht pro Karte), `.options`/`.actions` als reine Flex-Wrap-Layouts
-  für die Toggle-/Button-Reihen, und `.warn` für die Guard-/Bestätigungstexte.
-  Buttons, Toggles und Segmented Controls selbst, `.card`, `h2` ohne eigene
-  Klasse und `button.primary`/`.ghost`/`.destructive` sind komplett entfallen.
+  sitzt, nicht pro Karte), `.options` als Toggle-Grid (`repeat(auto-fill,
+  minmax(220px, 1fr))` — Flex-Wrap ließ die letzte Reihe uneben, z. B. 3 + 1;
+  siehe „Globale Styles" für den sumi-ui-Follow-up dazu), `.actions` als
+  Flex-Wrap-Layout für die Button-Reihen, `.warn` für die
+  Guard-/Bestätigungstexte, und `[sumiCardHeader] > *:last-child {
+  margin-bottom: 0 }` gegen die doppelte Lücke zwischen Kartenkopf und
+  -körper (ebenfalls ein sumi-ui-Follow-up, s. u.). Buttons, Toggles und
+  Segmented Controls selbst, `.card`, `h2` ohne eigene Klasse und
+  `button.primary`/`.ghost`/`.destructive` sind komplett entfallen.
   **Die Zeitbudget-Beispiele kommen aus `/api/settings`**, damit die Formel
   nicht doppelt gepflegt wird. Die Karte „Instructions": Chip-Stil
   (Text/Emoji/Text + emoji, sofort gespeichert), die Reihenfolge der vier
@@ -384,10 +394,21 @@ aus `sumi-ui/forms` (`sumiButton`, `sumiInput`, `sumiSelect`, `sumiSlider`,
 `html`/`body`-Mindesthöhe ist redundant zu `sumi-app-shell`s eigenem
 `min-height: 100vh`. Übrig gebliebene, wirklich app-/komponentenspezifische
 Regeln (eine `.hint`-Farbe, `h2`-Kartentitel-Größe, Flex-Wrap-Layouts wie
-`.options`/`.actions`, der `.chips-scroll`-Umbruch-Trick für
-`sumi-segmented-control`) stehen jetzt lokal in der jeweiligen
-Komponenten-CSS bzw., wo mehrere Settings-Karten sie teilen, in
-`settings-shared.css` (s. o.) — nicht mehr global. Jedes App-Token steht weiterhin **genau einmal**, mit
+`.options`/`.actions`, die wiederkehrenden `.chip`-Link-Styles) stehen jetzt
+lokal in der jeweiligen Komponenten-CSS bzw., wo mehrere Settings-Karten sie
+teilen, in `settings-shared.css` (s. o.) — nicht mehr global. Zwei Lücken,
+die jede Seite lokal selbst schließt, wären mögliche sumi-ui-Follow-ups:
+`sumi-page` spaced seinen Inhalt nicht selbst (jede Seite braucht ein
+eigenes `sumi-page > * + * { margin-top: 16px }`, sonst stoßen die
+`sumi-card`s aneinander), und `sumi-card`s `[sumiCardHeader]`-Slot lässt die
+Bottom-Margin seines letzten Kindes stehen, die sich mit dem Body-Padding
+addiert (jede Karte mit Header braucht `[sumiCardHeader] > *:last-child {
+margin-bottom: 0 }`, in `settings-shared.css` einmal für alle fünf Karten,
+sonst pro Komponente). Settings' Toggle-Reihen (`.options`) sind seit dem
+Rules/Words-Nacharbeiten (s. o.) außerdem ein Grid
+(`repeat(auto-fill, minmax(220px, 1fr))`) statt Flex-Wrap — Flex-Wrap ließ
+die letzte Reihe uneben (3 + 1), das Grid steht bei 640px zweispaltig, bei
+360px einspaltig. Jedes App-Token steht weiterhin **genau einmal**, mit
 `light-dark(hell, dunkel)`, exakt wie Sumi es selbst für seine Tokens macht.
 `--rule-accent` (Herleitungskette) bleibt als einziges App-Token in
 `styles/app-tokens.css` übrig, weil Sumi UI dafür keine Entsprechung hat
