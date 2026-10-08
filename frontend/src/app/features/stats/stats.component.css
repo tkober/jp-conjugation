@@ -74,3 +74,12 @@ table.data .num {
   margin: 0;
   color: var(--sumi-muted);
 }
+
+.spark-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.75rem;
+  color: var(--sumi-muted);
+  margin-top: 4px;
+  font-variant-numeric: tabular-nums;
+}

@@ -173,28 +173,56 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   nennen** — das kollidiert mit der eingebauten DOM-Eigenschaft, die Angular
   auf jedem Host-Element schon bindet, ein gleichnamiger Component-Input bekäme
   nie einen Wert.
-- `features/stats/stats.component.ts` (#20) — lädt die Stats, Empty-/Loading-Zustand,
-  Layout; behält die kleinen Karten (Weakest rules, Misses-Split, Recent) selbst.
-  Drei Kind-Komponenten bekommen nur `input()`s, keinen Server-Zugriff:
-  - `kpi-tiles/kpi-tiles.component.ts` — die vier Kacheln oben (Answered,
-    Accuracy, Ø time, Best streak).
-  - `elo-sparkline/elo-sparkline.component.ts` — die Elo-Karte: Verlauf als
-    SVG-Polyline (eine Serie, deshalb ohne Legende) plus Min/Max-Skala.
-  - `miss-rate-heatmap/miss-rate-heatmap.component.ts` — als Kernstück die
-    **Heatmap Form × Wortart**, getrennt für Adjektive und Verben, plus Chips
-    für die neun Godan-Endungen. Hält das `selected`-Signal selbst, weil Chips
-    und Readout es teilen und deshalb zusammengehören. Kodiert wird die
-    **Fehlerquote**, nicht die Trefferquote: so sticht hervor, was Arbeit
-    braucht, statt zu verblassen. „Noch nie geübt" ist ein eigener Zustand
-    (gestrichelte Zelle) und nicht der hellste Rampenschritt — 0 % richtig und
-    „nie probiert" dürfen nicht gleich aussehen.
+- `features/stats/stats.component.ts` (#20, Charts auf Sumi UI umgestellt
+  #33) — lädt die Stats, Empty-/Loading-Zustand, Layout; behält die kleinen
+  Karten (Weakest rules, Misses-Split, Recent) selbst. Die vier KPI-Kacheln
+  sind `sumi-stat-tile` in einem `sumi-stat-grid` direkt im Template (die
+  alte `kpi-tiles/`-Komponente brauchte dafür kein eigenes Wrapping mehr und
+  ist weg); die Elo-Karte bleibt eine eigene `<section class="card">` mit der
+  gewohnten Überschrift/Hinweiszeile, aber der Verlauf selbst ist jetzt
+  `sumi-sparkline` (`[points]="elo_history"`, `[value]` das gerundete Elo,
+  `[delta]` letzter minus erster Punkt der Historie, `null` unter zwei
+  Punkten — dann fehlt der Chart ganz, wie vorher auch; die alte
+  `elo-sparkline/`-Komponente mit eigener SVG-Polyline ist damit auch weg).
+  `sumi-sparkline` selbst zeigt nur den aktuellen Wert plus Delta, keine
+  Min/Max-Skala — die alte Skalenzeile unter dem Chart blieb deshalb als
+  eigene, kleine `.spark-scale`-Zeile erhalten (`eloRange()` in
+  `stats.component.ts`), sonst wäre eine Aussage der alten Seite verloren
+  gegangen, die nur noch über den Tabellen-Fallback zu erschließen wäre.
+  - `miss-rate-heatmap/miss-rate-heatmap.component.ts` — als Kernstück **drei**
+    `sumi-matrix-heatmap`s: Form × Wortart für Adjektive, dasselbe für Verben,
+    und eine dritte mit einer einzigen Zeile „Godan" und den neun
+    Trigger-Kana als Spalten (ersetzt die alte Chip-Reihe). Ein gemeinsames
+    `selected`-Signal (welche Matrix + Zeile + Spalte + Payload) treibt eine
+    einzige Readout-Zeile unter allen drei Matrizen — `selectedCellFor(id)`
+    gibt nur für die tatsächlich ausgewählte Matrix ein `{row, column}`
+    zurück, die anderen beiden bekommen `null`, sonst würde die Ring-Markierung
+    in mehreren Matrizen gleichzeitig aufblitzen. Kodiert wird weiterhin die
+    **Fehlerquote** (`1 - accuracy`), nicht die Trefferquote, über
+    `[domain]="[0, 1]"` und `format` = Prozent. „Noch nie geübt" ist
+    `sumi-matrix-heatmap`s eigener „no data"-Zustand (`value: null`,
+    `detail: 'not practised yet'`) — eine gestrichelte Schraffur statt des
+    hellsten Rampenschritts, genau wie vorher, nur jetzt von der Bibliothek
+    selbst gezeichnet. Die Spaltenköpfe sind die kurzen Wortart-Labels
+    (`wordTypeLabel()`, z. B. „一段"); den vollen Titel liefert nicht ein
+    Spalten-Tooltip (den gibt die Bibliothek für Spaltenköpfe nicht her),
+    sondern die Readout-Zeile, die `selectable`s `cellSelect` auch bei
+    reinem Hover feuert — „<Formtitel> · <voller Wortart-Titel>" bzw.
+    „Godan <Trigger>" für die dritte Matrix, je über eine
+    `columnTitles`-Lookup pro Matrix (leer bei Godan, da die Zeile dort schon
+    „Godan" sagt). Jede Matrix hat `table` für den Tabellen-Fallback.
 
   `stats-math.ts` trägt den testbaren Kern als freie Funktionen statt
-  Komponenten-Methoden: `bucket()`, `toCell()`, `rowsFor()`, `triggerCells()`
-  (Godan-Gruppierung + ja-Sortierung) und `sparkline()` (Punktgeometrie), dazu
-  die `Cell`/`HeatRow`-Typen und `VERB_TYPES`/`ADJECTIVE_TYPES`/`HEAT_BOUNDS`/
-  `HEAT_LABELS`. `stats-math.spec.ts` deckt Bucket-Grenzen, Godan-Sortierung
-  und die Sparkline-Randfälle (< 2 Punkte, flacher Verlauf) ab, ohne TestBed.
+  Komponenten-Methoden: `toCell()`, `rowsFor()`, `triggerCells()` (Godan-
+  Gruppierung + ja-Sortierung, liefert jetzt die bloße Trigger-Kana als
+  `label` — „Godan " ist seit #33 Sache der Zeile, nicht mehr der Zelle),
+  dazu die `Cell`/`HeatRow`-Typen und `VERB_TYPES`/`ADJECTIVE_TYPES`. `bucket()`,
+  `HEAT_BOUNDS`, `HEAT_LABELS` und `sparkline()` sind mit #33 entfallen — das
+  Bucketing und die Sparkline-Geometrie macht jetzt die Bibliothek (linear in
+  20-%-Schritten über `[domain]`, nicht mehr die alten 10/25/45/70-Grenzen;
+  Bibliothekskonsistenz hat hier Vorrang). `stats-math.spec.ts`
+  deckt Summation/„nie geübt" in `toCell()` und die Godan-Sortierung ab, ohne
+  TestBed.
 - `features/rules/rules.component.ts` (#11, Tabelle ausgelagert #21) — Tab
   „Rules": Gruppen-Chips (Adjectives / Verbs), darunter Erklärung und ein
   Segment-Umschalter für die Formen der Gruppe. Die gewählte Form steht in der
@@ -292,9 +320,11 @@ Dateien — `styles/app-tokens.css` (die Tokens, die Sumi UI nicht hat, s. u.),
 bis #34 auf Sumi-Tokens laufend bestehen, dann wandern sie auf Sumi UIs
 eigene Komponenten). Jedes App-Token steht weiterhin **genau einmal**, mit
 `light-dark(hell, dunkel)`, exakt wie Sumi es selbst für seine Tokens macht.
-`--rule-accent` (Herleitungskette), `--neutral` (Countdown-Ring, bis #32)
-und `--heat-0…4`/`--spark` (Heatmap/Sparkline, bis #33) bleiben App-Tokens
-in `styles/app-tokens.css`, weil Sumi UI dafür keine Entsprechung hat; jede
+`--rule-accent` (Herleitungskette) bleibt als einziges App-Token in
+`styles/app-tokens.css` übrig, weil Sumi UI dafür keine Entsprechung hat
+(sekundäre Farbe, bewusste Nutzerentscheidung) — `--neutral`
+(Countdown-Ring, bis #32) und `--heat-0…4`/`--spark` (Heatmap/Sparkline, bis
+#33) sind beide inzwischen entfallen. Jede
 andere `var(--…)`-Nutzung in den Feature-Styles ist auf die passende
 `--sumi-*`-Variable umgeschrieben (`--bg`→`--sumi-bg`, `--surface`→
 `--sumi-surface`, `--surface-sunken`→`--sumi-sunken`, `--border`→
@@ -304,16 +334,17 @@ andere `var(--…)`-Nutzung in den Feature-Styles ist auf die passende
 `--sumi-shadow`, `--radius`→`--sumi-radius`; weißer Text auf Akzent wurde zu
 `--sumi-on-accent`).
 
-**Die Heatmap-Rampe** ist eine sequenzielle Ein-Hue-Skala (blau) aus der
-validierten Referenzpalette des `dataviz`-Skills, Schritte 250→650. Sie steht
-in `styles/app-tokens.css` (App-Token, s. o.) und ist **im Dark Mode
-umgedreht**, damit „mehr" immer vom Hintergrund wegläuft. Beide Richtungen
-sind gegen die tatsächlichen Flächen dieser App validiert (`#ffffff` bzw.
-`#1c1f25`), nicht gegen die Default-Flächen des Skills — der hellste Schritt
-der Originalrampe fiel gegen Weiß mit 1,32:1 durch. Wer die Farben anfasst:
-den Validator erneut laufen lassen, nicht schätzen. Und die Bildunterschrift
-sagt bewusst „stronger", nicht „darker" — „dunkler" wäre im Dark Mode
-schlicht falsch.
+**Die Heatmap-Rampe ist seit #33 kein App-Token mehr.** Bis dahin war sie
+eine eigene, validierte Ein-Hue-Skala (blau) in `styles/app-tokens.css`
+(`--heat-0…4`/`--spark`), im Dark Mode umgedreht, gegen die tatsächlichen
+Flächen dieser App (`#ffffff`/`#1c1f25`) validiert. `sumi-matrix-heatmap`
+und `sumi-sparkline` zeichnen jetzt aus der akzentabgeleiteten
+`--sumi-seq-*`-Rampe der Bibliothek selbst — eine zweite, separat zu
+pflegende Skala wäre reine Doppelung gewesen, und die Bildunterschrift sagt
+weiterhin bewusst „stronger", nicht „darker" (die Bibliotheksrampe ist
+ebenfalls themefest, „dunkler" wäre im Dark Mode so oder so falsch). Wer an
+dieser Stelle nochmal Farben prüfen will, validiert gegen `--sumi-seq-*`,
+nicht gegen die alten, inzwischen entfernten `--heat-*`-Werte.
 
 **Komponenten laufen auf `OnPush`, die App ist seit #29 zoneless**
 (`provideZonelessChangeDetection()` in `app.config.ts`, kein `zone.js` mehr in
