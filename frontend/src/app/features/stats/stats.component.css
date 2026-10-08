@@ -74,3 +74,21 @@ table.data .num {
   margin: 0;
   color: var(--sumi-muted);
 }
+
+.range {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Same gap as between the .card sections below. */
+sumi-stat-grid {
+  margin-bottom: 16px;
+}
+
+/* Four tiles in one row: the library's auto-fit grid makes 3 + 1 at this
+   page width, which leaves "Best streak" alone in its row. Under 480px the
+   library's own 2 × 2 applies. */
+@media (min-width: 481px) {
+  sumi-stat-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}

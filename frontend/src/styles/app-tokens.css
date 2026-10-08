@@ -8,15 +8,4 @@
      unreadable, and the chain's colour is independent of whichever accent
      Sumi UI assigns this app. */
   --rule-accent: light-dark(#008cd5, #4fc3f7);
-
-  /* Sequential single-hue ramp (blue) for the miss-rate heatmap, steps
-     250->650 of the dataviz skill's reference palette. Validated against
-     this app's surfaces (#ffffff / #1c1f25), not Sumi UI's own surfaces —
-     kept as an app token until #33 moves the stats charts onto Sumi UI. */
-  --heat-0: light-dark(#86b6ef, #184f95);
-  --heat-1: light-dark(#5598e7, #256abf);
-  --heat-2: light-dark(#2a78d6, #3987e5);
-  --heat-3: light-dark(#1c5cab, #6da7ec);
-  --heat-4: light-dark(#104281, #9ec5f4);
-  --spark: light-dark(#2a78d6, #63b3f5);
 }

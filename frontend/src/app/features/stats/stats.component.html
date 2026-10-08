@@ -1,17 +1,35 @@
 @if (stats(); as s) {
-  <app-kpi-tiles
-    [attempts]="s.attempts"
-    [accuracy]="s.accuracy"
-    [avgTimeMs]="s.avg_time_ms"
-    [bestStreak]="s.best_streak"
-  />
+  <sumi-stat-grid>
+    <sumi-stat-tile [value]="s.attempts" label="Answered" />
+    <sumi-stat-tile [value]="accuracyLabel()" label="Accuracy" />
+    <sumi-stat-tile [value]="avgTimeLabel()" label="Ø time" />
+    <sumi-stat-tile [value]="s.best_streak" label="Best streak" />
+  </sumi-stat-grid>
 
   @if (s.attempts === 0) {
     <section class="card empty">
       <p>Nothing practised yet. The numbers show up once you answer something.</p>
     </section>
   } @else {
-    <app-elo-sparkline [history]="s.elo_history" [elo]="s.elo" [level]="s.level" />
+    <section class="card">
+      <h2>Elo</h2>
+      <p class="hint">
+        Your rating over the last {{ s.elo_history.length }} answers — currently
+        {{ s.elo | number: '1.0-0' }}, level {{ s.level }}.
+        @if (eloRange(); as range) {
+          <span class="range">Range {{ range.min }}–{{ range.max }}.</span>
+        }
+      </p>
+      @if (s.elo_history.length >= 2) {
+        <sumi-sparkline
+          [ariaLabel]="'Elo rating over the last ' + s.elo_history.length + ' answers'"
+          [points]="s.elo_history"
+          [value]="eloValue()"
+          [delta]="eloDelta()"
+          [table]="true"
+        />
+      }
+    </section>
 
     <app-miss-rate-heatmap [items]="s.items" />
 
