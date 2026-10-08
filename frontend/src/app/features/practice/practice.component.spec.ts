@@ -149,6 +149,8 @@ describe('PracticeComponent', () => {
 
     const el: HTMLElement = fixture.nativeElement;
     expect(el.textContent).toContain('Wrong');
+    // Shown once, in the verdict's expected line — not repeated in the details.
+    expect(el.textContent?.split('食べて').length).toBe(2);
     expect(el.querySelector('.rule')).toBeTruthy();
     expect(el.querySelector('.rule .unaltered')?.textContent).toBe('食べ');
   });

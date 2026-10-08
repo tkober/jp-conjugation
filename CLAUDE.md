@@ -153,7 +153,8 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   (`detailsOpen = signal(true)`): die Herleitungskette ist das Haupt-
   Lernmittel bei einem Fehler, sie soll nicht erst einen zweiten Tastendruck
   brauchen. Bibliothekseigene Titel („Correct"/„Wrong") ersetzen die alten
-  正解/不正解-Headlines; die „fast"-Markierung auf eine richtige Antwort steht
+  正解/不正解-Headlines, die Lösung steht bei einem Fehler nur einmal, in
+  `sumi-verdict`s `expected`-Zeile (nicht nochmal mit Furigana im Slot); die „fast"-Markierung auf eine richtige Antwort steht
   jetzt in `sumi-verdict`s `message`-Slot. Ein Alt+H-Abbruch zeigt zusätzlich
   eine eigene Zeile im Slot (kein Partial-Hinweis dafür — ohne Eingabe gibt es
   nichts, das stamm- oder endungs-richtig sein könnte). `?` bleibt als
@@ -676,9 +677,11 @@ cd backend && uv run pytest                        # Tests (Docker muss laufen)
   `(mousedown)="keepFocus($event)"`, weil ein `<a>` keine Button-Direktive
   ist) verhindert nur noch, dass der Fokus beim Antippen überhaupt wegwandert.
 - Mit stehender Tastatur passen Aufgabe, Eingabe *und* Auflösung nicht
-  gleichzeitig auf den Schirm. Das alte `scrollIntoView` +
-  `scroll-margin-top` auf die Eingabezeile ist mit #32 ersatzlos entfallen:
-  `sumi-answer-field` behält den Fokus ohnehin, und der Browser scrollt ein
-  fokussiertes Feld von selbst in Sicht — gegengeprüft bei 360×380 (aktive
-  Aufgabe und falsche Auflösung mit offener Kette), siehe die Screenshots
-  dieses Issues.
+  gleichzeitig auf den Schirm. Nach dem Prüfen rückt deshalb die Zeile mit
+  `sumi-answer-field` unter den Header (`revealVerdict()`: `scrollIntoView`
+  mit `scroll-margin-top`), damit Korrektur und „Next" sich den sichtbaren
+  Streifen teilen. Die Header-Höhe wird seit #32 live gemessen
+  (`.sumi-app-shell__header`) statt als Konstante eingetragen — die alten
+  104px stammten vom App-eigenen Header. Ohne das Scrollen geht es nicht: das
+  Feld behält den Fokus, verliert ihn also nie, und der Browser scrollt es
+  deshalb auch nicht von selbst in Sicht (gegengeprüft bei 360×380).

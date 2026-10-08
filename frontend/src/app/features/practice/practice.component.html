@@ -82,15 +82,6 @@
               }
               <p class="grammar">{{ grammarLine() }}</p>
 
-              @if (v.kind === 'wrong' && solution(); as s) {
-                <p class="solution">
-                  @if (s.base) {
-                    <ruby>{{ s.base }}<rt>{{ s.reading }}</rt></ruby>{{ s.tail }}
-                  } @else {
-                    {{ s.tail }}
-                  }
-                </p>
-              }
 
               @if (partial()) {
                 <p class="partial">{{ partial() }}</p>

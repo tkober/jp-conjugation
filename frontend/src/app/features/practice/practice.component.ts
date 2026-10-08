@@ -79,11 +79,6 @@ export class PracticeComponent {
     return ex ? ruby(ex.kanji, ex.hiragana) : null;
   });
 
-  readonly solution = computed(() => {
-    const r = this.result();
-    return r ? ruby(r.expected_kanji, r.expected_hiragana) : null;
-  });
-
   /** Rounded to 1 decimal, like every other Elo figure in this app — the raw
    *  subtraction of two already-rounded floats otherwise prints noise such
    *  as "-14.100000000000023" in `sumi-session-summary`, which has no pipe

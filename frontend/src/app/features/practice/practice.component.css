@@ -60,16 +60,6 @@
   margin: 0;
 }
 
-.solution {
-  margin: 10px 0 0;
-  font-size: 2rem;
-  line-height: 1.6;
-}
-
-.solution rt {
-  font-size: 0.4em;
-}
-
 .partial {
   margin: 6px 0 0;
 }
@@ -165,9 +155,5 @@
 
   .english {
     font-size: 0.8125rem;
-  }
-
-  .solution {
-    font-size: 1.625rem;
   }
 }
