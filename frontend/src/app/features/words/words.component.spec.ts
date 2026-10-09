@@ -93,4 +93,22 @@ describe('WordsComponent', () => {
     expect(emptyState?.querySelector('sumi-companion')).toBeTruthy();
     expect(el.textContent).toContain('No matches');
   });
+
+  it('shows the error state when the backend is unreachable, and retrying tries again', async () => {
+    const fixture = render();
+    httpMock
+      .expectOne((r) => r.url === '/api/words')
+      .flush('nope', { status: 500, statusText: 'Error' });
+    await fixture.whenStable();
+
+    const el: HTMLElement = fixture.nativeElement;
+    expect(el.querySelector('sumi-error-state')).toBeTruthy();
+
+    (el.querySelector('[sumierroraction]') as HTMLButtonElement).click();
+    httpMock.expectOne((r) => r.url === '/api/words').flush(response());
+    await fixture.whenStable();
+
+    expect(fixture.nativeElement.querySelector('sumi-error-state')).toBeFalsy();
+    expect(fixture.nativeElement.querySelector('table')).toBeTruthy();
+  });
 });

@@ -38,7 +38,12 @@
       <app-rule-table [formTitle]="sel.form.title" [sections]="sections()" />
     }
   } @else if (failed()) {
-    <p class="loading">Could not load the rules.</p>
+    <sumi-error-state title="Can't reach the server" companion="tanuki">
+      Your progress is safe. Check the connection and try again.
+      <button sumiErrorAction type="button" sumiButton variant="secondary" (click)="retry()">
+        Try again
+      </button>
+    </sumi-error-state>
   } @else {
     <p class="loading">Loading…</p>
   }

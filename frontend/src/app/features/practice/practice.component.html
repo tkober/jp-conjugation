@@ -1,30 +1,37 @@
-<sumi-page width="narrow">
+<sumi-page width="narrow" [inkEnd]="false">
 @switch (phase()) {
   @case ('idle') {
-    <sumi-session-gate
-      title="Ready to practice?"
-      text="Conjugate the word into the form you are asked for. Type the reading — it turns into kana as you go."
-      actionLabel="Start session"
-      companion="tanuki"
-      (start)="start()"
-    />
+    @if (loadFailed()) {
+      <sumi-error-state title="Can't reach the server" companion="tanuki">
+        Your progress is safe. Check the connection and try again.
+        <button sumiErrorAction type="button" sumiButton variant="secondary" (click)="start()">
+          Try again
+        </button>
+      </sumi-error-state>
+    } @else {
+      <sumi-session-gate
+        title="Ready to practice?"
+        text="Conjugate the word into the form you are asked for. Type the reading — it turns into kana as you go."
+        actionLabel="Start session"
+        companion="tanuki"
+        (start)="start()"
+      />
+    }
   }
 
   @case ('ended') {
     <!-- No title: sumi-session-summary supplies its own heading. -->
-    <sumi-session-gate [showAction]="false" (start)="start()">
+    <sumi-session-gate [showAction]="false" companion="tanuki" (start)="start()">
       <sumi-session-summary
         [answered]="answered()"
         [correct]="correct()"
         [durationMs]="sessionDurationMs()"
         [delta]="eloDelta()"
         deltaLabel="Elo"
+        [levelUp]="levelUp()"
         (restart)="start()"
       >
-        <span sumiSummaryArt class="session-art">
-          <sumi-companion kind="tanuki" [size]="72" />
-          <sumi-hanko [characters]="hankoCharacters()" [label]="hankoLabel()" />
-        </span>
+        <sumi-hanko sumiSummaryArt [characters]="hankoCharacters()" [label]="hankoLabel()" />
       </sumi-session-summary>
     </sumi-session-gate>
   }

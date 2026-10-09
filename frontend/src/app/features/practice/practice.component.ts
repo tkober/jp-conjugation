@@ -14,7 +14,7 @@ import { DecimalPipe } from '@angular/common';
 import { SUMI_KEYS, SumiHotkeys, injectHotkey } from 'sumi-ui/core';
 import {
   SumiCard,
-  SumiCompanion,
+  SumiErrorState,
   SumiFocusModeDirective,
   SumiHanko,
   SumiPage,
@@ -45,7 +45,7 @@ const TICK_MS = 100;
     FormInstructionComponent,
     SumiButtonDirective,
     SumiCard,
-    SumiCompanion,
+    SumiErrorState,
     SumiFocusModeDirective,
     SumiHanko,
     SumiPage,
@@ -79,6 +79,13 @@ export class PracticeComponent {
   readonly elapsed = signal(0);
   private readonly totalTime = signal(0);
   private startElo = 0;
+  /** `null` means "unknown" (the shared profile was not loaded yet when the
+   *  session started) — kept distinct from a real level so `levelUp` never
+   *  guesses a rise it cannot actually see. */
+  private startLevel: number | null = null;
+  /** Set when the first `/api/exercise/next` of a session fails — shows
+   *  `sumi-error-state` instead of the gate until the user retries. */
+  readonly loadFailed = signal(false);
   private shownAt = 0;
   private sessionStartedAt = 0;
   private timer: ReturnType<typeof setInterval> | undefined;
@@ -109,6 +116,22 @@ export class PracticeComponent {
    *  docs/concept.md#tuschemotive and sumi-ui#38's `sumi-hanko` example. */
   readonly hankoCharacters = computed(() => (this.sessionAccuracy() >= 0.8 ? '合格' : '練習'));
   readonly hankoLabel = computed(() => (this.sessionAccuracy() >= 0.8 ? 'Passed' : 'Practice'));
+
+  /** Set once the shared profile's level (updated on every `/api/answer`,
+   *  see `ApiService.answer()`) is higher than it was when the session
+   *  started — the same level the shell header's badge shows, just
+   *  compared across the session instead of shown as-is. `undefined`
+   *  (not a falsy level) so `sumi-session-summary`'s `levelUp` input, which
+   *  only renders its second hanko when set, stays unset for a session
+   *  without a level-up. */
+  readonly levelUp = computed<string | undefined>(() => {
+    const start = this.startLevel;
+    const level = this.api.profile()?.level;
+    if (start === null || level === undefined || level <= start) {
+      return undefined;
+    }
+    return `Level ${level}`;
+  });
 
   /** Drives both `sumi-answer-field`'s `[verdict]` and `sumi-verdict`'s
    *  `[kind]`/`[message]` — the same object, exactly as the showcase wires
@@ -195,7 +218,9 @@ export class PracticeComponent {
     this.answered.set(0);
     this.correct.set(0);
     this.totalTime.set(0);
+    this.loadFailed.set(false);
     this.startElo = this.api.profile()?.elo ?? 0;
+    this.startLevel = this.api.profile()?.level ?? null;
     this.sessionStartedAt = Date.now();
     this.next();
   }
@@ -238,6 +263,7 @@ export class PracticeComponent {
     this.detailsOpen.set(true);
     this.api.nextExercise().subscribe({
       next: (exercise) => {
+        this.loadFailed.set(false);
         this.exercise.set(exercise);
         this.phase.set('active');
         this.shownAt = performance.now();
@@ -249,7 +275,10 @@ export class PracticeComponent {
           injector: this.injector,
         });
       },
-      error: () => this.phase.set('idle'),
+      error: () => {
+        this.loadFailed.set(true);
+        this.phase.set('idle');
+      },
     });
   }
 

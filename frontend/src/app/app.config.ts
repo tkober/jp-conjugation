@@ -15,10 +15,10 @@ export const appConfig: ApplicationConfig = {
     provideZonelessChangeDetection(),
     provideRouter(routes),
     provideHttpClient(withFetch()),
-    // landscape/pattern are still placeholders until the real design is
-    // picked in tkober/sumi-ui#25 — no `pattern` on purpose. `accent: 'beni'`
-    // and `companion: 'tanuki'` are the user's own decisions (#41), not
-    // placeholders.
-    provideSumi({ accent: 'beni', motif: 'bamboo', companion: 'tanuki' }),
+    // `motif: 'bamboo'` and `pattern: 'yagasuri'` are still placeholders
+    // from the motif proposal until the real design is picked in
+    // tkober/sumi-ui#25. `accent: 'beni'` and `companion: 'tanuki'` are the
+    // user's own decisions (#41), not placeholders.
+    provideSumi({ accent: 'beni', motif: 'bamboo', pattern: 'yagasuri', companion: 'tanuki' }),
   ],
 };
