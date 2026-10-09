@@ -70,7 +70,8 @@
       </sumi-card>
     }
   } @else if (failed()) {
-    <sumi-error-state title="Can't reach the server" companion="tanuki">
+    <!-- No pattern: the page title above already carries the band (T4). -->
+    <sumi-error-state title="Can't reach the server" companion="tanuki" pattern="none">
       Your progress is safe. Check the connection and try again.
       <button sumiErrorAction type="button" sumiButton variant="secondary" (click)="retry()">
         Try again
