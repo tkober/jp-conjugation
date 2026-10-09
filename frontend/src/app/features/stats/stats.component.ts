@@ -3,7 +3,8 @@ import { DecimalPipe } from '@angular/common';
 
 import { SUMI_CHARTS } from 'sumi-ui/charts';
 import type { SumiTableColumn } from 'sumi-ui/charts';
-import { SumiCard, SumiEmptyState, SumiPage } from 'sumi-ui/layout';
+import { SumiButtonDirective } from 'sumi-ui/forms';
+import { SumiCard, SumiEmptyState, SumiErrorState, SumiPage } from 'sumi-ui/layout';
 
 import { ApiService } from '../../core/api.service';
 import { Stats } from '../../core/models';
@@ -30,7 +31,16 @@ const RECENT_COLUMNS: SumiTableColumn[] = [
 @Component({
   selector: 'app-stats',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [DecimalPipe, SumiPage, SumiCard, SumiEmptyState, MissRateHeatmapComponent, ...SUMI_CHARTS],
+  imports: [
+    DecimalPipe,
+    SumiPage,
+    SumiCard,
+    SumiEmptyState,
+    SumiErrorState,
+    SumiButtonDirective,
+    MissRateHeatmapComponent,
+    ...SUMI_CHARTS,
+  ],
   templateUrl: './stats.component.html',
   styleUrl: './stats.component.css',
 })
@@ -38,6 +48,7 @@ export class StatsComponent {
   private api = inject(ApiService);
 
   readonly stats = signal<Stats | null>(null);
+  readonly failed = signal(false);
 
   readonly accuracyLabel = computed(() => {
     const accuracy = this.stats()?.accuracy ?? null;
@@ -96,7 +107,19 @@ export class StatsComponent {
   );
 
   constructor() {
-    this.api.stats().subscribe((s) => this.stats.set(s));
+    this.load();
+  }
+
+  retry(): void {
+    this.failed.set(false);
+    this.load();
+  }
+
+  private load(): void {
+    this.api.stats().subscribe({
+      next: (s) => this.stats.set(s),
+      error: () => this.failed.set(true),
+    });
   }
 
   typeTitle(type: string): string {

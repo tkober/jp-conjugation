@@ -176,4 +176,21 @@ describe('StatsComponent', () => {
     expect(table?.querySelector("td[data-tone='wrong']")).toBeTruthy();
     expect(table?.querySelector("td[data-tone='correct']")).toBeTruthy();
   });
+
+  it('shows the error state when the backend is unreachable, and retrying tries again', async () => {
+    const { fixture, httpMock } = createComponent();
+    fixture.detectChanges();
+    httpMock.expectOne('/api/stats').flush('nope', { status: 500, statusText: 'Error' });
+    await fixture.whenStable();
+
+    const el: HTMLElement = fixture.nativeElement;
+    expect(el.querySelector('sumi-error-state')).toBeTruthy();
+
+    (el.querySelector('[sumierroraction]') as HTMLButtonElement).click();
+    httpMock.expectOne('/api/stats').flush(stats());
+    await fixture.whenStable();
+
+    expect(fixture.nativeElement.querySelector('sumi-error-state')).toBeFalsy();
+    expect(fixture.nativeElement.querySelector('sumi-stat-grid')).toBeTruthy();
+  });
 });

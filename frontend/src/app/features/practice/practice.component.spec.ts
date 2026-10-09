@@ -3,6 +3,7 @@ import { HttpTestingController, provideHttpClientTesting } from '@angular/common
 import { TestBed } from '@angular/core/testing';
 import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 
+import { ApiService } from '../../core/api.service';
 import { AnswerResult, Exercise } from '../../core/models';
 import { PracticeComponent } from './practice.component';
 
@@ -247,7 +248,9 @@ describe('PracticeComponent', () => {
     fixture.detectChanges();
 
     const el: HTMLElement = fixture.nativeElement;
-    expect(el.querySelector('[sumiSummaryArt] sumi-companion')).toBeTruthy();
+    // The companion now lives in the gate's own ink scene (`companion`
+    // input), not in the summary's art slot — only the hanko goes there.
+    expect(el.querySelector('sumi-session-gate sumi-companion')).toBeTruthy();
     expect(el.querySelector('sumi-hanko')?.textContent).toContain('合');
   });
 
@@ -269,6 +272,80 @@ describe('PracticeComponent', () => {
 
     const el: HTMLElement = fixture.nativeElement;
     expect(el.querySelector('sumi-hanko')?.textContent).toContain('練');
+  });
+
+  it('ending a session in which the level rose shows the level-up hanko', () => {
+    const fixture = render();
+    // `levelUp` compares against the level the shared profile had when the
+    // session started — the shell header's `app.component.ts` loads it
+    // before any page is reachable, so this mirrors that, the same way the
+    // existing Elo-delta tracking already assumes `profile()` is populated
+    // by the time `start()` runs.
+    TestBed.inject(ApiService).profile.set({
+      elo: 1000,
+      level: 3,
+      level_progress: 0.4,
+      current_streak: 1,
+      best_streak: 2,
+    });
+    startSession(fixture, makeExercise({ level: 3 }));
+
+    const input = fieldInput(fixture);
+    input.value = 'tabete';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    pressEnter(input);
+    httpMock.expectOne('/api/answer').flush(makeResult({ correct: true, user_level: 4 }));
+    fixture.detectChanges();
+
+    fixture.componentInstance.end();
+    fixture.detectChanges();
+
+    const el: HTMLElement = fixture.nativeElement;
+    const levelHanko = el.querySelector('.sumi-session-summary__level-hanko');
+    expect(levelHanko).toBeTruthy();
+    expect(levelHanko?.querySelector('svg')?.getAttribute('aria-label')).toBe('Level up: Level 4');
+  });
+
+  it('ending a session without a level change shows no level-up hanko', () => {
+    const fixture = render();
+    TestBed.inject(ApiService).profile.set({
+      elo: 1000,
+      level: 3,
+      level_progress: 0.4,
+      current_streak: 1,
+      best_streak: 2,
+    });
+    startSession(fixture, makeExercise({ level: 3 }));
+
+    const input = fieldInput(fixture);
+    input.value = 'tabete';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    pressEnter(input);
+    httpMock.expectOne('/api/answer').flush(makeResult({ correct: true, user_level: 3 }));
+    fixture.detectChanges();
+
+    fixture.componentInstance.end();
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('.sumi-session-summary__level-hanko')).toBeFalsy();
+  });
+
+  it('a failed load shows the error state instead of the gate, and retrying tries again', () => {
+    const fixture = render();
+    (fixture.nativeElement.querySelector('button') as HTMLButtonElement).click();
+    httpMock.expectOne('/api/exercise/next').flush('nope', { status: 500, statusText: 'Error' });
+    fixture.detectChanges();
+
+    const el: HTMLElement = fixture.nativeElement;
+    expect(el.querySelector('sumi-error-state')).toBeTruthy();
+    expect(el.querySelector('sumi-session-gate')).toBeFalsy();
+
+    (el.querySelector('[sumierroraction]') as HTMLButtonElement).click();
+    httpMock.expectOne('/api/exercise/next').flush(makeExercise());
+    fixture.detectChanges();
+
+    expect(fixture.nativeElement.querySelector('sumi-error-state')).toBeFalsy();
+    expect(fixture.nativeElement.querySelector('sumi-answer-field')).toBeTruthy();
   });
 
   it('ending an untouched session goes back to idle, not to a summary', () => {

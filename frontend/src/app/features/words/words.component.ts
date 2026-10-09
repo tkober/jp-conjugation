@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@a
 import { DecimalPipe } from '@angular/common';
 
 import { SumiDataTable, SumiTableCellTemplate, type SumiTableColumn, type SumiTableRow } from 'sumi-ui/charts';
-import { SumiCard, SumiEmptyState, SumiPage } from 'sumi-ui/layout';
+import { SumiCard, SumiEmptyState, SumiErrorState, SumiPage } from 'sumi-ui/layout';
 import { SumiButtonDirective, SumiInputDirective, SumiSelectDirective } from 'sumi-ui/forms';
 
 import { ApiService } from '../../core/api.service';
@@ -45,6 +45,7 @@ const SORTS = [
     SumiPage,
     SumiCard,
     SumiEmptyState,
+    SumiErrorState,
     SumiDataTable,
     SumiTableCellTemplate,
     SumiButtonDirective,
@@ -63,6 +64,7 @@ export class WordsComponent {
   readonly pageSize = PAGE_SIZE;
 
   readonly result = signal<WordsResponse | null>(null);
+  readonly failed = signal(false);
 
   /** The word list as a sumi-data-table: kanji over reading and the
    *  meaning (truncated, full text as tooltip) are cell templates, the rest
@@ -135,6 +137,11 @@ export class WordsComponent {
     this.load();
   }
 
+  retry(): void {
+    this.failed.set(false);
+    this.load();
+  }
+
   private load(): void {
     this.api
       .words({
@@ -145,6 +152,12 @@ export class WordsComponent {
         limit: PAGE_SIZE,
         offset: this.offset(),
       })
-      .subscribe((data) => this.result.set(data));
+      .subscribe({
+        next: (data) => {
+          this.failed.set(false);
+          this.result.set(data);
+        },
+        error: () => this.failed.set(true),
+      });
   }
 }

@@ -3,8 +3,8 @@ import { toSignal } from '@angular/core/rxjs-interop';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
 
-import { SumiCard, SumiPage } from 'sumi-ui/layout';
-import { SumiSegmentedControl, type SumiSegmentedOption } from 'sumi-ui/forms';
+import { SumiCard, SumiErrorState, SumiPage } from 'sumi-ui/layout';
+import { SumiButtonDirective, SumiSegmentedControl, type SumiSegmentedOption } from 'sumi-ui/forms';
 
 import { ApiService } from '../../core/api.service';
 import { RuleForm, RuleGroup, RulesResponse } from '../../core/models';
@@ -17,7 +17,15 @@ const DEFAULT_FORM = 'Verbs__TeFormAffirmative';
 @Component({
   selector: 'app-rules',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [SumiPage, SumiCard, SumiSegmentedControl, RouterLink, RuleTableComponent],
+  imports: [
+    SumiPage,
+    SumiCard,
+    SumiErrorState,
+    SumiButtonDirective,
+    SumiSegmentedControl,
+    RouterLink,
+    RuleTableComponent,
+  ],
   templateUrl: './rules.component.html',
   styleUrl: './rules.component.css',
 })
@@ -77,6 +85,15 @@ export class RulesComponent {
   });
 
   constructor() {
+    this.load();
+  }
+
+  retry(): void {
+    this.failed.set(false);
+    this.load();
+  }
+
+  private load(): void {
     this.api.rules().subscribe({
       next: (r) => this.data.set(r),
       error: () => this.failed.set(true),

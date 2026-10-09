@@ -140,17 +140,36 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   ihr `(end)` ruft `end()` auf. Die alte „End session"-Ghost-Button-Zeile ist
   damit weg.
 
-  **Tuschemotive (#41).** Der Gate trägt `companion="tanuki"` (über dem
-  Titel) — bewusst ohne `sumi-ink-backdrop`-Landschaft zusätzlich, das
-  Companion-Maskottchen allein liest sich klar und überladen screenshot-
-  geprüft nicht (siehe docs/concept.md#tuschemotive, „nie auf dem
-  Übungsscreen selbst, nie hinter Text"). Auf der aktiven Runde selbst steht
-  kein Motiv. Der Ende-Screen füllt `sumi-session-summary`s
-  `[sumiSummaryArt]`-Slot mit `sumi-companion kind="tanuki"` neben
-  `sumi-hanko`: `hankoCharacters()`/`hankoLabel()` in
-  `practice.component.ts` liefern 合格/„Passed" ab 80 % Session-Trefferquote,
-  sonst 練習/„Practice" — die Session-eigene Quote, nicht die All-Time-Quote
-  aus `/api/stats`.
+  **Tuschemotive (#41, Orte aus sumi-ui#42 übernommen #43).** Start-Gate
+  (T1) und Ende-Screen (T2) sind beide `sumi-session-gate [companion]="
+  'tanuki'"` — der Begleiter sitzt seit sumi-ui#42 in der Gate-eigenen
+  `sumi-ink-backdrop`-Szene (Musterband oben, Landschaft unten, Begleiter
+  klein auf dem Boden, seitlich vom Inhalt), nicht mehr als eigene
+  App-Platzierung. Die App-eigene `.session-art`-Begleiter-Platzierung aus
+  #41 ist damit entfallen: `sumi-session-summary`s `[sumiSummaryArt]`-Slot
+  trägt seitdem nur noch `sumi-hanko`, kein `sumi-companion` mehr daneben.
+  Auf der aktiven Runde selbst steht weiterhin kein Motiv (T7, nie neben
+  Lernstoff) — `practice.component.html`s äußere `sumi-page` setzt dafür
+  `[inkEnd]="false"`, damit die T5-Landschaft am Seitenende nie während
+  einer Runde oder im Fokusmodus auftaucht (die Gate-Screens bringen ihre
+  eigene Szene schon mit, eine zweite am Seitenende wäre doppelt).
+  `hankoCharacters()`/`hankoLabel()` in `practice.component.ts` liefern
+  合格/„Passed" ab 80 % Session-Trefferquote, sonst 練習/„Practice" — die
+  Session-eigene Quote, nicht die All-Time-Quote aus `/api/stats`.
+
+  **T8 Level-Aufstieg.** `sumi-session-summary`s `[levelUp]`-Input bekommt
+  `practice.component.ts`s `levelUp()`-Signal: `startLevel` merkt sich beim
+  `start()` den aktuellen `api.profile().level`, `levelUp()` vergleicht ihn
+  gegen den aktuellen `api.profile().level` (vom Shell-Header-Badge
+  bekannt, von jeder `/api/answer`-Antwort aktualisiert, siehe
+  `ApiService.answer()`) und liefert `"Level " + level`, sobald der
+  gestiegen ist — `undefined` sonst, damit `sumi-session-summary` den
+  zweiten 昇級-Stempel nur bei einem tatsächlichen Levelaufstieg zeigt.
+
+  **T6 Fehlerzustand.** Schlägt das erste `/api/exercise/next` einer
+  Session fehl, zeigt der Idle-Zustand `sumi-error-state companion="tanuki"`
+  statt des Gates, mit einem „Try again"-Button, der `start()` erneut
+  aufruft (`loadFailed`-Signal in `practice.component.ts`).
 
   Eingabe ist `sumi-answer-field` (`mode="kana"`, `[iDontKnow]="true"`, kein
   `iKnow` — das ist nur kanji-trainer). Die Bibliothek übernimmt Romaji→Kana-
@@ -201,11 +220,15 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   nie einen Wert.
 - `features/stats/stats.component.ts` (#20, Charts auf Sumi UI umgestellt
   #33, Karten auf `sumi-card`/`sumi-page` #34, Leerzustand `sumi-empty-state`
-  #41) — lädt die Stats, Empty-/Loading-Zustand, Layout, eingerahmt in
-  `<sumi-page width="narrow">`; bei 0 Attempts steht `sumi-empty-state
-  title="Nothing practised yet" companion="tanuki"` statt der früheren leeren
-  `sumi-card` — derselbe Begleiter wie im Practice-Gate, fürs wiedererkennbare
-  Maskottchen über alle Leerzustände hinweg (s. u., Words). Behält
+  #41, Fehlerzustand `sumi-error-state` #43) — lädt die Stats, Empty-/
+  Loading-/Fehlerzustand, Layout, eingerahmt in `<sumi-page width="narrow">`;
+  bei 0 Attempts steht `sumi-empty-state title="Nothing practised yet"
+  companion="tanuki"` statt der früheren leeren `sumi-card` — derselbe
+  Begleiter wie im Practice-Gate, fürs wiedererkennbare Maskottchen über
+  alle Leerzustände hinweg (s. u., Words). Ein fehlgeschlagenes `/api/stats`
+  (`failed`-Signal) zeigt seit #43 `sumi-error-state companion="tanuki"`
+  mit einem „Try again"-Button statt einer stillen Ladezeile — dieselbe
+  Szene wie Practice' T6-Fehlerzustand, Rules und Words (s. u.). Behält
   die kleinen Karten (Weakest rules, Misses-Split, Recent) selbst, jetzt als
   `sumi-card` mit Titel/Hint in `[sumiCardHeader]` statt `section.card`. Die
   vier KPI-Kacheln sind `sumi-stat-tile` in einem `sumi-stat-grid` direkt im
@@ -274,9 +297,13 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   deckt Summation/„nie geübt" in `toCell()` und die Godan-Sortierung ab, ohne
   TestBed.
 - `features/rules/rules.component.ts` (#11, Tabelle ausgelagert #21, Seite
-  auf Sumi UI #34) — Tab „Rules", eingerahmt in `<sumi-page title="Rules"
-  width="narrow">`, wie jede andere Seite — die Regeltabellen passen bei
-  640px, gegengeprüft am Screenshot. Picker und Erklärkarte sind `sumi-card`.
+  auf Sumi UI #34, Fehlerzustand `sumi-error-state` #43) — Tab „Rules",
+  eingerahmt in `<sumi-page title="Rules" width="narrow">`, wie jede andere
+  Seite — die Regeltabellen passen bei 640px, gegengeprüft am Screenshot.
+  Schlägt `/api/rules` fehl (`failed`-Signal), zeigt die Seite seit #43
+  `sumi-error-state companion="tanuki"` mit „Try again" statt der alten,
+  stillen „Could not load the rules."-Zeile. Picker und Erklärkarte sind
+  `sumi-card`.
   Die Gruppen-Chips (Kategorie → Gruppe, z. B. „Te-form", „Potential", acht
   Stück allein bei Verbs) sind **Navigation, kein Einzelwert** — ein erster
   Versuch mit `sumi-segmented-control` dafür verbarg die Hälfte der Gruppen
@@ -323,7 +350,9 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   title="No matches" companion="tanuki"` statt der alten `<tr><td
   colspan="5">`-Zeile — derselbe Begleiter wie Stats' Leerzustand und das
   Practice-Gate, bewusst konsistent statt pro Leerzustand zwischen Begleiter
-  und Landschaft zu wechseln.
+  und Landschaft zu wechseln. Ein fehlgeschlagenes `/api/words` (`failed`-
+  Signal) zeigt seit #43 `sumi-error-state companion="tanuki"` mit einem
+  „Try again"-Button, statt der Tabelle oder des Leerzustands.
 - `features/settings/settings.component.ts` (#21, vorher ein Monolith, Seite
   und Karten auf Sumi UI #34) — lädt `Settings` einmal und `apply()`t jede
   Antwort; das Template reiht fünf Karten-Components in `<sumi-page
@@ -417,10 +446,14 @@ in `angular.json`) und werden in `index.html` separat, nicht-blockierend
 verlinkt — `frontend/nginx.conf` hat dafür ein `location = /sumi-fonts.css`
 mit `no-cache`, weil der Dateiname fix bleibt und sonst ein Jahr lang
 gecacht würde. `app.config.ts` ruft `provideSumi({ accent: 'beni', motif:
-'bamboo', companion: 'tanuki' })` — `motif`/`pattern` bleiben **Platzhalter**
-(kein `pattern` fest verdrahtet), das endgültige Design dafür kommt erst mit
-tkober/sumi-ui#25. `accent: 'beni'` und `companion: 'tanuki'` sind dagegen
-mit #41 die endgültigen, vom Nutzer getroffenen Entscheidungen — `beni` ist
+'bamboo', pattern: 'yagasuri', companion: 'tanuki' })` — `motif: 'bamboo'`
+und `pattern: 'yagasuri'` bleiben **Platzhalter** aus dem Motiv-Vorschlag,
+das endgültige Design dafür kommt erst mit tkober/sumi-ui#25 (`pattern` ist
+seit sumi-ui#42 ausdrücklich gesetzt, weil die Bibliothek ohne eigene Wahl
+jetzt `none` statt still `seigaiha` liefert — #43 setzt `yagasuri`, statt den
+unbeabsichtigten Seigaiha einfach weiter mitzunehmen). `accent: 'beni'` und
+`companion: 'tanuki'` sind dagegen mit #41 die endgültigen, vom Nutzer
+getroffenen Entscheidungen — `beni` ist
 das ursprüngliche Rot der App (siehe docs/concept.md's „Ausnahme: beni":
 Fokusring und Eingabefeld-Rahmen laufen trotzdem neutral blaugrau, nicht
 rot, damit ein unbeantwortetes Feld nicht schon wie „falsch" aussieht). Das
