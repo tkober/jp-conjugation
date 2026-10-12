@@ -26,7 +26,9 @@
   gap: 2px;
   align-content: start;
   min-height: 60px;
-  padding: 8px;
+  /* 6px at the sides, not 8px: every pixel of inline size is font size
+     for the longest result (see .jp below). */
+  padding: 8px 6px;
   border: 1px solid var(--sumi-line);
   border-radius: var(--sumi-radius-sm);
   background: var(--sumi-surface);
@@ -40,12 +42,12 @@
   border-color: var(--sumi-muted);
 }
 
-/* Selected: 2px border instead of 1px, 7px padding instead of 8px — with the
-   global border-box sizing the total (border + padding) stays 9px either
-   way, so nothing shifts. */
+/* Selected: 2px border instead of 1px and 1px less padding — with the
+   global border-box sizing border + padding stays the same, so nothing
+   shifts. */
 .cell[aria-checked='true'] {
   border: 2px solid var(--sumi-accent);
-  padding: 7px;
+  padding: 7px 5px;
   background: var(--sumi-accent-soft);
 }
 
@@ -78,10 +80,14 @@
      wide, so dividing the cell's own inline size (cqi, from the cell's own
      container-type above) by the group's longest result (--chars, set on
      the grid by the component) gives every cell of a group the same
-     font-size that still fits its own longest content. */
+     font-size that still fits its own longest content. The floor stays
+     below what the narrowest case needs: the app shell and sumi-page each
+     add a 16px gutter, so at 360px the grid is only 262px wide and
+     美味しくなかったです (10 chars) gets 11.4px; a 12px floor overflowed the
+     cell there by 10px. */
   white-space: nowrap;
   line-height: 1.35;
-  font-size: clamp(0.75rem, calc(100cqi / var(--chars, 6)), 1rem);
+  font-size: clamp(0.625rem, calc(100cqi / var(--chars, 6)), 1rem);
 }
 
 .jp em {

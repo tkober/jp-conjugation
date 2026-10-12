@@ -459,18 +459,28 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   bei einer Komplettänderung wie 来る → 来ない auf `dict.length - 1`
   gekappt, damit mindestens ein Zeichen betont bleibt). **Kein
   Zeilenumbruch** ist hart gefordert: jede Zelle ist selbst ein Container
-  (`container-type: inline-size`), die Schriftgröße ist `clamp(0.75rem,
+  (`container-type: inline-size`), die Schriftgröße ist `clamp(0.625rem,
   100cqi / var(--chars), 1rem)`, `--chars` (auf dem Raster gesetzt) die
   Zeichenzahl — in Codepoints, nicht UTF-16-Einheiten — des längsten
   Ergebnisses der Gruppe, sodass alle Zellen einer Gruppe dieselbe Größe
-  teilen; das Label bekommt `nowrap` + Ellipse als Absicherung. Vier Formen
+  teilen; das Label bekommt `nowrap` + Ellipse als Absicherung. Die
+  Untergrenze liegt bewusst unter dem engsten Fall: App-Shell und
+  `sumi-page` geben je 16px Rand, das Raster ist bei 360px also nur 262px
+  breit, und 美味しくなかったです (Adjectives · Past, 10 Zeichen) bekommt
+  11,4px (Desktop 12,5px) — eine erste Fassung mit 12px Untergrenze und 8px
+  Zellrand lief dort 10px über den Zellrand. Gegenprobe deshalb nicht über
+  `scrollWidth` des Ergebnisses (ein Grid-Item wächst mit seinem `nowrap`-
+  Inhalt mit und meldet nie Überlauf), sondern Textbreite per `Range` gegen
+  die Innenbreite der Zelle. Vier Formen
   zeigen ein 2×2-Raster mit Spaltenköpfen „Positive"/„Negative" und kurzem
   Zellen-Label („Casual"/„Polite") auf dem Handy, vier Zellen in einer
   Zeile mit vollem `settings_title` auf dem Desktop; zwei Formen (Formen
   ohne Politeness, z. B. Te-form) stehen bei jeder Breite in einer Zeile,
   Label immer `settings_title`. Umgeschaltet wird per **Container Query
   auf die Breite der Komponente selbst** (`host` setzt
-  `container-type: inline-size`, `@container (min-width: 480px)`), nicht
+  `container-type: inline-size` mit `container-name: form-grid`,
+  `@container form-grid (min-width: 480px)` — benannt, weil sonst die
+  Zelle als nächster Container gälte), nicht
   per Viewport — `sumi-page width="narrow"` ist auf einem echten
   Desktop-Bildschirm breit genug, dass eine Viewport-Media-Query die
   falsche Grenze träfe. Radio-Semantik und Tastatur folgen
