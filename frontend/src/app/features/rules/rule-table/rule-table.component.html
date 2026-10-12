@@ -1,6 +1,9 @@
 <sumi-card class="table">
-  <div sumiCardHeader>
+  <div sumiCardHeader class="head">
     <h2 class="form-title">{{ formTitle() }}</h2>
+    @if (formKey(); as key) {
+      <a sumiButton variant="secondary" size="sm" [routerLink]="['/practice/cram', key]">Cram this form</a>
+    }
   </div>
 
   @for (section of sections(); track section.wordType) {

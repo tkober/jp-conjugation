@@ -8,6 +8,7 @@
     @if (showTimer()) {
       <sumi-countdown-ring [elapsedMs]="elapsed()" [targetMs]="exercise().target_time_ms ?? 0" />
     }
+    <ng-content select="[roundTag]" />
   </div>
 
   <p class="word">

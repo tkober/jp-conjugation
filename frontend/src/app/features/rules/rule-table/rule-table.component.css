@@ -1,5 +1,13 @@
+.head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+}
+
 .form-title {
-  margin: 0 0 4px;
+  margin: 0;
   font-size: 1.0625rem;
 }
 

@@ -154,6 +154,32 @@ describe('StatsComponent', () => {
     expect(fixture.nativeElement.querySelector('app-miss-rate-heatmap')).toBeTruthy();
   });
 
+  it('links the weakest rule name to its cram page', async () => {
+    const { fixture, httpMock } = createComponent();
+    fixture.detectChanges();
+    httpMock.expectOne('/api/stats').flush(
+      stats({
+        weakest_items: [
+          item({
+            form_key: 'Verbs__TeFormAffirmative',
+            title: 'Te-form, positive',
+            attempts: 5,
+            correct: 1,
+          }),
+        ],
+      }),
+    );
+    await fixture.whenStable();
+
+    const el: HTMLElement = fixture.nativeElement;
+    const cards = Array.from(el.querySelectorAll('sumi-card')) as HTMLElement[];
+    const weakestCard = cards.find((card) => card.querySelector('h2')?.textContent === 'Weakest rules');
+    const link: HTMLAnchorElement | null = weakestCard?.querySelector('a.cram-link') ?? null;
+    expect(link).toBeTruthy();
+    expect(link?.textContent?.trim()).toBe('Te-form, positive');
+    expect(link?.getAttribute('href')).toBe('/practice/cram/Verbs__TeFormAffirmative');
+  });
+
   it('renders "Recent" as a sumi-data-table with given→expected and tone on misses', async () => {
     const { fixture, httpMock } = createComponent();
     fixture.detectChanges();

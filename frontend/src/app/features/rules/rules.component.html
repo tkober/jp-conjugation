@@ -35,7 +35,7 @@
         />
       </sumi-card>
 
-      <app-rule-table [formTitle]="sel.form.title" [sections]="sections()" />
+      <app-rule-table [formTitle]="sel.form.title" [formKey]="sel.form.form_key" [sections]="sections()" />
     }
   } @else if (failed()) {
     <!-- No pattern: the page title above already carries the band (T4). -->

@@ -5,6 +5,9 @@ import { Observable, tap } from 'rxjs';
 import {
   AnswerRequest,
   AnswerResult,
+  CramExercise,
+  CramForm,
+  CramResult,
   Exercise,
   Profile,
   RulesResponse,
@@ -67,6 +70,24 @@ export class ApiService {
         }),
       ),
     );
+  }
+
+  /** Cram (#48): a single form drilled on words of every type, never scored
+   *  — none of the three cram calls touch `profile`, unlike `nextExercise`/
+   *  `answer`/`stats` above, which all refresh it from their response. */
+  cramForm(formKey: string): Observable<CramForm> {
+    return this.http.get<CramForm>(`/api/cram/forms/${formKey}`);
+  }
+
+  cramNext(formKey: string, recentWordIds: number[]): Observable<CramExercise> {
+    return this.http.post<CramExercise>('/api/cram/next', {
+      form_key: formKey,
+      recent_word_ids: recentWordIds,
+    });
+  }
+
+  cramAnswer(request: AnswerRequest): Observable<CramResult> {
+    return this.http.post<CramResult>('/api/cram/answer', request);
   }
 
   rules(): Observable<RulesResponse> {

@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
+import { RouterLink } from '@angular/router';
 import { SumiCard } from 'sumi-ui/layout';
+import { SumiButtonDirective } from 'sumi-ui/forms';
 
 import { RuleRow } from '../../../core/models';
 import { wordTypeLabel, wordTypeTitle } from '../../../shared/word-types';
@@ -20,12 +22,14 @@ export interface Section {
   changeDetection: ChangeDetectionStrategy.OnPush,
   // Block: owns the whole `.card.table` section in normal flow.
   host: { style: 'display: block' },
-  imports: [SumiCard],
+  imports: [SumiCard, RouterLink, SumiButtonDirective],
   templateUrl: './rule-table.component.html',
   styleUrl: './rule-table.component.css',
 })
 export class RuleTableComponent {
   readonly formTitle = input.required<string>();
+  /** Drives the "Cram this form" button (#48) — omitted hides it. */
+  readonly formKey = input<string>();
   readonly sections = input.required<Section[]>();
 
   typeTitle(type: string): string {

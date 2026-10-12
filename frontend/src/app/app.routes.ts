@@ -21,6 +21,12 @@ export const routes: Routes = [
     title: 'Rules · Conjugation Trainer',
   },
   {
+    path: 'practice/cram/:form',
+    loadComponent: () =>
+      import('./features/cram/cram.component').then((m) => m.CramComponent),
+    title: 'Cram · Conjugation Trainer',
+  },
+  {
     path: 'stats',
     loadComponent: () =>
       import('./features/stats/stats.component').then((m) => m.StatsComponent),
