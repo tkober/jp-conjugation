@@ -1,0 +1,97 @@
+<sumi-card class="prompt">
+  <div class="task">
+    <app-form-instruction
+      class="form"
+      [parts]="exercise().instruction"
+      [mode]="exercise().instruction_style"
+    />
+    @if (showTimer()) {
+      <sumi-countdown-ring [elapsedMs]="elapsed()" [targetMs]="exercise().target_time_ms ?? 0" />
+    }
+  </div>
+
+  <p class="word">
+    @if (prompt(); as r) {
+      @if (r.base) {
+        <ruby>{{ r.base }}<rt>{{ r.reading }}</rt></ruby>{{ r.tail }}
+      } @else {
+        {{ r.tail }}
+      }
+    }
+  </p>
+  <p class="english">{{ exercise().english }}</p>
+</sumi-card>
+
+<div #answerRow>
+  <sumi-answer-field
+    #field
+    mode="kana"
+    [verdict]="verdict()"
+    [iDontKnow]="true"
+    [(value)]="value"
+    label="Answer"
+    placeholder="答え"
+    (submitted)="onFieldSubmitted($event)"
+    (next)="onNext()"
+    (gaveUp)="onFieldGaveUp()"
+  />
+</div>
+
+<div class="actions">
+  <button type="button" sumiButton variant="primary" sumiHoldFocus (click)="onCheckClick()">
+    {{ checkButtonLabel() }}
+  </button>
+</div>
+
+@if (verdict(); as v) {
+  <sumi-verdict
+    class="verdict"
+    [kind]="v.kind"
+    [message]="v.kind === 'wrong' ? undefined : v.message"
+    [expected]="v.kind === 'wrong' ? result()?.expected_kanji : undefined"
+    [(detailsOpen)]="detailsOpen"
+  >
+    <div sumiVerdictDetails>
+      @if (gaveUp()) {
+        <p class="gave-up">Gave up — the answer was revealed.</p>
+      }
+      <p class="grammar">{{ grammarLine() }}</p>
+
+
+      @if (partial()) {
+        <p class="partial">{{ partial() }}</p>
+      }
+
+      <div class="elo-row">
+        @if (result()?.elo; as elo) {
+          <p class="elo" [class.up]="elo.delta > 0" [class.down]="elo.delta < 0">
+            {{ elo.delta > 0 ? '+' : '' }}{{ elo.delta | number: '1.0-1' }} Elo
+          </p>
+        }
+        <a
+          class="jisho"
+          [href]="jishoUrl()"
+          target="_blank"
+          rel="noopener"
+          (mousedown)="keepFocus($event)"
+          >Jisho ↗</a
+        >
+      </div>
+
+      @if (result()?.transformations?.length) {
+        <div class="rule">
+          @for (t of result()!.transformations; track $index; let last = $last) {
+            <span class="step">
+              <span class="unaltered">{{ t.unaltered }}</span
+              ><span class="altered">{{ t.altered_part }}</span>
+              <span class="operation">{{ t.operation }}</span>
+              @if (last) {
+                <span class="alteration">{{ t.alteration }}</span>
+              }
+            </span>
+          }
+        </div>
+      }
+    </div>
+  </sumi-verdict>
+}

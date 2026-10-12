@@ -86,7 +86,7 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
 Ordnerkonvention (#16): `core/` sind Singletons und Typen, die die ganze App
 teilt (`api.service.ts`, `models.ts`), `shared/` sind wiederverwendete Bausteine
 ohne Feature-Zugehörigkeit (`furigana.ts`, `word-types.ts`,
-`form-instruction/`), `features/` hat einen Ordner pro Route
+`form-instruction/`, `practice-round/`, seit #47), `features/` hat einen Ordner pro Route
 (`practice/`, `rules/`, `stats/`, `words/`, `settings/`). Seit #31 gibt es kein
 eigenes `layout/` mehr — die App-Chrome kommt aus Sumi UI (s. u.), `app/`
 bleibt also bei `core/`, `shared/` und `features/`. Jede Komponente hat
@@ -121,10 +121,29 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   Tab-Leiste unter 720px und den Theme-Toggle (`SumiTheme`, `data-theme` auf
   `<html>`) selbst.
 - `features/practice/practice.component.ts` (#19, auf Sumi UI umgestellt #32,
-  Seite auf `sumi-page` #34) — Übungsansicht mit explizitem Session-Lebenszyklus
+  Seite auf `sumi-page` #34, Runde nach `shared/practice-round/` ausgelagert
+  #47) — Übungsansicht mit explizitem Session-Lebenszyklus
   (`idle` → `active` → `answered` → `ended`), eingerahmt in `<sumi-page
   width="narrow">` (kein Titel — die Start-/Ende-Screens haben schon ihre
-  eigenen Überschriften). Die Prompt-Karte ist seit #34 `sumi-card` statt
+  eigenen Überschriften). `PracticeComponent` selbst hält seit #47 nur noch
+  die Session-Buchhaltung (Lebenszyklus, `start`/`end`/`next`, die
+  API-Aufrufe, Zähler, `loadFailed`, Gate + Summary + Hanko +
+  `levelUp`/`eloDelta`) sowie `sumi-session-bar` via
+  `*sumiShellFocusActions`; alles, was während einer Runde zu sehen ist
+  (Prompt-Karte, Eingabe, Verdict samt Details-Slot, Timer, Scroll-Verhalten,
+  die Hotkeys `?`/`Alt H`/Enter) sitzt in
+  `shared/practice-round/practice-round.component.ts` (`app-practice-round`,
+  reines Template-/Styles-Trio wie jede andere Komponente) — die Cram-Seite
+  (#48, Epic #45) wird dieselbe Runde ohne Timer und ohne Elo wiederverwenden.
+  Dafür gibt es dort den Input `showTimer` (`false` blendet Ring und „Fast
+  answer." aus) und die strukturellen Typen `RoundExercise`/`RoundResult`
+  (mit optionalem `target_time_ms`/`fast`/`elo`), die `Exercise`/
+  `AnswerResult` erfüllen, ohne dass die Runde den App-eigenen Typ kennen
+  muss. `practice.component.html`s aktive Verzweigung bleibt `<div
+  class="round" sumiFocusMode>`, projiziert jetzt aber nur noch
+  `<app-practice-round [exercise] [result] [gaveUp] (submitted)
+  (gaveUpRequested) (next)>` statt der früheren Runden-Markup direkt. Die
+  Prompt-Karte ist seit #34 `sumi-card` statt
   `section.card` (Inhalt unverändert: Instruktions-Chips, Countdown-Ring, Wort,
   englische Bedeutung); im Keyboard-up-Media-Query (`@media (max-height:
   500px)`) wird ihr Innenpadding über `::ng-deep .sumi-card__body` verkleinert,
@@ -191,8 +210,9 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   Markup (das bleibt bestehen — `sumi-prompt-card` kann kein Furigana-`<ruby>`
   rendern, siehe `shared/furigana.ts`). Grammatik-Zeile, Partial-Hinweis
   (Stamm/Endung getrennt), Elo-Delta, Jisho-Link und Herleitungskette bleiben
-  app-spezifisch, jetzt direkt in `PracticeComponent` statt in einer eigenen
-  `VerdictComponent`, projiziert in `sumi-verdict`s `[sumiVerdictDetails]`-
+  app-spezifisch, jetzt direkt in `PracticeRoundComponent` (seit #47, vorher
+  `PracticeComponent`) statt in einer eigenen `VerdictComponent`, projiziert
+  in `sumi-verdict`s `[sumiVerdictDetails]`-
   Slot. `F` schaltet diesen Slot um — registriert von `sumi-verdict` selbst,
   sobald der Slot Inhalt hat (hier immer). Er startet **offen**
   (`detailsOpen = signal(true)`): die Herleitungskette ist das Haupt-
