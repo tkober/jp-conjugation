@@ -40,6 +40,34 @@ def test_groups_only_show_their_own_word_types() -> None:
             assert {r['word_type'] for r in form['rules']} == {t.value for t in allowed}
 
 
+def test_every_form_carries_politeness_and_polarity() -> None:
+    """Plain forms (4 per group: casual/polite x affirmative/negative) set
+    politeness; derived forms (te-form, potential, …, 2 per group) leave it
+    None since it never varies within those groups."""
+    for group in CATALOG:
+        for form in group['forms']:
+            assert 'politeness' in form
+            assert 'polarity' in form
+            assert form['polarity'] in {'affirmative', 'negative'}
+            if len(group['forms']) == 4:
+                assert form['politeness'] in {'casual', 'polite'}
+            else:
+                assert form['politeness'] is None
+
+
+def test_four_form_groups_cover_all_combinations() -> None:
+    for group in CATALOG:
+        if len(group['forms']) != 4:
+            continue
+        combos = {(f['politeness'], f['polarity']) for f in group['forms']}
+        assert combos == {
+            ('casual', 'affirmative'),
+            ('casual', 'negative'),
+            ('polite', 'affirmative'),
+            ('polite', 'negative'),
+        }
+
+
 @pytest.mark.parametrize('form_key,row', ROWS, ids=lambda v: v if isinstance(v, str) else '')
 def test_the_rule_reproduces_its_example(form_key, row) -> None:
     ending, replacement = row['ending'], row['replacement']

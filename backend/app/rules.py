@@ -246,6 +246,8 @@ def rules_catalog() -> list[dict[str, Any]]:
                     'form_key': key,
                     'title': form.title,
                     'settings_title': form.settings_title,
+                    'politeness': form.politeness.value if form.politeness else None,
+                    'polarity': form.polarity.value,
                     'rules': form_rules(
                         form,
                         ADJECTIVE_TYPES if category == 'Adjectives' else VERB_TYPES,
