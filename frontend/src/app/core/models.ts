@@ -86,6 +86,13 @@ export interface AnswerRequest {
   gave_up?: boolean;
 }
 
+/** `/api/cram/next`'s optional `retry` field (#49) — mirrors the backend's
+ *  `CramRetry`: re-serve exactly this pair instead of picking one. */
+export interface CramRetryRequest {
+  practice_item_id: number;
+  word_id: number;
+}
+
 export interface CramForm {
   form_key: string;
   title: string;

@@ -18,6 +18,7 @@ import { SumiSessionBar, SumiSessionGate, SumiSessionSummary } from 'sumi-ui/pra
 import { ApiService } from '../../core/api.service';
 import { CramExercise, CramForm, CramResult } from '../../core/models';
 import { PracticeRoundComponent } from '../../shared/practice-round/practice-round.component';
+import { CramQueueEntry, scheduleCramRetry, takeCramRetry } from './cram-queue';
 
 /** Same shape as `PracticeComponent`'s session lifecycle (see CLAUDE.md) —
  *  cram just never writes anything while it runs. */
@@ -44,6 +45,21 @@ const MAX_RECENT_WORDS = 20;
  * The route param (`:form`) drives everything: a change (even while a
  * session is running) reloads the form and resets straight back to the
  * gate, via the `effect()` in the constructor.
+ *
+ * **Retries (#49).** A wrong or given-up answer goes into `queue`
+ * (`cram-queue.ts`'s pure, TestBed-free scheduling): it comes back after 3
+ * other exercises, same word and form item, at most twice, then is dropped;
+ * a correct retry is simply never rescheduled. `served` counts every
+ * exercise handed out this session, retries included — `cram-queue.ts`'s
+ * `dueAt` is in that unit. `isRetry`/`currentAttempts` track the exercise
+ * currently on screen so the badge and the queue-on-miss logic can tell a
+ * retry from a first attempt without re-deriving it from `queue`, which no
+ * longer holds the entry while it's being served. `answered`/`correct` —
+ * and therefore the hanko, which stays on first-attempt accuracy — count
+ * first attempts only; `retried`/`retriedCorrect` count retries separately
+ * and surface as a `.gate-meta` line under `sumi-session-summary`, inside
+ * the gate rather than as a summary tile, since this sumi-ui version has no
+ * tile slot to project one into.
  */
 @Component({
   selector: 'app-cram',
@@ -87,14 +103,38 @@ export class CramComponent {
    *  submission — drives the "gave up" note in the round's details slot. */
   readonly gaveUp = signal(false);
 
+  /** First attempts only (#49) — a retry never touches these, so the hanko
+   *  (built on `sessionAccuracy` below) keeps reading first-attempt
+   *  accuracy. */
   readonly answered = signal(0);
   readonly correct = signal(0);
+  /** Retries only — a correct or wrong retry counts here instead of in
+   *  `answered`/`correct`. Rendered as a `.gate-meta` line on the ended
+   *  screen, only when `retried() > 0`. */
+  readonly retried = signal(0);
+  readonly retriedCorrect = signal(0);
   /** Set when the first `/api/cram/next` of a session fails — shows
    *  `sumi-error-state` instead of the gate until the user retries, same as
    *  Practice's T6. */
   readonly loadFailed = signal(false);
   private sessionStartedAt = 0;
   readonly sessionDurationMs = signal(0);
+
+  /** Whether the exercise on screen right now is a retry `next()` just
+   *  dequeued from `queue` — drives the `roundTag` badge text and which
+   *  counters `submit()` updates. */
+  readonly isRetry = signal(false);
+  /** The retry queue (#49, see `cram-queue.ts`): misses waiting to be
+   *  re-served. Cleared on `start()` and `end()`. */
+  private queue: CramQueueEntry[] = [];
+  /** Exercises served this session, retries included — the unit `queue`'s
+   *  `dueAt` is measured in. */
+  private served = 0;
+  /** How many times the exercise currently on screen has been served
+   *  before now (`0` for a first attempt) — `queue` no longer holds this
+   *  exercise's entry while it's being answered, so `submit()` can't read
+   *  it back from there on a miss. */
+  private currentAttempts = 0;
 
   /** Word ids served this session, most recent last, capped at
    *  `MAX_RECENT_WORDS` — sent as `recent_word_ids` so the backend's word
@@ -127,8 +167,12 @@ export class CramComponent {
   start(): void {
     this.answered.set(0);
     this.correct.set(0);
+    this.retried.set(0);
+    this.retriedCorrect.set(0);
     this.loadFailed.set(false);
     this.recentWordIds = [];
+    this.queue = [];
+    this.served = 0;
     this.sessionStartedAt = Date.now();
     this.next();
   }
@@ -138,6 +182,7 @@ export class CramComponent {
     this.phase.set(this.answered() ? 'ended' : 'idle');
     this.exercise.set(null);
     this.result.set(null);
+    this.queue = [];
   }
 
   /** `Enter` on a settled verdict, routed here from `app-practice-round`'s
@@ -166,7 +211,11 @@ export class CramComponent {
     this.result.set(null);
     this.answered.set(0);
     this.correct.set(0);
+    this.retried.set(0);
+    this.retriedCorrect.set(0);
     this.recentWordIds = [];
+    this.queue = [];
+    this.served = 0;
 
     this.api.cramForm(formKey).subscribe({
       next: (form) => this.form.set(form),
@@ -183,12 +232,26 @@ export class CramComponent {
   private next(): void {
     this.result.set(null);
     this.gaveUp.set(false);
-    this.api.cramNext(this.formKey(), this.recentWordIds).subscribe({
+
+    const due = takeCramRetry(this.queue, this.served);
+    this.queue = due.queue;
+    this.isRetry.set(due.entry !== null);
+    this.currentAttempts = due.entry?.attempts ?? 0;
+
+    const request = due.entry
+      ? this.api.cramNext(this.formKey(), this.recentWordIds, {
+          practice_item_id: due.entry.practiceItemId,
+          word_id: due.entry.wordId,
+        })
+      : this.api.cramNext(this.formKey(), this.recentWordIds);
+
+    request.subscribe({
       next: (exercise) => {
         this.loadFailed.set(false);
         this.rememberWord(exercise.word_id);
         this.exercise.set(exercise);
         this.phase.set('active');
+        this.served++;
       },
       error: () => {
         this.loadFailed.set(true);
@@ -211,6 +274,7 @@ export class CramComponent {
     }
 
     this.gaveUp.set(gaveUp);
+    const wasRetry = this.isRetry();
 
     this.api
       .cramAnswer({
@@ -223,9 +287,27 @@ export class CramComponent {
       .subscribe((result) => {
         this.result.set(result);
         this.phase.set('answered');
+
+        if (wasRetry) {
+          this.retried.update((n) => n + 1);
+          if (result.correct) {
+            this.retriedCorrect.update((n) => n + 1);
+          } else {
+            this.queue = scheduleCramRetry(
+              this.queue, this.served, exercise.practice_item_id, exercise.word_id,
+              this.currentAttempts,
+            );
+          }
+          return;
+        }
+
         this.answered.update((n) => n + 1);
         if (result.correct) {
           this.correct.update((n) => n + 1);
+        } else {
+          this.queue = scheduleCramRetry(
+            this.queue, this.served, exercise.practice_item_id, exercise.word_id, 0,
+          );
         }
       });
   }

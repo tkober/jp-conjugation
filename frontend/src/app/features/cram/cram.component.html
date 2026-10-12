@@ -56,6 +56,9 @@
           >
             <sumi-hanko sumiSummaryArt [characters]="hankoCharacters()" [label]="hankoLabel()" />
           </sumi-session-summary>
+          @if (retried() > 0) {
+            <p class="gate-meta">Retried {{ retried() }} · {{ retriedCorrect() }} correct</p>
+          }
         </sumi-session-gate>
       }
 
@@ -75,7 +78,7 @@
               (gaveUpRequested)="onGaveUpRequested($event)"
               (next)="onNext()"
             >
-              <sumi-badge roundTag tone="neutral">Cram · not scored</sumi-badge>
+              <sumi-badge roundTag tone="neutral">{{ isRetry() ? 'Retry · not scored' : 'Cram · not scored' }}</sumi-badge>
             </app-practice-round>
           </div>
         }
