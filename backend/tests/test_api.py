@@ -266,3 +266,44 @@ def test_rules_cover_every_settings_form(client) -> None:
     ]
     assert form_keys == settings_keys
     assert all(f['rules'] for g in body['groups'] for f in g['forms'])
+
+
+def test_cram_round_trip_leaves_profile_and_stats_alone(client) -> None:
+    """The cram routes are wired into the app and, end to end, change nothing
+    the profile or the stats page would show."""
+    from app.conjugation import WordType
+    from app.practice import conjugate
+
+    profile_before = client.get('/api/profile').json()
+    attempts_before = client.get('/api/stats').json()['attempts']
+
+    form = client.get('/api/cram/forms/Verbs__TeFormAffirmative')
+    assert form.status_code == 200
+    assert form.json()['word_count'] > 0
+
+    exercise = client.post('/api/cram/next', json={
+        'form_key': 'Verbs__TeFormAffirmative', 'recent_word_ids': [],
+    }).json()
+    assert exercise['form_key'] == 'Verbs__TeFormAffirmative'
+    expected = conjugate(
+        WordType(exercise['word_type']), exercise['kanji'], exercise['hiragana'],
+        exercise['form_key'],
+    )
+    result = client.post('/api/cram/answer', json={
+        'practice_item_id': exercise['practice_item_id'],
+        'word_id': exercise['word_id'],
+        'answer': expected.hiragana,
+        'time_ms': 800,
+    })
+    assert result.status_code == 200
+    assert result.json()['correct']
+    assert 'elo' not in result.json()
+
+    assert client.get('/api/profile').json() == profile_before
+    assert client.get('/api/stats').json()['attempts'] == attempts_before
+
+
+def test_cram_rejects_unknown_forms(client) -> None:
+    assert client.get('/api/cram/forms/Verbs__Nope').status_code == 404
+    response = client.post('/api/cram/next', json={'form_key': 'Verbs__Nope'})
+    assert response.status_code == 400

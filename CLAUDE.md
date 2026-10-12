@@ -66,7 +66,36 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   dort eine eigene Zeile, wo die reguläre Regel sie falsch vorhersagen würde.
   Ausgeliefert über `/api/rules`, statisch, ohne DB.
 - `game.py` — Elo, Auswahl, `submit_answer`. Bekommt die `AsyncSession`
-  durchgereicht, wie in der Vorlage.
+  durchgereicht, wie in der Vorlage. Seit #46 in zwei Hälften geschnitten:
+  `grade()` wertet eine Antwort aus (konjugieren, Alt+H-Behandlung,
+  `evaluate()`, Zeitbudget/`fast`) und ist **pur** — keine Session, kein
+  Schreibzugriff, nur das `Grade`-Dataclass als Ergebnis. `apply_rating()`
+  ist die andere Hälfte: Elo-Mathematik, Item-/Wort-Rating samt Zählern,
+  Streak, die `Attempt`-Zeile, `commit()`. `submit_answer` lädt Item/Wort,
+  ruft beide hintereinander und liefert exakt dasselbe Antwortobjekt wie vor
+  dem Schnitt. Der Schnitt ist kein Refactoring-Selbstzweck, sondern trägt
+  den Cram-Modus (s. `cram.py`): der kann `grade()` gefahrlos aufrufen, weil
+  nichts darin je `apply_rating()` erreicht. `_pick_word()` nimmt die
+  zuletzt gezogenen Wort-IDs seitdem als Parameter statt sie selbst zu lesen
+  — Cram übergibt dort eigene, clientseitig gesammelte IDs statt der
+  `attempts`-Historie.
+- `cram.py` (#46) — der Cram-Modus: eine Form am Stück üben, exakt wie beim
+  normalen Üben bewertet, aber es wird **nichts geschrieben** — kein Elo,
+  kein Item-/Wort-Rating, kein Streak, keine `Attempt`-Zeile. Eigener Router
+  (`/api/cram`, in `main.py` neben dem bestehenden registriert). `GET
+  /forms/{form_key}` liefert Titel, Gruppe und Wortanzahl unter dem
+  JLPT-Filter (unbekannte Form → 404). `POST /next` wählt ein Item der Form
+  **gleichverteilt** (keine Elo-Gewichtung) und ein Wort über
+  `game._pick_word()` mit `target = 2 × user.elo − item.rating`, ohne
+  Probe-/Review-Offset; die Antwort teilt sich `api.exercise_payload()` mit
+  `/api/exercise/next`, ohne Profilfelder und `target_time_ms`. `POST
+  /answer` ruft nur `game.grade()` auf und gibt `game.grade_payload()`
+  zurück. `disabled_forms` gilt hier bewusst nicht (Cram soll eine in den
+  Settings abgeschaltete Form trotzdem erreichen), `disabled_jlpt` schon —
+  das ist eine Vokabular-, keine Auswahl-Einstellung. Die Isolation ist
+  **strukturell**: das Modul ruft `apply_rating()` nirgends auf, es gibt also
+  keinen Codepfad durch `cram.py`, der `user_profile`/`practice_items`/
+  `words`/`attempts` anfassen könnte.
 - `db.py` — ORM-Modelle, Engines (lazy, `reset_engines()` für Tests und
   Shutdown), `init_db()` mit `create_all` + `migrate_schema()` +
   `migrate_data()` + Seeding.

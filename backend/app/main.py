@@ -7,6 +7,7 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from .api import router
 from .config import cors_origins
+from .cram import router as cram_router
 from .db import init_db, reset_engines
 
 
@@ -28,3 +29,4 @@ app.add_middleware(
 )
 
 app.include_router(router)
+app.include_router(cram_router)
