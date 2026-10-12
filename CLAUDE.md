@@ -64,7 +64,13 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   `('', '')`). So kann die Referenz nie von dem abweichen, was die Übung als
   richtig wertet. Die Sonderfälle der Engine (行く, 呉れる, 良い) bekommen nur
   dort eine eigene Zeile, wo die reguläre Regel sie falsch vorhersagen würde.
-  Ausgeliefert über `/api/rules`, statisch, ohne DB.
+  Ausgeliefert über `/api/rules`, statisch, ohne DB. Seit #58 trägt jede
+  Form dort zusätzlich `politeness` (`'casual'`/`'polite'`/`null`) und
+  `polarity` (`'affirmative'`/`'negative'`) — einfach von den
+  Form-Klassen-Attributen (`form.politeness`, `form.polarity`, StrEnums,
+  als plain String bzw. `None` ausgegeben) abgelesen, damit das Frontend
+  (`form-grid`, s. u.) Zeilen und Spalten nicht aus `settings_title` zurück
+  parsen muss.
 - `game.py` — Elo, Auswahl, `submit_answer`. Bekommt die `AsyncSession`
   durchgereicht, wie in der Vorlage. Seit #46 in zwei Hälften geschnitten:
   `grade()` wertet eine Antwort aus (konjugieren, Alt+H-Behandlung,
@@ -439,9 +445,52 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   aktiv `--sumi-accent-soft`/`--sumi-accent-ink`, `aria-current="page"`) —
   damit funktionieren Mittelklick/„In neuem Tab öffnen" wieder, die main-
   Version hatte das auch so. Der Formen-Umschalter *innerhalb* einer Gruppe
-  (meist Positive/Negative, bei Non-past/Past vier Werte) bleibt dagegen
-  `sumi-segmented-control` — das ist eine echte Einzelauswahl unter wenigen,
-  kurzen Optionen, kein Navigations-Hiding-Problem. Die Tabelle selbst ist
+  (meist Positive/Negative, bei Non-past/Past vier Werte) war bis #58
+  ebenfalls `sumi-segmented-control` — bei vier Formen („Casual, positive"
+  … „Polite, negative") passte die Reihe auf 360px nicht (seitliches
+  Scrollen, abgeschnittene Labels), bei zwei Formen blieb neben der
+  gestreckten Spur eine leere graue Fläche (#57, Entscheidungen in #58).
+  Seit #58 ist das `form-grid/form-grid.component.ts` (`app-form-grid`,
+  App-Komponente, keine sumi-ui-Komponente — die kommt erst, wenn eine
+  zweite App sie braucht): eine Zelle pro Form mit Bezeichnung und dem
+  Ergebnis der ersten Regelzeile (`rules[0].example`), der gemeinsame
+  Wortstamm mit `example.kanji` plain, was die Form anhängt/ändert fett in
+  `--sumi-accent-ink` (`highlightResult()`, längster gemeinsamer Präfix,
+  bei einer Komplettänderung wie 来る → 来ない auf `dict.length - 1`
+  gekappt, damit mindestens ein Zeichen betont bleibt). **Kein
+  Zeilenumbruch** ist hart gefordert: jede Zelle ist selbst ein Container
+  (`container-type: inline-size`), die Schriftgröße ist `clamp(0.625rem,
+  100cqi / var(--chars), 1rem)`, `--chars` (auf dem Raster gesetzt) die
+  Zeichenzahl — in Codepoints, nicht UTF-16-Einheiten — des längsten
+  Ergebnisses der Gruppe, sodass alle Zellen einer Gruppe dieselbe Größe
+  teilen; das Label bekommt `nowrap` + Ellipse als Absicherung. Die
+  Untergrenze liegt bewusst unter dem engsten Fall: App-Shell und
+  `sumi-page` geben je 16px Rand, das Raster ist bei 360px also nur 262px
+  breit, und 美味しくなかったです (Adjectives · Past, 10 Zeichen) bekommt
+  11,4px (Desktop 12,5px) — eine erste Fassung mit 12px Untergrenze und 8px
+  Zellrand lief dort 10px über den Zellrand. Gegenprobe deshalb nicht über
+  `scrollWidth` des Ergebnisses (ein Grid-Item wächst mit seinem `nowrap`-
+  Inhalt mit und meldet nie Überlauf), sondern Textbreite per `Range` gegen
+  die Innenbreite der Zelle. Vier Formen
+  zeigen ein 2×2-Raster mit Spaltenköpfen „Positive"/„Negative" und kurzem
+  Zellen-Label („Casual"/„Polite") auf dem Handy, vier Zellen in einer
+  Zeile mit vollem `settings_title` auf dem Desktop; zwei Formen (Formen
+  ohne Politeness, z. B. Te-form) stehen bei jeder Breite in einer Zeile,
+  Label immer `settings_title`. Umgeschaltet wird per **Container Query
+  auf die Breite der Komponente selbst** (`host` setzt
+  `container-type: inline-size` mit `container-name: form-grid`,
+  `@container form-grid (min-width: 480px)` — benannt, weil sonst die
+  Zelle als nächster Container gälte), nicht
+  per Viewport — `sumi-page width="narrow"` ist auf einem echten
+  Desktop-Bildschirm breit genug, dass eine Viewport-Media-Query die
+  falsche Grenze träfe. Radio-Semantik und Tastatur folgen
+  `sumi-segmented-control`s Muster (`role="radiogroup"`/`radio`,
+  `aria-checked`, Roving-Tabindex, Home/End), nur dass Hoch/Runter um die
+  aktuelle Spaltenzahl springen, live über `getComputedStyle(grid).
+  gridTemplateColumns` gelesen, weil die sich mit der Container Query
+  ändert. Jede Zelle bekommt `aria-label` = voller `settings_title`,
+  unabhängig vom sichtbaren Kurzlabel, die Spaltenköpfe sind
+  `aria-hidden`. Die Tabelle selbst ist
   `rule-table/rule-table.component.ts` — Inputs `formTitle`/`sections`
   (Gruppierung nach Wortart, `Section`-Typ lebt dort), dazu `patternKind()`
   (unchanged/append/drop/replace) und `tilde()` samt ihren Doc-Kommentaren.
@@ -598,6 +647,17 @@ Anpassung in der App: ein Pixel-Vergleich aller Seiten bei 390/1280/360 px,
 hell und dunkel, gegen den Elternstand zeigte genau einen sichtbaren
 Unterschied — sumi-ui#53 hebt den Tastatur-Hilfe-Button bei <720 px über die
 Tab-Leiste, wodurch er das „Settings"-Label bei 360 px nicht mehr überdeckt.
+
+**Der Bump auf `e0963a9` → `30c15a2` (#58, 2 Commits)** bringt sumi-ui#78
+(`sumi-segmented-control` füllt eine gestreckte Spur mit gleich breiten
+Segmenten statt an einer Seite zu kleben) und sumi-ui#77 (Linienchart +
+Balken-Auswahl). #78 behebt nebenbei dieselbe Leerfläche, die #58 auslöste
+— Settings → Instructions (drei Optionen: Text/Emoji/Text + emoji) hat bei
+360 px seitdem keine leere graue Fläche mehr neben der Segmentreihe (im
+Browser gegengeprüft). #77 ist hier unused: Stats' Elo-Verlauf ist schon
+seit #33 `sumi-sparkline`, keine der beiden neuen Komponenten kommt in
+jp-conjugation vor (ebenfalls im Browser gegengeprüft — Stats sieht
+unverändert aus).
 
 **Globale Styles (#31, vormals #18, auf Sumi UIs eigene Komponenten
 umgestellt #34)** liegen in `src/styles.scss` und sind seit #34 nur noch

@@ -1,0 +1,26 @@
+<div #gridRef class="grid" role="radiogroup" aria-label="Form" [style.--chars]="charsCount()">
+  @if (isFourForm()) {
+    <span class="col-head" aria-hidden="true">Positive</span>
+    <span class="col-head" aria-hidden="true">Negative</span>
+  }
+  @for (form of orderedForms(); track form.form_key; let i = $index) {
+    <button
+      #cellRef
+      type="button"
+      role="radio"
+      class="cell"
+      [attr.aria-checked]="isSelected(form)"
+      [attr.aria-label]="form.settings_title"
+      [tabIndex]="isSelected(form) ? 0 : -1"
+      (click)="pick(form)"
+      (keydown)="onKeydown($event, i)"
+    >
+      <small class="label label-narrow">{{ narrowLabel(form) }}</small>
+      <small class="label label-wide">{{ form.settings_title }}</small>
+      @if (form.rules.length > 0) {
+        @let h = highlighted(form);
+        <span class="jp" lang="ja">{{ h.stem }}<em>{{ h.rest }}</em></span>
+      }
+    </button>
+  }
+</div>

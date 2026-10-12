@@ -27,11 +27,11 @@
         <p class="summary">{{ sel.group.summary }}</p>
         <p class="build">{{ sel.group.build }}</p>
 
-        <sumi-segmented-control
+        <app-form-grid
           class="forms"
-          [options]="formOptions(sel.group)"
-          [value]="sel.form"
-          (valueChange)="selectForm($event)"
+          [forms]="sel.group.forms"
+          [selected]="sel.form"
+          (select)="selectForm($event)"
         />
       </sumi-card>
 
