@@ -557,6 +557,12 @@ da es ein Inline-SVG ist. CI checkt das Submodule aus (`actions/checkout@v4` mit
 GitHubs Pfad-Globs `**` auch auf `frontend/sumi-ui` selbst matchen), ein
 `dependabot.yml` mit `gitsubmodule`-Ecosystem hält es aktuell.
 
+**Der Bump auf `c0831d1` → `e0963a9` (#54, 49 Commits)** brauchte keine
+Anpassung in der App: ein Pixel-Vergleich aller Seiten bei 390/1280/360 px,
+hell und dunkel, gegen den Elternstand zeigte genau einen sichtbaren
+Unterschied — sumi-ui#53 hebt den Tastatur-Hilfe-Button bei <720 px über die
+Tab-Leiste, wodurch er das „Settings"-Label bei 360 px nicht mehr überdeckt.
+
 **Globale Styles (#31, vormals #18, auf Sumi UIs eigene Komponenten
 umgestellt #34)** liegen in `src/styles.scss` und sind seit #34 nur noch
 zwei Zeilen: `@use 'sumi-ui/projects/sumi-ui/styles/sumi'` (Sumis
