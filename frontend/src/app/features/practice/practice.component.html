@@ -43,97 +43,14 @@
       <sumi-session-bar *sumiShellFocusActions [answered]="answered()" [correct]="correct()" (end)="end()" />
 
       <div class="round" sumiFocusMode>
-        <sumi-card class="prompt">
-          <div class="task">
-            <app-form-instruction class="form" [parts]="ex.instruction" [mode]="ex.instruction_style" />
-            <sumi-countdown-ring [elapsedMs]="elapsed()" [targetMs]="ex.target_time_ms" />
-          </div>
-
-          <p class="word">
-            @if (prompt(); as r) {
-              @if (r.base) {
-                <ruby>{{ r.base }}<rt>{{ r.reading }}</rt></ruby>{{ r.tail }}
-              } @else {
-                {{ r.tail }}
-              }
-            }
-          </p>
-          <p class="english">{{ ex.english }}</p>
-        </sumi-card>
-
-        <div #answerRow>
-          <sumi-answer-field
-            #field
-            mode="kana"
-            [verdict]="verdict()"
-            [iDontKnow]="true"
-            [(value)]="value"
-            label="Answer"
-            placeholder="答え"
-            (submitted)="onSubmitted($event)"
-            (next)="onNext()"
-            (gaveUp)="onGaveUp()"
-          />
-        </div>
-
-        <div class="actions">
-          <button type="button" sumiButton variant="primary" sumiHoldFocus (click)="onCheckClick()">
-            {{ checkButtonLabel() }}
-          </button>
-        </div>
-
-        @if (verdict(); as v) {
-          <sumi-verdict
-            class="verdict"
-            [kind]="v.kind"
-            [message]="v.kind === 'wrong' ? undefined : v.message"
-            [expected]="v.kind === 'wrong' ? result()?.expected_kanji : undefined"
-            [(detailsOpen)]="detailsOpen"
-          >
-            <div sumiVerdictDetails>
-              @if (gaveUp()) {
-                <p class="gave-up">Gave up — the answer was revealed.</p>
-              }
-              <p class="grammar">{{ grammarLine() }}</p>
-
-
-              @if (partial()) {
-                <p class="partial">{{ partial() }}</p>
-              }
-
-              <div class="elo-row">
-                @if (result(); as r) {
-                  <p class="elo" [class.up]="r.elo.delta > 0" [class.down]="r.elo.delta < 0">
-                    {{ r.elo.delta > 0 ? '+' : '' }}{{ r.elo.delta | number: '1.0-1' }} Elo
-                  </p>
-                }
-                <a
-                  class="jisho"
-                  [href]="jishoUrl()"
-                  target="_blank"
-                  rel="noopener"
-                  (mousedown)="keepFocus($event)"
-                  >Jisho ↗</a
-                >
-              </div>
-
-              @if (result()?.transformations?.length) {
-                <div class="rule">
-                  @for (t of result()!.transformations; track $index; let last = $last) {
-                    <span class="step">
-                      <span class="unaltered">{{ t.unaltered }}</span
-                      ><span class="altered">{{ t.altered_part }}</span>
-                      <span class="operation">{{ t.operation }}</span>
-                      @if (last) {
-                        <span class="alteration">{{ t.alteration }}</span>
-                      }
-                    </span>
-                  }
-                </div>
-              }
-            </div>
-          </sumi-verdict>
-        }
+        <app-practice-round
+          [exercise]="ex"
+          [result]="result()"
+          [gaveUp]="gaveUp()"
+          (submitted)="onSubmitted($event)"
+          (gaveUpRequested)="onGaveUpRequested($event)"
+          (next)="onNext()"
+        />
       </div>
     }
   }
