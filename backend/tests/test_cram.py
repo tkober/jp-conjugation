@@ -13,7 +13,7 @@ from sqlalchemy import delete, func, select
 from app import game
 from app.api import AnswerRequest
 from app.conjugation import WordType
-from app.cram import CramNextRequest
+from app.cram import CramNextRequest, CramRetry
 from app.cram import answer as cram_answer
 from app.cram import form_info
 from app.cram import next_exercise as cram_next
@@ -62,6 +62,17 @@ async def test_cram_never_writes_anything(session) -> None:
     await cram_answer(AnswerRequest(
         practice_item_id=gave_up['practice_item_id'], word_id=gave_up['word_id'],
         answer='', time_ms=1200, gave_up=True,
+    ), session)
+
+    retry = await cram_next(CramNextRequest(
+        form_key=FORM_KEY, recent_word_ids=[],
+        retry=CramRetry(practice_item_id=wrong['practice_item_id'], word_id=wrong['word_id']),
+    ), session)
+    assert retry['practice_item_id'] == wrong['practice_item_id']
+    assert retry['word_id'] == wrong['word_id']
+    await cram_answer(AnswerRequest(
+        practice_item_id=retry['practice_item_id'], word_id=retry['word_id'],
+        answer='ぬぬぬ', time_ms=800,
     ), session)
 
     session.expire_all()  # force the asserts to hit the DB, not the identity map
@@ -113,6 +124,71 @@ async def test_next_avoids_recent_word_ids_when_alternatives_exist(session, monk
             CramNextRequest(form_key=FORM_KEY, recent_word_ids=[first['word_id']]), session,
         )
         assert body['word_id'] != first['word_id']
+
+
+async def test_retry_returns_exactly_the_requested_pair(session) -> None:
+    missed = await cram_next(CramNextRequest(form_key=FORM_KEY, recent_word_ids=[]), session)
+
+    retried = await cram_next(CramNextRequest(
+        form_key=FORM_KEY, recent_word_ids=[],
+        retry=CramRetry(practice_item_id=missed['practice_item_id'], word_id=missed['word_id']),
+    ), session)
+
+    assert retried['practice_item_id'] == missed['practice_item_id']
+    assert retried['word_id'] == missed['word_id']
+    assert retried['form_key'] == missed['form_key']
+    assert retried['kanji'] == missed['kanji']
+    assert retried['hiragana'] == missed['hiragana']
+
+
+async def test_retry_with_wrong_form_is_400(session) -> None:
+    missed = await cram_next(CramNextRequest(form_key=FORM_KEY, recent_word_ids=[]), session)
+
+    with pytest.raises(HTTPException) as exc:
+        await cram_next(CramNextRequest(
+            form_key='Verbs__TeFormNegative', recent_word_ids=[],
+            retry=CramRetry(
+                practice_item_id=missed['practice_item_id'], word_id=missed['word_id'],
+            ),
+        ), session)
+    assert exc.value.status_code == 400
+
+
+async def test_retry_with_mismatched_word_is_400(session) -> None:
+    missed = await cram_next(CramNextRequest(form_key=FORM_KEY, recent_word_ids=[]), session)
+
+    mismatched_word = await session.scalar(
+        select(Word).where(
+            (Word.word_type != missed['word_type']) | (Word.trigger != missed['trigger'])
+        ).limit(1)
+    )
+    assert mismatched_word is not None
+
+    with pytest.raises(HTTPException) as exc:
+        await cram_next(CramNextRequest(
+            form_key=FORM_KEY, recent_word_ids=[],
+            retry=CramRetry(
+                practice_item_id=missed['practice_item_id'], word_id=mismatched_word.id,
+            ),
+        ), session)
+    assert exc.value.status_code == 400
+
+
+async def test_retry_with_unknown_ids_is_404(session) -> None:
+    with pytest.raises(HTTPException) as exc:
+        await cram_next(CramNextRequest(
+            form_key=FORM_KEY, recent_word_ids=[],
+            retry=CramRetry(practice_item_id=999_999, word_id=1),
+        ), session)
+    assert exc.value.status_code == 404
+
+    missed = await cram_next(CramNextRequest(form_key=FORM_KEY, recent_word_ids=[]), session)
+    with pytest.raises(HTTPException) as exc:
+        await cram_next(CramNextRequest(
+            form_key=FORM_KEY, recent_word_ids=[],
+            retry=CramRetry(practice_item_id=missed['practice_item_id'], word_id=999_999),
+        ), session)
+    assert exc.value.status_code == 404
 
 
 async def test_unknown_form_in_forms_lookup_is_404(session) -> None:

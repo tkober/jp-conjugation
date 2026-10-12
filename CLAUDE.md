@@ -90,7 +90,15 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   Probe-/Review-Offset; die Antwort teilt sich `api.exercise_payload()` mit
   `/api/exercise/next`, ohne Profilfelder und `target_time_ms`. `POST
   /answer` ruft nur `game.grade()` auf und gibt `game.grade_payload()`
-  zurück. `disabled_forms` gilt hier bewusst nicht (Cram soll eine in den
+  zurück. `POST /next` nimmt seit #49 optional `retry: CramRetry`
+  (`practice_item_id`, `word_id`) entgegen — das Frontend schickt darüber eine
+  verpasste Aufgabe zurück, statt eine neue zu würfeln: Item und Wort werden
+  geladen (je 404, wenn eins fehlt), `item.form_key != form_key` und ein
+  `(word_type, trigger)`, das nicht zum Item passt, sind je 400, sonst wird
+  exakt dieses Paar konjugiert (409 bei `None`) und über `exercise_payload()`
+  zurückgegeben — kein `random.choice()`, `recent_word_ids` wird ignoriert,
+  nichts geschrieben (dieselbe Isolation wie sonst in diesem Modul).
+  `disabled_forms` gilt hier bewusst nicht (Cram soll eine in den
   Settings abgeschaltete Form trotzdem erreichen), `disabled_jlpt` schon —
   das ist eine Vokabular-, keine Auswahl-Einstellung. Die Isolation ist
   **strukturell**: das Modul ruft `apply_rating()` nirgends auf, es gibt also
@@ -301,6 +309,34 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   form"-Button in `rule-table.component.ts`s Kartenkopf und über den
   Regelnamen-Link in Stats' „Weakest rules" (s. u.) — sowie direkt per
   URL.
+
+  **Retries (#49).** Eine falsch oder per Alt+H aufgegebene Aufgabe kommt
+  nach 3 anderen Aufgaben zurück, mit demselben Wort und demselben
+  `PracticeItem`, höchstens zweimal insgesamt (verpasst → Retry 1, wieder
+  verpasst → Retry 2, dann fallengelassen); eine richtig beantwortete Retry
+  wird nicht erneut eingeplant. Die Planung steckt in `cram-queue.ts`
+  (`CramQueueEntry { practiceItemId, wordId, dueAt, attempts }`,
+  `scheduleCramRetry()`/`takeCramRetry()`) — reine Funktionen über einem
+  Array statt einer Klasse, extra ausgelagert, damit die Terminierung ohne
+  `TestBed` testbar ist; `cram.component.ts` hält `queue` und `served`
+  (servierte Aufgaben dieser Session, Retries mitgezählt — die Einheit, in
+  der `dueAt` gemessen wird) als eigenen State und ruft die beiden Funktionen
+  in `next()`/`submit()` auf. `isRetry`/`currentAttempts` merken sich, ob und
+  wie oft die gerade laufende Aufgabe schon serviert wurde, weil `queue` den
+  Eintrag während der Bearbeitung nicht mehr hält. `next()` schickt eine
+  fällige Retry als `retry` an `ApiService.cramNext()` (s. o., `app/cram.py`)
+  statt eines normalen Requests. Gezählt wird getrennt: `answered`/`correct`
+  (Session-Leiste und Summary) zählen nur Erstversuche — damit bleibt auch
+  der Hanko, der auf `sessionAccuracy` aufbaut, bei der Erstversuch-Quote;
+  `retried`/`retriedCorrect` zählen Retries separat und erscheinen auf dem
+  Ende-Bildschirm als eigene `.gate-meta`-Zeile unter `sumi-session-summary`,
+  aber noch innerhalb des Gates (`Retried 3 · 2 correct`, nur wenn
+  `retried() > 0`) — diese Sumi-UI-Version hat keinen Summary-Tile-Slot, eine
+  zusätzliche Kachel bekäme also nicht deren Styling. Der `roundTag`-Badge
+  liest „Retry · not scored" statt „Cram · not scored", solange `isRetry()`
+  gesetzt ist. `start()`/`end()` leeren `queue` (und setzen `served` auf 0) —
+  eine neue oder beendete Session fängt immer mit einer leeren Warteschlange
+  an.
 - `features/stats/stats.component.ts` (#20, Charts auf Sumi UI umgestellt
   #33, Karten auf `sumi-card`/`sumi-page` #34, Leerzustand `sumi-empty-state`
   #41, Fehlerzustand `sumi-error-state` #43) — lädt die Stats, Empty-/

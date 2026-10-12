@@ -96,6 +96,35 @@ describe('CramComponent', () => {
     );
   }
 
+  /** Types anything and submits, flushing `/api/cram/answer` with `correct`. */
+  function answer(
+    fixture: ReturnType<typeof render>,
+    mock: HttpTestingController,
+    correct: boolean,
+  ): void {
+    const input = fieldInput(fixture);
+    // Plain kana (not romaji) so the field treats it as finished rather
+    // than an unfinished syllable ("incomplete") that Enter won't submit —
+    // `makeResult`'s `correct` override is what actually drives the test,
+    // not this string.
+    input.value = 'ぬぬぬ';
+    input.dispatchEvent(new Event('input', { bubbles: true }));
+    pressEnter(input);
+    fixture.detectChanges();
+    mock.expectOne('/api/cram/answer').flush(makeResult({ correct }));
+    fixture.detectChanges();
+  }
+
+  /** `Enter` on a settled verdict — requests the next exercise. */
+  function goNext(fixture: ReturnType<typeof render>): void {
+    pressEnter(fieldInput(fixture));
+    fixture.detectChanges();
+  }
+
+  function badgeText(fixture: ReturnType<typeof render>): string | null | undefined {
+    return fixture.nativeElement.querySelector('sumi-badge')?.textContent?.trim();
+  }
+
   it('loads the form and shows the word count on the gate', () => {
     const fixture = render();
     httpMock.expectOne(`/api/cram/forms/${FORM_KEY}`).flush(makeForm({ word_count: 214 }));
@@ -287,5 +316,189 @@ describe('CramComponent', () => {
     const el: HTMLElement = fixture.nativeElement;
     expect(el.querySelector('sumi-answer-field')).toBeFalsy();
     expect(el.textContent).toContain('Cram: Te-form, negative');
+  });
+
+  describe('retries (#49)', () => {
+    function start(fixture: ReturnType<typeof render>): void {
+      httpMock.expectOne(`/api/cram/forms/${FORM_KEY}`).flush(makeForm());
+      fixture.detectChanges();
+      (fixture.nativeElement.querySelector('sumi-session-gate button') as HTMLButtonElement).click();
+    }
+
+    it('reappears as request #5 with the same ids after a miss and 3 other exercises, with a Retry badge', () => {
+      const fixture = render();
+      start(fixture);
+      httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixture.detectChanges();
+      expect(badgeText(fixture)).toBe('Cram · not scored');
+
+      // Request #1 (already served above) is missed.
+      answer(fixture, httpMock, false);
+      goNext(fixture);
+
+      // Requests #2, #3, #4: ordinary exercises, not yet due.
+      for (const id of [2, 3, 4]) {
+        const req = httpMock.expectOne('/api/cram/next');
+        expect(req.request.body.retry).toBeUndefined();
+        req.flush(makeExercise({ practice_item_id: id, word_id: id }));
+        fixture.detectChanges();
+        expect(badgeText(fixture)).toBe('Cram · not scored');
+        answer(fixture, httpMock, true);
+        goNext(fixture);
+      }
+
+      // Request #5: the retry, carrying the original pair.
+      const retryReq = httpMock.expectOne('/api/cram/next');
+      expect(retryReq.request.body.retry).toEqual({ practice_item_id: 1, word_id: 1 });
+      retryReq.flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixture.detectChanges();
+      expect(badgeText(fixture)).toBe('Retry · not scored');
+    });
+
+    it('schedules a second retry after the retry is missed again, then drops it after a third miss', () => {
+      const fixture = render();
+      start(fixture);
+      httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixture.detectChanges();
+
+      answer(fixture, httpMock, false); // miss #1
+      goNext(fixture);
+      for (const id of [2, 3, 4]) {
+        httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: id, word_id: id }));
+        fixture.detectChanges();
+        answer(fixture, httpMock, true);
+        goNext(fixture);
+      }
+
+      // Request #5: retry 1 — missed again.
+      httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixture.detectChanges();
+      answer(fixture, httpMock, false); // miss #2
+      goNext(fixture);
+
+      // Requests #6, #7, #8: ordinary, not yet due.
+      for (const id of [6, 7, 8]) {
+        const req = httpMock.expectOne('/api/cram/next');
+        expect(req.request.body.retry).toBeUndefined();
+        req.flush(makeExercise({ practice_item_id: id, word_id: id }));
+        fixture.detectChanges();
+        answer(fixture, httpMock, true);
+        goNext(fixture);
+      }
+
+      // Request #9: retry 2, same ids.
+      const retry2 = httpMock.expectOne('/api/cram/next');
+      expect(retry2.request.body.retry).toEqual({ practice_item_id: 1, word_id: 1 });
+      retry2.flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixture.detectChanges();
+      expect(badgeText(fixture)).toBe('Retry · not scored');
+      answer(fixture, httpMock, false); // miss #3 — dropped for good
+      goNext(fixture);
+
+      // Requests #10, #11, #12: ordinary, and the pair never comes back.
+      const trailing = [10, 11, 12];
+      for (const id of trailing) {
+        const req = httpMock.expectOne('/api/cram/next');
+        expect(req.request.body.retry).toBeUndefined();
+        req.flush(makeExercise({ practice_item_id: id, word_id: id }));
+        fixture.detectChanges();
+        answer(fixture, httpMock, true);
+        if (id !== trailing[trailing.length - 1]) {
+          goNext(fixture);
+        }
+      }
+    });
+
+    it('a correct retry is not requeued and never reappears', () => {
+      const fixture = render();
+      start(fixture);
+      httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixture.detectChanges();
+
+      answer(fixture, httpMock, false); // miss #1
+      goNext(fixture);
+      for (const id of [2, 3, 4]) {
+        httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: id, word_id: id }));
+        fixture.detectChanges();
+        answer(fixture, httpMock, true);
+        goNext(fixture);
+      }
+
+      const retryReq = httpMock.expectOne('/api/cram/next');
+      expect(retryReq.request.body.retry).toEqual({ practice_item_id: 1, word_id: 1 });
+      retryReq.flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixture.detectChanges();
+      answer(fixture, httpMock, true); // correct retry — dropped
+      goNext(fixture);
+
+      const trailing = [6, 7, 8, 9, 10];
+      for (const id of trailing) {
+        const req = httpMock.expectOne('/api/cram/next');
+        expect(req.request.body.retry).toBeUndefined();
+        req.flush(makeExercise({ practice_item_id: id, word_id: id }));
+        fixture.detectChanges();
+        answer(fixture, httpMock, true);
+        if (id !== trailing[trailing.length - 1]) {
+          goNext(fixture);
+        }
+      }
+    });
+
+    it('counts answered/correct on first attempts only, and retried/retriedCorrect separately', () => {
+      const fixture = render();
+      start(fixture);
+      httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixture.detectChanges();
+
+      answer(fixture, httpMock, false); // first attempt, miss
+      goNext(fixture);
+      for (const id of [2, 3, 4]) {
+        httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: id, word_id: id }));
+        fixture.detectChanges();
+        answer(fixture, httpMock, true); // first attempts, correct
+        goNext(fixture);
+      }
+
+      httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixture.detectChanges();
+      answer(fixture, httpMock, true); // the retry, correct
+
+      const c = fixture.componentInstance;
+      expect(c.answered()).toBe(4);
+      expect(c.correct()).toBe(3);
+      expect(c.retried()).toBe(1);
+      expect(c.retriedCorrect()).toBe(1);
+    });
+
+    it('shows the "Retried" line on the ended screen only when there were retries', () => {
+      const fixtureNoRetries = render();
+      start(fixtureNoRetries);
+      httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixtureNoRetries.detectChanges();
+      answer(fixtureNoRetries, httpMock, true);
+      fixtureNoRetries.componentInstance.end();
+      fixtureNoRetries.detectChanges();
+      expect(fixtureNoRetries.nativeElement.textContent).not.toContain('Retried');
+
+      const fixture = render();
+      start(fixture);
+      httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixture.detectChanges();
+      answer(fixture, httpMock, false);
+      goNext(fixture);
+      for (const id of [2, 3, 4]) {
+        httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: id, word_id: id }));
+        fixture.detectChanges();
+        answer(fixture, httpMock, true);
+        goNext(fixture);
+      }
+      httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
+      fixture.detectChanges();
+      answer(fixture, httpMock, true);
+
+      fixture.componentInstance.end();
+      fixture.detectChanges();
+      expect(fixture.nativeElement.textContent).toContain('Retried 1 · 1 correct');
+    });
   });
 });

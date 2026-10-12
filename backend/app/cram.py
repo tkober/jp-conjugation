@@ -39,9 +39,21 @@ Session = Annotated[AsyncSession, Depends(get_session)]
 MAX_RECENT_WORDS = 200
 
 
+class CramRetry(BaseModel):
+    """A missed exercise the frontend's retry queue is re-serving.
+
+    Carries the exact pair rather than letting the server pick one — the
+    retry has to be the *same* word/form the learner missed, not another
+    item from the same pool.
+    """
+    practice_item_id: int
+    word_id: int
+
+
 class CramNextRequest(BaseModel):
     form_key: str
     recent_word_ids: list[int] = []
+    retry: CramRetry | None = None
 
 
 def _find_form(form_key: str) -> tuple[str, str, Conjugation] | None:
@@ -107,12 +119,53 @@ async def form_info(form_key: str, session: Session) -> dict[str, Any]:
     }
 
 
+async def _retry_exercise(
+    session: AsyncSession, user: UserProfile, form_key: str, retry: CramRetry,
+) -> dict[str, Any]:
+    """The exact pair the frontend's retry queue asked for — no random
+    choice, no `recent_word_ids`, no `_pick_word`, nothing written.
+    """
+    item = await session.get(PracticeItem, retry.practice_item_id)
+    word = await session.get(Word, retry.word_id)
+    if item is None or word is None:
+        raise HTTPException(
+            status_code=404,
+            detail=f'retry exercise {retry.practice_item_id}/{retry.word_id} not found',
+        )
+    if item.form_key != form_key:
+        raise HTTPException(
+            status_code=400,
+            detail=f'retry item {item.id} is {item.form_key!r}, not {form_key!r}',
+        )
+    if (word.word_type, word.trigger) != (item.word_type, item.trigger):
+        raise HTTPException(
+            status_code=400,
+            detail=f'retry word {word.id} does not match item {item.id}',
+        )
+
+    conjugated = conjugate(WordType(word.word_type), word.kanji, word.hiragana, item.form_key)
+    if conjugated is None:
+        raise HTTPException(
+            status_code=409, detail=f'{item.form_key} has no form for {word.kanji}'
+        )
+
+    exercise = game.Exercise(
+        item=item, word=word,
+        expected_kanji=conjugated.kanji, expected_hiragana=conjugated.hiragana,
+    )
+    return exercise_payload(exercise, user)
+
+
 @router.post('/next')
 async def next_exercise(request: CramNextRequest, session: Session) -> dict[str, Any]:
     if _find_form(request.form_key) is None:
         raise HTTPException(status_code=400, detail=f'unknown form {request.form_key!r}')
 
     user = await game.get_user(session)
+
+    if request.retry is not None:
+        return await _retry_exercise(session, user, request.form_key, request.retry)
+
     items = await _candidate_items(session, user, request.form_key)
     if not items:
         raise HTTPException(

@@ -8,6 +8,7 @@ import {
   CramExercise,
   CramForm,
   CramResult,
+  CramRetryRequest,
   Exercise,
   Profile,
   RulesResponse,
@@ -79,10 +80,19 @@ export class ApiService {
     return this.http.get<CramForm>(`/api/cram/forms/${formKey}`);
   }
 
-  cramNext(formKey: string, recentWordIds: number[]): Observable<CramExercise> {
+  /** `retry` (#49): re-serve exactly that pair instead of picking one — see
+   *  `CramComponent`'s retry queue. Omitted entirely for a normal request,
+   *  not sent as `undefined`, so the request body matches what the backend
+   *  expects for "no retry". */
+  cramNext(
+    formKey: string,
+    recentWordIds: number[],
+    retry?: CramRetryRequest,
+  ): Observable<CramExercise> {
     return this.http.post<CramExercise>('/api/cram/next', {
       form_key: formKey,
       recent_word_ids: recentWordIds,
+      ...(retry ? { retry } : {}),
     });
   }
 
