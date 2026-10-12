@@ -4,8 +4,9 @@ from datetime import UTC, datetime, timedelta
 
 import pytest
 
+from app import game
 from app.answer import Evaluation
-from app.db import PracticeItem
+from app.db import PracticeItem, UserProfile, Word
 from app.game import (
     LEVEL_BASE_ELO,
     LEVEL_WIDTH,
@@ -119,3 +120,61 @@ def test_an_unseen_item_is_fully_stale() -> None:
 
 def test_time_budget_grows_with_the_answer() -> None:
     assert target_time_ms(0) < target_time_ms(5) < target_time_ms(10)
+
+
+def make_user(**kwargs) -> UserProfile:
+    defaults = dict(id=1, elo=1000.0, current_streak=0, best_streak=0,
+                     time_base_ms=4500, time_per_kana_ms=1000)
+    return UserProfile(**{**defaults, **kwargs})
+
+
+def make_word(**kwargs) -> Word:
+    defaults = dict(
+        id=1, kanji='食べる', hiragana='たべる', english='to eat', jlpt='n5',
+        word_type='ichidan_verb', trigger='-', source='jisho',
+        rating=750.0, base_rating=750.0, times_served=0, times_correct=0,
+    )
+    return Word(**{**defaults, **kwargs})
+
+
+def test_grade_is_pure_and_judges_a_correct_fast_answer() -> None:
+    """`grade` never touches a session — these objects are never persisted."""
+    user = make_user()
+    item = make_item(form_key='Verbs__TeFormAffirmative', word_type='ichidan_verb', trigger='-')
+    word = make_word()
+
+    g = game.grade(user, item, word, 'たべて', 800)
+
+    assert g.evaluation.correct
+    assert g.conjugated.hiragana == 'たべて'
+    assert g.fast
+    assert g.time_ms == 800
+    assert g.target_ms == game.user_target_time_ms(user, len('たべて'))
+    assert set(game.grade_payload(g).keys()) == {
+        'correct', 'stem_correct', 'ending_correct', 'stem', 'ending', 'given',
+        'expected_kanji', 'expected_hiragana', 'transformations',
+    }
+
+
+def test_grade_clamps_time_and_scores_a_giveup_as_a_miss() -> None:
+    user = make_user()
+    item = make_item(form_key='Verbs__TeFormAffirmative', word_type='ichidan_verb', trigger='-')
+    word = make_word()
+
+    g = game.grade(user, item, word, 'たべて', 999_999_999, gave_up=True)
+
+    assert g.time_ms == 300_000  # the 0..300000 clamp from `submit_answer`
+    assert not g.evaluation.correct
+    assert not g.evaluation.stem_correct
+    assert not g.evaluation.ending_correct
+    assert not g.fast
+
+
+def test_grade_raises_lookuperror_when_the_form_has_no_conjugation(monkeypatch) -> None:
+    monkeypatch.setattr(game, 'conjugate', lambda *a, **k: None)
+    user = make_user()
+    item = make_item(form_key='Verbs__TeFormAffirmative', word_type='ichidan_verb', trigger='-')
+    word = make_word()
+
+    with pytest.raises(LookupError):
+        game.grade(user, item, word, 'たべて', 800)

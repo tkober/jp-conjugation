@@ -110,15 +110,13 @@ async def profile(session: Session) -> dict[str, Any]:
     return _profile(await game.get_user(session))
 
 
-@router.get('/exercise/next')
-async def next_exercise(session: Session) -> dict[str, Any]:
-    try:
-        exercise = await game.pick_next_exercise(session)
-    except LookupError as exc:
-        raise HTTPException(status_code=409, detail=str(exc)) from exc
+def exercise_payload(exercise: game.Exercise, user: UserProfile) -> dict[str, Any]:
+    """The fields `/api/exercise/next` and `/api/cram/next` both hand out.
 
-    user = await game.get_user(session)
-    kana_count = len(exercise.expected_hiragana)
+    Deliberately **not** the solution, and not `target_time_ms`/the profile —
+    those are practice-only additions the caller layers on top (see
+    `next_exercise` below and `cram.next_exercise`).
+    """
     form = forms_for(WordType(exercise.item.word_type))[exercise.item.form_key]
 
     return {
@@ -134,6 +132,21 @@ async def next_exercise(session: Session) -> dict[str, Any]:
         'hiragana': exercise.word.hiragana,
         'english': exercise.word.english,
         'jlpt': exercise.word.jlpt,
+    }
+
+
+@router.get('/exercise/next')
+async def next_exercise(session: Session) -> dict[str, Any]:
+    try:
+        exercise = await game.pick_next_exercise(session)
+    except LookupError as exc:
+        raise HTTPException(status_code=409, detail=str(exc)) from exc
+
+    user = await game.get_user(session)
+    kana_count = len(exercise.expected_hiragana)
+
+    return {
+        **exercise_payload(exercise, user),
         'target_time_ms': game.user_target_time_ms(user, kana_count),
         **_profile(user),
     }

@@ -29,6 +29,7 @@ from sqlalchemy import func, select
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from .answer import Evaluation, evaluate, normalize
+from .conjugation import Word as ConjugatedWord
 from .conjugation import WordType
 from .db import (
     DEFAULT_TIME_BASE_MS,
@@ -170,6 +171,23 @@ class Exercise:
     expected_hiragana: str
 
 
+@dataclass(frozen=True)
+class Grade:
+    """A judged answer, before anything is written.
+
+    This is the half of `submit_answer` that cram is allowed to run: it reads
+    the pair and the typed answer, never the database. `apply_rating` below is
+    the other half — everything that *does* write — and cram must never call
+    it.
+    """
+
+    evaluation: Evaluation
+    conjugated: ConjugatedWord
+    time_ms: int
+    target_ms: int
+    fast: bool
+
+
 async def get_user(session: AsyncSession) -> UserProfile:
     return await session.get_one(UserProfile, 1)
 
@@ -206,7 +224,8 @@ async def _candidate_items(session: AsyncSession, user: UserProfile) -> list[Pra
 
 
 async def _pick_word(
-    session: AsyncSession, user: UserProfile, item: PracticeItem, target: float
+    session: AsyncSession, user: UserProfile, item: PracticeItem, target: float,
+    recent: set[int],
 ) -> Word:
     base = select(Word).where(
         Word.word_type == item.word_type,
@@ -215,7 +234,6 @@ async def _pick_word(
     if user.disabled_jlpt:
         base = base.where(Word.jlpt.notin_(user.disabled_jlpt))
 
-    recent = await _recent_ids(session, Attempt.word_id, RECENT_WORDS)
     for stmt in (base.where(Word.id.notin_(recent)) if recent else base, base):
         pool = list((await session.execute(
             stmt.order_by(func.abs(Word.rating - target)).limit(WORD_POOL)
@@ -254,7 +272,8 @@ async def pick_next_exercise(session: AsyncSession) -> Exercise:
     elif roll < PROBE_CHANCE + REVIEW_CHANCE:
         target -= random.uniform(*REVIEW_OFFSET)
 
-    word = await _pick_word(session, user, item, target)
+    recent_words = await _recent_ids(session, Attempt.word_id, RECENT_WORDS)
+    word = await _pick_word(session, user, item, target, recent_words)
     conjugated = conjugate(WordType(word.word_type), word.kanji, word.hiragana, item.form_key)
     if conjugated is None:
         raise LookupError(f'{item.form_key} has no form for {word.kanji}')
@@ -267,19 +286,20 @@ async def pick_next_exercise(session: AsyncSession) -> Exercise:
     )
 
 
-async def submit_answer(
-    session: AsyncSession,
-    practice_item_id: int,
-    word_id: int,
+def grade(
+    user: UserProfile,
+    item: PracticeItem,
+    word: Word,
     given: str,
     time_ms: int,
     gave_up: bool = False,
-) -> dict[str, Any]:
-    item = await session.get(PracticeItem, practice_item_id)
-    word = await session.get(Word, word_id)
-    if item is None or word is None:
-        raise KeyError(f'exercise {practice_item_id}/{word_id} not found')
+) -> Grade:
+    """Judge an answer. Pure: no session, nothing is read from or written to
+    the database beyond the objects already handed in.
 
+    This is the part cram is allowed to share with normal practice — grading
+    is identical either way, only what happens *after* differs.
+    """
     conjugated = conjugate(WordType(word.word_type), word.kanji, word.hiragana, item.form_key)
     if conjugated is None:
         raise LookupError(f'{item.form_key} has no form for {word.kanji}')
@@ -292,16 +312,56 @@ async def submit_answer(
     ev = evaluate(word.hiragana, conjugated.hiragana, '' if gave_up else given)
     if gave_up:
         ev = replace(ev, correct=False, stem_correct=False, ending_correct=False)
-    user = await get_user(session)
 
     time_ms = max(0, min(int(time_ms), 300_000))
     target = user_target_time_ms(user, len(normalize(conjugated.hiragana)))
     fast = ev.correct and time_ms <= target
 
+    return Grade(evaluation=ev, conjugated=conjugated, time_ms=time_ms, target_ms=target, fast=fast)
+
+
+def grade_payload(g: Grade) -> dict[str, Any]:
+    """The fields a graded answer owes the caller, whether or not it writes."""
+    ev = g.evaluation
+    return {
+        'correct': ev.correct,
+        'stem_correct': ev.stem_correct,
+        'ending_correct': ev.ending_correct,
+        'stem': ev.stem,
+        'ending': ev.ending,
+        'given': ev.given,
+        'expected_kanji': g.conjugated.kanji,
+        'expected_hiragana': g.conjugated.hiragana,
+        'transformations': [
+            {
+                'unaltered': t.unaltered,
+                'altered_part': t.altered_part,
+                'alteration': t.alteration,
+                'operation': t.operation,
+            }
+            for t in g.conjugated.transformations
+        ],
+    }
+
+
+async def apply_rating(
+    session: AsyncSession,
+    user: UserProfile,
+    item: PracticeItem,
+    word: Word,
+    g: Grade,
+) -> dict[str, Any]:
+    """Everything `grade` deliberately leaves undone: the Elo math, the item/
+    word counters, the streak, the `Attempt` row, the commit.
+
+    Cram must never call this — it is the entire reason `grade` and
+    `apply_rating` are two functions instead of one.
+    """
+    ev = g.evaluation
     exercise_rating = (item.rating + word.rating) / 2.0
     elo_before = user.elo
     exp = expected_score(elo_before, exercise_rating)
-    score = effective_score(answer_score(ev, fast), exp, ev.correct)
+    score = effective_score(answer_score(ev, g.fast), exp, ev.correct)
 
     k_user = K_USER_GAIN if score >= exp else K_USER_LOSS
     elo_after = elo_before + k_user * (score - exp)
@@ -329,32 +389,15 @@ async def submit_answer(
         correct=ev.correct,
         stem_correct=ev.stem_correct,
         ending_correct=ev.ending_correct,
-        time_ms=time_ms,
+        time_ms=g.time_ms,
         elo_before=elo_before,
         elo_after=elo_after,
     ))
     await session.commit()
 
     return {
-        'correct': ev.correct,
-        'stem_correct': ev.stem_correct,
-        'ending_correct': ev.ending_correct,
-        'fast': fast,
-        'target_time_ms': target,
-        'stem': ev.stem,
-        'ending': ev.ending,
-        'given': ev.given,
-        'expected_kanji': conjugated.kanji,
-        'expected_hiragana': conjugated.hiragana,
-        'transformations': [
-            {
-                'unaltered': t.unaltered,
-                'altered_part': t.altered_part,
-                'alteration': t.alteration,
-                'operation': t.operation,
-            }
-            for t in conjugated.transformations
-        ],
+        'fast': g.fast,
+        'target_time_ms': g.target_ms,
         'elo': {
             'before': round(elo_before, 1),
             'after': round(elo_after, 1),
@@ -365,3 +408,23 @@ async def submit_answer(
         'streak': streak,
         'best_streak': user.best_streak,
     }
+
+
+async def submit_answer(
+    session: AsyncSession,
+    practice_item_id: int,
+    word_id: int,
+    given: str,
+    time_ms: int,
+    gave_up: bool = False,
+) -> dict[str, Any]:
+    item = await session.get(PracticeItem, practice_item_id)
+    word = await session.get(Word, word_id)
+    if item is None or word is None:
+        raise KeyError(f'exercise {practice_item_id}/{word_id} not found')
+
+    user = await get_user(session)
+    g = grade(user, item, word, given, time_ms, gave_up=gave_up)
+    scoring = await apply_rating(session, user, item, word, g)
+
+    return {**grade_payload(g), **scoring}
