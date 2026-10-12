@@ -116,7 +116,7 @@ Ordnerkonvention (#16): `core/` sind Singletons und Typen, die die ganze App
 teilt (`api.service.ts`, `models.ts`), `shared/` sind wiederverwendete Bausteine
 ohne Feature-Zugehörigkeit (`furigana.ts`, `word-types.ts`,
 `form-instruction/`, `practice-round/`, seit #47), `features/` hat einen Ordner pro Route
-(`practice/`, `rules/`, `stats/`, `words/`, `settings/`). Seit #31 gibt es kein
+(`practice/`, `rules/`, `stats/`, `words/`, `settings/`, `cram/`, seit #48). Seit #31 gibt es kein
 eigenes `layout/` mehr — die App-Chrome kommt aus Sumi UI (s. u.), `app/`
 bleibt also bei `core/`, `shared/` und `features/`. Jede Komponente hat
 Template und Styles in eigenen Dateien (`templateUrl`/`styleUrl`, nicht
@@ -168,7 +168,11 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   answer." aus) und die strukturellen Typen `RoundExercise`/`RoundResult`
   (mit optionalem `target_time_ms`/`fast`/`elo`), die `Exercise`/
   `AnswerResult` erfüllen, ohne dass die Runde den App-eigenen Typ kennen
-  muss. `practice.component.html`s aktive Verzweigung bleibt `<div
+  muss. Seit #48 hat die Task-Zeile zusätzlich einen `[roundTag]`-
+  Projektions-Slot genau dort, wo sonst der Countdown-Ring sitzt
+  (`<ng-content select="[roundTag]" />`) — Practice projiziert dort nichts
+  und bleibt deshalb pixelgleich, Cram projiziert einen `sumi-badge
+  roundTag` („Cram · not scored"). `practice.component.html`s aktive Verzweigung bleibt `<div
   class="round" sumiFocusMode>`, projiziert jetzt aber nur noch
   `<app-practice-round [exercise] [result] [gaveUp] (submitted)
   (gaveUpRequested) (next)>` statt der früheren Runden-Markup direkt. Die
@@ -267,6 +271,36 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   nennen** — das kollidiert mit der eingebauten DOM-Eigenschaft, die Angular
   auf jedem Host-Element schon bindet, ein gleichnamiger Component-Input bekäme
   nie einen Wert.
+- `features/cram/cram.component.ts` (#48, Epic #45) — eine Form am Stück
+  üben, gegen `/api/cram/*`: Lebenszyklus, Template und Verdict-Markup
+  spiegeln `PracticeComponent`/`PracticeRoundComponent` bewusst (`idle` →
+  `active` → `answered` → `ended`, Gate/Summary/Hanko, `loadFailed` bei
+  einem fehlgeschlagenen `/api/cram/next`), aber ohne alles, was Elo oder
+  Profil anfasst: `sumi-session-summary` bekommt kein `delta`/`deltaLabel`/
+  `levelUp`, `ApiService.cramForm()`/`cramNext()`/`cramAnswer()` setzen
+  `profile` nie. Die Route (`practice/cram/:form`) ist der einzige
+  Zustand — ein Wechsel des `:form`-Parameters, auch mitten in einer
+  laufenden Runde, lädt die Form neu und setzt über ein `effect()` im
+  Konstruktor sofort auf deren eigenes Gate zurück. `GET
+  /api/cram/forms/{form_key}` liefert dafür Titel, Gruppe und
+  Wortanzahl; eine unbekannte Form zeigt `sumi-error-state title="Unknown
+  form"` mit einem Link auf `/rules`, ein sonstiger Fehler dieselbe
+  „Can't reach the server"-Formulierung wie Practice. `word_count === 0`
+  blendet die Startaktion aus (`[showAction]="false"`, diese Sumi-UI-
+  Version hat kein `actionDisabled`) und verweist stattdessen auf
+  `/settings`. Die Runde selbst ist dieselbe
+  `shared/practice-round/practice-round.component.ts` wie Practice,
+  `[showTimer]="false"` blendet Ring und „Fast answer." aus, ein
+  `sumi-badge roundTag tone="neutral"` füllt den `[roundTag]`-Slot an der
+  Ring-Stelle. Cram hat keine `attempts`-Historie, aus der `game.
+  _pick_word()` sonst zuletzt gezogene Wörter kennt — die Komponente
+  merkt sich die letzten 20 servierten `word_id`s selbst und schickt sie
+  als `recent_word_ids` mit jedem `/api/cram/next`. Ein kleiner Link oben
+  links (`← <group> rules`, zu `/rules/<form_key>`) steht über Gate und
+  Summary, nicht über der laufenden Runde. Erreichbar über den „Cram this
+  form"-Button in `rule-table.component.ts`s Kartenkopf und über den
+  Regelnamen-Link in Stats' „Weakest rules" (s. u.) — sowie direkt per
+  URL.
 - `features/stats/stats.component.ts` (#20, Charts auf Sumi UI umgestellt
   #33, Karten auf `sumi-card`/`sumi-page` #34, Leerzustand `sumi-empty-state`
   #41, Fehlerzustand `sumi-error-state` #43) — lädt die Stats, Empty-/
@@ -301,7 +335,11 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   das Override ist mit #41 entfallen, bei 1–6 Kacheln reicht `sumi-stat-grid`
   ohne App-CSS (gegengeprüft bei 640 und 390px). „Weakest rules" ist seit
   #34 `sumi-data-table` (reiner Text pro Zelle: Regel, Typ, `n/m`-
-  Trefferquote als ein String). „Recent" war bis #41 ein eigenes `<table>`,
+  Trefferquote als ein String). Seit #48 ist die Regel-Zelle ein eigenes
+  `sumiTableCell="rule"`-Template: der Regelname verlinkt auf die Cram-
+  Seite der Form (`/practice/cram/<form_key>`, Akzentfarbe, Gewicht 600,
+  ohne Unterstreichung), `weakestRows()` trägt dafür `form_key` zusätzlich
+  zu `rule`/`type`/`correct`. „Recent" war bis #41 ein eigenes `<table>`,
   weil richtig/falsch-Einfärbung und die „gegeben → erwartet"-Antwortzelle
   pro-Zelle-Semantik waren, die `sumi-data-table` nicht ausdrücken konnte —
   seit sumi-ui#36 deckt `toneKey` (ein Feld auf der Zeile, das als
@@ -377,6 +415,12 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   nicht schon sagt. Die Tabelle selbst bleibt ein semantisches `<table>`
   (Furigana/Herleitungs-Markup pro Zelle, das `sumi-data-table` nicht
   ausdrücken kann), nur noch in einer `sumi-card` statt `section.card.table`.
+  Seit #48 hat die Komponente zusätzlich den optionalen Input `formKey`:
+  gesetzt, wird der Kartenkopf (`.head`, jetzt eine Flex-Zeile, bricht bei
+  schmalen Screens um statt zu überlaufen) um einen „Cram this form"-
+  Button zur neuen Cram-Seite erweitert (`routerLink` zu
+  `/practice/cram/<key>`); `rules.component.html` übergibt dafür
+  `sel.form.form_key`.
 - `features/words/words.component.ts` (Seite auf Sumi UI #34) — Vokabelbrowser
   mit Filtern (Wortart, JLPT, Suche mit Entprellung), Sortierung und Blättern
   zu 50, eingerahmt in `<sumi-page title="Words" width="narrow">`. Bewusst

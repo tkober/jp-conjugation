@@ -1,0 +1,35 @@
+:host {
+  display: block;
+  padding-top: 24px;
+}
+
+.back {
+  display: inline-block;
+  margin-top: 12px;
+  color: var(--sumi-accent-ink);
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.back.top {
+  margin: 0 0 8px;
+}
+
+.gate-meta {
+  margin: 0 0 8px;
+  color: var(--sumi-muted);
+  font-size: 0.875rem;
+}
+
+.loading {
+  color: var(--sumi-muted);
+}
+
+/* Keyboard up. The on-screen keyboard shrinks the layout viewport (see the
+   interactive-widget meta in index.html) — the round's own rules live in
+   shared/practice-round/practice-round.component.css. */
+@media (max-height: 500px) {
+  :host {
+    padding-top: 4px;
+  }
+}

@@ -39,3 +39,12 @@ h2 {
 .range {
   font-variant-numeric: tabular-nums;
 }
+
+/* The weakest-rules rule name, linking to that form's cram page (#48) —
+   accent ink and weight like any other emphasised text, no underline (the
+   row already reads as a link through the table's own hover/focus state). */
+.cram-link {
+  color: var(--sumi-accent-ink);
+  font-weight: 600;
+  text-decoration: none;
+}

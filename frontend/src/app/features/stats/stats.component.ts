@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
 import { DecimalPipe } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 import { SUMI_CHARTS } from 'sumi-ui/charts';
 import type { SumiTableColumn } from 'sumi-ui/charts';
@@ -32,6 +33,7 @@ const RECENT_COLUMNS: SumiTableColumn[] = [
   selector: 'app-stats',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
+    RouterLink,
     DecimalPipe,
     SumiPage,
     SumiCard,
@@ -92,6 +94,7 @@ export class StatsComponent {
       rule: item.title,
       type: wordTypeTitle(item.word_type) + (item.trigger === '-' ? '' : ` · ${item.trigger}`),
       correct: `${item.correct}/${item.attempts}`,
+      form_key: item.form_key,
     })),
   );
 

@@ -42,7 +42,11 @@
             <h2>Weakest rules</h2>
             <p class="hint">At least 3 answers each, worst first.</p>
           </div>
-          <sumi-data-table [columns]="weakestColumns" [rows]="weakestRows()" />
+          <sumi-data-table [columns]="weakestColumns" [rows]="weakestRows()">
+            <ng-template sumiTableCell="rule" let-row>
+              <a class="cram-link" [routerLink]="['/practice/cram', row.form_key]">{{ row.rule }}</a>
+            </ng-template>
+          </sumi-data-table>
         </sumi-card>
       }
 

@@ -1,0 +1,87 @@
+<sumi-page width="narrow" [inkEnd]="false">
+  @if (formNotFound()) {
+    <sumi-error-state title="Unknown form" companion="tanuki">
+      This form does not exist.
+      <a sumiErrorAction sumiButton variant="secondary" [routerLink]="['/rules']">Go to Rules</a>
+    </sumi-error-state>
+  } @else if (formLoadFailed()) {
+    <sumi-error-state title="Can't reach the server" companion="tanuki">
+      Your progress is safe. Check the connection and try again.
+      <button sumiErrorAction type="button" sumiButton variant="secondary" (click)="retryFormLoad()">
+        Try again
+      </button>
+    </sumi-error-state>
+  } @else if (form(); as f) {
+    @switch (phase()) {
+      @case ('idle') {
+        <a class="back top" [routerLink]="['/rules', formKey()]">← {{ f.group }} rules</a>
+
+        @if (loadFailed()) {
+          <sumi-error-state title="Can't reach the server" companion="tanuki">
+            Your progress is safe. Check the connection and try again.
+            <button sumiErrorAction type="button" sumiButton variant="secondary" (click)="start()">
+              Try again
+            </button>
+          </sumi-error-state>
+        } @else {
+          <sumi-session-gate
+            [title]="'Cram: ' + f.title"
+            text="Drill one form on words of every type. Not scored — your level, Elo and stats stay as they are."
+            actionLabel="Start cramming"
+            companion="tanuki"
+            [showAction]="f.word_count > 0"
+            (start)="start()"
+          >
+            @if (f.word_count > 0) {
+              <p class="gate-meta">{{ f.word_count }} words match your JLPT filter</p>
+            } @else {
+              <p class="gate-meta">
+                No words match your JLPT filter. <a [routerLink]="['/settings']">Adjust it in Settings</a>.
+              </p>
+            }
+          </sumi-session-gate>
+        }
+      }
+
+      @case ('ended') {
+        <a class="back top" [routerLink]="['/rules', formKey()]">← {{ f.group }} rules</a>
+
+        <!-- No title: sumi-session-summary supplies its own heading. -->
+        <sumi-session-gate [showAction]="false" companion="tanuki">
+          <sumi-session-summary
+            [answered]="answered()"
+            [correct]="correct()"
+            [durationMs]="sessionDurationMs()"
+            (restart)="start()"
+          >
+            <sumi-hanko sumiSummaryArt [characters]="hankoCharacters()" [label]="hankoLabel()" />
+          </sumi-session-summary>
+        </sumi-session-gate>
+      }
+
+      @default {
+        @if (exercise(); as ex) {
+          <!-- Lives in the shell's focus-mode header, not here — see
+               *sumiShellFocusActions's doc comment. -->
+          <sumi-session-bar *sumiShellFocusActions [answered]="answered()" [correct]="correct()" (end)="end()" />
+
+          <div class="round" sumiFocusMode>
+            <app-practice-round
+              [exercise]="ex"
+              [result]="result()"
+              [gaveUp]="gaveUp()"
+              [showTimer]="false"
+              (submitted)="onSubmitted($event)"
+              (gaveUpRequested)="onGaveUpRequested($event)"
+              (next)="onNext()"
+            >
+              <sumi-badge roundTag tone="neutral">Cram · not scored</sumi-badge>
+            </app-practice-round>
+          </div>
+        }
+      }
+    }
+  } @else {
+    <p class="loading">Loading…</p>
+  }
+</sumi-page>

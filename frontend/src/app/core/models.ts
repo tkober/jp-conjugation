@@ -24,7 +24,10 @@ export interface InstructionDimensionInfo {
   values: { value: string; label: string; emoji: string | null }[];
 }
 
-export interface Exercise extends Profile {
+/** The fields `/api/exercise/next` and `/api/cram/next` both hand out — see
+ *  `api.exercise_payload()`. Neither the profile fields nor `target_time_ms`
+ *  belong here: cram has no profile effect and no timer (#48). */
+export interface ExerciseBase {
   practice_item_id: number;
   word_id: number;
   form_key: string;
@@ -37,8 +40,15 @@ export interface Exercise extends Profile {
   hiragana: string;
   english: string;
   jlpt: string;
+}
+
+export interface Exercise extends ExerciseBase, Profile {
   target_time_ms: number;
 }
+
+/** `/api/cram/next`'s exercise — `ExerciseBase` as-is, with neither the
+ *  profile fields nor `target_time_ms` that `/api/exercise/next` adds. */
+export type CramExercise = ExerciseBase;
 
 export interface Transformation {
   unaltered: string;
@@ -74,6 +84,29 @@ export interface AnswerRequest {
   /** Alt+H — the learner gave up; the backend ignores `answer` and scores it
    *  as a plain miss. */
   gave_up?: boolean;
+}
+
+export interface CramForm {
+  form_key: string;
+  title: string;
+  settings_title: string;
+  category: string;
+  group: string;
+  word_count: number;
+}
+
+/** `/api/cram/answer`'s payload — `game.grade_payload()` without the
+ *  elo/fast/streak fields `AnswerResult` carries, since cram never scores. */
+export interface CramResult {
+  correct: boolean;
+  stem_correct: boolean;
+  ending_correct: boolean;
+  stem: string;
+  ending: string;
+  given: string;
+  expected_kanji: string;
+  expected_hiragana: string;
+  transformations: Transformation[];
 }
 
 export interface FormOption {

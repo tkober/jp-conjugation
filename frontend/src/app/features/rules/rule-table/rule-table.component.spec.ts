@@ -1,3 +1,4 @@
+import { provideRouter } from '@angular/router';
 import { TestBed } from '@angular/core/testing';
 import { beforeEach, describe, expect, it } from 'vitest';
 
@@ -23,17 +24,20 @@ function row(overrides: Partial<RuleRow> = {}): RuleRow {
   };
 }
 
-function render(sections: Section[], formTitle = 'Non-past, affirmative') {
+function render(sections: Section[], formTitle = 'Non-past, affirmative', formKey?: string) {
   const fixture = TestBed.createComponent(RuleTableComponent);
   fixture.componentRef.setInput('formTitle', formTitle);
   fixture.componentRef.setInput('sections', sections);
+  if (formKey !== undefined) {
+    fixture.componentRef.setInput('formKey', formKey);
+  }
   fixture.detectChanges();
   return fixture;
 }
 
 describe('RuleTableComponent', () => {
   beforeEach(() => {
-    TestBed.configureTestingModule({});
+    TestBed.configureTestingModule({ providers: [provideRouter([])] });
   });
 
   it('renders the form title', () => {
@@ -41,6 +45,19 @@ describe('RuleTableComponent', () => {
     expect(fixture.nativeElement.querySelector('.form-title').textContent.trim()).toBe(
       'Non-past, affirmative',
     );
+  });
+
+  it('shows no "Cram this form" button without a formKey', () => {
+    const fixture = render([]);
+    expect(fixture.nativeElement.querySelector('.head a')).toBeFalsy();
+  });
+
+  it('shows a "Cram this form" button linking to the cram route when formKey is set', () => {
+    const fixture = render([], 'Non-past, affirmative', 'Verbs__TeFormAffirmative');
+    const link: HTMLAnchorElement = fixture.nativeElement.querySelector('.head a');
+    expect(link).toBeTruthy();
+    expect(link.textContent?.trim()).toBe('Cram this form');
+    expect(link.getAttribute('href')).toBe('/practice/cram/Verbs__TeFormAffirmative');
   });
 
   it('patternKind: unchanged when ending and replacement are both empty', () => {

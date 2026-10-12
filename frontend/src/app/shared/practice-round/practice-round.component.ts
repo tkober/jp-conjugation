@@ -66,6 +66,11 @@ export interface RoundResult {
  * (never behind an `@if` keyed on the exercise) — `sumi-answer-field` must
  * stay the same DOM node for the on-screen keyboard to survive a Check/Next
  * (see CLAUDE.md, "Die Tastatur geht nur für einen Fokus auf …").
+ *
+ * The task row has a `[roundTag]` content-projection slot right where the
+ * countdown ring sits — cram (#48) projects a `sumi-badge roundTag` there
+ * instead of a timer; Practice projects nothing into it, so it stays
+ * pixel-identical.
  */
 @Component({
   selector: 'app-practice-round',
