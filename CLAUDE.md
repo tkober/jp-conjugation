@@ -329,10 +329,10 @@ noch `bootstrapApplication(AppComponent, appConfig)`. Die Routen stehen in
   (Session-Leiste und Summary) zählen nur Erstversuche — damit bleibt auch
   der Hanko, der auf `sessionAccuracy` aufbaut, bei der Erstversuch-Quote;
   `retried`/`retriedCorrect` zählen Retries separat und erscheinen auf dem
-  Ende-Bildschirm als eigene `.gate-meta`-Zeile unter `sumi-session-summary`,
-  aber noch innerhalb des Gates (`Retried 3 · 2 correct`, nur wenn
-  `retried() > 0`) — diese Sumi-UI-Version hat keinen Summary-Tile-Slot, eine
-  zusätzliche Kachel bekäme also nicht deren Styling. Der `roundTag`-Badge
+  Ende-Bildschirm als zusätzliche Kachel „Retried" in `sumi-session-summary`
+  (`<div sumiSummaryTile>`, z. B. `3 (2 correct)`, nur wenn `retried() > 0`).
+  Bis #54 stand das als eigene Zeile unter der Summary, weil die damalige
+  Sumi-UI-Version noch keinen Kachel-Slot hatte (sumi-ui#48). Der `roundTag`-Badge
   liest „Retry · not scored" statt „Cram · not scored", solange `isRetry()`
   gesetzt ist. `start()`/`end()` leeren `queue` (und setzen `served` auf 0) —
   eine neue oder beendete Session fängt immer mit einer leeren Warteschlange

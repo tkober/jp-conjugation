@@ -13,7 +13,12 @@ import {
   SumiShellFocusActionsDirective,
 } from 'sumi-ui/layout';
 import { SumiButtonDirective } from 'sumi-ui/forms';
-import { SumiSessionBar, SumiSessionGate, SumiSessionSummary } from 'sumi-ui/practice';
+import {
+  SumiSessionBar,
+  SumiSessionGate,
+  SumiSessionSummary,
+  SumiSummaryTile,
+} from 'sumi-ui/practice';
 
 import { ApiService } from '../../core/api.service';
 import { CramExercise, CramForm, CramResult } from '../../core/models';
@@ -57,9 +62,8 @@ const MAX_RECENT_WORDS = 20;
  * longer holds the entry while it's being served. `answered`/`correct` —
  * and therefore the hanko, which stays on first-attempt accuracy — count
  * first attempts only; `retried`/`retriedCorrect` count retries separately
- * and surface as a `.gate-meta` line under `sumi-session-summary`, inside
- * the gate rather than as a summary tile, since this sumi-ui version has no
- * tile slot to project one into.
+ * and surface as an extra `sumiSummaryTile` ("Retried") inside
+ * `sumi-session-summary` (sumi-ui#48, available since #54).
  */
 @Component({
   selector: 'app-cram',
@@ -76,6 +80,7 @@ const MAX_RECENT_WORDS = 20;
     SumiSessionBar,
     SumiSessionGate,
     SumiSessionSummary,
+    SumiSummaryTile,
     SumiShellFocusActionsDirective,
   ],
   templateUrl: './cram.component.html',
@@ -109,7 +114,7 @@ export class CramComponent {
   readonly answered = signal(0);
   readonly correct = signal(0);
   /** Retries only — a correct or wrong retry counts here instead of in
-   *  `answered`/`correct`. Rendered as a `.gate-meta` line on the ended
+   *  `answered`/`correct`. Rendered as an extra summary tile on the ended
    *  screen, only when `retried() > 0`. */
   readonly retried = signal(0);
   readonly retriedCorrect = signal(0);

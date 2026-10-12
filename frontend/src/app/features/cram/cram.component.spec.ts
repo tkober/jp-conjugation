@@ -470,7 +470,7 @@ describe('CramComponent', () => {
       expect(c.retriedCorrect()).toBe(1);
     });
 
-    it('shows the "Retried" line on the ended screen only when there were retries', () => {
+    it('shows the "Retried" summary tile on the ended screen only when there were retries', () => {
       const fixtureNoRetries = render();
       start(fixtureNoRetries);
       httpMock.expectOne('/api/cram/next').flush(makeExercise({ practice_item_id: 1, word_id: 1 }));
@@ -498,7 +498,9 @@ describe('CramComponent', () => {
 
       fixture.componentInstance.end();
       fixture.detectChanges();
-      expect(fixture.nativeElement.textContent).toContain('Retried 1 · 1 correct');
+      const tiles = [...fixture.nativeElement.querySelectorAll('[sumiSummaryTile]')] as HTMLElement[];
+      const tile = tiles.find((t) => t.textContent?.includes('Retried'));
+      expect(tile?.textContent).toContain('(1 correct)');
     });
   });
 });

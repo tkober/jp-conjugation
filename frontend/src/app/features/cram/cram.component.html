@@ -55,10 +55,12 @@
             (restart)="start()"
           >
             <sumi-hanko sumiSummaryArt [characters]="hankoCharacters()" [label]="hankoLabel()" />
+            @if (retried() > 0) {
+              <div sumiSummaryTile label="Retried">
+                {{ retried() }} <small>({{ retriedCorrect() }} correct)</small>
+              </div>
+            }
           </sumi-session-summary>
-          @if (retried() > 0) {
-            <p class="gate-meta">Retried {{ retried() }} · {{ retriedCorrect() }} correct</p>
-          }
         </sumi-session-gate>
       }
 
