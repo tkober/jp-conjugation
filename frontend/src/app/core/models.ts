@@ -240,6 +240,8 @@ export interface RuleRow {
 }
 
 export interface RuleForm extends FormOption {
+  politeness: 'casual' | 'polite' | null;
+  polarity: 'affirmative' | 'negative';
   rules: RuleRow[];
 }
 

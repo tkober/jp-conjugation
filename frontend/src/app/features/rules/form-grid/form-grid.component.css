@@ -1,0 +1,109 @@
+/* The host itself is the container query's context (component width, not
+   viewport) — named `form-grid` via the component's `host.style` (see
+   form-grid.component.ts) so the @container rule below targets it
+   specifically, not the nearer unnamed container each `.cell` establishes
+   for its own `cqi` font-size. */
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+}
+
+.col-head {
+  font-size: 0.7rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--sumi-muted);
+  padding-left: 2px;
+}
+
+.cell {
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  display: grid;
+  gap: 2px;
+  align-content: start;
+  min-height: 60px;
+  padding: 8px;
+  border: 1px solid var(--sumi-line);
+  border-radius: var(--sumi-radius-sm);
+  background: var(--sumi-surface);
+  color: var(--sumi-text);
+  /* The result's font-size is sized against this cell's own width (cqi
+     below), not the grid's or the host's. */
+  container-type: inline-size;
+}
+
+.cell:hover {
+  border-color: var(--sumi-muted);
+}
+
+/* Selected: 2px border instead of 1px, 7px padding instead of 8px — with the
+   global border-box sizing the total (border + padding) stays 9px either
+   way, so nothing shifts. */
+.cell[aria-checked='true'] {
+  border: 2px solid var(--sumi-accent);
+  padding: 7px;
+  background: var(--sumi-accent-soft);
+}
+
+.label {
+  font-size: 0.72rem;
+  color: var(--sumi-muted);
+  line-height: 1.3;
+  /* Safety net: the labels are short enough to fit, but never wrap or
+     overflow if one ever doesn't. */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.cell[aria-checked='true'] .label {
+  color: var(--sumi-accent-ink);
+  font-weight: 700;
+}
+
+/* Both label variants always render; which one is visible is a pure CSS
+   switch on the host's own width (see the @container block below) so no JS
+   media-query plumbing is needed. For a 2-form group both say the same
+   text (settings_title), so the switch is invisible there. */
+.label-wide {
+  display: none;
+}
+
+.jp {
+  /* No line break, ever (#58's hard requirement): kana/kanji are each 1em
+     wide, so dividing the cell's own inline size (cqi, from the cell's own
+     container-type above) by the group's longest result (--chars, set on
+     the grid by the component) gives every cell of a group the same
+     font-size that still fits its own longest content. */
+  white-space: nowrap;
+  line-height: 1.35;
+  font-size: clamp(0.75rem, calc(100cqi / var(--chars, 6)), 1rem);
+}
+
+.jp em {
+  font-style: normal;
+  font-weight: 700;
+  color: var(--sumi-accent-ink);
+}
+
+@container form-grid (min-width: 480px) {
+  .label-narrow {
+    display: none;
+  }
+
+  .label-wide {
+    display: block;
+  }
+
+  .col-head {
+    display: none;
+  }
+
+  :host(.four) .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

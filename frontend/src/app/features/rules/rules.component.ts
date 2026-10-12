@@ -4,10 +4,11 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { map } from 'rxjs';
 
 import { SumiCard, SumiErrorState, SumiPage } from 'sumi-ui/layout';
-import { SumiButtonDirective, SumiSegmentedControl, type SumiSegmentedOption } from 'sumi-ui/forms';
+import { SumiButtonDirective } from 'sumi-ui/forms';
 
 import { ApiService } from '../../core/api.service';
 import { RuleForm, RuleGroup, RulesResponse } from '../../core/models';
+import { FormGridComponent } from './form-grid/form-grid.component';
 import { RuleTableComponent, Section } from './rule-table/rule-table.component';
 
 /** Shown when the URL names no form: the rule set with the most sound
@@ -22,7 +23,7 @@ const DEFAULT_FORM = 'Verbs__TeFormAffirmative';
     SumiCard,
     SumiErrorState,
     SumiButtonDirective,
-    SumiSegmentedControl,
+    FormGridComponent,
     RouterLink,
     RuleTableComponent,
   ],
@@ -98,10 +99,6 @@ export class RulesComponent {
       next: (r) => this.data.set(r),
       error: () => this.failed.set(true),
     });
-  }
-
-  formOptions(group: RuleGroup): SumiSegmentedOption<RuleForm>[] {
-    return group.forms.map((form) => ({ value: form, label: form.settings_title }));
   }
 
   selectForm(form: RuleForm): void {
