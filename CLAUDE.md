@@ -90,14 +90,15 @@ läuft; 8084 ist auch der vorgesehene Unraid-Port.
   Probe-/Review-Offset; die Antwort teilt sich `api.exercise_payload()` mit
   `/api/exercise/next`, ohne Profilfelder und `target_time_ms`. `POST
   /answer` ruft nur `game.grade()` auf und gibt `game.grade_payload()`
-  zurück. `POST /next` nimmt seit #49 optional `retry: CramRetry` (
-  `practice_item_id`, `word_id`) entgegen — das Frontend schickt darüber eine
+  zurück. `POST /next` nimmt seit #49 optional `retry: CramRetry`
+  (`practice_item_id`, `word_id`) entgegen — das Frontend schickt darüber eine
   verpasste Aufgabe zurück, statt eine neue zu würfeln: Item und Wort werden
   geladen (je 404, wenn eins fehlt), `item.form_key != form_key` und ein
   `(word_type, trigger)`, das nicht zum Item passt, sind je 400, sonst wird
   exakt dieses Paar konjugiert (409 bei `None`) und über `exercise_payload()`
   zurückgegeben — kein `random.choice()`, `recent_word_ids` wird ignoriert,
-  nichts geschrieben (dieselbe Isolation wie sonst in diesem Modul). `disabled_forms` gilt hier bewusst nicht (Cram soll eine in den
+  nichts geschrieben (dieselbe Isolation wie sonst in diesem Modul).
+  `disabled_forms` gilt hier bewusst nicht (Cram soll eine in den
   Settings abgeschaltete Form trotzdem erreichen), `disabled_jlpt` schon —
   das ist eine Vokabular-, keine Auswahl-Einstellung. Die Isolation ist
   **strukturell**: das Modul ruft `apply_rating()` nirgends auf, es gibt also
